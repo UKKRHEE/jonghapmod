@@ -1,0 +1,57 @@
+﻿ ######################
+ # Standard Decisions #
+ ######################
+
+
+##Buy Slave
+##modified from hire_physician_decision
+##Note that the AI will not do this (as per hire_physician_decision)
+
+dag_cdo_buy_slave_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+
+	desc = dag_cdo_buy_slave_decision_desc
+	selection_tooltip = dag_cdo_buy_slave_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ruler = yes
+		NOT = { has_game_rule = carn_slavery_content_disabled }		#~Is this the right level of rules?
+	}
+
+	cooldown = { days = 365 }
+
+	cost = {
+		piety = 250
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult_or_is_commanding = yes #Don't be fooled - there's no adult check in this trigger	
+	}
+
+	effect = {
+		hidden_effect = {
+			add_character_flag = {
+				flag = dag_cdo_searching_for_slave_decision_text	#This does not need any localization as never displayed?
+				days = 20
+			}
+		}
+
+		trigger_event = {
+			id = dag_cdo_decision_event.1000
+			days = 14
+		}
+		custom_tooltip = dag_cdo_buy_slave_decision_effect_tooltip
+
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+

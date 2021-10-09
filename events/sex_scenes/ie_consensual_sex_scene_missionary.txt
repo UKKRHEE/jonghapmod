@@ -23,7 +23,7 @@ ie_consensual_sex_scene_missionary.0001 = {
 
 	left_portrait = {
 		character = scope:carn_sex_player
-		animation = flirtation
+		animation = sex_missionary
 	}
 	right_portrait = {
 		character = scope:carn_sex_target
@@ -41,7 +41,7 @@ ie_consensual_sex_scene_missionary.0001 = {
 			}
 			animation = ecstasy
 		}
-		animation = flirtation
+		animation = sex_missionary
 	}
 
 	trigger = {

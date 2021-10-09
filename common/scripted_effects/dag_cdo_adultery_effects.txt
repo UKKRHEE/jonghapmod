@@ -1,0 +1,172 @@
+﻿#~code taken from 'Attempt to sleep with your potential-foe's wife.' from intrigue_temptation.3130
+#~Made into an effect so we can standardize it
+#~we run this on the target you are sleeping with, so we can test Carnalitas triggers.
+
+dag_cdo_cuckold_targets_spouse_effect = {	#TARGET = }
+	save_scope_as = cuckolder
+	if = {
+		limit = {
+			$TARGET$ = {
+				is_married = yes
+				carn_should_have_no_consequences_for_extramarital_sex_trigger = no	
+				#~If target has this, their spouses and lovers do not care if anyone lays with them.
+			}
+			#~Trying to refer to traits that do not exist will cause trait missing errors.
+			#~What would be nice would be to check for 'gene = special_headgear_face_mask' but not clear if that is possible.
+			#~Above issue has been partially resolved by adding 'carn_no_consequences_for_extramarital_sex_with_me' to the ie_masked trait.
+		}
+		$TARGET$ = {
+			primary_spouse = { save_scope_as = target_spouse }			#~Any other spouses are used to it
+		}
+		save_scope_value_as = {
+			name = rival_scale
+			value = {
+				value = 0
+				if = {
+					limit = {
+						scope:target_spouse = { highest_held_title_tier = tier_empire }
+					}
+					add = 50
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { highest_held_title_tier = tier_kingdom }
+					}
+					add = 25
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { highest_held_title_tier = tier_duchy }
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { highest_held_title_tier = tier_county }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:target_spouse = {
+							is_ruler = no
+							any_claim = { tier = tier_empire }
+						}
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:target_spouse = {
+							is_ruler = no
+							any_claim = { tier = tier_kingdom }
+						}
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:target_spouse = {
+							is_ruler = no
+							any_claim = { tier = tier_duchy }
+						}
+					}
+					add = 2
+				}
+				if = {
+					limit = {
+						scope:target_spouse = {
+							is_ruler = no
+							any_claim = { tier = tier_county }
+						}
+					}
+					add = 2
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { intrigue >= extremely_high_skill_rating }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { intrigue >= high_skill_rating }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { prowess >= extremely_high_skill_rating }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { prowess >= high_skill_rating }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { diplomacy >= extremely_high_skill_rating }
+					}
+					add = 2
+				}
+				if = {
+					limit = {
+						scope:target_spouse = { diplomacy >= high_skill_rating }
+					}
+					add = 2
+				}
+			}
+		}
+		if = {
+			limit = { 
+				scope:target_spouse = {
+					dislikes_partner_cheating_trigger = { PARTNER = $TARGET$ }
+					NOT = { has_relation_rival = scope:cuckolder } 
+				}
+			}
+			set_relation_rival = scope:target_spouse
+		}
+		
+		if = {
+			limit = { scope:rival_scale <= 9 }
+			add_prestige = miniscule_prestige_gain
+		}
+		if = {
+			limit = {
+				scope:rival_scale >= 10
+				scope:rival_scale <= 24
+			}
+			add_prestige = minor_prestige_gain
+			add_character_modifier = {
+				modifier = saucy_reputation_01_modifier
+				days = 1825
+			}
+		}
+		if = {
+			limit = {
+				scope:rival_scale >= 25
+				scope:rival_scale <= 49
+			}
+			add_prestige = medium_prestige_gain
+			add_character_modifier = {
+				modifier = saucy_reputation_02_modifier
+				days = 1825
+			}
+		}
+		if = {
+			limit = { scope:rival_scale >= 50 }
+			add_prestige = major_prestige_gain
+			add_character_modifier = {
+				modifier = saucy_reputation_03_modifier
+				days = 1825
+			}
+		}
+	}
+}
+
+
+
+

@@ -1,0 +1,60 @@
+﻿#~These are typically only run just after using create_character.
+#~I am pretty sure were not supposed to be using these like this
+#~but works and throws up no errors
+
+#~dag_cdo_adjust_sexuality_to_create_compatibility_with_who
+#~dag_cdo_orgy_character_initialization_pulse
+#~dag_cdo_prostitute_initialization_pulse
+#~dag_cdo_slave_initialization_pulse
+
+dag_cdo_adjust_sexuality_to_create_compatibility_with_who = {
+	effect = {
+		if = {
+			limit = {
+				scope:who = { is_attracted_to_gender_of = root }
+				NOT = { root = { is_attracted_to_gender_of = scope:who } }
+			}
+			hidden_effect = { root = { set_sexuality = bisexual } }
+			#~Here for monitoring: This seems to crop up a lot for some reason: Might just be a sticky RNG
+			set_variable = {
+				name = dag_test_set_sexuality
+				value = 3
+			}
+		}
+	}
+}
+
+#~Call after creating any new character inside an orgy event
+dag_cdo_orgy_character_initialization_pulse = {
+	effect = {
+		dag_cdo_orgy_attire_effect = yes
+		scope:activity = {
+			invite_character_to_activity = root
+			accept_invitation_for_character = root
+		}
+	}
+}
+
+#~Call after creating any new prostitute character
+dag_cdo_prostitute_initialization_pulse = {
+	effect = {
+		carn_start_working_as_prostitute_effect = yes
+	}
+}
+
+#~Call after creating any new slave character
+dag_cdo_slave_initialization_pulse = {
+	effect = {
+		scope:slave_owner = { dag_cdo_fix_lost_in_void_effect = yes }
+		carn_enslave_effect = {
+			SLAVE = root
+			OWNER = scope:slave_owner
+			DRAMA = no
+		}
+		if = {
+			limit = { NOT = { is_at_same_location = scope:slave_owner } }
+			move_to_pool_at = scope:slave_owner.location
+		}
+	}
+}
+

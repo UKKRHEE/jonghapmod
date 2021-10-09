@@ -1,0 +1,5 @@
+﻿l_russian:
+dag_cdo_slave_suggestion_slave_training_label:0 "Train Slave"
+dag_cdo_slave_suggestion_slave_training:0 "Suggestion: Train [recipient.GetShortUIName] to be a better slave"
+dag_cdo_slave_suggestion_slave_training_desc:0 "Your [actor.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetShortUINameNoTooltip] can be trained to be a better slave to you, offering a variety of benefits both personally and politically."
+dag_cdo_slave_suggestion_slave_training_click:0 "#I Click to open Train Interaction#!"

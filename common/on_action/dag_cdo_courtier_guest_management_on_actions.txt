@@ -1,0 +1,10 @@
+﻿######################################################################
+# Called when a pool character has appeared at the court. See guest_management in common/courtier_guest_management.
+# root, scope:guest: the guest
+# host: their host (owner of the court)
+# characters: list of all characters moving together. Includes the root character.
+on_guest_arrived_from_pool = {
+	events = {
+		dag_cdo_courtier_guest_management.1001 #Guest arriving, message if they're great
+	}
+}

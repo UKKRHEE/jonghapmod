@@ -1,0 +1,21 @@
+﻿#~We can expand on this massively
+
+dag_cdo_slave_quality_description = {
+	type = character
+	text = {
+		localization_key = dag_cdo_excellent_quality_slave
+		trigger = {
+			carn_slave_price_value >= 25
+		}
+	}
+	text = {
+		localization_key = dag_cdo_high_quality_slave
+		trigger = {
+			carn_slave_price_value >= 5
+		}
+	}
+	text = {
+		localization_key = dag_cdo_low_quality_slave
+	}
+}
+

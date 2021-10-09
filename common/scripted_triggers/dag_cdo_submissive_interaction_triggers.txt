@@ -1,0 +1,46 @@
+﻿#~dag_cdo_has_submissive_relation_trigger
+#~dag_cdo_show_submissive_interactions_trigger
+
+dag_cdo_has_submissive_relation_trigger = {
+	NOT = { has_relation_submissive = $DOMINANT$ }
+	OR = {
+		has_relation_dominant = $DOMINANT$
+		has_relation_slave_owner = $DOMINANT$
+		is_obedient = $DOMINANT$				#~No idea if this works/is used
+		AND = {
+			is_consort_of = $DOMINANT$
+			OR = {
+				AND = {
+					is_male = yes
+					faith = { has_doctrine = doctrine_gender_female_dominated }
+				}
+				AND = {
+					is_female = yes
+					faith = { has_doctrine = doctrine_gender_male_dominated }
+				}
+				has_personality_submissive_trigger = yes
+				carn_has_fetish_trigger = { FETISH = submission }
+			}
+		}
+	}
+}
+
+dag_cdo_show_submissive_interactions_trigger = {
+	AND = {
+		is_adult = yes		
+		dag_cdo_has_submissive_relation_trigger = { DOMINANT = $DOMINANT$ }
+	}
+	#~the following game rule is actually from another mod and was cut and paste in by accident.
+	#~I assume Submissive Partners?
+#	OR = {
+#		has_game_rule = sub_valid_subs_all_genders
+#		AND = {
+#			has_game_rule = sub_valid_subs_female_only
+#			is_female = yes
+#		}
+#		AND = {
+#			has_game_rule = sub_valid_subs_male_only
+#			is_male = yes
+#		}
+#	}
+}

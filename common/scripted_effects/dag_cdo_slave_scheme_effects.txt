@@ -1,0 +1,213 @@
+﻿########################################
+## Slave Training Scheme Effects
+########################################
+
+# sets flag on target indicating receptiveness to dag_cdo_slave_training scheme
+# call on a scheme
+dag_cdo_set_slave_training_receptiveness = {
+	# Remove flags that may be left over from previous scheme(s)
+	scope:target = {
+		remove_character_flag = dag_cdo_slave_receptive_training_response
+		remove_character_flag = dag_cdo_slave_unreceptive_training_response
+		remove_character_flag = dag_cdo_slave_neutral_training_response
+	}
+
+	if = {
+		limit = {
+			OR = {
+				# Was previously trained
+				scope:target = { has_character_flag = dag_cdo_slave_trained }
+				# Amenable personality & doesn't dislike scheme owner
+				AND = {
+					scope:target.dag_cdo_slave_training_base_receptiveness >= 50
+					scope:target = {
+						opinion = {
+							target = scope:owner
+							value >= neutral_opinion
+						}
+					}
+				}
+				# Somewhat amenable personality & likes scheme owner
+				AND = {
+					scope:target.dag_cdo_slave_training_base_receptiveness >= 25
+					scope:target = {
+						opinion = {
+							target = scope:owner
+							value >= medium_positive_opinion
+						}
+					}
+				}
+			}
+		}
+		scope:target = {
+			add_character_flag = dag_cdo_slave_receptive_training_response
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				# Independent personality & doesn't really like scheme owner
+				AND = {
+					scope:target.dag_cdo_slave_training_base_receptiveness <= -50
+					scope:target = {
+						opinion = {
+							target = scope:owner
+							value <= high_positive_opinion
+						}
+					}
+				}
+				# Somewhat independent personality & dislikes scheme owner
+				AND = {
+					scope:target.dag_cdo_slave_training_base_receptiveness <= -25
+					scope:target = {
+						opinion = {
+							target = scope:owner
+							value <= neutral_opinion
+						}
+					}
+				}
+			}
+		}
+		scope:target = {
+			add_character_flag = dag_cdo_slave_unreceptive_training_response
+		}
+	}
+	else = {
+		scope:target = {
+			add_character_flag = dag_cdo_slave_neutral_training_response
+		}
+	}
+}
+
+dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = {
+	#add_trait = #If tiered Subservient Traits get added to Carnalitas, we could enable them in this effect
+	if = {
+		if = {
+			limit = { has_scheme_modifier = dag_cdo_slave_training_milestone_scheme_power_2 }
+			add_scheme_modifier = { type = dag_cdo_slave_training_milestone_scheme_power_3 }
+		}
+		else_if = {
+			limit = { has_scheme_modifier = dag_cdo_slave_training_milestone_scheme_power_1 }
+			add_scheme_modifier = { type = dag_cdo_slave_training_milestone_scheme_power_2 }
+		}
+		else = {
+			add_scheme_modifier = { type = dag_cdo_slave_training_milestone_scheme_power_1 }
+		}
+	}
+}
+
+#~(re)calcs modifiers to scheme power/resistance based on opinion
+#~call on a scheme
+#~Not 100% sure this is working properly, but pretty sure we are going to be reworking this entire scheme anyway so fuck it
+#~Problem was probably mismatched {} in dag_cdo_slave_training_ongoing_scheme_value
+dag_cdo_slave_set_scheme_opinion_modifier = {
+	remove_scheme_modifier = dag_cdo_slave_highest_pos_opinion_scheme_power
+	remove_scheme_modifier = dag_cdo_slave_high_pos_opinion_scheme_power
+	remove_scheme_modifier = dag_cdo_slave_medium_pos_opinion_scheme_power
+	remove_scheme_modifier = dag_cdo_slave_low_pos_opinion_scheme_power
+	remove_scheme_modifier = dag_cdo_slave_highest_neg_opinion_scheme_resistance
+	remove_scheme_modifier = dag_cdo_slave_high_neg_opinion_scheme_resistance
+	remove_scheme_modifier = dag_cdo_slave_medium_neg_opinion_scheme_resistance
+	remove_scheme_modifier = dag_cdo_slave_low_neg_opinion_scheme_resistance
+	
+	scope:target = {
+		set_variable = {
+			name = dag_test_slave_training_ongoing_scheme_value
+			value = dag_cdo_slave_training_ongoing_scheme_value
+		}
+	}
+	
+	if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value > 40
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_highest_pos_opinion_scheme_power }
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value > 30
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_high_pos_opinion_scheme_power }
+	 }
+	else_if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value > 20
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_medium_pos_opinion_scheme_power } 
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value > 10
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_low_pos_opinion_scheme_power }
+	}
+
+	if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value <= -40
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_highest_neg_opinion_scheme_resistance }
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value <= -30
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_high_neg_opinion_scheme_resistance}
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value <= -20
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_medium_neg_opinion_scheme_resistance}
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				dag_cdo_slave_training_ongoing_scheme_value <= -10
+			}
+		}
+		add_scheme_modifier = { type = dag_cdo_slave_low_neg_opinion_scheme_resistance}
+	}
+}
+
+
+dag_cdo_add_slave_training_success_effect = {
+	$SLAVE$ = {
+		add_character_flag = dag_cdo_slave_trained
+		add_opinion = {
+			modifier = carn_wants_to_be_your_slave_opinion
+			target = $MASTER$
+		}
+	}
+	$MASTER$ = {
+		# You can train any slave, but they only became SUBMISSIVE dependent on game rules
+		if = {
+			limit = { can_set_relation_submissive_trigger = { CHARACTER = $SLAVE$ } }		#this is a trigger from Carnalitas
+			set_relation_submissive = $SLAVE$
+#			$SLAVE$ = {
+#				add_opinion = {
+#					modifier = dag_cdo_subservient_opinion
+#					target = $MASTER$
+#				}
+#			}
+		}
+		add_character_modifier = {
+			modifier = dag_cdo_slave_recent_training_modifier
+			years = 5
+		}
+	}
+}

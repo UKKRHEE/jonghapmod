@@ -1,0 +1,27 @@
+﻿l_english:
+ dag_cdo_slave_recent_training_modifier: "Dominant Aura"
+ dag_cdo_slave_training_milestone_scheme_power_1: "Prior Training"
+ dag_cdo_slave_training_milestone_scheme_power_2: "Prior Training"
+ dag_cdo_slave_training_milestone_scheme_power_3: "Prior Training"
+
+ dag_cdo_slave_positive_trait_scheme_power: "Naturally Submissive"
+ dag_cdo_slave_negative_trait_scheme_resistance: "Naturally Independent"
+
+ dag_cdo_slave_highest_pos_opinion_scheme_power: "Loves being Trained"
+ dag_cdo_slave_high_pos_opinion_scheme_power: "Enjoys being Trained"
+ dag_cdo_slave_medium_pos_opinion_scheme_power: "Appreciates being Trained"
+ dag_cdo_slave_low_pos_opinion_scheme_power: "Likes being Trained"
+
+ dag_cdo_slave_highest_neg_opinion_scheme_resistance: "Loathes being Trained"
+ dag_cdo_slave_high_neg_opinion_scheme_resistance: "Detests being Trained"
+ dag_cdo_slave_medium_neg_opinion_scheme_resistance: "Hates being Trained"
+ dag_cdo_slave_low_neg_opinion_scheme_resistance: "Dislikes being Trained"
+
+ dag_cdo_working_as_pit_fighter_0_modifier: "Working as a pit fighter"
+ dag_cdo_working_as_pit_fighter_0_modifier_desc: "This character is a pit fighter."
+ dag_cdo_working_as_pit_fighter_1_modifier: "Working as a pit fighter"
+ dag_cdo_working_as_pit_fighter_1_modifier_desc: "This character is a pit fighter with some skill."
+ dag_cdo_working_as_pit_fighter_2_modifier: "Working as an pit fighter"
+ dag_cdo_working_as_pit_fighter_2_modifier_desc: "This character is an experienced pit fighter."
+ dag_cdo_working_as_pit_fighter_3_modifier: "Working as a pit fighter"
+ dag_cdo_working_as_pit_fighter_3_modifier_desc: "This character is a renowned pit fighter."

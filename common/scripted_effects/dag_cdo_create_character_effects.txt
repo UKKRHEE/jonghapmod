@@ -1,0 +1,188 @@
+﻿#######################################################################################
+##~WARNING: Using these effects in the immediate block can cause errors with sequencing
+##~Test rigorously
+##~Appears to be related to the issues with using add_secret in the immediate block
+##~Therefore may be related to functions using custom tooltips?
+#######################################################################################
+
+##########################################################
+#dag_cdo_create_madam_effect
+#dag_cdo_create_prostitute_effect		(requires WHO)
+#dag_cdo_create_secret_cannibal_effect
+#dag_cdo_create_secret_deviant_effect
+#dag_cdo_create_slaver_effect
+#dag_cdo_create_thug_effect				(requires WHO)
+
+
+
+
+
+
+
+##########################################################
+#~Creates a madam/pimp and saves it as created_character
+dag_cdo_create_madam_effect = {
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = root.capital_province
+		age = { 35 50 }
+		culture = root.culture
+		faith = root.faith
+		gender_female_chance = dag_cdo_prostitution_based_female_chance
+		trait = prostitute_3					#~This should block the other traits, right? It seems too.
+		template = dag_cdo_sexually_liberal_character_template
+	}
+	scope:created_character = {
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}
+
+##########################################################
+#~Creates a prostitute and saves it as created_character
+#~WHO is character who will interact with the prostitute (i.e. the mark)
+dag_cdo_create_prostitute_effect = {
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = $WHO$.location
+		age = { 18 36 }					#~Always make sure this obeys the cut-off point for prostitution
+		culture = $WHO$.culture
+		faith = $WHO$.faith
+		gender_female_chance = dag_cdo_prostitution_based_female_chance
+		template = dag_cdo_sexually_liberal_character_template
+	}
+	scope:created_character = {
+		trigger_event = { on_action = dag_cdo_prostitute_initialization_pulse }
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}
+
+##########################################################
+#~Creates a cannibal and saves it as created_character
+dag_cdo_create_secret_cannibal_effect = {
+	random_neighboring_and_across_water_top_liege_realm_owner = {
+		limit = { dag_cdo_foreign_ruler_for_creation_trigger = yes }
+		alternative_limit = { always = yes }
+		save_scope_as = creation_template_ruler
+	}
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = scope:creation_template_ruler.location
+		culture = scope:creation_template_ruler.culture
+		faith = scope:creation_template_ruler.faith
+		gender_female_chance = 50
+		template = pool_repopulate_local_flavor 
+	}
+	scope:created_character = {
+		give_cannibal_secret_or_trait_effect = yes
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}
+
+##########################################################
+#~Creates a deviant and saves it as created_character
+dag_cdo_create_secret_deviant_effect = {
+	random_neighboring_and_across_water_top_liege_realm_owner = {
+		limit = { dag_cdo_foreign_ruler_for_creation_trigger = yes }
+		alternative_limit = { always = yes }
+		save_scope_as = creation_template_ruler
+	}	
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = scope:creation_template_ruler.location
+		culture = scope:creation_template_ruler.culture
+		faith = scope:creation_template_ruler.faith
+		gender_female_chance = 50
+		template = pool_repopulate_local_flavor 
+	}
+	scope:created_character = {
+		give_deviant_secret_or_trait_effect = yes
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}	
+}
+
+##########################################################
+#~Creates a member of the Guild of Slavers and saves it as created_character
+
+dag_cdo_create_slaver_effect = {
+	random_independent_ruler = {
+		limit = { dag_cdo_foreign_ruler_for_creation_trigger = yes }
+		alternative_limit = { always = yes }
+		save_scope_as = creation_template_ruler
+	}
+	
+	#~for some reason this effect kept generating created_character with a missing location.
+	#~following possible solution based on 'potential_lifestyle_friend_saving_effect'
+	#~no matter what we fucking do it does not seem to work properly
+	if = {
+		limit = { exists = scope:creation_template_ruler.capital_province }
+		create_character = {
+			save_temporary_scope_as = created_character
+			location = scope:creation_template_ruler.capital_province
+			culture = scope:creation_template_ruler.culture
+			faith = scope:creation_template_ruler.faith
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			template = dag_cdo_slaver_character_template
+		}
+	}
+	else_if = {
+		limit = { exists = scope:creation_template_ruler.location }
+		create_character = {
+			save_temporary_scope_as = created_character
+			location = scope:creation_template_ruler.location
+			culture = scope:creation_template_ruler.culture
+			faith = scope:creation_template_ruler.faith
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			template = dag_cdo_slaver_character_template
+		}
+	}
+	else = {
+		create_character = {
+			save_temporary_scope_as = created_character
+			location = root.location
+			culture = scope:creation_template_ruler.culture
+			faith = scope:creation_template_ruler.faith
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			template = dag_cdo_slaver_character_template
+		}
+	}
+	scope:created_character = {
+		trigger_event = { on_action = carn_character_initialization_pulse }
+		add_character_modifier = { modifier = dag_cdo_slavers_guild_member }
+	}
+}
+
+##########################################################
+#~Creates a thug and saves it as created_character
+#~WHO is character who will interact with the thug (i.e. the victim)
+dag_cdo_create_thug_effect = {
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = $WHO$.location
+		culture = $WHO$.culture
+		faith = $WHO$.faith
+		gender_female_chance = 0
+		template = servant_character
+		prowess  = {
+			min_template_decent_skill
+			max_template_decent_skill
+		}
+	}
+	scope:created_character = {
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

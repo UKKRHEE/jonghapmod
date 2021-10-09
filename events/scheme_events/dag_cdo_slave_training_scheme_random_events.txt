@@ -1,0 +1,575 @@
+﻿namespace = dag_cdo_slave_training_scheme_random_event
+
+
+#####################################################################################
+# Slave Training: Diligence
+# by Dagulus
+# 1001
+#####################################################################################
+## Grants the diligent trait, which adds to the value of slaves.
+
+## Attempted to use local variables to stop turned down choices repeating, as per events, but does not seem to work for schemes
+
+dag_cdo_slave_training_scheme_random_event.1001 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_random_event.1001.t
+	desc = dag_cdo_slave_training_scheme_random_event.1001.desc
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+		scope:target = {
+			NOT = { has_trait = diligent }
+			NOT = { #~Should never happen but its good practice to exclude this for the future
+				#~Does this trigger do what we think it should do?
+				is_target_in_variable_list = {
+					name = carn_personality_replacement_excluded_traits
+					target = flag:lazy
+				}
+			}
+		}
+	}
+
+	weight_multiplier = {	#~The standard for slave training scheme random events is 1
+		base = 1
+		modifier = {		#~lazy is a terrible slave trait.
+			add = 5
+			has_trait = lazy
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = yes
+			}
+			scope:target = {		
+				carn_create_personality_replacement_effect = { NEW_TRAIT = diligent }
+				if = {
+					limit = { has_character_modifier = dag_cdo_sex_slave }
+					carn_undress_character_effect = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.a
+		scope:target = {
+			carn_resolve_personality_replacement_effect = { }
+			#~The above function includes carn_clear_personality_replacement_effect which is why flags do not remain.
+			carn_exclude_trait_from_personality_replacement_effect = { TRAIT = diligent }
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.b
+	}
+
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_slave_set_scheme_opinion_modifier = yes
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}
+			scope:target = {
+				carn_dress_character_effect = yes
+			}			
+		}
+	}
+}
+
+#####################################################################################
+# Slave Training: Humility
+# by Dagulus
+# 1002
+#####################################################################################
+## Grants the humble trait, which adds to the value of slaves.
+
+dag_cdo_slave_training_scheme_random_event.1002 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_random_event.1002.t
+	desc = dag_cdo_slave_training_scheme_random_event.1002.desc
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+		scope:target = {
+			NOT = { has_trait = humble }
+			NOT = { ##Should never happen but its good practice to exclude this for the future
+				is_target_in_variable_list = {
+					name = carn_personality_replacement_excluded_traits
+					target = flag:arrogant
+				}
+			}
+		}
+	}
+
+	weight_multiplier = {	#~The standard for slave training scheme random events is 1
+		base = 1
+		modifier = {		#~arrogant is not a great slave trait.
+			add = 2.5
+			has_trait = lazy
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = yes
+			}
+			scope:target = {
+				carn_create_personality_replacement_effect = { NEW_TRAIT = humble }
+				if = {
+					limit = { has_character_modifier = dag_cdo_sex_slave }
+					carn_undress_character_effect = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.a
+		scope:target = {
+			carn_resolve_personality_replacement_effect = { }
+			carn_exclude_trait_from_personality_replacement_effect = { TRAIT = humble }
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.b
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_slave_set_scheme_opinion_modifier = yes
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}
+			scope:target = {
+				carn_dress_character_effect = yes
+			}			
+		}
+	}
+}
+
+#####################################################################################
+# Slave Training: Acceptance
+# by Dagulus
+# 1003
+#####################################################################################
+## Grants the content trait, which adds to the value of slaves.
+
+dag_cdo_slave_training_scheme_random_event.1003 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_random_event.1003.t
+	desc = dag_cdo_slave_training_scheme_random_event.1003.desc
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+		scope:target = {
+			NOT = { has_trait = content }
+			NOT = { ##This one may crop up at some point as Ambitious is fucking awesome
+				is_target_in_variable_list = {
+					name = carn_personality_replacement_excluded_traits
+					target = flag:ambitious
+				}
+			}
+		}
+	}
+
+	weight_multiplier = {	#~The standard for slave training scheme random events is 1
+		base = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = yes
+			}
+			scope:target = {
+				carn_create_personality_replacement_effect = { NEW_TRAIT = content }
+				if = {
+					limit = { has_character_modifier = dag_cdo_sex_slave }
+					carn_undress_character_effect = yes
+				}			
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.a
+		scope:target = {
+			carn_resolve_personality_replacement_effect = { }
+			carn_exclude_trait_from_personality_replacement_effect = { TRAIT = content }
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.b
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_slave_set_scheme_opinion_modifier = yes
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}
+			scope:target = {
+				carn_dress_character_effect = yes
+			}			
+		}
+	}
+}
+
+#####################################################################################
+# Slave Training: Lust
+# by Dagulus
+# 1001
+#####################################################################################
+## Grants the lustful trait, because sex slave.
+
+dag_cdo_slave_training_scheme_random_event.2001 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_random_event.2001.t
+	desc = dag_cdo_slave_training_scheme_random_event.2001.desc
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+		scope:target = {
+			has_character_modifier = dag_cdo_sex_slave
+			NOT = { has_trait = lustful }
+			NOT = {
+				is_target_in_variable_list = {
+					name = carn_personality_replacement_excluded_traits
+					target = flag:chaste
+				}
+			}				
+		}
+	}
+
+	weight_multiplier = {	#~The standard for slave training scheme random events is 1
+		base = 1
+		modifier = {		#~chaste is a terrible sex slave trait.
+			add = 5
+			has_trait = chaste
+		}		
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = yes
+			}
+			scope:target = {			
+				carn_create_personality_replacement_effect = { NEW_TRAIT = lustful }
+				carn_undress_character_effect = yes			
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.a
+		scope:target = {
+			carn_resolve_personality_replacement_effect = { }
+			carn_exclude_trait_from_personality_replacement_effect = { TRAIT = lustful }
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.1001.b
+	}
+
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_slave_set_scheme_opinion_modifier = yes
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}
+			scope:target = {
+				carn_dress_character_effect = yes
+			}
+		}
+	}
+}
+
+#####################################################################################
+# Slave Training: Prostitution
+# by Dagulus
+# 2002
+#####################################################################################
+## Grants the Prostitute trait
+
+dag_cdo_slave_training_scheme_random_event.2002 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_random_event.2002.t
+	desc = dag_cdo_slave_training_scheme_random_event.2002.desc
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+		OR = {
+			has_game_rule = carn_prostitution_content_any_gender
+			AND = {
+				scope:target = { is_male = yes }
+				has_game_rule = carn_prostitution_content_male_only
+			}
+			AND = {
+				scope:target = { is_female = yes }
+				has_game_rule = carn_prostitution_content_female_only
+			}
+		}		
+		scope:target = {
+			has_character_modifier = dag_cdo_sex_slave
+			NOT = { has_trait = prostitute_3 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = yes
+			}
+			scope:target = {
+				carn_undress_character_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.2002.a
+		trigger = {
+			scope:target = { effective_age < carn_prostitution_age_cutoff }
+		}
+		random_list = {
+			75 = { # This was a good idea!
+				send_interface_toast = {	
+					title = dag_cdo_slave_training_scheme_random_event.2002.a.tt_success
+					left_icon = scope:target
+					scope:target = {
+						change_trait_rank = {
+							trait = lifestyle_prostitute
+							rank = 1
+							max = 3
+						}
+					}
+				}
+			}
+			25 = { # This was a bad idea!
+				send_interface_toast = {	
+					title = dag_cdo_slave_training_scheme_random_event.2002.a.tt_fail
+					left_icon = scope:target
+					show_as_tooltip = {
+						scope:target = {
+							add_trait = lovers_pox
+						}
+					}
+					scope:target = {
+						hidden_effect = {
+							if = { #Lover's pox
+								limit = {
+									can_contract_disease_trigger = { DISEASE = lovers_pox }
+								}
+								contract_disease_effect = { DISEASE = lovers_pox TREATMENT_EVENT = no } #Adds the trait, sends event "health.2001" to sexual partners, sends event "health.2201" to those who care if health is brought too low
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.2002.b
+		remove_short_term_gold = minor_gold_value					#NB: typical gold cost for the awesome Blademaster trait is medium_gold_value
+																	#Also yes, it's still ludicrously expensive
+		scope:target = {
+			change_trait_rank = {
+				trait = lifestyle_prostitute
+				rank = 1
+				max = 3
+			}
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}
+	}
+
+	option = {
+		##We could exclude this for target's you are not attracted too, but you fucking decided to train them as a sex slave so what did you expect?
+		name = dag_cdo_slave_training_scheme_random_event.2002.c
+		dag_cdo_pressured_sex_effect = {
+			PLAYER = root
+			TARGET = scope:target
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_slave_set_scheme_opinion_modifier = yes
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}
+			scope:target = {
+				carn_dress_character_effect = yes
+			}			
+		}
+	}
+}
+
+#####################################################################################
+# Slave Training: Combat
+# by Dagulus
+# 3002
+#####################################################################################
+## Grants the Blademaster trait
+
+dag_cdo_slave_training_scheme_random_event.3002 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_random_event.3002.t
+	desc = dag_cdo_slave_training_scheme_random_event.3002.desc
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+		scope:target = {
+			has_character_modifier = dag_cdo_pit_fighter
+			NOT = { has_trait = blademaster_3 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.3002.a
+		
+		random_list = {
+			75 = { # This was a good idea!
+				send_interface_toast = {	
+					title = dag_cdo_slave_training_scheme_random_event.3002.a.tt_success
+					left_icon = scope:target
+					scope:target = {
+						change_trait_rank = {
+							trait = lifestyle_blademaster
+							rank = 1
+							max = 3
+						}
+					}
+				}
+			}
+			25 = { # This was a bad idea!
+				send_interface_toast = {	
+					title = dag_cdo_slave_training_scheme_random_event.3002.a.tt_fail
+					left_icon = scope:target
+					scope:target = {
+						increase_wounds_effect = { REASON = training_accident }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.3002.b
+		remove_short_term_gold = medium_gold_value
+
+		scope:target = {
+			change_trait_rank = {
+				trait = lifestyle_blademaster
+				rank = 1
+				max = 3
+			}
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}
+
+#		#ai can currently never get these events, so we don't need ai_chance
+#		ai_chance = {
+#			base = 75
+#			modifier = {
+#				OR = {
+#					has_trait = ambitious
+#					has_trait = arrogant
+#				}
+#				add = 50
+#			}
+#			modifier = {
+#				short_term_gold < medium_gold_value
+#				add = -100
+#			}
+#		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_random_event.3002.c
+	}
+
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_slave_set_scheme_opinion_modifier = yes
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}
+		}
+	}
+}
+
+
+

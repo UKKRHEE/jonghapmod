@@ -1,0 +1,39 @@
+﻿# Characters getting married
+# root = Major partner of the marriage
+# scope:spouse = Minor partner of the marriage
+on_marriage = { # Will not fire from historical marriages
+	## an on_ cannot have two effects so we launch an event.
+	events = {
+        dag_cdo_slave_event.0010
+	}
+}
+
+# Character becomes another's concubine
+# root = the concubinist
+# scope:concubine = the concubine
+on_concubinage = {
+	## an on_ cannot have two effects so we launch an event.
+	events = {
+        dag_cdo_slave_event.0009
+	}
+}
+
+# Characters get divorced in any way
+# root = character initiating the divorce
+# scope:spouse = the divorced spouse
+# scope:reason = flag:script or flag:faith
+on_divorce = { # Will not fire from historical divorces
+	events = {
+        dag_cdo_slave_event.0008
+	}
+}
+
+# Character ceases to be another's concubine
+# root = the concubinist
+# scope:concubine = the concubine
+# scope:reason = flag:death, flag:faith, or flag:script
+on_concubinage_end = {
+	events = {
+        dag_cdo_slave_event.0008
+	}
+}

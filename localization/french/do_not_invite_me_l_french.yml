@@ -1,0 +1,12 @@
+﻿l_french:
+ do_not_invite_me_t:0 "Ne m'invitez pas"
+ do_not_invite_me_desc:0 "Je ne veux pas aller à aucune fête pour l'instant."
+ do_not_invite_me_tooltip:0 "Ne pas recevoir d'invitation pour les fêtes"
+ do_not_invite_me_confirm:0 "Très bien!"
+
+ invite_me_t:0 "N'hésitez pas à m'inviter"
+ invite_me_desc:0 "J'aimerais aller à des fêtes."
+ invite_me_tooltip:0 "Recevoir des invitations pour les fêtes"
+ invite_me_confirm:0 "Très bien!"
+
+

@@ -1,0 +1,62 @@
+﻿l_korean:
+
+dag_cdo_discipline_interaction_random_event.1100.t:0 "Discipline: Chastised"
+dag_cdo_discipline_interaction_random_event.1100.start.desc:0 "With a stern voice you remind [recipient.GetFirstName] that if she does not obay you, [recipient.GetSheHe] will face serious consequences.\n\n"
+dag_cdo_discipline_interaction_random_event.1100.middle.desc:0 "You explain that at this time, you are giving [recipient.GetHerHim] a chance to repent before it is too late.\n\n"
+dag_cdo_discipline_interaction_random_event.1100.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment at being punished in this way."
+dag_cdo_discipline_interaction_random_event.1100.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] does not seem to object to being chastised by you in this way."
+dag_cdo_discipline_interaction_random_event.1100.a:0 "That should suffice for now"
+
+dag_cdo_discipline_interaction_random_event.1101.t:0 "Discipline: Scolded"
+dag_cdo_discipline_interaction_random_event.1101.start.desc:0 "You grab [recipient.GetFirstName] by the shoulders and lightly shake [recipient.GetHerHim], calling [recipient.GetHerHim] a dirty, ungrateful whore.\n\n"
+dag_cdo_discipline_interaction_random_event.1101.middle.desc:0 "Feeling no need to hold back, you command [recipient.GetHerHim] to shove [recipient.GetHerHis] conceit up [recipient.GetHerHis] arse and do what you say.\n\n"
+dag_cdo_discipline_interaction_random_event.1101.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment at being punished in this way."
+dag_cdo_discipline_interaction_random_event.1101.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] does not seem to object to being chastised by you in this way."
+dag_cdo_discipline_interaction_random_event.1101.a:0 "That should suffice for now"
+
+
+
+dag_cdo_discipline_interaction_random_event.2100.t:0 "Discipline: Spanked"
+dag_cdo_discipline_interaction_random_event.2100.start.desc:0 "You explain [recipient.GetFirstName] to that due to [recipient.GetHerHis] continued bad behavior, that you feel you have no choice but to administer a sound spanking.\n\n"
+dag_cdo_discipline_interaction_random_event.2100.middle.desc:0 "You roughly grab [recipient.GetFirstNameNoTooltip] and put [recipient.GetHerHis] backside up on your knees. One after another, your slave gets twenty resounding slaps upon [recipient.GetHerHis] rear. As a result of the punishment [recipient.GetHerHis] backside turns red and hot, and your own hand aches a little from the blows.\n\n"
+dag_cdo_discipline_interaction_random_event.2100.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment at being punished in this way."
+dag_cdo_discipline_interaction_random_event.2100.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] seems almost happy with the way you are treating [recipient.GetHerHim]."
+dag_cdo_discipline_interaction_random_event.2100.a:0 "That should suffice for now"
+
+dag_cdo_discipline_interaction_random_event.2101.t:0 "Discipline: Spanked"
+dag_cdo_discipline_interaction_random_event.2101.start.desc:0 "You explain [recipient.GetFirstName] to that due to [recipient.GetHerHis] continued bad behavior, that you feel you have no choice but to administer a sound spanking.\n\n"
+dag_cdo_discipline_interaction_random_event.2101.middle.desc:0 "You take hold of your slipper and roughly throwing [recipient.GetFirstNameNoTooltip] over your knee, you administer ten sound slaps upon [recipient.GetHerHis] bare rear. The blows upon [recipient.GetHerHis] sensitive rear fill [recipient.GetHerHim] with embarrassment as its slowly turns red.\n\n"
+dag_cdo_discipline_interaction_random_event.2101.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment at being punished in this way."
+dag_cdo_discipline_interaction_random_event.2101.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] seems almost happy with the way you are treating [recipient.GetHerHim]."
+dag_cdo_discipline_interaction_random_event.2101.a:0 "That should suffice for now"
+
+dag_cdo_discipline_interaction_random_event.2200.t:0 "Discipline: Flogged"
+dag_cdo_discipline_interaction_random_event.2200.start.desc:0 "You explain [recipient.GetFirstName] to that due to [recipient.GetHerHis] continued bad behavior, that you feel you have no choice but to administer a severe flogging.\n\n"
+dag_cdo_discipline_interaction_random_event.2200.middle.desc:0 "You take your hard leather belt and grab hold of [recipient.GetFirstNameNoTooltip]. Holding [recipient.GetHerHis] hands, so [recipient.GetSheHe] can not defend [recipient.GetHerselfHimself] from your blows, you repeatedly bring the belt down hard upon her backside. Wide red stripes quickly develop on [recipient.GetHerHis] soft skin.\n\n"
+dag_cdo_discipline_interaction_random_event.2200.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment and pain at being punished in this way."
+dag_cdo_discipline_interaction_random_event.2200.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] seems almost happy with the way you are treating [recipient.GetHerHim]."
+dag_cdo_discipline_interaction_random_event.2200.a:0 "That should suffice for now"
+
+dag_cdo_discipline_interaction_random_event.5100.t:0 "Discipline: Walk of Shame"
+dag_cdo_discipline_interaction_random_event.5100.start.desc:0 "You explain [recipient.GetFirstName] to that due to [recipient.GetHerHis] continued bad behavior, that you feel you have no choice but to display [recipient.GetHerHim] throughout [capital.GetNameNoTierNoTooltip] so the populace know of her disobedience.\n\n"
+dag_cdo_discipline_interaction_random_event.5100.middle.desc:0 "You undress [recipient.GetFirstNameNoTooltip] and force [recipient.GetHerHim] to parade through the most crowded streets of [capital.GetNameNoTierNoTooltip], occasionally stopping and making [recipient.GetHerHim] to show [recipient.GetHerHis] most intimate places to any interested passers-by.\n\n"
+dag_cdo_discipline_interaction_random_event.5100.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment at being forced to display herself in the streets."
+dag_cdo_discipline_interaction_random_event.5100.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] seems almost happy to display [recipient.GetHerselfHimself] in the streets."
+dag_cdo_discipline_interaction_random_event.5100.a:0 "That should suffice for now"
+
+dag_cdo_discipline_interaction_random_event.5101.t:0 "Discipline: Naked Podium"
+dag_cdo_discipline_interaction_random_event.5101.start.desc:0 "You explain [recipient.GetFirstName] to that due to [recipient.GetHerHis] continued bad behavior, that you feel you have no choice but to display [recipient.GetHerHim] throughout [capital.GetNameNoTierNoTooltip] so the populace know of her disobedience.\n\n"
+dag_cdo_discipline_interaction_random_event.5101.middle.desc:0 "You explain to [recipient.GetFirstNameNoTooltip] that you have made an agreement with a local slaver: He will put her on display in the marketplace for about an hour while [recipient.GetSheHe] is naked and in chains. Of course, [recipient.GetSheHe] will not be sold, but being exposed while being the center of attention should remind [recipient.GetHerHim] of [recipient.GetHerHim] position.\n\n"
+dag_cdo_discipline_interaction_random_event.5101.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment at being forced to display herself at the marketplace."
+dag_cdo_discipline_interaction_random_event.5101.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] seems almost happy to display [recipient.GetHerselfHimself] at the marketplace."
+dag_cdo_discipline_interaction_random_event.5101.a:0 "That should suffice for now"
+
+dag_cdo_discipline_interaction_random_event.5102.t:0 "Discipline: Living Canvas"
+dag_cdo_discipline_interaction_random_event.5102.start.desc:0 "You explain [recipient.GetFirstName] to that due to [recipient.GetHerHis] continued bad behavior, that you feel you have no choice but to display [recipient.GetHerHim] throughout [capital.GetNameNoTierNoTooltip] so the populace know of her disobedience.\n\n"
+dag_cdo_discipline_interaction_random_event.5102.middle.desc:0 "You bring your naked slave to the central courtyard and offer everyone to write or draw on [recipient.GetHerHis] body and while doing that, they may touch [recipient.GetHerHim] as much as they want. This punishment is quite popular - standing next to her, there are other painted slaves.\n\n"
+dag_cdo_discipline_interaction_random_event.5102.end.desc:0 "[recipient.GetFirstNameNoTooltip] cannot hide [recipient.GetHerHis] embarrassment at being forced to display herself at the courtyard."
+dag_cdo_discipline_interaction_random_event.5102.end_happy.desc:0 "Interestingly, [recipient.GetFirstNameNoTooltip] seems almost happy to display [recipient.GetHerselfHimself] at the courtyard."
+dag_cdo_discipline_interaction_random_event.5102.a:0 "That should suffice for now"
+
+
+

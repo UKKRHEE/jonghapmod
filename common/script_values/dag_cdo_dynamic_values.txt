@@ -1,0 +1,87 @@
+﻿#~dag_cdo_who_attraction_based_female_chance
+#~dag_cdo_prostitution_based_female_chance
+#~dag_cdo_no_event_frequency_value
+
+#################################################################################################
+#as per 'root_attraction_based_female_chance' but for scope:who (scope:actor causes issues)
+dag_cdo_who_attraction_based_female_chance = {
+	if = {
+		limit = {
+			scope:who = {
+				is_attracted_to_women = yes
+				is_attracted_to_men = no
+			}
+		}
+		add = 100
+	}
+	else_if = {
+		limit = {
+			scope:who = {
+				is_attracted_to_women = yes
+				is_attracted_to_men = yes
+			}
+		}
+		add = 50
+	}
+	else = {
+		add = 0
+	}
+}
+
+#################################################################################################
+#This should set gender based on the game rules
+dag_cdo_prostitution_based_female_chance = {
+	if = {
+		limit = {
+			has_game_rule = carn_prostitution_content_female_only
+		}
+		add = 100
+	}
+	else_if = {
+		limit = {
+			has_game_rule = carn_prostitution_content_any_gender
+		}
+		add = 75
+	}
+	else_if = {
+		limit = {
+			has_game_rule = carn_prostitution_content_male_only
+		}
+		add = 0
+	}
+	else = {
+		add = 0
+	}
+}
+
+#################################################################################################
+dag_cdo_no_event_frequency_value = {
+	if = {
+		limit = { has_game_rule = dag_cdo_event_frequency_low }
+		add = 10
+	}
+	if = {
+		limit = { has_game_rule = dag_cdo_event_frequency_very_low }
+		add = 20
+	}
+	if = {
+		limit = { has_game_rule = dag_cdo_event_frequency_high }
+		subtract = 10
+	}
+	if = {
+		limit = { has_game_rule = dag_cdo_event_frequency_very_high }
+		subtract = 20
+	}
+	if = { 
+		limit = { is_at_war = yes } 		#~Won't get spammed while at war
+		add = 10 
+	}
+}
+
+
+
+
+
+
+
+

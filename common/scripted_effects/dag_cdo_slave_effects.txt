@@ -1,0 +1,142 @@
+﻿#~dag_cdo_actor_buys_slave_effect
+#~dag_cdo_slave_belongs_slavers_guild_effect
+#~dag_cdo_slave_fix_missing_master_effect
+#~dag_cdo_transfer_root_slave_effect				(Keep an eye on this one as it seems like something that should be in the framework)
+
+#~For when you just need it done behind the scenes, will not display as an option correctly
+#~$ACTOR$ buyer and $SLAVE$ is slave
+dag_cdo_actor_buys_slave_effect = {
+	dag_cdo_slave_fix_missing_master_effect = { SLAVE = $SLAVE$ }
+	$SLAVE$ = {
+		random_relation = {
+			type = slave_owner
+			save_scope_as = seller
+		}
+		save_scope_as = slave
+	}
+	$ACTOR$ = {
+		if = {
+			limit = { is_ai = yes }
+			add_gold = scope:slave.carn_slave_price_value
+		}
+		save_scope_as = buyer
+	}
+	if = {
+		limit = { NOT = { $ACTOR$ = scope:seller } }			#sanity check, you do not want to be buying your own slave.
+		carn_buy_slave_effect = { 
+			SLAVE_PRICE = scope:slave.carn_slave_price_value
+		}
+	}
+}
+
+#~Assigns the SLAVE to a random member of the slaver's guild (if they do not already have an owner)
+#~Creates a member of the slavers guild if a suitable candidate is not in range
+#~With the new slave initialization pulse, this probably will no longer be used, but left (and fixed) for legacy reasons.
+dag_cdo_slave_belongs_slavers_guild_effect = {
+	if = {
+		limit = { $SLAVE$ = { dag_cdo_slave_is_missing_master_trigger = yes } }
+		random_living_character = {
+			limit = {
+				is_ai = yes
+				in_diplomatic_range = root
+				has_character_modifier = dag_cdo_slavers_guild_member
+			}
+			save_temporary_scope_as = fix_missing_master_test_scope
+		}
+		#~Backup generation
+		if = {
+			limit = { NOT = { exists = scope:slave_owner } }
+			dag_cdo_create_slaver_effect = yes
+			scope:created_character = { save_temporary_scope_as = fix_missing_master_test_scope }
+		}
+		$SLAVE$ = {
+			scope:fix_missing_master_test_scope = { save_scope_as = slave_owner}
+			trigger_event = { on_action = dag_cdo_slave_initialization_pulse }
+			#~Reinitializes the slave so everything is set up correctly correctly
+			#~Keep an eye on this in case we need a separate reinitialization pulse
+		}
+	}
+}
+
+#~As per the above, but might assign slave to their employer if they have one.
+dag_cdo_slave_fix_missing_master_effect = {
+	if = {
+		limit = { $SLAVE$ = { dag_cdo_slave_is_missing_master_trigger = yes } }
+		random_living_character = {
+			limit = {
+				is_ai = yes						#~Prevents any weirdness
+				is_employer_of = $SLAVE$
+			}
+			alternative_limit = {
+				is_ai = yes
+				in_diplomatic_range = root
+				has_character_modifier = dag_cdo_slavers_guild_member
+			
+			}
+			save_temporary_scope_as = fix_missing_master_test_scope
+		}
+		#~Backup generation
+		if = {
+			limit = { NOT = { exists = scope:slave_owner } }
+			dag_cdo_create_slaver_effect = yes
+			scope:created_character = { save_temporary_scope_as = fix_missing_master_test_scope }
+		}
+		$SLAVE$ = {
+			scope:fix_missing_master_test_scope = { save_scope_as = slave_owner}
+			trigger_event = { on_action = dag_cdo_slave_initialization_pulse }
+			#~Reinitializes the slave so everything is set up correctly correctly
+			#~Keep an eye on this in case we need a separate reinitialization pulse
+		}
+	}
+}
+
+#~For giving away/receiving a slave
+#~based on carn_seize_slave_interaction, may need additional work
+#~When we wrote this initially it had to be run from scope:owner, so often will be in that scope in the code.
+dag_cdo_transfer_root_slave_effect = {
+	$SLAVE$ = {
+		every_relation = {
+			type = slave_owner
+			hidden_effect = {
+				remove_relation_slave = prev
+				add_opinion = {
+					target = prev
+					modifier = carn_former_slave_or_slave_owner_opinion
+				}
+				reverse_add_opinion = {
+					target = prev
+					modifier = carn_former_slave_or_slave_owner_opinion
+				}
+			}
+		}
+		set_relation_slave_owner = $RECIPIENT$
+#		move_to_pool_at = $RECIPIENT$.location		#~This throws up a fuck ton of weird errors when used here
+		#~[22:01:16][jomini_script_system.cpp:169]: Script system error! Error: move_to_pool_at effect [ target province isn't suitable (not a land province that can be walked through) ] Script location: file:  file: events/yearly_events/dag_cdo_slavers_guild_events.txt line: 608; dag_cdo_transfer_root_slave_effect line: 18
+		#~[22:04:08][jomini_script_system.cpp:169]: Script system error! Error: move_to_pool_at effect [ Trying to move courtier to pool they're already in ] Script location: file:  file: events/yearly_events/dag_cdo_slavers_guild_events.txt line: 608; dag_cdo_transfer_root_slave_effect line: 18
+
+	}
+	$RECIPIENT$ = {
+#		set_relation_slave = $SLAVE$
+		if = {
+			limit = {
+				$RECIPIENT$ = { holds_landed_title = yes }
+				$SLAVE$ = { NOT = { is_courtier_of = $RECIPIENT$ } }
+			}
+			hidden_effect = { add_courtier = $SLAVE$ }
+		}
+	}
+	$OWNER$ = {
+		if = {
+			limit = {
+				can_add_hook = {
+					target = $RECIPIENT$
+					type = indebted_hook
+				}
+			}
+			add_hook = {
+				target = $RECIPIENT$
+				type = indebted_hook
+			}
+		}
+	}
+}

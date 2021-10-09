@@ -1,0 +1,84 @@
+﻿Dag_Cdo_BitchBastard = {
+	type = character
+	text = {
+		trigger = {
+			is_male = yes
+		}
+		localization_key = DAG_CDO_BASTARD
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localization_key = DAG_CDO_BITCH
+	}
+}
+
+Dag_Cdo_SlutSissy = {
+	type = character
+	text = {
+		trigger = {
+			is_male = yes
+		}
+		localization_key = DAG_CDO_SISSY
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localization_key = DAG_CDO_SLUT
+	}
+}
+
+
+Dag_Cdo_MistressMaster = {
+	type = character
+	text = {
+		trigger = {
+			is_male = yes
+		}
+		localization_key = DAG_CDO_MASTER
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localization_key = DAG_CDO_MISTRESS
+	}
+}
+
+##[14:24:12][jomini/script_system/jomini_custom_text.h:68]: Object of type 'character' is not valid for 'Dag_Cdo_SlaveMistressMasterPossessive'
+##wtf???
+
+Dag_Cdo_MistressMasterPossessive = {
+	type = character
+	text = {
+		trigger = {
+			is_male = yes
+		}
+		localization_key = DAG_CDO_MASTER_POSSESSIVE
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localization_key = DAG_CDO_MISTRESS_POSSESSIVE
+	}
+}
+
+
+Dag_Cdo_ProprietrixProprietor = {
+	type = character
+	text = {
+		trigger = {
+			is_male = yes
+		}
+		localization_key = DAG_CDO_PROPRIETOR
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localization_key = DAG_CDO_PROPRIETRIX
+	}
+}

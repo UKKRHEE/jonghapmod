@@ -1,0 +1,111 @@
+﻿#~what would be nice is a more sex based version of ai_sociability, but no idea how you would go about that as they look to be hard coded
+
+#A measurement of how much of a slut the character is on -100 to +100.
+dag_cdo_ai_lasciviousness_value = {
+	value = 0
+	# personality traits
+	if = {
+		limit = { has_trait = brave }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = craven }
+		add = -20
+	}
+	if = {
+		limit = { has_trait = chaste }
+		add = -200
+	}
+	if = {
+		limit = { has_trait = lustful }
+		add = 100
+	}
+	if = {
+		limit = { has_trait = content }
+		add = -10
+	}
+	if = {
+		limit = { has_trait = ambitious }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = lazy }
+		add = -10
+	}
+	if = {
+		limit = { has_trait = gregarious }
+		add = 35
+	}
+	if = {
+		limit = { has_trait = shy }
+		add = -100
+	}
+	if = {
+		limit = { has_trait = deceitful }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = arrogant }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = temperate }
+		add = -20
+	}
+	if = {
+		limit = { has_trait = paranoid }
+		add = -50
+	}
+	if = {
+		limit = { has_trait = callous }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = sadistic }
+		add = 10
+	}
+	# lifestyle traits
+	if = {
+		limit = { has_trait = seducer }
+		add = 100
+	}
+	if = {
+		limit = { has_trait = celibate }
+		add = -200
+	}
+	if = {
+		limit = { has_trait = prostitute_1 }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = prostitute_2 }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = prostitute_3 }
+		add = 75
+	}
+	# criminal traits
+	if = {
+		limit = { has_trait = deviant }
+		add = 50
+	}	
+	# stress traits
+	if = {
+		limit = { has_trait = rakish }
+		add = 100
+	}
+	# other traits
+	if = {
+		limit = { has_trait = pregnant }
+		add = -25
+	}
+	
+#	min = 100	#Testing
+	
+	min = -100
+	max = 100
+}
+
+
+

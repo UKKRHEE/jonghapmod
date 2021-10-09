@@ -1,0 +1,841 @@
+﻿namespace = dag_cdo_royal_brothel_event
+
+	#1060-1069	- Various admin events				(fired from varied sources)
+
+	#2000		- Establishing a Brothel			(dag_cdo_events_five_yearly_pulse)
+	#2001		- Reestablishing the Brothel		(dag_cdo_events_five_yearly_pulse)
+
+
+
+##################################
+# The Royal Brothel
+# by Dagulus
+# 1060-1069
+# Setup and misc events (Stupid numbers because I cannot be arsed to rename them all)
+##################################
+
+#~Patronage renewal event after 5 years elapse
+dag_cdo_royal_brothel_event.1063 = {
+	type = character_event
+	title = dag_cdo_royal_brothel_event.1063.t
+	desc = dag_cdo_royal_brothel_event.1063.desc
+	theme = dag_cdo_theme_brothel
+	override_background = {
+		event_background = study
+	}
+	left_portrait = scope:madam_character
+
+	trigger = {
+		any_courtier = {
+			is_alive = yes		#~pretty sure this is not needed now
+			has_variable = dag_cdo_royal_brothel_event_2000_employer
+		}
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = { has_variable = dag_cdo_royal_brothel_event_2000_employer }
+			save_scope_as = madam_character
+		}
+	}
+
+	option = {
+		name = dag_cdo_royal_brothel_event.1063.a
+		#~Remove the standard patronage cost.
+		remove_short_term_gold = medium_gold_value
+
+		#~Extend the duration of your madam_character's patron buff.
+		add_character_modifier = {
+			modifier = dag_cdo_royal_brothel_patron_modifier
+			years = 5
+		}
+		
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_royal_brothel_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+
+	option = {
+		name = dag_cdo_royal_brothel_event.1063.b
+
+		#~Give your madam_character a 20% bonus for an opinion boost.
+		remove_short_term_gold = {
+			value = medium_gold_value
+			multiply = 1.2
+		}
+		reverse_add_opinion = {
+			modifier = grateful_opinion
+			target = scope:madam_character
+			opinion = 20
+		}
+
+		#~Extend the duration of your madam_character's patron buff.
+		add_character_modifier = {
+			modifier = dag_cdo_royal_brothel_patron_modifier
+			years = 5
+		}
+
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_royal_brothel_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+
+	option = {
+		name = dag_cdo_royal_brothel_event.1063.c
+		#~Remove the madam_character's patronage buff.
+		if = {
+			limit = {
+				has_character_modifier = dag_cdo_royal_brothel_patron_modifier
+			}
+			remove_character_modifier = dag_cdo_royal_brothel_patron_modifier
+		}
+		#~Return the madam_character to the character pool.
+		remove_courtier_or_guest = scope:madam_character
+	}
+}
+
+#~madam_character leaves court and no longer works for you.
+dag_cdo_royal_brothel_event.1064 = {
+	hidden = yes
+	
+	trigger = {
+		exists = this
+		is_alive = yes
+		has_variable = dag_cdo_royal_brothel_event_2000_employer
+		NAND = {
+			is_imprisoned = yes
+			imprisoner = root
+		}
+	}
+
+	immediate = {
+		save_scope_as = madam_character
+		var:dag_cdo_royal_brothel_event_2000_employer = {
+			send_interface_message = {
+				type = event_stewardship_bad
+				title = dag_cdo_royal_brothel_event.1064.desc
+				left_icon = scope:madam_character
+
+				#~Remove the buff you have from your madam_character.
+				if = {
+					limit = {
+						has_character_modifier = dag_cdo_royal_brothel_patron_modifier
+					}
+					remove_character_modifier = dag_cdo_royal_brothel_patron_modifier
+				}
+			}
+		}
+	}
+}
+
+#~madam_character dies and can no longer work for you.
+dag_cdo_royal_brothel_event.1065 = {
+	hidden = yes
+
+	trigger = {
+		exists = this
+		has_variable = dag_cdo_royal_brothel_event_2000_employer
+	}
+	
+	immediate = {
+		save_scope_as = madam_character
+		var:dag_cdo_royal_brothel_event_2000_employer = {
+
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							exists = scope:killer
+							this = scope:killer
+						}
+						any_secret = {
+							secret_type = secret_murder
+							secret_target = root
+						}
+					}
+				}
+				# If we killed our madam_character, change the description from passive voice to active in order to make the message more impactful.
+				send_interface_message = {
+					type = event_stewardship_neutral
+					title = dag_cdo_royal_brothel_event.1065.guilty.desc
+					left_icon = scope:madam_character
+
+					#Remove the buff you have from your madam_character.
+					if = {
+						limit = {
+							has_character_modifier = dag_cdo_royal_brothel_patron_modifier
+						}
+						remove_character_modifier = dag_cdo_royal_brothel_patron_modifier
+					}
+				}
+			}
+			else = {
+				send_interface_message = {
+					type = event_stewardship_bad
+					title = dag_cdo_royal_brothel_event.1065.desc
+					left_icon = scope:madam_character
+
+					#Remove the buff you have from your madam_character.
+					if = {
+						limit = {
+							has_character_modifier = dag_cdo_royal_brothel_patron_modifier
+						}
+						remove_character_modifier = dag_cdo_royal_brothel_patron_modifier
+					}
+				}
+			}
+		}
+	}
+}
+
+#You imprison your madam_character so they can no longer work for you.
+dag_cdo_royal_brothel_event.1066 = {
+	hidden = yes
+
+	trigger = {
+		exists = this
+		has_variable = dag_cdo_royal_brothel_event_2000_employer
+		imprisoner = var:dag_cdo_royal_brothel_event_2000_employer
+	}
+	
+	immediate = {
+		save_scope_as = madam_character
+		var:dag_cdo_royal_brothel_event_2000_employer = {
+			send_interface_message = {
+				type = event_stewardship_neutral
+				title = dag_cdo_royal_brothel_event.1066.desc
+				left_icon = scope:madam_character
+
+				#Remove the buff you have from your madam_character.
+				if = {
+					limit = {
+						has_character_modifier = dag_cdo_royal_brothel_patron_modifier
+					}
+					remove_character_modifier = dag_cdo_royal_brothel_patron_modifier
+				}
+			}
+		}
+	}
+}
+
+#When you die, your clients return to the character pool.
+dag_cdo_royal_brothel_event.1067 = {
+	hidden = yes
+
+	#Only occurs if you are employing any clients.
+	trigger = {
+		any_courtier = {
+			has_variable = dag_cdo_royal_brothel_event_2000_employer
+		}
+	}
+
+	#Every madam_character will return to the character pool after removing their employment reference.
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_variable = dag_cdo_royal_brothel_event_2000_employer
+			}
+			remove_variable = dag_cdo_royal_brothel_event_2000_employer
+			root = {
+				remove_courtier_or_guest = prev
+			}
+		}
+	}
+}
+
+##################################
+# Establishing a Brothel
+# by Dagulus
+# 2000
+##################################
+
+scripted_trigger dag_cdo_province_has_royal_brothel_trigger = {
+	OR = {
+		has_building = dag_cdo_royal_brothel_01
+		has_building = dag_cdo_royal_brothel_02
+		has_building = dag_cdo_royal_brothel_03
+		has_building = dag_cdo_royal_brothel_04
+	}
+}
+
+dag_cdo_royal_brothel_event.2000 = {
+	type = character_event
+	title = dag_cdo_royal_brothel_event.2000.t
+	desc = dag_cdo_royal_brothel_event.2000.desc
+	theme = dag_cdo_theme_brothel
+	override_background = {
+		event_background = study
+	}
+	left_portrait = scope:madam_character
+
+	trigger = {
+		#~This is deliberately hard to trigger to stop the the event just filling up the game with brothels
+		NOT = { has_game_rule = carn_prostitution_content_disabled }
+		exists = root.capital_province
+		highest_held_title_tier >= tier_kingdom
+		NOT = { 
+			any_courtier = {
+				has_variable = dag_cdo_royal_brothel_event_2000_employer		
+			}
+		}
+		NOT = { 
+			any_realm_province = {
+				dag_cdo_province_has_royal_brothel_trigger = yes
+			}
+		}
+		any_realm_province = {
+			has_holding_type = city_holding
+			has_special_building = no
+		}
+		culture = { has_innovation = innovation_city_planning }
+		NOT = { has_character_flag = had_dag_cdo_brothel_2000_event }	#~probably no longer relevant, but fuck it
+		OR = {
+			AND = {
+				is_ai = no
+				gold > medium_gold_value
+			}
+			AND = {
+				is_ai = yes
+				short_term_gold > medium_gold_value
+			}
+		}
+	}
+
+	weight_multiplier = {		#~The standard for yearly events is 1
+		base = 1
+		modifier = {			#~ai has less chance of all events that can potentially create a special building
+			add = -0.75
+			is_ai = yes
+		}
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_character_flag = {
+				flag = had_dag_cdo_brothel_2000_event
+			}
+			#~we need a city
+			random_realm_province = {
+				limit = {
+					has_holding_type = city_holding
+					has_special_building = no
+				}
+				alternative_limit = { always = yes }						#~Should never be needed
+				save_scope_as = city_province
+			}
+			#~Find an available madam_character.
+			random_pool_character = {
+				province = root.capital_province
+				limit = {
+					has_trait = prostitute_3
+					NOT = { has_trait = slave }
+				}
+				save_scope_as = madam_character
+			}
+			#~Backup generation
+			if = {
+				limit = { NOT = { exists = scope:madam_character } }
+				dag_cdo_create_madam_effect = yes
+				scope:created_character = { save_scope_as = madam_character }
+			}
+			#~madam_character may need extra cash (Do not ever move this into the if block again, you pillock)
+			scope:madam_character = { add_gold = 10 }
+		}
+	}
+
+	#~Option A: --Imprison--
+	option = {
+		name = dag_cdo_royal_brothel_event.2000.a
+		trigger = {
+			has_imprisonment_reason = scope:madam_character
+		}
+		imprison_character_effect = {
+			TARGET = scope:madam_character
+			IMPRISONER = root
+		}
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_zeal = 0.25
+				ai_honor = 0.1
+				ai_vengefulness = 0.1	
+				ai_rationality = 0.1
+			}
+		}
+	}
+
+	# Option B: --Summon Prostitute--
+    option = { #~I should summon this whore
+        name = dag_cdo_royal_brothel_event.2000.b
+		trigger = {
+			scope:madam_character = {
+				#~Is she(he) hot?
+				carn_can_have_sex_trigger = yes
+			}
+		}
+
+        #Save scopes for "summon prostitute" event and triggers it
+        scope:madam_character = { save_scope_as = particular_whore }
+        trigger_event = dag_cdo_prostitute_event.1001
+
+		stress_impact = {
+			chaste = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 1		
+			ai_value_modifier = {
+				ai_boldness = 0.25
+				ai_honor = -0.5
+				ai_greed = -0.25
+			}
+			modifier = {				#~(+/- 50)
+				add = { 
+					value = dag_cdo_ai_lasciviousness_value	
+					multiply = -0.5
+				}	
+			}			
+		}
+    }
+
+	#~Option C: This could be an interesting investment opportunity
+	option = {
+		name = dag_cdo_royal_brothel_event.2000.c
+
+		#~Pay gold to be their patron.
+		remove_short_term_gold = medium_gold_value				#~All of these amounts tend to be ridiculous
+																#~Using for consistency, but bloody hell do they need to be patched
+		#~Add madam_character to court.
+		add_courtier = scope:madam_character
+		scope:madam_character = {
+			set_variable = {
+				name = dag_cdo_royal_brothel_event_2000_employer
+				value = root
+			}
+#			hidden_effect = {
+#				give_nickname = nick_dag_cdo_the_slaver
+#			}
+		}
+		
+		#Gain a bonus to scheming (Equivalent to owing a tier two pleasure palace, this may be oot but look at how much it cost!)
+		add_character_modifier = {
+			modifier = dag_cdo_royal_brothel_patron_modifier
+			years = 5
+		}
+		
+		#~The province also gets a '''Special building''', yay!
+		scope:city_province = {
+			add_building_slot = 1
+			add_building = dag_cdo_royal_brothel_01
+		}
+		
+		scope:city_province.county = {
+			add_county_modifier = {
+				modifier = dag_cdo_lord_sponsored_a_brothel_modifier
+				years = 5
+			}
+		}
+		
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			shy = medium_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_rationality = 0.25
+				ai_honor = -0.1
+				ai_greed = -0.1
+			}
+		}
+	}
+
+	#~Option D: This is none of my concern - Opt-out. Minuscule prestige loss 
+	option = {
+		name = dag_cdo_royal_brothel_event.2000.d
+
+		add_prestige = minor_prestige_loss
+
+		stress_impact = {
+			ambitious = medium_stress_impact_gain
+			shrewd = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_honor = -0.1
+				ai_rationality = -0.1
+			}
+		}
+	}
+	after = {
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_royal_brothel_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+}
+
+##################################
+# Reestablishing the Brothel
+# by Dagulus
+# 2001
+##################################
+
+#~If the brothel exists, it can attract a new madam_character.
+dag_cdo_royal_brothel_event.2001 = {
+	type = character_event
+	title = dag_cdo_royal_brothel_event.2000.t
+	desc = dag_cdo_royal_brothel_event.2001.desc
+	theme = dag_cdo_theme_brothel
+	override_background = {
+		event_background = study
+	}
+	left_portrait = scope:madam_character
+
+	trigger = {
+		NOT = { has_game_rule = carn_prostitution_content_disabled }
+		any_realm_province = {
+			dag_cdo_province_has_royal_brothel_trigger = yes
+		}
+		NOT = { 
+			any_courtier = {
+				has_variable = dag_cdo_royal_brothel_event_2000_employer		
+			}
+		}
+		OR = {
+			AND = {
+				is_ai = no
+				gold > medium_gold_value
+			}
+			AND = {
+				is_ai = yes
+				short_term_gold > medium_gold_value
+			}
+		}		
+	}
+	
+	weight_multiplier = {		#~The standard for yearly events is 1
+		base = 1
+		dag_cdo_create_character_event_weight_modifier = yes
+	}	
+	
+	immediate = {
+		hidden_effect = {
+			#~we need the city
+			random_realm_province = {
+				limit = {
+					dag_cdo_province_has_royal_brothel_trigger = yes
+				}
+				save_scope_as = city_province
+			}
+			#~Find an available madam_character.
+			random_pool_character = {
+				province = root.capital_province
+				limit = {
+					has_trait = prostitute_3
+					NOT = { has_trait = slave }
+				}
+				save_scope_as = madam_character
+			}
+			#~Backup generation
+			if = {
+				limit = { NOT = { exists = scope:madam_character } }
+				dag_cdo_create_madam_effect = yes
+				scope:created_character = { save_scope_as = madam_character }
+			}
+			#~madam_character may need extra cash (Do not ever move this into the if block again, you pillock)
+			scope:madam_character = { add_gold = 10 }
+		}
+	}
+
+	#~Option A: --Imprison--
+	option = {
+		name = dag_cdo_royal_brothel_event.2000.a
+		trigger = {
+			has_imprisonment_reason = scope:madam_character
+		}
+		imprison_character_effect = {
+			TARGET = scope:madam_character
+			IMPRISONER = root
+		}
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_zeal = 0.25
+				ai_honor = 0.1
+				ai_vengefulness = 0.1	
+				ai_rationality = 0.1
+			}
+		}
+	}
+
+	# Option B: --Summon Prostitute--
+    option = { #~I should summon this whore
+        name = dag_cdo_royal_brothel_event.2000.b
+		trigger = {
+			scope:madam_character = {
+				#~Is she(he) hot?
+				carn_can_have_sex_trigger = yes
+			}
+		}
+
+        #Save scopes for "summon prostitute" event and triggers it
+        scope:madam_character = {
+            save_scope_as = particular_whore
+        }
+        trigger_event = dag_cdo_prostitute_event.1001
+
+		stress_impact = {
+			chaste = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 1		
+			ai_value_modifier = {
+				ai_boldness = 0.25
+				ai_honor = -0.5
+				ai_greed = -0.25
+			}
+			modifier = {				#~(+/- 50)
+				add = { 
+					value = dag_cdo_ai_lasciviousness_value	
+					multiply = -0.5
+				}	
+			}			
+		}
+    }
+
+	#~Option C: This could be an interesting investment opportunity
+	option = {
+		name = dag_cdo_royal_brothel_event.2000.c
+
+		#~Pay gold to be their patron.
+		remove_short_term_gold = medium_gold_value				#~All of these amounts tend to be ridiculous
+																#~Using for consistency, but bloody hell do they need to be patched
+																#~Just as expensive as the initial event, but without the building
+		#~Add madam_character to court.
+		add_courtier = scope:madam_character
+		scope:madam_character = {
+			set_variable = {
+				name = dag_cdo_royal_brothel_event_2000_employer
+				value = root
+			}
+#			hidden_effect = {
+#				give_nickname = nick_dag_cdo_the_slaver
+#			}
+		}
+		
+		#Gain a bonus to ???.
+		add_character_modifier = {
+			modifier = dag_cdo_royal_brothel_patron_modifier
+			years = 5
+		}
+		scope:city_province.county = {
+			add_county_modifier = {
+				modifier = dag_cdo_lord_sponsored_a_brothel_modifier
+				years = 5
+			}
+		}
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			shy = medium_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_rationality = 0.25
+				ai_honor = -0.1
+				ai_greed = -0.1
+			}
+		}
+	}
+
+	#~Option D: This is none of my concern - Opt-out. Minuscule prestige loss 
+	option = {
+		name = dag_cdo_royal_brothel_event.2000.d
+
+		add_prestige = minor_prestige_loss
+
+		stress_impact = {
+			ambitious = medium_stress_impact_gain
+			shrewd = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_honor = -0.1
+				ai_rationality = -0.1
+			}
+		}
+	}
+	after = {
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_royal_brothel_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+}
+
+
+##################################
+# Whores In Training
+# by Dagulus
+# 8001
+# Event used in the Orgy Activity
+##################################
+
+dag_cdo_royal_brothel_event.8001 = {
+	type = character_event
+	title = dag_cdo_royal_brothel_event.8001.t
+	desc = {
+		desc = dag_cdo_royal_brothel_event.8001.start.desc
+		desc = dag_cdo_royal_brothel_event.8001.end.desc
+	}
+	theme = dag_cdo_theme_orgy_activity
+	override_background = {
+		event_background = tavern
+	}
+	left_portrait = { 
+		character = scope:madam_character
+		animation = personality_rational
+		}
+    lower_left_portrait = scope:prostitute_three
+	lower_center_portrait = scope:prostitute_two
+	lower_right_portrait = scope:prostitute_one
+
+
+	trigger = {
+		NOT = { has_game_rule = carn_prostitution_content_disabled }
+		any_courtier = { has_variable = dag_cdo_royal_brothel_event_2000_employer }
+		OR = {
+			AND = {
+				is_ai = no
+				gold > minor_gold_value
+			}
+			AND = {
+				is_ai = yes
+				short_term_gold > minor_gold_value
+			}
+		}
+	}
+
+	weight_multiplier = {	#~The standard for yearly events is 1
+		base = 1
+		modifier = {
+			add = 0.5
+			scope:activity = { any_participant = { count < 5 } }
+		}
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_courtier = {
+				limit = { has_variable = dag_cdo_royal_brothel_event_2000_employer }
+				save_scope_as = madam_character
+			}
+			dag_cdo_create_prostitute_effect = { WHO = root }
+			scope:created_character = {
+#				carn_start_working_as_prostitute_effect = yes					#~Should be already set by dag_cdo_create_prostitute_effect
+				save_scope_as = prostitute_one 
+			}
+			dag_cdo_create_prostitute_effect = { WHO = root }
+			scope:created_character = {
+#				carn_start_working_as_prostitute_effect = yes					#~Should be already set by dag_cdo_create_prostitute_effect
+				save_scope_as = prostitute_two 
+			}
+			dag_cdo_create_prostitute_effect = { WHO = root }
+			scope:created_character = {
+#				carn_start_working_as_prostitute_effect = yes					#~Should be already set by dag_cdo_create_prostitute_effect
+				save_scope_as = prostitute_three 
+			}
+		}
+	}
+
+	#~I agree
+	option = {
+		name = dag_cdo_royal_brothel_event.8001.a
+		scope:activity = {
+			hidden_effect = { invite_character_to_activity = scope:prostitute_one }
+			accept_invitation_for_character = scope:prostitute_one
+		}		
+		scope:activity = {
+			hidden_effect = { invite_character_to_activity = scope:prostitute_two }
+			accept_invitation_for_character = scope:prostitute_two
+		}		
+		scope:activity = {
+			hidden_effect = { invite_character_to_activity = scope:prostitute_three }
+			accept_invitation_for_character = scope:prostitute_three
+		}		
+		reverse_add_opinion = {
+			target = scope:madam_character
+			modifier = grateful_opinion
+			opinion = 15
+		}
+		remove_short_term_gold = {
+			value = minor_gold_value
+		}
+		stress_impact = {
+			rakish = minor_stress_impact_loss
+			greedy = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_honor = 0.2
+				ai_boldness = 0.1
+			}
+			modifier = {				#~(+/- 100)
+				add = { 
+					value = dag_cdo_ai_lasciviousness_value	
+					multiply = 0.2		#~NB: not multiplier 
+				}
+			}
+		}
+	}
+
+	#~It's more of an intimate thing with no whores.
+	option = {
+		name = dag_cdo_royal_brothel_event.8001.b
+		reverse_add_opinion = {
+			target = scope:madam_character
+			modifier = disappointed_opinion
+			opinion = -15
+		}
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_greed = 0.25
+			}
+		}
+	}
+}
+
+
+	

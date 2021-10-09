@@ -1,0 +1,106 @@
+﻿#~dag_cdo_generate_whore_list
+#~dag_cdo_pay_prostitute_effect
+
+#~creates a list of active prostitutes in root's domain and saves it as whore_list
+#~Should always return at least 4 whores
+#~references brothel_madam and var:dag_cdo_brothel_visit_see_women
+dag_cdo_generate_whore_list = {
+   top_liege = {
+		if = {
+			limit = {
+				dag_cdo_valid_prostitute_for_brothel_trigger = yes
+				NOT = { root = this }
+				NOT = { scope:brothel_madam = this }
+			}
+			add_to_list = whore_list
+		}
+		every_courtier_or_guest = {
+			limit = {
+				dag_cdo_valid_prostitute_for_brothel_trigger = yes
+				NOT = { root = this }
+				NOT = { scope:brothel_madam = this }
+				NOT = { is_in_list = whore_list }
+			}
+			add_to_list = whore_list
+		}
+		every_vassal_or_below = {
+			if = {
+				limit = {
+					dag_cdo_valid_prostitute_for_brothel_trigger = yes
+					NOT = { root = this }
+					NOT = { scope:brothel_madam = this }
+					NOT = { is_in_list = whore_list }
+				}
+				add_to_list = whore_list
+			}
+			every_courtier_or_guest = {
+				limit = {
+					dag_cdo_valid_prostitute_for_brothel_trigger = yes
+					NOT = { root = this }
+					NOT = { scope:brothel_madam = this }
+					NOT = { is_in_list = whore_list }
+				}
+				add_to_list = whore_list
+			}
+		}
+	}
+	if = {
+		limit =  { list_size = { name = whore_list value < 1 } }
+		dag_cdo_create_prostitute_effect = { WHO = root }					#~Makes sure we get a character that meets the game rules
+		scope:created_character = {
+#			carn_start_working_as_prostitute_effect = yes					#~Should be already set by dag_cdo_create_prostitute_effect
+			add_to_list = whore_list
+		}
+	}	
+	if = {
+		limit =  { list_size = { name = whore_list value < 2 } }
+		dag_cdo_create_prostitute_effect = { WHO = root }					#~Makes sure we get a character that meets the game rules
+		scope:created_character = {
+#			carn_start_working_as_prostitute_effect = yes					#~Should be already set by dag_cdo_create_prostitute_effect
+			add_to_list = whore_list
+		}
+	}
+	if = {
+		limit =  { list_size = { name = whore_list value < 3 } }
+		dag_cdo_create_prostitute_effect = { WHO = root }					#~Makes sure we get a character that meets the game rules
+		scope:created_character = {
+#			carn_start_working_as_prostitute_effect = yes					#~Should be already set by dag_cdo_create_prostitute_effect
+			add_to_list = whore_list
+		}
+	}
+	if = {
+		limit =  { list_size = { name = whore_list value < 4 } }
+		dag_cdo_create_prostitute_effect = { WHO = root }					#~Makes sure we get a character that meets the game rules
+		scope:created_character = {
+#			carn_start_working_as_prostitute_effect = yes					#~Should be already set by dag_cdo_create_prostitute_effect
+			add_to_list = whore_list
+		}
+	}	
+}
+
+#~based on code from carn_sex_interaction
+dag_cdo_pay_prostitute_effect = {
+	#~pay money for prostitution, and possibly lose piety if your faith dislikes this
+	if = {
+		limit = {
+			$PROSTITUTE$ = {
+				carn_is_working_as_prostitute_trigger = yes			#~Allows for 'one off' prostitution if needed by an event
+			}
+			NOT = {
+				carn_relationship_allows_free_sex_trigger = {
+					PARTNER = $PROSTITUTE$
+				}
+			}
+		}
+		pay_short_term_gold = {
+			target = $PROSTITUTE$
+			gold = $PROSTITUTE$.carn_prostitute_sex_interaction_price_value
+		}
+		if = {
+			limit = {
+				faith = { NOT = { has_doctrine = carn_doctrine_prostitution_accepted } }
+			}
+			add_piety = minor_piety_loss
+		}
+	}
+}

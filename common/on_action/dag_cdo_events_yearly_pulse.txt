@@ -1,0 +1,17 @@
+﻿#~Common events - probably should be used very rarely
+dag_cdo_events_yearly_pulse = {
+	random_events = {
+		delay = { days = { 8 16 } }
+		chance_of_no_event = {
+			value = 30
+			add = dag_cdo_no_event_frequency_value
+		}
+		
+		#######################################
+		# Yearly Events
+		#######################################
+
+		#~Its not 100% clear this category will ever get used, but it's here for completeness
+
+	}
+}

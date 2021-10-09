@@ -1,0 +1,96 @@
+﻿#~dag_cdo_is_attracted_to_any_of_owners_slaves_trigger
+#~dag_cdo_is_sexually_compatable_with_any_of_owners_slaves_trigger
+#~dag_cdo_wishes_to_lay_with_TARGET_trigger
+
+dag_cdo_is_attracted_to_any_of_owners_slaves_trigger = {
+	$OWNER$ = {
+		any_relation = {
+			type = slave
+			has_trait = slave
+			is_capable_adult_ai = yes						#~avoid available in case we want to use this inside an activity
+			carn_slave_can_be_sold_trigger = yes
+			carn_slave_price_value >= 5
+			save_temporary_scope_as = gifted_slave_temp
+		}
+	}		
+	is_attracted_to_gender_of = scope:gifted_slave_temp
+}
+
+dag_cdo_is_sexually_compatable_with_any_of_owners_slaves_trigger = {
+	$OWNER$ = {
+		any_relation = {
+			type = slave
+			has_trait = slave
+			is_capable_adult_ai = yes						#~avoid available in case we want to use this inside an activity
+			carn_slave_can_be_sold_trigger = yes
+			carn_slave_price_value >= 5
+			save_temporary_scope_as = gifted_slave_temp
+		}
+	}
+	matching_gender_and_sexuality_trigger = {
+		CHARACTER_1 = gifted_slave_temp
+		CHARACTER_2 = root
+	}
+}
+
+#~based on 'stress_threshold_special_2001_valid_attraction_target_trigger'
+#~Checks if this character is attracted enough to root character to want to have sex with them
+#~requires TARGET
+dag_cdo_wishes_to_lay_with_TARGET_trigger = {
+
+	#~Basic validity check
+	age >= 16
+	is_attracted_to_gender_of = $TARGET$
+	$TARGET$ = { is_attracted_to_gender_of = prev }
+	opinion = {
+		target = $TARGET$
+		value >= low_positive_opinion
+	}
+
+	#~Disqualifying conditions for target character
+	NOR = {
+		has_trait = chaste
+		has_trait = celibate
+		has_trait = eunuch
+		has_sexuality = asexual
+	}
+	#~Additional disqualifying conditions for target character
+	#~(These were not included in stress_threshold_special_2001_valid_attraction_target_trigger)
+	accepts_incest_with_trigger = { CHARACTER = $TARGET$ }
+	freely_accepts_sodomy_with_trigger = { CHARACTER = $TARGET$ }
+
+	#~Target character must be interested in having sex with $TARGET$ character
+	OR = {
+		has_relation_soulmate = $TARGET$
+		calc_true_if = {
+			amount >= 3
+
+			has_trait = lustful
+			has_trait = lustful # lustful counts as 2 'points'
+			has_relation_lover = $TARGET$
+			has_relation_lover = $TARGET$ # So does an existing lover relation
+			opinion = {
+				target = $TARGET$
+				value >= medium_positive_opinion
+			}
+			opinion = {
+				target = $TARGET$
+				value >= high_positive_opinion
+			}
+			trait_compatibility = {
+				target = $TARGET$
+				value >= low_positive_trait_compatibility
+			}
+			trait_compatibility = {
+				target = $TARGET$
+				value >= medium_positive_trait_compatibility
+			}
+			trait_compatibility = {
+				target = $TARGET$
+				value >= high_positive_trait_compatibility
+			}
+			$TARGET$ = { attraction >= 10 }
+			$TARGET$ = { attraction >= 25 }
+		}
+	}
+}

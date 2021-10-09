@@ -1,0 +1,30 @@
+﻿dag_cdo_discipline_chastise_event_selection = {
+	random_events = {
+		100 = dag_cdo_discipline_interaction_random_event.1100		#~Should be the 'vanilla' always triggers event
+		100 = dag_cdo_discipline_interaction_random_event.1101
+	}
+}
+
+dag_cdo_discipline_spank_event_selection = {
+	random_events = {
+		100 = dag_cdo_discipline_interaction_random_event.2100		#~Should be the 'vanilla' always triggers event
+		100 = dag_cdo_discipline_interaction_random_event.2101
+	}
+}
+
+dag_cdo_discipline_flog_event_selection = {
+	random_events = {
+		100 = dag_cdo_discipline_interaction_random_event.2200		#~Should be the 'vanilla' always triggers event
+	}
+}
+
+dag_cdo_discipline_shame_event_selection = {
+	random_events = {
+		100 = dag_cdo_discipline_interaction_random_event.5100		#~Should be the 'vanilla' always triggers event
+		100 = dag_cdo_discipline_interaction_random_event.5101
+		100 = dag_cdo_discipline_interaction_random_event.5102		
+	}
+}
+
+
+

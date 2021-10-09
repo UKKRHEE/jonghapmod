@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+dag_cdo_msg_murder_prisoner:0 "Prisoner Murdered"
+dag_cdo_msg_murder_prisoner_desc:0 "[recipient.GetTitledFirstName] [recipient.GetDeathReason]"
+
+msg_dag_cdo_started_working_as_pit_fighter:0 "Started Pit Fighting"     #~Not sure this is needed
+msg_dag_cdo_stopped_working_as_pit_fighter:0 "Stopped Pit Fighting"     #~Not sure this is needed

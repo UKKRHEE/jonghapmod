@@ -1,0 +1,18 @@
+﻿l_russian:
+
+game_concept_pit_fighter:0 "Pit Fighter"
+game_concept_pit_fighters:0 "Pit Fighters"
+game_concept_pit_fighting:0 "Pit Fighting"
+game_concept_pit_fighter_possessive:0 "Pit Fighter's"
+game_concept_pit_fighters_possessive:0 "Pit Fighters'"
+game_concept_pit_fighter_desc:0 "A pit fighter is a [character|E] who earns money by fighting before a paying audience.\n\nThe performance of a pit fighter is based on their [prowess|E]. An especially skilled prostitute may become an [GetTrait('blademaster_2').GetName( GetNullCharacter )] or even a [GetTrait('blademaster_3').GetName( GetNullCharacter )].\n\nMost pit fighters will become wounded and probably killed in the pit..."
+
+game_concept_dag_cdo_slave_training_scheme:0 "Slave Training Scheme"
+game_concept_dag_cdo_slave_training_schemes:0 "Slave Training Schemes"
+game_concept_dag_cdo_slave_training:0 "Slave Training"
+game_concept_dag_cdo_slave_training_action:0 "Train"
+game_concept_dag_cdo_slave_training_scheme_single:0 "a Slave Training Scheme"
+game_concept_dag_cdo_slave_training_scheme_desc:0 "The $game_concept_dag_cdo_slave_training_scheme$ is a [personal_scheme|E] to train a character in obedience. This is not [secret_scheme_single|E] and does not use [agents|E].\n\nYour [intrigue|E] has a slight effect on [scheme_power|E], but power is mostly based on the [scheme_target|E]'s personality and [opinion|E] of you. While eventual success is assured, low opinion or a willful personality can make it a long process."
+
+game_concept_dag_cdo_orgy:0 "Orgy"
+game_concept_dag_cdo_orgy_desc:0 "An [activity|E] where rulers and courtiers in a realm gather to have group sex...\n\nParticipants will lose [stress|E] and increase their [opinion|E] of the host. There may also be any number of other consequences, most notably pregnancy and adultery.\n\nA [ruler|E] will invite their [liege|E] and their [vassals|E] (along with various [courtiers|E]) to an $game_concept_dag_cdo_orgy$."

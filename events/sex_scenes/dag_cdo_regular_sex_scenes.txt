@@ -1,0 +1,529 @@
+﻿namespace = dag_cdo_regular_sex_scene
+
+#All of the events we took from DWR have the same name, so we will need to rename some at some point
+
+	#1033		- Experiencing Pleasure		(Other and Male/Futa (consensual) - blowjob, from the perspective of the other)
+	#1046		- Experiencing Pleasure		(Female and Male/Futa (consensual) - cowgirl, from the perspective of the Female)
+	#1053		- Experiencing Pleasure		(Male/Futa and Other (consensual) - blowjob, from the perspective of the Male/Futa)
+	#1066		- Experiencing Pleasure		(Male/Futa and Female (consensual) - cowgirl, from the perspective of the Male/Futa)
+	#1085		- Experiencing Pleasure		(Other and Male/Futa (consensual) - anal, from the perspective of the other)
+	#1095		- Experiencing Pleasure		(Male/Futa and Other (consensual) - anal, from the perspective of the Male/Futa)
+
+
+
+
+
+#####################
+# Experiencing Pleasure
+# by Dagulus
+# Localization based on an event in Dark World Reborn for CK2
+# Other and Male/Futa (consensual) - blowjob, from the perspective of the other
+# 1033
+#####################
+
+dag_cdo_regular_sex_scene.1033 = {
+	type = character_event
+	title = dag_cdo_regular_sex_scene.1033.t
+	desc = {	
+		desc = dag_cdo_regular_sex_scene.1033.start.desc
+		desc = dag_cdo_regular_sex_scene.1033.middle_i.desc
+		desc = dag_cdo_regular_sex_scene.1033.middle_ii.desc
+		desc = dag_cdo_regular_sex_scene.1033.middle_iii.desc
+		desc = dag_cdo_regular_sex_scene.1033.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_oral = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_target = { carn_gender_can_impregnate_trigger = yes }	#~Has a cock
+	}
+	
+	immediate = {
+		dag_cdo_make_sex_player_and_sex_target_naked_for_this_event_effect = yes
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_oral = yes		
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }
+	}
+
+	option = {	#Swallow
+		name = dag_cdo_regular_sex_scene.1033.a
+		#carn_sex_scene_is_cum_inside = yes		#~Does this count?
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+	option = {	#~Take a load in the face.
+		name = dag_cdo_regular_sex_scene.1033.b
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+#####################
+# Experiencing Pleasure
+# by Dagulus
+# Localization based on an event in Dark World Reborn for CK2
+# Female and Male/Futa (consensual) - cowgirl, from the perspective of the Female
+# 1046
+#####################
+
+dag_cdo_regular_sex_scene.1046 = {
+	type = character_event
+	title = dag_cdo_regular_sex_scene.1046.t
+	desc = {	
+		desc = dag_cdo_regular_sex_scene.1046.start.desc
+		desc = dag_cdo_regular_sex_scene.1046.middle_i.desc
+		desc = dag_cdo_regular_sex_scene.1046.middle_ii.desc
+		desc = dag_cdo_regular_sex_scene.1046.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_vaginal = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_player = { is_female = yes }
+		scope:carn_sex_target = { carn_gender_can_impregnate_trigger = yes }	#~Has a cock
+	}
+	
+	immediate = {
+		dag_cdo_make_sex_player_and_sex_target_naked_for_this_event_effect = yes
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_vaginal = yes		
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }
+	}
+
+	option = {	#~Take [carn_sex_target.GetHerHis] cum in me.
+		name = dag_cdo_regular_sex_scene.1046.a
+		carn_sex_scene_is_cum_inside = yes		#~Does this count?
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+	option = {	#~Have [carn_sex_target.GetHerHis] cum outside of me.
+		name = dag_cdo_regular_sex_scene.1046.b
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+#####################
+# Experiencing Pleasure
+# by Dagulus
+# Localization based on an event in Dark World Reborn for CK2
+# Male/Futa and Other (consensual) - blowjob, from the perspective of the Male/Futa
+# 1053
+#####################
+
+dag_cdo_regular_sex_scene.1053 = {
+	type = character_event
+	title = dag_cdo_regular_sex_scene.1053.t
+	desc = {	
+		desc = dag_cdo_regular_sex_scene.1053.start.desc
+		desc = dag_cdo_regular_sex_scene.1053.middle_i.desc
+		desc = dag_cdo_regular_sex_scene.1053.middle_ii.desc		
+		desc = dag_cdo_regular_sex_scene.1053.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_oral = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_player = { carn_gender_can_impregnate_trigger = yes }	#~Has a cock
+	}
+	
+	immediate = {
+		dag_cdo_make_sex_player_and_sex_target_naked_for_this_event_effect = yes
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_oral = yes		
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }
+	}
+
+	option = {	#Swallow
+		name = dag_cdo_regular_sex_scene.1053.a
+		#carn_sex_scene_is_cum_inside = yes		#~Does this count?
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+	option = {	#~Take a load in the face.
+		name = dag_cdo_regular_sex_scene.1053.b
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+#####################
+# Experiencing Pleasure
+# by Dagulus
+# Localization based on an event in Dark World Reborn for CK2
+# Male/Futa and Female (consensual) - cowgirl, from the perspective of the Male/Futa
+# 1066
+#####################
+
+dag_cdo_regular_sex_scene.1066 = {
+	type = character_event
+	title = dag_cdo_regular_sex_scene.1066.t
+	desc = {	
+		desc = dag_cdo_regular_sex_scene.1066.start.desc
+		desc = dag_cdo_regular_sex_scene.1066.middle.desc
+		desc = dag_cdo_regular_sex_scene.1066.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_vaginal = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_player = { carn_gender_can_impregnate_trigger = yes }	#~Has a cock
+		scope:carn_sex_target = { is_female = yes }
+	}
+	
+	immediate = {
+		dag_cdo_make_sex_player_and_sex_target_naked_for_this_event_effect = yes
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_vaginal = yes		
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }
+	}
+
+	option = {	#~Take [carn_sex_target.GetHerHis] cum in me.
+		name = dag_cdo_regular_sex_scene.1066.a
+		carn_sex_scene_is_cum_inside = yes
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+	option = {	#~Have [carn_sex_target.GetHerHis] cum outside of me.
+		name = dag_cdo_regular_sex_scene.1066.b
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+#####################
+# Experiencing Pleasure
+# by Dagulus
+# Localization based on an event in Dark World Reborn for CK2
+# Other and Male/Futa (consensual) - anal, from the perspective of the submissive other
+# 1085
+#####################
+
+dag_cdo_regular_sex_scene.1085 = {
+	type = character_event
+	title = dag_cdo_regular_sex_scene.1085.t
+	desc = {	
+		desc = dag_cdo_regular_sex_scene.1085.start.desc
+		desc = dag_cdo_regular_sex_scene.1085.middle_i.desc
+		desc = dag_cdo_regular_sex_scene.1085.middle_ii.desc
+		desc = dag_cdo_regular_sex_scene.1085.middle_iii.desc
+		desc = dag_cdo_regular_sex_scene.1085.middle_iv.desc
+		desc = dag_cdo_regular_sex_scene.1085.middle_v.desc
+		desc = dag_cdo_regular_sex_scene.1085.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_anal = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_target = { carn_gender_can_impregnate_trigger = yes }	#~Has a cock
+	}
+	
+	immediate = {
+		dag_cdo_make_sex_player_and_sex_target_naked_for_this_event_effect = yes
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_anal = yes		
+		carn_sex_scene_is_sub_player = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }
+	}
+
+	option = {	#~Take [carn_sex_target.GetHerHis] load in my ass.
+		name = dag_cdo_regular_sex_scene.1085.a
+		carn_sex_scene_is_cum_inside = yes
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+	option = {	#~Take [carn_sex_target.GetHerHis] cum shower.
+		name = dag_cdo_regular_sex_scene.1085.b
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+#####################
+# Experiencing Pleasure
+# by Dagulus
+# Localization based on an event in Dark World Reborn for CK2
+# Male/Futa and Other (consensual) - anal, from the perspective of the dominant Male/Futa
+# 1095
+#####################
+
+dag_cdo_regular_sex_scene.1095 = {
+	type = character_event
+	title = dag_cdo_regular_sex_scene.1095.t
+	desc = {	
+		desc = dag_cdo_regular_sex_scene.1095.start.desc
+		desc = dag_cdo_regular_sex_scene.1095.middle_i.desc
+		desc = dag_cdo_regular_sex_scene.1095.middle_ii.desc		
+		desc = dag_cdo_regular_sex_scene.1095.middle_iii.desc		
+		desc = dag_cdo_regular_sex_scene.1095.middle_iv.desc
+		desc = dag_cdo_regular_sex_scene.1095.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_anal = yes
+		carn_sex_scene_is_dom_player = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_player = { carn_gender_can_impregnate_trigger = yes }	#~Has a cock
+	}
+	
+	immediate = {
+		dag_cdo_make_sex_player_and_sex_target_naked_for_this_event_effect = yes
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_anal = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }
+	}
+
+	option = {	#~I fill [carn_sex_target.GetHerHis] ass with my load.
+		name = dag_cdo_regular_sex_scene.1095.a
+		carn_sex_scene_is_cum_inside = yes
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+	option = {	#~I cover [carn_sex_target.GetHerHim] with my cum.
+		name = dag_cdo_regular_sex_scene.1095.b
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+

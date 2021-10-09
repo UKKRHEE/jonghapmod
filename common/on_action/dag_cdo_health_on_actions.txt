@@ -1,0 +1,11 @@
+﻿##########################################################
+#All new health yearly events to be placed here
+##########################################################
+#~Did something go here?
+
+yearly_health_pulse = { #Fired from the birthday pulse
+	on_actions = {
+	}
+}
+
+

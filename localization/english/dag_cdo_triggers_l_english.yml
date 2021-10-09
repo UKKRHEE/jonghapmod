@@ -1,0 +1,20 @@
+﻿l_english:
+
+ dag_cdo_cannot_have_max_number_of_slave_pit_fighters: "You do not have more than [EmptyScope.ScriptValue('dag_cdo_max_slave_pit_fighters_per_owner')|0] slaves working as pit fighters" 
+
+ DAG_CDO_DOES_WISH_TO_LAY_WITH_YOU:0 "[recipient.GetShortUINameNoTooltip] wishes to lay with you: $VALUE|=+0$"
+ DAG_CDO_DOES_NOT_WISH_TO_LAY_WITH_YOU:0 "[recipient.GetShortUINameNoTooltip] does not wish to lay with you: $VALUE|=+0$"
+ DAG_CDO_DOES_NOT_WISH_TO_COMMIT_ADULTERY:0 "[recipient.GetShortUINameNoTooltip] does not wish to commit adultery: $VALUE|=+0$"
+ DAG_CDO_DOES_NOT_WISH_TO_COMMIT_INCEST:0 "[recipient.GetShortUINameNoTooltip] does not wish to commit incest: $VALUE|=+0$"
+ DAG_CDO_DOES_NOT_WISH_TO_COMMIT_SODOMY:0 "[recipient.GetShortUINameNoTooltip] does not wish to commit sodomy: $VALUE|=+0$"
+ DAG_CDO_PARTNER_DISAPPROVES_OF_CHEATING:0 "[recipient.GetShortUINameNoTooltip]'s spouse dislikes [recipient.GetHerHim] laying with others: $VALUE|=+0$"
+
+ #~Generic descriptions for interactions
+ DAG_CDO_SPENT_A_HOOK:0 "Used a Hook: $VALUE|=+0$"
+ AI_LASCIVIOUSNESS:0 "Lasciviousness: $VALUE|=+0$"
+
+ #~Generic trait descriptions for interactions
+ DAG_CDO_AMBITIOUS:0 "[GetTrait('ambitious').GetName( recipient.Self )]: $VALUE|=+0$"
+ DAG_CDO_SADISTIC:0 "[GetTrait('sadistic').GetName( recipient.Self )]: $VALUE|=+0$"
+ DAG_CDO_TORTURER:0 "[GetTrait('torturer').GetName( recipient.Self )]: $VALUE|=+0$"
+

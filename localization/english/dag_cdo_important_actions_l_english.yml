@@ -1,0 +1,9 @@
+﻿l_english:
+ dag_cdo_action_can_slave_train: "Slaves can be trained"
+ dag_cdo_action_can_slave_train_combined_group_label: "Slaves can be trained"
+ dag_cdo_action_can_slave_train_combined_group_name: "$action_can_slave_train_combined_group_label$"
+ dag_cdo_action_can_slave_train_desc: "One of your slaves, [recipient.GetUIName], can be trained."
+ dag_cdo_action_can_slave_train_combined_group_description: "You can train slaves."
+ dag_cdo_action_can_slave_train_label: "You can train [recipient.GetShortUINameNoTooltip]"
+ dag_cdo_action_can_slave_train_combined_label: "[recipient.GetUINameNoTooltip]"
+ dag_cdo_action_can_slave_train_click: "#I Click to open Train Interaction#!"

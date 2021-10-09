@@ -1,0 +1,73 @@
+﻿namespace = dag_cdo_courtier_guest_management
+
+#COURTIERS/GUESTS LEAVING
+# 0001 - Courtier is planning to leave
+# 0102 - Courtier with claim is wanting to leave
+# 0500 - Guests leaves
+
+#GUESTS ARRIVING
+# 1001 - Guest arriving, message if they're great
+
+#POOL CHARACTERS
+# 2001 - "Develops" the character and gives those without location a location
+# 2002 - Pool repopulation
+
+#COURTIERS AND GUESTS DOING STUFF
+# 3001 - Sets relationships and other secrets
+
+###################
+# GUESTS ARRIVING #
+###################
+
+#Guest arriving, message if they're great
+
+#~This is probably going to occur so rarely it is not worth having, but it serves as a good example of how to build this (assuming it works)
+scripted_trigger dag_cdo_courtier_guest_management_1001_exceptional_slaver_trigger = {
+	age < 50
+	intrigue >= high_skill_rating
+	OR = {
+		has_trait = torturer
+		has_character_modifier = dag_cdo_slavers_guild_member
+	}
+}
+
+dag_cdo_courtier_guest_management.1001 = {
+	hidden = yes
+	immediate = {
+		scope:guest = {
+			every_traveling_family_member = {
+				add_to_temporary_list = guest_arrival_list
+			}
+		}
+
+		###EXCEPTIONAL GUEST TOAST###
+		if = {
+			limit = { scope:host = { is_ai = no } } #This is just interface messages, AI doesn't care
+
+			every_in_list = {
+				list = guest_arrival_list
+				limit = {
+					OR = {
+						dag_cdo_courtier_guest_management_1001_exceptional_slaver_trigger = yes
+					}
+				}
+				save_scope_as = exceptional_guest
+
+				#SLAVER MESSAGE
+				if = {
+					limit = { dag_cdo_courtier_guest_management_1001_exceptional_slaver_trigger = yes }
+					scope:host = {
+						send_interface_message = {
+							type = character_arrived
+							left_icon = scope:exceptional_guest
+							title = dag_cdo_courtier_guest_management.1001.t
+							desc = dag_cdo_courtier_guest_management.1001.slaver.desc
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

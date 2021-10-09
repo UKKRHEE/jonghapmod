@@ -1,0 +1,20 @@
+﻿dag_cdo_event_frequency = {
+	default = dag_cdo_event_frequency_default
+	dag_cdo_event_frequency_default = { }
+	dag_cdo_event_frequency_high = { }
+	dag_cdo_event_frequency_very_high = { }
+	dag_cdo_event_frequency_very_low = { }
+	dag_cdo_event_frequency_low = { }
+}
+
+dag_cdo_recapture_slave_event = {
+	default = dag_cdo_recapture_slave_event_disabled
+	dag_cdo_recapture_slave_event_disabled = {}
+	dag_cdo_recapture_slave_event_enabled = {}
+}
+
+#	rule_dag_cdo_low_performance_mode = {
+#		default = dag_cdo_low_performance_mode_disabled
+#		dag_cdo_low_performance_mode_disabled = {}
+#		dag_cdo_low_performance_mode_enabled = {}
+#	}

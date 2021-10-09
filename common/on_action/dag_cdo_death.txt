@@ -1,0 +1,9 @@
+﻿on_death = {
+	events = {
+		dag_cdo_royal_brothel_event.1065 	# Removes the patron buff from their employer when this character dies.
+		dag_cdo_royal_brothel_event.1067 	# When you die removes your clients fron your court.
+		dag_cdo_slavers_guild_event.1065 	# Removes the patron buff from their employer when this character dies.
+		dag_cdo_slavers_guild_event.1067 	# When you die removes your clients fron your court.
+	}
+}
+

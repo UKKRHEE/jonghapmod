@@ -1,0 +1,39 @@
+do_not_invite_me = {
+    picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+    major = no
+
+    title = do_not_invite_me_t
+    desc = do_not_invite_me_desc
+    selection_tooltip = do_not_invite_me_tooltip
+    confirm_text = do_not_invite_me_confirm
+
+    is_shown = {
+	    NOT = { has_character_flag = do_not_invite_me }
+    }
+
+    effect = {
+        custom_tooltip = do_not_invite_me_tooltip
+        add_character_flag = {
+            flag = do_not_invite_me
+        }
+    }
+}
+
+invite_me = {
+    picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+    major = no
+
+    title = invite_me_t
+    desc = invite_me_desc
+    selection_tooltip = invite_me_tooltip
+    confirm_text = invite_me_confirm
+
+    is_shown = {
+	    has_character_flag = do_not_invite_me
+    }
+
+    effect = {
+        custom_tooltip = invite_me_tooltip
+        remove_character_flag = do_not_invite_me
+    }
+}

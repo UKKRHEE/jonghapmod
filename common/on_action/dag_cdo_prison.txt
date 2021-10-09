@@ -1,0 +1,8 @@
+﻿# Code on-action: character being imprisoned in root scope
+# imprisoning character set as scope:imprisoner
+on_imprison = {
+	events = {
+		dag_cdo_royal_brothel_event.1066  #You imprison your client and prevent them from working for you.
+		dag_cdo_slavers_guild_event.1066  #You imprison your client and prevent them from working for you.
+	}
+}

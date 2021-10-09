@@ -1,0 +1,117 @@
+﻿#~TODO: Implement the ability to actually work at the brothel, low priority as not really in scope of mod
+
+dag_cdo_visit_royal_brothel_decision = {
+	title = {
+		first_valid = {
+#            triggered_desc = {
+#                trigger = {
+#					carn_is_working_as_prostitute_trigger = yes
+#                }
+#                desc = dag_cdo_visit_royal_brothel_as_whore_decision
+#            }
+            desc = dag_cdo_visit_royal_brothel_decision
+		}
+	}
+
+	selection_tooltip = {
+		first_valid = {
+#            triggered_desc = {
+#                trigger = {
+#					carn_is_working_as_prostitute_trigger = yes
+#                }
+#                desc = dag_cdo_visit_royal_brothel_as_whore_decision_tooltip
+#            }
+            desc = dag_cdo_visit_royal_brothel_decision_tooltip
+		}
+	}
+
+	desc = {
+		first_valid = {
+#            triggered_desc = {
+#                trigger = {
+#					carn_is_working_as_prostitute_trigger = yes
+#                }
+#                desc = dag_cdo_visit_royal_brothel_as_whore_decision_desc
+#            }
+            desc = dag_cdo_visit_royal_brothel_decision_desc
+		}
+	}
+
+	confirm_text = {
+		first_valid = {
+#            triggered_desc = {
+#                trigger = {
+#					carn_is_working_as_prostitute_trigger = yes
+#                }
+#                desc = dag_cdo_visit_royal_brothel_as_whore_decision_confirm
+#            }
+            desc = dag_cdo_visit_royal_brothel_decision_confirm
+		}
+	}
+
+    picture = "gfx/interface/illustrations/decisions/decision_carn_prostitution.dds"
+
+	ai_check_interval = 120
+
+	cooldown = { days = 1095 }	#~this is another one of those numbers that is true to the base game but is fucking ridiculous
+
+    is_shown = {
+		is_available_adult = yes
+		short_term_gold >= minor_gold_value
+		NOT = { has_game_rule = carn_prostitution_content_disabled }
+		any_realm_province = {
+			dag_cdo_province_has_royal_brothel_trigger = yes
+		}
+    }
+
+    is_valid_showing_failures_only = {
+		carn_can_have_sex_trigger = yes
+    }
+
+    effect = {
+#		custom_tooltip = stress_loss_drunkard_decision_effect_tooltip
+		show_as_tooltip = {
+			stress_impact = {								#~standard stress loss for sex
+				lustful = minor_stress_impact_loss
+				rakish = minor_stress_impact_loss
+			}	
+		}
+		custom_tooltip = stress_threshold.1011.rakish.tt
+#        if = {
+#            limit = {
+#				carn_is_working_as_prostitute_trigger = yes
+#            }
+#            trigger_event = adroitVisitChurchBrothelEvents.3001
+#        }
+#        else = {
+			show_as_tooltip = {
+				remove_short_term_gold = minor_gold_value	#~This number is utter bollocks, but we have no idea how much the whore will cost
+			}
+            trigger_event = dag_cdo_prostitute_event.8001
+#        }
+    }
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = -100
+			NOT = { has_trait = rakish }
+		}
+		modifier = {
+			add = 25
+			stress > low_medium_stress
+		}
+		modifier = {
+			add = 50
+			stress > medium_stress
+		}
+		modifier = {
+			add = 50
+			stress > high_stress
+		}
+	}
+}

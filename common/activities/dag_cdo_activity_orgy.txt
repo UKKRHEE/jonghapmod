@@ -1,0 +1,184 @@
+﻿dag_cdo_activity_orgy = {
+#activity_orgy = {
+	expiration_days = 150
+	has_activity_window = yes	#~Where does the game get the graphics for this?
+	days_until_auto_start = 20
+	frame = 2
+	color = { 0.853906 0.867188 0.105469 1 }
+	valid = {
+		OR = {
+			activity_owner = { #If the host dies or is imprisoned before the orgy, invalidate
+				is_alive = yes
+				is_imprisoned = no
+			}
+			activity_has_been_activated = yes #If the orgy has started, it will not be interrupted
+		}
+	}
+
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+		activity_owner = {
+			save_scope_as = host
+			##~Invite your wives and lovers~##
+			every_spouse = {
+				limit = { dag_can_attend_orgy_trigger = yes }
+				add_to_temporary_list = potential_guests
+			}
+			every_relation = {
+				type = lover
+				limit = { dag_can_attend_orgy_trigger = yes }
+				add_to_temporary_list = potential_guests
+			}
+			##~Invite your friends, their wives and tennis partners~##
+			every_relation = {
+				type = friend
+				limit = { dag_can_attend_orgy_trigger = yes }
+				add_to_temporary_list = potential_guests
+				every_spouse = {
+					limit = { dag_can_attend_orgy_trigger = yes }
+					add_to_temporary_list = potential_guests
+				}
+				every_relation = {
+					type = lover
+					limit = { dag_can_attend_orgy_trigger = yes }
+					add_to_temporary_list = potential_guests
+				}
+			}
+			##~It would be rude to ignore your liege~##
+			if = {
+				limit = {
+					exists = liege
+					liege = { dag_can_attend_orgy_trigger = yes }
+				}
+				liege = { 
+					add_to_temporary_list = potential_guests
+					every_spouse = {
+						limit = { dag_can_attend_orgy_trigger = yes }
+						add_to_temporary_list = potential_guests
+					}
+					every_relation = {
+						type = lover
+						limit = { dag_can_attend_orgy_trigger = yes }
+						add_to_temporary_list = potential_guests
+					}
+				}
+			}
+			##~It would be rude to ignore your vassals~##
+			every_vassal = {
+				limit = { dag_can_attend_orgy_trigger = yes }
+				add_to_temporary_list = potential_guests
+				every_spouse = {
+					limit = { dag_can_attend_orgy_trigger = yes }
+					add_to_temporary_list = potential_guests
+				}
+				every_relation = {
+					type = lover
+					limit = { dag_can_attend_orgy_trigger = yes }
+					add_to_temporary_list = potential_guests
+				}
+			}
+			##~Let's also invite some courtiers, but only if they are hot~##
+			every_courtier_or_guest = {
+				limit = { 
+					dag_can_attend_orgy_trigger = yes
+					attraction >= medium_positive_attraction
+				}
+				add_to_temporary_list = potential_guests
+			}
+			every_in_list = {
+				list = potential_guests
+				scope:activity = {
+					invite_character_to_activity = prev
+				}
+				trigger_event = {
+					id = dag_cdo_orgy.1001
+					days = 1 # For testing purposes so I can switch characters in time #~ (I removed this, that was a mistake)
+				}
+			}
+		}
+	}
+
+	on_activate = {
+		# Check that there are guests apart from the feast host.
+		if = {
+			limit = {
+				NOT = {
+					any_participant = {
+						NOT = {	this = scope:activity.activity_owner }
+					}
+				}
+			}
+			# If there are no other guests, throw this event.
+			activity_owner = {
+				trigger_event = dag_cdo_orgy.1002
+			}
+		}
+		# If there are guests present
+		else = {
+			##All guests force their slaves to attend before we kick off
+			every_participant = {
+				every_relation = {
+					type = slave
+					limit = { 
+						is_available_healthy_ai_adult = yes
+						NOT = { carn_has_any_disease_trigger = yes }
+					}
+					scope:activity = {
+						hidden_effect = { invite_character_to_activity = prev }		#We really need to use 'prev' more
+						accept_invitation_for_character = prev
+					}
+				}
+			}
+			#~Give host any setup events
+			activity_owner = {
+				#~moved the % of no event to the on_action
+				trigger_event = {
+					on_action = dag_cdo_orgy_setup_events
+					days = { 4 7 }
+				}
+			}
+			#~Give all participants start feast events
+			scope:activity = {
+				every_participant = {
+					if = { #You're busy at another party! (invites were sent the same day, but you agreed to another party after this one )
+						limit = {
+							exists = var:booked_for_a_party
+							var:booked_for_a_party = { NOT = { this = scope:activity.activity_owner } }
+						}
+						trigger_event = feast.0010
+					}
+					else = {
+						trigger_event = {
+							on_action = dag_cdo_orgy_start_events
+							days = 10	#~Same value as feast, this leaves time for setup events and gives guest's time to arrive
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		every_participant = {
+			dag_cdo_orgy_attire_remove_effect = yes
+			dag_cdo_orgy_consequences_remove_effect = yes
+			target_weight_modifier_effect = {
+				VALUE = hunt_weight_modifier_value
+			}
+		}
+	}
+
+	on_expire = {
+		
+	}
+
+	on_participant_death = {
+	
+	}
+
+	on_invalidated = {
+		
+	}
+
+}

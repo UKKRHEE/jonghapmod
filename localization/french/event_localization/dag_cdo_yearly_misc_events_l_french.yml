@@ -1,0 +1,27 @@
+﻿l_french:
+
+
+dag_cdo_yearly_misc_event.1001.t:0 "Raped"
+dag_cdo_yearly_misc_event.1001.desc:0 "My [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('victim'))] [victim.GetFirstName] has been raped by [accused.GetTitledFirstName]!\n\nNow [victim.GetSheHe] is calling upon me to enact vengeance upon [victim.GetHerHis] assaulter..."
+dag_cdo_yearly_misc_event.1001.know_accused.desc:0 "My [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('victim'))] [victim.GetFirstName] has been raped by my [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('accused'))] [accused.GetTitledFirstName]!\n\nNow [victim.GetSheHe] is calling upon me to enact vengeance upon [victim.GetHerHis] assaulter..."
+dag_cdo_yearly_misc_event.1001.a:0 "Bring me his bollocks on a plate."
+dag_cdo_yearly_misc_event.1001.b:0 "Imprison [accused.GetHerHim]."
+dag_cdo_yearly_misc_event.1001.c:0 "[accused.GetFirstNameNoTooltip] will make an honest woman of her."
+dag_cdo_yearly_misc_event.1001.d:0 "I simply do not care..."
+
+dag_cdo_yearly_misc_event.1002.t:0 "An Invitation by my [vengeful_spouse.GetWifeHusband]"
+dag_cdo_yearly_misc_event.1002.start.desc:0 "The sudden echo of two familiar voices catches my attention, leading me to my [vengeful_spouse.GetWifeHusband]'s chambers.\n\nWhen I arrive, I am shocked to find my [vengeful_spouse.GetWifeHusband] [vengeful_spouse.GetFirstName] embroiled in a heated discussion with my [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('helpless_rival'))], [helpless_rival.GetFirstName]. Spotting me, [vengeful_spouse.GetFirstNameNoTooltip] quickly grabs [vengeful_spouse.GetFirstNameNoTooltip] and wrestles [bickering_loser.GetHerHim] over a chest of drawers, [helpless_rival.GetFirstNamePossessiveNoTooltip] backside high in the air.\n\n"
+dag_cdo_yearly_misc_event.1002.middle.desc:0 "[vengeful_spouse.GetFirstNameNoTooltip] turns to me and with a cold smiles asks"
+dag_cdo_yearly_misc_event.1002.end.female.desc:0 "'Hello darling, why don't you rape this frigid little bitch?'"
+dag_cdo_yearly_misc_event.1002.end.male.desc:0 "'Hello darling, why don't you rape this quivering little fool?'"
+dag_cdo_yearly_misc_event.1002.a:0 "Well, if you think [helpless_rival.GetSheHe] deserves it..."
+dag_cdo_yearly_misc_event.1002.b:0 "I never knew you could be so vicious... I love it!"
+dag_cdo_yearly_misc_event.1002.c:0 "I really rather would not."
+dag_cdo_yearly_misc_event.1002.d:0 "[vengeful_spouse.GetFirstNameNoTooltip]! This behavior is not appropriate!"
+
+dag_cdo_yearly_misc_event.1003.t:0 "An Offer by my [vengeful_spouse.GetWifeHusband]"
+dag_cdo_yearly_misc_event.1003.start.desc:0 "My [vengeful_spouse.GetWifeHusband] [vengeful_spouse.GetFirstName] joins me in the dungeon as I am overseeing the training of my slaves.\n\n"
+dag_cdo_yearly_misc_event.1003.end.desc:0 ""You know, I think I could do a very good job of training these wretches", she purrs, "Why don't you let me take over this?""
+dag_cdo_yearly_misc_event.1003.a:0 "What an excellent idea, dear."
+dag_cdo_yearly_misc_event.1003.b:0 "I don't think that would be appropriate"
+

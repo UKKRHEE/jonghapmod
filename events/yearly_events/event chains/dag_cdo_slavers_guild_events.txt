@@ -1,0 +1,1103 @@
+﻿namespace = dag_cdo_slavers_guild_event
+
+	#1060-1069	- Various admin events				(fired from varied sources)
+
+	#2000		- Establishing the Guild Hall		(dag_cdo_events_five_yearly_pulse)
+	#2001		- Reestablishing the Guild Hall		(dag_cdo_events_five_yearly_pulse)
+
+	#3000		- Patron Benefits					(dag_cdo_events_tri_yearly_pulse)
+	#3001		- Courter joins Slavers guild		(dag_cdo_events_tri_yearly_pulse)
+	#3002		- Visiting Slaver					(dag_cdo_events_tri_yearly_pulse)
+
+##################################
+# The Guild of Slavers
+# by Dagulus
+# 1060-1069
+# Setup and misc events (Stupid numbers because I cannot be arsed to rename them all)
+##################################
+
+#~Patronage renewal event after 5 years elapse
+dag_cdo_slavers_guild_event.1063 = {
+	type = character_event
+	title = dag_cdo_slavers_guild_event.1063.t
+	desc = dag_cdo_slavers_guild_event.1063.desc
+	theme = dag_cdo_theme_slavery
+	override_background = {
+		event_background = study
+	}
+	left_portrait = scope:client_slaver
+
+	trigger = {
+		exists = scope:client_slaver
+		scope:client_slaver = {
+			is_alive = yes
+			has_variable = dag_cdo_slavers_guild_event_2000_employer
+		}
+	}
+
+	option = {
+		name = dag_cdo_slavers_guild_event.1063.a
+
+		#~Remove the standard patronage cost.
+		remove_short_term_gold = medium_gold_value
+
+		#~Extend the duration of your client_slaver's patron buff.
+		add_character_modifier = {
+			modifier = dag_cdo_slavers_guild_patron_modifier
+			years = 5
+		}
+		
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_slavers_guild_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+
+	option = {
+		name = dag_cdo_slavers_guild_event.1063.b
+
+		#~Give your client_slaver a 20% bonus for an opinion boost.
+		remove_short_term_gold = {
+			value = medium_gold_value
+			multiply = 1.2
+		}
+		reverse_add_opinion = {
+			modifier = grateful_opinion
+			target = scope:client_slaver
+			opinion = 20
+		}
+
+		#~Extend the duration of your client_slaver's patron buff.
+		add_character_modifier = {
+			modifier = dag_cdo_slavers_guild_patron_modifier
+			years = 5
+		}
+
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_slavers_guild_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+
+	option = {
+		name = dag_cdo_slavers_guild_event.1063.c
+		#~Remove the client_slaver's patronage buff.
+		if = {
+			limit = {
+				has_character_modifier = dag_cdo_slavers_guild_patron_modifier
+			}
+			remove_character_modifier = dag_cdo_slavers_guild_patron_modifier
+		}
+		#~Return the client_slaver to the character pool.
+		remove_courtier_or_guest = scope:client_slaver
+	}
+}
+
+#~client_slaver leaves court and no longer works for you.
+dag_cdo_slavers_guild_event.1064 = {
+	hidden = yes
+	
+	trigger = {
+		exists = this
+		is_alive = yes
+		has_variable = dag_cdo_slavers_guild_event_2000_employer
+		NAND = {
+			is_imprisoned = yes
+			imprisoner = root
+		}
+	}
+
+	immediate = {
+		save_scope_as = client_slaver
+		var:dag_cdo_slavers_guild_event_2000_employer = {
+			send_interface_message = {
+				type = event_stewardship_bad
+				title = dag_cdo_slavers_guild_event.1064.desc
+				left_icon = scope:client_slaver
+
+				#~Remove the buff you have from your client_slaver.
+				if = {
+					limit = {
+						has_character_modifier = dag_cdo_slavers_guild_patron_modifier
+					}
+					remove_character_modifier = dag_cdo_slavers_guild_patron_modifier
+				}
+			}
+		}
+	}
+}
+
+#~client_slaver dies and can no longer work for you.
+dag_cdo_slavers_guild_event.1065 = {
+	hidden = yes
+
+	trigger = {
+		exists = this
+		has_variable = dag_cdo_slavers_guild_event_2000_employer
+	}
+	
+	immediate = {
+		save_scope_as = client_slaver
+		var:dag_cdo_slavers_guild_event_2000_employer = {
+
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							exists = scope:killer
+							this = scope:killer
+						}
+						any_secret = {
+							secret_type = secret_murder
+							secret_target = root
+						}
+					}
+				}
+				# If we killed our client_slaver, change the description from passive voice to active in order to make the message more impactful.
+				send_interface_message = {
+					type = event_stewardship_neutral
+					title = dag_cdo_slavers_guild_event.1065.guilty.desc
+					left_icon = scope:client_slaver
+
+					#Remove the buff you have from your client_slaver.
+					if = {
+						limit = {
+							has_character_modifier = dag_cdo_slavers_guild_patron_modifier
+						}
+						remove_character_modifier = dag_cdo_slavers_guild_patron_modifier
+					}
+				}
+			}
+			else = {
+				send_interface_message = {
+					type = event_stewardship_bad
+					title = dag_cdo_slavers_guild_event.1065.desc
+					left_icon = scope:client_slaver
+
+					#Remove the buff you have from your client_slaver.
+					if = {
+						limit = {
+							has_character_modifier = dag_cdo_slavers_guild_patron_modifier
+						}
+						remove_character_modifier = dag_cdo_slavers_guild_patron_modifier
+					}
+				}
+			}
+		}
+	}
+}
+
+#~You imprison your client_slaver so they can no longer work for you.
+dag_cdo_slavers_guild_event.1066 = {
+	hidden = yes
+
+	trigger = {
+		exists = this
+		has_variable = dag_cdo_slavers_guild_event_2000_employer
+		imprisoner = var:dag_cdo_slavers_guild_event_2000_employer
+	}
+	
+	immediate = {
+		save_scope_as = client_slaver
+		var:dag_cdo_slavers_guild_event_2000_employer = {
+			send_interface_message = {
+				type = event_stewardship_neutral
+				title = dag_cdo_slavers_guild_event.1066.desc
+				left_icon = scope:client_slaver
+
+				#Remove the buff you have from your client_slaver.
+				if = {
+					limit = {
+						has_character_modifier = dag_cdo_slavers_guild_patron_modifier
+					}
+					remove_character_modifier = dag_cdo_slavers_guild_patron_modifier
+				}
+			}
+		}
+	}
+}
+
+#~When you die, your clients return to the character pool.
+dag_cdo_slavers_guild_event.1067 = {
+	hidden = yes
+
+	#Only occurs if you are employing any clients.
+	trigger = {
+		any_courtier = {
+			has_variable = dag_cdo_slavers_guild_event_2000_employer
+		}
+	}
+
+	#Every client_slaver will return to the character pool after removing their employment reference.
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_variable = dag_cdo_slavers_guild_event_2000_employer
+			}
+			remove_variable = dag_cdo_slavers_guild_event_2000_employer
+			root = {
+				remove_courtier_or_guest = prev
+			}
+		}
+	}
+}
+
+
+##################################
+# Establishing the Guildhall
+# by Dagulus
+# 2000
+##################################
+
+scripted_trigger dag_cdo_province_has_slavers_guild_trigger = {
+	OR = {
+		has_building = dag_cdo_slaver_guildhall_01
+		has_building = dag_cdo_slaver_guildhall_02
+		has_building = dag_cdo_slaver_guildhall_03
+		has_building = dag_cdo_slaver_guildhall_04
+	}
+}
+
+dag_cdo_slavers_guild_event.2000 = {
+	type = character_event
+	title = dag_cdo_slavers_guild_event.2000.t
+	desc = dag_cdo_slavers_guild_event.2000.desc
+	theme = dag_cdo_theme_slavery
+	override_background = {
+		event_background = study
+	}
+	left_portrait = scope:slaver_character
+
+	trigger = {
+		#~This is deliberately hard to trigger to stop the the event just filling up the game with slavers guildhalls
+		dag_cdo_carn_slavery_content_acceptance_trigger = yes
+		exists = root.capital_province
+		highest_held_title_tier >= tier_kingdom
+		NOT = { 
+			any_courtier = {
+				has_variable = dag_cdo_slavers_guild_event_2000_employer		
+			}
+		}
+		NOT = { 
+			any_realm_province = {
+				dag_cdo_province_has_slavers_guild_trigger = yes
+			}
+		}		
+		any_realm_province = {
+			has_holding_type = city_holding
+			has_special_building = no
+		}
+		culture = { has_innovation = innovation_city_planning }						#~If you don't have this but do have innovation_guilds....
+		culture = { has_innovation = innovation_guilds }							#~We won't question why a worldwide guild was setup without this
+		NOT = { has_character_flag = had_dag_cdo_slavers_guild_event_2000_event }	#~probably no longer relevant, but fuck it
+		OR = {
+			AND = {
+				is_ai = no
+				gold > medium_gold_value
+			}
+			AND = {
+				is_ai = yes
+				short_term_gold > medium_gold_value
+			}
+		}
+	}
+
+	weight_multiplier = {		#~The standard for yearly events is 1
+		base = 1
+		modifier = {			#~ai has less chance of all events that can potentially create a special building
+			add = -0.75
+			is_ai = yes
+		}
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_character_flag = {
+				flag = had_dag_cdo_slavers_guild_event_2000_event
+			}
+			#~Find an available slaver.
+			random_pool_character = {
+				province = root.capital_province
+				limit = {
+					has_character_modifier = dag_cdo_slavers_guild_member
+				}
+				save_scope_as = slaver_character
+			}
+			#~Backup generation
+			if = {
+				limit = { NOT = { exists = scope:slaver_character } }
+				dag_cdo_create_slaver_effect = yes
+				scope:created_character = { save_scope_as = slaver_character }
+			}
+			#~slaver may need extra cash
+			scope:slaver_character = { add_gold = 10 }
+
+			#~we need a city
+			random_realm_province = {
+				limit = {
+					has_holding_type = city_holding
+					has_special_building = no
+				}
+				alternative_limit = { always = yes }						#~Should never be needed
+				weight = {
+					base = 1
+					modifier = {
+						add = 50
+						is_coastal = yes
+					}
+				}				
+				save_scope_as = city_province
+			}
+		}
+	}
+
+	#~Option A: Have my guards clear it out
+	option = {
+		name = dag_cdo_slavers_guild_event.2000.a	
+		#~You attempt to force back the slavers.
+		duel = {
+			skill = martial
+			target = scope:slaver_character
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = dag_cdo_slavers_guild_event.2000.a.tt_success
+				send_interface_toast = {
+					title = dag_cdo_slavers_guild_event.2000.a.tt_success
+					left_icon = scope:slaver_character
+					#~Obviously, this makes you a bit of a local hero.
+					add_prestige = minor_prestige_gain					
+					scope:slaver_character = {
+						#~The city takes reparations.
+						pay_short_term_gold = {
+							target = scope:city_province.barony_controller
+							gold = 10
+						}
+						#~They're a sore loser.
+						add_opinion = {
+							modifier = savaged_my_slavers_opinion		#~This needs changing at some point
+							target = root
+							opinion = -20
+						}
+					}
+					scope:city_province.county = {
+						add_county_modifier = {
+							modifier = dag_cdo_lord_defeated_slavers_guild_modifier
+							years = 5
+						}
+					}
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = dag_cdo_slavers_guild_event.2000.a.tt_fail
+				send_interface_toast = {	
+					title = dag_cdo_slavers_guild_event.2000.a.tt_fail
+					left_icon = scope:slaver_character
+					#~The opposing slaver profits by the acquired slaves.
+					scope:slaver_character = { add_gold = 10 }
+					#~And it's rather ignominious.
+					add_prestige = minor_prestige_loss
+				}
+			}
+		}
+		
+		#~win or lose, the slaver is not welcome here
+		random_neighboring_and_across_water_realm_same_rank_owner = { save_scope_as = foreign_ruler }
+		scope:slaver_character = { visit_court_of = scope:foreign_ruler }	
+
+#		stress_impact = {
+#			#~ i don't think any really make sense
+#		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_honor = 0.75
+				ai_greed = 0.5
+				ai_compassion = 0.5
+				ai_rationality = -0.5
+			}
+		}
+	}
+
+	#~Option B: This could be an interesting investment opportunity
+	option = {
+		name = dag_cdo_slavers_guild_event.2000.b
+
+		#~Pay gold to be their patron.
+		remove_short_term_gold = medium_gold_value				#~All of these amounts tend to be ridiculous
+																#~Using for consistency, but bloody hell do they need to be patched
+		#~Add client_slaver to court.
+		add_courtier = scope:slaver_character
+		scope:slaver_character = {
+			set_variable = {
+				name = dag_cdo_slavers_guild_event_2000_employer
+				value = root
+			}
+			hidden_effect = {
+				give_nickname = nick_dag_cdo_the_slaver
+			}
+		}
+		
+		#~Gain a bonus to dread.
+		add_character_modifier = {
+			modifier = dag_cdo_slavers_guild_patron_modifier
+			years = 5
+		}
+		
+		#~The province also gets a '''Special building''', yay!
+		scope:city_province = {
+			add_building_slot = 1
+			add_building = dag_cdo_slaver_guildhall_01
+		}		
+		
+		#~The province county also gets a bonus
+		scope:city_province.county = {
+			add_county_modifier = {
+				modifier = dag_cdo_lord_complicit_with_slavers_guild_modifier
+				years = 5
+			}
+		}		
+
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			shy = medium_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_rationality = 2
+				ai_honor = -1
+				ai_greed = -1
+			}
+		}
+	}
+
+	#~Option C: This is none of my concern - Opt-out. Minuscule prestige loss 
+	option = {
+		name = dag_cdo_slavers_guild_event.2000.c
+
+		add_prestige = minor_prestige_loss
+
+		stress_impact = {
+			ambitious = medium_stress_impact_gain
+			shrewd = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_greed = 2
+				ai_honor = -1
+				ai_rationality = -1
+			}
+		}
+	}
+
+	after = {
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_slavers_guild_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+}
+
+##################################
+# Reestablishing the Guildhall
+# by Dagulus
+# 2001
+##################################
+
+#~If the slavers guild exists, it can attract a new client_slaver.
+dag_cdo_slavers_guild_event.2001 = {
+	type = character_event
+	title = dag_cdo_slavers_guild_event.2000.t
+	desc = dag_cdo_slavers_guild_event.2001.desc
+	theme = dag_cdo_theme_slavery
+	override_background = {
+		event_background = study
+	}
+	left_portrait = scope:slaver_character
+
+	trigger = {
+		dag_cdo_carn_slavery_content_acceptance_trigger = yes
+		any_realm_province = {
+			dag_cdo_province_has_slavers_guild_trigger = yes
+		}			
+		NOT = { 
+			any_courtier = {
+				has_variable = dag_cdo_slavers_guild_event_2000_employer		
+			}
+		}
+		OR = {
+			AND = {
+				is_ai = no
+				gold > medium_gold_value
+			}
+			AND = {
+				is_ai = yes
+				short_term_gold > medium_gold_value
+			}
+		}
+	}
+
+	weight_multiplier = {		#~The standard for yearly events is 1
+		base = 1
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			#~we need the city
+			random_realm_province = {
+				limit = {
+					dag_cdo_province_has_slavers_guild_trigger = yes
+				}
+				save_scope_as = city_province
+			}
+			#~Find an available slaver.
+			random_pool_character = {
+				province = root.capital_province
+				limit = {
+					has_character_modifier = dag_cdo_slavers_guild_member
+				}
+				save_scope_as = slaver_character
+			}
+			#~Backup generation
+			if = {
+				limit = { NOT = { exists = scope:slaver_character } }
+				dag_cdo_create_slaver_effect = yes
+				scope:created_character = { save_scope_as = slaver_character }
+			}
+			#~slaver may need extra cash
+			scope:slaver_character = { add_gold = 10 }
+		}
+	}
+
+	#~Option A: Have my guards clear it out
+	option = {
+		name = dag_cdo_slavers_guild_event.2000.a	
+		#~You attempt to force back the slavers.
+		duel = {
+			skill = martial
+			target = scope:slaver_character
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = dag_cdo_slavers_guild_event.2000.a.tt_success
+				send_interface_toast = {
+					title = dag_cdo_slavers_guild_event.2000.a.tt_success
+					left_icon = scope:slaver_character
+					#~Obviously, this makes you a bit of a local hero.
+					add_prestige = minor_prestige_gain					
+					scope:slaver_character = {
+						#~The city takes reparations.
+						pay_short_term_gold = {
+							target = scope:city_province.barony_controller
+							gold = 10
+						}
+						#~They're a sore loser.
+						add_opinion = {
+							modifier = savaged_my_slavers_opinion		#~This needs changing at some point
+							target = root
+							opinion = -20
+						}
+					}
+					scope:city_province.county = {
+						add_county_modifier = {
+							modifier = dag_cdo_lord_defeated_slavers_guild_modifier
+							years = 5
+						}
+					}
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = dag_cdo_slavers_guild_event.2000.a.tt_fail
+				send_interface_toast = {	
+					title = dag_cdo_slavers_guild_event.2000.a.tt_fail
+					left_icon = scope:slaver_character
+					#~The opposing slaver profits by the acquired slaves.
+					scope:slaver_character = { add_gold = 10 }
+					#~And it's rather ignominious.
+					add_prestige = minor_prestige_loss
+				}
+			}
+		}
+		
+		#~win or lose, the slaver is not welcome here
+		random_neighboring_and_across_water_realm_same_rank_owner = { save_scope_as = foreign_ruler }
+		scope:slaver_character = { visit_court_of = scope:foreign_ruler }	
+
+#		stress_impact = {
+#			#~ i don't think any really make sense
+#		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_honor = 0.75
+				ai_greed = 0.5
+				ai_compassion = 0.5
+				ai_rationality = -0.5
+			}
+		}
+	}
+
+	#~Option B: This could be an interesting investment opportunity
+	option = {
+		name = dag_cdo_slavers_guild_event.2000.b
+
+		#~Pay gold to be their patron.
+		remove_short_term_gold = medium_gold_value				#~All of these amounts tend to be ridiculous
+																#~Using for consistency, but bloody hell do they need to be patched
+		#~Add client_slaver to court.
+		add_courtier = scope:slaver_character
+		scope:slaver_character = {
+			set_variable = {
+				name = dag_cdo_slavers_guild_event_2000_employer
+				value = root
+			}
+			hidden_effect = {
+				give_nickname = nick_dag_cdo_the_slaver
+			}
+		}
+		#~Gain a bonus to dread.
+		add_character_modifier = {
+			modifier = dag_cdo_slavers_guild_patron_modifier
+			years = 5
+		}
+		#~The province county also gets a bonus
+		scope:city_province.county = {
+			add_county_modifier = {
+				modifier = dag_cdo_lord_complicit_with_slavers_guild_modifier
+				years = 5
+			}
+		}
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			shy = medium_stress_impact_gain
+			paranoid = medium_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_rationality = 2
+				ai_honor = -1
+				ai_greed = -1
+			}
+		}
+	}
+
+	#~Option C: This is none of my concern - Opt-out. Minuscule prestige loss 
+	option = {
+		name = dag_cdo_slavers_guild_event.2000.c
+
+		add_prestige = minor_prestige_loss
+
+		stress_impact = {
+			ambitious = medium_stress_impact_gain
+			shrewd = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_greed = 2
+				ai_honor = -1
+				ai_rationality = -1
+			}
+		}
+	}
+
+	after = {
+		#~Trigger the renewal event in 5 years.
+		trigger_event = {
+			id = dag_cdo_slavers_guild_event.1063
+			days = 1820 #~Just under 5 years, so we can fire it before our old buff expires.
+		}
+	}
+}
+
+##################################
+# Patron Benefits
+# by Dagulus
+# 3000
+##################################
+
+#~If you are patronizing a client_slaver, they will occasionally do something cool and beneficial for you.
+dag_cdo_slavers_guild_event.3000 = {
+	hidden = yes
+
+	trigger = {
+		exists = root.capital_province
+		dag_cdo_carn_slavery_content_acceptance_trigger = yes
+		#~Only valid if we have a client_slaver
+		any_courtier = {
+			is_available_healthy_ai_adult = yes
+			has_variable = dag_cdo_slavers_guild_event_2000_employer
+			opinion = {
+				target = root
+				value > -10
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+	}
+	
+	immediate = {
+		#~Save the scope for our client_slaver.
+		random_courtier = {
+			limit = {
+				is_available_healthy_ai_adult = yes
+				has_variable = dag_cdo_slavers_guild_event_2000_employer
+				opinion = {
+					target = root
+					value > -10
+				}
+			}
+			save_scope_as = slaver_character
+		}
+		
+		#~What will my slaver client_slaver give me?
+		dag_cdo_create_slave_excellent_effect = { OWNER = scope:slaver_character }
+		scope:created_character = { save_scope_as = excellent_slave }
+
+		#~He gave me a Slave, that was the last thing I expected!
+		send_interface_message = {
+			type = event_stewardship_good
+			title = dag_cdo_slavers_guild_event.3000.desc.a
+			left_icon = scope:excellent_slave
+			right_icon = scope:slaver_character
+
+			dag_cdo_transfer_root_slave_effect = {
+				SLAVE = scope:excellent_slave
+				OWNER = scope:slaver_character
+				RECIPIENT = root
+			}
+		}
+	}
+}
+
+##################################################
+# Courter joins Slavers guild
+# by Dagulus
+# 3001
+##################################################
+
+dag_cdo_slavers_guild_event.3001 = {
+	hidden = yes
+
+	trigger = {
+		exists = root.capital_province
+		dag_cdo_carn_slavery_content_acceptance_trigger = yes
+		any_courtier_or_guest = {
+			is_capable_adult_ai = yes
+			NOT = { has_character_modifier = dag_cdo_slavers_guild_member }
+			count < 1
+		}
+	}
+
+	weight_multiplier = {			#~The standard for yearly events is 1
+		base = 1
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		#~Find a suitable courtier (or guest)
+		random_courtier_or_guest = {
+			limit = {
+				is_capable_adult_ai = yes
+				NOT = { has_character_modifier = dag_cdo_slavers_guild_member }
+			}
+			weight = {
+				base = 1
+				compare_modifier = {
+					value = intrigue
+					multiplier = 0.5
+				}
+				compare_modifier = {
+					value = prowess
+					multiplier = 0.25
+				}
+				modifier = {
+					add = 10
+					OR = {
+						has_trait = callous
+						has_trait = sadistic
+					}
+				}
+				modifier = {
+					add = -10
+					has_trait = compassionate
+				}
+				modifier = {
+					add = -10
+					has_trait = forgiving
+				}
+				modifier = {
+					add = -5
+					has_trait = honest
+				}				
+				modifier = {
+					add = -5
+					has_trait = just
+				}
+				modifier = {
+					add = -5
+					has_trait = shy
+				}
+				modifier = {
+					add = -5
+					has_trait = lazy
+				}
+				modifier = {
+					add = 3
+					is_of_major_interest_to_root_trigger = yes
+				}
+				modifier = {
+					add = 2
+					is_of_minor_interest_to_root_trigger = yes
+				}
+				modifier = {
+					add = 1
+					exists = dynasty
+				}
+				#~Reduce chances if they seem likely to inherit stuff soon
+				modifier = {
+					factor = 0.2
+					any_heir_title = {
+						holder = {
+							this = root
+							OR = {
+								age >= 60
+								health <= poor_health
+							}
+						}
+					}
+				}
+			}
+			save_scope_as = slaver_character
+		}
+		if = {
+			limit = { exists = scope:slaver_character }
+
+			send_interface_message = {
+				type = event_generic_neutral
+				title = dag_cdo_slavers_guild_event.3001.t
+
+				scope:slaver_character = {
+					add_character_modifier = {
+						modifier = dag_cdo_slavers_guild_member
+					}
+				}
+				hidden_effect = {
+					#~Sign up and get a free slave. (Terms and conditions may apply)
+					#~As we are giving a slave to someone without a court, this will generate log errors
+					dag_cdo_create_slave_low_effect = { OWNER = scope:slaver_character }
+				}
+				right_icon = scope:slaver_character
+			}
+		}
+	}
+}
+
+##################################################
+# Visiting Slaver
+# by Dagulus
+# 3002
+##################################################
+
+dag_cdo_slavers_guild_event.3002 = {
+	type = character_event
+	title = dag_cdo_slavers_guild_event.3002.t
+	desc = dag_cdo_slavers_guild_event.3002.desc
+	theme = dag_cdo_theme_slavery
+
+	lower_right_portrait = scope:slaver_character
+	left_portrait = {
+		character = scope:high_skill_option
+		animation = prison_dungeon
+	}
+	right_portrait = {
+		character = scope:low_skill_option
+		animation = prison_dungeon
+	}
+
+	trigger = {
+		exists = root.capital_province
+		dag_cdo_carn_slavery_content_acceptance_trigger = yes
+	}
+
+	weight_multiplier = {		#~The standard for yearly events is 1
+		base = 1
+		modifier = {
+			add = -5
+			any_relation = {
+				type = slave
+				count > 5
+			}
+		}			
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			#~Find an available slaver.
+			random_living_character = {
+				limit = {
+					in_diplomatic_range = root
+					has_character_modifier = dag_cdo_slavers_guild_member
+				}
+				save_scope_as = slaver_character
+			}
+			#~Backup generation
+			if = {
+				limit = { NOT = { exists = scope:slaver_character } }
+				dag_cdo_create_slaver_effect = yes
+				scope:created_character = { save_scope_as = slaver_character }
+			}
+			#~HIGH-SKILL CHARACTER
+			scope:slaver_character = {
+				random_relation = {
+					type = slave
+					limit = {
+						carn_slave_can_be_sold_trigger = yes
+						carn_slave_price_value >= 5
+					}
+					save_scope_as = high_skill_option
+				}
+			}
+			#~Backup generation
+			if = {
+				limit = { NOT = { exists = scope:high_skill_option } }
+				dag_cdo_create_slave_high_effect = { OWNER = scope:slaver_character }
+				scope:created_character = { save_scope_as = high_skill_option }
+			}
+
+			#~LOW SKILL CHARACTER
+			scope:slaver_character = {
+				random_relation = {
+					type = slave
+					limit = {
+						carn_slave_can_be_sold_trigger = yes
+						trigger_if = {
+							limit = {
+								exists = scope:high_skill_option
+							}
+							NOT = { this = scope:high_skill_option }
+						}
+					}
+					save_scope_as = low_skill_option
+				}
+			}
+			#~Backup generation
+			if = {
+				limit = { NOT = { exists = scope:low_skill_option } }
+				dag_cdo_create_slave_low_effect = { OWNER = scope:slaver_character }
+				scope:created_character = { save_scope_as = low_skill_option }
+			}
+		}
+	}
+
+	#~left
+	option = {
+		trigger = {
+			is_landed = yes 				#~extra check to make sure they haven't lost their status
+		}
+		name = dag_cdo_slavers_guild_event.3002.a
+
+		root = { save_scope_as = buyer }	#~NB: Do not use scope:root, because you will waste hours of your life if you do.
+		scope:high_skill_option = {
+				random_relation = {
+					type = slave_owner
+					save_scope_as = seller
+				}
+			save_scope_as = slave
+		}
+		carn_buy_slave_effect = { 
+			SLAVE_PRICE = scope:high_skill_option.carn_slave_price_value
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				short_term_gold < scope:high_skill_option.carn_slave_price_value
+				factor = 0
+			}
+			modifier = { #~The AI will avoid buying slaves if it's illegal
+				dag_cdo_can_become_legal_slave_of_root_trigger = no
+				factor = 0
+			}
+			ai_value_modifier = {
+				ai_honor = -300
+				ai_compassion = -300
+			}
+		}
+	}
+	#~right
+	option = {
+		trigger = {
+			is_landed = yes #~extra check to make sure they haven't lost their status
+		}
+		name = dag_cdo_slavers_guild_event.3002.b
+
+		root = { save_scope_as = buyer }
+		scope:low_skill_option = {
+				random_relation = {
+					type = slave_owner
+					save_scope_as = seller
+				}
+			save_scope_as = slave 
+		}
+		carn_buy_slave_effect = { 
+			SLAVE_PRICE = scope:low_skill_option.carn_slave_price_value
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				short_term_gold < scope:low_skill_option.carn_slave_price_value
+				factor = 0
+			}
+			modifier = { #~The AI will not buy slaves if it's illegal (probably)
+				dag_cdo_can_become_legal_slave_of_root_trigger = no
+				factor = 0
+			}
+			ai_value_modifier = {
+				ai_honor = -300
+				ai_compassion = -300
+			}			
+		}
+	}
+	#~None...
+	option = {
+		name = dag_cdo_slavers_guild_event.3002.c.two
+		custom_tooltip = dag_cdo_slavers_guild_event.3002.c.tt
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+
+

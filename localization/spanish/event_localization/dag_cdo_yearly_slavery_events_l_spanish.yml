@@ -1,0 +1,79 @@
+﻿l_spanish:
+
+
+dag_cdo_yearly_slavery_event.1003.t:0 "A Willing Slave"
+dag_cdo_yearly_slavery_event.1003.desc:0 "My slave [existing_slave.GetTitledFirstName] has brought [existing_slave.GetHerHis] [existing_slave.Custom2('RelationToMeShort', SCOPE.sC('potential_slave'))] [potential_slave.GetTitledFirstName] into my throne room to prostrate [potential_slave.GetHerselfHimself] before me.\n\nIt seems that [potential_slave.GetFirstNameNoTooltip] has become jaded with the life of a free [potential_slave.GetWomanMan] and actually wishes to become my slave!\n\nThis is a rare opportunity..."
+dag_cdo_yearly_slavery_event.1003.a:0 "If that is [potential_slave.GetFirstNamePossessiveNoTooltip] wish..."
+dag_cdo_yearly_slavery_event.1003.b:0 "I think... not."
+
+dag_cdo_yearly_slavery_event.1004.t:0 "An Opportunity"
+dag_cdo_yearly_slavery_event.1004.desc:0 "[slave_character.GetTitledFirstName] looks thoughtful as [slave_character.GetSheHe] [slave_character.Custom('quirk_pos_present')]. "You need a [slave_character.Custom('WifeHusband')]," [slave_character.GetSheHe] says at last. "I know I am your mere slave, but think of everything we share...""
+dag_cdo_yearly_slavery_event.1004.a:0 "It could only ever be you."
+dag_cdo_yearly_slavery_event.1004.b:0 "We cannot marry, but that does not mean we cannot be together."
+dag_cdo_yearly_slavery_event.1004.c:0 "You cannot be my [slave_character.Custom('WifeHusband')], but you belong with me."
+dag_cdo_yearly_slavery_event.1004.d:0 "Marriage is out of the question."
+
+dag_cdo_yearly_slavery_event.1005.t:0 "Increasing Moral"
+dag_cdo_yearly_slavery_event.1005.start.desc:0 "My Martial [marshal_character.GetTitledFirstName] is worried about the state of the men's moral, and approached me with plan to improve it.\n\n"
+dag_cdo_yearly_slavery_event.1005.middle.desc:0 "[marshal_character.GetSheHe|U] proposes holding a competition between the men, with the winning unit being rewarded with a slave girl to use in any way they see fit.\n\n"
+dag_cdo_yearly_slavery_event.1005.end.desc:0 "[marshal_character.GetSheHe|U] has asked if I would be willing to provide the slave."
+dag_cdo_yearly_slavery_event.1005.a:0 "Send [slave_one.GetFirstName] to be the prize."
+dag_cdo_yearly_slavery_event.1005.b:0 "Send [slave_two.GetFirstName] to be the prize."
+dag_cdo_yearly_slavery_event.1005.c:0 "Send [slave_three.GetFirstName] to be the prize."
+dag_cdo_yearly_slavery_event.1005.d:0 "Lets just make the prize some gold instead."
+
+dag_cdo_yearly_slavery_event.2010.t:0 "An Offer"
+dag_cdo_yearly_slavery_event.2010.start.desc:0 "I have been approached by [slave_buyer.GetTitledFirstName] who wishes to buy my slave [slave.GetFirstName].\n\n"
+dag_cdo_yearly_slavery_event.2010.end.desc:0 "This could be an excellent opportunity to make some profit."
+dag_cdo_yearly_slavery_event.2010.a:0 "I think you can make a better offer than that..."
+dag_cdo_yearly_slavery_event.2010.a.toast.success:0 "You strike a hard bargain"
+dag_cdo_yearly_slavery_event.2010.a.toast.failure:0 "[slave_buyer.GetFirstNameNoTooltip] looses interest"
+dag_cdo_yearly_slavery_event.2010.b:0 "That seems a fair trade."
+dag_cdo_yearly_slavery_event.2010.c:0 "Please, accept [slave.GetFirstNameNoTooltip] as a gift!"
+dag_cdo_yearly_slavery_event.2010.d:0 "I think I will keep [slave.GetFirstNameNoTooltip]."
+
+dag_cdo_yearly_slavery_event.2011.middle.desc:0 "It seems that [slave_buyer.GetFirstNameNoTooltip] has long held a grudge against [slave.GetFirstNameNoTooltip] and relishes a chance to get power over [slave_buyer.GetHerHis] rival.\n\n"
+dag_cdo_yearly_slavery_event.2012.middle.desc:0 "It seems that [slave_buyer.GetFirstNameNoTooltip] wants [slave.GetFirstNameNoTooltip] to help in [slave_buyer.GetHerHis] kitchens.\n\n"
+dag_cdo_yearly_slavery_event.2013.middle.desc:0 "It seems that [slave_buyer.GetFirstNameNoTooltip] wants [slave.GetFirstNameNoTooltip] to help with some experiments they are doing.\n\n"
+dag_cdo_yearly_slavery_event.2014.middle.desc:0 "It seems that [slave_buyer.GetFirstNameNoTooltip] wants [slave.GetFirstNameNoTooltip] to work as a whore.\n\n"
+
+dag_cdo_yearly_slavery_event.2020.t:0 "A Gifted Slave"
+dag_cdo_yearly_slavery_event.2020.start.desc:0 "It has been brought to my attention that [gift_target.GetTitledFirstName] has become infatuated with my [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('gifted_slave'))] [gifted_slave.GetFirstName].\n\n"
+dag_cdo_yearly_slavery_event.2020.middle.desc:0 "As [gifted_slave.GetFirstName] happens to be my slave, I could present them as a gift to [gift_target.GetFirstNameNoTooltip].\n\n"
+dag_cdo_yearly_slavery_event.2020.end.desc:0 "This could be an excellent opportunity to gain some leverage over [gift_target.GetFirstNameNoTooltip]."
+dag_cdo_yearly_slavery_event.2020.a:0 "Send [gifted_slave.GetFirstNameNoTooltip] to [gift_target.GetTitledFirstName] as a gift."
+dag_cdo_yearly_slavery_event.2020.b:0 "I think I will keep [gifted_slave.GetFirstNameNoTooltip]."
+
+dag_cdo_yearly_slavery_event.2022.start.desc:0 "It has been brought to my attention that my vassal [gift_target.GetTitledFirstName] has become infatuated with my [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('gifted_slave'))] [gifted_slave.GetFirstName].\n\n"
+dag_cdo_yearly_slavery_event.2023.start.desc:0 "It has been brought to my attention that my Liege [gift_target.GetTitledFirstName] has become infatuated with my [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('gifted_slave'))] [gifted_slave.GetFirstName].\n\n"
+dag_cdo_yearly_slavery_event.2024.start.desc:0 "It has been brought to my attention that my Head of Faith [gift_target.GetTitledFirstName] has become infatuated with my [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('gifted_slave'))] [gifted_slave.GetFirstName].\n\n"
+
+dag_cdo_yearly_slavery_event.2025.start.desc:0 "While my marriage to [gift_target.GetTitledFirstName] is perfect in many ways, it has not escaped my notice that [gift_target.GetSheHe] desires the touch of other [gift_target.GetWomenMen] for [gift_target.GetHerHis] sexual gratification.\n\n"
+dag_cdo_yearly_slavery_event.2025.middle.desc:0 "As I am in possession of my slave [gifted_slave.GetFirstName], I could present [gifted_slave.GetHerHim] as a gift to fulfill my [gift_target.Custom('WifeHusband')]'s carnal needs.\n\n"
+dag_cdo_yearly_slavery_event.2025.end.desc:0 "This could be an excellent opportunity to greatly please my [gift_target.Custom('WifeHusband')]."
+
+dag_cdo_yearly_slavery_event.2030.t:0 "Judgment"
+dag_cdo_yearly_slavery_event.2030.end.desc:0 "Now [accuser.GetNameNoTooltip] is demanding I enact an appropriate punishment."
+dag_cdo_yearly_slavery_event.2030.a:0 "The 'evidence' is circumstantial. Release [accused.GetHerHim]."
+dag_cdo_yearly_slavery_event.2030.b:0 "Imprison [accused.GetHerHim]."
+dag_cdo_yearly_slavery_event.2030.c:0 "Enslave [accused.GetHerHim]."
+dag_cdo_yearly_slavery_event.2030.d:0 "[accused.GetSheHe|U] must die for [accused.GetHerHis] crimes!"
+
+dag_cdo_yearly_slavery_event.2031.start.desc:0 "My [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('accuser'))], [accuser.GetTitledFirstName] has dragged [accused.GetFirstName] in front of me, accusing [accused.GetHerHim] of committing the crime of heresy.\n\n"
+dag_cdo_yearly_slavery_event.2031.e:0 "Interesting, [accused.GetFirstNameNoTooltip] tell me more of these beliefs..."
+dag_cdo_yearly_slavery_event.2032.start.desc:0 "My [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('accuser'))], [accuser.GetTitledFirstName] has dragged [accused.GetFirstName] in front of me, accusing [accused.GetHerHim] of being a foreign spy.\n\n"
+dag_cdo_yearly_slavery_event.2033.start.desc:0 "My [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('accuser'))], [accuser.GetTitledFirstName] has dragged my servant [accused.GetFirstName] in front of me, accusing [accused.GetHerHim] of committing the crime of theft.\n\n"
+dag_cdo_yearly_slavery_event.2034.start.desc:0 "My [ROOT.Char.Custom2('RelationToMe', SCOPE.sC('accuser'))], [accuser.GetTitledFirstName] has dragged [accused.GetFirstName] in front of me, accusing [accused.GetHerHim] of committing the crime of treason.\n\n"
+
+dag_cdo_yearly_slavery_event.2040.t:0 "A Gifted Slave"
+dag_cdo_yearly_slavery_event.2040.start.desc:0 "A new slave has arrived as a gift from [slave_owner.GetTitledFirstName].\n\n"
+dag_cdo_yearly_slavery_event.2040.end.desc:0 "Why [slave_owner.GetSheHe] would send me such a gift I do not know, but [gifted_slave.GetFirstName] looks to be an excellent addition to my stable."
+dag_cdo_yearly_slavery_event.2040.a:0 "I accept with gratitude."
+dag_cdo_yearly_slavery_event.2040.b:0 "I must refuse."
+
+dag_cdo_yearly_slavery_event.2042.start.desc:0 "A new slave has arrived as a gift from my vassal [slave_owner.GetTitledFirstName].\n\n"
+dag_cdo_yearly_slavery_event.2043.start.desc:0 "A new slave has arrived as a gift from my Liege [slave_owner.GetTitledFirstName].\n\n"
+dag_cdo_yearly_slavery_event.2044.start.desc:0 "A new slave has arrived as a gift from my Head of Faith [slave_owner.GetTitledFirstName].\n\n"
+
+
+

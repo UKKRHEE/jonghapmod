@@ -1,0 +1,361 @@
+﻿namespace = dag_cdo_yearly_prostitute_event
+
+#~Not 100% sure there will ever be enough of these to justify a whole category, but here we are.
+#~These are events to do with managing your prostitutes, running a brothel, etc.
+#~Events where you actually are a prostitute are (mostly) not in the scope of this mod.
+
+	#1001		- Prostitution						(intrigue_skulduggery_focus)
+	#1002		- Beaten							(stewardship_domain_focus)
+
+##################################################
+# Prostitution
+# by Dagulus
+# 1001
+# Tag: test_if_backup_works (Rewritten again, does it work now?)
+##################################################
+
+dag_cdo_yearly_prostitute_event.1001 = {
+	type = character_event
+	title = dag_cdo_yearly_prostitute_event.1001.t
+	desc = dag_cdo_yearly_prostitute_event.1001.desc
+	theme = intrigue
+	left_portrait = {
+		character = scope:prostitute_character
+		animation = flirtation
+	}
+
+	trigger = {
+		exists = root.capital_province
+		NOT = { has_game_rule = carn_prostitution_content_disabled }
+	}
+
+	weight_multiplier = {	#~The standard for yearly events is 1
+		base = 1
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+	
+	immediate = {
+		#~Find a potential prostitute.
+		random_courtier_or_guest = {
+			limit = {
+				dag_cdo_can_be_a_prostitute_trigger = yes
+				NOT = { has_trait = lifestyle_prostitute }
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = 25
+					has_trait = lustful
+				}
+				modifier = {
+					add = -25
+					has_trait = chaste
+				}
+				modifier = {
+					add = -50
+					has_sexuality = asexual
+				}				
+			}
+			save_scope_as = prostitute_character
+		}
+		#~Backup generation
+		if = {
+			limit = { NOT = { exists = scope:prostitute_character } }
+			dag_cdo_create_prostitute_effect = { WHO = root }					#~Makes sure we get a character that meets the game rules
+			scope:created_character = {
+#			carn_start_working_as_prostitute_effect = yes						#~Should be already set by dag_cdo_create_prostitute_effect
+				save_scope_as = prostitute_character 
+			}
+		}
+		else = {
+			scope:prostitute_character = {
+				carn_start_working_as_prostitute_effect = yes
+			}
+		}
+	}
+
+	#~Option A: --Imprison--
+	option = {
+		name = dag_cdo_yearly_prostitute_event.1001.a
+		trigger = {
+			has_imprisonment_reason = scope:prostitute_character
+		}
+		imprison_character_effect = {
+			TARGET = scope:prostitute_character
+			IMPRISONER = root
+		}
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_zeal = 0.75
+				ai_honor = 0.25			
+				ai_vengefulness = 0.25	
+				ai_rationality = 0.25
+			}
+		}
+	}
+
+	#~Option B: --Enslave--
+	option = {
+		name = dag_cdo_yearly_prostitute_event.1001.b
+
+		trigger = {
+			dag_cdo_carn_slavery_content_acceptance_trigger = yes
+			dag_cdo_can_become_legal_slave_of_root_trigger = yes
+			has_execute_reason = scope:prostitute_character
+		}
+		scope:prostitute_character = { save_scope_as = recipient }	#~For carnalitis localization
+		carn_enslave_effect = {			#~Includes stress effects
+			SLAVE = scope:prostitute_character
+			OWNER = root
+			DRAMA = yes
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_zeal = 0.50
+				ai_vengefulness = 0.50
+				ai_greed = 0.5
+				ai_boldness = 0.25
+			}			
+		}
+	}
+
+	#~Option C: --Visit Prostitute--
+    option = { #~I should pay a visit to this whore
+        name = dag_cdo_yearly_prostitute_event.1001.c
+		trigger = {
+			scope:prostitute_character = {
+				carn_can_have_sex_trigger = yes
+			}
+		}
+
+        #Save scopes for "visit brothel whore" event and triggers it
+        scope:prostitute_character = {
+            save_scope_as = brothel_whore
+        }
+        trigger_event = dag_cdo_prostitute_event.2001
+
+		stress_impact = {
+			chaste = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 1		
+			ai_value_modifier = {
+				ai_boldness = 0.25
+				ai_honor = -0.5
+				ai_greed = -0.25
+			}
+			modifier = {				#~(+/- 50)
+				add = { 
+					value = dag_cdo_ai_lasciviousness_value	
+					multiply = -0.5
+				}
+			}
+		}
+    }
+
+	#~Option D: --Do nothing--
+	option = {
+		name = {
+			text = dag_cdo_yearly_prostitute_event.1001.d.consort
+			trigger = {
+				OR = {
+					scope:prostitute_character = { is_consort_of = root }
+				}
+			}
+		}
+		name = {
+			text = dag_cdo_yearly_prostitute_event.1001.d.close
+			trigger = {
+				OR = {
+					scope:prostitute_character = {
+						is_close_family_of = root
+					}
+				}
+			}
+		}
+		name = dag_cdo_yearly_prostitute_event.1001.d
+		
+		ai_chance = {
+			base = 1
+			ai_value_modifier = {
+				ai_compassion = 0.25
+				ai_rationality = 0.25
+				ai_boldness = -0.25
+				ai_greed = -0.25
+			}
+		}
+	}
+}
+
+##################################################
+# Prostitute beaten by thug
+# by Dagulus
+# 1002
+##################################################
+
+dag_cdo_yearly_prostitute_event.1002 = {
+	type = character_event
+	title = dag_cdo_yearly_prostitute_event.1002.t
+	desc = dag_cdo_yearly_prostitute_event.1002.desc
+	left_portrait = scope:prostitute
+	right_portrait = scope:thug
+	theme = stewardship
+	
+	trigger = {
+		exists = root.capital_province
+		NOT = { has_game_rule = carn_prostitution_content_disabled }
+		any_courtier_or_guest = {
+			is_adult = yes
+			carn_is_working_as_prostitute_trigger = yes
+		}
+	}
+
+	weight_multiplier = {			#~The standard for yearly events is 1
+		base = 1	
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			#Find an available prostitute.
+			random_courtier_or_guest = {
+				limit = {
+					is_adult = yes
+					carn_is_working_as_prostitute_trigger = yes
+				}
+				save_scope_as = prostitute
+			}
+			dag_cdo_create_thug_effect = { WHO = scope:prostitute }					#~Generate a thug.
+			scope:created_character = { save_scope_as = thug }
+			scope:thug = {
+				if = {
+					limit = {
+						is_female = no												#~This should never be false
+						scope:prostitute = { is_male = yes }
+					}
+					set_sexuality = homosexual
+				}
+				add_gold = 3														#~Bit of a cheat here
+			}	
+		}
+		scope:prostitute = {
+			increase_wounds_no_death_effect = { REASON = beaten }
+		}
+	}
+
+	#~Option A: --Demand Reparation--
+	option = {
+		name = dag_cdo_yearly_prostitute_event.1002.a
+
+		scope:thug = {
+			pay_short_term_gold = {
+				gold = 3
+				target = scope:prostitute
+			}
+		}
+		
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_honor = 0.25
+				ai_greed = 0.5
+			}
+		}
+	}
+	
+	#~Option B: --Imprison accused--
+	option = {
+		name = dag_cdo_yearly_prostitute_event.1002.b
+		
+		imprison_character_effect = {
+			TARGET = scope:thug
+			IMPRISONER = root
+		}
+
+		scope:prostitute = {
+			add_opinion = {
+				target = root
+				opinion = medium_positive_opinion
+				modifier = grateful_opinion
+			}
+		}
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_boldness = 0.25
+				ai_energy = 0.25
+				ai_vengefulness = 0.75
+			}
+		}
+	}
+
+	#~Option C: --Show him how to beat a whore properly--
+	option = {
+		name = dag_cdo_yearly_prostitute_event.1002.c
+
+		add_dread = medium_dread_gain
+		
+		scope:prostitute = {
+			increase_wounds_no_death_effect = { REASON = whipping }
+			add_opinion = {
+				target = root
+				modifier = cruelty_opinion
+				opinion = high_negative_opinion
+			}
+		}
+
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+			compassionate = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_trait = sadistic
+				}
+			}
+			ai_value_modifier = {
+				ai_honor = -0.5
+				ai_compassion = -1
+			}			
+		}
+	}
+
+	#~Option D: --I do not care--
+	option = {
+		name = dag_cdo_yearly_prostitute_event.1002.d
+		
+		scope:prostitute = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = low_negative_opinion
+			}
+		}
+
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_compassion = -0.5
+				ai_energy = -1
+			}
+		}
+	}
+}

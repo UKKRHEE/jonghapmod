@@ -1,0 +1,69 @@
+﻿dag_cdo_brand_effect = {
+	$ACTOR$ = { save_scope_as = actor }
+	$VICTIM$ = { save_scope_as = recipient }
+	blind_and_castrate_actor_effect = yes 									#~Stress & dread
+	show_as_tooltip = {
+		scope:recipient = {
+			custom_tooltip = dag_cdo_discipline_applied_minor_effect_tt		#~This does not appear to show up, but no error message
+		}
+	}
+	scope:recipient = {
+		add_character_modifier = {
+			modifier = dag_cdo_slave_branded
+		}
+		add_character_modifier = {
+			modifier = dag_cdo_recently_branded
+			years = 1
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_trait = craven
+					has_trait = brave
+				}
+			}
+			add_stress = medium_stress_impact_gain
+		}
+		else = {
+			stress_impact = {
+				craven = major_stress_impact_gain
+				brave = minor_stress_impact_gain				
+			}
+		}
+	}
+	torture_blind_castrate_opinion_effect = { VERB = branded }
+}
+
+dag_cdo_castrate_effect = {
+	$ACTOR$ = { save_scope_as = actor }
+	$VICTIM$ = { save_scope_as = recipient }
+	blind_and_castrate_actor_effect = yes 									#~Stress & dread
+	scope:recipient = {
+		add_trait = eunuch
+		add_character_modifier = {
+			modifier = recently_castrated
+			years = 1
+		}
+		random = {
+			chance = 5
+			add_trait = lunatic_1
+		}
+
+		if = {
+			limit = {
+				NOR = {
+					has_trait = craven
+					has_trait = brave
+				}
+			}
+			add_stress = major_stress_impact_gain
+		}
+		else = {
+			stress_impact = {
+				craven = massive_stress_gain
+				brave = medium_stress_impact_gain
+			}
+		}
+	}
+	torture_blind_castrate_opinion_effect = { VERB = castrated }
+}

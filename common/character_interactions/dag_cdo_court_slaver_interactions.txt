@@ -1,0 +1,221 @@
+﻿dag_cdo_hire_court_slaver_interaction = {
+	category = interaction_category_vassal
+
+	desc = dag_cdo_hire_court_slaver_interaction_desc
+
+	is_shown = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }		#~Is this the right level of rules?
+		scope:recipient = {
+			is_courtier_of = scope:actor
+			is_adult = yes
+		}
+		scope:actor = {
+			NOT = {
+				any_relation = {
+					type = dag_cdo_court_slaver
+					this = scope:recipient
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			dag_cdo_can_be_court_slaver_of = { EMPLOYER = scope:actor }
+		}
+	}
+
+	cost = {
+		gold = 10
+	}
+	
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { scope:hook = yes }
+				use_hook = scope:recipient
+			}
+			send_interface_message = {
+				type = event_generic_neutral
+				title = msg_dag_cdo_hired_court_slaver_interaction_title
+				right_icon = scope:recipient
+
+				dag_cdo_set_court_slaver_effect = {
+					SLAVER = scope:recipient
+					EMPLOYER = scope:actor
+				}
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { scope:hook = no }
+				add_opinion = {
+					target = scope:actor
+					modifier = grateful_opinion
+					opinion = 15 #~Should match the amount lost when fired so it's not a way to farm opinion
+				}
+			}
+			add_gold = 10
+		}
+	}
+
+	auto_accept = no
+
+	ai_accept = {
+		base = 0 #~Try to make it 0 for most interactions
+		modifier = {
+			scope:hook = yes
+			add = 50
+			desc = SCHEME_WEAK_HOOK_USED
+		}
+		#~Personality Modifiers
+		ai_value_modifier = {
+			ai_compassion = -1
+			ai_honor = -0.25
+			ai_vengefulness = 0.25
+			ai_boldness = 0.1
+			ai_energy = 0.1
+			ai_greed = 0.1
+			#~Zeal should probably be added depending on faith, but I can't be arsed right now.
+ 			max = 100
+ 			min = -100
+		}
+
+		#~Positive Trait Modifiers
+		modifier = {
+			add = 25
+			scope:recipient = {
+				has_trait = sadistic
+			}
+			desc = DAG_CDO_SADISTIC
+		}
+		modifier = {
+			add = 15
+			scope:recipient = {
+				has_trait = ambitious
+			}
+			desc = DAG_CDO_AMBITIOUS
+		}
+		modifier = {
+			add = 25
+			scope:recipient = {
+				has_trait = torturer
+			}
+			desc = DAG_CDO_TORTURER
+		}			
+
+		#~Negative Trait Modifiers
+
+		#~Dread modifiers
+		modifier = {
+			add = 25
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = 50
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}		
+
+ 		#~Current roles
+ 		modifier = {
+ 			is_councillor = yes
+ 			add = -40
+ 			desc = AI_ON_THE_COUNCIL
+ 		}
+		modifier = { #~Rivalry modifier.
+			desc = offer_vassalization_interaction_aibehavior_rival_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_rival = scope:actor
+					NOT = { has_relation_nemesis = scope:actor }
+				}
+			}
+			add = -50
+		}
+		modifier = { #~Nemesis modifier.
+			desc = offer_vassalization_interaction_aibehavior_nemesis_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_nemesis = scope:actor
+				}
+			}
+			add = -100
+		}		
+	}
+
+	#~Use hook
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+			scope:actor = { has_strong_hook = scope:recipient }
+		}
+	}
+
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = SCHEME_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+
+	send_options_exclusive = no
+}
+
+dag_cdo_fire_court_slaver_interaction = {
+	category = interaction_category_vassal
+
+	desc = dag_cdo_fire_court_slaver_interaction_desc
+
+	is_shown = {
+		scope:recipient = {
+			is_courtier_of = scope:actor
+		}
+		scope:actor = {
+			any_relation = {
+				type = dag_cdo_court_slaver
+				this = scope:recipient
+			}
+		}
+	}
+
+	cost = { }
+	
+	on_accept = {
+		scope:actor = {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = msg_dag_cdo_fired_court_slaver_interaction_title
+				right_icon = scope:recipient
+
+				dag_cdo_fire_court_slaver_effect = {
+					SLAVER = scope:recipient
+					EMPLOYER = scope:actor
+				}
+			}
+		}
+	}
+	
+	auto_accept = yes
+}

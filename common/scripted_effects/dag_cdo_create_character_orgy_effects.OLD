@@ -1,0 +1,61 @@
+﻿#~Creates a -sexually_liberal- guest for the orgy event and saves it as created_character
+#~WHO is character who will interact with the guest
+#~based this on 'create_witch_effect'
+
+#~We are having a lot of issues getting this one to work perfectly
+
+dag_cdo_create_orgy_guest_effect = {
+	$WHO$ = { save_scope_as = who}
+#	random_list = {
+#		0 = {
+#			modifier = {
+#				$WHO$ = { is_attracted_to_women = yes }
+#				add = 100
+#			}
+#			dummy_female = { save_temporary_scope_as = guest_gender }
+#		}
+#		0 = {
+#			modifier = {
+#				$WHO$ = { is_attracted_to_men = yes }
+#				add = 100
+#			}
+#			dummy_male = { save_temporary_scope_as = guest_gender }
+#		}
+#	}
+#	if = { #~catch if $WHO$ is asexual for some fucking reason
+#		limit = { NOT = { exists = scope:guest_gender } }
+#		dummy_female = { save_temporary_scope_as = guest_gender }
+#	}
+
+	#Create them
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = $WHO$.location
+		culture = $WHO$.culture
+		faith = $WHO$.faith
+#		gender = scope:guest_gender
+		gender_female_chance = dag_cdo_who_attraction_based_female_chance
+		template = dag_cdo_sexually_liberal_character_template
+	}
+
+	#~save_scope_as = created_character	#~Added this line to try and fix issues below, it does not help...
+	#~For some reason, this is sometimes failing to create a character, causing errors with 'is_attracted_to_gender_of' below
+	#~We appear to have set location twice in the above (now fixed), that may have been causing the errors - No, its still failing on occasion
+	#~If this is YAF timing issue, why does the fucking effect we copied not suffer from it???
+	#~Is there a way to use 'after' in an effect?
+	#~of course there fucking is, what do you think trigger_event = { on_action = carn_character_initialization_pulse } is?
+	#~ok, that seems to work?
+
+	#Adjust sexuality to create compatibility with WHO
+#	if = {
+#		limit = {
+#			$WHO$ = { is_attracted_to_gender_of = scope:created_character }
+#			NOT = { scope:created_character = { is_attracted_to_gender_of = $WHO$ } }
+#		}
+#		hidden_effect = { scope:created_character = { set_sexuality = bisexual } }
+#	}
+	scope:created_character = {
+		trigger_event = { on_action = dag_cdo_adjust_sexuality_to_create_compatibility_with_who }	
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}

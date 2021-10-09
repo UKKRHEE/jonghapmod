@@ -1,0 +1,15 @@
+﻿# a dominant has a submissive, and vice-versa
+#dominant = {
+#  corresponding = submissive
+#  opinion = 60								#~was +10, but friendship is +60
+#}
+
+#submissive = {
+#  corresponding = dominant
+#  opinion = 10
+#}
+
+
+#################################################################
+#~Was playing about with this to see if you could add effects such as 'obedient = yes' and 'non_interference = yes' but it does not look like you can.
+#~NB: opinion = 10 seems low when compared to friendship

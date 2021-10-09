@@ -1,0 +1,53 @@
+﻿#~dag_cdo_can_be_a_prostitute_trigger		(not in the Carnalitis framework apparently)
+
+dag_cdo_can_be_a_prostitute_trigger = {
+	is_adult = yes
+	effective_age < carn_prostitution_age_cutoff
+	OR = {
+		has_game_rule = carn_prostitution_content_any_gender
+		AND = {
+			is_male = yes
+			has_game_rule = carn_prostitution_content_male_only
+		}
+		AND = {
+			is_female = yes
+			has_game_rule = carn_prostitution_content_female_only
+		}
+	}
+	NOR = {
+		has_trait = incapable
+		has_trait = celibate
+		custom_description = {
+			text = "carn_cannot_be_prostitute"
+			has_character_flag = carn_cannot_be_prostitute
+			has_trait_with_flag = carn_cannot_be_prostitute		
+		}
+		custom_description = {
+			text = "carn_cannot_have_sex"
+			has_trait_with_flag = carn_cannot_have_sex
+			has_character_flag = carn_cannot_have_sex
+		}
+	}
+}
+
+dag_cdo_valid_prostitute_for_brothel_trigger = {
+    OR = {
+        #Player asked for woman
+        AND = {
+            is_female = yes
+            scope:brothel_visitor = {
+                has_variable = dag_cdo_brothel_visit_see_women
+                var:dag_cdo_brothel_visit_see_women = yes
+            }
+        }
+        #Player asked for man
+        AND = {
+            is_male = yes
+            scope:brothel_visitor = {
+                has_variable = dag_cdo_brothel_visit_see_women
+                var:dag_cdo_brothel_visit_see_women = no
+            }
+        }
+    }
+	carn_is_working_as_prostitute_trigger = yes
+}

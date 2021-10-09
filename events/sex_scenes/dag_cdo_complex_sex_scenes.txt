@@ -1,0 +1,382 @@
+﻿namespace = dag_cdo_complex_sex_scene
+
+#####################
+# Experiencing Pleasure
+# by Dagulus
+# Localization based on an event in Dark World Reborn for CK2
+# Male and Female (consensual) - from the perspective of the male, on a bed
+# 0001-0999
+#####################
+
+##########################################
+# 0001-0999	#Initialization
+##########################################
+
+dag_cdo_complex_sex_scene.0001 = {
+	type = character_event
+	title = dag_cdo_complex_sex_scene.0001.t
+	desc = {	
+		desc = dag_cdo_complex_sex_scene.0001.start.desc
+		first_valid = {
+            triggered_desc = {
+                trigger = { is_consort_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0001.middle_wife.desc
+            }
+            triggered_desc = {
+                trigger = { is_child_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0001.middle_mother.desc
+            }
+            triggered_desc = {
+                trigger = { is_parent_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0001.middle_daughter.desc
+            }
+            desc = dag_cdo_complex_sex_scene.0001.middle.desc
+		}		
+		desc = dag_cdo_complex_sex_scene.0001.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_vaginal = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_player = { is_male  = yes }
+		scope:carn_sex_target = { is_female = yes }
+	}
+	
+	immediate = {
+		dag_cdo_make_sex_player_and_sex_target_naked_for_this_event_effect = yes
+		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_vaginal = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }
+	}
+
+	option = {
+		name = dag_cdo_complex_sex_scene.0001.a
+		trigger_event = dag_cdo_complex_sex_scene.0100
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0001.b
+		trigger_event = dag_cdo_complex_sex_scene.0800		
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0001.c
+		trigger_event = dag_cdo_complex_sex_scene.0802
+	}
+}
+
+##########################################
+# 0100-0199	#Vaginal
+##########################################
+
+dag_cdo_complex_sex_scene.0100 = {
+	type = character_event
+	title = dag_cdo_complex_sex_scene.0100.t
+	desc = {	
+		desc = dag_cdo_complex_sex_scene.0100.start.desc
+		first_valid = {
+            triggered_desc = {
+                trigger = { is_consort_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0100.middle_wife.desc
+            }
+            triggered_desc = {
+                trigger = { is_child_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0100.middle_mother.desc
+            }
+            triggered_desc = {
+                trigger = { is_parent_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0100.middle_daughter.desc
+            }
+            desc = dag_cdo_complex_sex_scene.0100.middle.desc
+		}		
+		desc = dag_cdo_complex_sex_scene.0100.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	immediate = {
+		carn_sex_scene_is_vaginal = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }		
+	}
+
+	option = {
+		name = dag_cdo_complex_sex_scene.0100.a
+		trigger_event = dag_cdo_complex_sex_scene.0200		
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0100.b
+		trigger_event = dag_cdo_complex_sex_scene.0800			
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0100.c
+		trigger_event = dag_cdo_complex_sex_scene.0802
+	}	
+}
+
+##########################################
+# 0200-0299	#Anal
+##########################################
+
+dag_cdo_complex_sex_scene.0200 = {
+	type = character_event
+	title = dag_cdo_complex_sex_scene.0200.t
+	desc = {
+		first_valid = {
+            triggered_desc = {
+                trigger = { is_consort_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0200.start_wife.desc
+            }
+            triggered_desc = {
+                trigger = { is_child_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0200.start_mother.desc
+            }
+            triggered_desc = {
+                trigger = { is_parent_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0200.start_daughter.desc
+            }
+            desc = dag_cdo_complex_sex_scene.0200.start.desc
+		}			
+		desc = dag_cdo_complex_sex_scene.0200.middle.desc
+
+		desc = dag_cdo_complex_sex_scene.0200.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	immediate = { 
+		carn_sex_scene_is_anal = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }		
+	}
+
+	option = {
+		name = dag_cdo_complex_sex_scene.0200.a
+		trigger_event = dag_cdo_complex_sex_scene.0801
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0200.b
+		trigger_event = dag_cdo_complex_sex_scene.0802
+	}
+}
+
+##########################################
+# 0800-8999		#Climax (or other endings)
+##########################################
+
+dag_cdo_complex_sex_scene.0800 = {	#~Creampie
+	type = character_event
+	title = dag_cdo_complex_sex_scene.0800.t
+	desc = {	
+		desc = dag_cdo_complex_sex_scene.0800.start.desc
+		first_valid = {
+            triggered_desc = {
+                trigger = { is_consort_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0800.middle_wife.desc
+            }
+            triggered_desc = {
+                trigger = { is_child_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0800.middle_mother.desc
+            }
+            triggered_desc = {
+                trigger = { is_parent_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0800.middle_daughter.desc
+            }
+            desc = dag_cdo_complex_sex_scene.0800.middle.desc
+		}		
+		desc = dag_cdo_complex_sex_scene.0800.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	immediate = {
+		carn_sex_scene_is_vaginal = yes
+		carn_sex_scene_is_cum_inside = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }		
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0801.a
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+dag_cdo_complex_sex_scene.0801 = {	#Anal Creampie
+	type = character_event
+	title = dag_cdo_complex_sex_scene.0801.t
+	desc = {	
+		desc = dag_cdo_complex_sex_scene.0801.start.desc
+		first_valid = {
+            triggered_desc = {
+                trigger = { is_consort_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0801.middle_wife.desc
+            }
+            triggered_desc = {
+                trigger = { is_child_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0801.middle_mother.desc
+            }
+            triggered_desc = {
+                trigger = { is_parent_of = scope:carn_sex_target }
+                desc = dag_cdo_complex_sex_scene.0801.middle_daughter.desc
+            }
+            desc = dag_cdo_complex_sex_scene.0801.middle.desc
+		}		
+		desc = dag_cdo_complex_sex_scene.0801.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	immediate = {
+		carn_sex_scene_is_anal = yes
+		carn_sex_scene_is_cum_inside = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }		
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0801.a
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}
+
+dag_cdo_complex_sex_scene.0802 = {	#cum on stomach
+	type = character_event
+	title = dag_cdo_complex_sex_scene.0802.t
+	desc = {		
+		desc = dag_cdo_complex_sex_scene.0802.start.desc
+		desc = dag_cdo_complex_sex_scene.0802.end.desc
+	}
+	
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = flirtation_left
+	}
+
+	immediate = {
+		carn_sex_scene_is_cum_outside = yes
+        show_as_tooltip = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+        }		
+	}
+	option = {
+		name = dag_cdo_complex_sex_scene.0802.a
+		dag_cdo_make_sex_player_and_sex_target_no_longer_naked_effect = yes
+		hidden_effect = {
+			scope:carn_sex_player  = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:carn_sex_player
+					CHARACTER_2 = scope:carn_sex_target
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = scope:carn_sex_stress_effects
+					DRAMA = scope:carn_sex_drama
+				}
+			}
+		}
+	}
+}

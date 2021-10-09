@@ -1,0 +1,24 @@
+﻿dag_cdo_court_slaver = {
+	texture = "gfx/interface/icons/message_feed/court_physician.dds"
+	alias = {dag_cdo_court_slavers}
+}
+
+dag_cdo_slave_training_scheme = {
+	alias = { 
+		dag_cdo_slave_training_schemes 
+		dag_cdo_slave_training 
+		dag_cdo_slave_training_action 
+		dag_cdo_slave_training_scheme_single 
+	}
+	parent = scheme
+}
+
+dag_cdo_orgy = {
+	texture = "gfx/interface/icons/activities/activity_feast.dds"
+	parent = activity
+}
+
+pit_fighter = {
+	texture = "gfx/interface/icons/traits/blademaster.dds"
+	alias = { pit_fighters pit_fighting pit_fighter_possessive pit_fighters_possessive }
+}

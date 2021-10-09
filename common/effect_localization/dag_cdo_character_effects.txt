@@ -1,0 +1,16 @@
+﻿set_relation_dag_cdo_court_slaver = {
+	global = DAG_CDO_GET_COURT_SLAVER
+	first = DAG_CDO_YOU_GET_COURT_SLAVER
+	third = DAG_CDO_THEY_GET_COURT_SLAVER
+	first_past = DAG_CDO_YOU_GOT_COURT_SLAVER
+	third_past = DAG_CDO_THEY_GOT_COURT_SLAVER
+}
+
+remove_relation_dag_cdo_court_slaver = {
+	global = DAG_CDO_LOSE_COURT_SLAVER
+	first = DAG_CDO_YOU_LOSE_COURT_SLAVER
+	third = DAG_CDO_THEY_LOSE_COURT_SLAVER
+	first_past = DAG_CDO_YOU_LOST_COURT_SLAVER
+	third_past = DAG_CDO_THEY_LOST_COURT_SLAVER
+}
+

@@ -1,0 +1,21 @@
+﻿#~code based on 'courtier_guest_management.2001'
+
+
+dag_cdo_fix_lost_in_void_effect = {
+	#~Am I lost in the void?
+	if = {
+		limit = { NOT = { exists = location } }
+		#~Oops, no good! Go someplace. (family is also moved with this effect)
+		fallback_move_to_pool_effect = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+

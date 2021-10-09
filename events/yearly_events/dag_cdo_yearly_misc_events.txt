@@ -1,0 +1,598 @@
+﻿namespace = dag_cdo_yearly_misc_event
+
+##~Yearly Random events that are not focused on the mechanics of the Carnalitis slave system
+##~A space for any side ideas that seem worthwhile, especially if they utilize other underused Carnalitis systems
+##~Topics covered include rape, fetishes, etc.
+##~Prostitution now has it's own yearly events namespace... for reasons...
+
+	#1001		- Relative Raped					(diplomacy_family_focus)
+	#1002		- An Invitation by my Spouse		(intrigue_intimidation_focus)
+	#1003		- An Offer							()
+
+##################################################
+# Relative Raped
+# by Dagulus
+# 1001
+# tag: timing_issues, create_character
+##################################################
+
+dag_cdo_yearly_misc_event.1001 = {
+	type = character_event
+	title = dag_cdo_yearly_misc_event.1001.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:accused = { dag_cdo_significant_to_root_trigger = yes } }
+				desc = dag_cdo_yearly_misc_event.1001.know_accused.desc
+			}
+			desc = dag_cdo_yearly_misc_event.1001.desc
+		}
+	}
+	left_portrait = scope:victim
+	right_portrait = scope:accused
+	theme = diplomacy
+
+	trigger = {
+		exists = root.capital_province
+		any_extended_family_member = {
+			is_available_healthy_ai_adult = yes
+			is_female = yes
+			in_diplomatic_range = root
+			can_have_children = yes				#~principally to rule out anyone in chastity belts
+			carn_can_be_raped_trigger = yes
+		}
+	}
+
+	weight_multiplier = {			#~The standard for yearly events is 1
+		base = 1
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		#~Find an available victim.
+		random_extended_family_member = {
+			limit = {
+				is_available_healthy_ai_adult = yes
+				is_female = yes
+				in_diplomatic_range = root
+				carn_can_be_raped_trigger = yes
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = 25
+					age <= 35
+				}
+				modifier = {
+					add = 25
+					attraction >= 20
+				}
+				modifier = {
+					add = 15
+					has_sexuality = asexual
+				}	
+				modifier = {
+					add = 15
+					has_trait = chaste
+				}				
+			}			
+			save_scope_as = victim
+		}
+		#~Find an available rapist.
+		random_living_character = {
+			limit = {
+				is_available_healthy_ai_adult = yes
+				is_male = yes
+				is_at_same_location = scope:victim
+				is_attracted_to_gender_of = scope:victim
+				sexually_liberal_trigger = yes
+				ai_compassion < medium_positive_ai_value
+			}
+			save_scope_as = accused
+		}		
+		#~Backup generation
+		if = {
+			limit = { NOT = { exists = scope:accused } }
+			create_character = {
+				location = scope:victim.location
+				culture = scope:victim.culture
+				faith = scope:victim.faith
+				gender_female_chance = 0
+				template = servant_character
+				prowess  = {
+					min_template_decent_skill
+					max_template_decent_skill
+				}
+				save_scope_as = accused
+			}
+			scope:accused = {
+				trigger_event = { on_action = carn_character_initialization_pulse }
+			}
+			# dag_cdo_create_thug_effect = { WHO = scope:victim }		#~Generate a thug. (This function will always run after carn_rape_effect)
+			# scope:created_character = { save_scope_as = accused }		#~so we can't use it, because jomini is shit
+		}
+		#~Apply Rape
+		carn_rape_effect = {
+			RAPIST = scope:accused
+			VICTIM = scope:victim
+			TRIGGER_SEX_SCENE = no
+		}
+	}
+
+	# Option A: --Bring me his bollocks on a plate--
+	option = {
+		name = dag_cdo_yearly_misc_event.1001.a
+		#~This event does kind of highlight just how much the carn_rape_effect fucks people up
+		#~You are much better off being castrated/blinded/tortured
+		dag_cdo_castrate_effect = {
+			ACTOR = root
+			VICTIM = scope:accused
+		}
+		scope:victim = {
+			add_opinion = {
+				target = root
+				opinion = high_positive_opinion
+				modifier = grateful_opinion
+			}
+		}
+
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_boldness = 0.1
+				ai_energy = 0.1
+				ai_honor = 0.25
+				ai_vengefulness = 0.5
+			}
+		}
+	}
+
+	# Option B: --Imprison accused--
+	#NB: Carnalitas does not regard this as a crime you can be legitimately imprisoned for, unlike tortured_family_member
+	#NB: Also, you may not be close_famly of the victim so will not have any opinion_modifier
+	option = {
+		name = dag_cdo_yearly_misc_event.1001.b
+		trigger = {
+			basic_allowed_to_imprison_character_trigger = {
+				CHARACTER = scope:accused
+			}
+		}
+
+		imprison_character_effect = {
+			TARGET = scope:accused
+			IMPRISONER = root
+		}
+
+		scope:victim = {
+			add_opinion = {
+				target = root
+				opinion = medium_positive_opinion
+				modifier = grateful_opinion
+			}
+		}
+
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_boldness = 0.1
+				ai_energy = 0.1
+				ai_rationality = 0.25
+				ai_vengefulness = 0.5
+			}
+		}
+	}
+
+	# Option C: --He will make an honest woman of you--
+	option = {
+		name = dag_cdo_yearly_misc_event.1001.c
+		trigger = {
+			scope:accused = { can_marry_character_trigger = { CHARACTER = scope:victim } }
+			scope:victim = { can_marry_character_trigger = { CHARACTER = scope:accused } }
+			#~NB: Slaves automatically fail this as of Carnalitas 1.3.6
+		}
+
+		scope:victim = {
+			marry_matrilineal = scope:accused
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = high_negative_opinion
+			}
+		}
+		scope:accused = {			
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = high_negative_opinion
+			}
+		}
+
+		stress_impact = {
+			zealous = medium_stress_impact_loss				#should depend on religion??
+			compassionate = medium_stress_impact_gain
+			just = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 25
+				OR = {
+					has_trait = callous
+				}
+			}
+			ai_value_modifier = {
+				ai_zeal = 0.2
+				ai_honor = -0.2
+				ai_compassion = -0.5
+			}
+		}
+	}
+
+	# Option D: --I do not care--
+	option = {
+		name = dag_cdo_yearly_misc_event.1001.d
+		
+		scope:victim = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = low_negative_opinion
+			}
+		}
+
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_compassion = -0.25
+				ai_energy = -0.5
+			}
+		}
+	}
+}
+
+
+#######################
+# An Invitation by my Spouse
+# by Dagulus
+# 1002
+# tag: create_character
+#######################
+
+scripted_trigger dag_cdo_yearly_misc_event_1002_vengeful_spouse_trigger = {
+	is_available_ai_adult = yes
+	has_personality_malicious_trigger = yes
+	ai_compassion <= medium_negative_compassion
+}
+
+dag_cdo_yearly_misc_event.1002 = {
+	type = character_event
+	title = dag_cdo_yearly_misc_event.1002.t
+	desc = {
+		desc = dag_cdo_yearly_misc_event.1002.start.desc
+		desc = dag_cdo_yearly_misc_event.1002.middle.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:helpless_rival = { carn_gender_can_impregnate_trigger = no } }	
+				desc = dag_cdo_yearly_misc_event.1002.end.female.desc
+			}
+			desc = dag_cdo_yearly_misc_event.1002.end.male.desc
+		}
+	}
+	theme = seduction
+	left_portrait = {
+		character = scope:vengeful_spouse
+		animation = rage
+	}
+	right_portrait = {
+		character = scope:helpless_rival
+		animation = fear
+	}
+
+	trigger = {
+		has_game_rule = carn_content_consent_noncon
+		carn_gender_can_impregnate_trigger = yes 	#~Has a cock		
+		any_consort  = {
+			dag_cdo_yearly_misc_event_1002_vengeful_spouse_trigger = yes
+		}
+	}
+
+	weight_multiplier = {			#~The standard for yearly events is 1
+		base = 1
+		compare_modifier = {  		#~Attractive ruler more likely to be sought after.
+			value = attraction
+			offset = medium_positive_attraction
+			multiplier = 0.02
+		}
+		dag_cdo_create_character_event_weight_modifier = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			dag_cdo_remove_sex_consequences_character_effect = yes
+			random_consort = {
+				limit = {
+					dag_cdo_yearly_misc_event_1002_vengeful_spouse_trigger = yes
+				}
+				save_scope_as = vengeful_spouse
+			}
+			scope:vengeful_spouse = {
+				random_relation = {
+					type = rival
+					limit = {
+						is_ai = yes
+						is_adult = yes
+						in_diplomatic_range = root
+						can_have_children = yes				#~principally to rule out anyone in chastity belts
+						NOT = { carn_has_any_disease_trigger = yes }
+						NOT = { this = root }
+					}
+					save_scope_as = helpless_rival
+				}
+			}
+			#~Backup generation - If we can't find a rival, lets have a go at one of the serving staff.
+			if = {
+				limit = { NOT = { exists = scope:helpless_rival } }
+				create_character = {
+					location = root.capital_province
+					template = servant_character
+					culture = this.culture
+					faith = this.faith
+					dynasty = Lowborn
+					gender_female_chance = root_attraction_based_female_chance
+					stewardship = {
+						min_template_decent_skill
+						max_template_decent_skill
+					}
+					save_scope_as = helpless_rival
+				}
+				scope:helpless_rival = {
+					trigger_event = { on_action = carn_character_initialization_pulse }
+				}
+			}
+		}
+	}
+
+	#~Rape
+	option = { 
+		name = dag_cdo_yearly_misc_event.1002.a
+		carn_rape_effect = {
+			RAPIST = root
+			VICTIM = scope:helpless_rival
+			TRIGGER_SEX_SCENE = no
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				add = 15
+				has_trait = lustful
+			}
+			ai_value_modifier = {
+				ai_boldness = 0.5
+				ai_compassion = -0.5
+				ai_vengefulness = 0.5
+				ai_honor = -0.5
+			}
+			modifier = {
+				add = -500
+				OR = {
+					root = { carn_has_any_disease_trigger = yes }
+					scope:helpless_rival = { carn_has_any_disease_trigger = yes }
+				}
+			}				
+		}
+	}
+
+	#~Rape + rekindled, sadist
+	option = { #Sadist is intrigued.
+		name = dag_cdo_yearly_misc_event.1002.b
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		
+		carn_rape_effect = {
+			RAPIST = root
+			VICTIM = scope:helpless_rival
+			TRIGGER_SEX_SCENE = no
+		}
+		
+		if = {
+			limit = {
+				can_set_relation_lover_trigger = { CHARACTER = scope:vengeful_spouse }
+			}
+			set_relation_lover = scope:vengeful_spouse
+		}
+
+		ai_chance = {
+			base = 15
+			modifier = {
+				add = 15
+				has_trait = lustful
+			}
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_compassion = -1
+				ai_vengefulness = 0.5
+				ai_honor = -0.5
+			}
+			modifier = {
+				add = -500
+				OR = {
+					root = { carn_has_any_disease_trigger = yes }
+					scope:helpless_rival = { carn_has_any_disease_trigger = yes }
+				}
+			}			
+		}
+	}
+
+	#~Refuse
+	option = { 
+		name = dag_cdo_yearly_misc_event.1002.c
+		scope:helpless_rival = {
+			add_opinion = {
+				opinion = 30
+				target = root
+				modifier = grateful_opinion
+			}		
+		}	
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = 50
+				NOT = {	is_attracted_to_gender_of = scope:helpless_rival }
+			}
+			ai_value_modifier = {
+				ai_compassion = 1
+				ai_vengefulness = -0.5
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	#~Actually, honey, this really is not OK.
+	option = { 
+		name = dag_cdo_yearly_misc_event.1002.d
+		scope:helpless_rival = {
+			add_opinion = {
+				opinion = 30
+				target = root
+				modifier = grateful_opinion
+			}
+		}
+		scope:vengeful_spouse = {
+			add_opinion = {
+				target = root
+				modifier = rejected_opinion
+			}
+		}
+		ai_chance = {
+			base = 15
+			ai_value_modifier = {
+				ai_boldness = 0.5
+				ai_compassion = 0.5
+				ai_vengefulness = -0.5
+				ai_honor = 0.5
+			}
+		}
+	}
+	after = {
+		dag_cdo_restore_sex_consequences_character_effect = yes
+	}	
+}
+
+##################################################
+# An Offer
+# by Dagulus
+# 1003
+# tag: 
+##################################################
+
+dag_cdo_yearly_misc_event.1003 = {
+	type = character_event
+	title = dag_cdo_yearly_misc_event.1003.t
+	desc = {
+		desc = dag_cdo_yearly_misc_event.1003.start.desc
+		desc = dag_cdo_yearly_misc_event.1003.end.desc
+	}
+	theme = prison
+	left_portrait = {
+		character = scope:vengeful_spouse
+		animation = personality_callous
+	}
+
+	trigger = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }		#~Is this the right level of rules?
+		any_consort  = {
+			dag_cdo_yearly_misc_event_1002_vengeful_spouse_trigger = yes
+			dag_cdo_can_be_court_slaver_of = { EMPLOYER = root }
+			dag_cdo_is_attracted_to_any_of_owners_slaves_trigger = { OWNER = root}
+		}
+		NOT = {
+			any_relation = {
+				type = dag_cdo_court_slaver
+				this = scope:recipient
+			}
+		}
+	}
+
+	weight_multiplier = {			#~The standard for yearly events is 1
+		base = 1
+	}
+
+	immediate = {
+		random_consort = {
+			limit = {
+				dag_cdo_yearly_misc_event_1002_vengeful_spouse_trigger = yes
+				dag_cdo_can_be_court_slaver_of = { EMPLOYER = root }
+				dag_cdo_is_attracted_to_any_of_owners_slaves_trigger = { OWNER = root}
+			}
+			save_scope_as = vengeful_spouse
+		}
+	}
+
+	#~Option A: --What a good idea--
+	option = {
+		name = dag_cdo_yearly_misc_event.1003.a
+
+		send_interface_message = {
+			type = event_generic_neutral
+			title = msg_dag_cdo_hired_court_slaver_interaction_title
+			right_icon = scope:vengeful_spouse
+			dag_cdo_set_court_slaver_effect = {
+				SLAVER = scope:vengeful_spouse
+				EMPLOYER = root
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:vengeful_spouse
+			modifier = grateful_opinion
+			opinion = 15
+		}
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}		
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_greed = 0.1			#~Free staff!
+				ai_vengefulness = 0.1
+			}
+			opinion_modifier = {
+				opinion_target = scope:vengeful_spouse
+				multiplier = 0.25
+			}
+		}
+	}
+
+	#~Option B: --Stay away from the slaves, you psycho bitch--
+	option = {
+		name = dag_cdo_yearly_misc_event.1003.b
+		reverse_add_opinion = {
+			target = scope:vengeful_spouse
+			modifier = disappointed_opinion
+			opinion = -15
+		}
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			forgiving = medium_stress_impact_gain
+			just = medium_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_compassion = 0.1
+				ai_zeal = 0.1
+			}
+		}
+	}
+
+
+
+

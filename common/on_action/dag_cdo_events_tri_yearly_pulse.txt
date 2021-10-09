@@ -1,0 +1,79 @@
+﻿#~Uncommon events - Most stuff goes here
+dag_cdo_events_tri_yearly_pulse = {
+	random_events = {
+		delay = { days = { 16 32 } }
+		chance_of_no_event = {
+			value = 30
+			add = dag_cdo_no_event_frequency_value
+		}
+		
+		#######################################
+		# Three Yearly Events
+		#######################################
+
+		### Misc Events ###
+		100 = dag_cdo_yearly_misc_event.1001		#~Relative Raped
+		100 = dag_cdo_yearly_misc_event.1002		#~An Invitation by my Spouse
+		100 = dag_cdo_yearly_misc_event.1003		#~An Offer
+		
+		### Slavery Events ###
+		100 = dag_cdo_yearly_slavery_event.1003		#~A Willing Slave		
+		100 = dag_cdo_yearly_slavery_event.1004		#~Slave wants to marry you
+		100 = dag_cdo_yearly_slavery_event.1005		#~Prized Slave
+		100 = dag_cdo_yearly_slavery_event.2010		#~Slave Offer (2010-2013)
+		100 = dag_cdo_yearly_slavery_event.2020		#~Gifted Slave Redux (2020-2023)
+		100 = dag_cdo_yearly_slavery_event.2030		#~Judgment (2030-2034)
+		100 = dag_cdo_yearly_slavery_event.2040		#~Gifted Slave (2040-2043)
+
+		### Prostitute Events ###
+		100 = dag_cdo_yearly_prostitute_event.1001	#~Discovered
+		100 = dag_cdo_yearly_prostitute_event.1002	#~Beaten
+
+		### Guild of Slavers Events ###
+		100 = dag_cdo_slavers_guild_event.3000		#~Patron Benefits
+		100 = dag_cdo_slavers_guild_event.3001		#~Courter joins Slavers guild
+		100 = dag_cdo_slavers_guild_event.3002		#~Visiting Slaver
+
+	}
+}
+
+#~Sub Events
+dag_cdo_yearly_slavery_event_2010_event_selection = {
+	random_events = {
+		100 = dag_cdo_yearly_slavery_event.2011		#~Slave Offer (Rival)
+		100 = dag_cdo_yearly_slavery_event.2012		#~Slave Offer (Meat)
+		100 = dag_cdo_yearly_slavery_event.2013		#~Slave Offer (Deviant)
+		100 = dag_cdo_yearly_slavery_event.2014		#~Slave Offer (Pimp)
+	}
+}
+
+#~Sub Events
+dag_cdo_yearly_slavery_event_2020_event_selection = {
+	random_events = {
+		100 = dag_cdo_yearly_slavery_event.2021		# Gifted Slave Redux (Neighbor)
+		100 = dag_cdo_yearly_slavery_event.2022		# Gifted Slave Redux (Vassal)
+		100 = dag_cdo_yearly_slavery_event.2023		# Gifted Slave Redux (Liege)
+		100 = dag_cdo_yearly_slavery_event.2024		#~Gifted Slave Redux (Head of Faith)
+		100 = dag_cdo_yearly_slavery_event.2025		# Gifted Slave Redux (Lesbian Spouse)
+	}
+}
+
+#~Sub Events
+dag_cdo_yearly_slavery_event_2030_event_selection = {
+	random_events = {
+		100 = dag_cdo_yearly_slavery_event.2031		# Judgment (Heretic)
+		100 = dag_cdo_yearly_slavery_event.2032		# Judgment (Spy)
+		100 = dag_cdo_yearly_slavery_event.2033		# Judgment (Thief)
+		100 = dag_cdo_yearly_slavery_event.2034		# Judgment (Traitor)
+	}
+}
+
+#~Sub Events
+dag_cdo_yearly_slavery_event_2040_event_selection = {
+	random_events = {
+		100 = dag_cdo_yearly_slavery_event.2041		#~Gifted Slave (Neighbor)
+		100 = dag_cdo_yearly_slavery_event.2042		#~Gifted Slave (Vassal)
+		100 = dag_cdo_yearly_slavery_event.2043		#~Gifted Slave (Liege)
+		100 = dag_cdo_yearly_slavery_event.2044		#~Gifted Slave (Head of Faith)
+	}
+}

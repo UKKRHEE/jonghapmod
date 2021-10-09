@@ -1,0 +1,258 @@
+﻿dag_cdo_orgy_attire_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = is_naked } }
+		add_character_flag = {
+			flag = is_naked_at_orgy
+			days = 150
+		}
+		add_character_flag = {
+			flag = is_naked
+			days = 150 #~So character won't stay naked forever when something goes wrong
+		}
+	}
+}
+
+dag_cdo_orgy_attire_refresh_effect = {
+	if = {
+		limit = { has_character_flag = is_naked_at_orgy }
+		add_character_flag = {
+			flag = is_naked
+			days = 150 #~So character won't stay naked forever when something goes wrong
+		}
+	}
+}
+
+dag_cdo_orgy_attire_remove_effect = {
+	if = {
+		limit = { has_character_flag = is_naked_at_orgy }
+		remove_character_flag = is_naked
+		remove_character_flag = is_naked_at_orgy
+	}
+}
+
+####################################################################################################
+
+dag_cdo_orgy_consequences_effect = {
+	if = {
+		limit = { 
+			NOT = { has_character_flag = carn_no_consequences_for_extramarital_sex_with_others }
+			any_spouse = { in_activity_with = this }	#~You are only off the hook if your spouse is also at the orgy
+		}
+		add_character_flag = {
+			flag = no_consequences_at_orgy
+			days = 150
+		}
+		add_character_flag = {
+			flag = carn_no_consequences_for_extramarital_sex_with_others
+			days = 150 #~So character won't stay consequences free forever when something goes wrong
+		}
+	}
+}
+
+dag_cdo_orgy_consequences_refresh_effect = {
+	if = {
+		limit = { has_character_flag = is_naked_at_orgy }
+		add_character_flag = {
+			flag = carn_no_consequences_for_extramarital_sex_with_others
+			days = 150 #~So character won't stay consequences free forever when something goes wrong
+		}
+	}
+}
+
+dag_cdo_orgy_consequences_remove_effect = {
+	if = {
+		limit = { has_character_flag = no_consequences_at_orgy }
+		remove_character_flag = carn_no_consequences_for_extramarital_sex_with_others
+		remove_character_flag = no_consequences_at_orgy
+	}
+}
+
+####################################################################################################
+
+dag_cdo_orgy_end_effect = {
+	add_character_flag = {
+		flag = dag_cdo_attended_recent_orgy_flag
+		years = standard_feast_cooldown_time
+	}
+	stress_impact = {
+		base = medium_stress_loss
+		lustful = medium_stress_impact_loss
+		rakish = medium_stress_impact_loss
+		gregarious = minor_stress_impact_loss
+		shy = minor_stress_impact_gain
+	}
+}
+
+dag_cdo_orgy_concluded_my_events_effect = {
+	save_temporary_scope_as = finished_participant
+	scope:activity = {
+		add_to_variable_list = {
+			name = finished_participants
+			target = scope:finished_participant
+		}
+	}
+}
+
+dag_cdo_orgy_fire_random_event_effect = {
+	trigger_event = {
+		on_action = dag_cdo_orgy_event_selection
+		days = { min_feast_event_spacing max_feast_event_spacing }
+	}
+}
+
+dag_cdo_orgy_wrap_up_or_fire_random_event_effect = {
+	if = {
+		limit = {
+			NOT = { exists = local_var:num_of_orgy_events }
+		}
+		set_local_variable = {
+			name = num_of_orgy_events
+			value = 1
+		}
+		dag_cdo_orgy_fire_random_event_effect = yes
+	}
+	else = {
+		change_local_variable = {
+			name = num_of_orgy_events
+			add = 1
+		}
+		if = {
+			limit = { #~Check the number of events fired
+				local_var:num_of_orgy_events < max_default_feast_events				#~3 at time of writing
+			}
+			#~If below the max number check whether to fire more
+			if = {
+				limit = {
+					local_var:num_of_orgy_events >= min_default_feast_events		#~2 at time of writing
+				}
+				random_list = {
+					0 = {
+						modifier = { add = chance_of_extra_feast_events }			#~25 at time of writing
+						dag_cdo_orgy_fire_random_event_effect = yes
+					}
+					100 = {
+						modifier = {
+							add = {
+								subtract = chance_of_extra_feast_events
+							}
+						}
+						dag_cdo_orgy_concluded_my_events_effect = yes
+					}
+				}
+			}
+			else = {
+				dag_cdo_orgy_fire_random_event_effect = yes
+			}
+		}
+		else = {
+			dag_cdo_orgy_concluded_my_events_effect = yes
+		}
+	}
+}
+
+#############
+#~Finds a potential ai partner and saves them as scope:sex_partner
+#~Requires ACTIVITY
+#############
+
+dag_cdo_find_orgy_partner_effect = {
+	$ACTIVITY$ = {
+		random_participant = {
+			#~This appears to be failing way less than we would anticipate.
+			limit = {
+				dag_cdo_orgy_default_participant_trigger = yes			#~This stops a lot of weirdness
+				save_temporary_scope_as = sex_partner_check
+				root = { dag_cdo_wishes_to_lay_with_TARGET_trigger = { TARGET = scope:sex_partner_check } }
+				OR = {
+					dag_cdo_wishes_to_lay_with_TARGET_trigger = { TARGET = root }
+					has_trait = lifestyle_prostitute
+					has_trait = slave
+				}
+			}
+			alternative_limit = {
+				root = { is_ai = yes }
+				dag_cdo_orgy_default_participant_trigger = yes			#~This stops a lot of weirdness
+				save_temporary_scope_as = sex_partner_check
+				root = { is_attracted_to_gender_of = scope:sex_partner_check }
+				OR = {
+					is_attracted_to_gender_of = root
+					has_trait = lifestyle_prostitute
+					has_trait = slave
+				}
+			}
+			weight = {
+				base = 10
+				modifier = {
+					has_relation_potential_lover = root
+					add = 15
+				}
+				modifier = {
+					has_trait = seducer
+					add = 10
+				}
+				modifier = {
+					has_trait = lustful
+					add = 10
+				}
+				modifier = {
+					has_trait = beauty_good
+					add = 10
+				}
+				incest_acceptance_modifier = {
+					TARGET = scope:sex_partner_check
+					SEDUCER = root
+				}
+				modifier = {		#~try and get someone new
+					has_variable = had_recent_sex_with
+					var:had_recent_sex_with = root			#~this does not seem to work
+					add = -50
+				}
+				modifier = {
+					has_relation_lover = root
+					is_consort_of = root
+					has_relation_soulmate = root
+					add = -25
+				}
+			}			
+			save_scope_as = sex_partner
+		}
+	}
+	if = {
+		limit = { NOT = { exists = scope:sex_partner } }
+		dag_cdo_create_orgy_guest_effect = { WHO = root }
+		scope:created_character = {
+			trigger_event = { on_action = dag_cdo_orgy_character_initialization_pulse }
+			save_scope_as = sex_partner 
+		}
+	}
+}
+
+#requires PARTNER
+dag_cdo_orgy_add_opinion_after_sex_effect = {
+	show_as_tooltip = {
+		reverse_add_opinion = {
+			target = $PARTNER$
+			modifier = romance_opinion		#~Probably should change this to something more carnal and rewrite the progress_towards_lover_effect
+			opinion = 15
+		}
+		#~custom_tooltip = dag_cdo_orgy_add_opinion_after_sex_effect_tt	#~not picking up PARTNER
+	}
+	hidden_effect = {
+		random_list = {
+			15 = {
+				progress_towards_lover_effect = {
+					CHARACTER = $PARTNER$
+					OPINION = 15
+				}
+			}
+			85 = {
+				reverse_add_opinion = {
+					target = $PARTNER$
+					modifier = romance_opinion
+					opinion = 15
+				}
+			}
+		}
+	}
+}
+

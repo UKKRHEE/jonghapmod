@@ -1,0 +1,40 @@
+﻿## More for consistence than anything else, may be more useful if we get custom graphics
+
+dag_cdo_theme_slavery = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_intimidation.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_intimidation"
+	}
+	background = {
+		event_background = throne_room
+	}
+}
+
+dag_cdo_theme_brothel = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_seduction.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_seduction"
+	}
+	background = {
+		event_background = tavern
+	}
+}
+
+dag_cdo_theme_orgy_activity = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_seduction.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_seduction"
+	}
+	background = {
+		event_background = feast
+	}
+}
+
+
+

@@ -1,0 +1,6 @@
+﻿#~not 100% clear on what this does: Carnalitas does not use it for its relationships, so nor do we.
+
+#	has_relation_dag_cdo_court_slaver = {
+#		global = HAS_RELATION_DAG_CDO_COURT_SLAVER_WITH_TARGET
+#	}
+

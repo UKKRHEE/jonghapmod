@@ -1,0 +1,477 @@
+﻿namespace = dag_cdo_discipline_interaction_random_event
+
+#~We may need to reorganise these event numbers as they are based on the old 5billion event chain version.
+
+##		1100-1199	= Chastisement
+##		2100-2199	= Spanking
+##		2200-2299	= Flogging
+##		5100-5199	= Public Display
+
+#(Beating)
+#(Bondage)
+#(Public Use)
+
+################################################
+##		2100-2199	= Chastisement
+################################################
+
+dag_cdo_discipline_interaction_random_event.1100 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.1100.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.1100.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.1100.middle.desc
+		first_valid = {
+#			triggered_desc = {
+#				trigger = {
+#					scope:recipient = { 
+#						carn_has_fetish_trigger = { FETISH = masochism } 			#~Not sure what trigger would make sense here?
+#					}
+#				}
+#				desc = dag_cdo_discipline_interaction_random_event.1100.end_happy.desc
+#			}
+			desc = dag_cdo_discipline_interaction_random_event.1100.end.desc
+		}
+	}
+	theme = seduction
+
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {
+		character = scope:recipient
+    	animation = shame
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		dag_cdo_discipline_chastise_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.1100.a
+		scope:recipient = {
+			if = {
+				limit = { carn_has_fetish_trigger = { FETISH = masochism } }
+				random_secret = {
+					limit = { secret_type = secret_deviant }
+					reveal_to = scope:actor
+				}
+			}
+		}
+	}
+}
+
+dag_cdo_discipline_interaction_random_event.1101 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.1101.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.1101.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.1101.middle.desc
+		first_valid = {
+#			triggered_desc = {
+#				trigger = {
+#					scope:recipient = { 
+#						carn_has_fetish_trigger = { FETISH = masochism } 			#~Not sure what trigger would make sense here?
+#					}
+#				}
+#				desc = dag_cdo_discipline_interaction_random_event.1101.end_happy.desc
+#			}
+			desc = dag_cdo_discipline_interaction_random_event.1101.end.desc
+		}
+	}
+	theme = seduction
+
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {
+		character = scope:recipient
+    	animation = shame
+	}
+
+	trigger = {
+		scope:recipient = { is_female = yes }		#~Event text reads better applied to a woman
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		dag_cdo_discipline_chastise_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.1101.a
+		scope:recipient = {
+			if = {
+				limit = { carn_has_fetish_trigger = { FETISH = masochism } }
+				random_secret = {
+					limit = { secret_type = secret_deviant }
+					reveal_to = scope:actor
+				}
+			}
+		}
+	}
+}
+
+
+
+
+################################################
+##		2100-2199	= Spanking
+################################################
+
+dag_cdo_discipline_interaction_random_event.2100 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.2100.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.2100.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.2100.middle.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:recipient = { 
+						carn_has_fetish_trigger = { FETISH = masochism } 
+					}
+				}
+				desc = dag_cdo_discipline_interaction_random_event.2100.end_happy.desc
+			}
+			desc = dag_cdo_discipline_interaction_random_event.2100.end.desc
+		}
+	}
+	theme = seduction
+
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {
+		character = scope:recipient
+    	animation = prisondungeon
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		scope:recipient = { carn_undress_character_effect = yes }	#~For the portrait
+		dag_cdo_discipline_spank_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+	
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.2100.a
+		scope:recipient = {
+			carn_dress_character_effect = yes		
+			if = {
+				limit = { carn_has_fetish_trigger = { FETISH = masochism } }
+				random_secret = {
+					limit = { secret_type = secret_deviant }
+					reveal_to = scope:actor
+				}
+			}
+		}
+	}
+}
+
+dag_cdo_discipline_interaction_random_event.2101 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.2101.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.2101.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.2101.middle.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:recipient = { 
+						carn_has_fetish_trigger = { FETISH = masochism } 
+					}
+				}
+				desc = dag_cdo_discipline_interaction_random_event.2101.end_happy.desc
+			}
+			desc = dag_cdo_discipline_interaction_random_event.2101.end.desc
+		}
+	}
+	theme = seduction
+
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {
+		character = scope:recipient
+    	animation = prisondungeon
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		scope:recipient = { carn_undress_character_effect = yes }	#~For the portrait
+		dag_cdo_discipline_spank_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.2101.a
+		scope:recipient = {
+			carn_dress_character_effect = yes		
+			if = {
+				limit = { carn_has_fetish_trigger = { FETISH = masochism } }
+				random_secret = {
+					limit = { secret_type = secret_deviant }
+					reveal_to = scope:actor
+				}
+			}
+		}		
+	}
+}
+
+#dag_cdo_discipline_interaction_random_event.2102 = {
+#	type = character_event
+#	title = dag_cdo_discipline_interaction_random_event.2102.t
+#	desc = {
+#		desc = dag_cdo_discipline_interaction_random_event.2102.start.desc
+#		desc = dag_cdo_discipline_interaction_random_event.2102.middle.desc
+#		first_valid = {
+#			triggered_desc = {
+#				trigger = {
+#					scope:recipient = { 
+#						carn_has_fetish_trigger = { FETISH = masochism } 
+#					}
+#				}
+#				desc = dag_cdo_discipline_interaction_random_event.2102.end_happy.desc
+#			}
+#			desc = dag_cdo_discipline_interaction_random_event.2102.end.desc
+#		}
+#	}
+#	theme = seduction
+#
+#	left_portrait = {
+#		character = scope:actor
+#		animation = schadenfreude
+#	}
+#
+#	right_portrait = {
+#		character = scope:recipient
+#   	animation = prisondungeon
+#	}
+#
+#	immediate = {
+#		play_music_cue = "mx_cue_prison"
+#
+#		show_as_tooltip = {	#~this was done when you chose the option
+#			dag_cdo_discipline_spank_effect = {
+#				ACTOR = scope:actor
+#				VICTIM = scope:recipient
+#			}
+#		}
+#
+#		hidden_effect = {
+#			# For the portrait
+#			scope:recipient = {
+#				add_character_flag = {
+#					flag = is_naked
+#					days = 1
+#				}
+#			}
+#		}
+#	}
+#	option = {
+#		name = dag_cdo_discipline_interaction_random_event.2102.a
+#	}
+#}
+
+################################################
+##		2200-2299	= Flogging
+################################################
+
+dag_cdo_discipline_interaction_random_event.2200 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.2200.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.2200.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.2200.middle.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:recipient = { 
+						carn_has_fetish_trigger = { FETISH = masochism } 
+					}
+				}
+				desc = dag_cdo_discipline_interaction_random_event.2200.end_happy.desc
+			}
+			desc = dag_cdo_discipline_interaction_random_event.2200.end.desc
+		}
+	}
+	theme = seduction
+
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {
+		character = scope:recipient
+    	animation = prisondungeon
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		scope:recipient = { carn_undress_character_effect = yes }	#~For the portrait
+		dag_cdo_discipline_flog_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.2200.a
+		scope:recipient = {
+			carn_dress_character_effect = yes
+		}	
+	}
+}
+
+
+
+
+
+
+
+################################################
+##		5100-5199	= Public Display
+################################################
+#~	this needs carn_has_fetish_trigger = { FETISH = exhibitionism }
+#~	not currently in the framework
+
+dag_cdo_discipline_interaction_random_event.5100 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.5100.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.5100.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.5100.middle.desc		
+		desc = dag_cdo_discipline_interaction_random_event.5100.end.desc
+	}		
+	theme = seduction
+	override_background = {
+		event_background = market
+	}
+	
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {	
+		character = scope:recipient
+    	animation = shame
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		capital_province = { barony = { save_scope_as = capital } }
+		scope:recipient = { carn_undress_character_effect = yes }	#~For the portrait
+		dag_cdo_discipline_shame_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.5100.a
+		scope:recipient = {
+			carn_dress_character_effect = yes
+		}		
+	}
+}
+
+dag_cdo_discipline_interaction_random_event.5101 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.5101.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.5101.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.5101.middle.desc		
+		desc = dag_cdo_discipline_interaction_random_event.5101.end.desc
+	}		
+	theme = seduction
+	override_background = {
+		event_background = market
+	}
+	
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {	
+		character = scope:recipient
+    	animation = shame
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		capital_province = { barony = { save_scope_as = capital } }
+		scope:recipient = { carn_undress_character_effect = yes }	#~For the portrait
+		dag_cdo_discipline_shame_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+	
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.5101.a
+		scope:recipient = {
+			carn_dress_character_effect = yes
+		}			
+	}
+}
+
+dag_cdo_discipline_interaction_random_event.5102 = {
+	type = character_event
+	title = dag_cdo_discipline_interaction_random_event.5102.t
+	desc = {
+		desc = dag_cdo_discipline_interaction_random_event.5102.start.desc
+		desc = dag_cdo_discipline_interaction_random_event.5102.middle.desc		
+		desc = dag_cdo_discipline_interaction_random_event.5102.end.desc
+	}		
+	theme = seduction
+	override_background = {
+		event_background = courtyard
+	}
+	
+	left_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	right_portrait = {	
+		character = scope:recipient
+    	animation = shame
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+		capital_province = { barony = { save_scope_as = capital } }
+		scope:recipient = { carn_undress_character_effect = yes }	#~For the portrait
+		dag_cdo_discipline_shame_effect = {
+			ACTOR = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+	option = {
+		name = dag_cdo_discipline_interaction_random_event.5102.a
+		scope:recipient = {
+			carn_dress_character_effect = yes
+		}		
+	}
+}

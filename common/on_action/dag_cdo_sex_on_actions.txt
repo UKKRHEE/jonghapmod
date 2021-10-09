@@ -1,0 +1,21 @@
+﻿##################################################################################
+# carn_sex_scene
+##################################################################################
+# Empty list of sex interactions. Modders should add their own scenes to this as random_events.
+# You can adjust the random chance based on how often you think your event should appear.
+
+carn_sex_scene = {
+	random_events = {
+		#Regular
+		100 = dag_cdo_regular_sex_scene.1033	#~Experiencing Pleasure (From Dark World Reborn for CK2)
+		100 = dag_cdo_regular_sex_scene.1046	#~Experiencing Pleasure (From Dark World Reborn for CK2)
+		100 = dag_cdo_regular_sex_scene.1053	#~Experiencing Pleasure (From Dark World Reborn for CK2)
+		100 = dag_cdo_regular_sex_scene.1066	#~Experiencing Pleasure (From Dark World Reborn for CK2)
+		100 = dag_cdo_regular_sex_scene.1085	#~Experiencing Pleasure (From Dark World Reborn for CK2)
+		100 = dag_cdo_regular_sex_scene.1095	#~Experiencing Pleasure (From Dark World Reborn for CK2)		
+		#Complex
+		100 = dag_cdo_complex_sex_scene.0001	#~Experiencing Pleasure (From Dark World Reborn for CK2)
+	}
+}
+
+

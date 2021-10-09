@@ -1,0 +1,447 @@
+﻿namespace = dag_cdo_slave_training_scheme_event
+
+# Following CK3 scheme outcome conventions:
+# 0000-0999: Maintenance events
+# 1000-1999: Setup events
+# 2000-2999: Success events for scheme owner
+# 3000-3999: Success events for scheme target
+# 4000-4999: Failure events for scheme owner
+# 9999: Hard backup for when no random event found
+
+##"Hard" rejections that block the target for future schemes
+# 8100-8999: Early outcome events
+
+# 0001: target died
+# 0002: relationship with target changed
+# 1000: scheme begins
+# 1001-1003: scheme begins reactions
+# 1500-1502: milestones 1-3
+# 2000: success
+
+######################################################
+# MAINTENANCE EVENTS
+# 0000-0999
+######################################################
+
+#~No more valid relation with target
+dag_cdo_slave_training_scheme_event.0001 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.0001.t
+	desc = dag_cdo_slave_training_scheme_event.0001.desc
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = scope:target
+	#~No scheme, no widget
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.0001.a
+	}
+}
+
+#~Target died
+dag_cdo_slave_training_scheme_event.0002 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.0002.t
+	desc = dag_cdo_slave_training_scheme_event.0002.desc
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = scope:target
+	#~No scheme, no widget
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.0002.a
+	}
+}
+
+######################################################
+# SETUP EVENTS
+# 1000-1999
+######################################################
+
+# Begin training
+dag_cdo_slave_training_scheme_event.1000 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.1000.t
+	desc = dag_cdo_slave_training_scheme_event.1000.desc
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = scope:target
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+	}
+
+	immediate = {
+		scope:scheme = {
+			#dag_cdo_slave_count_categorized_personality_traits = yes	#Currently unused
+			dag_cdo_set_slave_training_receptiveness = yes
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1000.a
+
+		trigger_event = {
+			on_action = dag_cdo_slave_training_start_response
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}	
+		}
+	}
+}
+
+# Begin training responses
+# Positive response
+dag_cdo_slave_training_scheme_event.1001 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.1001.t
+	desc = {	
+		desc = dag_cdo_slave_training_scheme_event.1001.start.desc
+		desc = dag_cdo_slave_training_scheme_event.1001.middle.desc		
+		desc = dag_cdo_slave_training_scheme_event.1001.end.desc
+	}	
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+		animation = admiration
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		AND = {
+			exists = scope:scheme
+			scope:target = { has_character_flag = dag_cdo_slave_receptive_training_response }
+		}
+	}
+
+	immediate = {
+		scope:target = {
+			add_opinion = {
+				modifier = dag_cdo_slave_positive_training_start
+				target = scope:owner
+			}
+		}	
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.a
+		scope:target = {
+			add_character_modifier = {
+				modifier = dag_cdo_sex_slave
+			}
+		}
+	}
+	
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.b
+		scope:target = {
+			add_character_modifier = {
+				modifier = dag_cdo_pit_fighter
+			}
+		}
+	}
+	
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.d
+	}
+}
+
+# Negative response
+dag_cdo_slave_training_scheme_event.1002 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.1001.t
+	desc = {	
+		desc = dag_cdo_slave_training_scheme_event.1001.start.desc
+		desc = dag_cdo_slave_training_scheme_event.1002.middle.desc		
+		desc = dag_cdo_slave_training_scheme_event.1001.end.desc
+	}
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+		animation = dismissal
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		AND = {
+			exists = scope:scheme
+			scope:target = { has_character_flag = dag_cdo_slave_unreceptive_training_response }
+		}
+	}
+
+	immediate = {
+		scope:target = {
+			add_opinion = {
+				modifier = dag_cdo_slave_negative_training_start
+				target = scope:owner
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.a
+		scope:target = {
+			add_character_modifier = {
+				modifier = dag_cdo_sex_slave
+			}
+		}
+	}
+	
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.b
+		scope:target = {
+			add_character_modifier = {
+				modifier = dag_cdo_pit_fighter
+			}
+		}
+	}
+	
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.d
+	}
+}
+
+# Neutral response
+dag_cdo_slave_training_scheme_event.1003 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.1001.t
+	desc = {	
+		desc = dag_cdo_slave_training_scheme_event.1001.start.desc
+		desc = dag_cdo_slave_training_scheme_event.1003.middle.desc		
+		desc = dag_cdo_slave_training_scheme_event.1001.end.desc
+	}
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+		animation = personality_coward
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		AND = {
+			exists = scope:scheme
+			scope:target = { has_character_flag = dag_cdo_slave_neutral_training_response }
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.a
+		scope:target = {
+			add_character_modifier = {
+				modifier = dag_cdo_sex_slave
+			}
+		}
+	}
+	
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.b
+		scope:target = {
+			add_character_modifier = {
+				modifier = dag_cdo_pit_fighter
+			}
+		}
+	}
+	
+	option = {
+		name = dag_cdo_slave_training_scheme_event.1001.d
+	}
+}
+
+
+
+
+
+
+
+
+######################################################
+# SUCCESS EVENTS FOR OWNER
+# 2000-2999
+######################################################
+
+dag_cdo_slave_training_scheme_event.2000 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.2000.t
+	desc = dag_cdo_slave_training_scheme_event.2000.desc
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = {
+		character = scope:target
+		animation = admiration
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		dag_cdo_add_slave_training_success_effect = {
+			MASTER = scope:owner
+			SLAVE = scope:target
+		}
+		scope:target = {
+			if = {
+				limit = { has_character_modifier = dag_cdo_sex_slave }
+				carn_undress_character_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.2000.a
+	}
+
+	after = {
+		if = {
+			limit = { exists = scope:scheme }
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		scope:target = {
+			if = {
+				limit = { has_character_modifier = dag_cdo_sex_slave }
+				carn_dress_character_effect = yes
+			}
+			carn_clear_personality_replacement_effect = { }
+		}
+	}
+}
+
+######################################################
+# FAILURE EVENTS FOR OWNER
+# 4000-4999
+######################################################
+
+#tags: missing_ai_values, missing_stress_values
+
+dag_cdo_slave_training_scheme_event.4000 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.4000.t
+	desc = dag_cdo_slave_training_scheme_event.4000.desc
+
+	theme = dag_cdo_theme_slavery
+	left_portrait = {
+		character = scope:target
+		animation = dismissal				#~disapproval?
+	}
+	
+	option = {
+		name = {
+			text = dag_cdo_slave_training_scheme_event.4000.a
+		}
+		show_as_tooltip = {
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.4000.b
+		show_as_tooltip = {
+			start_scheme = {
+				type = dag_cdo_slave_training
+				target = scope:target
+			}
+		}
+		hidden_effect = {
+			save_scope_value_as = {
+				name = restart_scheme
+				value = yes
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = scope:restart_scheme
+					exists = scope:scheme
+				}
+				scope:scheme = {
+					add_scheme_progress = -10
+					#~Add a +5% success mod here
+				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:scheme
+					exists = scope:target
+					scope:target = { is_alive = yes }
+				}
+				scope:scheme = {
+					end_scheme = yes
+				}
+			}
+		}
+	}
+}
+
+
+
+######################################################
+# Support
+# 9999
+######################################################
+# Training default event - in case no event is available
+dag_cdo_slave_training_scheme_event.9999 = {
+	type = character_event
+	title = dag_cdo_slave_training_scheme_event.9999.t
+	desc = dag_cdo_slave_training_scheme_event.9999.desc
+
+	theme = dag_cdo_theme_slavery
+	right_portrait = scope:target
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		exists = scope:scheme
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_increase_slave_training_milestone_scheme_power_one_step_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = dag_cdo_slave_training_scheme_event.9999.a
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:scheme = {
+				dag_cdo_slave_set_scheme_opinion_modifier = yes
+				##dag_cdo_slave_training_event_aftereffects = yes	#Currently unused
+			}	
+		}
+	}
+}

@@ -1,0 +1,6 @@
+﻿#############################################
+# CHARACTER NICKNAMES
+#############################################
+
+# Governance Events
+nick_dag_cdo_the_slaver = { is_bad = yes }

@@ -1,0 +1,209 @@
+﻿namespace = dag_cdo_slave_maintenance_event
+
+#~Ideally most of these would actually run on the owner, but its a lot easier to find slaves.
+#~Events only triggered if has_game_rule = carn_slavery_content_enabled
+#~Events only triggered if root has_trait = slave
+
+###0000 are events that always fire
+#0010.General Slave Maintenance
+
+###1000 are events that are random		
+#1001.Slave raped by AI owner
+#1002.Slave culled by AI owner
+#1003.Slave eaten by AI owner
+#1004.Slave castrated by AI owner
+
+
+#We could add proper ai weights and stuff
+
+##########################################
+# General Slave Maintenance
+# by Dagulus
+# 0010
+##########################################
+
+dag_cdo_slave_maintenance_event.0010 = {
+	hidden = yes
+
+	trigger = { dag_cdo_slave_is_missing_master_trigger = yes }
+
+	immediate = {
+		#~Not 100% sure why these keep cropping up but this will fix any slaves with no master
+		#~This issue may well be the result of carn_enslave_effect being fired with an incorrect slaver scope
+		#~May also be a side effect of the fact I keep giving slaves to people with no court
+		dag_cdo_slave_fix_missing_master_effect = { SLAVE = root }
+	}
+}
+
+##########################################
+# Slave raped by AI owner
+# by Dagulus
+# 1001
+##########################################
+
+dag_cdo_slave_maintenance_event.1001 = {
+	hidden = yes
+	
+	trigger = {
+		is_adult = yes
+		carn_can_be_raped_trigger = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { dag_cdo_slave_is_missing_master_trigger = yes }
+			dag_cdo_slave_fix_missing_master_effect = { SLAVE = root }
+		}
+		#Find slaves owner.
+		random_relation = {
+			type = slave_owner
+			save_scope_as = owner
+		}
+		#IF ai owner is attracted to slave...
+		if = {
+			limit = {
+				scope:owner = {
+					is_ai = yes
+					is_adult = yes
+					carn_can_have_sex_trigger = yes
+					is_attracted_to_gender_of = root
+				}
+			}
+			#Is this sensible, what if slave is into it?
+			carn_rape_effect = {
+				RAPIST = scope:owner
+				VICTIM = root
+				TRIGGER_SEX_SCENE = no
+			}
+		}
+	}
+}
+
+##########################################
+# Slave culled by AI owner
+# by Dagulus
+# 1002
+##########################################
+
+dag_cdo_slave_maintenance_event.1002 = {
+	hidden = yes
+	
+	trigger = {
+		is_adult = yes
+		OR = {
+			carn_has_any_disease_trigger = yes
+			is_incapable = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { dag_cdo_slave_is_missing_master_trigger = yes }
+			dag_cdo_slave_fix_missing_master_effect = { SLAVE = root }
+		}
+		#Find slaves owner.
+		random_relation = {
+			type = slave_owner
+			save_scope_as = owner
+		}
+		#IF ai owner thinks slave is really crap...
+		if = {
+			limit = {
+				scope:owner = {
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			unknown_murder_effect = {
+				VICTIM = root
+				MURDERER = scope:owner
+				REASON = death_mysterious				
+			}
+		}
+	}
+}
+
+##########################################
+# Slave eaten by AI owner
+# by Dagulus
+# 1003
+##########################################
+
+dag_cdo_slave_maintenance_event.1003 = {
+	hidden = yes
+	
+	trigger = {
+		is_adult = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { dag_cdo_slave_is_missing_master_trigger = yes }
+			dag_cdo_slave_fix_missing_master_effect = { SLAVE = root }
+		}
+		#Find slaves owner.
+		random_relation = {
+			type = slave_owner
+			save_scope_as = owner
+		}
+		#IF ai owner is a cannibal...
+		if = {
+			limit = {
+				scope:owner = {
+					is_ai = yes
+					is_adult = yes
+					OR = {
+						has_trait = cannibal
+						any_secret = { secret_type = secret_cannibal }
+					}					
+				}
+			}
+			unknown_cannibal_murder_effect = {
+				VICTIM = root
+				MURDERER = scope:owner
+			}
+		}
+	}
+}
+
+##########################################
+# Slave castrated by AI owner
+# by Dagulus
+# 1004
+##########################################
+
+dag_cdo_slave_maintenance_event.1004 = {
+	hidden = yes
+	
+	trigger = {
+		is_adult = yes
+		is_male = yes
+		NOT = { has_trait = eunuch }
+	}
+
+	immediate = {
+		if = {
+			limit = { dag_cdo_slave_is_missing_master_trigger = yes }
+			dag_cdo_slave_fix_missing_master_effect = { SLAVE = root }
+		}	
+		#Find slaves owner.
+		random_relation = {
+			type = slave_owner
+			save_scope_as = owner
+		}
+		#IF ai owner is a member of the slavers guild...
+		if = {
+			limit = {
+				scope:owner = {
+					is_ai = yes
+					is_adult = yes
+					has_character_modifier = dag_cdo_slavers_guild_member					
+				}
+			}
+			dag_cdo_castrate_effect = {		#Eunuch's are worth more
+				ACTOR = scope:owner
+				VICTIM = root
+			}
+		}
+	}
+}

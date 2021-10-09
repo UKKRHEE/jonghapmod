@@ -1,0 +1,27 @@
+﻿dag_cdo_carn_slavery_content_unrestricted_trigger = {
+	NOT = { has_game_rule = carn_slavery_content_disabled }
+	NOT = { has_game_rule = carn_slavery_content_require_acceptance }
+	NOT = { has_game_rule = carn_slavery_content_consensual_only }
+	has_game_rule = carn_slavery_content_enabled
+}
+
+dag_cdo_carn_slavery_content_acceptance_trigger = {
+	NOT = { has_game_rule = carn_slavery_content_disabled }
+	NOT = { has_game_rule = carn_slavery_content_consensual_only }
+	or = {
+		has_game_rule = carn_slavery_content_enabled
+		has_game_rule = carn_slavery_content_require_acceptance
+	}
+}
+
+dag_cdo_carn_slavery_content_consensual_trigger = {
+	NOT = { has_game_rule = carn_slavery_content_disabled }
+	or = {
+		has_game_rule = carn_slavery_content_enabled
+		has_game_rule = carn_slavery_content_require_acceptance
+		has_game_rule = carn_slavery_content_consensual_only
+	}
+}
+
+
+

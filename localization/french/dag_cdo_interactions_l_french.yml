@@ -1,0 +1,36 @@
+﻿l_french:
+
+dag_cdo_demand_sex_interaction:0 "Demand Sex"
+dag_cdo_demand_sex_interaction_extra_icon:0 "$hook_extra_icon$"
+dag_cdo_demand_sex_interaction_desc:0 "Force a [recipient.GetShortUINameNoTooltip] to have sex with you as payment for a [hook|E] you hold"
+dag_cdo_demand_sex_interaction_message:0 "Obligations Paid Off"
+
+dag_cdo_discipline_interaction:0 "Discipline"
+dag_cdo_discipline_interaction_desc:0 "Teach [recipient.GetFirstNameNoTooltip] to behave."
+dag_cdo_discipline_interaction_chastise:0 "Chastise"
+dag_cdo_discipline_interaction_spank:0 "Spank"
+dag_cdo_discipline_interaction_flog:0 "Flog"
+dag_cdo_discipline_interaction_shame:0 "Shame"
+
+dag_cdo_slave_training_interaction:0 "$game_concept_dag_cdo_slave_training$ #weak (Scheme)#!"
+dag_cdo_slave_training_interaction_desc:0 "[dag_cdo_slave_training_action|E] [recipient.GetShortUINameNoTooltip] to be a better slave\n\n*preview time to complete inaccurate"
+dag_cdo_slave_training_interaction_toast:0 "$game_concept_dag_cdo_slave_training$"
+DAG_CDO_START_SLAVE_TRAINING:0 "Begin Training"
+
+dag_cdo_slave_training_accelerated_interaction:0 "Instill Obedience"
+dag_cdo_slave_training_accelerated_interaction_desc:0 "Since [recipient.GetShortUINameNoTooltip] has already been superbly trained, [recipient.GetSheHe] will willingly become obedient to you."
+dag_cdo_slave_training_accelerated_interaction_toast:0 "[recipient.GetFirstNameNoTooltip] professes [recipient.GetHerHis] loyalty"
+
+dag_cdo_slave_murder_interaction:0 "Murder Slave"
+dag_cdo_slave_murder_interaction_desc:0 "Make sure that [recipient.GetShortUINameNoTooltip] never bothers you again"
+dag_cdo_murder_options_heading:0 "Murder Method"
+DAG_CDO_MURDER_CUT:0 "Slit their throat"
+
+dag_cdo_slave_branding_interaction:0 "Brand Slave"
+dag_cdo_slave_branding_interaction_desc:0 "Brand [recipient.GetShortUINameNoTooltip] as your Slave"
+
+dag_cdo_force_start_pit_fighter_interaction:0 "Start Pit Fighting"
+dag_cdo_force_start_pit_fighter_interaction_desc:0 "Force [recipient.GetShortUINameNoTooltip] to earn [gold|E] for you as a [pit_fighter|E]"
+
+dag_cdo_force_stop_pit_fighter_interaction:0 "Stop Pit Fighting"
+dag_cdo_force_stop_pit_fighter_interaction_desc:0 "Stop [recipient.GetShortUINameNoTooltip] from working as a [pit_fighter|E]"

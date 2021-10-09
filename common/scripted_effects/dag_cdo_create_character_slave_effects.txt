@@ -1,0 +1,66 @@
+﻿#~Creates a slave -low quality- and saves it as created_character
+#~OWNER is character who will own the slave
+
+dag_cdo_create_slave_low_effect = {
+	$OWNER$ = { save_scope_as = slave_owner }
+	random_independent_ruler = {
+		limit = { dag_cdo_foreign_ruler_for_creation_trigger = yes }
+		alternative_limit = { always = yes }
+		save_scope_as = creation_template_ruler									#~Should this be temp?
+	}
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = root.capital_province
+		culture = scope:creation_template_ruler.culture
+		faith = scope:creation_template_ruler.faith
+		template = dag_cdo_slave_low_character_template
+	}
+	scope:created_character = {
+		trigger_event = { on_action = dag_cdo_slave_initialization_pulse }
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}
+
+#~Creates a slave -high quality- and saves it as created_character
+dag_cdo_create_slave_high_effect = {
+	$OWNER$ = { save_scope_as = slave_owner }
+	random_independent_ruler = {
+		limit = { dag_cdo_foreign_ruler_for_creation_trigger = yes }
+		alternative_limit = { always = yes }
+		save_scope_as = creation_template_ruler
+	}
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = root.capital_province					#~You have to have a location!!!
+		culture = scope:creation_template_ruler.culture
+		faith = scope:creation_template_ruler.faith
+		gender_female_chance = root_attraction_based_female_chance
+		template = dag_cdo_slave_high_character_template
+	}
+	scope:created_character = {
+		trigger_event = { on_action = dag_cdo_slave_initialization_pulse }
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}
+
+#~Creates a slave -excellent quality- and saves it as created_character
+dag_cdo_create_slave_excellent_effect = {
+	$OWNER$ = { save_scope_as = slave_owner }
+	random_independent_ruler = {
+		limit = { dag_cdo_foreign_ruler_for_creation_trigger = yes }
+		alternative_limit = { always = yes }
+		save_scope_as = creation_template_ruler
+	}
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = root.capital_province					#~You have to have a location!!!
+		culture = scope:creation_template_ruler.culture
+		faith = scope:creation_template_ruler.faith
+		gender_female_chance = root_attraction_based_female_chance
+		template = dag_cdo_slave_excellent_character_template
+	}
+	scope:created_character = {
+		trigger_event = { on_action = dag_cdo_slave_initialization_pulse }
+		trigger_event = { on_action = carn_character_initialization_pulse }
+	}
+}

@@ -1,0 +1,116 @@
+﻿#~dag_cdo_adopt_new_faith_ai_will_do_modifier
+#~dag_cdo_orgy_ai_will_do_modifier
+
+#~This needs to only trigger if ai has a very good reason to change faiths
+dag_cdo_adopt_new_faith_ai_will_do_modifier = {
+	compare_modifier = {
+		value = scope:recipient.faith.fervor
+		multiplier = -0.75
+		offset = 25
+	}
+	#~Traits that increase chance.
+	modifier = {
+		add = 75
+		has_trait = excommunicated
+	}
+	modifier = {
+		add = 30
+		has_trait = lunatic
+	}	
+	modifier = {
+		add = 15
+		has_trait = fickle
+	}	
+	modifier = {
+		add = 5
+		has_trait = arbitrary 
+	}
+	#~Traits that decrease chance.
+	modifier = {
+		add = -100
+		has_trait = heresiarch
+	}
+	modifier = {
+		add = -50
+		has_trait = zealous
+	}
+	modifier = {
+		add = -30
+		has_trait = cynical 
+	}
+
+#			- removal of crime status
+#			- high match of compatible traits
+#			- better gender laws
+
+}
+
+#################################################################################################
+#~Rewritten this completely to use the new dag_cdo_ai_lasciviousness_value
+#~Only used by the decision to hold and orgy, but may be used by similar decisions.
+#~added some modifiers from 'seduce_interaction'
+
+dag_cdo_orgy_ai_will_do_modifier = {
+	modifier = {
+		add = {
+			value = dag_cdo_ai_lasciviousness_value	#~(+/- 100)
+		}
+	}
+	#~Family Modifiers
+	modifier = {			#~Hard counter
+		add = -1000
+		dag_cdo_may_sleep_around_trigger = yes
+	}
+	modifier = { # Fucking your unmarried courtiers is good for producing bastards, which the AI will want to do if they have few heirs
+		add = 10
+		any_child = {
+			count <= 1
+		}
+	}
+	modifier = {
+		add = 25
+		any_spouse  = {
+			dislikes_partner_cheating_trigger = { PARTNER = root }
+			NOT = { dag_cdo_has_submissive_relation_trigger = { DOMINANT = root } }
+		}
+	}
+	#~Lifestyle Modifiers
+	modifier = {			#~copied from 'seduce_interaction' 
+		add = 50
+		has_focus = intrigue_temptation_focus
+	}	
+	#~Religious Modifiers
+	modifier = { 			#~Non-lustful clergy tend to not seduce (copied from 'seduce_interaction')
+		add = -25
+		is_clergy = yes
+		faith = {
+			NOT = { has_doctrine_parameter = clergy_can_marry }
+		}
+		NOR = {
+			has_trait = lustful
+			has_focus = intrigue_temptation_focus
+		}
+	}	
+	modifier = {
+		add = 20
+		faith = {
+			trait_is_virtue = lustful 
+			#has_doctrine = tenet_carnal_exaltation	#~because Carnalitas Mundi removes this, use trait_is_virtue = lustful instead
+		}
+	}
+	modifier = {			#~If we are going to do the inverse we may as well go the whole hog
+		add = -20
+		faith = {
+			trait_is_sin = lustful
+		}
+	}
+	#~Game Rules Modifiers
+	modifier = {			#~Performance: If they have set this we can assume the player's system is struggling to cope
+		add = -25
+		has_game_rule = dag_cdo_event_frequency_low
+	}
+	modifier = {			#~Performance:  If they have set this we can assume the player's system is really struggling to cope
+		add = -100
+		has_game_rule = dag_cdo_event_frequency_very_low
+	}
+}

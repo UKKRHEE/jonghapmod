@@ -1,0 +1,38 @@
+﻿l_simp_chinese:
+dag_cdo_prostitute_event.1001:0 "Summoning [particular_whore.GetFirstName]"
+dag_cdo_prostitute_event.1001.desc:0 "[particular_whore.GetFirstName] arrives at my private chambers, and after I greet her quickly disrobes.\n\n \"I am honored, my liege\", [particular_whore.GetSheHe] says, as she smiles at me.  \"Now, how shall we begin?\""
+dag_cdo_prostitute_event.1001.a:0 "Tonight will be a night to remember!"
+dag_cdo_prostitute_event.1001.male.a:0 "I want to fuck you!"
+dag_cdo_prostitute_event.1001.male.b:0 "I want you to suck my cock!"
+dag_cdo_prostitute_event.1001.male.c:0 "I want to take you in the rear!"
+dag_cdo_prostitute_event.1001.d:0 "Actually.. maybe we should just talk..."
+
+dag_cdo_prostitute_event.2001:0 "Brothel: Visiting [brothel_whore.GetFirstName]"
+dag_cdo_prostitute_event.2001.desc:0 "I arrive with my retinue at the brothel at [brothel_location.GetNameNoTooltip]. I see that the main chamber is crowded with whores of all types, but I have only [brothel_whore.GetFirstName] on my mind.\n\n[brothel_whore.GetFirstNameNoTooltip] waits for me in a chamber further in, and when I arrive [brothel_whore.GetSheHe] has already disrobed.\n\n"Welcome, my liege", [brothel_whore.GetSheHe] says, beckoning me forwards. "How shall we begin?""
+dag_cdo_prostitute_event.2001.a:0 "Tonight will be a night to remember!"
+dag_cdo_prostitute_event.2001.male.a:0 "I want to fuck you!"
+dag_cdo_prostitute_event.2001.male.b:0 "I want you to suck my cock!"
+dag_cdo_prostitute_event.2001.male.c:0 "I want to take you in the rear!"
+dag_cdo_prostitute_event.2001.d:0 "Actually.. maybe we should just talk..."
+
+dag_cdo_prostitute_event.8001:0 "A visit to a brothel"
+dag_cdo_prostitute_event.8001.desc:0 "I arrive with my retinue at the brothel of [brothel_location.GetNameNoTooltip]. Too long has it been since last I visited, but the comforting sounds of carnal release echoing from within beckon me forwards.\n\nAs I pass through the door, the [brothel_madam.Custom('Dag_Cdo_ProprietrixProprietor')] [brothel_madam.GetTitledFirstName] strides forwards to greet me.\n\nWelcome to my establishment, my liege! How may your loyal servant please you?", [brothel_madam.GetSheHe] asks with a smile on her lips."
+dag_cdo_prostitute_event.8001.a:0 "Show me some of the women"
+dag_cdo_prostitute_event.8001.b:0 "Bring out a few of the men"
+dag_cdo_prostitute_event.8001.c:0 "Actually, I think I will lay with you, [brothel_madam.GetFirstNameNoTooltip]"
+dag_cdo_prostitute_event.8001.d:0 "Nevermind, I'll return another day"
+
+dag_cdo_prostitute_event.8002:0 "Choices to be made"
+dag_cdo_prostitute_event.8002.desc.start.first_time:0 "The [brothel_madam.Custom('Dag_Cdo_ProprietrixProprietor')] [brothel_madam.GetTitledFirstName] bows smoothly and leads you into a room further inside the brothel. As you follow [brothel_madam.GetHerHim] down the hall, you pass several open chambers where you see various whores tending to the needs of their clients. Before long you've arrived at your destination, and [brothel_madam.GetFirstNameNoTooltip] trots out several options for you to choose from."
+dag_cdo_prostitute_event.8002.desc.start.subsequent_times:0 "Nodding [brothel_madam.GetHerHis] head, [brothel_madam.GetFirstName] walks out of the room with [previous_whore_one.GetTitledFirstName] and [previous_whore_two.GetTitledFirstName]. Before long, [brothel_madam.GetSheHe] returns with more options."
+dag_cdo_prostitute_event.8002.desc.first_prostitute_description:0 "\n\n[whore_one.GetTitledFirstName] gazes at you coyly, but you catch a hint of eagerness in [whore_one.GetHerHis] eyes."
+dag_cdo_prostitute_event.8002.desc.second_prostitute_description:0 "\n\n[whore_two.GetTitledFirstName] stands with [whore_two.GetHerHis] hands on [whore_two.GetHerHis] hips, eyeing you up and down."
+dag_cdo_prostitute_event.8002.desc.end:0 "\n\n'Who will you lay with today, my liege?'"
+dag_cdo_prostitute_event.8002.a:0 "I will lay with [whore_one.GetTitledFirstNameNoTooltip]."
+dag_cdo_prostitute_event.8002.b:0 "[whore_two.GetTitledFirstNameNoTooltip] will join me for the night."
+dag_cdo_prostitute_event.8002.c:0 "Neither has caught my eye, bring out someone else."
+dag_cdo_prostitute_event.8002.d:0 "Nevermind, I'll return another day"
+
+
+
+

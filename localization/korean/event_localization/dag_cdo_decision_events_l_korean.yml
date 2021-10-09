@@ -1,0 +1,10 @@
+﻿l_korean:
+
+
+dag_cdo_decision_event.1000.t:0 "Purchase New Slave"
+dag_cdo_decision_event.1000.desc:0 "At my request, my servants have visited the local slavers for any valuable property. Now they have assembled a few options for me to choose from."
+dag_cdo_decision_event.1000.a:0 "[excellent_skill_option.GetFirstNameNoTooltip] [excellent_skill_option.Custom('dag_cdo_slave_quality_description')]."
+dag_cdo_decision_event.1000.b:0 "[high_skill_option.GetFirstNameNoTooltip] [high_skill_option.Custom('dag_cdo_slave_quality_description')]."
+dag_cdo_decision_event.1000.c:0 "[low_skill_option.GetFirstNameNoTooltip] [low_skill_option.Custom('dag_cdo_slave_quality_description')]"
+dag_cdo_decision_event.1000.d:0 "None of these slaves impress me."
+dag_cdo_decision_event.1000.d.tt:0 "I do not buy any slaves."

@@ -1,0 +1,34 @@
+﻿#~Annoyingly, it looks like you cannot put flags (ie: flag = is_naked ) on modifiers, so that stops that idea dead.
+
+dag_cdo_sex_slave = {
+	icon = fertility_positive
+	attraction_opinion = 10
+}
+
+dag_cdo_pit_fighter = {
+	icon = prowess_positive
+}
+
+dag_cdo_slave_branded = {
+	icon = dread_negative
+	general_opinion = -10
+	monthly_prestige = -1
+	ai_honor = 20
+}
+
+dag_cdo_slave_disciplined_miniscule = {
+	#icon = prestige_negative		#~Hidden modifier - only show icon when testing
+	ai_honor = 10					#~ai_honor is one of the main factors in determining if your wives sleep around
+}
+
+dag_cdo_slave_disciplined_minor = {
+	ai_honor = 20
+}
+
+dag_cdo_slave_disciplined_medium = {
+	ai_honor = 30
+}
+
+dag_cdo_slave_disciplined_major = {
+	ai_honor = 40
+}

@@ -1,0 +1,25 @@
+﻿l_english:
+
+ rule_dag_cdo_event_frequency:0 "#X Carnalitas Dominatio:#! Event Frequency"
+ setting_dag_cdo_event_frequency_default:0 "Default"
+ setting_dag_cdo_event_frequency_default_desc:0 "Carnalitas Dominatio Events trigger at the default rate."
+ setting_dag_cdo_event_frequency_high:0 "High"
+ setting_dag_cdo_event_frequency_high_desc:0 "Carnalitas Dominatio Events trigger somewhat more frequently."
+ setting_dag_cdo_event_frequency_very_high:0 "Very High"
+ setting_dag_cdo_event_frequency_very_high_desc:0 "Carnalitas Dominatio Events trigger much more frequently."
+ setting_dag_cdo_event_frequency_low:0 "Low"
+ setting_dag_cdo_event_frequency_low_desc:0 "Carnalitas Dominatio Events trigger somewhat less frequently."
+ setting_dag_cdo_event_frequency_very_low:0 "Very Low"
+ setting_dag_cdo_event_frequency_very_low_desc:0 "Carnalitas Dominatio Events trigger much less frequently."
+
+ rule_dag_cdo_recapture_slave_event: "#X Carnalitas Dominatio:#! Recapture Slaves"
+ setting_dag_cdo_recapture_slave_event_disabled: "Disabled"
+ setting_dag_cdo_recapture_slave_event_disabled_desc: "Carnalitas Dominatio will not run events to attempt to recapture slaves."
+ setting_dag_cdo_recapture_slave_event_enabled: "#high Enabled#!"
+ setting_dag_cdo_recapture_slave_event_enabled_desc: "Carnalitas Dominatio will attempt to recapture slaves that have fled your court. This event will run once a quarter and should only give you a notification if one of your slaves has fled your court."
+
+#     rule_dag_cdo_low_performance_mode: "#X Carnalitas Dominatio:#! Low Performance Mode"
+#     setting_dag_cdo_low_performance_mode_disabled: "Disabled"
+#     setting_dag_cdo_low_performance_mode_disabled_desc: "Carnalitas Dominatio will run as normal."
+#     setting_dag_cdo_low_performance_mode_enabled: "#high Enabled#!"
+#     setting_dag_cdo_low_performance_mode_enabled_desc: "Carnalitas Dominatio will disable some features for AI characters in the hope of improving performance:\nNOT RECOMENDED - THIS MAY CAUSE ISSUES."

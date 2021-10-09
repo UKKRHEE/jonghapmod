@@ -1,0 +1,60 @@
+﻿l_english:
+
+#~Localization based on an event in Dark World Reborn for CK2
+#~requires carn_sex_player (Male)
+#~requires carn_sex_target (Female)
+
+ dag_cdo_complex_sex_scene.0001.t:0 "Experiencing Pleasure"
+ dag_cdo_complex_sex_scene.0001.start.desc:0 "With [carn_sex_target.GetTitledFirstName] on her back, I enjoy the view of my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] just before sliding my cock into her wanton pussy. She moans as I slide it in all the way.\n"Yes [carn_sex_player.GetFirstNameNoTooltip], that feels so good."\nI can't help but agree. She looks enticing, and feels remarkable as she takes me inside her. I begin to thrust my hips, gliding my member in and out of her, enjoying the sound of her gasps and moans.\n"
+ dag_cdo_complex_sex_scene.0001.middle_wife.desc:0 ""Oh yes [carn_sex_player.GetFirstNameNoTooltip]. My husband, take me, my love."\n"
+ dag_cdo_complex_sex_scene.0001.middle_mother.desc:0 ""Oh yes [carn_sex_player.GetFirstNameNoTooltip]. Your father never felt this good."\n"
+ dag_cdo_complex_sex_scene.0001.middle_daughter.desc:0 ""Oh yes [carn_sex_player.GetFirstNameNoTooltip]. It feels so good, daddy."\n"
+ dag_cdo_complex_sex_scene.0001.middle.desc:0 ""Oh yes [carn_sex_player.GetFirstNameNoTooltip]. Take me, my love."\n"
+ dag_cdo_complex_sex_scene.0001.end.desc:0 "I pick up my pace, the impact from my thrusts causing her breasts to sway. Her breathing is building as well, a clear sign that she's approaching a climax. I myself can feel the sensation building.\nDo I release, or carry on?"
+ dag_cdo_complex_sex_scene.0001.a:0 "Continue making love."
+ dag_cdo_complex_sex_scene.0001.b:0 "Cum inside of her."
+ dag_cdo_complex_sex_scene.0001.c:0 "Pull out and finish on her."
+
+ dag_cdo_complex_sex_scene.0100.t:0 "Experiencing Pleasure"
+ dag_cdo_complex_sex_scene.0100.start.desc:0 "[carn_sex_target.GetFirstNameNoTooltip] moves to her knees, and gives her butt a little inviting wiggle. I happily comply as I climb up behind her, and align myself with her. My cock slides into her, slowly sinking deep as she moans in appreciation. I lean over my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] and grasp one of her breasts as I begin to move my hips, gliding in and out of her. Holding her breast, I pull her towards me as I thrust, filling her as completely as I can.\n"Ung, yes. Fuck me [carn_sex_player.GetFirstNameNoTooltip]!"\nHer words spur me on, and I increase the pace. The sounds of our flesh slapping together fill the room as we drive towards release. I notice her breathing has become ragged and she's pushing herself back to meet my thrusts.\n"
+ dag_cdo_complex_sex_scene.0100.middle_wife.desc:0 ""Oh my god, I'm... I'm... I'm cumming... Fill me my husband, fill my womb with your seed."\n"
+ dag_cdo_complex_sex_scene.0100.middle_mother.desc:0 ""Oh my god, I'm... I'm... I'm cumming... Fill me my son, fill your mother's womb with your seed."\n"
+ dag_cdo_complex_sex_scene.0100.middle_daughter.desc:0 ""Oh my god, I'm... I'm... I'm cumming daddy... Oh god, please daddy, cum with me daddy."\n"
+ dag_cdo_complex_sex_scene.0100.middle.desc:0 "Oh my god, I'm... I'm... I'm cumming... Oh shit, it feels so good."\n"
+ dag_cdo_complex_sex_scene.0100.end.desc:0 "I feel my balls tighten and my cock swell in anticipation of climax."
+ dag_cdo_complex_sex_scene.0100.a:0 "Take her ass first."
+ dag_cdo_complex_sex_scene.0100.b:0 "Cum inside of her."
+ dag_cdo_complex_sex_scene.0100.c:0 "Pull out and finish on her."
+ 
+ dag_cdo_complex_sex_scene.0200.t:0 "Experiencing Pleasure"
+ dag_cdo_complex_sex_scene.0200.start_wife.desc:0 "I spit on my hand and rub it over my cock, seeking to lubricate it further as [carn_sex_target.GetFirstNameNoTooltip] gets comfortable on the bed. Ready, I move behind her and place the tip of my cock at the entry way to her ass. I squeeze her ass checks, which pulls open her asshole ever so slightly. I push my hips forward, slowly entering my wife's ass.\n"
+ dag_cdo_complex_sex_scene.0200.start_mother.desc:0 "I spit on my hand and rub it over my cock, seeking to lubricate it further as [carn_sex_target.GetFirstNameNoTooltip] gets comfortable on the bed. Ready, I move behind her and place the tip of my cock at the entry way to her ass. I squeeze her ass checks, which pulls open her asshole ever so slightly. I push my hips forward, slowly entering my mother's plump ass.\n"
+ dag_cdo_complex_sex_scene.0200.start_daughter.desc:0 "I spit on my hand and rub it over my cock, seeking to lubricate it further as [carn_sex_target.GetFirstNameNoTooltip] gets comfortable on the bed. Ready, I move behind her and place the tip of my cock at the entry way to her ass. I squeeze her ass checks, which pulls open her asshole ever so slightly. I push my hips forward, slowly entering my daughter's tight ass.\n" 
+ dag_cdo_complex_sex_scene.0200.start.desc:0 "I spit on my hand and rub it over my cock, seeking to lubricate it further as [carn_sex_target.GetFirstNameNoTooltip] gets comfortable on the bed. Ready, I move behind her and place the tip of my cock at the entry way to her ass. I squeeze her ass checks, which pulls open her asshole ever so slightly. I push my hips forward, slowly entering her ass.\n"
+ dag_cdo_complex_sex_scene.0200.middle.desc:0 "[carn_sex_target.GetFirstNameNoTooltip] moans into the bedsheets, a sound that's seems a mix of pain and pleasure. She lets out out a sharp breath as she seems to work on relaxing her body. In response, I feel my cock sink in even further.\n"
+ dag_cdo_complex_sex_scene.0200.end.desc:0 "I begin moving, gliding slowly in and out of her ass, with each thrust going a little deeper. The feeling is intense. I'm nearly hilt deep when I begin to increase the pace. After a few minutes, I'm drilling her ass like an animal in heat. I'm no longer tracking her moans or groans. My mind is focused on one thing, and that's the building sensation within me. I'm going to cum, and I'm going to cum hard."
+ dag_cdo_complex_sex_scene.0200.a:0 "Cum inside of her ass."
+ dag_cdo_complex_sex_scene.0200.b:0 "Pull out and finish on her."
+
+ dag_cdo_complex_sex_scene.0800.t:0 "Experiencing Pleasure: Climax"
+ dag_cdo_complex_sex_scene.0800.start.desc:0 "I let the climax I feel building roll through me as I explode. I feel my cock twitch as it shoots a load deep within [carn_sex_target.GetFirstNamePossessiveNoTooltip] pussy. I keep hold and continue fucking her, slowly, grunting with each subsequent shot that I release inside her.\n"
+ dag_cdo_complex_sex_scene.0800.middle_wife.desc:0 ""Oh yes my husband, I can feel the warmth you've unloaded within me."\n"
+ dag_cdo_complex_sex_scene.0800.middle_mother.desc:0 ""Oh yes my son, I can feel the warmth you've given me. What a kind gift for your mother."\n"
+ dag_cdo_complex_sex_scene.0800.middle_daughter.desc:0 ""Oh yes father, I can feel it. It's so warm inside of me."\n"
+ dag_cdo_complex_sex_scene.0800.middle.desc:0 ""Oh yes, I can feel the warmth you've unloaded within me."\n" 
+ dag_cdo_complex_sex_scene.0800.end.desc:0 "I give a few more slow thrusts as I shiver from how sensitive my cock feels right now. With a satisfied moan, I pull out, admiring the look of my seed escaping her gaping pussy."
+ dag_cdo_complex_sex_scene.0800.a:0 "Good times." 
+
+ dag_cdo_complex_sex_scene.0801.t:0 "Experiencing Pleasure: Climax"
+ dag_cdo_complex_sex_scene.0801.start.desc:0 "I let the climax I feel building roll through me as I explode. I feel my cock twitch as it shoots a load deep within [carn_sex_target.GetFirstNamePossessiveNoTooltip] ass. I keep hold and continue fucking her ass, slowly, grunting with each subsequent shot that I release inside her.\n"
+ dag_cdo_complex_sex_scene.0801.middle_wife.desc:0 ""Oh yes my husband, I can feel the warmth you've unloaded within me."\n"
+ dag_cdo_complex_sex_scene.0801.middle_mother.desc:0 ""Oh yes my son, I can feel the warmth you've given me. What a kind gift for your mother."\n"
+ dag_cdo_complex_sex_scene.0801.middle_daughter.desc:0 ""Oh yes father, I can feel it. It's so warm inside of me."\n"
+ dag_cdo_complex_sex_scene.0801.middle.desc:0 ""Oh yes, I can feel the warmth you've unloaded within me."\n" 
+ dag_cdo_complex_sex_scene.0801.end.desc:0 "I give a few more slow thrusts as I shiver from how sensitive my cock feels right now. With a satisfied moan, I pull out, admiring the look of my seed escaping her asshole."
+ dag_cdo_complex_sex_scene.0801.a:0 "Good times." 
+
+ dag_cdo_complex_sex_scene.0802.t:0 "Experiencing Pleasure: Climax"
+ dag_cdo_complex_sex_scene.0802.start.desc:0 "I feel myself ready to explode, so I rock my hips back and let my cock out. With [carn_sex_target.GetFirstNameNoTooltip] on her back, I rub my cock along her her pussy, moaning aloud as it begins to jerk wildly as streams of sticky white cum shoot out of me.\n"
+ dag_cdo_complex_sex_scene.0802.end.desc:0 "With a final twitch, I'm spent. I look down and admire my load, which is beginning to slide off of her stomach. I smile at my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))], and she returns it in kind, her face still flush from our activity."
+ dag_cdo_complex_sex_scene.0802.a:0 "Good times"

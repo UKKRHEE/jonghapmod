@@ -1,0 +1,200 @@
+﻿#Basically execute, but in secret
+#no need to worry about effect on player, as player cannot be enslaved
+
+##[18:12:15][characterinteraction.cpp:494]: Exclusive send options should at least be two, in interaction 'dag_cdo_slave_murder_interaction'
+
+dag_cdo_slave_murder_interaction = {
+	interface_priority = 115
+	category = interaction_category_prison
+	desc = dag_cdo_slave_murder_interaction_desc
+
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+
+	ai_frequency = 36
+
+	ai_potential = {
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = -20
+
+		opinion_modifier = {
+			trigger = {
+				NOT = { scope:actor = scope:recipient }
+			}
+			opinion_target = scope:recipient
+			multiplier = -1
+		}
+		ai_value_modifier = {
+			ai_compassion = -1
+		}
+		modifier = {
+			add = -20
+			ai_compassion >= low_positive_ai_value
+			scope:recipient = { is_adult = no }
+		}
+		# Try to avoid Kinslaying
+		modifier = {
+			add = -20
+			scope:actor.dynasty = scope:recipient.dynasty
+			NOT = { faith = { has_doctrine = doctrine_kinslaying_any_dynasty_member_crime } }
+		}
+		modifier = {
+			add = -20
+			is_close_or_extended_family_of = scope:recipient
+			NOT = { faith = { has_doctrine = doctrine_kinslaying_extended_family_crime } }
+		}
+		modifier = {
+			add = -20
+			is_close_family_of = scope:recipient
+			NOT = { faith = { has_doctrine = doctrine_kinslaying_close_kin_crime } }
+		}
+		modifier = {
+			add = 50
+			has_execute_reason = scope:recipient
+			OR = {
+				has_trait = sadistic
+				has_trait = lunatic
+			}
+		}
+		modifier = {
+			has_trait = sadistic
+			add = 20
+		}
+		modifier = {
+			factor = 0
+			scope:actor = {
+				NOR = { # Do not execute unless you have some sort of reason to do it
+					has_execute_reason = scope:recipient
+					has_relation_rival = scope:recipient # Execute rivals
+					has_relation_nemesis = scope:recipient # Execute rivals
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+					any_heir_title = { # Execute rulers you can inherit land from
+						exists = holder
+						holder = scope:recipient
+						place_in_line_of_succession = {
+							target = scope:actor
+							value > 2
+						}
+					}
+					has_trait = lunatic # Self explanatory
+				}
+			}
+		}
+	}
+
+	is_shown = {
+		scope:recipient = {
+			OR = {
+				is_at_same_location = scope:actor
+				is_in_the_same_court_as_or_guest = scope:actor
+				is_imprisoned_by = scope:actor
+			}
+		}
+		scope:actor = {
+			is_adult = yes
+			has_relation_slave = scope:recipient
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = { is_diplomatically_available = yes } #Prisoner
+		scope:recipient = {
+			custom_description = {
+				text = "currently_being_tortured"
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+	}
+
+	is_highlighted = {
+		OR = {
+			scope:actor = { has_trait = sadistic }
+			scope:actor = { has_relation_rival = scope:recipient }
+			scope:recipient = {
+				any_claim = {
+					holder = scope:actor
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = { always = scope:execution_devour }	
+			unknown_cannibal_murder_effect = {
+				VICTIM = scope:recipient
+				MURDERER = scope:actor
+			}
+		}
+		else = {
+			unknown_murder_effect = {
+				VICTIM = scope:recipient
+				MURDERER = scope:actor
+				REASON = death_mysterious
+			}
+		}
+		#add cannibal murder effects here?
+	
+		scope:actor = {
+			stress_impact = {
+				compassionate = medium_stress_impact_gain
+			}	
+		}
+		
+		scope:actor = {
+			hidden_effect = {
+				send_interface_message = {
+					type = event_generic_neutral
+					title = dag_cdo_msg_murder_prisoner
+					right_icon = scope:recipient
+					custom_tooltip = dag_cdo_msg_murder_prisoner_desc
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+
+
+	
+	options_heading = dag_cdo_murder_options_heading
+	
+	send_option = {
+		flag = murder_cut
+		localization = "DAG_CDO_MURDER_CUT"
+	}
+
+	#Cannibal option. Should be treated as a "normal" murder, but that you eat the body afterwards (also in secret).
+	send_option = {
+		is_shown = {
+			scope:actor = {
+				OR = {
+					has_trait = cannibal
+					any_secret = { secret_type = secret_cannibal }
+				}
+			}
+		}
+		flag = execution_devour
+		localization = "DAG_CDO_MURDER_DEVOUR"
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+	

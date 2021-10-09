@@ -1,0 +1,12 @@
+﻿random_yearly_everyone_pulse = {
+	on_actions = {
+		dag_cdo_pit_fighter_yearly_maintenance_pulse
+	}
+}
+
+dag_cdo_on_start_working_as_pit_fighter = {
+}
+
+dag_cdo_on_stop_working_as_pit_fighter = {
+}
+

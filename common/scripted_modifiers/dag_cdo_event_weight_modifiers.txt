@@ -1,0 +1,29 @@
+﻿#~ai has less chance of all events that can potentially create_character
+
+dag_cdo_create_character_event_weight_modifier = {
+	modifier = {
+		factor = {
+			if = {
+				limit = { is_ai = yes }
+				value = 0.5
+			}
+			else = {
+				value = 1
+			}
+		}
+	}
+}
+
+dag_cdo_create_character_orgy_event_weight_modifier = {
+	modifier = {
+		factor = {
+			if = {
+				limit = { is_ai = yes }
+				value = 0.2
+			}
+			else = {
+				value = 1
+			}
+		}
+	}
+}
