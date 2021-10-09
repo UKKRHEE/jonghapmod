@@ -1,0 +1,615 @@
+﻿on_add_muscle_modifier = {
+	trigger = {
+		is_alive = yes
+		trigger_if = {
+			limit = { is_alive = yes }
+			has_variable = muscles
+			trigger_if = {
+				limit = { has_variable = muscles }
+				trigger_if = {
+					limit = {
+						actual_muscle < 55
+						actual_muscle > 45
+					}
+					Or = {
+						has_character_modifier = scrawny_9_modifier
+						has_character_modifier = scrawny_8_modifier
+						has_character_modifier = scrawny_7_modifier
+						has_character_modifier = scrawny_6_modifier
+						has_character_modifier = scrawny_5_modifier
+						has_character_modifier = scrawny_4_modifier
+						has_character_modifier = scrawny_3_modifier
+						has_character_modifier = scrawny_2_modifier
+						has_character_modifier = scrawny_1_modifier
+						has_character_modifier = muscular_1_modifier
+						has_character_modifier = muscular_2_modifier
+						has_character_modifier = muscular_3_modifier
+						has_character_modifier = muscular_4_modifier
+						has_character_modifier = muscular_5_modifier
+						has_character_modifier = muscular_6_modifier
+						has_character_modifier = muscular_7_modifier
+						has_character_modifier = muscular_8_modifier
+						has_character_modifier = muscular_9_modifier
+					}
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 60
+						actual_muscle >= 55
+					}
+					Not = { has_character_modifier = muscular_1_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 45
+						actual_muscle > 40
+					}
+					Not = { has_character_modifier = scrawny_1_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 65
+						actual_muscle >= 60
+					}
+					Not = { has_character_modifier = muscular_2_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 40
+						actual_muscle > 35
+					}
+					Not = { has_character_modifier = scrawny_2_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 70
+						actual_muscle >= 65
+					}
+					Not = { has_character_modifier = muscular_3_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 35
+						actual_muscle > 30
+					}
+					Not = { has_character_modifier = scrawny_3_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 75
+						actual_muscle >= 70
+					}
+					Not = { has_character_modifier = muscular_4_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 30
+						actual_muscle > 25
+					}
+					Not = { has_character_modifier = scrawny_4_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 80
+						actual_muscle >= 75
+					}
+					Not = { has_character_modifier = muscular_5_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 25
+						actual_muscle > 20
+					}
+					Not = { has_character_modifier = scrawny_5_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 85
+						actual_muscle >= 80
+					}
+					Not = { has_character_modifier = muscular_6_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 20
+						actual_muscle > 15
+					}
+					Not = { has_character_modifier = scrawny_6_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 90
+						actual_muscle >= 85
+					}
+					Not = { has_character_modifier = muscular_7_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 15
+						actual_muscle > 10
+					}
+					Not = { has_character_modifier = scrawny_7_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle < 95
+						actual_muscle >= 90
+					}
+					Not = { has_character_modifier = muscular_8_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle <= 10
+						actual_muscle > 5
+					}
+					Not = { has_character_modifier = scrawny_8_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_muscle >= 95
+					}
+					Not = { has_character_modifier = muscular_9_modifier }
+				}
+				trigger_else = {
+					Not = { has_character_modifier = scrawny_9_modifier }
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				actual_muscle < 55
+				actual_muscle > 45
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 60
+				actual_muscle >= 55
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_1_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 45
+				actual_muscle > 40
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_1_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 65
+				actual_muscle >= 60
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_2_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 40
+				actual_muscle > 35
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_2_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 70
+				actual_muscle >= 65
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_3_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 35
+				actual_muscle > 30
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_3_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 75
+				actual_muscle >= 70
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_4_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 30
+				actual_muscle > 25
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_4_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 80
+				actual_muscle >= 75
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_5_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 25
+				actual_muscle > 20
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_5_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 85
+				actual_muscle >= 80
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_6_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 20
+				actual_muscle > 15
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_6_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 90
+				actual_muscle >= 85
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_7_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 15
+				actual_muscle > 10
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_7_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle < 95
+				actual_muscle >= 90
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = muscular_8_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 10
+				actual_muscle > 5
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_8_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle >= 95
+			}
+			remove_character_modifier = scrawny_9_modifier
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			add_character_modifier = muscular_9_modifier
+		}
+		else_if = {
+			limit = {
+				actual_muscle <= 5
+			}
+			remove_character_modifier = scrawny_8_modifier
+			remove_character_modifier = scrawny_7_modifier
+			remove_character_modifier = scrawny_6_modifier
+			remove_character_modifier = scrawny_5_modifier
+			remove_character_modifier = scrawny_4_modifier
+			remove_character_modifier = scrawny_3_modifier
+			remove_character_modifier = scrawny_2_modifier
+			remove_character_modifier = scrawny_1_modifier
+			remove_character_modifier = muscular_1_modifier
+			remove_character_modifier = muscular_2_modifier
+			remove_character_modifier = muscular_3_modifier
+			remove_character_modifier = muscular_4_modifier
+			remove_character_modifier = muscular_5_modifier
+			remove_character_modifier = muscular_6_modifier
+			remove_character_modifier = muscular_7_modifier
+			remove_character_modifier = muscular_8_modifier
+			remove_character_modifier = muscular_9_modifier
+			add_character_modifier = scrawny_9_modifier
+		}
+	}
+}

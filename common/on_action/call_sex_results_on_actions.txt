@@ -1,0 +1,5 @@
+﻿carn_on_sex = {
+	events = {
+		sex_life.0001 # call sex results
+	}
+}

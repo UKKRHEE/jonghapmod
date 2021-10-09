@@ -1,0 +1,13 @@
+﻿NCharacter = {
+	# values for randomly generated characters they'll be set to BASE + random within SPAN
+	MALE_RANDOM_AGE_BASE = 18
+	MALE_RANDOM_AGE_SPAN = 20
+	FEMALE_RANDOM_AGE_BASE = 18
+	FEMALE_RANDOM_AGE_SPAN = 16
+	
+	MALE_ADULT_AGE = 16
+	FEMALE_ADULT_AGE = 16
+	BETROTHAL_TIMEOUT_AGE = 20
+	MALE_ATTRACTION_CUTOFF_AGE = 65		# After this age, the attraction of traits no longer have any effect
+	FEMALE_ATTRACTION_CUTOFF_AGE = 50	# After this age, the attraction of traits no longer have any effect
+}

@@ -1,0 +1,18 @@
+﻿carn_sex_scene = {
+	random_events = {
+	}
+    #TODO: is this fallback needed?
+	#fallback = carn_sex_scene_fallback
+}
+
+carn_on_sex = {
+	events = {
+	}
+}
+
+
+hunt_random_pulse = {
+	random_events = {
+		500 = stupidSexEventMod.1001 #Meet local Big Bad Wolf
+	}
+}

@@ -1,0 +1,65 @@
+﻿
+no_cloak = {
+	usage = game
+	no_cloak = {
+		dna_modifiers = {
+			accessory = {
+				mode = add 
+				
+				gene = cloaks
+				template = no_cloak
+				range = { 0 1 }
+			}
+		}
+		outfit_tags = { no_cloak }
+		require_outfit_tags = yes
+		weight = {
+			base = 100
+		}
+	}
+}
+
+no_hat = {
+	usage = game
+	no_hat = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+		
+				gene = headgear
+				template = no_headgear
+				value = 1
+			}
+		}
+		outfit_tags = { no_hat }
+		require_outfit_tags = yes
+		weight = {
+			base = 100
+		}
+	}
+}
+no_pants = {
+	usage = game
+	no_pants = {
+		dna_modifiers = {
+			accessory = {
+				mode = add 
+		
+				gene = legwear
+				template = no_legwear
+				value = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_penis_size
+				value = 1.0
+				template = penis_size
+			}
+		}
+		outfit_tags = { no_pants }
+		require_outfit_tags = yes
+		weight = {
+			base = 100
+		}
+	}
+}

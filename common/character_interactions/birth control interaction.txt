@@ -1,0 +1,64 @@
+﻿#Avoid Pregnancy with Player
+avoid_pregnancy_with_character_interaction = {
+	category = interaction_category_friendly
+	use_diplomatic_range = no
+
+	desc = avoid_pregnancy_with_character_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			Or = {
+				has_relation_lover = scope:recipient
+				has_relation_soulmate = scope:recipient
+				is_consort_of = scope:recipient
+			}
+		}
+		scope:recipient = { not = { has_variable = sex_type_pullout } }
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = { is_diplomatically_available = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_variable = {
+				name = sex_type_pullout
+				value = yes
+			}
+		}
+	}
+	
+	auto_accept = yes
+}
+
+#Stop Avoiding Pregnancy with Player
+stop_avoiding_pregnancy_with_character_interaction = {
+	category = interaction_category_friendly
+	use_diplomatic_range = no
+
+	desc = stop_avoiding_pregnancy_with_character_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			Or = {
+				has_relation_lover = scope:recipient
+				has_relation_soulmate = scope:recipient
+				is_consort_of = scope:recipient
+			}
+		}
+		scope:recipient = { has_variable = sex_type_pullout }
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = { is_diplomatically_available = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_variable = sex_type_pullout
+		}
+	}
+	
+	auto_accept = yes
+}

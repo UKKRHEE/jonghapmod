@@ -1,0 +1,63 @@
+
+minhyee = {
+	index = 8800
+	diplomacy = 100
+	learning = 100
+	stewardship = 100
+	intrigue = 100
+	martial = 100
+	prowess = 100
+	negate_prowess_penalty_add = 100
+	no_prowess_loss_from_age = yes
+	knight_limit = 1000
+	vassal_limit = 1000
+	max_combat_roll = 1000
+	min_combat_roll = 600
+    immortal = yes
+	fertility = 5000
+	movement_speed = 300
+	advantage = 5000
+	domain_limit = 10000
+	light_infantry_damage_mult = 100
+	heavy_infantry_damage_mult = 100
+	heavy_infantry_toughness_mult = 100
+	pikemen_damage_mult = 100
+	light_cavalry_damage_mult = 100
+	movement_speed = 100
+	heavy_infantry_damage_mult = 100
+	skirmishers_damage_mult = 100
+	skirmishers_toughness_mult = 100
+	archers_damage_mult = 100
+	siege_weapon_siege_value_mult = 100
+	general_opinion = 10000
+	supply_limit = 500
+	supply_limit_mult = 500
+	retreat_losses = -1
+	health = 5000
+	scheme_power = 5000
+	build_speed = -0.7 
+	tax_mult = 100
+	opinion_of_liege = 100
+	opposite_opinion = 5000
+    attraction_opinion = 50000 
+	monthly_prestige = 100
+	monthly_piety = 100
+	monthly_cash = 5000
+	vassal_opinion = 5000
+	opinion_of_vassal = 1000
+	desc = trait_minhyee
+	icon = "010.dds"
+
+
+}
+minhyee_2 = {
+	index = 8801
+    immortal = yes
+	fertility = 5000
+	health = 5000
+	movement_speed = 300
+	desc = trait_minhyee
+	icon = "010.dds"
+
+
+}

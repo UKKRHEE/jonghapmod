@@ -1,0 +1,62 @@
+﻿namespace = carn_dt
+
+# written by Luther Slade and Cheri
+
+#
+# 0001. seed dt traits for this character
+# 0002. turn off dt traits for newborns
+# 0003. activate gender appropriate dt traits when a child comes of age
+#
+
+#
+# 0001. seed dt traits for this character
+#
+
+carn_dt.0001 = {
+	hidden = yes
+
+	trigger = {
+		has_game_rule = carn_dt_enabled
+		NOT = { has_character_flag = carn_dt_traits_seeded }
+		is_alive = yes
+	}
+
+	immediate = {
+		carn_flip_ruler_designed_dt_traits_to_game_rule_effect = yes
+		carn_make_all_dt_traits_inactive_effect = yes
+		carn_seed_dt_traits_effect = yes
+		if = {
+			limit = { is_adult = yes }
+			carn_activate_gender_specific_dt_traits_effect = yes
+		}
+	}
+}
+
+#
+# 0002. turn off dt traits for newborns
+
+carn_dt.0002 = {
+	hidden = yes
+
+	immediate = {
+		scope:child = {
+			carn_make_all_dt_traits_inactive_effect = yes
+		}
+	}
+}
+
+#
+# 0003. activate gender appropriate dt traits when a child comes of age
+#
+
+carn_dt.0003 = {
+	hidden = yes
+
+	trigger = {
+		has_game_rule = carn_dt_enabled
+	}
+
+	immediate = {
+		carn_activate_gender_specific_dt_traits_effect = yes
+	}
+}

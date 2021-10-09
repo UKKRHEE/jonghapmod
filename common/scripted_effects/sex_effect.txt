@@ -1,0 +1,494 @@
+﻿had_sex_results_effect = {
+	save_temporary_scope_as = had_sex_root_character
+	$CHARACTER$ = { save_scope_as = had_sex_with_effect_partner }
+
+	if = {
+		limit = { this = root }
+		custom_tooltip = had_sex_with_effect.first_person.tt
+	}
+	else_if = {
+		limit = { root = scope:had_sex_with_effect_partner }
+		custom_tooltip = had_sex_with_effect.other_person.tt
+	}
+	else = {
+		custom_tooltip = had_sex_with_effect.third_person.tt
+	}
+
+	if = {
+		limit = { has_variable = libido }
+		if = {
+			limit = { var:libido >= 10 }
+			change_variable = {
+				name = libido
+				add = -10
+			}
+		}
+		else = {
+			remove_variable = libido
+			set_variable = {
+				name = libido
+				value = 0
+			}
+		}
+	}
+
+$CHARACTER$ = {
+	if = {
+		limit = { has_variable = libido }
+		if = {
+			limit = { var:libido >= 10 }
+			change_variable = {
+				name = libido
+				add = -10
+			}
+		}
+		else = {
+			remove_variable = libido
+			set_variable = {
+				name = libido
+				value = 0
+			}
+		}
+	}
+}
+
+	if = { 
+		limit = { has_trait = celibate }
+		remove_trait = celibate
+	}
+
+	if = {
+		limit = { 
+			has_variable = spouse_sexual_desire_reduction
+			is_spouse_of = scope:had_sex_with_effect_partner
+		}
+		change_variable = {
+			name = sexual_desire
+			add = var:spouse_sexual_desire_reduction
+		}
+	}
+	else_if = {
+		limit = { has_variable = sexual_desire }
+		change_variable = {
+			name = sexual_desire
+			add = {
+				value = base_desire_reduction_from_sex
+				multiply = sexual_satisfaction_multiplier
+			}
+		}
+		if = {
+			limit = { 
+				any_spouse = {
+					count = 1
+				}
+				is_spouse_of = scope:had_sex_with_effect_partner
+			}
+			set_variable = {
+				name = spouse_sexual_desire_reduction
+				value = {
+					value = base_desire_reduction_from_sex
+					multiply = sexual_satisfaction_multiplier
+				}
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = sexual_desire
+			value = 0
+		}
+	}
+	if = {
+		limit = { var:sexual_desire < 0 }
+		remove_variable = sexual_desire
+		set_variable = {
+			name = sexual_desire
+			value = 0
+		}
+	}
+
+
+	scope:had_sex_with_effect_partner = { 
+		if = { 
+			limit = { has_trait = celibate }
+			remove_trait = celibate
+		}
+		if = {
+			limit = { has_variable = spouse_sexual_desire_reduction }
+			change_variable = {
+				name = sexual_desire
+				add = var:spouse_sexual_desire_reduction
+			}
+		}
+		else_if = {
+			limit = { has_variable = sexual_desire }
+			change_variable = {
+				name = sexual_desire
+				add = {
+					value = base_desire_reduction_from_sex
+					multiply = inverted_sexual_satisfaction_multiplier
+				}
+			}
+			if = {
+				limit = { 
+					any_spouse = {
+						count = 1
+					}
+					is_spouse_of = scope:had_sex_root_character
+				}
+				set_variable = {
+					name = spouse_sexual_desire_reduction
+					value = {
+						value = base_desire_reduction_from_sex
+						multiply = inverted_sexual_satisfaction_multiplier
+					}
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				name = sexual_desire
+				value = 0
+			}
+		}
+		if = {
+			limit = { var:sexual_desire < 0 }
+			remove_variable = sexual_desire
+			set_variable = {
+				name = sexual_desire
+				value = 0
+			}
+		}
+	}
+
+	if = { 
+		limit = { 
+			is_ai = no
+			scope:had_sex_with_effect_partner = { Not = { has_variable = had_sex_this_year } }
+		}
+		scope:had_sex_with_effect_partner = {
+			set_variable = {
+				name = had_sex_this_year
+				value = yes
+			}
+		}
+	}
+	scope:had_sex_with_effect_partner = {
+		if = { 
+			limit = { 
+				is_ai = no
+				scope:had_sex_root_character = { Not = { has_variable = had_sex_this_year } }
+			}
+			scope:had_sex_root_character = {
+				set_variable = {
+					name = had_sex_this_year
+					value = yes
+				}
+			}
+		}
+	}
+	add_to_variable_list = {
+		name = had_sex_this_month
+		target = scope:had_sex_with_effect_partner
+	}
+	scope:had_sex_with_effect_partner = {
+		add_to_variable_list = {
+			name = had_sex_this_month
+			target = scope:had_sex_root_character
+		}
+	}
+	
+
+	#Pregnancy & story cycles
+	hidden_effect = {
+		if = {
+			limit = {
+				is_female = yes
+				$CHARACTER$ = { is_male = yes }
+				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
+			}
+			add_to_variable_list = {
+				name = potential_father_variable_list
+				target = $CHARACTER$
+			}
+			random = {
+				chance = {
+					value = {
+						if = {
+							limit = { 
+								trigger_if = {
+									limit = { scope:had_sex_root_character = { is_ai = no } }
+									scope:had_sex_with_effect_partner = { has_variable = sex_type_pullout }
+								}
+								trigger_else_if = {
+									limit = { scope:had_sex_with_effect_partner = { is_ai = no } }
+									scope:had_sex_with_effect_partner = { is_ai = yes }
+									scope:had_sex_root_character = { has_variable = sex_type_pullout }
+								}
+								trigger_else = {
+									Nor = {
+										wants_a_child_with_character_trigger = { CHARACTER = $CHARACTER$ }
+										scope:had_sex_with_effect_partner = {
+											wants_a_child_with_character_trigger = { CHARACTER = scope:had_sex_root_character }
+										}
+									}
+								}
+							}
+							value = pullout_pregnancy_chance
+						}
+						else = {
+							value = full_pregnancy_chance
+						}
+						if = {
+							limit = { has_trait = fecund }
+							multiply = 1.5
+						}
+						if = {
+							limit = { $CHARACTER$ = { has_trait = fecund } }
+							multiply = 1.5
+						}
+						if = {
+							limit = { has_trait = whole_of_body }
+							multiply = 1.2
+						}
+						if = {
+							limit = { $CHARACTER$ = { has_trait = whole_of_body } }
+							multiply = 1.2
+						}
+						if = {
+							limit = { has_trait = infertile }
+							multiply = 0.5
+						}
+						if = {
+							limit = { $CHARACTER$ = { has_trait = infertile } }
+							multiply = 0.5
+						}
+						multiply = {
+							value = 1
+							if = {
+								limit = { scope:had_sex_with_effect_partner.age > 34 }
+								subtract = 0.1
+							}
+							if = {
+								limit = { scope:had_sex_with_effect_partner.age > 39 }
+								subtract = 0.1
+							}
+							if = {
+								limit = { scope:had_sex_with_effect_partner.age > 49 }
+								subtract = 0.1
+							}
+							if = {
+								limit = { scope:had_sex_with_effect_partner.age > 59 }
+								subtract = 0.1
+							}
+							if = {
+								limit = { scope:had_sex_with_effect_partner.age > 69 }
+								subtract = 0.1
+							}
+						}
+						multiply = {
+							value = 1
+							if = {
+								limit = { age > 24 }
+								subtract = 0.1
+							}
+							if = {
+								limit = { age > 29 }
+								subtract = 0.2
+							}
+							if = {
+								limit = { age > 34 }
+								subtract = 0.2
+							}
+							if = {
+								limit = { age > 39 }
+								subtract = 0.17
+							}
+							if = {
+								limit = { age > 44 }
+								subtract = 0.23
+							}
+						}
+					}
+				}
+				if = {
+					limit = { 
+						Not = { has_character_flag = impregnanted }
+						$CHARACTER$ = { is_male = yes }
+					}
+					add_character_flag = impregnanted
+					add_to_variable_list = {
+						name = impregnating_fathers
+						target = $CHARACTER$
+					}
+				}
+				else_if = {
+					limit = { $CHARACTER$ = { is_male = yes } }
+					add_to_variable_list = {
+						name = impregnating_fathers
+						target = $CHARACTER$
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_male = yes
+				$CHARACTER$ = { is_female = yes }
+				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
+			}
+			$CHARACTER$ = {
+				add_to_variable_list = {
+					name = potential_father_variable_list
+					target = scope:had_sex_root_character
+				}
+				random = {
+					chance = {
+						value = {
+							if = {
+								limit = { 
+									trigger_if = {
+										limit = { scope:had_sex_root_character = { is_ai = no } }
+										scope:had_sex_with_effect_partner = { has_variable = sex_type_pullout }
+									}
+									trigger_else_if = {
+										limit = { scope:had_sex_with_effect_partner = { is_ai = no } }
+										scope:had_sex_with_effect_partner = { is_ai = yes }
+										scope:had_sex_root_character = { has_variable = sex_type_pullout }
+									}
+									trigger_else = {
+										Nor = {
+											wants_a_child_with_character_trigger = { CHARACTER = $CHARACTER$ }
+											scope:had_sex_with_effect_partner = {
+												wants_a_child_with_character_trigger = { CHARACTER = scope:had_sex_root_character }
+											}
+										}
+									}
+								}
+								value = pullout_pregnancy_chance
+							}
+							else = {
+								value = full_pregnancy_chance
+							}
+							if = {
+								limit = { scope:had_sex_root_character = { has_trait = fecund } }
+								multiply = 1.5
+							}
+							if = {
+								limit = { has_trait = fecund }
+								multiply = 1.5
+							}
+							if = {
+								limit = { has_trait = whole_of_body }
+								multiply = 1.2
+							}
+							if = {
+								limit = { scope:had_sex_root_character = { has_trait = whole_of_body } }
+								multiply = 1.2
+							}
+							if = {
+								limit = { scope:had_sex_root_character = { has_trait = infertile } }
+								multiply = 0.5
+							}
+							if = {
+								limit = { has_trait = infertile }
+								multiply = 0.5
+							}
+							multiply = {
+								value = 1
+								if = {
+									limit = { scope:had_sex_root_character.age > 34 }
+									subtract = 0.1
+								}
+								if = {
+									limit = { scope:had_sex_root_character.age > 39 }
+									subtract = 0.1
+								}
+								if = {
+									limit = { scope:had_sex_root_character.age > 49 }
+									subtract = 0.1
+								}
+								if = {
+									limit = { scope:had_sex_root_character.age > 59 }
+									subtract = 0.1
+								}
+								if = {
+									limit = { scope:had_sex_root_character.age > 69 }
+									subtract = 0.1
+								}
+							}
+							multiply = {
+								value = 1
+								if = {
+									limit = { age > 24 }
+									subtract = 0.1
+								}
+								if = {
+									limit = { age > 29 }
+									subtract = 0.2
+								}
+								if = {
+									limit = { age > 34 }
+									subtract = 0.2
+								}
+								if = {
+									limit = { age > 39 }
+									subtract = 0.17
+								}
+								if = {
+									limit = { age > 44 }
+									subtract = 0.23
+								}
+							}
+						}
+					}
+					if = {
+						limit = { 
+							Not = { has_character_flag = impregnanted }
+							scope:had_sex_root_character = { is_male = yes }
+						}
+						add_character_flag = impregnanted
+						add_to_variable_list = {
+							name = impregnating_fathers
+							target = scope:had_sex_root_character
+						}
+					}
+					else_if = {
+						limit = { 
+							scope:had_sex_root_character = { is_male = yes }
+						}
+						add_to_variable_list = {
+							name = impregnating_fathers
+							target = scope:had_sex_root_character
+						}
+					}
+				}
+			}
+		}
+	}
+
+		if = {
+			limit = { has_variable = sex_life_chain }
+			remove_variable = sex_life_chain
+			if = {
+				limit = { var:libido >= 10 }
+				trigger_event = { 
+					on_action = on_sex_life_management
+					days = 1
+				}
+			}
+		}
+		$CHARACTER$ = { 
+			if = {
+				limit = { has_variable = sex_life_chain }
+				remove_variable = sex_life_chain
+				if = {
+					limit = { var:libido >= 10 }
+					trigger_event = { 
+						on_action = on_sex_life_management
+						days = 1
+					}
+				}
+			}
+		}
+	}

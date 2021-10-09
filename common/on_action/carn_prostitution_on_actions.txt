@@ -1,0 +1,89 @@
+﻿random_yearly_everyone_pulse = {
+	on_actions = {
+		carn_prostitution_yearly_maintenance_pulse
+	}
+}
+
+carn_prostitution_yearly_maintenance_pulse = {
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+	}
+	effect = {
+		save_scope_as = carn_prostitute
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						is_male = no
+						has_game_rule = carn_prostitution_content_male_only
+					}
+					AND = {
+						is_female = no
+						has_game_rule = carn_prostitution_content_female_only
+					}
+					NOR = {
+						faith = { NOT = { has_doctrine = carn_doctrine_prostitution_crime } }
+						any_relation = {
+							type = slave_owner
+							is_alive = yes
+							faith = { NOT = { has_doctrine = carn_doctrine_prostitution_crime } }
+						}
+					}
+					has_character_flag = carn_cannot_be_prostitute
+					has_trait_with_flag = carn_cannot_be_prostitute
+					carn_can_have_sex_trigger = no
+					effective_age >= carn_prostitution_age_cutoff
+				}
+			}
+			send_interface_message = {
+				type = event_generic_neutral
+				title = msg_carn_stopped_working_as_prostitute
+				left_icon = scope:carn_prostitute
+				custom_tooltip = carn_can_no_longer_work_as_prostitute_tooltip
+			}
+			every_relation = {
+				type = slave_owner
+				send_interface_message = {
+					type = event_generic_neutral
+					title = msg_carn_stopped_working_as_prostitute
+					left_icon = scope:carn_prostitute
+					custom_tooltip = carn_can_no_longer_work_as_prostitute_tooltip
+				}
+			}
+			carn_stop_working_as_prostitute_effect = yes
+		}
+		else = {
+			random_list = {
+				200 = {
+					# nothing
+				}
+				100 = {
+					carn_prostitution_rank_up_chance_modifier = yes
+					trigger_event = {
+						id = carn_prostitution_random_events.0001
+					}
+				}
+				700 = {
+					trigger_event = { on_action = carn_prostitution_random_events_pulse }
+				}
+			}
+		}
+	}
+}
+
+carn_prostitution_random_events_pulse = {
+	random_events = {
+		100 = carn_prostitution_random_events.0002 # Lost prestige
+		100 = carn_prostitution_random_events.0003 # Lost piety (shunned)
+		100 = carn_prostitution_random_events.0004 # Got STD
+		100 = carn_prostitution_random_events.0005 # Big tipper
+
+		100 = carn_prostitution_random_events.0010 # Someone notable lays with you
+	}
+}
+
+carn_on_start_working_as_prostitute = {
+}
+
+carn_on_stop_working_as_prostitute = {
+}

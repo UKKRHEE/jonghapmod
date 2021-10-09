@@ -1,0 +1,448 @@
+﻿physical_attraction_modifier = {
+		modifier = {
+			add = {
+				if = {
+					limit = { $WHO$ = { is_male = yes } }
+					value = 0
+					add = {
+						if = { 
+							limit = { $WHO$ = { has_trait = beauty_good } }
+							if = { 
+								limit = { $WHO$ = { has_trait = beauty_good_1 } }
+								value = beauty_good_1_attraction_value
+							}
+							else_if = { 
+								limit = { $WHO$ = { has_trait = beauty_good_2 } }
+								value = beauty_good_2_attraction_value
+							}
+							else = { 
+								value = beauty_good_3_attraction_value
+							}
+						}
+						else_if = { 
+							limit = { $WHO$ = { has_trait = beauty_bad } }
+							if = { 
+								limit = { $WHO$ = { has_trait = beauty_bad_1 } }
+								value = beauty_bad_1_attraction_value
+							}
+							else_if = { 
+								limit = { $WHO$ = { has_trait = beauty_bad_2 } }
+								value = beauty_bad_2_attraction_value
+							}
+							else = { 
+								value = beauty_bad_3_attraction_value
+							}
+						}
+						else = { 
+							value = 0
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = great_pox } }
+							add = -30
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = early_great_pox } }
+							add = -20
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = lovers_pox } }
+							add = -20
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = leper } }
+							add = -30
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = wounded_2 } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = wounded_3 } }
+							add = -30
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = maimed } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = one_eyed } }
+							add = -5
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = disfigured } }
+							add = -20
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = consumption } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = typhus } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = bubonic_plague } }
+							add = -30
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = smallpox } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = clubfooted } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = hunchbacked } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = lisping } }
+							add = -5
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = dwarf } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = giant } }
+							add = -10
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = inbred } }
+							add = -30
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = scaly } }
+							add = -30
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = one_legged } }
+							add = -10
+						}
+					}
+					add = {
+						value = max_penis_attraction_value
+						add = { 
+							value = $WHO$.actual_penis_size
+							subtract = $ATTRACTED$.var:penis_size_preference
+							multiply = penis_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:penis_size_preference
+							subtract = $WHO$.actual_penis_size
+							multiply = penis_attraction_multiplier
+							max = 0
+						}
+						min = min_penis_attraction_value
+					}
+					add = {
+						value = max_male_butt_attraction_value
+						add = { 
+							value = $WHO$.actual_butt_size
+							subtract = $ATTRACTED$.var:male_butt_size_preference
+							multiply = male_butt_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:male_butt_size_preference
+							subtract = $WHO$.actual_butt_size
+							multiply = male_butt_attraction_multiplier
+							max = 0
+						}
+						min = min_male_butt_attraction_value
+						}
+					add = {
+						value = max_male_muscle_attraction_value
+						add = { 
+							value = $WHO$.actual_muscle
+							subtract = $ATTRACTED$.var:male_muscle_preference
+							multiply = male_muscle_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:male_muscle_preference
+							subtract = $WHO$.actual_muscle
+							multiply = male_muscle_attraction_multiplier
+							max = 0
+						}
+						min = min_male_muscle_attraction_value
+					}
+					add = {
+						value = max_male_fat_attraction_value
+						add = { 
+							value = $WHO$.actual_fat
+							subtract = $ATTRACTED$.var:male_fat_preference
+							multiply = male_fat_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:male_fat_preference
+							subtract = $WHO$.actual_fat
+							multiply = male_fat_attraction_multiplier
+							max = 0
+						}
+						min = min_male_fat_attraction_value
+					}
+					add = {
+						value = max_male_height_attraction_value
+						add = { 
+							value = $WHO$.actual_height
+							subtract = $ATTRACTED$.var:male_height_preference
+							multiply = male_height_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:male_height_preference
+							subtract = $WHO$.actual_height
+							multiply = male_height_attraction_multiplier
+							max = 0
+						}
+						min = min_male_height_attraction_value
+					}
+				}
+				else = {
+					value = 0
+					add = {
+						if = { 
+							limit = { $WHO$ = { has_trait = beauty_good } }
+							if = { 
+								limit = { $WHO$ = { has_trait = beauty_good_1 } }
+								value = beauty_good_1_attraction_value
+							}
+							else_if = { 
+								limit = { $WHO$ = { has_trait = beauty_good_2 } }
+								value = beauty_good_2_attraction_value
+							}
+							else = { 
+								value = beauty_good_3_attraction_value
+							}
+						}
+						if = { 
+							limit = { $WHO$ = { has_trait = beauty_bad } }
+							if = { 
+								limit = { $WHO$ = { has_trait = beauty_bad_1 } }
+								value = beauty_bad_1_attraction_value
+							}
+							else_if = { 
+								limit = { $WHO$ = { has_trait = beauty_bad_2 } }
+								value = beauty_bad_2_attraction_value
+							}
+							else = { 
+								value = beauty_bad_3_attraction_value
+							}
+						}
+					}
+					add = {
+						value = max_breast_attraction_value
+						add = { 
+							value = $WHO$.actual_breast_size
+							subtract = $ATTRACTED$.var:breast_size_preference
+							multiply = breast_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:breast_size_preference
+							subtract = $WHO$.actual_breast_size
+							multiply = breast_attraction_multiplier
+							max = 0
+						}
+						min = min_breast_attraction_value
+					}
+					add = {
+						value = max_female_butt_attraction_value
+						add = { 
+							value = $WHO$.actual_butt_size
+							subtract = $ATTRACTED$.var:female_butt_size_preference
+							multiply = female_butt_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:female_butt_size_preference
+							subtract = $WHO$.actual_butt_size
+							multiply = female_butt_attraction_multiplier
+							max = 0
+						}
+						min = min_female_butt_attraction_value
+					}
+					add = {
+						value = max_female_muscle_attraction_value
+						add = { 
+							value = $WHO$.actual_muscle
+							subtract = $ATTRACTED$.var:female_muscle_preference
+							multiply = female_muscle_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:female_muscle_preference
+							subtract = $WHO$.actual_muscle
+							multiply = female_muscle_attraction_multiplier
+							max = 0
+						}
+						min = min_female_muscle_attraction_value
+					}
+					add = {
+						value = max_female_fat_attraction_value
+						add = { 
+							value = $WHO$.actual_fat
+							subtract = $ATTRACTED$.var:female_fat_preference
+							multiply = female_fat_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:female_fat_preference
+							subtract = $WHO$.actual_fat
+							multiply = female_fat_attraction_multiplier
+							max = 0
+						}
+						min = min_female_fat_attraction_value
+					}
+					add = {
+						value = max_female_height_attraction_value
+						add = { 
+							value = $WHO$.actual_height
+							subtract = $ATTRACTED$.var:female_height_preference
+							multiply = female_height_attraction_multiplier
+							max = 0
+						}
+						add = { 
+							value = $ATTRACTED$.var:female_height_preference
+							subtract = $WHO$.actual_height
+							multiply = female_height_attraction_multiplier
+							max = 0
+						}
+						min = min_female_height_attraction_value
+					}
+				}
+				divide = max_attraction_divisor
+				add = 100
+				divide = 200
+				multiply = {
+					if = {
+						limit = {
+							$ATTRACTED$ = { sex_opposite_of = $WHO$ }
+							$ATTRACTED$ = { has_sexuality = heterosexual }
+						}
+						value = 1
+					}
+					else_if = {
+						limit = { 
+							$ATTRACTED$ = { sex_same_as = $WHO$ }
+							$ATTRACTED$ = { has_sexuality = homosexual }
+						}
+						value = 1
+					}
+					else_if = {
+						limit = { $ATTRACTED$ = { has_sexuality = asexual } }
+						value = 0
+					}
+					else_if = {
+						limit = { 
+							$ATTRACTED$ = { sex_opposite_of = $WHO$ }
+							$ATTRACTED$ = { has_variable = sexual_orientation }
+						}
+						value = $ATTRACTED$.var:sexual_orientation
+						add = 100
+						max = 100
+						divide = 100
+					}
+					else_if = {
+						limit = { 
+							$ATTRACTED$ = { sex_same_as = $WHO$ }
+							$ATTRACTED$ = { has_variable = sexual_orientation }
+						}
+						value = $ATTRACTED$.var:sexual_orientation
+						multiply = -1
+						add = 100
+						max = 100
+						divide = 100
+					}
+					else = {
+						value = 0
+					}
+				}
+				multiply = {
+					if = {
+						limit = { 
+							$ATTRACTED$ = { has_variable = aging_attraction_offset }
+							$WHO$ = { has_variable = visual_age }
+						}
+						value = 1
+						subtract = {
+							value = {
+								value = $WHO$.var:visual_age
+								subtract = $ATTRACTED$.var:aging_attraction_offset
+								min = 0
+								max = 1
+							}
+						}
+					}
+					else_if = {
+						limit = { 
+							$WHO$ = { has_variable = visual_age }
+						}
+						value = 1
+						subtract = {
+							value = {
+								value = $WHO$.var:visual_age
+								subtract = {
+									value = $ATTRACTED$.age
+									subtract = 25
+									multiply = 0.02
+									min = 0
+									max = 1
+								}
+								min = 0
+								max = 1
+							}
+						}
+					}
+					else_if = {
+						limit = { 
+							$ATTRACTED$ = { has_variable = aging_attraction_offset }
+						}
+						value = 1
+						subtract = {
+							value = {
+								value = $WHO$.age
+								subtract = 25
+								multiply = 0.02
+								min = 0
+								max = 1
+								subtract = $ATTRACTED$.var:aging_attraction_offset
+								min = 0
+								max = 1
+							}
+						}
+					}
+					else = {
+						value = 1
+						subtract = {
+							value = {
+								value = $WHO$.age
+								subtract = 25
+								multiply = 0.02
+								min = 0
+								max = 1
+								subtract = {
+									value = $ATTRACTED$.age
+									subtract = 25
+									multiply = 0.02
+									min = 0
+									max = 1
+								}
+								min = 0
+								max = 1
+							}
+						}
+					}
+				}
+				multiply = {
+					value = $MAX_ATTRACTION$
+					divide = 100
+				}
+			}
+		}
+	}
+

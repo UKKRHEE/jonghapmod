@@ -1,0 +1,30 @@
+﻿INSTALATION
+#1 Drop the Flesh.mod and [\Flesh] folder into your CK3 \mod folder:
+C:\Users\####\OneDrive\Documents\Paradox Interactive\Crusader Kings III\mod
+or
+C:\Users\####\Documents\Paradox Interactive\Crusader Kings III\mod
+#2 Add the mod to a Playset in the CK3 Launcher
+#3 Selected that playset & enable the mod.  Where able have it load last.
+
+If you wish to change the age at which you conquest your victims or that the victims can get pregnant, change the variables in the
+mod\Flesh\common\character_interactions\_zFlesh_interactions.txt
+file as described in the instructions at the top of that page.  Just the three numbers need be edited.
+
+####Age of Consent - when spouse/concubines/consorts can be bedded
+@age_consent = 18
+####Age can get pregnant - Note there may be hard game rules against this if you too young.
+@age_pregnant = 18
+####Age of violation - when they can be forced, pillaged or coerced.
+@age_violation = 18
+
+Note the variable is actually the age... so @age_consent = 18 will actually mean 18 year olds and over. @age_consent = 20 will mean 20yo.
+
+It goes without saying that this is a computer game.  If you harbour such ill will towards minors or wish to do actual harm to adults in a sexual manner, you are best not use this mod & go get yourself some real help.
+
+It should be noted that this work has pulled on the 'code in spirit' from some other mod'ers work.  But most of it is my own or repurposed Paradox.  Thanks must be made to https://www.loverslab.com/profile/5813741-waffleiron/ for his work on the models & for sharing them with the community.
+
+There is a bug where 16-18 year olds dont carry props... like swords or knives... this seems to rest with Paradox as I can't find the code to re-enable it... like I did for the shackles.
+
+If you get the error: 'The path in this mod descriptors file is invalid or does not exist' error is related to the file path in the Flesh.mod file.  If this occurs, open the file Flesh.mod with a txt editor,  change the path= line from an absolute path ( path="C:\users\USERNAME\..." ) on your system to  path="mod/Flesh"
+
+#####Delete previous version when updating - This is important.#####

@@ -1,0 +1,43 @@
+﻿
+special_genes = {
+	morph_genes = {
+
+		gene_bs_pregnant = {
+
+		    pregnant = { 
+		        index = 0 
+		        female = { 
+				setting = { attribute = "bs_body_pregnant_1" value = { min = 0.0 max = 1.0 }  } 
+			}
+		}
+
+		    pregnant_twins = { 
+		        index = 1 
+		        female = { 
+		            setting = { attribute = "bs_body_pregnant_2" value = { min = 0.0 max = 0.7 }  } 
+		        }
+		    }
+
+		    pregnant_triplets = { 
+		        index = 2 
+		        female = { 
+		            setting = { attribute = "bs_body_pregnant_2" value = { min = 0.0 max = 0.8 }  } 
+		        }
+		    }
+
+		    pregnant_quadruplets = { 
+		        index = 3 
+		        female = { 
+		            setting = { attribute = "bs_body_pregnant_2" value = { min = 0.0 max = 0.9 }  } 
+		        }
+		    }
+
+		    pregnant_quintuplets = { 
+		        index = 4 
+		        female = { 
+		            setting = { attribute = "bs_body_pregnant_2" value = { min = 0.0 max = 1.0 }  } 
+		        }
+		    }
+		}
+	}
+}

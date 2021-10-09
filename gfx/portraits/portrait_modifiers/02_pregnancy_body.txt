@@ -1,0 +1,126 @@
+﻿pregnancy_breasts = {
+	usage = game
+	selection_behavior = max
+	pregnancy_breasts = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_bust
+				value = {
+					value = var:pregnancy_breasts
+					multiply = 0.01
+					multiply = {
+						add = pregnancy_days
+						divide = 120 # PREGNANCY_DAYS is 280; we want 1 month at 100%
+						max = 1
+					}
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				is_alive = yes
+				has_trait = pregnant
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = pregnancy_breasts
+				}
+			}
+		}
+	}
+}
+pregnancy_butt = {
+	usage = game
+	selection_behavior = max
+	pregnancy_butt = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_butt_size
+				value = {
+					value = var:pregnancy_butt
+					multiply = 0.01
+					multiply = {
+						add = pregnancy_days
+						divide = 120 # PREGNANCY_DAYS is 280; we want 1 month at 100%
+						max = 1
+					}
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				is_alive = yes
+				has_trait = pregnant
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = pregnancy_butt
+				}
+			}
+		}
+	}
+}
+
+post_pregnancy_breasts = {
+	usage = game
+	selection_behavior = max
+	post_pregnancy_breasts = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_bust
+				value = {
+					value = var:post_pregnancy_breasts
+					multiply = 0.01
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = post_pregnancy_breasts
+				}
+			}
+		}
+	}
+}
+
+post_pregnancy_butt = {
+	usage = game
+	selection_behavior = max
+	post_pregnancy_butt = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_butt_size
+				value = {
+					value = var:post_pregnancy_butt
+					multiply = 0.01
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = post_pregnancy_butt
+				}
+			}
+		}
+	}
+}

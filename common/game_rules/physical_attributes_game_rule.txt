@@ -1,0 +1,13 @@
+﻿measurement_units = {
+	default = us_custom_units
+
+	us_custom_units = {
+		flag = us_custom_units
+	}
+	
+	metric_units = {
+		flag = metric_units
+	}
+
+}
+

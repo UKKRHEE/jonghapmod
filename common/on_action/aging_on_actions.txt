@@ -1,0 +1,100 @@
+﻿#visual age is on a scale from 0 to 1 based on games default aging gene
+on_add_visual_age_variable = {
+		trigger = { 
+			is_alive = yes
+			Not = { is_immortal = yes }
+			trigger_if = {
+				limit = { is_alive = yes }
+				not = { has_variable = visual_age }
+			}
+		}
+		effect = {
+			set_variable = {
+				name = visual_age
+				value = {
+					if = {
+						limit = { 
+							age >= 25
+							Or = {
+								has_trait = beauty_good_1
+								has_trait = beauty_good_2
+								has_trait = beauty_good_3
+							}
+						}
+						value = age
+						subtract = 35
+						multiply = 0.02
+						min = 0
+						max = 1
+					}
+					else_if = {
+						limit = { age >= 25 }
+						value = age
+						subtract = 25
+						multiply = 0.02
+						min = 0
+						max = 1
+					}
+					else = {
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	
+on_increase_visual_age_variable = {
+		trigger = {
+			is_alive = yes
+			Not = { is_immortal = yes }
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = visual_age
+			}
+			Or = {
+				age > 35
+				and = {
+					age > 25
+					Not = { has_trait = beauty_good_1 }
+					Not = { has_trait = beauty_good_2 }
+					Not = { has_trait = beauty_good_3 }
+				}
+			}
+		}
+		effect = {
+			change_variable = {
+				name = visual_age
+				add = 0.02
+			}
+			if = {
+				limit = { var:visual_age > 1 }
+				remove_variable = visual_age
+				set_variable = {
+					name = visual_age
+					value = 1
+				}
+			}
+		}
+	}
+	
+on_remove_immortal_age_variable = {
+		trigger = {
+			is_alive = yes
+			is_immortal = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = visual_age
+			}
+		}
+		effect = {
+			remove_variable = visual_age
+		}
+	}
+	
+on_birthday = {
+	on_actions = {
+		on_add_visual_age_variable
+		on_increase_visual_age_variable
+		on_remove_immortal_age_variable
+	}
+}

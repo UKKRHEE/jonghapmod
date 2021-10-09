@@ -1,0 +1,526 @@
+﻿add_portrait_slot = {
+	if = {
+		limit = {
+			NOT = { has_variable_list = portrait_1 }
+		}
+		add_to_variable_list = {
+			name = portrait_1
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_2 }
+		}
+		add_to_variable_list = {
+			name = portrait_2
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_3 }
+		}
+		add_to_variable_list = {
+			name = portrait_3
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_4 }
+		}
+		add_to_variable_list = {
+			name = portrait_4
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_5 }
+		}
+		add_to_variable_list = {
+			name = portrait_5
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_6 }
+		}
+		add_to_variable_list = {
+			name = portrait_6
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_7 }
+		}
+		add_to_variable_list = {
+			name = portrait_7
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_8 }
+		}
+		add_to_variable_list = {
+			name = portrait_8
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_9 }
+		}
+		add_to_variable_list = {
+			name = portrait_9
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_10 }
+		}
+		add_to_variable_list = {
+			name = portrait_10
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_11 }
+		}
+		add_to_variable_list = {
+			name = portrait_11
+			target = scope:character
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable_list = portrait_12 }
+		}
+		add_to_variable_list = {
+			name = portrait_12
+			target = scope:character
+		}
+	}
+}
+
+remove_portrait_slot = {
+	if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_1
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_1
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_2
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_2
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_3
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_3
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_4
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_4
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_5
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_5
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_6
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_6
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_7
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_7
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_8
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_8
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_9
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_9
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_10
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_10
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_11
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_11
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = portrait_12
+				target = scope:character
+			}
+		}
+		clear_variable_list = portrait_12
+	}
+}
+
+# if a character used to be in a slot but was unpinned, we need to remove them
+clean_portrait_slots = {
+
+	if = {
+		limit = { has_variable_list = portrait_1 }
+
+		every_in_list = {
+			variable = portrait_1
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_2 }
+
+		every_in_list = {
+			variable = portrait_2
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_2
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_3 }
+
+		every_in_list = {
+			variable = portrait_3
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_3
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_4 }
+
+		every_in_list = {
+			variable = portrait_4
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_4
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_5 }
+
+		every_in_list = {
+			variable = portrait_5
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_5
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_6 }
+
+		every_in_list = {
+			variable = portrait_6
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_6
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_7 }
+
+		every_in_list = {
+			variable = portrait_7
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_7
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_8 }
+
+		every_in_list = {
+			variable = portrait_8
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_8
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_9 }
+
+		every_in_list = {
+			variable = portrait_9
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_9
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_10 }
+
+		every_in_list = {
+			variable = portrait_10
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_10
+			}
+		}
+	}
+
+	if = {
+		limit = { has_variable_list = portrait_11 }
+
+		every_in_list = {
+			variable = portrait_11
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_11
+			}
+		}
+	}
+
+
+	if = {
+		limit = { has_variable_list = portrait_12 }
+
+		every_in_list = {
+			variable = portrait_12
+			limit = {
+				NOT = {
+					root = {
+						is_target_in_variable_list = {
+							name = barber_characters
+							target = prev
+						}
+					}
+				}
+			}
+			root = {
+				remove_list_variable = {
+					name = added_to_barber
+					target = prev
+				}
+				clear_variable_list = portrait_12
+			}
+		}
+	}
+}

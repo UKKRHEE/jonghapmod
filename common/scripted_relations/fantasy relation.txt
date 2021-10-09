@@ -1,0 +1,9 @@
+﻿fantasy = {
+	corresponding = fantasized
+	hidden = yes
+}
+
+fantasized = {
+	corresponding = fantasy
+	hidden = yes
+}

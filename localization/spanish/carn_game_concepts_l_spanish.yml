@@ -1,0 +1,44 @@
+﻿l_spanish:
+
+game_concept_dominant:1 "Dominante"
+game_concept_dominant_short:1 "Dom"
+game_concept_dominants:1 "Dominantes"
+game_concept_dominant_possessive:1 "Del Dominante"
+game_concept_dominants_possessive:1 "De los Dominantes'"
+game_concept_dominant_desc:1 "Usualmente abreviado como $game_concept_dominant_short$, un $game_concept_dominant$ es un [character|E] con una [relation|E] con un [submissive|E]. Mientras las especificaciones varian, el rol de $game_concept_dominant$ usualmente involucra el control total de $game_concept_submissive$."
+
+game_concept_submissive:1 "Submisivo"
+game_concept_submissive_short:1 "Sub"
+game_concept_submissives:1 "Submisivos"
+game_concept_submissive_possessive:1 "Del Submisivo"
+game_concept_submissives_possessive:1 "De los Submisivos"
+game_concept_submissive_desc:1 "Usualmente abreviado como $game_concept_submissive_short$, un $game_concept_submissive$ es un [character|E] con una [relation|E] con un [dominant|E]. WMientras las especificaciones varian, el rol de $game_concept_submissive$ usualmente involucra la sumisión total hacia $game_concept_dominant$."
+
+game_concept_slave:1 "Esclavo"
+game_concept_slaves:1 "Esclavos"
+game_concept_slavery:1 "Esclavitud"
+game_concept_slave_possessive:1 "Del Esclavo"
+game_concept_slaves_possessive:1 "De los Esclavos"
+game_concept_slave_desc:1 "Un $game_concept_slave$ es un [character|E] que fue despojado de sus derechos y esclavizado. Son propiedad de un [slave_owner|E], que tiene [strong_hook|E] que puede comprarlos o venderlos en [slave_market|E]. Tambien, [extramarital_sex|E] entre el esclavo y su amo es legal.\n\nLos esclavos no [titles|E], cualquier vastago nacido de una esclava sera un esclavo tambien.\n\nSi un amo muere,su [primary_heir|E] sera el nuevo amo de sus esclavos.\n\nPara escapar de la esclavitud, un esclavo debe ser liberado por su amo mediante $carn_free_slave_interaction$ [character_interaction|E]."
+
+game_concept_slave_owner:1 "Amo"
+game_concept_slave_owners:1 "Amos"
+game_concept_slave_owner_possessive:1 "Del Amo"
+game_concept_slave_owners_possessive:1 "De los Amos"
+game_concept_slave_owner_desc:1 "Un [character|E] puede ser legalmente reconocido como $game_concept_slave_owner$ por uno o más [slaves|E]. Los propietarios de esclavos tienen un [strong_hook|E] sobre sus esclavos por lo que puede venderlos o comprarlos en [slave_market|E]. Tambien, [extramarital_sex|E] entre el esclavo y su amo es legal.\n\nSí un amo muere, su [primary_heir|E] sera el nuevo amo de sus esclavos."
+
+game_concept_slave_market:1 "Mercado de Esclavos"
+game_concept_slave_market_desc:1 "[slaves|E], siendo propiedad de otros, pueden ser comprados o vendidos por otros [characters|E] mediante the $carn_buy_slave_directly_interaction$ o $carn_sell_slave_interaction$ [interactions|E]. Un personaje que compre un esclavo se convertira en su [slave_owner|E].\n\nUn esclavo con buenas [skills|E], [traits|E], o [claims|E] se venderan por un precio más alto. Un [noble|E], una joven, o [GetTrait('eunuch').GetName( GetNullCharacter )] es especialmente preciado."
+
+game_concept_prostitute:1 "Prostituta"
+game_concept_prostitutes:1 "Prostitutas"
+game_concept_prostitution:1 "Prostitucin"
+game_concept_prostitute_possessive:1 "De la Prostituta"
+game_concept_prostitutes_possessive:1 "De las Prostitutas'"
+game_concept_prostitute_desc:1 "Una prostituta es un [character|E] ofrece sexo a cambio de dinero. Cualquier personaje puede usar the $carn_work_as_prostitute_decision$ [decision|E] para prostituirse, siempre y cuando [faith|E] se lo permita.\n\nSu desempreño se basa en [diplomacy|E], [intrigue|E], inteligencia, y atractivo. Una prostituta especialmente habilidosa puede ser [GetTrait('prostitute_2').GetName( GetNullCharacter )] o incluso [GetTrait('prostitute_3').GetName( GetNullCharacter )].\n\nEjercer la prostitución es legalmente sancionado y no se considera [extramarital_sex|E]. Sin embargo, puede resultar en hijos [bastard|E] o en otras consecuencias si el personaje no es cuidadoso..."
+
+game_concept_lactation: "Lactancia"
+ game_concept_lactating: "Lactando"
+ game_concept_milk: "Leche"
+ game_concept_milk_production: "Producción de Leche"
+ game_concept_lactation_desc: "Cuando la Lactancia esta Habilitada, los [characters|E] pueden incrementar su producción de leche por el embarazo u otros efectos. Esto hara que produzcan leche por un tiempo. Los embarazos sucesivos harar que un personaje produzca leche por más tiempo.\n\nLa Lactancia es puramente cosmetico, pero los mods pueden agregar más caracteristicas y contenido para los personajes Lactando."

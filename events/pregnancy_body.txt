@@ -1,0 +1,72 @@
+﻿namespace = pregnancy_body
+
+pregnancy_body.1001 = {
+	hidden = yes
+	trigger = {
+		has_variable = pregnancy_fat
+	}
+	immediate = { 
+		change_current_weight = {
+			value = var:pregnancy_fat
+			divide = 8
+		 }
+	}
+}
+
+pregnancy_body.2001 = {
+	hidden = yes
+	trigger = {
+		has_variable = post_pregnancy_breasts
+	}
+	immediate = { 
+		if = { 
+			limit = { var:post_pregnancy_breasts <= 0 }
+			remove_variable = post_pregnancy_breasts
+		}
+		else = {
+			change_variable = {
+				name = post_pregnancy_breasts
+				add = -2
+			}
+			if = {
+				limit = { var:post_pregnancy_breasts <= 0 }
+				remove_variable = post_pregnancy_breasts
+			}
+			else = {
+				trigger_event = {
+					id = pregnancy_body.2001
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+pregnancy_body.2002 = {
+	hidden = yes
+	trigger = {
+		has_variable = post_pregnancy_butt
+	}
+	immediate = { 
+		if = { 
+			limit = { var:post_pregnancy_butt <= 0 }
+			remove_variable = post_pregnancy_butt
+		}
+		else = {
+			change_variable = {
+				name = post_pregnancy_butt
+				add = -2
+			}
+			if = {
+				limit = { var:post_pregnancy_butt <= 0 }
+				remove_variable = post_pregnancy_butt
+			}
+			else = {
+				trigger_event = {
+					id = pregnancy_body.2002
+					days = 30
+				}
+			}
+		}
+	}
+}

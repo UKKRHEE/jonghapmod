@@ -1,0 +1,521 @@
+﻿namespace = ie_hunt
+
+
+scripted_trigger ie_hunt_0001_lesbian_selection = {
+	NOT = { is_spouse_of = root }
+	is_alive = yes
+	is_female = yes
+	is_available_healthy_ai_adult = yes # Ironically, those that are selected as "real" participants for the hunt probably won't be available. Oh well.
+	this.age <= 50
+	OR = { # Logically, should be AND, but I'm afraid of restricting the target pool a bit too much.
+		might_cheat_on_every_partner_trigger = yes
+		has_sexuality = bisexual
+		has_sexuality = homosexual
+	}
+}
+
+# We don't use potential_hunt_participants, it's a bit too restrictive to find two lesbians by chance.
+scripted_effect ie_hunt_0001_find_lesbians = {
+	every_vassal_or_below = {
+		every_spouse = {
+			add_to_temporary_list = potential_hunt_participants_custom
+		}
+		add_to_temporary_list = potential_hunt_participants_custom
+	}
+	every_in_list  = {
+		list = potential_hunt_participants_custom
+		limit = { ie_hunt_0001_lesbian_selection = yes }
+		add_to_temporary_list = lesbians
+	}
+	random_in_list = {
+		list = lesbians
+		weight = {
+			base = 1
+			modifier = {
+				might_cheat_on_every_partner_trigger = yes
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					has_sexuality = bisexual
+					has_sexuality = homosexual
+				}
+				factor = 5
+			}
+		}
+		save_scope_as = lesbian_1
+	}
+	# Find a partner fitting for the first one
+	random_in_list = {
+		list = lesbians
+		limit = { 
+			NOT = { this = scope:lesbian_1 } 
+		}
+		weight = {
+			base = 100
+			
+			# Add opinion to and from target
+			opinion_modifier = {
+				opinion_target = scope:lesbian_1
+				multiplier = 0.5
+			}
+			opinion_modifier = {
+				who = scope:lesbian_1
+				opinion_target = this
+				multiplier = 0.5
+			}
+			# Age difference penalty
+			modifier = {
+				add = {
+					value = age
+					subtract = scope:lesbian_1.age
+					multiply = -2
+					min = 0					
+				}
+			}
+			modifier = {
+				add = {
+					value = scope:lesbian_1.age
+					subtract = age
+					multiply = 2
+					min = 0
+				}
+			}
+
+			modifier = {
+				might_cheat_on_every_partner_trigger = yes
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					has_sexuality = bisexual
+					has_sexuality = homosexual
+				}
+				factor = 5
+			}
+			modifier = {
+				OR = {
+					has_relation_lover = scope:lesbian_1
+					has_relation_soulmate = scope:lesbian_1
+				}
+				factor = 10
+			}
+		}
+		save_scope_as = lesbian_2
+	}
+	
+}
+
+# "Quite the Catch"
+ie_hunt.0001 = {
+	type = character_event
+	title = ie_hunt.0001.t
+	desc = {
+		desc = ie_hunt.0001.desc
+		triggered_desc = {
+			trigger = {
+				is_attracted_to_gender_of = scope:lesbian_1
+			}
+			desc = ie_hunt.0001.desc.optional
+		}
+		
+	}
+	theme = hunt_activity
+	left_portrait = {
+		character = scope:lesbian_1
+		animation = flirtation_left
+	}
+	right_portrait = {
+		character = scope:lesbian_2
+		animation = flirtation
+	}
+
+	trigger = {
+		is_ai = no
+		OR = {
+			# This is a bit ridiculous, but I don't know a more elegant solution to check multiple or custom lists at the same time. 
+			# Luckily I need to find only 2 characters in total from 2 "lists" and not 4 characters in 3 lists...
+			any_vassal_or_below = {
+				count > 1
+				any_spouse = {
+					ie_hunt_0001_lesbian_selection = yes 			
+				}				
+			}
+			any_vassal_or_below = {
+				count > 1
+				ie_hunt_0001_lesbian_selection = yes 
+			}
+			AND = {
+				any_vassal_or_below = {
+					count = 1
+					any_spouse = {
+						ie_hunt_0001_lesbian_selection = yes 
+					}
+				}
+				any_vassal_or_below = {
+					count = 1
+					ie_hunt_0001_lesbian_selection = yes 
+				}
+			}
+		}
+	}
+
+	immediate = {
+		ie_hunt_0001_find_lesbians = yes
+
+		hidden_effect = {
+			scope:lesbian_1 = { set_relation_lover = scope:lesbian_2 }
+		}
+		scope:lesbian_1 = {
+			random_secret = {
+				limit = {
+					secret_type = secret_lover
+					secret_target = scope:lesbian_2
+				}
+				reveal_to = root
+			}
+		}
+	}
+
+	option = { # Offer to join
+		name = ie_hunt.0001.a
+		custom_tooltip = ie_hunt.0001.a.tt
+
+		if = {
+			limit = {
+				OR = {
+					scope:lesbian_1 = { is_attracted_to_gender_of = root }
+					scope:lesbian_2 = { is_attracted_to_gender_of = root }
+				}
+				# The more they like you, the less hot you have to be (1:1 ratio)
+				scope:lesbian_1 = {
+					opinion = {
+						target = root
+						value >= {
+							value = root.attraction
+							multiply = -1
+						}
+					}
+				}
+				scope:lesbian_2 = {
+					opinion = {
+						target = root
+						value >= {
+							value = root.attraction
+							multiply = -1
+						}
+					}
+				}			
+			}
+			trigger_event = {
+				id = ie_hunt.0003 # Ok!
+				days = { 1 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					NOR = {
+						scope:lesbian_1 = { is_attracted_to_gender_of = root }
+						scope:lesbian_2 = { is_attracted_to_gender_of = root }
+					}
+					AND = {
+						scope:lesbian_1 = {
+							opinion = {
+								target = root
+								value < low_negative_opinion
+							}
+						}
+						scope:lesbian_2 = {
+							opinion = {
+								target = root
+								value < low_negative_opinion
+							}
+						}	
+					}
+				}
+				NOR = {
+					scope:lesbian_1 = {
+						has_dread_level_towards = {
+							target = root
+							level >= 1
+						}
+					}
+					scope:lesbian_2 = {
+						has_dread_level_towards = {
+							target = root
+							level >= 1
+						}
+					}
+				}			
+			}
+			trigger_event = {
+				id = ie_hunt.0002 # Never!
+				days = { 1 3 }
+			}
+		}
+		else = {
+			trigger_event = {
+				id = ie_hunt.0004 # Run!
+				days = { 1 3 }
+			}
+		}
+
+		stress_impact = {
+			chaste = medium_stress_impact_gain
+			shy = medium_stress_impact_gain
+		}
+	}
+
+	option = { # Leave
+		name = ie_hunt.0001.b
+		custom_tooltip = ie_hunt.0001.b.tt
+
+		trigger_event = {
+			id = hunt.9001 #To complete the activity
+			days = { 14 20 }
+		}
+
+		stress_impact = {
+			lustful = medium_stress_impact_gain
+			shy = medium_stress_impact_loss
+		}
+	}
+
+	option = { # Expose secrets
+		name = ie_hunt.0001.c
+
+		trigger = {
+			OR = {
+				scope:lesbian_1 = { relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_2 } }
+				scope:lesbian_1 = { relation_with_character_is_incestuous_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_2 } }
+				scope:lesbian_1 = {
+					AND = {
+						is_married = yes
+						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = adulterer GENDER_CHARACTER = scope:lesbian_1 }
+					}
+				}
+				scope:lesbian_2 = { relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_1 } }
+				scope:lesbian_2 = { relation_with_character_is_incestuous_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_1 } }
+				scope:lesbian_2 = {
+					AND = {
+						is_married = yes
+						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = adulterer GENDER_CHARACTER = scope:lesbian_2 }
+					}
+				}
+			}
+		}
+
+		scope:lesbian_1 = {
+			extramarital_sex_attempt_exposure_consequences_with_target_effect = {
+				TARGET = scope:lesbian_2
+				SPOUSE_EVENT = yes
+			}
+		}
+		scope:lesbian_2 = {
+			extramarital_sex_attempt_exposure_consequences_with_target_effect = {
+				TARGET = scope:lesbian_1
+				SPOUSE_EVENT = yes
+			}
+		}
+
+		trigger_event = {
+			id = hunt.9001 #To complete the activity
+			days = { 14 20 }
+		}
+
+		stress_impact = {
+			lustful = medium_stress_impact_gain
+			zealous = medium_stress_impact_loss
+			generous = medium_stress_impact_gain
+			compassionate = major_stress_impact_gain
+		}
+	}
+}
+
+# "Quite the Catch" (cont.)
+ie_hunt.0002 = {
+	type = character_event
+	title = ie_hunt.0001.t
+	desc = ie_hunt.0002.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = scope:lesbian_1
+		animation = flirtation_left
+	}
+	right_portrait = {
+		character = scope:lesbian_2
+		animation = flirtation
+	}
+
+	immediate = {
+		add_stress = minor_stress_gain
+
+		change_variable = {
+			name = hunt_outcome
+			add = -1
+		}
+	}
+
+	option = { # Expose secrets
+		name = ie_hunt.0002.a
+
+		trigger = {
+			OR = {
+				scope:lesbian_1 = { relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_2 } }
+				scope:lesbian_1 = { relation_with_character_is_incestuous_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_2 } }
+				scope:lesbian_1 = {
+					AND = {
+						is_married = yes
+						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = adulterer GENDER_CHARACTER = scope:lesbian_1 }
+					}
+				}
+				scope:lesbian_2 = { relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_1 } }
+				scope:lesbian_2 = { relation_with_character_is_incestuous_in_my_or_lieges_faith_trigger = { CHARACTER = scope:lesbian_1 } }
+				scope:lesbian_2 = {
+					AND = {
+						is_married = yes
+						trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = adulterer GENDER_CHARACTER = scope:lesbian_2 }
+					}
+				}
+			}
+		}
+
+		scope:lesbian_1 = {
+			extramarital_sex_attempt_exposure_consequences_with_target_effect = {
+				TARGET = scope:lesbian_2
+				SPOUSE_EVENT = yes
+			}
+		}
+		scope:lesbian_2 = {
+			extramarital_sex_attempt_exposure_consequences_with_target_effect = {
+				TARGET = scope:lesbian_1
+				SPOUSE_EVENT = yes
+			}
+		}
+
+		trigger_event = {
+			id = hunt.9001 #To complete the activity
+			days = { 14 20 }
+		}
+
+		stress_impact = {
+			zealous = medium_stress_impact_loss
+			generous = medium_stress_impact_gain
+			compassionate = major_stress_impact_gain
+		}
+	}
+
+	option = { # Leave them be
+		name = ie_hunt.0002.b
+
+		trigger_event = {
+			id = hunt.9001 #To complete the activity
+			days = { 14 20 }
+		}
+
+		stress_impact = {
+			vengeful = major_stress_impact_gain
+		}
+	}
+}
+
+# "Quite the Catch" (cont.)
+ie_hunt.0003 = {
+	type = character_event
+	title = ie_hunt.0001.t
+	desc = ie_hunt.0003.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = scope:lesbian_1
+		animation = flirtation_left
+	}
+	right_portrait = {
+		character = scope:lesbian_2
+		animation = flirtation
+	}
+
+	immediate = {
+		scope:lesbian_1 = { carn_undress_character_effect = yes }
+		scope:lesbian_2 = { carn_undress_character_effect = yes }
+		if = {
+			limit = {
+				scope:lesbian_1 = { is_attracted_to_gender_of = root }
+			}
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = root
+				CHARACTER_2 = scope:lesbian_1
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = yes
+				DRAMA = yes
+			}
+		}
+		if = {
+			limit = {
+				scope:lesbian_2 = { is_attracted_to_gender_of = root }
+			}
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = root
+				CHARACTER_2 = scope:lesbian_2
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = yes
+				DRAMA = yes
+			}
+		}
+		change_variable = {
+			name = hunt_outcome
+			add = 3
+		}
+	}
+
+	option = { # Make it a regular thing
+		name = ie_hunt.0003.a
+		if = {
+			limit = {
+				scope:lesbian_1 = { is_attracted_to_gender_of = root }
+			}
+			set_relation_lover = scope:lesbian_1
+		}
+		if = {
+			limit = {
+				scope:lesbian_2 = { is_attracted_to_gender_of = root }
+			}
+			set_relation_lover = scope:lesbian_2
+		}
+	}
+
+	option = { # One-time distraction
+		name = ie_hunt.0003.b
+	}
+
+	after = {
+		scope:lesbian_1 = { carn_dress_character_effect = yes }
+		scope:lesbian_2 = { carn_dress_character_effect = yes }
+		trigger_event = {
+			id = hunt.9001 #To complete the activity
+			days = { 14 20 }
+		}
+	}
+}
+
+
+# "Quite the Catch" (cont.)
+ie_hunt.0004 = {
+	type = character_event
+	title = ie_hunt.0001.t
+	desc = ie_hunt.0004.desc
+	theme = hunt_activity
+
+	option = { # One-time distraction
+		name = ie_hunt.0004.a
+	}
+
+	after = {
+		trigger_event = {
+			id = hunt.9001 #To complete the activity
+			days = { 14 20 }
+		}
+	}
+}

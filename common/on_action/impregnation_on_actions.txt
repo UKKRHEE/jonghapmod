@@ -1,0 +1,242 @@
+﻿on_impregnation = {
+	effect = {
+		if = {
+			limit = {
+				any_in_list = {
+					variable = impregnating_fathers
+					is_alive = yes
+					is_male = yes
+				}
+			}
+			save_scope_as = impregnated_character
+			random = {
+				chance = {
+					value = 2
+					if = {
+						limit = { has_character_flag = had_twins }
+						add = 2
+					}
+					if = {
+						limit = { has_character_flag = mother_had_twins }
+						add = 4
+					}
+					if = {
+						limit = { has_character_flag = paternal_grandmother_had_twins }
+						add = 2
+					}
+					if = {
+						limit = { has_character_flag = maternal_grandmother_had_twins }
+						add = 2
+					}
+				}
+				add_character_flag = twins
+				if = {
+					limit = { Not = { has_character_flag = had_twins } }
+					add_character_flag = had_twins
+					every_child = {
+						limit = {
+							is_alive = yes
+						}
+						trigger_event = {
+							on_action = on_mother_had_twins
+							days = 5
+						}
+					}
+				}
+				random = {
+					chance = {
+						value = 4
+						if = {
+							limit = { has_character_flag = mother_had_twins }
+							add = 4
+						}
+						if = {
+							limit = { has_character_flag = paternal_grandmother_had_twins }
+							add = 2
+						}
+						if = {
+							limit = { has_character_flag = maternal_grandmother_had_twins }
+							add = 2
+						}
+					}
+					remove_character_flag = twins
+					add_character_flag = triplets
+					random = {
+						chance = {
+							value = 4
+							if = {
+								limit = { has_character_flag = mother_had_twins }
+								add = 4
+							}
+							if = {
+								limit = { has_character_flag = paternal_grandmother_had_twins }
+								add = 2
+							}
+							if = {
+								limit = { has_character_flag = maternal_grandmother_had_twins }
+								add = 2
+							}
+						}
+						remove_character_flag = triplets
+						add_character_flag = quadruplets
+						random = {
+							chance = {
+								value = 4
+								if = {
+									limit = { has_character_flag = mother_had_twins }
+									add = 4
+								}
+								if = {
+									limit = { has_character_flag = paternal_grandmother_had_twins }
+									add = 2
+								}
+								if = {
+									limit = { has_character_flag = maternal_grandmother_had_twins }
+									add = 2
+								}
+							}
+							remove_character_flag = quadruplets
+							add_character_flag = quintuplets
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_character_flag = quintuplets }
+				random_in_list = {
+					variable = impregnating_fathers
+					weight = {
+						base = 100
+						modifier = {
+							factor = 0
+							is_female = yes
+						}
+					}
+					save_scope_as = father_1
+				}
+				clear_variable_list = impregnating_fathers
+				make_pregnant = {
+					father = scope:father_1
+					number_of_children = 5
+				}
+			}
+			else_if = {
+				limit = { has_character_flag = quadruplets }
+				random_in_list = {
+					variable = impregnating_fathers
+					weight = {
+						base = 100
+						modifier = {
+							factor = 0
+							is_female = yes
+						}
+					}
+					save_scope_as = father_1
+				}
+				clear_variable_list = impregnating_fathers
+				make_pregnant = {
+					father = scope:father_1
+					number_of_children = 4
+				}
+			}
+			else_if = {
+				limit = { has_character_flag = triplets }
+				random_in_list = {
+					variable = impregnating_fathers
+					weight = {
+						base = 100
+						modifier = {
+							factor = 0
+							is_female = yes
+						}
+					}
+					save_scope_as = father_1
+				}
+				clear_variable_list = impregnating_fathers
+				make_pregnant = {
+					father = scope:father_1
+					number_of_children = 3
+				}
+			}
+			else_if = {
+				limit = { has_character_flag = twins }
+				random_in_list = {
+					variable = impregnating_fathers
+					weight = {
+						base = 100
+						modifier = {
+							factor = 0
+							is_female = yes
+						}
+					}
+					save_scope_as = father_1
+				}
+				clear_variable_list = impregnating_fathers
+				make_pregnant = {
+					father = scope:father_1
+					number_of_children = 2
+				}
+			}
+			else = {
+				random_in_list = {
+					variable = impregnating_fathers
+					weight = {
+						base = 100
+						modifier = {
+							factor = 0
+							is_female = yes
+						}
+					}
+					save_scope_as = father_1
+				}
+				clear_variable_list = impregnating_fathers
+				make_pregnant = {
+					father = scope:father_1
+					number_of_children = 1
+				}
+			}
+		}
+		else = {
+			clear_variable_list = impregnating_fathers
+		}
+	}
+}
+
+on_remove_multiple_pregnancy_flags = {
+		trigger = {
+			scope:mother = {
+				Or = {
+					has_character_flag = quintuplets
+					has_character_flag = quadruplets
+					has_character_flag = triplets
+					has_character_flag = twins
+				}
+			}
+		}
+		effect = {
+			scope:mother = {
+				if = {
+					limit = { has_character_flag = quintuplets }
+					remove_character_flag = quintuplets
+				}
+				else_if = {
+					limit = { has_character_flag = quadruplets }
+					remove_character_flag = quadruplets
+				}
+				else_if = {
+					limit = { has_character_flag = triplets }
+					remove_character_flag = triplets
+				}
+				else_if = {
+					limit = { has_character_flag = twins }
+					remove_character_flag = twins
+				}
+			}
+		}
+	}
+	
+on_birth_mother = {
+	on_actions = {
+		on_remove_multiple_pregnancy_flags
+	}
+}

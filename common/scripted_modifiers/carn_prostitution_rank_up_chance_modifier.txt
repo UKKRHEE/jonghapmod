@@ -1,0 +1,116 @@
+﻿carn_prostitution_rank_up_chance_modifier = {
+
+	modifier = {
+		add = {
+			value = diplomacy
+			add = -10
+			multiply = 2
+		}
+	}
+
+	modifier = {
+		add = {
+			value = intrigue
+			add = -10
+			multiply = 2
+		}
+	}
+
+	modifier = {
+		factor = 1.1
+		has_trait = lustful
+	}
+
+	modifier = {
+		factor = 1.1
+		has_trait = diligent
+	}
+
+	modifier = {
+		factor = 1.1
+		has_trait = gregarious
+	}
+
+	modifier = {
+		factor = 0.9
+		has_trait = chaste
+	}
+
+	modifier = {
+		factor = 0.9
+		has_trait = lazy
+	}
+
+	modifier = {
+		factor = 0.9
+		has_trait = shy
+	}
+
+	modifier = {
+		factor = 2
+		has_trait = beauty_good_1
+	}
+
+	modifier = {
+		factor = 3
+		has_trait = beauty_good_2
+	}
+
+	modifier = {
+		factor = 4
+		has_trait = beauty_good_3
+	}
+
+	modifier = {
+		factor = 1.25
+		has_trait = intellect_good_1
+	}
+
+	modifier = {
+		factor = 1.5
+		has_trait = intellect_good_2
+	}
+
+	modifier = {
+		factor = 2
+		has_trait = intellect_good_3
+	}
+
+	modifier = {
+		factor = 3
+		has_trait = seducer
+	}
+
+	modifier = {
+		factor = 2
+		effective_age <= 21
+	}
+
+	modifier = {
+		factor = 0.75
+		effective_age > 30
+	}
+
+	modifier = {
+		factor = 0.5
+		effective_age > 40
+	}
+
+	modifier = {
+		factor = 0.5
+		has_trait = prostitute_2
+	}
+
+	modifier = {
+		factor = 0
+		has_trait = prostitute_3
+	}
+	
+	modifier = {
+		factor = 0
+		OR = {
+			has_trait = beauty_bad
+			has_trait = intellect_bad
+		}
+	}
+}

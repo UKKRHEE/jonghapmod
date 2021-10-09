@@ -1,0 +1,3323 @@
+﻿on_physical_trait = {
+	on_actions = { 
+			on_breast_variable
+			on_butt_variable
+			on_penis_variable
+			on_height_variable
+			on_muscle_variable
+			}
+		}
+
+on_muscle_variable = {
+		effect = {
+			if = {
+				limit = { not = { has_variable = muscles } }
+				set_variable = {
+					name = muscles
+					value = muscle_target
+				}
+			}
+			else = {
+				set_variable = {
+					name = old_muscles
+					value = var:muscles
+				}
+				remove_variable = muscles
+				set_variable = {
+					name = muscles
+					value = {
+						value = muscle_target
+						subtract = var:old_muscles
+						divide = 3
+						add = var:old_muscles
+					}
+				}
+				remove_variable = old_muscles
+			}
+			trigger_event = { on_action = on_add_muscle_modifier }
+		}
+	}
+
+on_breast_variable = {
+		trigger = { 
+			not = { has_variable = breast_size_genetic }
+			not = { has_variable = breast_size_gene_1 }
+			not = { has_variable = breast_size_gene_2 }
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = scope:real_father 
+					exists = scope:mother
+					trigger_if = {
+						limit = { 
+							exists = scope:real_father 
+							exists = scope:mother
+						}
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:real_father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:real_father = { has_variable = breast_size_gene_1 }
+							scope:real_father = { has_variable = breast_size_gene_2 }
+							scope:mother = { has_variable = breast_size_gene_1 }
+							scope:mother = { has_variable = breast_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:real_father.var:breast_size_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = breast_size_gene_2
+						value = scope:mother.var:breast_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = breast_size_gene_1 } }
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:real_father.var:breast_size_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = breast_size_gene_2 } }
+					set_variable = {
+						name = breast_size_gene_2
+						value = scope:mother.var:breast_size_gene_2
+					}
+				}
+				if = {
+					limit = { check_breast_gene_max_min > 0 }
+					if = {
+						limit = { var:breast_size_gene_1 > 50 }
+						set_variable = {
+							name = breast_size_gene_1_normalized
+							value = {
+								value = var:breast_size_gene_1
+								max = {
+									value = var:breast_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1_normalized
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+						remove_variable = breast_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:breast_size_gene_2 > 50 }
+						set_variable = {
+							name = breast_size_gene_2_normalized
+							value = {
+								value = var:breast_size_gene_2
+								max = {
+									value = var:breast_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2_normalized
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+						remove_variable = breast_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							exists = scope:mother
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:father = { has_variable = breast_size_gene_1 }
+							scope:father = { has_variable = breast_size_gene_2 }
+							scope:mother = { has_variable = breast_size_gene_1 }
+							scope:mother = { has_variable = breast_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:father.var:breast_size_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = breast_size_gene_2
+						value = scope:mother.var:breast_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = breast_size_gene_1 } }
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:father.var:breast_size_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = breast_size_gene_2 } }
+					set_variable = {
+						name = breast_size_gene_2
+						value = scope:mother.var:breast_size_gene_2
+					}
+				}
+				if = {
+					limit = { check_breast_gene_max_min > 0 }
+					if = {
+						limit = { var:breast_size_gene_1 > 50 }
+						set_variable = {
+							name = breast_size_gene_1_normalized
+							value = {
+								value = var:breast_size_gene_1
+								max = {
+									value = var:breast_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1_normalized
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+						remove_variable = breast_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:breast_size_gene_2 > 50 }
+						set_variable = {
+							name = breast_size_gene_2_normalized
+							value = {
+								value = var:breast_size_gene_2
+								max = {
+									value = var:breast_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2_normalized
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+						remove_variable = breast_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:real_father 
+					trigger_if = {
+						limit = { exists = scope:real_father }
+						scope:real_father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:real_father = { is_alive = yes } }
+							scope:real_father = { has_variable = breast_size_gene_1 }
+							scope:real_father = { has_variable = breast_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:real_father.var:breast_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = breast_size_gene_1 } }
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:real_father.var:breast_size_gene_2
+					}
+				}
+				set_variable = {
+					name = breast_size_gene_2
+					value = {
+						fixed_range = { 
+							min = breast_size_seeding_2_min_range_default
+							max = breast_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_breast_gene_max_min > 0 }
+					if = {
+						limit = { var:breast_size_gene_1 > 50 }
+						set_variable = {
+							name = breast_size_gene_1_normalized
+							value = {
+								value = var:breast_size_gene_1
+								max = {
+									value = var:breast_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1_normalized
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+						remove_variable = breast_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:breast_size_gene_2 > 50 }
+						set_variable = {
+							name = breast_size_gene_2_normalized
+							value = {
+								value = var:breast_size_gene_2
+								max = {
+									value = var:breast_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2_normalized
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+						remove_variable = breast_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:father 
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:father = { is_alive = yes } }
+							scope:father = { has_variable = breast_size_gene_1 }
+							scope:father = { has_variable = breast_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:father.var:breast_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = breast_size_gene_1 } }
+					set_variable = {
+						name = breast_size_gene_1
+						value = scope:father.var:breast_size_gene_2
+					}
+				}
+				set_variable = {
+					name = breast_size_gene_2
+					value = {
+						fixed_range = { 
+							min = breast_size_seeding_2_min_range_default
+							max = breast_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_breast_gene_max_min > 0 }
+					if = {
+						limit = { var:breast_size_gene_1 > 50 }
+						set_variable = {
+							name = breast_size_gene_1_normalized
+							value = {
+								value = var:breast_size_gene_1
+								max = {
+									value = var:breast_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1_normalized
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+						remove_variable = breast_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:breast_size_gene_2 > 50 }
+						set_variable = {
+							name = breast_size_gene_2_normalized
+							value = {
+								value = var:breast_size_gene_2
+								max = {
+									value = var:breast_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2_normalized
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+						remove_variable = breast_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:mother
+					trigger_if = {
+						limit = { exists = scope:mother }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:mother = { is_alive = yes } }
+							scope:mother = { has_variable = breast_size_gene_1 }
+							scope:mother = { has_variable = breast_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = breast_size_gene_2
+						value = scope:mother.var:breast_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = breast_size_gene_2 } }
+					set_variable = {
+						name = breast_size_gene_2
+						value = scope:mother.var:breast_size_gene_2
+					}
+				}
+				set_variable = {
+					name = breast_size_gene_1
+					value = {
+						fixed_range = { 
+							min = breast_size_seeding_1_min_range_default
+							max = breast_size_seeding_1_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_breast_gene_max_min > 0 }
+					if = {
+						limit = { var:breast_size_gene_1 > 50 }
+						set_variable = {
+							name = breast_size_gene_1_normalized
+							value = {
+								value = var:breast_size_gene_1
+								max = {
+									value = var:breast_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1_normalized
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+						remove_variable = breast_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:breast_size_gene_2 > 50 }
+						set_variable = {
+							name = breast_size_gene_2_normalized
+							value = {
+								value = var:breast_size_gene_2
+								max = {
+									value = var:breast_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2_normalized
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+						remove_variable = breast_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					name = breast_size_gene_1
+					value = {
+						fixed_range = { 
+							min = breast_size_seeding_1_min_range_default
+							max = breast_size_seeding_1_max_range_default
+						}
+					}
+				}
+				set_variable = {
+					name = breast_size_gene_2
+					value = {
+						fixed_range = { 
+							min = breast_size_seeding_2_min_range_default
+							max = breast_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_breast_gene_max_min > 0 }
+					if = {
+						limit = { var:breast_size_gene_1 > 50 }
+						set_variable = {
+							name = breast_size_gene_1_normalized
+							value = {
+								value = var:breast_size_gene_1
+								max = {
+									value = var:breast_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1_normalized
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+						remove_variable = breast_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_1
+									min = var:breast_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:breast_size_gene_2 > 50 }
+						set_variable = {
+							name = breast_size_gene_2_normalized
+							value = {
+								value = var:breast_size_gene_2
+								max = {
+									value = var:breast_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2_normalized
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+						remove_variable = breast_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = breast_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:breast_size_gene_2
+									min = var:breast_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+on_butt_variable = {
+		trigger = { 
+			not = { has_variable = butt_size_genetic }
+			not = { has_variable = butt_size_gene_1 }
+			not = { has_variable = butt_size_gene_2 }
+		}
+		effect = {
+			if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+					trigger_if = {
+						limit = { 
+							exists = scope:real_father 
+							exists = scope:mother
+						}
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:real_father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:real_father = { has_variable = butt_size_gene_1 }
+							scope:real_father = { has_variable = butt_size_gene_2 }
+							scope:mother = { has_variable = butt_size_gene_1 }
+							scope:mother = { has_variable = butt_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:real_father.var:butt_size_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = butt_size_gene_2
+						value = scope:mother.var:butt_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = butt_size_gene_1 } }
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:real_father.var:butt_size_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = butt_size_gene_2 } }
+					set_variable = {
+						name = butt_size_gene_2
+						value = scope:mother.var:butt_size_gene_2
+					}
+				}
+				if = {
+					limit = { check_butt_gene_max_min > 0 }
+					if = {
+						limit = { var:butt_size_gene_1 > 65 }
+						set_variable = {
+							name = butt_size_gene_1_normalized
+							value = {
+								value = var:butt_size_gene_1
+								max = {
+									value = var:butt_size_gene_2
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1_normalized
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+						remove_variable = butt_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:butt_size_gene_2 > 65 }
+						set_variable = {
+							name = butt_size_gene_2_normalized
+							value = {
+								value = var:butt_size_gene_2
+								max = {
+									value = var:butt_size_gene_1
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2_normalized
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+						remove_variable = butt_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							exists = scope:mother
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:father = { has_variable = butt_size_gene_1 }
+							scope:father = { has_variable = butt_size_gene_2 }
+							scope:mother = { has_variable = butt_size_gene_1 }
+							scope:mother = { has_variable = butt_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:father.var:butt_size_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = butt_size_gene_2
+						value = scope:mother.var:butt_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = butt_size_gene_1 } }
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:father.var:butt_size_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = butt_size_gene_2 } }
+					set_variable = {
+						name = butt_size_gene_2
+						value = scope:mother.var:butt_size_gene_2
+					}
+				}
+				if = {
+					limit = { check_butt_gene_max_min > 0 }
+					if = {
+						limit = { var:butt_size_gene_1 > 65 }
+						set_variable = {
+							name = butt_size_gene_1_normalized
+							value = {
+								value = var:butt_size_gene_1
+								max = {
+									value = var:butt_size_gene_2
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1_normalized
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+						remove_variable = butt_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:butt_size_gene_2 > 65 }
+						set_variable = {
+							name = butt_size_gene_2_normalized
+							value = {
+								value = var:butt_size_gene_2
+								max = {
+									value = var:butt_size_gene_1
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2_normalized
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+						remove_variable = butt_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:real_father 
+					trigger_if = {
+						limit = { exists = scope:real_father }
+						scope:real_father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:real_father = { is_alive = yes } }
+							scope:real_father = { has_variable = butt_size_gene_1 }
+							scope:real_father = { has_variable = butt_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:real_father.var:butt_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = butt_size_gene_1 } }
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:real_father.var:butt_size_gene_2
+					}
+				}
+				set_variable = {
+					name = butt_size_gene_2
+					value = {
+						fixed_range = { 
+							min = butt_size_seeding_2_min_range_default
+							max = butt_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_butt_gene_max_min > 0 }
+					if = {
+						limit = { var:butt_size_gene_1 > 65 }
+						set_variable = {
+							name = butt_size_gene_1_normalized
+							value = {
+								value = var:butt_size_gene_1
+								max = {
+									value = var:butt_size_gene_2
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1_normalized
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+						remove_variable = butt_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:butt_size_gene_2 > 65 }
+						set_variable = {
+							name = butt_size_gene_2_normalized
+							value = {
+								value = var:butt_size_gene_2
+								max = {
+									value = var:butt_size_gene_1
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2_normalized
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+						remove_variable = butt_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:father 
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:father = { is_alive = yes } }
+							scope:father = { has_variable = butt_size_gene_1 }
+							scope:father = { has_variable = butt_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:father.var:butt_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = butt_size_gene_1 } }
+					set_variable = {
+						name = butt_size_gene_1
+						value = scope:father.var:butt_size_gene_2
+					}
+				}
+				set_variable = {
+					name = butt_size_gene_2
+					value = {
+						fixed_range = { 
+							min = butt_size_seeding_2_min_range_default
+							max = butt_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_butt_gene_max_min > 0 }
+					if = {
+						limit = { var:butt_size_gene_1 > 65 }
+						set_variable = {
+							name = butt_size_gene_1_normalized
+							value = {
+								value = var:butt_size_gene_1
+								max = {
+									value = var:butt_size_gene_2
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1_normalized
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+						remove_variable = butt_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:butt_size_gene_2 > 65 }
+						set_variable = {
+							name = butt_size_gene_2_normalized
+							value = {
+								value = var:butt_size_gene_2
+								max = {
+									value = var:butt_size_gene_1
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2_normalized
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+						remove_variable = butt_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:mother
+					trigger_if = {
+						limit = { exists = scope:mother }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:mother = { is_alive = yes } }
+							scope:mother = { has_variable = butt_size_gene_1 }
+							scope:mother = { has_variable = butt_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = butt_size_gene_2
+						value = scope:mother.var:butt_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = butt_size_gene_2 } }
+					set_variable = {
+						name = butt_size_gene_2
+						value = scope:mother.var:butt_size_gene_2
+					}
+				}
+				set_variable = {
+					name = butt_size_gene_1
+					value = {
+						fixed_range = { 
+							min = butt_size_seeding_1_min_range_default
+							max = butt_size_seeding_1_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_butt_gene_max_min > 0 }
+					if = {
+						limit = { var:butt_size_gene_1 > 65 }
+						set_variable = {
+							name = butt_size_gene_1_normalized
+							value = {
+								value = var:butt_size_gene_1
+								max = {
+									value = var:butt_size_gene_2
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1_normalized
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+						remove_variable = butt_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:butt_size_gene_2 > 65 }
+						set_variable = {
+							name = butt_size_gene_2_normalized
+							value = {
+								value = var:butt_size_gene_2
+								max = {
+									value = var:butt_size_gene_1
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2_normalized
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+						remove_variable = butt_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					name = butt_size_gene_1
+					value = {
+						fixed_range = { 
+							min = butt_size_seeding_1_min_range_default
+							max = butt_size_seeding_1_max_range_default
+						}
+					}
+				}
+				set_variable = {
+					name = butt_size_gene_2
+					value = {
+						fixed_range = { 
+							min = butt_size_seeding_2_min_range_default
+							max = butt_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_butt_gene_max_min > 0 }
+					if = {
+						limit = { var:butt_size_gene_1 > 65 }
+						set_variable = {
+							name = butt_size_gene_1_normalized
+							value = {
+								value = var:butt_size_gene_1
+								max = {
+									value = var:butt_size_gene_2
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1_normalized
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+						remove_variable = butt_size_gene_1_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_1
+									min = var:butt_size_gene_2
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = { var:butt_size_gene_2 > 65 }
+						set_variable = {
+							name = butt_size_gene_2_normalized
+							value = {
+								value = var:butt_size_gene_2
+								max = {
+									value = var:butt_size_gene_1
+									add = 10
+									min = 65
+								}
+							}
+						}
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2_normalized
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+						remove_variable = butt_size_gene_2_normalized
+					}
+					else = {
+						set_variable = {
+							name = butt_size_genetic
+							value = {
+								fixed_range = { 
+									max = var:butt_size_gene_2
+									min = var:butt_size_gene_1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+on_penis_variable = {
+		trigger = { 
+			not = { has_variable = penis_size_genetic }
+			not = { has_variable = penis_size_gene_1 }
+			not = { has_variable = penis_size_gene_2 }
+		}
+		effect = {
+			if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+					trigger_if = {
+						limit = { 
+							exists = scope:real_father 
+							exists = scope:mother
+						}
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:real_father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:real_father = { has_variable = penis_size_gene_1 }
+							scope:real_father = { has_variable = penis_size_gene_2 }
+							scope:mother = { has_variable = penis_size_gene_1 }
+							scope:mother = { has_variable = penis_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:real_father.var:penis_size_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = penis_size_gene_2
+						value = scope:mother.var:penis_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = penis_size_gene_1 } }
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:real_father.var:penis_size_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = penis_size_gene_2 } }
+					set_variable = {
+						name = penis_size_gene_2
+						value = scope:mother.var:penis_size_gene_2
+					}
+				}
+				if = {
+					limit = { check_penis_gene_max_min > 0 }
+					if = {
+						limit = { var:penis_size_gene_1 > 50 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								max = {
+									value = var:penis_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_2 < 20 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								min = {
+									value = var:penis_size_gene_1
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_1_normalized
+								min = var:penis_size_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:penis_size_gene_2 > 50 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								max = {
+									value = var:penis_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_1 < 20 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								min = {
+									value = var:penis_size_gene_2
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_2_normalized
+								min = var:penis_size_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							exists = scope:mother
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:father = { has_variable = penis_size_gene_1 }
+							scope:father = { has_variable = penis_size_gene_2 }
+							scope:mother = { has_variable = penis_size_gene_1 }
+							scope:mother = { has_variable = penis_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:father.var:penis_size_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = penis_size_gene_2
+						value = scope:mother.var:penis_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = penis_size_gene_1 } }
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:father.var:penis_size_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = penis_size_gene_2 } }
+					set_variable = {
+						name = penis_size_gene_2
+						value = scope:mother.var:penis_size_gene_2
+					}
+				}
+				if = {
+					limit = { check_penis_gene_max_min > 0 }
+					if = {
+						limit = { var:penis_size_gene_1 > 50 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								max = {
+									value = var:penis_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_2 < 20 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								min = {
+									value = var:penis_size_gene_1
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_1_normalized
+								min = var:penis_size_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:penis_size_gene_2 > 50 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								max = {
+									value = var:penis_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_1 < 20 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								min = {
+									value = var:penis_size_gene_2
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_2_normalized
+								min = var:penis_size_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:real_father 
+					trigger_if = {
+						limit = { exists = scope:real_father }
+						scope:real_father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:real_father = { is_alive = yes } }
+							scope:real_father = { has_variable = penis_size_gene_1 }
+							scope:real_father = { has_variable = penis_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:real_father.var:penis_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = penis_size_gene_1 } }
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:real_father.var:penis_size_gene_2
+					}
+				}
+				set_variable = {
+					name = penis_size_gene_2
+					value = {
+						fixed_range = { 
+							min = penis_size_seeding_2_min_range_default
+							max = penis_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_penis_gene_max_min > 0 }
+					if = {
+						limit = { var:penis_size_gene_1 > 50 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								max = {
+									value = var:penis_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_2 < 20 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								min = {
+									value = var:penis_size_gene_1
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_1_normalized
+								min = var:penis_size_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:penis_size_gene_2 > 50 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								max = {
+									value = var:penis_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_1 < 20 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								min = {
+									value = var:penis_size_gene_2
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_2_normalized
+								min = var:penis_size_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:father 
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:father = { is_alive = yes } }
+							scope:father = { has_variable = penis_size_gene_1 }
+							scope:father = { has_variable = penis_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:father.var:penis_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = penis_size_gene_1 } }
+					set_variable = {
+						name = penis_size_gene_1
+						value = scope:father.var:penis_size_gene_2
+					}
+				}
+				set_variable = {
+					name = penis_size_gene_2
+					value = {
+						fixed_range = { 
+							min = penis_size_seeding_2_min_range_default
+							max = penis_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_penis_gene_max_min > 0 }
+					if = {
+						limit = { var:penis_size_gene_1 > 50 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								max = {
+									value = var:penis_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_2 < 20 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								min = {
+									value = var:penis_size_gene_1
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_1_normalized
+								min = var:penis_size_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:penis_size_gene_2 > 50 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								max = {
+									value = var:penis_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_1 < 20 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								min = {
+									value = var:penis_size_gene_2
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_2_normalized
+								min = var:penis_size_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:mother
+					trigger_if = {
+						limit = { exists = scope:mother }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:mother = { is_alive = yes } }
+							scope:mother = { has_variable = penis_size_gene_1 }
+							scope:mother = { has_variable = penis_size_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = penis_size_gene_2
+						value = scope:mother.var:penis_size_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = penis_size_gene_2 } }
+					set_variable = {
+						name = penis_size_gene_2
+						value = scope:mother.var:penis_size_gene_2
+					}
+				}
+				set_variable = {
+					name = penis_size_gene_1
+					value = {
+						fixed_range = { 
+							min = penis_size_seeding_1_min_range_default
+							max = penis_size_seeding_1_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_penis_gene_max_min > 0 }
+					if = {
+						limit = { var:penis_size_gene_1 > 50 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								max = {
+									value = var:penis_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_2 < 20 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								min = {
+									value = var:penis_size_gene_1
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_1_normalized
+								min = var:penis_size_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:penis_size_gene_2 > 50 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								max = {
+									value = var:penis_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_1 < 20 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								min = {
+									value = var:penis_size_gene_2
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_2_normalized
+								min = var:penis_size_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+			}
+			else = {
+				set_variable = {
+					name = penis_size_gene_1
+					value = {
+						fixed_range = { 
+							min = penis_size_seeding_1_min_range_default
+							max = penis_size_seeding_1_max_range_default
+						}
+					}
+				}
+				set_variable = {
+					name = penis_size_gene_2
+					value = {
+						fixed_range = { 
+							min = penis_size_seeding_2_min_range_default
+							max = penis_size_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_penis_gene_max_min > 0 }
+					if = {
+						limit = { var:penis_size_gene_1 > 50 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								max = {
+									value = var:penis_size_gene_2
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_2 < 20 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								min = {
+									value = var:penis_size_gene_1
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_1_normalized
+								min = var:penis_size_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:penis_size_gene_2 > 50 }
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+								max = {
+									value = var:penis_size_gene_1
+									add = 10
+									min = 50
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_2_normalized
+							value = {
+								value = var:penis_size_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:penis_size_gene_1 < 20 }
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+								min = {
+									value = var:penis_size_gene_2
+									subtract = 10
+									max = 20
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = penis_size_gene_1_normalized
+							value = {
+								value = var:penis_size_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_genetic
+						value = {
+							fixed_range = { 
+								max = var:penis_size_gene_2_normalized
+								min = var:penis_size_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = penis_size_gene_1_normalized
+					remove_variable = penis_size_gene_2_normalized
+				}
+			}
+		}
+	}
+
+on_height_variable = {
+		trigger = { 
+			not = { has_variable = height_genetic }
+			not = { has_variable = height_gene_1 }
+			not = { has_variable = height_gene_2 }
+		}
+		effect = {
+			if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+					trigger_if = {
+						limit = { 
+							exists = scope:real_father 
+							exists = scope:mother
+						}
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:real_father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:real_father = { has_variable = height_gene_1 }
+							scope:real_father = { has_variable = height_gene_2 }
+							scope:mother = { has_variable = height_gene_1 }
+							scope:mother = { has_variable = height_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = height_gene_1
+						value = scope:real_father.var:height_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = height_gene_2
+						value = scope:mother.var:height_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = height_gene_1 } }
+					set_variable = {
+						name = height_gene_1
+						value = scope:real_father.var:height_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = height_gene_2 } }
+					set_variable = {
+						name = height_gene_2
+						value = scope:mother.var:height_gene_2
+					}
+				}
+				if = {
+					limit = { check_height_gene_max_min > 0 }
+					if = {
+						limit = { var:height_gene_1 > 60 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								max = {
+									value = var:height_gene_2
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_2 < 40 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								min = {
+									value = var:height_gene_1
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_1_normalized
+								min = var:height_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:height_gene_2 > 60 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								max = {
+									value = var:height_gene_1
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_1 < 40 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								min = {
+									value = var:height_gene_2
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_2_normalized
+								min = var:height_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							exists = scope:mother
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:father = { is_alive = yes }
+								scope:mother = { is_alive = yes }
+							}
+							scope:father = { has_variable = height_gene_1 }
+							scope:father = { has_variable = height_gene_2 }
+							scope:mother = { has_variable = height_gene_1 }
+							scope:mother = { has_variable = height_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = height_gene_1
+						value = scope:father.var:height_gene_1
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = height_gene_2
+						value = scope:mother.var:height_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = height_gene_1 } }
+					set_variable = {
+						name = height_gene_1
+						value = scope:father.var:height_gene_2
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = height_gene_2 } }
+					set_variable = {
+						name = height_gene_2
+						value = scope:mother.var:height_gene_2
+					}
+				}
+				if = {
+					limit = { check_height_gene_max_min > 0 }
+					if = {
+						limit = { var:height_gene_1 > 60 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								max = {
+									value = var:height_gene_2
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_2 < 40 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								min = {
+									value = var:height_gene_1
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_1_normalized
+								min = var:height_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:height_gene_2 > 60 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								max = {
+									value = var:height_gene_1
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_1 < 40 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								min = {
+									value = var:height_gene_2
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_2_normalized
+								min = var:height_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:real_father 
+					trigger_if = {
+						limit = { exists = scope:real_father }
+						scope:real_father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:real_father = { is_alive = yes } }
+							scope:real_father = { has_variable = height_gene_1 }
+							scope:real_father = { has_variable = height_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = height_gene_1
+						value = scope:real_father.var:height_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = height_gene_1 } }
+					set_variable = {
+						name = height_gene_1
+						value = scope:real_father.var:height_gene_2
+					}
+				}
+				set_variable = {
+					name = height_gene_2
+					value = {
+						fixed_range = { 
+							min = height_seeding_2_min_range_default
+							max = height_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_height_gene_max_min > 0 }
+					if = {
+						limit = { var:height_gene_1 > 60 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								max = {
+									value = var:height_gene_2
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_2 < 40 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								min = {
+									value = var:height_gene_1
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_1_normalized
+								min = var:height_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:height_gene_2 > 60 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								max = {
+									value = var:height_gene_1
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_1 < 40 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								min = {
+									value = var:height_gene_2
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_2_normalized
+								min = var:height_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:father 
+					Not = { exists = scope:real_father }
+					trigger_if = {
+						limit = { 
+							exists = scope:father
+							Not = { exists = scope:real_father }
+						}
+						scope:father = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:father = { is_alive = yes } }
+							scope:father = { has_variable = height_gene_1 }
+							scope:father = { has_variable = height_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = height_gene_1
+						value = scope:father.var:height_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = height_gene_1 } }
+					set_variable = {
+						name = height_gene_1
+						value = scope:father.var:height_gene_2
+					}
+				}
+				set_variable = {
+					name = height_gene_2
+					value = {
+						fixed_range = { 
+							min = height_seeding_2_min_range_default
+							max = height_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_height_gene_max_min > 0 }
+					if = {
+						limit = { var:height_gene_1 > 60 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								max = {
+									value = var:height_gene_2
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_2 < 40 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								min = {
+									value = var:height_gene_1
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_1_normalized
+								min = var:height_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:height_gene_2 > 60 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								max = {
+									value = var:height_gene_1
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_1 < 40 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								min = {
+									value = var:height_gene_2
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_2_normalized
+								min = var:height_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:mother
+					trigger_if = {
+						limit = { exists = scope:mother }
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = { scope:mother = { is_alive = yes } }
+							scope:mother = { has_variable = height_gene_1 }
+							scope:mother = { has_variable = height_gene_2 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					set_variable = {
+						name = height_gene_2
+						value = scope:mother.var:height_gene_1
+					}
+				}
+				if = {
+					limit = { Not = { has_variable = height_gene_2 } }
+					set_variable = {
+						name = height_gene_2
+						value = scope:mother.var:height_gene_2
+					}
+				}
+				set_variable = {
+					name = height_gene_1
+					value = {
+						fixed_range = { 
+							min = height_seeding_1_min_range_default
+							max = height_seeding_1_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_height_gene_max_min > 0 }
+					if = {
+						limit = { var:height_gene_1 > 60 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								max = {
+									value = var:height_gene_2
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_2 < 40 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								min = {
+									value = var:height_gene_1
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_1_normalized
+								min = var:height_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:height_gene_2 > 60 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								max = {
+									value = var:height_gene_1
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_1 < 40 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								min = {
+									value = var:height_gene_2
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_2_normalized
+								min = var:height_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+			}
+			else = {
+				set_variable = {
+					name = height_gene_1
+					value = {
+						fixed_range = { 
+							min = height_seeding_1_min_range_default
+							max = height_seeding_1_max_range_default
+						}
+					}
+				}
+				set_variable = {
+					name = height_gene_2
+					value = {
+						fixed_range = { 
+							min = height_seeding_2_min_range_default
+							max = height_seeding_2_max_range_default
+						}
+					}
+				}
+				if = {
+					limit = { check_height_gene_max_min > 0 }
+					if = {
+						limit = { var:height_gene_1 > 60 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								max = {
+									value = var:height_gene_2
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_2 < 40 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								min = {
+									value = var:height_gene_1
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_1_normalized
+								min = var:height_gene_2_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+				else = {
+					if = {
+						limit = { var:height_gene_2 > 60 }
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+								max = {
+									value = var:height_gene_1
+									add = 10
+									min = 60
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_2_normalized
+							value = {
+								value = var:height_gene_2
+							}
+						}
+					}
+					if = {
+						limit = { var:height_gene_1 < 40 }
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+								min = {
+									value = var:height_gene_2
+									subtract = 10
+									max = 40
+								}
+							}
+						}
+					}
+					else = {
+						set_variable = {
+							name = height_gene_1_normalized
+							value = {
+								value = var:height_gene_1
+							}
+						}
+					}
+					set_variable = {
+						name = height_genetic
+						value = {
+							fixed_range = { 
+								max = var:height_gene_2_normalized
+								min = var:height_gene_1_normalized
+							}
+						}
+					}
+					remove_variable = height_gene_1_normalized
+					remove_variable = height_gene_2_normalized
+				}
+			}
+		}
+	}

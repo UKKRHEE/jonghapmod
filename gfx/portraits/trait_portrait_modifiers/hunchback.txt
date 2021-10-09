@@ -1,0 +1,15 @@
+﻿hunchbacked = {
+	hunchbacked = {
+		traits = {
+			hunchbacked
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = gene_hunchbacked
+				range = { 0.25 0.50 }
+				template = hunchbacked
+			}
+		}
+	}
+}

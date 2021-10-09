@@ -1,0 +1,55 @@
+﻿carn_dick_size_value = {
+	value = 0
+	if = {
+		limit = { carn_has_dick_big_1_trigger = yes }
+		add = 1
+	}
+	else_if = {
+		limit = { carn_has_dick_big_2_trigger = yes }
+		add = 2
+	}
+	else_if = {
+		limit = { carn_has_dick_big_3_trigger = yes }
+		add = 3
+	}
+	else_if = {
+		limit = { carn_has_dick_small_1_trigger = yes }
+		add = -1
+	}
+	else_if = {
+		limit = { carn_has_dick_small_2_trigger = yes }
+		add = -2
+	}
+	else_if = {
+		limit = { carn_has_dick_small_3_trigger = yes }
+		add = -3
+	}
+}
+
+carn_tits_size_value = {
+	value = 0
+	if = {
+		limit = { carn_has_tits_big_1_trigger = yes }
+		add = 1
+	}
+	else_if = {
+		limit = { carn_has_tits_big_2_trigger = yes }
+		add = 2
+	}
+	else_if = {
+		limit = { carn_has_tits_big_3_trigger = yes }
+		add = 3
+	}
+	else_if = {
+		limit = { carn_has_tits_small_1_trigger = yes }
+		add = -1
+	}
+	else_if = {
+		limit = { carn_has_tits_small_2_trigger = yes }
+		add = -2
+	}
+	else_if = {
+		limit = { carn_has_tits_small_3_trigger = yes }
+		add = -3
+	}
+}

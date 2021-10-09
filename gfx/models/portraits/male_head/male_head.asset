@@ -1,0 +1,1107 @@
+pdxmesh = {
+		name = "male_head_mesh"
+		file = "male_head.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "male_headShape"
+			index = 0
+			texture_diffuse = "male_head_diffuse.dds"
+			texture_normal = "male_head_normal.dds"
+			texture_specular = "male_head_properties.dds"
+			shader = "portrait_skin_face"
+			shader_file = "gfx/FX/jomini/portrait.shader"
+		}
+
+		additive_animation = { id = "chin_forward"					type = "male_head_chin_forward.anim" }
+		additive_animation = { id = "chin_height"					type = "male_head_chin_height.anim" }
+		additive_animation = { id = "chin_width"					type = "male_head_chin_width.anim" }
+
+		additive_animation = { id = "eye_angle"					type = "male_head_eye_angle.anim" }
+		additive_animation = { id = "eye_depth"					type = "male_head_eye_depth.anim" }
+		additive_animation = { id = "eye_height"					type = "male_head_eye_height.anim" }
+		additive_animation = { id = "eye_distance"					type = "male_head_eye_distance.anim" }
+		additive_animation = { id = "eye_shut"					type = "male_head_eye_shut.anim" }
+
+		additive_animation = { id = "forehead_angle"					type = "male_head_forehead_angle.anim" }
+		additive_animation = { id = "forehead_brow_height"					type = "male_head_forehead_brow_height.anim" }
+		additive_animation = { id = "forehead_roundness"					type = "male_head_forehead_roundness.anim" }
+		additive_animation = { id = "forehead_width"					type = "male_head_forehead_width.anim" }
+		additive_animation = { id = "forehead_height"					type = "male_head_forehead_height.anim" }		
+
+		additive_animation = { id = "head_height"					type = "male_head_head_height.anim" }
+		additive_animation = { id = "head_width"					type = "male_head_head_width.anim" }
+		additive_animation = { id = "head_profile"					type = "male_head_head_profile.anim" }
+		additive_animation = { id = "head_top_height"					type = "male_head_head_top_height.anim" }
+		additive_animation = { id = "head_top_width"					type = "male_head_head_top_width.anim" }
+
+		additive_animation = { id = "jaw_angle"					type = "male_head_jaw_angle.anim" }
+		additive_animation = { id = "jaw_forward"					type = "male_head_jaw_forward.anim" }
+		additive_animation = { id = "jaw_height"					type = "male_head_jaw_height.anim" }
+		additive_animation = { id = "jaw_width"					type = "male_head_jaw_width.anim" }
+
+		additive_animation = { id = "mouth_corner_depth"					type = "male_head_mouth_corner_depth.anim" }
+		additive_animation = { id = "mouth_corner_height"					type = "male_head_mouth_corner_height.anim" }
+		additive_animation = { id = "mouth_forward"					type = "male_head_mouth_forward.anim" }
+		additive_animation = { id = "mouth_height"					type = "male_head_mouth_height.anim" }
+		additive_animation = { id = "mouth_width"					type = "male_head_mouth_width.anim" }
+		additive_animation = { id = "mouth_lower_lip_size"					type = "male_head_mouth_lower_lip_size.anim" }
+		additive_animation = { id = "mouth_upper_lip_size"					type = "male_head_mouth_upper_lip_size.anim" }
+		additive_animation = { id = "mouth_open"					type = "male_head_mouth_open.anim" }
+
+		additive_animation = { id = "neck_length"					type = "male_head_neck_length.anim" }
+		additive_animation = { id = "neck_width"					type = "male_head_neck_width.anim" }
+
+		additive_animation = { id = "head_body_height"				type = "male_head_body_height.anim" }
+		additive_animation = { id = "head_infant_proportions"				type = "male_head_infant_proportions.anim" }
+		additive_animation = { id = "head_hunchbacked"				type = "male_head_hunchbacked.anim" }
+		additive_animation = { id = "head_sex_fellatio_large"				type = "male_head_sex_fellatio_large.anim" }
+
+
+
+
+
+
+		#### BLEND SHAPES ####
+
+		blend_shape = { id = "male_bs_gaunt_2_body"		type = "blendshapes/male_bs_gaunt_2_body.mesh" }
+
+		blend_shape = { id = "male_bs_cheek_fat_min"	type = "blendshapes/male_bs_cheek_fat_min.mesh"  }
+		blend_shape = { id = "male_bs_cheek_fat_max"	type = "blendshapes/male_bs_cheek_fat_max.mesh"  }
+		blend_shape = { id = "male_bs_cheek_forward_min"	type = "blendshapes/male_bs_cheek_forward_min.mesh"  }
+		blend_shape = { id = "male_bs_cheek_forward_max"	type = "blendshapes/male_bs_cheek_forward_max.mesh"  }
+		blend_shape = { id = "male_bs_cheek_height_min"	type = "blendshapes/male_bs_cheek_height_min.mesh"  }
+		blend_shape = { id = "male_bs_cheek_height_max"	type = "blendshapes/male_bs_cheek_height_max.mesh" }
+		blend_shape = { id = "male_bs_cheek_prominence_max"		type = "blendshapes/male_bs_cheek_prominence_max.mesh" }
+		blend_shape = { id = "male_bs_cheek_width_max"	type = "blendshapes/male_bs_cheek_width_max.mesh" }
+		blend_shape = { id = "male_bs_cheek_width_min"	type = "blendshapes/male_bs_cheek_width_min.mesh" }
+
+		blend_shape = { id = "male_bs_ear_angle_min"		type = "blendshapes/male_bs_ear_angle_min.mesh" }
+		blend_shape = { id = "male_bs_ear_angle_max"		type = "blendshapes/male_bs_ear_angle_max.mesh" }
+		blend_shape = { id = "male_bs_ear_inner_shape_max"		type = "blendshapes/male_bs_ear_inner_shape_max.mesh" }
+		blend_shape = { id = "male_bs_ear_lower_bend_max"		type = "blendshapes/male_bs_ear_lower_bend_max.mesh" }
+		blend_shape = { id = "male_bs_ear_outward_min"		type = "blendshapes/male_bs_ear_outward_min.mesh" }
+		blend_shape = { id = "male_bs_ear_outward_max"		type = "blendshapes/male_bs_ear_outward_max.mesh" }
+		blend_shape = { id = "male_bs_ear_size_min"		type = "blendshapes/male_bs_ear_size_min.mesh" }
+		blend_shape = { id = "male_bs_ear_size_max"		type = "blendshapes/male_bs_ear_size_max.mesh" }
+		blend_shape = { id = "male_bs_ear_upper_bend_max"		type = "blendshapes/male_bs_ear_upper_bend_max.mesh" }
+
+		blend_shape = { id = "male_bs_eye_corner_depth_min"	type = "blendshapes/male_bs_eye_corner_depth_min.mesh" }
+		blend_shape = { id = "male_bs_eye_corner_depth_max"	type = "blendshapes/male_bs_eye_corner_depth_max.mesh" }
+		blend_shape = { id = "male_bs_eye_corner_height_min"	type = "blendshapes/male_bs_eye_corner_height_min.mesh" }
+		blend_shape = { id = "male_bs_eye_corner_height_max"	type = "blendshapes/male_bs_eye_corner_height_max.mesh" }
+		blend_shape = { id = "male_bs_eye_fold_shape_min"	type = "blendshapes/male_bs_eye_fold_shape_min.mesh" }
+		blend_shape = { id = "male_bs_eye_fold_shape_max"	type = "blendshapes/male_bs_eye_fold_shape_max.mesh" }
+		blend_shape = { id = "male_bs_eye_size_min"		type = "blendshapes/male_bs_eye_size_min.mesh" }
+		blend_shape = { id = "male_bs_eye_size_max"		type = "blendshapes/male_bs_eye_size_max.mesh" }
+		blend_shape = { id = "male_bs_eye_upper_lid_size_min"		type = "blendshapes/male_bs_eye_upper_lid_size_min.mesh" }
+		blend_shape = { id = "male_bs_eye_upper_lid_size_max"		type = "blendshapes/male_bs_eye_upper_lid_size_max.mesh" }
+		blend_shape = { id = "male_bs_eye_upper_lid_droop_min"		type = "blendshapes/male_bs_eye_upper_lid_droop_min.mesh" }
+		blend_shape = { id = "male_bs_eye_upper_lid_droop_max"		type = "blendshapes/male_bs_eye_upper_lid_droop_max.mesh" }
+
+		blend_shape = { id = "male_bs_forehead_brow_curve_min"		type = "blendshapes/male_bs_forehead_brow_curve_min.mesh" data = "position" }
+		blend_shape = { id = "male_bs_forehead_brow_curve_max"		type = "blendshapes/male_bs_forehead_brow_curve_max.mesh" }
+		blend_shape = { id = "male_bs_forehead_brow_forward_min"		type = "blendshapes/male_bs_forehead_brow_forward_min.mesh" }
+		blend_shape = { id = "male_bs_forehead_brow_forward_max"		type = "blendshapes/male_bs_forehead_brow_forward_max.mesh" }
+		blend_shape = { id = "male_bs_forehead_brow_inner_height_min"		type = "blendshapes/male_bs_forehead_brow_inner_height_min.mesh" data = "position" }
+		blend_shape = { id = "male_bs_forehead_brow_inner_height_max"		type = "blendshapes/male_bs_forehead_brow_inner_height_max.mesh" data = "position" }
+		blend_shape = { id = "male_bs_forehead_brow_outer_height_min"		type = "blendshapes/male_bs_forehead_brow_outer_height_min.mesh" data = "position" }
+		blend_shape = { id = "male_bs_forehead_brow_outer_height_max"		type = "blendshapes/male_bs_forehead_brow_outer_height_max.mesh" data = "position" }
+		blend_shape = { id = "male_bs_forehead_brow_width_max"		type = "blendshapes/male_bs_forehead_brow_width_max.mesh" }
+		blend_shape = { id = "male_bs_forehead_brow_width_min"		type = "blendshapes/male_bs_forehead_brow_width_min.mesh" }
+
+		blend_shape = { id = "male_bs_jaw_def_min"		type = "blendshapes/male_bs_jaw_def_min.mesh" }
+		blend_shape = { id = "male_bs_jaw_def_max"		type = "blendshapes/male_bs_jaw_def_max.mesh" }
+
+		blend_shape = { id = "male_bs_mouth_lower_lip_def_max"		type = "blendshapes/male_bs_mouth_lower_lip_def_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_lower_lip_full_min"		type = "blendshapes/male_bs_mouth_lower_lip_full_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_lower_lip_full_max"		type = "blendshapes/male_bs_mouth_lower_lip_full_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_lower_lip_pad_max"		type = "blendshapes/male_bs_mouth_lower_lip_pad_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_lower_lip_pad_min"		type = "blendshapes/male_bs_mouth_lower_lip_pad_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_lower_lip_width_min"		type = "blendshapes/male_bs_mouth_lower_lip_width_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_lower_lip_width_max"		type = "blendshapes/male_bs_mouth_lower_lip_width_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_philtrum_def_max"		type = "blendshapes/male_bs_mouth_philtrum_def_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_philtrum_shape_min"		type = "blendshapes/male_bs_mouth_philtrum_shape_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_philtrum_shape_max"		type = "blendshapes/male_bs_mouth_philtrum_shape_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_philtrum_width_min"		type = "blendshapes/male_bs_mouth_philtrum_width_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_philtrum_width_max"		type = "blendshapes/male_bs_mouth_philtrum_width_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_upper_lip_def_max"		type = "blendshapes/male_bs_mouth_upper_lip_def_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_upper_lip_full_min"		type = "blendshapes/male_bs_mouth_upper_lip_full_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_upper_lip_full_max"		type = "blendshapes/male_bs_mouth_upper_lip_full_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_upper_lip_profile_min"		type = "blendshapes/male_bs_mouth_upper_lip_profile_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_upper_lip_profile_max"		type = "blendshapes/male_bs_mouth_upper_lip_profile_max.mesh" }
+		blend_shape = { id = "male_bs_mouth_upper_lip_width_min"		type = "blendshapes/male_bs_mouth_upper_lip_width_min.mesh" }
+		blend_shape = { id = "male_bs_mouth_upper_lip_width_max"		type = "blendshapes/male_bs_mouth_upper_lip_width_max.mesh" }
+
+		blend_shape = { id = "male_bs_nose_forward_min"		type = "blendshapes/male_bs_nose_forward_min.mesh" }
+		blend_shape = { id = "male_bs_nose_forward_max"		type = "blendshapes/male_bs_nose_forward_max.mesh" }
+		blend_shape = { id = "male_bs_nose_hawk_max"		type = "blendshapes/male_bs_nose_hawk_max.mesh" }
+		blend_shape = { id = "male_bs_nose_height_min"		type = "blendshapes/male_bs_nose_height_min.mesh" }
+		blend_shape = { id = "male_bs_nose_height_max"		type = "blendshapes/male_bs_nose_height_max.mesh" }
+		blend_shape = { id = "male_bs_nose_length_min"		type = "blendshapes/male_bs_nose_length_min.mesh" }
+		blend_shape = { id = "male_bs_nose_length_max"		type = "blendshapes/male_bs_nose_length_max.mesh" }
+		blend_shape = { id = "male_bs_nose_nostril_height_min"		type = "blendshapes/male_bs_nose_nostril_height_min.mesh" }
+		blend_shape = { id = "male_bs_nose_nostril_height_max"		type = "blendshapes/male_bs_nose_nostril_height_max.mesh" }
+		blend_shape = { id = "male_bs_nose_nostril_width_min"		type = "blendshapes/male_bs_nose_nostril_width_min.mesh" }
+		blend_shape = { id = "male_bs_nose_nostril_width_max"		type = "blendshapes/male_bs_nose_nostril_width_max.mesh" }
+		blend_shape = { id = "male_bs_nose_profile_min"		type = "blendshapes/male_bs_nose_profile_min.mesh" }
+		blend_shape = { id = "male_bs_nose_profile_max"		type = "blendshapes/male_bs_nose_profile_max.mesh" }
+		blend_shape = { id = "male_bs_nose_ridge_angle_max"		type = "blendshapes/male_bs_nose_ridge_angle_max.mesh" }
+		blend_shape = { id = "male_bs_nose_ridge_angle_min"		type = "blendshapes/male_bs_nose_ridge_angle_min.mesh" }
+		blend_shape = { id = "male_bs_nose_ridge_def_min"		type = "blendshapes/male_bs_nose_ridge_def_min.mesh" }
+		blend_shape = { id = "male_bs_nose_ridge_def_max"		type = "blendshapes/male_bs_nose_ridge_def_max.mesh" }
+		blend_shape = { id = "male_bs_nose_ridge_width_max"		type = "blendshapes/male_bs_nose_ridge_width_max.mesh" }
+		blend_shape = { id = "male_bs_nose_ridge_width_min"		type = "blendshapes/male_bs_nose_ridge_width_min.mesh" }
+		blend_shape = { id = "male_bs_nose_size_min"		type = "blendshapes/male_bs_nose_size_min.mesh" }
+		blend_shape = { id = "male_bs_nose_size_max"		type = "blendshapes/male_bs_nose_size_max.mesh" }		
+		blend_shape = { id = "male_bs_nose_tip_angle_min"		type = "blendshapes/male_bs_nose_tip_angle_min.mesh" }
+		blend_shape = { id = "male_bs_nose_tip_angle_max"		type = "blendshapes/male_bs_nose_tip_angle_max.mesh" }
+		blend_shape = { id = "male_bs_nose_tip_forward_max"		type = "blendshapes/male_bs_nose_tip_forward_max.mesh" }
+		blend_shape = { id = "male_bs_nose_tip_forward_min"		type = "blendshapes/male_bs_nose_tip_forward_min.mesh" }
+		blend_shape = { id = "male_bs_nose_tip_width_max"		type = "blendshapes/male_bs_nose_tip_width_max.mesh" }
+		blend_shape = { id = "male_bs_nose_tip_width_min"		type = "blendshapes/male_bs_nose_tip_width_min.mesh" }
+
+		blend_shape = { id = "male_bs_infant_1"		type = "blendshapes/male_bs_infant_head.mesh" }
+		blend_shape = { id = "male_bs_infant_1_body"		type = "blendshapes/male_bs_infant_body.mesh" }
+
+		blend_shape = { id = "male_bs_old_1"		type = "blendshapes/male_bs_old_1.mesh" }
+		blend_shape = { id = "male_bs_old_2"		type = "blendshapes/male_bs_old_2.mesh" }
+		blend_shape = { id = "male_bs_old_3"		type = "blendshapes/male_bs_old_3.mesh" }
+		blend_shape = { id = "male_bs_old_4"		type = "blendshapes/male_bs_old_4.mesh" }
+
+		blend_shape = { id = "male_bs_fat_1"			type = "blendshapes/male_bs_fat_1.mesh" }
+		blend_shape = { id = "male_bs_fat_1_head"		type = "blendshapes/male_bs_fat_1_head.mesh" }
+		blend_shape = { id = "male_bs_fat_1_body"		type = "blendshapes/male_bs_fat_1_body.mesh" }
+		blend_shape = { id = "male_bs_gaunt_1"			type = "blendshapes/male_bs_gaunt_1.mesh" }
+		blend_shape = { id = "male_bs_gaunt_1_body"		type = "blendshapes/male_bs_gaunt_1_body.mesh" }
+		blend_shape = { id = "male_bs_muscular_1"		type = "blendshapes/male_bs_muscular_1.mesh" }
+
+		blend_shape = { id = "male_bs_dwarf_1"		type = "blendshapes/male_bs_dwarf_1.mesh" }
+
+		blend_shape = { id = "male_bs_leper"		type = "blendshapes/male_bs_leper.mesh" }
+		blend_shape = { id = "male_bs_plague"		type = "blendshapes/male_bs_plague.mesh" }
+		blend_shape = { id = "male_bs_wounded_2"		type = "blendshapes/male_bs_wounded_2.mesh" }
+		blend_shape = { id = "male_bs_wounded_3"		type = "blendshapes/male_bs_wounded_3.mesh" }
+
+		#### Face detail blendshapes to go together with decals
+		blend_shape = { id = "male_bs_cheek_def_01"		type = "blendshapes/male_bs_cheek_def_01.mesh" }
+		blend_shape = { id = "male_bs_cheek_def_02"		type = "blendshapes/male_bs_cheek_def_02.mesh" }
+		blend_shape = { id = "male_bs_cheek_fat_01_max"		type = "blendshapes/male_bs_cheek_fat_01_max.mesh" }
+		blend_shape = { id = "male_bs_cheek_fat_02_max"		type = "blendshapes/male_bs_cheek_fat_02_max.mesh" }
+		blend_shape = { id = "male_bs_cheek_fat_03_max"		type = "blendshapes/male_bs_cheek_fat_03_max.mesh" }
+		blend_shape = { id = "male_bs_cheek_fat_04_max"		type = "blendshapes/male_bs_cheek_fat_04_max.mesh" }
+		blend_shape = { id = "male_bs_cheek_fat_01_min"		type = "blendshapes/male_bs_cheek_fat_01_min.mesh" }
+		blend_shape = { id = "male_bs_nasolabial_01"		type = "blendshapes/male_bs_nasolabial_01.mesh" }
+		blend_shape = { id = "male_bs_nasolabial_02"		type = "blendshapes/male_bs_nasolabial_02.mesh" }
+		blend_shape = { id = "male_bs_nasolabial_03"		type = "blendshapes/male_bs_nasolabial_03.mesh" }
+		blend_shape = { id = "male_bs_nasolabial_04"		type = "blendshapes/male_bs_nasolabial_04.mesh" }
+		blend_shape = { id = "male_bs_nose_tip_def"		type = "blendshapes/male_bs_nose_tip_def.mesh" }
+		blend_shape = { id = "male_bs_temple_def"		type = "blendshapes/male_bs_temple_def.mesh" }
+
+		blend_shape = { id = "male_bs_expression_cheek_left"		type = "blendshapes/male_bs_expression_cheek_left.mesh" }
+		blend_shape = { id = "male_bs_expression_cheek_right"		type = "blendshapes/male_bs_expression_cheek_right.mesh" }
+
+
+		#### Neutral blendshape to use with attachment blends
+		blend_shape = { id = "male_bs_neutral"		type = "blendshapes/male_bs_neutral.mesh" }
+
+		blend_shape = { id = "male_bs_no_portrait"		type = "blendshapes/male_bs_no_portrait.mesh" }
+
+		#### Blend shapes that contain only changes to vertex normals. Used in conjunction with joint animations
+		blend_shape = { id = "male_nbs_forehead_brow_height_max"	type = "blendshapes/male_nbs_forehead_brow_height_max.mesh" data = "normal|tangent" }
+	
+		#### Generic animations
+		animation = { id = "head_sex"					type = "male_head_sex.anim" }
+		animation = { id = "head_hom_sex"				type = "male_head_hom_sex.anim" }	
+		animation = { id = "head_sex_generic"					type = "male_head_sex_generic.anim" }
+		animation = { id = "head_sex_doggy"					type = "male_head_sex_doggy.anim" }
+		animation = { id = "head_sex_eat_out"					type = "male_head_sex_eat_out.anim" }
+		animation = { id = "head_sex_missionary"			type = "male_head_sex_missionary.anim" }
+		animation = { id = "head_sex_fellatio"				type = "male_head_sex_fellatio.anim" }
+		animation = { id = "head_sex_fellatio_hom"			type = "male_head_sex_fellatio_hom.anim" }
+
+		animation = { id = "head_idle_1"				type = "male_head_idle_1.anim" }
+		animation = { id = "head_idle_2"				type = "male_head_idle_2.anim" }
+		animation = { id = "head_idle_3"				type = "male_head_idle_3.anim" }
+
+		animation = { id = "head_idleInfant_1"				type = "male_head_idleInfant_1.anim" }
+		animation = { id = "head_idleInfant_2"				type = "male_head_idleInfant_2.anim" }
+		animation = { id = "head_idleInfant_3"				type = "male_head_idleInfant_3.anim" }
+
+		animation = { id = "head_prison_1"				type = "male_head_prison_1.anim" }
+		animation = { id = "emotion_sad_1"				type = "male_head_emotion_sad_1.anim" }
+		
+		animation = { id = "head_AI_honorable"				type = "male_head_AI_honorable_1.anim" }
+		animation = { id = "head_AI_honorable_1"			type = "male_head_AI_honorable_2.anim" }
+		animation = { id = "head_AI_honorableFat"			type = "male_head_AI_honorableFat_1.anim" }
+		animation = { id = "head_AI_honorableFat_1"			type = "male_head_AI_honorableFat_2.anim" }
+		animation = { id = "head_AI_honorableFatDwarf"			type = "male_head_AI_honorableFatDwarf_1.anim" }
+		animation = { id = "head_AI_honorableFatDwarf_1"		type = "male_head_AI_honorableFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_greedy"				type = "male_head_AI_greedy_1.anim" }
+		animation = { id = "head_AI_greedy_1"				type = "male_head_AI_greedy_2.anim" }
+		animation = { id = "head_AI_greedyFat"				type = "male_head_AI_greedyFat_1.anim" }
+		animation = { id = "head_AI_greedyFat_1"			type = "male_head_AI_greedyFat_2.anim" }
+		animation = { id = "head_AI_greedyFatDwarf"			type = "male_head_AI_greedyFatDwarf_1.anim" }
+		animation = { id = "head_AI_greedyFatDwarf_1"			type = "male_head_AI_greedyFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_rational"				type = "male_head_AI_rational_1.anim" }
+		animation = { id = "head_AI_rational_1"				type = "male_head_AI_rational_2.anim" }
+		animation = { id = "head_AI_rationalFat"			type = "male_head_AI_rationalFat_1.anim" }
+		animation = { id = "head_AI_rationalFat_1"			type = "male_head_AI_rationalFat_2.anim" }
+		animation = { id = "head_AI_rationalFatDwarf"			type = "male_head_AI_rationalFatDwarf_1.anim" }
+		animation = { id = "head_AI_rationalFatDwarf_1"			type = "male_head_AI_rationalFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_bold"				type = "male_head_AI_bold_1.anim" }
+		animation = { id = "head_AI_bold_1"				type = "male_head_AI_bold_2.anim" }
+		animation = { id = "head_AI_boldFat"				type = "male_head_AI_boldFat_1.anim" }
+		animation = { id = "head_AI_boldFat_1"				type = "male_head_AI_boldFat_2.anim" }
+		animation = { id = "head_AI_boldFatDwarf"			type = "male_head_AI_boldFatDwarf_1.anim" }
+		animation = { id = "head_AI_boldFatDwarf_1"			type = "male_head_AI_boldFatDwarf_2.anim" }
+		animation = { id = "head_AI_boldFatDwarf_2"			type = "male_head_AI_boldFatDwarf_3.anim" }
+
+		animation = { id = "head_AI_zealous"				type = "male_head_AI_zealous_1.anim" }
+		animation = { id = "head_AI_zealous_1"				type = "male_head_AI_zealous_2.anim" }
+		animation = { id = "head_AI_zealousFat"				type = "male_head_AI_zealousFat_1.anim" }
+		animation = { id = "head_AI_zealousFat_1"			type = "male_head_AI_zealousFat_2.anim" }
+		animation = { id = "head_AI_zealousFatDwarf"			type = "male_head_AI_zealousFatDwarf_1.anim" }
+		animation = { id = "head_AI_zealousFatDwarf_1"			type = "male_head_AI_zealousFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_vengeful"				type = "male_head_AI_vengeful_1.anim" }
+		animation = { id = "head_AI_vengeful_1"				type = "male_head_AI_vengeful_2.anim" }
+		animation = { id = "head_AI_vengefulFat"			type = "male_head_AI_vengefulFat_1.anim" }
+		animation = { id = "head_AI_vengefulFat_1"			type = "male_head_AI_vengefulFat_2.anim" }
+		animation = { id = "head_AI_vengefulFatDwarf"			type = "male_head_AI_vengefulFatDwarf_1.anim" }
+		animation = { id = "head_AI_vengefulFatDwarf_1"			type = "male_head_AI_vengefulFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_dishonorable"			type = "male_head_AI_dishonorable_1.anim" }
+		animation = { id = "head_AI_dishonorable_1"			type = "male_head_AI_dishonorable_2.anim" }
+		animation = { id = "head_AI_dishonorable_2"			type = "male_head_AI_dishonorable_3.anim" }
+		animation = { id = "head_AI_dishonorableFat"			type = "male_head_AI_dishonorableFat_1.anim" }
+		animation = { id = "head_AI_dishonorableFat_1"			type = "male_head_AI_dishonorableFat_2.anim" }
+		animation = { id = "head_AI_dishonorableFat_2"			type = "male_head_AI_dishonorableFat_3.anim" }
+		animation = { id = "head_AI_dishonorableFatDwarf"		type = "male_head_AI_dishonorableFatDwarf_1.anim" }
+		animation = { id = "head_AI_dishonorableFatDwarf_1"		type = "male_head_AI_dishonorableFatDwarf_2.anim" }
+		animation = { id = "head_AI_dishonorableFatDwarf_2"		type = "male_head_AI_dishonorableFatDwarf_3.anim" }
+
+		animation = { id = "head_AI_content"				type = "male_head_AI_content_1.anim" }
+		animation = { id = "head_AI_content_1"				type = "male_head_AI_content_2.anim" }
+		animation = { id = "head_AI_contentFat"				type = "male_head_AI_contentFat_1.anim" }
+		animation = { id = "head_AI_contentFat_1"			type = "male_head_AI_contentFat_2.anim" }
+		animation = { id = "head_AI_contentFatDwarf"			type = "male_head_AI_contentFatDwarf_1.anim" }
+		animation = { id = "head_AI_contentFatDwarf_1"			type = "male_head_AI_contentFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_irrational"				type = "male_head_AI_irrational_1.anim" }
+		animation = { id = "head_AI_irrational_1"			type = "male_head_AI_irrational_2.anim" }
+		animation = { id = "head_AI_irrationalFat"			type = "male_head_AI_irrationalFat_1.anim" }
+		animation = { id = "head_AI_irrationalFat_1"			type = "male_head_AI_irrationalFat_2.anim" }
+		animation = { id = "head_AI_irrationalFatDwarf"			type = "male_head_AI_irrationalFatDwarf_1.anim" }
+		animation = { id = "head_AI_irrationalFatDwarf_1"		type = "male_head_AI_irrationalFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_coward"				type = "male_head_AI_coward_1.anim" }
+		animation = { id = "head_AI_coward_1"				type = "male_head_AI_coward_2.anim" }
+		animation = { id = "head_AI_cowardFatDwarf"			type = "male_head_AI_cowardFatDwarf_1.anim" }
+		animation = { id = "head_AI_cowardFatDwarf_1"			type = "male_head_AI_cowardFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_cynical"				type = "male_head_AI_cynical_1.anim" }
+		animation = { id = "head_AI_cynical_1"				type = "male_head_AI_cynical_2.anim" }
+		animation = { id = "head_AI_cynicalFat"				type = "male_head_AI_cynicalFat_1.anim" }
+		animation = { id = "head_AI_cynicalFat_1"			type = "male_head_AI_cynicalFat_2.anim" }
+		animation = { id = "head_AI_cynicalFatDwarf"			type = "male_head_AI_cynicalFatDwarf_1.anim" }
+		animation = { id = "head_AI_cynicalFatDwarf_1"			type = "male_head_AI_cynicalFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_forgiving"				type = "male_head_AI_forgiving_1.anim" }
+		animation = { id = "head_AI_forgiving_1"			type = "male_head_AI_forgiving_2.anim" }
+		animation = { id = "head_AI_forgivingFat"			type = "male_head_AI_forgivingFat_1.anim" }
+		animation = { id = "head_AI_forgivingFat_1"			type = "male_head_AI_forgivingFat_2.anim" }
+		animation = { id = "head_AI_forgivingFatDwarf"			type = "male_head_AI_forgivingFatDwarf_1.anim" }
+		animation = { id = "head_AI_forgivingFatDwarf_1"		type = "male_head_AI_forgivingFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_callous"				type = "male_head_AI_callous_1.anim" }
+		animation = { id = "head_AI_callous_1"				type = "male_head_AI_callous_2.anim" }
+		animation = { id = "head_AI_callousFat"				type = "male_head_AI_callousFat_1.anim" }
+		animation = { id = "head_AI_callousFat_1"			type = "male_head_AI_callousFat_2.anim" }
+		animation = { id = "head_AI_callousFatDwarf"			type = "male_head_AI_callousFatDwarf_1.anim" }
+		animation = { id = "head_AI_callousFatDwarf_1"			type = "male_head_AI_callousFatDwarf_2.anim" }
+
+		animation = { id = "head_AI_compassionate"			type = "male_head_AI_compassionate_1.anim" }
+		animation = { id = "head_AI_compassionate_1"			type = "male_head_AI_compassionate_2.anim" }
+		animation = { id = "head_AI_compassionateFat"			type = "male_head_AI_compassionateFat_1.anim" }
+		animation = { id = "head_AI_compassionateFat_1"			type = "male_head_AI_compassionateFat_2.anim" }
+		animation = { id = "head_AI_compassionateFatDwarf"		type = "male_head_AI_compassionateFatDwarf_1.anim" }
+		animation = { id = "head_AI_compassionateFatDwarf_1"		type = "male_head_AI_compassionateFatDwarf_2.anim" }
+
+		animation = { id = "head_council_spymaster"			type = "male_head_council_spymaster.anim" }
+		animation = { id = "head_council_spymasterFatDwarf"		type = "male_head_council_spymasterFatDwarf.anim" }
+
+		animation = { id = "head_council_marshal"			type = "male_head_council_marshal.anim" }
+		animation = { id = "head_council_marshalFat"			type = "male_head_council_marshalFat.anim" }
+		animation = { id = "head_council_marshalFatDwarf"		type = "male_head_council_marshalFatDwarf.anim" }
+
+		animation = { id = "head_council_steward"			type = "male_head_council_steward.anim" }
+		animation = { id = "head_council_steward_2"			type = "male_head_council_steward_2.anim" }
+		animation = { id = "head_council_stewardFatDwarf"		type = "male_head_council_stewardFatDwarf.anim" }
+
+		animation = { id = "head_council_chancellor"			type = "male_head_council_chancellor.anim" }
+		animation = { id = "head_council_chancellorFat"			type = "male_head_council_chancellorFat.anim" }
+		animation = { id = "head_council_chancellorFatDwarf"		type = "male_head_council_chancellorFatDwarf.anim" }
+
+		animation = { id = "head_council_chaplain"			type = "male_head_council_chaplain.anim" }
+		animation = { id = "head_council_chaplain_2"			type = "male_head_council_chaplain_2.anim" }
+		animation = { id = "head_council_chaplainFat"			type = "male_head_council_chaplainFat.anim" }
+		animation = { id = "head_council_chaplainFatDwarf"		type = "male_head_council_chaplainFatDwarf.anim" }
+
+		animation = { id = "head_emotion_angry"				type = "male_head_emotion_angry.anim" }
+		animation = { id = "head_emotion_angryFatDwarf"			type = "male_head_emotion_angryFatDwarf.anim" }
+
+		animation = { id = "head_emotion_sadness"			type = "male_head_emotion_sadness.anim" }
+		animation = { id = "head_emotion_sadnessFat"			type = "male_head_emotion_sadnessFat.anim" }	
+		animation = { id = "head_emotion_sadnessFatDwarf"		type = "male_head_emotion_sadnessFatDwarf.anim" }
+		
+		animation = { id = "head_emotion_disapproving"			type = "male_head_emotion_disapproving.anim" }
+		animation = { id = "head_emotion_disapprovingFat"		type = "male_head_emotion_disapprovingFat.anim" }
+		animation = { id = "head_emotion_disapprovingFatDwarf"		type = "male_head_emotion_disapprovingFatDwarf.anim" }
+
+		animation = { id = "head_emotion_happy"				type = "male_head_emotion_happy.anim" }
+		animation = { id = "head_emotion_happyFat"			type = "male_head_emotion_happyFat.anim" }
+		animation = { id = "head_emotion_happyFatDwarf"			type = "male_head_emotion_happyFatDwarf.anim" }
+
+		animation = { id = "head_emotion_disgust"			type = "male_head_emotion_disgust.anim" }
+		animation = { id = "head_emotion_disgustFat"			type = "male_head_emotion_disgustFat.anim" }
+
+		animation = { id = "head_emotion_worry"				type = "male_head_emotion_worry.anim" }
+		animation = { id = "head_emotion_worryFat"			type = "male_head_emotion_worryFat.anim" }
+		animation = { id = "head_emotion_worryFatDwarf"			type = "male_head_emotion_worryFatDwarf.anim" }
+
+		animation = { id = "head_emotion_fear"				type = "male_head_emotion_fear.anim" }
+		animation = { id = "head_emotion_fearFat"			type = "male_head_emotion_fearFat.anim" }
+		animation = { id = "head_emotion_fearFatDwarf"			type = "male_head_emotion_fearFatDwarf.anim" }
+
+		animation = { id = "head_emotion_disbelief"			type = "male_head_emotion_disbelief.anim" }
+		animation = { id = "head_emotion_disbeliefFat"			type = "male_head_emotion_disbeliefFat.anim" }
+		animation = { id = "head_emotion_disbeliefFatDwarf"		type = "male_head_emotion_disbeliefFatDwarf.anim" }
+
+		animation = { id = "head_emotion_shock"				type = "male_head_emotion_shock.anim" }
+
+		animation = { id = "head_emotion_shame"				type = "male_head_emotion_shame.anim" }
+		animation = { id = "head_emotion_shameFat"			type = "male_head_emotion_shameFat.anim" }
+		animation = { id = "head_emotion_shameFatDwarf"			type = "male_head_emotion_shameFatDwarf.anim" }
+
+		animation = { id = "head_emotion_stressed"			type = "male_head_emotion_stressed.anim" }
+		animation = { id = "head_emotion_stressedFat"			type = "male_head_emotion_stressedFat.anim" }
+		animation = { id = "head_emotion_stressedFatDwarf"		type = "male_head_emotion_stressedFatDwarf.anim" }
+
+		animation = { id = "head_emotion_dismissive"			type = "male_head_emotion_dismissive.anim" }
+		animation = { id = "head_emotion_dismissiveFat"			type = "male_head_emotion_dismissiveFat.anim" }
+
+		animation = { id = "head_emotion_schadenfreude"			type = "male_head_emotion_schadenfreude.anim" }
+		animation = { id = "head_emotion_schadenfreudeFat"		type = "male_head_emotion_schadenfreudeFat.anim" }
+		animation = { id = "head_emotion_schadenfreudeFatDwarf"		type = "male_head_emotion_schadenfreudeFatDwarf.anim" }
+
+		animation = { id = "head_emotion_flirty"			type = "male_head_emotion_flirty.anim" }
+
+		animation = { id = "head_emotion_flirtyLeft"			type = "male_head_emotion_flirtyLeft.anim" }
+
+		animation = { id = "head_emotion_boredom"			type = "male_head_emotion_boredom.anim" }
+		animation = { id = "head_emotion_boredomFatDwarf"		type = "male_head_emotion_boredomFatDwarf.anim" }
+
+		animation = { id = "head_emotion_admiration"			type = "male_head_emotion_admiration.anim" }
+		animation = { id = "head_emotion_admirationFat"			type = "male_head_emotion_admirationFat.anim" }
+		animation = { id = "head_emotion_admirationFatDwarf"		type = "male_head_emotion_admirationFat.anim" }
+
+		animation = { id = "head_emotion_scheme"			type = "male_head_emotion_scheme.anim" }
+		animation = { id = "head_emotion_schemeFat"			type = "male_head_emotion_schemeFat.anim" }
+		animation = { id = "head_emotion_schemeFatDwarf"		type = "male_head_emotion_schemeFatDwarf.anim" }
+
+		animation = { id = "head_emotion_sick"				type = "male_head_emotion_sick.anim" }
+		animation = { id = "head_emotion_sickFatDwarf"			type = "male_head_emotion_sickFatDwarf.anim" }
+
+		animation = { id = "head_emotion_beg"				type = "male_head_emotion_beg.anim" }
+
+		animation = { id = "head_emotion_grief"				type = "male_head_emotion_grief.anim" }
+		animation = { id = "head_emotion_griefFat"			type = "male_head_emotion_griefFat.anim" }
+		animation = { id = "head_emotion_griefFatDwarf"			type = "male_head_emotion_griefFatDwarf.anim" }
+
+		animation = { id = "head_emotion_paranoia"			type = "male_head_emotion_paranoia.anim" }
+		animation = { id = "head_emotion_paranoiaFat"			type = "male_head_emotion_paranoiaFat.anim" }
+		animation = { id = "head_emotion_paranoiaFatDwarf"		type = "male_head_emotion_paranoiaFatDwarf.anim" }
+
+		animation = { id = "head_emotion_pain"				type = "male_head_emotion_pain.anim" }
+		animation = { id = "head_emotion_painFat"			type = "male_head_emotion_painFat.anim" }
+		animation = { id = "head_emotion_painFatDwarf"			type = "male_head_emotion_painFatDwarf.anim" }
+
+		animation = { id = "head_emotion_poison"			type = "male_head_emotion_poisoned.anim" }
+		animation = { id = "head_emotion_poisonFatDwarf"		type = "male_head_emotion_poisonedFatDwarf.anim" }
+
+		animation = { id = "head_waroverview_attacker"			type = "male_head_waroverview_attacker.anim" }
+		animation = { id = "head_waroverview_attackerFatDwarf"		type = "male_head_waroverview_attackerFatDwarf.anim" }
+
+		animation = { id = "head_waroverview_defender"			type = "male_head_waroverview_defender.anim" }
+		animation = { id = "head_waroverview_defenderFat"		type = "male_head_waroverview_defenderFat.anim" }
+		animation = { id = "head_waroverview_defenderFatDwarf"		type = "male_head_waroverview_defenderFatDwarf.anim" }
+
+		animation = { id = "head_event_newborn"				type = "male_head_event_newborn.anim" }
+		animation = { id = "head_event_newbornFat"			type = "male_head_event_newbornFat.anim" }
+		animation = { id = "head_event_newbornFatDwarf"			type = "male_head_event_newbornFatDwarf.anim" }
+
+		animation = { id = "head_misc_arrest"				type = "male_head_misc_arrest.anim" }
+		animation = { id = "head_misc_arrestFatDwarf"			type = "male_head_misc_arrestFatDwarf.anim" }
+
+		animation = { id = "head_misc_dungeon"				type = "male_head_misc_dungeon.anim" }
+
+		animation = { id = "head_misc_wounded2_1"			type = "male_head_misc_wounded2_1.anim" }
+		animation = { id = "head_misc_wounded2_2"			type = "male_head_misc_wounded2_2.anim" }
+		animation = { id = "head_misc_wounded2FatDwarf_1"		type = "male_head_misc_woundedFatDwarf2_1.anim" }
+		animation = { id = "head_misc_wounded2FatDwarf_2"		type = "male_head_misc_woundedFatDwarf2_2.anim" }
+
+		animation = { id = "head_misc_pregnant_1"			type = "male_head_idle_1.anim" }
+		animation = { id = "head_misc_pregnant_2"			type = "male_head_idle_1.anim" }
+
+		animation = { id = "head_frontEnd_middle"			type = "male_head_frontEnd_middle.anim" }
+		animation = { id = "head_frontEnd_middleFat"			type = "male_head_frontEnd_middleFat.anim" }
+		animation = { id = "head_frontEnd_middleFatDwarf"		type = "male_head_frontEnd_middleFatDwarf.anim" }
+
+		animation = { id = "head_frontEnd_left"				type = "male_head_frontEnd_left.anim" }
+		animation = { id = "head_frontEnd_leftFat"			type = "male_head_frontEnd_leftFat.anim" }
+		animation = { id = "head_frontEnd_leftFatDwarf"			type = "male_head_frontEnd_leftFatDwarf.anim" }
+
+		animation = { id = "head_frontEnd_right"			type = "male_head_frontEnd_right.anim" }
+		animation = { id = "head_frontEnd_rightFat"			type = "male_head_frontEnd_rightFat.anim" }
+		animation = { id = "head_frontEnd_rightFatDwarf"		type = "male_head_frontEnd_rightFatDwarf.anim" }
+
+		animation = { id = "head_frontEnd_child"			type = "male_head_frontEnd_child.anim" }
+
+		animation = { id = "head_frontEnd_infant"			type = "male_head_frontEnd_infant_1.anim" }
+		animation = { id = "head_frontEnd_infant2"			type = "male_head_frontEnd_infant2_1.anim" }
+		
+	}
+
+entity = {
+	name = "head_basic_entity_male"
+	pdxmesh = "male_head_mesh"
+    game_data = {
+        portrait_decal = {
+            body_part = head
+        }
+    }		
+
+	attribute = { name = "chin_forward"					additive_animation = "chin_forward" default = 0.5 }			
+	attribute = { name = "chin_height"					additive_animation = "chin_height" default = 0.5 }	
+	attribute = { name = "chin_width"					additive_animation = "chin_width" default = 0.5 }				
+
+	attribute = { name = "eye_angle"				additive_animation = "eye_angle" default = 0.5 }
+	attribute = { name = "eye_depth"				additive_animation = "eye_depth" default = 0.5 }			
+	attribute = { name = "eye_height"				additive_animation = "eye_height" default = 0.5 }			
+	attribute = { name = "eye_distance"					additive_animation = "eye_distance" default = 0.5 }			
+	attribute = { name = "eye_shut"					additive_animation = "eye_shut" default = 0.5 }			
+
+	attribute = { name = "forehead_angle"					additive_animation = "forehead_angle" default = 0.5 }			
+	attribute = { name = "forehead_brow_height"					additive_animation = "forehead_brow_height" default = 0.5 }			
+	attribute = { name = "forehead_roundness"					additive_animation = "forehead_roundness" default = 0.5 }	
+	attribute = { name = "forehead_width"					additive_animation = "forehead_width" default = 0.5 }		
+	attribute = { name = "forehead_height"					additive_animation = "forehead_height" default = 0.5 }	
+
+	attribute = { name = "head_height"					additive_animation = "head_height" default = 0.5 }			
+	attribute = { name = "head_width"					additive_animation = "head_width" default = 0.5 }	
+	attribute = { name = "head_profile"					additive_animation = "head_profile" default = 0.5 }	
+	attribute = { name = "head_top_height"					additive_animation = "head_top_height" default = 0.5 }		
+	attribute = { name = "head_top_width"					additive_animation = "head_top_width" default = 0.5 }	
+
+	attribute = { name = "jaw_angle"					additive_animation = "jaw_angle" default = 0.5 }		
+	attribute = { name = "jaw_forward"					additive_animation = "jaw_forward" default = 0.5 }			
+	attribute = { name = "jaw_height"					additive_animation = "jaw_height" default = 0.5 }			
+	attribute = { name = "jaw_width"					additive_animation = "jaw_width" default = 0.5 }
+
+	attribute = { name = "mouth_corner_depth"					additive_animation = "mouth_corner_depth" default = 0.5 }			
+	attribute = { name = "mouth_corner_height"				additive_animation = "mouth_corner_height" default = 0.5 }	
+	attribute = { name = "mouth_forward"					additive_animation = "mouth_forward" default = 0.5 }		
+	attribute = { name = "mouth_height"					additive_animation = "mouth_height" default = 0.5 }		
+	attribute = { name = "mouth_width"					additive_animation = "mouth_width" default = 0.5 }		
+	attribute = { name = "mouth_lower_lip_size"					additive_animation = "mouth_lower_lip_size" default = 0.5 }						
+	attribute = { name = "mouth_upper_lip_size"				additive_animation = "mouth_upper_lip_size" default = 0.5 }		
+	attribute = { name = "mouth_open"					additive_animation = "mouth_open" default = 0.5 }	
+
+	attribute = { name = "neck_length"					additive_animation = "neck_length" default = 0.5 }	
+	attribute = { name = "neck_width"					additive_animation = "neck_width" default = 0.5 }					
+
+	attribute = { name = "head_body_height"					additive_animation = "head_body_height" default = 0.5 }
+	attribute = { name = "head_infant_proportions"					additive_animation = "head_infant_proportions" }
+	attribute = { name = "head_hunchbacked"					additive_animation = "head_hunchbacked" }
+	attribute = { name = "head_sex_fellatio_large"					additive_animation = "head_sex_fellatio_large" }
+
+	#### BLEND SHAPES ####
+
+	attribute = { name = "bs_gaunt_2_body"					blend_shape = "male_bs_gaunt_2_body" }
+	attribute = { name = "bs_cap"						blend_shape = "male_bs_neutral" }
+	attribute = { name = "bs_crown"						blend_shape = "male_bs_neutral" }
+	attribute = { name = "bs_cap_02"					blend_shape = "male_bs_neutral" }
+	attribute = { name = "bs_helmet"					blend_shape = "male_bs_neutral" }
+
+	attribute = { name = "bs_cheek_fat_min"					blend_shape = "male_bs_cheek_fat_min" }
+	attribute = { name = "bs_cheek_fat_max"					blend_shape = "male_bs_cheek_fat_max" }
+	attribute = { name = "bs_cheek_forward_min"					blend_shape = "male_bs_cheek_forward_min" }
+	attribute = { name = "bs_cheek_forward_max"					blend_shape = "male_bs_cheek_forward_max" }
+	attribute = { name = "bs_cheek_height_min"					blend_shape = "male_bs_cheek_height_min" }
+	attribute = { name = "bs_cheek_height_max"					blend_shape = "male_bs_cheek_height_max" }
+	attribute = { name = "bs_cheek_prominence_max"					blend_shape = "male_bs_cheek_prominence_max" }
+	attribute = { name = "bs_cheek_width_min"					blend_shape = "male_bs_cheek_width_min" }
+	attribute = { name = "bs_cheek_width_max"					blend_shape = "male_bs_cheek_width_max" }
+
+	attribute = { name = "bs_ear_angle_min"					blend_shape = "male_bs_ear_angle_min" }
+	attribute = { name = "bs_ear_angle_max"					blend_shape = "male_bs_ear_angle_max" }
+	attribute = { name = "bs_ear_inner_shape_max"					blend_shape = "male_bs_ear_inner_shape_max" }
+	attribute = { name = "bs_ear_lower_bend_max"					blend_shape = "male_bs_ear_lower_bend_max" }
+	attribute = { name = "bs_ear_outward_min"					blend_shape = "male_bs_ear_outward_min" }
+	attribute = { name = "bs_ear_outward_max"					blend_shape = "male_bs_ear_outward_max" }
+	attribute = { name = "bs_ear_size_min"					blend_shape = "male_bs_ear_size_min" }
+	attribute = { name = "bs_ear_size_max"					blend_shape = "male_bs_ear_size_max" }
+	attribute = { name = "bs_ear_upper_bend_max"					blend_shape = "male_bs_ear_upper_bend_max" }
+
+	attribute = { name = "bs_eye_corner_depth_min"				blend_shape = "male_bs_eye_corner_depth_min" }
+	attribute = { name = "bs_eye_corner_depth_max"				blend_shape = "male_bs_eye_corner_depth_max" }
+	attribute = { name = "bs_eye_corner_height_min"				blend_shape = "male_bs_eye_corner_height_min" }
+	attribute = { name = "bs_eye_corner_height_max"				blend_shape = "male_bs_eye_corner_height_max" }
+	attribute = { name = "bs_eye_fold_shape_min"				blend_shape = "male_bs_eye_fold_shape_min" }
+	attribute = { name = "bs_eye_fold_shape_max"				blend_shape = "male_bs_eye_fold_shape_max" }
+	attribute = { name = "bs_eye_size_min"					blend_shape = "male_bs_eye_size_min" }
+	attribute = { name = "bs_eye_size_max"					blend_shape = "male_bs_eye_size_max" }
+	attribute = { name = "bs_eye_upper_lid_droop_min"					blend_shape = "male_bs_eye_upper_lid_droop_min" }
+	attribute = { name = "bs_eye_upper_lid_droop_max"					blend_shape = "male_bs_eye_upper_lid_droop_max" }
+	attribute = { name = "bs_eye_upper_lid_size_min"					blend_shape = "male_bs_eye_upper_lid_size_min" }
+	attribute = { name = "bs_eye_upper_lid_size_max"					blend_shape = "male_bs_eye_upper_lid_size_max" }
+
+	attribute = { name = "bs_forehead_brow_curve_min"					blend_shape = "male_bs_forehead_brow_curve_min" }
+	attribute = { name = "bs_forehead_brow_curve_max"					blend_shape = "male_bs_forehead_brow_curve_max" }
+	attribute = { name = "bs_forehead_brow_forward_min"					blend_shape = "male_bs_forehead_brow_forward_min" }
+	attribute = { name = "bs_forehead_brow_forward_max"					blend_shape = "male_bs_forehead_brow_forward_max" }
+	attribute = { name = "bs_forehead_brow_inner_height_min"					blend_shape = "male_bs_forehead_brow_inner_height_min" }
+	attribute = { name = "bs_forehead_brow_inner_height_max"					blend_shape = "male_bs_forehead_brow_inner_height_max" }
+	attribute = { name = "bs_forehead_brow_outer_height_min"					blend_shape = "male_bs_forehead_brow_outer_height_min" }
+	attribute = { name = "bs_forehead_brow_outer_height_max"					blend_shape = "male_bs_forehead_brow_outer_height_max" }
+	attribute = { name = "bs_forehead_brow_width_min"					blend_shape = "male_bs_forehead_brow_width_min" }
+	attribute = { name = "bs_forehead_brow_width_max"					blend_shape = "male_bs_forehead_brow_width_max" }
+
+	attribute = { name = "bs_jaw_def_min"					blend_shape = "male_bs_jaw_def_min" }
+	attribute = { name = "bs_jaw_def_max"					blend_shape = "male_bs_jaw_def_max" }
+
+	attribute = { name = "bs_mouth_lower_lip_def_max"					blend_shape = "male_bs_mouth_lower_lip_def_max" }
+	attribute = { name = "bs_mouth_lower_lip_full_min"					blend_shape = "male_bs_mouth_lower_lip_full_min" }
+	attribute = { name = "bs_mouth_lower_lip_full_max"					blend_shape = "male_bs_mouth_lower_lip_full_max" }
+	attribute = { name = "bs_mouth_lower_lip_pad_max"					blend_shape = "male_bs_mouth_lower_lip_pad_max" }
+	attribute = { name = "bs_mouth_lower_lip_pad_min"					blend_shape = "male_bs_mouth_lower_lip_pad_min" }
+	attribute = { name = "bs_mouth_lower_lip_width_min"					blend_shape = "male_bs_mouth_lower_lip_width_min" }
+	attribute = { name = "bs_mouth_lower_lip_width_max"					blend_shape = "male_bs_mouth_lower_lip_width_max" }
+	attribute = { name = "bs_mouth_philtrum_def_max"					blend_shape = "male_bs_mouth_philtrum_def_max" }
+	attribute = { name = "bs_mouth_philtrum_shape_min"					blend_shape = "male_bs_mouth_philtrum_shape_min" }
+	attribute = { name = "bs_mouth_philtrum_shape_max"					blend_shape = "male_bs_mouth_philtrum_shape_max" }
+	attribute = { name = "bs_mouth_philtrum_width_min"					blend_shape = "male_bs_mouth_philtrum_width_min" }
+	attribute = { name = "bs_mouth_philtrum_width_max"					blend_shape = "male_bs_mouth_philtrum_width_max" }
+	attribute = { name = "bs_mouth_upper_lip_def_max"					blend_shape = "male_bs_mouth_upper_lip_def_max" }
+	attribute = { name = "bs_mouth_upper_lip_full_min"					blend_shape = "male_bs_mouth_upper_lip_full_min" }
+	attribute = { name = "bs_mouth_upper_lip_full_max"					blend_shape = "male_bs_mouth_upper_lip_full_max" }
+	attribute = { name = "bs_mouth_upper_lip_profile_min"					blend_shape = "male_bs_mouth_upper_lip_profile_min" }
+	attribute = { name = "bs_mouth_upper_lip_profile_max"					blend_shape = "male_bs_mouth_upper_lip_profile_max" }
+	attribute = { name = "bs_mouth_upper_lip_width_min"					blend_shape = "male_bs_mouth_upper_lip_width_min" }
+	attribute = { name = "bs_mouth_upper_lip_width_max"					blend_shape = "male_bs_mouth_upper_lip_width_max" }
+
+	attribute = { name = "bs_nose_forward_min"					blend_shape = "male_bs_nose_forward_min" }
+	attribute = { name = "bs_nose_forward_max"					blend_shape = "male_bs_nose_forward_max" }	
+	attribute = { name = "bs_nose_hawk_max"						blend_shape = "male_bs_nose_hawk_max" }
+	attribute = { name = "bs_nose_height_min"					blend_shape = "male_bs_nose_height_min" }
+	attribute = { name = "bs_nose_height_max"					blend_shape = "male_bs_nose_height_max" }	
+	attribute = { name = "bs_nose_length_min"					blend_shape = "male_bs_nose_length_min" }
+	attribute = { name = "bs_nose_length_max"					blend_shape = "male_bs_nose_length_max" }	
+	attribute = { name = "bs_nose_nostril_height_min"					blend_shape = "male_bs_nose_nostril_height_min" }
+	attribute = { name = "bs_nose_nostril_height_max"					blend_shape = "male_bs_nose_nostril_height_max" }
+	attribute = { name = "bs_nose_nostril_width_min"					blend_shape = "male_bs_nose_nostril_width_min" }
+	attribute = { name = "bs_nose_nostril_width_max"					blend_shape = "male_bs_nose_nostril_width_max" }
+	attribute = { name = "bs_nose_profile_min"					blend_shape = "male_bs_nose_profile_min" }
+	attribute = { name = "bs_nose_profile_max"					blend_shape = "male_bs_nose_profile_max" }
+	attribute = { name = "bs_nose_ridge_angle_max"					blend_shape = "male_bs_nose_ridge_angle_max" }
+	attribute = { name = "bs_nose_ridge_angle_min"					blend_shape = "male_bs_nose_ridge_angle_min" }
+	attribute = { name = "bs_nose_ridge_def_min"					blend_shape = "male_bs_nose_ridge_def_min" }
+	attribute = { name = "bs_nose_ridge_def_max"					blend_shape = "male_bs_nose_ridge_def_max" }
+	attribute = { name = "bs_nose_ridge_width_max"					blend_shape = "male_bs_nose_ridge_width_max" }
+	attribute = { name = "bs_nose_ridge_width_min"					blend_shape = "male_bs_nose_ridge_width_min" }
+	attribute = { name = "bs_nose_size_min"					blend_shape = "male_bs_nose_size_min" }
+	attribute = { name = "bs_nose_size_max"					blend_shape = "male_bs_nose_size_max" }
+	attribute = { name = "bs_nose_tip_angle_min"					blend_shape = "male_bs_nose_tip_angle_min" }
+	attribute = { name = "bs_nose_tip_angle_max"					blend_shape = "male_bs_nose_tip_angle_max" }
+	attribute = { name = "bs_nose_tip_forward_max"					blend_shape = "male_bs_nose_tip_forward_max" }
+	attribute = { name = "bs_nose_tip_forward_min"					blend_shape = "male_bs_nose_tip_forward_min" }
+	attribute = { name = "bs_nose_tip_width_max"					blend_shape = "male_bs_nose_tip_width_max" }
+	attribute = { name = "bs_nose_tip_width_min"					blend_shape = "male_bs_nose_tip_width_min" }
+
+	attribute = { name = "bs_infant_1"					blend_shape = "male_bs_infant_1" }
+	attribute = { name = "bs_infant_1_body"					blend_shape = "male_bs_infant_1_body" }
+
+	attribute = { name = "bs_old" 					blend_shape = "male_bs_neutral" } # Attribute used for beards blend shapes to avoid having a variant for each aging variation
+
+	attribute = { name = "bs_old_1"					blend_shape = "male_bs_old_1" }
+	attribute = { name = "bs_old_2"					blend_shape = "male_bs_old_2" }
+	attribute = { name = "bs_old_3"					blend_shape = "male_bs_old_3" }
+	attribute = { name = "bs_old_4"					blend_shape = "male_bs_old_4" }
+
+	attribute = { name = "bs_fat_1"						blend_shape = "male_bs_fat_1" }
+	attribute = { name = "bs_fat_1_head"					blend_shape = "male_bs_fat_1_head" }
+	attribute = { name = "bs_fat_1_body"					blend_shape = "male_bs_fat_1_body" }
+	attribute = { name = "bs_gaunt_1"					blend_shape = "male_bs_gaunt_1" }
+	attribute = { name = "bs_gaunt_1_body"					blend_shape = "male_bs_gaunt_1_body" }
+	attribute = { name = "bs_muscular_1"					blend_shape = "male_bs_muscular_1" }
+
+	attribute = { name = "bs_dwarf_1"					blend_shape = "male_bs_dwarf_1" }
+
+	attribute = { name = "bs_leper"					blend_shape = "male_bs_leper" }
+	attribute = { name = "bs_plague"					blend_shape = "male_bs_plague" }
+	attribute = { name = "bs_wounded_2"					blend_shape = "male_bs_wounded_2" }
+	attribute = { name = "bs_wounded_3"					blend_shape = "male_bs_wounded_3" }
+
+	#### Face detail blendshapes to go together with decals
+	attribute = { name = "bs_cheek_def_01"					blend_shape = "male_bs_cheek_def_01" }
+	attribute = { name = "bs_cheek_def_02"					blend_shape = "male_bs_cheek_def_02" }
+	attribute = { name = "bs_cheek_fat_01_max"					blend_shape = "male_bs_cheek_fat_01_max" }
+	attribute = { name = "bs_cheek_fat_02_max"					blend_shape = "male_bs_cheek_fat_02_max" }
+	attribute = { name = "bs_cheek_fat_03_max"					blend_shape = "male_bs_cheek_fat_03_max" }
+	attribute = { name = "bs_cheek_fat_04_max"					blend_shape = "male_bs_cheek_fat_04_max" }
+	attribute = { name = "bs_cheek_fat_01_min"					blend_shape = "male_bs_cheek_fat_01_min" }
+	attribute = { name = "bs_nasolabial_01"					blend_shape = "male_bs_nasolabial_01" }
+	attribute = { name = "bs_nasolabial_02"					blend_shape = "male_bs_nasolabial_02" }
+	attribute = { name = "bs_nasolabial_03"					blend_shape = "male_bs_nasolabial_03" }
+	attribute = { name = "bs_nasolabial_04"					blend_shape = "male_bs_nasolabial_04" }
+	attribute = { name = "bs_nose_tip_def"					blend_shape = "male_bs_nose_tip_def" }
+	attribute = { name = "bs_temple_def"					blend_shape = "male_bs_temple_def" }
+
+	attribute = { name = "bs_expression_cheek_left"					blend_shape = "male_bs_expression_cheek_left" }
+	attribute = { name = "bs_expression_cheek_right"					blend_shape = "male_bs_expression_cheek_right" }
+
+	attribute = { name = "bs_no_portrait"					blend_shape = "male_bs_no_portrait" }
+
+	#### Blend shapes that contain only changes to vertex normals. Used in conjunction with joint animations
+	attribute = { name = "nbs_forehead_brow_height_max"		blend_shape = "male_nbs_forehead_brow_height_max" }
+
+	#### Blend shapes used on other body parts than the face, therefore using the neutral face blend
+	attribute = { name = "teeth_bs_lower_down"		blend_shape = "male_bs_neutral" }
+	attribute = { name = "teeth_bs_lower_up"		blend_shape = "male_bs_neutral" }
+
+	#### Animations
+
+	default_state = "none"
+
+	state = {	name = "sex"							animation = "head_sex" next_state = "sex" }
+	state = {	name = "hom_sex"						animation = "head_hom_sex" next_state = "hom_sex" }
+	state = {	name = "sex_generic"						animation = "head_sex_generic" next_state = "sex_generic" }
+	state = {	name = "sex_eat_out"						animation = "head_sex_eat_out" next_state = "sex_eat_out" }
+	state = {	name = "sex_missionary"						animation = "head_sex_missionary" next_state = "sex_missionary" }
+
+	state = {	name = "sex_standing"						animation = "head_sex_generic" next_state = "sex_standing" }
+	state = {	name = "sex_cowgirl"						animation = "head_sex_generic" next_state = "sex_cowgirl" }
+	state = {	name = "sex_reverse_cowgirl"					animation = "head_sex_generic" next_state = "sex_reverse_cowgirl" }
+	state = {	name = "sex_doggy"						animation = "head_sex_doggy" next_state = "sex_doggy" }
+	state = {	name = "sex_cowgirl_mff_threesome"				animation = "head_sex_eat_out" next_state = "sex_cowgirl_mff_threesome" }
+	state = {	name = "sex_standing_doggy"					animation = "head_sex_generic" next_state = "sex_standing_doggy" }
+	state = {	name = "sex_fellatio"						animation = "head_sex_fellatio" next_state = "sex_fellatio" }
+	state = {	name = "sex_fellatio_hom"					animation = "head_sex_fellatio_hom" next_state = "sex_fellatio_hom" }
+	
+	state = {	name = "sex_rotation"							animation = "head_sex" next_state = "sex_missionary_rotation" }
+	state = {	name = "sex_missionary_rotation"				animation = "head_sex_missionary" next_state = "sex_doggy_rotation" }
+	state = {	name = "sex_doggy_rotation"						animation = "head_sex_doggy" next_state = "sex_reverse_cowgirl_rotation" }
+	state = {	name = "sex_reverse_cowgirl_rotation"			animation = "head_sex_generic" next_state = "sex_cowgirl_rotation" }
+	state = {	name = "sex_cowgirl_rotation"					animation = "head_sex_generic" next_state = "sex_standing_doggy_rotation" }
+	state = {	name = "sex_standing_doggy_rotation"			animation = "head_sex_generic" next_state = "sex_standing_rotation" }
+	state = {	name = "sex_standing_rotation"					animation = "head_sex_generic" next_state = "sex_rotation" }
+
+	state = {	name = "none" animation = "head_idle_1" }
+#	state = {	name = "idle_entry"						animation = "head_idle_1" chance = 10 looping = no time_offset = { 0.0 5.0 } next_state = "idle_2" }
+	state = {	name = "idle_entry"						animation = "head_idle_1" chance = 10 looping = no  next_state = "idle_2" }
+	state = {	name = "idle"							animation = "head_idle_1" chance = 10 looping = no next_state = "idle_2" }
+	state = {	name = "idle_2"							animation = "head_idle_2" chance = 2 looping = no next_state = "idle_3" }
+	state = {	name = "idle_3"							animation = "head_idle_3" chance = 2 looping = no next_state = "idle" }
+
+	state = {	name = "idleInfant_entry"					animation = "head_idleInfant_1" chance = 10 looping = no  next_state = "idleInfant_2" }
+	state = {	name = "idleInfant"						animation = "head_idleInfant_1" chance = 10 looping = no next_state = "idleInfant_2" }
+	state = {	name = "idleInfant_2"						animation = "head_idleInfant_2" chance = 2 looping = no next_state = "idleInfant_3" }
+	state = {	name = "idleInfant_3"						animation = "head_idleInfant_3" chance = 2 looping = no next_state = "idleInfant" }
+
+	state = {	name = "prison"	animation = "head_prison_1" chance = 10 looping = no next_state = "prison" }
+	state = {	name = "emotion_sad"	animation = "emotion_sad_1" chance = 10 looping = no next_state = "emotion_sad" }
+
+	state = {	name = "AI_honorable_entry"					animation = "head_AI_honorable" chance = 100 looping = no  next_state = "AI_honorable_1" }
+	state = {	name = "AI_honorable"						animation = "head_AI_honorable" chance = 10 looping = no next_state = "AI_honorable_1" }
+	state = {	name = "AI_honorable_1"						animation = "head_AI_honorable_1" chance = 4 looping = no next_state = "AI_honorable" }
+	state = {	name = "AI_honorableFat_entry"					animation = "head_AI_honorableFat" chance = 100  looping = no next_state = "AI_honorableFat_1" }
+	state = {	name = "AI_honorableFat"					animation = "head_AI_honorableFat" chance = 10 looping = no next_state = "AI_honorableFat_1" }
+	state = {	name = "AI_honorableFat_1"					animation = "head_AI_honorableFat_1" chance = 4 looping = no next_state = "AI_honorableFat" }
+	state = {	name = "AI_honorableFatDwarf_entry"				animation = "head_AI_honorableFatDwarf" chance = 10 looping = no  next_state = "AI_honorableFatDwarf_1" }
+	state = {	name = "AI_honorableFatDwarf"					animation = "head_AI_honorableFatDwarf" chance = 10 looping = no next_state = "AI_honorableFatDwarf_1" }
+	state = {	name = "AI_honorableFatDwarf_1"					animation = "head_AI_honorableFatDwarf_1" chance = 3 looping = no next_state = "AI_honorableFatDwarf" }
+
+	state = {	name = "AI_greedy_entry"					animation = "head_AI_greedy" chance = 10 looping = no  next_state = "AI_greedy_1" }
+	state = {	name = "AI_greedy"						animation = "head_AI_greedy" chance = 10 looping = no next_state = "AI_greedy_1" }
+	state = {	name = "AI_greedy_1"						animation = "head_AI_greedy_1" chance = 3 looping = no next_state = "AI_greedy" }
+	state = {	name = "AI_greedyFat_entry"					animation = "head_AI_greedyFat" chance = 10 looping = no  next_state = "AI_greedyFat_1" }
+	state = {	name = "AI_greedyFat"						animation = "head_AI_greedyFat" chance = 10 looping = no next_state = "AI_greedyFat_1" }
+	state = {	name = "AI_greedyFat_1"						animation = "head_AI_greedyFat_1" chance = 4 looping = no next_state = "AI_greedyFat" }
+	state = {	name = "AI_greedyFatDwarf_entry"				animation = "head_AI_greedyFatDwarf" chance = 10 looping = no  next_state = "AI_greedyFatDwarf_1" }
+	state = {	name = "AI_greedyFatDwarf"					animation = "head_AI_greedyFatDwarf" chance = 10 looping = no next_state = "AI_greedyFatDwarf_1" }
+	state = {	name = "AI_greedyFatDwarf_1"					animation = "head_AI_greedyFatDwarf_1" chance = 4 looping = no next_state = "AI_greedyFatDwarf" }
+
+	state = {	name = "AI_rational_entry"					animation = "head_AI_rational" chance = 10 looping = no  next_state = "AI_rational_1" }
+	state = {	name = "AI_rational"						animation = "head_AI_rational" chance = 10 looping = no next_state = "AI_rational_1" }
+	state = {	name = "AI_rational_1"						animation = "head_AI_rational_1" chance = 1 looping = no next_state = "AI_rational" }
+	state = {	name = "AI_rationalFat_entry"					animation = "head_AI_rationalFat" chance = 10 looping = no  next_state = "AI_rationalFat_1" }
+	state = {	name = "AI_rationalFat"						animation = "head_AI_rationalFat" chance = 10 looping = no next_state = "AI_rationalFat_1" }
+	state = {	name = "AI_rationalFat_1"					animation = "head_AI_rationalFat_1" chance = 1 looping = no next_state = "AI_rationalFat" }
+	state = {	name = "AI_rationalFatDwarf_entry"				animation = "head_AI_rationalFatDwarf" chance = 10 looping = no  next_state = "AI_rationalFatDwarf_1" }
+	state = {	name = "AI_rationalFatDwarf"					animation = "head_AI_rationalFatDwarf" chance = 10 looping = no next_state = "AI_rationalFatDwarf_1" }
+	state = {	name = "AI_rationalFatDwarf_1"					animation = "head_AI_rationalFatDwarf_1" chance = 1 looping = no next_state = "AI_rationalFatDwarf" }
+
+	#state = {	name = "AI_energetic"	animation = "head_AI_energetic" }
+
+	state = {	name = "AI_bold_entry"						animation = "head_AI_bold" chance = 10 looping = no  next_state = "AI_bold_1" }
+	state = {	name = "AI_bold"						animation = "head_AI_bold" chance = 10 looping = no next_state = "AI_bold_1" }
+	state = {	name = "AI_bold_1"						animation = "head_AI_bold_1" chance = 2 looping = no next_state = "AI_bold" }
+	state = {	name = "AI_boldFat_entry"					animation = "head_AI_boldFat" chance = 10 looping = no  next_state = "AI_boldFat_1" }
+	state = {	name = "AI_boldFat"						animation = "head_AI_boldFat" chance = 10 looping = no next_state = "AI_boldFat_1" }
+	state = {	name = "AI_boldFat_1"						animation = "head_AI_boldFat_1" chance = 2 looping = no next_state = "AI_boldFat" }
+	state = {	name = "AI_boldFatDwarf_entry"					animation = "head_AI_boldFatDwarf" chance = 10 looping = no  next_state = "AI_boldFatDwarf_1" }
+	state = {	name = "AI_boldFatDwarf"					animation = "head_AI_boldFatDwarf" chance = 10 looping = no next_state = "AI_boldFatDwarf_1" }
+	state = {	name = "AI_boldFatDwarf_1"					animation = "head_AI_boldFatDwarf_1" chance = 3 looping = no next_state = "AI_boldFatDwarf_2" }
+	state = {	name = "AI_boldFatDwarf_2"					animation = "head_AI_boldFatDwarf_2" chance = 2 looping = no next_state = "AI_boldFatDwarf" }
+
+	state = {	name = "AI_zealous_entry"					animation = "head_AI_zealous" chance = 10 looping = no  next_state = "AI_zealous_1" }
+	state = {	name = "AI_zealous"						animation = "head_AI_zealous" chance = 10 looping = no next_state = "AI_zealous_1" }
+	state = {	name = "AI_zealous_1"						animation = "head_AI_zealous_1" chance = 3 looping = no next_state = "AI_zealous" }
+	state = {	name = "AI_zealousFat_entry"					animation = "head_AI_zealousFat" chance = 10 looping = no  next_state = "AI_zealousFat_1" }
+	state = {	name = "AI_zealousFat"						animation = "head_AI_zealousFat" chance = 10 looping = no next_state = "AI_zealousFat_1" }
+	state = {	name = "AI_zealousFat_1"					animation = "head_AI_zealousFat_1" chance = 3 looping = no next_state = "AI_zealousFat" }
+	state = {	name = "AI_zealousFatDwarf_entry"				animation = "head_AI_zealousFatDwarf" chance = 10 looping = no  next_state = "AI_zealousFatDwarf_1" }
+	state = {	name = "AI_zealousFatDwarf"					animation = "head_AI_zealousFatDwarf" chance = 10 looping = no next_state = "AI_zealousFatDwarf_1" }
+	state = {	name = "AI_zealousFatDwarf_1"					animation = "head_AI_zealousFatDwarf_1" chance = 3 looping = no next_state = "AI_zealousFatDwarf" }
+
+	state = {	name = "AI_vengeful_entry"					animation = "head_AI_vengeful" chance = 10 looping = no  next_state = "AI_vengeful_1" }
+	state = {	name = "AI_vengeful"						animation = "head_AI_vengeful" chance = 10 looping = no next_state = "AI_vengeful_1" }
+	state = {	name = "AI_vengeful_1"						animation = "head_AI_vengeful_1" chance = 5 looping = no next_state = "AI_vengeful" }
+	state = {	name = "AI_vengefulFat_entry"					animation = "head_AI_vengefulFat" chance = 10 looping = no  next_state = "AI_vengefulFat_1" }
+	state = {	name = "AI_vengefulFat"						animation = "head_AI_vengefulFat" chance = 10 looping = no next_state = "AI_vengefulFat_1" }
+	state = {	name = "AI_vengefulFat_1"					animation = "head_AI_vengefulFat_1" chance = 6 looping = no next_state = "AI_vengefulFat" }
+	state = {	name = "AI_vengefulFatDwarf_entry"				animation = "head_AI_vengefulFatDwarf" chance = 10 looping = no  next_state = "AI_vengefulFatDwarf_1" }
+	state = {	name = "AI_vengefulFatDwarf"					animation = "head_AI_vengefulFatDwarf" chance = 10 looping = no next_state = "AI_vengefulFatDwarf_1" }
+	state = {	name = "AI_vengefulFatDwarf_1"					animation = "head_AI_vengefulFatDwarf_1" chance = 6 looping = no next_state = "AI_vengefulFatDwarf" }
+
+	state = {	name = "AI_dishonorable_entry"					animation = "head_AI_dishonorable" chance = 10 looping = no  next_state = "AI_dishonorable_1" }
+	state = {	name = "AI_dishonorable"					animation = "head_AI_dishonorable" chance = 10 looping = no next_state = "AI_dishonorable_1" }
+	state = {	name = "AI_dishonorable_1"					animation = "head_AI_dishonorable_1" chance = 3 looping = no next_state = "AI_dishonorable_2" }
+	state = {	name = "AI_dishonorable_2"					animation = "head_AI_dishonorable_2" chance = 2 looping = no next_state = "AI_dishonorable" }
+	state = {	name = "AI_dishonorableFat_entry"				animation = "head_AI_dishonorableFat" chance = 10 looping = no  next_state = "AI_dishonorableFat_1" }
+	state = {	name = "AI_dishonorableFat"					animation = "head_AI_dishonorableFat" chance = 10 looping = no next_state = "AI_dishonorableFat_1" }
+	state = {	name = "AI_dishonorableFat_1"					animation = "head_AI_dishonorableFat_1" chance = 3 looping = no next_state = "AI_dishonorableFat_2" }
+	state = {	name = "AI_dishonorableFat_2"					animation = "head_AI_dishonorableFat_2" chance = 2 looping = no next_state = "AI_dishonorableFat" }
+	state = {	name = "AI_dishonorableFatDwarf_entry"				animation = "head_AI_dishonorableFatDwarf" chance = 10 looping = no  next_state = "AI_dishonorableFatDwarf_1" }
+	state = {	name = "AI_dishonorableFatDwarf"				animation = "head_AI_dishonorableFatDwarf" chance = 10 looping = no next_state = "AI_dishonorableFatDwarf_1" }
+	state = {	name = "AI_dishonorableFatDwarf_1"				animation = "head_AI_dishonorableFatDwarf_1" chance = 3 looping = no next_state = "AI_dishonorableFatDwarf_2" }
+	state = {	name = "AI_dishonorableFatDwarf_2"				animation = "head_AI_dishonorableFatDwarf_2" chance = 2 looping = no next_state = "AI_dishonorableFatDwarf" }
+
+	state = {	name = "AI_content_entry"					animation = "head_AI_content" chance = 10 looping = no  next_state = "AI_content_1" }
+	state = {	name = "AI_content"						animation = "head_AI_content" chance = 10 looping = no next_state = "AI_content_1" }
+	state = {	name = "AI_content_1"						animation = "head_AI_content_1" chance = 3 looping = no next_state = "AI_content" }
+	state = {	name = "AI_contentFat_entry"					animation = "head_AI_contentFat" chance = 10 looping = no  next_state = "AI_contentFat_1" }
+	state = {	name = "AI_contentFat"						animation = "head_AI_contentFat" chance = 10 looping = no next_state = "AI_contentFat_1" }
+	state = {	name = "AI_contentFat_1"					animation = "head_AI_contentFat_1" chance = 3 looping = no next_state = "AI_contentFat" }
+	state = {	name = "AI_contentFatDwarf_entry"				animation = "head_AI_contentFatDwarf" chance = 10 looping = no  next_state = "AI_contentFatDwarf_1" }
+	state = {	name = "AI_contentFatDwarf"					animation = "head_AI_contentFatDwarf" chance = 10 looping = no next_state = "AI_contentFatDwarf_1" }
+	state = {	name = "AI_contentFatDwarf_1"					animation = "head_AI_contentFatDwarf_1" chance = 3 looping = no next_state = "AI_contentFatDwarf" }
+
+	state = {	name = "AI_irrational_entry"					animation = "head_AI_irrational" chance = 10 looping = no  next_state = "AI_irrational_1" }
+	state = {	name = "AI_irrational"						animation = "head_AI_irrational" chance = 10 looping = no next_state = "AI_irrational_1" }
+	state = {	name = "AI_irrational_1"					animation = "head_AI_irrational_1" chance = 3 looping = no next_state = "AI_irrational" }
+	state = {	name = "AI_irrationalFat_entry"					animation = "head_AI_irrationalFat" chance = 10 looping = no  next_state = "AI_irrationalFat_1" }
+	state = {	name = "AI_irrationalFat"					animation = "head_AI_irrationalFat" chance = 10 looping = no next_state = "AI_irrationalFat_1" }
+	state = {	name = "AI_irrationalFat_1"					animation = "head_AI_irrationalFat_1" chance = 2 looping = no next_state = "AI_irrationalFat" }
+	state = {	name = "AI_irrationalFatDwarf_entry"				animation = "head_AI_irrationalFatDwarf" chance = 10 looping = no  next_state = "AI_irrationalFatDwarf_1" }
+	state = {	name = "AI_irrationalFatDwarf"					animation = "head_AI_irrationalFatDwarf" chance = 10 looping = no next_state = "AI_irrationalFatDwarf_1" }
+	state = {	name = "AI_irrationalFatDwarf_1"				animation = "head_AI_irrationalFatDwarf_1" chance = 2 looping = no next_state = "AI_irrationalFatDwarf" }
+
+	state = {	name = "AI_coward_entry"					animation = "head_AI_coward" chance = 10 looping = no  next_state = "AI_coward" }
+	state = {	name = "AI_coward"						animation = "head_AI_coward" chance = 10 looping = no next_state = "AI_coward" }
+	state = {	name = "AI_coward"						animation = "head_AI_coward_1" chance = 3 looping = no next_state = "AI_coward" }
+	state = {	name = "AI_cowardFat_entry"					animation = "head_AI_cowardFatDwarf" chance = 10 looping = no  next_state = "AI_cowardFat_1" }
+	state = {	name = "AI_cowardFat"						animation = "head_AI_cowardFatDwarf" chance = 10 looping = no next_state = "AI_cowardFat_1" }
+	state = {	name = "AI_cowardFat_1"						animation = "head_AI_cowardFatDwarf_1" chance = 3 looping = no next_state = "AI_cowardFat" }
+	state = {	name = "AI_cowardFatDwarf_entry"				animation = "head_AI_cowardFatDwarf" chance = 10 looping = no  next_state = "AI_cowardFatDwarf_1" }
+	state = {	name = "AI_cowardFatDwarf"					animation = "head_AI_cowardFatDwarf" chance = 10 looping = no next_state = "AI_cowardFatDwarf_1" }
+	state = {	name = "AI_cowardFatDwarf_1"					animation = "head_AI_cowardFatDwarf_1" chance = 3 looping = no next_state = "AI_cowardFatDwarf" }
+
+	state = {	name = "AI_cynical_entry"					animation = "head_AI_cynical" chance = 10 looping = no  next_state = "AI_cynical_1" }
+	state = {	name = "AI_cynical"						animation = "head_AI_cynical" chance = 10 looping = no next_state = "AI_cynical_1" }
+	state = {	name = "AI_cynical_1"						animation = "head_AI_cynical_1" chance = 3 looping = no next_state = "AI_cynical" }
+	state = {	name = "AI_cynicalFat_entry"					animation = "head_AI_cynicalFat" chance = 10 looping = no  next_state = "AI_cynicalFat_1" }
+	state = {	name = "AI_cynicalFat"						animation = "head_AI_cynicalFat" chance = 10 looping = no next_state = "AI_cynicalFat_1" }
+	state = {	name = "AI_cynicalFat_1"					animation = "head_AI_cynicalFat_1" chance = 3 looping = no next_state = "AI_cynicalFat" }
+	state = {	name = "AI_cynicalFatDwarf_entry"				animation = "head_AI_cynicalFatDwarf" chance = 10 looping = no  next_state = "AI_cynicalFatDwarf_1" }
+	state = {	name = "AI_cynicalFatDwarf"					animation = "head_AI_cynicalFatDwarf" chance = 10 looping = no next_state = "AI_cynicalFatDwarf_1" }
+	state = {	name = "AI_cynicalFatDwarf_1"					animation = "head_AI_cynicalFatDwarf_1" chance = 3 looping = no next_state = "AI_cynicalFatDwarf" }
+
+	state = {	name = "AI_forgiving_entry"					animation = "head_AI_forgiving" chance = 10 looping = no  next_state = "AI_forgiving_1" }
+	state = {	name = "AI_forgiving"						animation = "head_AI_forgiving" chance = 10 looping = no next_state = "AI_forgiving_1" }
+	state = {	name = "AI_forgiving_1"						animation = "head_AI_forgiving_1" chance = 4 looping = no next_state = "AI_forgiving" }
+	state = {	name = "AI_forgivingFat_entry"					animation = "head_AI_forgivingFat" chance = 10 looping = no  next_state = "AI_forgivingFat_1" }
+	state = {	name = "AI_forgivingFat"					animation = "head_AI_forgivingFat" chance = 10 looping = no next_state = "AI_forgivingFat_1" }
+	state = {	name = "AI_forgivingFat_1"					animation = "head_AI_forgivingFat_1" chance = 4 looping = no next_state = "AI_forgivingFat" }
+	state = {	name = "AI_forgivingFatDwarf_entry"				animation = "head_AI_forgivingFatDwarf" chance = 10 looping = no  next_state = "AI_forgivingFatDwarf_1" }
+	state = {	name = "AI_forgivingFatDwarf"					animation = "head_AI_forgivingFatDwarf" chance = 10 looping = no next_state = "AI_forgivingFatDwarf_1" }
+	state = {	name = "AI_forgivingFatDwarf_1"					animation = "head_AI_forgivingFatDwarf_1" chance = 4 looping = no next_state = "AI_forgivingFatDwarf" }
+
+	state = {	name = "AI_callous_entry"					animation = "head_AI_callous" chance = 10 looping = no  next_state = "AI_callous_1" }
+	state = {	name = "AI_callous"						animation = "head_AI_callous" chance = 10 looping = no next_state = "AI_callous_1" }
+	state = {	name = "AI_callous_1"						animation = "head_AI_callous_1" chance = 6 looping = no next_state = "AI_callous" }
+	state = {	name = "AI_callousFat_entry"					animation = "head_AI_callousFat" chance = 10 looping = no  next_state = "AI_callousFat_1" }
+	state = {	name = "AI_callousFat"						animation = "head_AI_callousFat" chance = 10 looping = no next_state = "AI_callousFat_1" }
+	state = {	name = "AI_callousFat_1"					animation = "head_AI_callousFat_1" chance = 5 looping = no next_state = "AI_callousFat" }
+	state = {	name = "AI_callousFatDwarf_entry"				animation = "head_AI_callousFatDwarf" chance = 10 looping = no  next_state = "AI_callousFatDwarf_1" }
+	state = {	name = "AI_callousFatDwarf"					animation = "head_AI_callousFatDwarf" chance = 10 looping = no next_state = "AI_callousFatDwarf_1" }
+	state = {	name = "AI_callousFatDwarf_1"					animation = "head_AI_callousFatDwarf_1" chance = 5 looping = no next_state = "AI_callousFatDwarf" }
+
+	state = {	name = "AI_compassionate_entry"					animation = "head_AI_compassionate" chance = 10 looping = no  next_state = "AI_compassionate_1" }
+	state = {	name = "AI_compassionate"					animation = "head_AI_compassionate" chance = 10 looping = no next_state = "AI_compassionate_1" }
+	state = {	name = "AI_compassionate_1"					animation = "head_AI_compassionate_1" chance = 4 looping = no next_state = "AI_compassionate" }
+	state = {	name = "AI_compassionateFat_entry"				animation = "head_AI_compassionateFat" chance = 10 looping = no  next_state = "AI_compassionateFat_1" }
+	state = {	name = "AI_compassionateFat"					animation = "head_AI_compassionateFat" chance = 10 looping = no next_state = "AI_compassionateFat_1" }
+	state = {	name = "AI_compassionateFat_1"					animation = "head_AI_compassionateFat_1" chance = 5 looping = no next_state = "AI_compassionateFat" }
+	state = {	name = "AI_compassionateFatDwarf_entry"				animation = "head_AI_compassionateFatDwarf" chance = 10 looping = no  next_state = "AI_compassionateFatDwarf_1" }
+	state = {	name = "AI_compassionateFatDwarf"				animation = "head_AI_compassionateFatDwarf" chance = 10 looping = no next_state = "AI_compassionateFatDwarf_1" }
+	state = {	name = "AI_compassionateFatDwarf_1"				animation = "head_AI_compassionateFatDwarf_1" chance = 5 looping = no next_state = "AI_compassionateFatDwarf" }
+
+	state = {	name = "council_spymaster"					animation = "head_council_spymaster" }
+	state = {	name = "council_spymasterFatDwarf"				animation = "head_council_spymasterFatDwarf" }
+
+	state = {	name = "council_marshal"					animation = "head_council_marshal" }
+	state = {	name = "council_marshalFat"					animation = "head_council_marshalFat" }
+	state = {	name = "council_marshalFatDwarf"				animation = "head_council_marshalFatDwarf" }
+
+	state = {	name = "council_steward"					animation = "head_council_steward" chance = 10 looping = no next_state = "council_steward" }
+	# state = {	name = "council_steward"					animation = "head_council_steward_2" chance = 5 looping = no next_state = "council_steward" }
+	state = {	name = "council_stewardFatDwarf"				animation = "head_council_stewardFatDwarf" chance = 10 looping = no next_state = "council_stewardFatDwarf" }
+	#state = {	name = "council_steward"					animation = "head_council_steward_2" chance = 1 looping = no next_state = "council_steward"  }
+
+	state = {	name = "council_chancellor"					animation = "head_council_chancellor" }
+	state = {	name = "council_chancellorFat"					animation = "head_council_chancellorFat" }
+	state = {	name = "council_chancellorFatDwarf"				animation = "head_council_chancellorFatDwarf" }
+
+	state = {	name = "council_chaplain"					animation = "head_council_chaplain" chance = 10 looping = no next_state = "council_chaplain" }
+	state = {	name = "council_chaplainFat"					animation = "head_council_chaplainFat" chance = 10 looping = no next_state = "council_chaplainFat" }
+	state = {	name = "council_chaplainFatDwarf"				animation = "head_council_chaplainFatDwarf" chance = 10 looping = no next_state = "council_chaplainFatDwarf" }
+	#state = {	name = "council_chaplain"					animation = "head_council_chaplain_2" chance = 1 looping = no next_state = "council_chaplain" }
+
+	state = {	name = "emotion_angry_entry"					animation = "head_emotion_angry"  next_state = "emotion_angry" }
+	state = {	name = "emotion_angry"						animation = "head_emotion_angry" next_state = "emotion_angry" }
+	state = {	name = "emotion_angryFatDwarf_entry"				animation = "head_emotion_angryFatDwarf"  next_state = "emotion_angryFatDwarf" }
+	state = {	name = "emotion_angryFatDwarf"					animation = "head_emotion_angryFatDwarf" next_state = "emotion_angryFatDwarf" }
+
+	state = {	name = "emotion_sadness_entry"					animation = "head_emotion_sadness"  next_state = "emotion_sadness" }
+	state = {	name = "emotion_sadness"					animation = "head_emotion_sadness" next_state = "emotion_sadness" }
+	state = {	name = "emotion_sadnessFat_entry"				animation = "head_emotion_sadnessFat"  next_state = "emotion_sadnessFat" }
+	state = {	name = "emotion_sadnessFat"					animation = "head_emotion_sadnessFat" next_state = "emotion_sadnessFat" }
+	state = {	name = "emotion_sadnessFatDwarf_entry"				animation = "head_emotion_sadnessFatDwarf"  next_state = "emotion_sadnessFatDwarf" }
+	state = {	name = "emotion_sadnessFatDwarf"				animation = "head_emotion_sadnessFatDwarf" next_state = "emotion_sadnessFatDwarf" }
+
+	state = {	name = "emotion_disgust_entry"					animation = "head_emotion_disgust"   next_state = "emotion_disgust" }
+	state = {	name = "emotion_disgust"					animation = "head_emotion_disgust" next_state = "emotion_disgust" }
+	state = {	name = "emotion_disgustFat_entry"				animation = "head_emotion_disgustFat"   next_state = "emotion_disgustFat" }
+	state = {	name = "emotion_disgustFat"					animation = "head_emotion_disgustFat" next_state = "emotion_disgustFat" }
+	state = {	name = "emotion_disgustFatDwarf_entry"				animation = "head_emotion_disgustFat"   next_state = "emotion_disgustFatDwarf" }
+	state = {	name = "emotion_disgustFatDwarf"				animation = "head_emotion_disgustFat" next_state = "emotion_disgustFatDwarf" }
+
+	state = {	name = "emotion_disapproving_entry"				animation = "head_emotion_disapproving"  next_state = "emotion_disapproving" }
+	state = {	name = "emotion_disapproving"					animation = "head_emotion_disapproving" next_state = "emotion_disapproving" }
+	state = {	name = "emotion_disapprovingFat_entry"				animation = "head_emotion_disapprovingFat"  next_state = "emotion_disapprovingFat" }
+	state = {	name = "emotion_disapprovingFat"				animation = "head_emotion_disapprovingFat" next_state = "emotion_disapprovingFat" }
+	state = {	name = "emotion_disapprovingFatDwarf_entry"			animation = "head_emotion_disapprovingFatDwarf"  next_state = "emotion_disapprovingFatDwarf" }
+	state = {	name = "emotion_disapprovingFatDwarf"				animation = "head_emotion_disapprovingFatDwarf" next_state = "emotion_disapprovingFatDwarf" }
+
+	state = {	name = "emotion_worry_entry"					animation = "head_emotion_worry"  next_state = "emotion_worry" }
+	state = {	name = "emotion_worry"						animation = "head_emotion_worry" next_state = "emotion_worry" }
+	state = {	name = "emotion_worryFat_entry"					animation = "head_emotion_worryFat"  next_state = "emotion_worryFat" }
+	state = {	name = "emotion_worryFat"					animation = "head_emotion_worryFat" next_state = "emotion_worryFat" }
+	state = {	name = "emotion_worryFatDwarf_entry"				animation = "head_emotion_worryFatDwarf"  next_state = "emotion_worryFatDwarf" }
+	state = {	name = "emotion_worryFatDwarf"					animation = "head_emotion_worryFatDwarf" next_state = "emotion_worryFatDwarf" }
+
+	state = {	name = "emotion_admiration_entry"				animation = "head_emotion_admiration"  next_state = "emotion_admiration" }
+	state = {	name = "emotion_admiration"					animation = "head_emotion_admiration" next_state = "emotion_admiration" }
+	state = {	name = "emotion_admirationFat_entry"				animation = "head_emotion_admirationFat"  next_state = "emotion_admirationFat" }
+	state = {	name = "emotion_admirationFat"					animation = "head_emotion_admirationFat" next_state = "emotion_admirationFat" }
+	state = {	name = "emotion_admirationFatDwarf_entry"			animation = "head_emotion_admirationFatDwarf"  next_state = "emotion_admirationFatDwarf" }
+	state = {	name = "emotion_admirationFatDwarf"				animation = "head_emotion_admirationFatDwarf" next_state = "emotion_admirationFatDwarf" }
+
+	state = {	name = "emotion_happy_entry"					animation = "head_emotion_happy"  next_state = "emotion_happy" }
+	state = {	name = "emotion_happy"						animation = "head_emotion_happy" next_state = "emotion_happy" }
+	state = {	name = "emotion_happyFat_entry"					animation = "head_emotion_happyFat"  next_state = "emotion_happyFat" }
+	state = {	name = "emotion_happyFat"					animation = "head_emotion_happyFat" next_state = "emotion_happyFat" }
+	state = {	name = "emotion_happyFatDwarf_entry"				animation = "head_emotion_happyFatDwarf"  next_state = "emotion_happyFatDwarf" }
+	state = {	name = "emotion_happyFatDwarf"					animation = "head_emotion_happyFatDwarf" next_state = "emotion_happyFatDwarf" }
+
+	state = {	name = "emotion_boredom_entry"					animation = "head_emotion_boredom"  next_state = "emotion_boredom" }
+	state = {	name = "emotion_boredom"					animation = "head_emotion_boredom" next_state = "emotion_boredom" }
+	state = {	name = "emotion_boredomFatDwarf_entry"				animation = "head_emotion_boredomFatDwarf"  next_state = "emotion_boredomFatDwarf" }
+	state = {	name = "emotion_boredomFatDwarf"				animation = "head_emotion_boredomFatDwarf" next_state = "emotion_boredomFatDwarf" }
+
+	state = {	name = "emotion_sick_entry"					animation = "head_emotion_sick"  next_state = "emotion_sick" }
+	state = {	name = "emotion_sick"						animation = "head_emotion_sick" next_state = "emotion_sick" }
+	state = {	name = "emotion_sickFatDwarf_entry"				animation = "head_emotion_sickFatDwarf"  next_state = "emotion_sickFatDwarf" }
+	state = {	name = "emotion_sickFatDwarf"					animation = "head_emotion_sickFatDwarf" next_state = "emotion_sickFatDwarf" }
+
+	state = {	name = "emotion_scheme_entry"					animation = "head_emotion_scheme"  next_state = "emotion_scheme" }
+	state = {	name = "emotion_scheme"						animation = "head_emotion_scheme" next_state = "emotion_scheme" }
+	state = {	name = "emotion_schemeFat_entry"				animation = "head_emotion_schemeFat"  next_state = "emotion_schemeFat" }
+	state = {	name = "emotion_schemeFat"					animation = "head_emotion_schemeFat" next_state = "emotion_schemeFat" }
+	state = {	name = "emotion_schemeFatDwarf_entry"				animation = "head_emotion_schemeFatDwarf"  next_state = "emotion_schemeFatDwarf" }
+	state = {	name = "emotion_schemeFatDwarf"					animation = "head_emotion_schemeFatDwarf" next_state = "emotion_schemeFatDwarf" }
+
+	state = {	name = "emotion_disbelief_entry"				animation = "head_emotion_disbelief"  next_state = "emotion_disbelief" }
+	state = {	name = "emotion_disbelief"					animation = "head_emotion_disbelief" next_state = "emotion_disbelief" }
+	state = {	name = "emotion_disbeliefFat_entry"				animation = "head_emotion_disbeliefFat"  next_state = "emotion_disbeliefFat" }
+	state = {	name = "emotion_disbeliefFat"					animation = "head_emotion_disbeliefFat" next_state = "emotion_disbeliefFat" }
+	state = {	name = "emotion_disbeliefFatDwarf_entry"			animation = "head_emotion_disbeliefFatDwarf"  next_state = "emotion_disbeliefFatDwarf" }
+	state = {	name = "emotion_disbeliefFatDwarf"				animation = "head_emotion_disbeliefFatDwarf" next_state = "emotion_disbeliefFatDwarf" }
+
+	state = {	name = "emotion_fear_entry"					animation = "head_emotion_fear"  next_state = "emotion_fear" }
+	state = {	name = "emotion_fear"						animation = "head_emotion_fear" next_state = "emotion_fear" }
+	state = {	name = "emotion_fearFat_entry"					animation = "head_emotion_fearFat"  next_state = "emotion_fearFat" }
+	state = {	name = "emotion_fearFat"					animation = "head_emotion_fearFat" next_state = "emotion_fearFat" }
+	state = {	name = "emotion_fearFatDwarf_entry"				animation = "head_emotion_fearFatDwarf"  next_state = "emotion_fearFatDwarf" }
+	state = {	name = "emotion_fearFatDwarf"					animation = "head_emotion_fearFatDwarf" next_state = "emotion_fearFatDwarf" }
+
+	state = {	name = "emotion_shame_entry"					animation = "head_emotion_shame"  next_state = "emotion_shame" }
+	state = {	name = "emotion_shame"						animation = "head_emotion_shame" next_state = "emotion_shame" }
+	state = {	name = "emotion_shameFat_entry"					animation = "head_emotion_shameFat"  next_state = "emotion_shameFat" }
+	state = {	name = "emotion_shameFat"					animation = "head_emotion_shameFat" next_state = "emotion_shameFat" }
+	state = {	name = "emotion_shameFatDwarf_entry"				animation = "head_emotion_shameFatDwarf"  next_state = "emotion_shameFatDwarf" }
+	state = {	name = "emotion_shameFatDwarf"					animation = "head_emotion_shameFatDwarf" next_state = "emotion_shameFatDwarf" }
+
+	state = {	name = "emotion_stressed_entry"					animation = "head_emotion_stressed"  next_state = "emotion_stressed" }
+	state = {	name = "emotion_stressed"					animation = "head_emotion_stressed" next_state = "emotion_stressed" }
+	state = {	name = "emotion_stressedFat_entry"				animation = "head_emotion_stressedFat"  next_state = "emotion_stressedFat" }
+	state = {	name = "emotion_stressedFat"					animation = "head_emotion_stressedFat" next_state = "emotion_stressedFat" }
+	state = {	name = "emotion_stressedFatDwarf_entry"				animation = "head_emotion_stressedFatDwarf"  next_state = "emotion_stressedFatDwarf" }
+	state = {	name = "emotion_stressedFatDwarf"				animation = "head_emotion_stressedFatDwarf" next_state = "emotion_stressedFatDwarf" }
+
+	state = {	name = "emotion_dismissive_entry"				animation = "head_emotion_dismissive"  next_state = "emotion_dismissive" }
+	state = {	name = "emotion_dismissive"					animation = "head_emotion_dismissive" next_state = "emotion_dismissive" }
+	state = {	name = "emotion_dismissiveFat_entry"				animation = "head_emotion_dismissiveFat"  next_state = "emotion_dismissiveFat" }
+	state = {	name = "emotion_dismissiveFat"					animation = "head_emotion_dismissiveFat" next_state = "emotion_dismissiveFat" }
+	state = {	name = "emotion_dismissiveFatDwarf_entry"			animation = "head_emotion_dismissiveFat"  next_state = "emotion_dismissiveFat" }
+	state = {	name = "emotion_dismissiveFatDwarf"				animation = "head_emotion_dismissiveFat" next_state = "emotion_dismissiveFatDwarf" }
+
+	state = {	name = "emotion_schadenfreude_entry"				animation = "head_emotion_schadenfreude"  next_state = "emotion_schadenfreude" }
+	state = {	name = "emotion_schadenfreude"					animation = "head_emotion_schadenfreude" next_state = "emotion_schadenfreude" }
+	state = {	name = "emotion_schadenfreudeFat_entry"				animation = "head_emotion_schadenfreudeFat"  next_state = "emotion_schadenfreudeFat" }
+	state = {	name = "emotion_schadenfreudeFat"				animation = "head_emotion_schadenfreudeFat" next_state = "emotion_schadenfreudeFat" }
+	state = {	name = "emotion_schadenfreudeFatDwarf_entry"			animation = "head_emotion_schadenfreudeFatDwarf"  next_state = "emotion_schadenfreudeFatDwarf" }
+	state = {	name = "emotion_schadenfreudeFatDwarf"				animation = "head_emotion_schadenfreudeFatDwarf" next_state = "emotion_schadenfreudeFatDwarf" }
+
+	state = {	name = "emotion_flirty_entry"					animation = "head_emotion_flirty"  next_state = "emotion_flirty" }
+	state = {	name = "emotion_flirty"						animation = "head_emotion_flirty" next_state = "emotion_flirty" }
+
+	state = {	name = "emotion_flirtyLeft_entry"				animation = "head_emotion_flirtyLeft"  next_state = "emotion_flirtyLeft" }
+	state = {	name = "emotion_flirtyLeft"					animation = "head_emotion_flirtyLeft" next_state = "emotion_flirtyLeft" }
+
+	state = {	name = "emotion_paranoia_entry"					animation = "head_emotion_paranoia"  next_state = "emotion_paranoia" }
+	state = {	name = "emotion_paranoia"					animation = "head_emotion_paranoia" next_state = "emotion_paranoia" }
+	state = {	name = "emotion_paranoiaFat_entry"				animation = "head_emotion_paranoiaFat"  next_state = "emotion_paranoiaFat" }
+	state = {	name = "emotion_paranoiaFat"					animation = "head_emotion_paranoiaFat" next_state = "emotion_paranoiaFat" }
+	state = {	name = "emotion_paranoiaFatDwarf_entry"				animation = "head_emotion_paranoiaFatDwarf"  next_state = "emotion_paranoiaFatDwarf" }
+	state = {	name = "emotion_paranoiaFatDwarf"				animation = "head_emotion_paranoiaFatDwarf" next_state = "emotion_paranoiaFatDwarf" }
+
+	state = {	name = "emotion_grief_entry"					animation = "head_emotion_grief" next_state = "emotion_grief" }
+	state = {	name = "emotion_grief"						animation = "head_emotion_grief" next_state = "emotion_grief" }
+	state = {	name = "emotion_griefFat_entry"					animation = "head_emotion_griefFat" next_state = "emotion_griefFat" }
+	state = {	name = "emotion_griefFat"					animation = "head_emotion_griefFat" next_state = "emotion_griefFat" }
+	state = {	name = "emotion_griefFatDwarf_entry"				animation = "head_emotion_griefFatDwarf" next_state = "emotion_griefFatDwarf" }
+	state = {	name = "emotion_griefFatDwarf"					animation = "head_emotion_griefFatDwarf" next_state = "emotion_griefFatDwarf" }
+
+	state = {	name = "emotion_shock_entry"					animation = "head_emotion_shock"  next_state = "emotion_shock" }
+	state = {	name = "emotion_shock"						animation = "head_emotion_shock" next_state = "emotion_shock" }
+
+	state = {	name = "emotion_pain_entry"					animation = "head_emotion_pain"  next_state = "emotion_pain" }
+	state = {	name = "emotion_pain"						animation = "head_emotion_pain" next_state = "emotion_pain" }
+	state = {	name = "emotion_painFat_entry"					animation = "head_emotion_painFat"  next_state = "emotion_painFat" }
+	state = {	name = "emotion_painFat"					animation = "head_emotion_painFat" next_state = "emotion_painFat" }
+	state = {	name = "emotion_painFatDwarf_entry"				animation = "head_emotion_painFatDwarf"  next_state = "emotion_painFatDwarf" }
+	state = {	name = "emotion_painFatDwarf"					animation = "head_emotion_painFatDwarf" next_state = "emotion_painFatDwarf" }
+
+	state = {	name = "emotion_beg_entry"					animation = "head_emotion_beg"  next_state = "emotion_beg" }
+	state = {	name = "emotion_beg"						animation = "head_emotion_beg" next_state = "emotion_beg" }
+
+	state = {	name = "emotion_poison"						animation = "head_emotion_poison" next_state = "emotion_poison" }
+	state = {	name = "emotion_poisonFatDwarf"					animation = "head_emotion_poisonFatDwarf" next_state = "emotion_poisonFatDwarf" }
+
+	state = {	name = "waroverview_attacker"					animation = "head_waroverview_attacker" }
+	state = {	name = "waroverview_attackerFatDwarf"				animation = "head_waroverview_attackerFatDwarf" }
+
+	state = {	name = "waroverview_defender"					animation = "head_waroverview_defender" }
+	state = {	name = "waroverview_defenderFat"				animation = "head_waroverview_defenderFat" }
+	state = {	name = "waroverview_defenderFatDwarf"				animation = "head_waroverview_defenderFatDwarf" }
+	
+	state = {	name = "event_newborn"						animation = "head_event_newborn" }
+	state = {	name = "event_newbornFat"					animation = "head_event_newbornFat" }
+	state = {	name = "event_newbornFatDwarf"					animation = "head_event_newbornFatDwarf" }
+
+	state = {	name = "misc_arrest"						animation = "head_misc_arrest" }
+	state = {	name = "misc_arrestFatDwarf"					animation = "head_misc_arrestFatDwarf" }
+
+	state = {	name = "misc_dungeon"						animation = "head_misc_dungeon" }
+
+	state = {	name = "misc_wounded2"						animation = "head_misc_wounded2_1" chance = 10 looping = no next_state = "misc_wounded2_2" }
+	state = {	name = "misc_wounded2_2"					animation = "head_misc_wounded2_2" chance = 3 looping = no next_state = "misc_wounded2" }
+	state = {	name = "misc_wounded2FatDwarf"					animation = "head_misc_wounded2FatDwarf_1" chance = 10 looping = no next_state = "misc_wounded2FatDwarf_2" }
+	state = {	name = "misc_wounded2FatDwarf_2"				animation = "head_misc_wounded2FatDwarf_2" chance = 3 looping = no next_state = "misc_wounded2FatDwarf" }
+
+	state = {	name = "frontEnd_middle_entry"					animation = "head_frontEnd_middle" chance = 100 looping = no  next_state = "frontEnd_middle" }
+	state = {	name = "frontEnd_middle"					animation = "head_frontEnd_middle" chance = 100 looping = no next_state = "frontEnd_middle" }
+	state = {	name = "frontEnd_middleFat_entry"				animation = "head_frontEnd_middleFat" chance = 100 looping = no  next_state = "frontEnd_middleFat" }
+	state = {	name = "frontEnd_middleFat"					animation = "head_frontEnd_middleFat" chance = 100 looping = no next_state = "frontEnd_middleFat" }
+	state = {	name = "frontEnd_middleFatDwarf_entry"				animation = "head_frontEnd_middleFatDwarf" chance = 100 looping = no  next_state = "frontEnd_middleFatDwarf" }
+	state = {	name = "frontEnd_middleFatDwarf"				animation = "head_frontEnd_middleFatDwarf" chance = 100 looping = no next_state = "frontEnd_middleFatDwarf" }
+
+	state = {	name = "frontEnd_left_entry"					animation = "head_frontEnd_left" chance = 100 looping = no  next_state = "frontEnd_left" }
+	state = {	name = "frontEnd_left"						animation = "head_frontEnd_left" chance = 100 looping = no next_state = "frontEnd_left" }
+	state = {	name = "frontEnd_leftFat_entry"					animation = "head_frontEnd_leftFat" chance = 100 looping = no  next_state = "frontEnd_leftFat" }
+	state = {	name = "frontEnd_leftFat"					animation = "head_frontEnd_leftFat" chance = 100 looping = no next_state = "frontEnd_leftFat" }
+	state = {	name = "frontEnd_leftFatDwarf_entry"				animation = "head_frontEnd_leftFatDwarf" chance = 100 looping = no  next_state = "frontEnd_leftFatDwarf" }
+	state = {	name = "frontEnd_leftFatDwarf"					animation = "head_frontEnd_leftFatDwarf" chance = 100 looping = no next_state = "frontEnd_leftFatDwarf" }
+
+	state = {	name = "frontEnd_right_entry"					animation = "head_frontEnd_right" chance = 100 looping = no  next_state = "frontEnd_right" }
+	state = {	name = "frontEnd_right"						animation = "head_frontEnd_right" chance = 100 looping = no next_state = "frontEnd_right" }
+	state = {	name = "frontEnd_rightFat_entry"				animation = "head_frontEnd_rightFat" chance = 100 looping = no  next_state = "frontEnd_rightFat" }
+	state = {	name = "frontEnd_rightFat"					animation = "head_frontEnd_rightFat" chance = 100 looping = no next_state = "frontEnd_rightFat" }
+	state = {	name = "frontEnd_rightFatDwarf_entry"				animation = "head_frontEnd_rightFatDwarf" chance = 100 looping = no  next_state = "frontEnd_rightFatDwarf" }
+	state = {	name = "frontEnd_rightFatDwarf"					animation = "head_frontEnd_rightFatDwarf" chance = 100 looping = no next_state = "frontEnd_rightFatDwarf" }
+
+	state = {	name = "frontEnd_child"						animation = "head_frontEnd_child" }
+
+	state = {	name = "frontEnd_infant"					animation = "head_frontEnd_infant" chance = 100 looping = no  next_state = "frontEnd_infant" }
+	state = {	name = "frontEnd_infant2"					animation = "head_frontEnd_infant2" chance = 100 looping = no  next_state = "frontEnd_infant2" }
+
+	state = {	name = "misc_pregnant_entry"					animation = "head_misc_pregnant_1" chance = 10 looping = no  next_state = "misc_pregnant" }
+	state = {	name = "misc_pregnant"						animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnant" }
+	state = {	name = "misc_pregnant"						animation = "head_misc_pregnant_2" chance = 5 looping = no next_state = "misc_pregnant" }
+	state = {	name = "misc_pregnantFat_entry"					animation = "head_misc_pregnant_1" chance = 10 looping = no  next_state = "misc_pregnantFat" }
+	state = {	name = "misc_pregnantFat"					animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantFat" }
+	state = {	name = "misc_pregnantFat"					animation = "head_misc_pregnant_2" chance = 5 looping = no next_state = "misc_pregnantFat" }
+	state = {	name = "misc_pregnantFatDwarf_entry"				animation = "head_misc_pregnant_1" chance = 10 looping = no  next_state = "misc_pregnantFatDwarf" }
+	state = {	name = "misc_pregnantFatDwarf"					animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantFatDwarf" }
+	state = {	name = "misc_pregnantFatDwarf"					animation = "head_misc_pregnant_2" chance = 5 looping = no next_state = "misc_pregnantFatDwarf" }
+	state = {	name = "misc_pregnantSerious_entry"				animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantSerious" }
+	state = {	name = "misc_pregnantSerious"					animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantSerious" }
+	state = {	name = "misc_pregnantSerious"					animation = "head_misc_pregnant_1" chance = 5 looping = no next_state = "misc_pregnantSerious" }
+	state = {	name = "misc_pregnantSeriousFat_entry"				animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantSeriousFat" }
+	state = {	name = "misc_pregnantSeriousFat"				animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantSeriousFat" }
+	state = {	name = "misc_pregnantSeriousFat"				animation = "head_misc_pregnant_1" chance = 5 looping = no next_state = "misc_pregnantSeriousFat" }
+	state = {	name = "misc_pregnantSeriousFatDwarf_entry"			animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantSeriousFatDwarf" }
+	state = {	name = "misc_pregnantSeriousFatDwarf"				animation = "head_misc_pregnant_1" chance = 10 looping = no next_state = "misc_pregnantSeriousFatDwarf" }
+	state = {	name = "misc_pregnantSeriousFatDwarf"				animation = "head_misc_pregnant_1" chance = 5 looping = no next_state = "misc_pregnantSeriousFatDwarf" }
+
+
+	#scale = 0.5
+	#attach = { name = "eyes"					shared_pose_entity = "male_head_eyes_entity" }
+}
+

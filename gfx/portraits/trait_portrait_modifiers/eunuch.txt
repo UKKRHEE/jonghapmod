@@ -1,0 +1,18 @@
+﻿
+# Remove testicles from eunuchs
+eunuch = {
+
+    no_testicles = {
+        traits = { eunuch }
+
+        dna_modifiers = {
+            morph = {
+                mode = add
+                gene = gene_bs_eunuch
+                template = is_eunuch
+                value = 1.0
+            }
+        }
+    }
+
+}

@@ -1,0 +1,1149 @@
+﻿age_presets = {
+	age_preset_aging_primary = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 0.25 0.0 }
+			{ 0.35 0.2 }
+			{ 0.75 1.0 }
+		}
+	}
+	age_preset_aging_secondary = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 0.5 0.0 }
+			{ 0.85 0.5 }
+		}					
+	}
+	age_preset_aging_secondary_full = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 0.35 0.0 }
+			{ 0.8 1.0 }
+		}					
+	}
+	age_preset_aging_tertiary = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 0.7 0.0 }
+			{ 0.95 0.5 }
+		}					
+	}
+	age_preset_aging_hunchback = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 0.7 0.0 }
+			{ 0.95 1.0 }
+		}					
+	}
+	age_preset_aging_tertiary_reversed = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 0.7 0.0 }
+			{ 0.95 -0.5 }
+		}					
+	}
+	age_preset_aging_hsv_curve = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 0.35 0.0 }
+			{ 0.7 1.0 }
+		}
+	}
+}
+special_genes = {
+	morph_genes = {
+
+
+	gene_old_age = {
+
+		old_1 = {
+			index = 0
+			male = {
+				## Old Age ##			
+				setting = {
+					attribute = "bs_old_1"	 
+					value = { min = 0 max = 1.0 }
+				}
+				setting = {
+					attribute = "bs_old" # For beards blend shapes
+					value = { min = 0 max = 1.0 }
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	            }
+				setting = {
+					attribute = "jaw_forward"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "jaw_angle"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_corner_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_width"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_open"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_upper_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_lower_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "bs_nose_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_eye_upper_lid_size_min" 
+					value = { min = 0.0 max = 0.3 }
+				} 
+				setting = {
+					attribute = "eye_shut"	 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_tertiary
+				}
+				#setting = {
+					#attribute = "head_hunchbacked"	 
+					#value = { min = 0.25 max = 0.25 }
+					#age = age_preset_aging_hunchback
+				#}
+				#setting = {
+					#attribute = "body_hunchbacked"	 
+					#value = { min = 0.25 max = 0.25 }
+					#age = age_preset_aging_hunchback
+				#}
+				decal = {							  
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_01_diffuse.dds"
+						normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			female = {
+				## Old Age ##	
+				setting = {
+					attribute = "bs_old_1"	   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_primary
+				}
+				setting = {
+					attribute = "bs_body_breast_shape_2"	 
+					value = { min = 0 max = 1.0 }
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	                age = age_preset_aging_primary
+	            }
+				setting = {
+					attribute = "bs_nose_size_max"   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max"	
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_eye_upper_lid_size_min" 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_primary
+				} 
+				# setting = {
+				# 	attribute = "head_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				# setting = {
+				# 	attribute = "body_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				decal = {											
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_01_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			boy = male
+			girl = female
+			
+		}
+
+		old_2 = {
+			index = 1
+			male = {
+				## Old Age ##			
+				setting = {
+					attribute = "bs_old_2"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_primary
+				}
+				setting = {
+					attribute = "bs_old" # For beards blend shapes
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_primary
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	                age = age_preset_aging_primary
+	            }
+				setting = {
+					attribute = "jaw_forward"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "jaw_angle"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_corner_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_width"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_open"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_upper_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_lower_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "bs_nose_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_eye_upper_lid_size_min" 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_primary
+				} 
+				setting = {
+					attribute = "eye_shut"	 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_tertiary
+				}
+				# setting = {
+				# 	attribute = "head_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				# setting = {
+				# 	attribute = "body_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				decal = {							  
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_02_diffuse.dds"
+						normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_02_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			female = {
+				## Old Age ##	
+				setting = {
+					attribute = "bs_old_2"	   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_primary
+				}
+				setting = {
+					attribute = "bs_body_breast_shape_2"	 
+					value = { min = 0 max = 1.0 }
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	                age = age_preset_aging_primary
+	            }
+				setting = {
+					attribute = "bs_nose_size_max"   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max"	
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_eye_upper_lid_size_min" 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_primary
+				} 
+				# setting = {
+				# 	attribute = "head_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				# setting = {
+				# 	attribute = "body_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				decal = {											
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_02_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_02_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			boy = male
+			girl = female
+		}
+
+		old_3 = {
+			index = 2
+			male = {
+				## Old Age ##			
+				setting = {
+					attribute = "bs_old_3"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_primary
+				}
+				setting = {
+					attribute = "bs_old" # For beards blend shapes
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_primary
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	                age = age_preset_aging_primary
+	            }
+				setting = {
+					attribute = "jaw_forward"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "jaw_angle"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_corner_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_width"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_open"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_upper_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_lower_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "bs_nose_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "eye_shut"	 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_tertiary
+				}
+				# setting = {
+				# 	attribute = "head_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				# setting = {
+				# 	attribute = "body_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				decal = {							  
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_03_diffuse.dds"
+						normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_03_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			female = {
+				## Old Age ##	
+				setting = {
+					attribute = "bs_old_3"	   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_primary
+				}
+				setting = {
+					attribute = "bs_body_breast_shape_2"	 
+					value = { min = 0 max = 1.0 }
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	                age = age_preset_aging_primary
+	            }
+				setting = {
+					attribute = "bs_nose_size_max"   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max"	
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				# setting = {
+				# 	attribute = "head_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				# setting = {
+				# 	attribute = "body_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				decal = {											
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_03_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_03_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			boy = male
+			girl = female
+		}
+
+		old_4 = {
+			index = 3
+			male = {
+				## Old Age ##			
+				setting = {
+					attribute = "bs_old_4"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_primary
+				}
+				setting = {
+					attribute = "bs_old" # For beards blend shapes
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_primary
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	                age = age_preset_aging_primary
+	            }
+				setting = {
+					attribute = "jaw_forward"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "jaw_angle"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_corner_height"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_width"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary
+				} 
+				setting = {
+					attribute = "mouth_open"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_upper_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				setting = {
+					attribute = "mouth_lower_lip_size"	 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_tertiary_reversed
+				} 
+				# setting = {
+				# 	attribute = "bs_nose_size_max" 
+				# 	value = { min = 0 max = 1.0 }
+				# 	age = age_preset_aging_secondary
+				# } 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max" 
+					value = { min = 0 max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_eye_upper_lid_size_min" 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_primary
+				} 
+				setting = {
+					attribute = "eye_shut"	 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_tertiary
+				}
+				# setting = {
+				# 	attribute = "head_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				# setting = {
+				# 	attribute = "body_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				decal = {							  
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_04_diffuse.dds"
+						normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_04_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			female = {
+				## Old Age ##	
+				setting = {
+					attribute = "bs_old_4"	   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_primary
+				}
+				setting = {
+					attribute = "bs_body_breast_shape_2"	 
+					value = { min = 0 max = 1.0 }
+				}
+	            setting = {
+	                attribute = "bs_body_old_1"   
+	                value = { min = 0 max = 1.0 }
+	                age = age_preset_aging_primary
+	            }
+				setting = {
+					attribute = "bs_nose_size_max"   
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_ear_size_max"	
+					value = { min = 0  max = 1.0 }
+					age = age_preset_aging_secondary
+				} 
+				setting = {
+					attribute = "bs_eye_upper_lid_size_min" 
+					value = { min = 0.0 max = 0.3 }
+					age = age_preset_aging_primary
+				} 
+				# setting = {
+				# 	attribute = "head_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				# setting = {
+				# 	attribute = "body_hunchbacked"	 
+				# 	value = { min = 0.5 max = 0.5 }
+				# 	age = age_preset_aging_hunchback
+				# }
+				decal = {											
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_04_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_04_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+					priority = 0
+				}
+	            decal = {                             
+	                body_part = torso
+	                textures = {
+	                    diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+	                    normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+	                }
+	                blend_modes = {              #overlay/replace/hard_light/multiply
+	                    diffuse = multiply 
+	                    normal = overlay
+	                    # properties = 
+	                }
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.1  0.0 }
+						{ 0.9   1.0 }
+					}
+	                priority = 0
+	            }
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			boy = male
+			girl = female
+		}
+
+	   old_beauty_1 = {
+			index = 4
+			generic = no # Can't be selected unless the character has a trait with forced_portrait_age_index matching this
+			male = {
+				## Old age ##
+				setting = {
+					attribute = "bs_old_2"	 
+					value = { min = 0 max = 1.0 }
+				}
+				setting = {
+					attribute = "bs_old" # For beards blend shapes
+					value = { min = 0 max = 1.0 }
+				}
+				decal = {											
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_02_diffuse.dds"
+						normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_02_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.8   1.0 }
+					}
+					priority = 0
+				}
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			female = {
+				## Old age ##
+				setting = {
+					attribute = "bs_old_2"	 
+					value = { min = 0 max = 1.0 }
+				}
+				setting = {
+					attribute = "bs_body_breast_shape_2"	 
+					value = { min = 0 max = 1.0 }
+				}
+				decal = {											
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_02_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_02_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = multiply 
+						normal = overlay
+						# properties = 
+					}
+					alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						{ 0.0  0.0 }
+						{ 0.8   1.0 }
+					}
+					priority = 0
+				}
+				hair_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -1.0 0.3 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				eye_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.5 0.0 } } 
+					}
+					age = age_preset_aging_hsv_curve
+				}
+				skin_hsv_shift_curve = {
+					curve = {
+						{ 0.0   { 0.0 -0.1 -0.02 } }
+					}
+					age = age_preset_aging_hsv_curve
+				}
+			}
+			boy = male
+			girl = female
+		}
+
+		no_aging = {
+			index = 5
+		}
+	}
+}
+}

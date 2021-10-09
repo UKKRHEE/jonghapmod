@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ carn_can_no_longer_work_as_prostitute_tooltip: "[carn_prostitute.GetShortUIName|U]无法继续做娼妓了"
+ carn_prostitution_random_events.0001.notification: "卖淫：技巧提升"
+ carn_prostitution_random_events.0002.notification: "卖淫：仇敌诽谤你"
+ carn_prostitution_random_events.0003.notification: "卖淫：[ROOT.Char.GetFaith.PriestNeuterPlural|U]谴责你"
+ carn_prostitution_random_events.0005.notification: "卖淫：客户给予高额小费"
+ carn_prostitution_random_events.0011.t: "卖淫：诱人的提议"
+ carn_prostitution_random_events.0011.desc: "我正以妩媚的姿态躺在我的卧室里，突然发现下一个客人正是[client.Custom2('MyCharacterIntroduction', ROOT.Char)]。\n\n[client.GetSheHe]死死盯着我的身体，毫不掩饰自己的淫欲，随后向我保证我的服务将会得到丰厚的报酬……"
+ carn_prostitution_random_events.0011.a: "我怎能拒绝如此的机会呢？"
+ carn_prostitution_random_events.0011.b: "我想我必须拒绝。"
+ carn_prostitution_random_events.0011.c: "这可能会成为重大的丑闻……"

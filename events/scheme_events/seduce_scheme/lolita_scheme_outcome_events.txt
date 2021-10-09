@@ -1,0 +1,1621 @@
+﻿namespace = seduce_outcome
+
+#조교 성공시 스트레스 보상
+scripted_effect lolita_seduce_success_stress_impact = {
+	if = {			
+		limit = { $STRESS_LOSS_IMPACT$ = 1 }
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			lustful = minor_stress_impact_loss
+			sadistic = minor_stress_impact_loss
+			chaste = medium_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+	}
+	else_if = {
+		limit = { $STRESS_LOSS_IMPACT$ = 2 }
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+			chaste = major_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+	}
+	else_if = {
+		limit = { $STRESS_LOSS_IMPACT$ = 3 }
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = major_stress_impact_loss
+			sadistic = major_stress_impact_loss
+			chaste = major_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+		}
+	}
+	else_if = {
+		limit = { $STRESS_LOSS_IMPACT$ = 4 }
+		stress_impact = {
+			base = major_stress_impact_loss
+			lustful = massive_stress_impact_loss
+			sadistic = massive_stress_impact_loss
+			chaste = medium_stress_impact_gain
+			compassionate = medium_stress_impact_gain
+		}
+	}
+}
+
+
+#Target is not your ward
+seduce_outcome.0007 = {
+	type = character_event
+	title = seduce_outcome.0007.t
+	desc = seduce_outcome.0007.desc
+	
+	theme = seduce_scheme
+	left_portrait = scope:target
+	#No scheme, no widget
+
+	option = {
+		name = seduce_outcome.0007.a
+		stress_impact = { base = miniscule_stress_impact_gain }
+	}
+}
+
+
+# 이상 성욕자 즉각 거절
+seduce_outcome.8201 = {
+	type = character_event
+	title = seduce_outcome.8201.t
+	desc = seduce_outcome.8201.desc
+	theme = seduce_scheme
+	left_portrait = scope:owner
+
+	trigger = {
+		exists = scope:scheme
+	}
+
+	immediate = {
+	}
+
+	option = { #Leave me be!!
+		name = seduce_outcome.8201.a
+		reverse_add_opinion = {
+			target = scope:owner
+			modifier = refusal_opinion
+			opinion = -20
+		}
+		seduction_block_character_effect = { CHARACTER = scope:owner }
+		scope:owner = {
+			trigger_event = seduce_outcome.8202
+		}
+	}
+}
+
+
+seduce_outcome.8202 = {
+	type = character_event
+	title = seduce_outcome.8202.t
+	desc = seduce_outcome.8202.desc
+	
+	theme = seduce_scheme
+	left_portrait = scope:target
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	immediate = {
+		scope:target = {
+			if = {
+				limit = { root = { is_ai = no }	}
+				assign_quirk_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = seduce_outcome.8202.a
+		custom_tooltip = seduce_outcome.blocked_from_grooming
+		scope:target = { seduction_block_character_effect = { CHARACTER = scope:owner } }
+		remove_relation_ward = scope:target
+		stress_impact = { base = minor_stress_impact_gain }
+		if = {
+			limit = { exists = scope:scheme }
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		
+		reverse_add_opinion = {
+			target = scope:target
+			modifier = respect_opinion
+			opinion = -25
+		}
+	}
+}
+
+
+##################################################################
+##################################################################
+#LOLITA Seduction of close family member
+seduce_outcome.7701 = {
+	type = character_event
+	title = seduce_outcome.7701.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:target }
+				}
+				desc = seduce_outcome.7701.desc_illigal
+			}
+			desc = seduce_outcome.7701.desc_not_illigal
+		}
+	}
+	
+	theme = seduce_scheme
+	override_background = {
+		event_background = bedroom
+	}
+	left_portrait = {
+		character = scope:owner
+		
+		##########################################################################
+		# Triggered animation trigger ensures the animation only plays for characters 11 and older
+		# The reason for this is obvious, and animations won't work by design for those under 11 even if you remove the trigger
+		# Triggered animations work by finding the first valid triggered animation, top to bottom
+		# In this case sex_missionary is just the most recently made animation, and proobably the best in my opinon
+		# I tried to make a animation that rotates through all the animations called sex_rotation but it doesn't work
+		# I suspect that event animations won't cycle through multiple states like idle animations do
+		# The first triggered animation plays if it is a heterosexual couple
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation plays if the characters are both male
+		# sex_missionary is also the primary sex animation for gay men who are penetrating
+		# The only difference is that the male being penetrated has to use hom_sex
+		##########################################################################
+
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_male = yes }
+				scope:carn_sex_target = { is_male = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Third triggered animation plays if the characters are both female
+		# For Female Characters hom_sex and hom_sex_2 is a scissoring animation (which is really hard to animate)
+		# In any lesbian sex animation you need to have one character using hom_sex and the other using hom_sex_2
+		# Otherwise both will simply overlap each other
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_female = yes }
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex_2
+		}
+		
+		##########################################################################
+		# Final triggered animation is a fallback animation if one or both character is under 11
+		# This is necessary since by default the game defines 16 as adult for gameplay
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation
+		}
+		
+		##########################################################################
+		# Outfit tags I added so that characters in events aren't wearing clothes
+		# Self explanatory, no_cloak removes cloaks and furs, no_hat removes headgear, no_pants removes any legwear, topless removes primary outfit
+		# Doesn't need to be triggered since characters who are 16 an 17 will simply be in their bedchamber outfit
+		##########################################################################
+		
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		character = scope:target
+		##########################################################################
+		# First triggered animation, if opposite sex couple it plays the corresponding animation for the opposite gender
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation, if same sex couple it plays the corresponding animation
+		# If it is a same sex male couple the correspoonding same sex animation to sex_missionary is hom_sex
+		# If it is a same sex female couple the correspoonding same sex animation to hom_sex_2 is also hom_sex
+		# Therefore only one triggered animation is required for both in this case
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_same_as = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex
+		}
+		
+		##########################################################################
+		# Fallback Animation
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation_left
+		}
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	
+	trigger = {
+		has_relation_ward = scope:target
+		is_close_or_extended_family_of = scope:target
+	}
+
+	immediate = {
+		scope:owner = { lolita_undress_character_effect = yes }
+		scope:target = { lolita_undress_character_effect = yes }
+		scope:target = {
+			if = {
+				limit = { root = { is_ai = no }	}
+				assign_quirk_effect = yes
+			}
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		owner_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #Go for both consummation and relationship
+		trigger = { seduce_outcome_become_lovers_trigger = yes } #Enabled if a player target said "lovers please" or target is AI
+		name = seduce_outcome.7701.a
+		show_as_tooltip = { give_mutual_hook_secret_friends = yes }
+		owner_seduce_outcome_become_lovers_option_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 2 }
+		add_prestige = medium_prestige_value #150
+		add_intrigue_lifestyle_xp = medium_lifestyle_xp
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #I'm just here for the fun time!
+		name = seduce_outcome.7701.b
+		trigger = { seduce_outcome_just_sex_trigger = yes } #Blocks this option for AI owners if the target is a player who said "lovers please"
+		owner_seduce_outcome_just_sex_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 1 }
+		add_prestige = minor_prestige_value # 75
+		add_intrigue_lifestyle_xp = minor_lifestyle_xp
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_vengefulness = 0.25
+			}
+		}
+	}
+
+	after = {
+		scope:target = {
+			trigger_event = seduce_outcome.8701
+		}
+		show_as_tooltip = {
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		scope:owner = { lolita_dress_character_effect = yes }
+		scope:target = { lolita_dress_character_effect = yes }
+	}
+}
+
+#LOLITA Seduction of Royal Family  
+seduce_outcome.7702 = {
+	type = character_event
+	title = seduce_outcome.7702.t
+	desc = seduce_outcome.7702.desc
+
+	theme = seduce_scheme
+	override_background = {
+		event_background = bedroom
+	}
+	left_portrait = {
+		character = scope:owner
+		
+		##########################################################################
+		# Triggered animation trigger ensures the animation only plays for characters 11 and older
+		# The reason for this is obvious, and animations won't work by design for those under 11 even if you remove the trigger
+		# Triggered animations work by finding the first valid triggered animation, top to bottom
+		# In this case sex_missionary is just the most recently made animation, and proobably the best in my opinon
+		# I tried to make a animation that rotates through all the animations called sex_rotation but it doesn't work
+		# I suspect that event animations won't cycle through multiple states like idle animations do
+		# The first triggered animation plays if it is a heterosexual couple
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation plays if the characters are both male
+		# sex_missionary is also the primary sex animation for gay men who are penetrating
+		# The only difference is that the male being penetrated has to use hom_sex
+		##########################################################################
+
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_male = yes }
+				scope:carn_sex_target = { is_male = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Third triggered animation plays if the characters are both female
+		# For Female Characters hom_sex and hom_sex_2 is a scissoring animation (which is really hard to animate)
+		# In any lesbian sex animation you need to have one character using hom_sex and the other using hom_sex_2
+		# Otherwise both will simply overlap each other
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_female = yes }
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex_2
+		}
+		
+		##########################################################################
+		# Final triggered animation is a fallback animation if one or both character is under 11
+		# This is necessary since by default the game defines 16 as adult for gameplay
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation
+		}
+		
+		##########################################################################
+		# Outfit tags I added so that characters in events aren't wearing clothes
+		# Self explanatory, no_cloak removes cloaks and furs, no_hat removes headgear, no_pants removes any legwear, topless removes primary outfit
+		# Doesn't need to be triggered since characters who are 16 an 17 will simply be in their bedchamber outfit
+		##########################################################################
+		
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		character = scope:target
+		##########################################################################
+		# First triggered animation, if opposite sex couple it plays the corresponding animation for the opposite gender
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation, if same sex couple it plays the corresponding animation
+		# If it is a same sex male couple the correspoonding same sex animation to sex_missionary is hom_sex
+		# If it is a same sex female couple the correspoonding same sex animation to hom_sex_2 is also hom_sex
+		# Therefore only one triggered animation is required for both in this case
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_same_as = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex
+		}
+		
+		##########################################################################
+		# Fallback Animation
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation_left
+		}
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	
+	trigger = {
+		has_relation_ward = scope:target
+		NOT = { is_owner_targets_liege_trigger = { TARGET = scope:target OWNER = scope:owner } }
+		scope:target = {			
+			#여왕이거나 공주이면
+			OR  = {
+				primary_title.tier >= tier_kingdom
+				any_parent = { primary_title.tier >= tier_kingdom }
+			}
+		}
+	}
+
+	immediate = {
+		scope:owner = { lolita_undress_character_effect = yes }
+		scope:target = { lolita_undress_character_effect = yes }
+		scope:target = {
+			if = {
+				limit = { root = { is_ai = no }	}
+				assign_quirk_effect = yes
+			}
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		owner_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #Go for both consummation and relationship
+		trigger = { seduce_outcome_become_lovers_trigger = yes } #Enabled if a player target said "lovers please" or target is AI
+		name = seduce_outcome.7702.a
+		show_as_tooltip = { give_mutual_hook_secret_friends = yes }
+		owner_seduce_outcome_become_lovers_option_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 4 }
+		add_prestige = massive_prestige_value #750
+		add_intrigue_lifestyle_xp = massive_lifestyle_xp #500
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #I'm just here for the fun time!
+		name = seduce_outcome.7702.b
+		trigger = { seduce_outcome_just_sex_trigger = yes } #Blocks this option for AI owners if the target is a player who said "lovers please"
+		owner_seduce_outcome_just_sex_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 3 }
+		add_prestige = major_prestige_value #350
+		add_intrigue_lifestyle_xp = major_lifestyle_xp #300
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_vengefulness = 0.25
+			}
+		}
+	}
+
+	after = {
+		scope:target = {
+			trigger_event = seduce_outcome.8702
+		}
+		show_as_tooltip = {
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		scope:owner = { lolita_dress_character_effect = yes }
+		scope:target = { lolita_dress_character_effect = yes }
+	}
+}
+
+#LOLITA Seduction of 외부 영주의 딸
+seduce_outcome.7703 = {
+	type = character_event
+	title = seduce_outcome.7703.t
+	desc = seduce_outcome.7703.desc
+	
+	theme = seduce_scheme
+	override_background = {
+		event_background = study
+	}
+	left_portrait = {
+		character = scope:owner
+		
+		##########################################################################
+		# Triggered animation trigger ensures the animation only plays for characters 11 and older
+		# The reason for this is obvious, and animations won't work by design for those under 11 even if you remove the trigger
+		# Triggered animations work by finding the first valid triggered animation, top to bottom
+		# In this case sex_missionary is just the most recently made animation, and proobably the best in my opinon
+		# I tried to make a animation that rotates through all the animations called sex_rotation but it doesn't work
+		# I suspect that event animations won't cycle through multiple states like idle animations do
+		# The first triggered animation plays if it is a heterosexual couple
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation plays if the characters are both male
+		# sex_missionary is also the primary sex animation for gay men who are penetrating
+		# The only difference is that the male being penetrated has to use hom_sex
+		##########################################################################
+
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_male = yes }
+				scope:carn_sex_target = { is_male = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Third triggered animation plays if the characters are both female
+		# For Female Characters hom_sex and hom_sex_2 is a scissoring animation (which is really hard to animate)
+		# In any lesbian sex animation you need to have one character using hom_sex and the other using hom_sex_2
+		# Otherwise both will simply overlap each other
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_female = yes }
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex_2
+		}
+		
+		##########################################################################
+		# Final triggered animation is a fallback animation if one or both character is under 11
+		# This is necessary since by default the game defines 16 as adult for gameplay
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation
+		}
+		
+		##########################################################################
+		# Outfit tags I added so that characters in events aren't wearing clothes
+		# Self explanatory, no_cloak removes cloaks and furs, no_hat removes headgear, no_pants removes any legwear, topless removes primary outfit
+		# Doesn't need to be triggered since characters who are 16 an 17 will simply be in their bedchamber outfit
+		##########################################################################
+		
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		character = scope:target
+		##########################################################################
+		# First triggered animation, if opposite sex couple it plays the corresponding animation for the opposite gender
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation, if same sex couple it plays the corresponding animation
+		# If it is a same sex male couple the correspoonding same sex animation to sex_missionary is hom_sex
+		# If it is a same sex female couple the correspoonding same sex animation to hom_sex_2 is also hom_sex
+		# Therefore only one triggered animation is required for both in this case
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_same_as = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex
+		}
+		
+		##########################################################################
+		# Fallback Animation
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation_left
+		}
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	
+	trigger = {
+		has_relation_ward = scope:target
+		NOT = { is_owner_targets_liege_trigger = { TARGET = scope:target OWNER = scope:owner } }
+		scope:target = {			
+			#백작이상이거나 그 딸이면
+			OR  = {
+				primary_title.tier >= tier_county
+				any_parent = { primary_title.tier >= tier_county }
+			}
+		}
+	}
+
+	immediate = {
+		scope:owner = { lolita_undress_character_effect = yes }
+		scope:target = { lolita_undress_character_effect = yes }
+		scope:target = {
+			if = {
+				limit = { root = { is_ai = no }	}
+				assign_quirk_effect = yes
+			}
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		owner_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #Go for both consummation and relationship
+		trigger = { seduce_outcome_become_lovers_trigger = yes } #Enabled if a player target said "lovers please" or target is AI
+		name = seduce_outcome.7703.a
+		show_as_tooltip = { give_mutual_hook_secret_friends = yes }
+		owner_seduce_outcome_become_lovers_option_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 3 }
+		add_prestige = major_prestige_value #350
+		add_intrigue_lifestyle_xp = major_lifestyle_xp #300
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #I'm just here for the fun time!
+		name = seduce_outcome.7703.b
+		trigger = { seduce_outcome_just_sex_trigger = yes } #Blocks this option for AI owners if the target is a player who said "lovers please"
+		owner_seduce_outcome_just_sex_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 2 }
+		add_prestige = medium_prestige_value #150
+		add_intrigue_lifestyle_xp = medium_lifestyle_xp #100
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_vengefulness = 0.25
+			}
+		}
+	}
+
+	after = {
+		scope:target = {
+			trigger_event = seduce_outcome.8703
+		}
+		show_as_tooltip = {
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		scope:owner = { lolita_dress_character_effect = yes }
+		scope:target = { lolita_dress_character_effect = yes }
+	}
+}
+
+#LOLITA Seduction of 내 봉신 영주의 딸
+seduce_outcome.7704 = {
+	type = character_event
+	title = seduce_outcome.7704.t
+	desc = seduce_outcome.7704.desc
+	
+	theme = seduce_scheme
+	override_background = {
+		event_background = armory
+	}
+	left_portrait = {
+		character = scope:owner
+		
+		##########################################################################
+		# Triggered animation trigger ensures the animation only plays for characters 11 and older
+		# The reason for this is obvious, and animations won't work by design for those under 11 even if you remove the trigger
+		# Triggered animations work by finding the first valid triggered animation, top to bottom
+		# In this case sex_missionary is just the most recently made animation, and proobably the best in my opinon
+		# I tried to make a animation that rotates through all the animations called sex_rotation but it doesn't work
+		# I suspect that event animations won't cycle through multiple states like idle animations do
+		# The first triggered animation plays if it is a heterosexual couple
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation plays if the characters are both male
+		# sex_missionary is also the primary sex animation for gay men who are penetrating
+		# The only difference is that the male being penetrated has to use hom_sex
+		##########################################################################
+
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_male = yes }
+				scope:carn_sex_target = { is_male = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Third triggered animation plays if the characters are both female
+		# For Female Characters hom_sex and hom_sex_2 is a scissoring animation (which is really hard to animate)
+		# In any lesbian sex animation you need to have one character using hom_sex and the other using hom_sex_2
+		# Otherwise both will simply overlap each other
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_female = yes }
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex_2
+		}
+		
+		##########################################################################
+		# Final triggered animation is a fallback animation if one or both character is under 11
+		# This is necessary since by default the game defines 16 as adult for gameplay
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation
+		}
+		
+		##########################################################################
+		# Outfit tags I added so that characters in events aren't wearing clothes
+		# Self explanatory, no_cloak removes cloaks and furs, no_hat removes headgear, no_pants removes any legwear, topless removes primary outfit
+		# Doesn't need to be triggered since characters who are 16 an 17 will simply be in their bedchamber outfit
+		##########################################################################
+		
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		character = scope:target
+		##########################################################################
+		# First triggered animation, if opposite sex couple it plays the corresponding animation for the opposite gender
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation, if same sex couple it plays the corresponding animation
+		# If it is a same sex male couple the correspoonding same sex animation to sex_missionary is hom_sex
+		# If it is a same sex female couple the correspoonding same sex animation to hom_sex_2 is also hom_sex
+		# Therefore only one triggered animation is required for both in this case
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_same_as = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex
+		}
+		
+		##########################################################################
+		# Fallback Animation
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation_left
+		}
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	
+	trigger = {
+		has_relation_ward = scope:target
+		is_owner_targets_liege_trigger = { TARGET = scope:target OWNER = scope:owner }
+		scope:target = {			
+			#남작이상이거나 그 딸이면
+			OR  = {
+				primary_title.tier >= tier_barony
+				any_parent = { primary_title.tier >= tier_barony }
+			}
+		}
+	}
+
+	immediate = {
+		scope:owner = { lolita_undress_character_effect = yes }
+		scope:target = { lolita_undress_character_effect = yes }
+		scope:target = {
+			if = {
+				limit = { root = { is_ai = no }	}
+				assign_quirk_effect = yes
+			}
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		owner_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #Go for both consummation and relationship
+		trigger = { seduce_outcome_become_lovers_trigger = yes } #Enabled if a player target said "lovers please" or target is AI
+		name = seduce_outcome.7704.a
+		show_as_tooltip = { give_mutual_hook_secret_friends = yes }
+		owner_seduce_outcome_become_lovers_option_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 2 }
+		add_prestige = minor_prestige_value #75
+		add_intrigue_lifestyle_xp = minor_lifestyle_xp #50
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #I'm just here for the fun time!
+		name = seduce_outcome.7704.b
+		trigger = { seduce_outcome_just_sex_trigger = yes } #Blocks this option for AI owners if the target is a player who said "lovers please"
+		owner_seduce_outcome_just_sex_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 1 }
+		add_prestige = miniscule_prestige_value #35
+		add_intrigue_lifestyle_xp = miniscule_lifestyle_xp #25
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_vengefulness = 0.25
+			}
+		}
+	}
+
+	after = {
+		scope:target = {
+			trigger_event = seduce_outcome.8704
+		}
+		show_as_tooltip = {
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		scope:owner = { lolita_dress_character_effect = yes }
+		scope:target = { lolita_dress_character_effect = yes }
+	}
+}
+
+
+#LOLITA Seduction of 귀족 가문
+seduce_outcome.7705 = {
+	type = character_event
+	title = seduce_outcome.7705.t
+	desc = seduce_outcome.7705.desc
+	
+	theme = seduce_scheme
+	override_background = {
+		event_background = temple
+	}
+	left_portrait = {
+		character = scope:owner
+		
+		##########################################################################
+		# Triggered animation trigger ensures the animation only plays for characters 11 and older
+		# The reason for this is obvious, and animations won't work by design for those under 11 even if you remove the trigger
+		# Triggered animations work by finding the first valid triggered animation, top to bottom
+		# In this case sex_missionary is just the most recently made animation, and proobably the best in my opinon
+		# I tried to make a animation that rotates through all the animations called sex_rotation but it doesn't work
+		# I suspect that event animations won't cycle through multiple states like idle animations do
+		# The first triggered animation plays if it is a heterosexual couple
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation plays if the characters are both male
+		# sex_missionary is also the primary sex animation for gay men who are penetrating
+		# The only difference is that the male being penetrated has to use hom_sex
+		##########################################################################
+
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_male = yes }
+				scope:carn_sex_target = { is_male = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Third triggered animation plays if the characters are both female
+		# For Female Characters hom_sex and hom_sex_2 is a scissoring animation (which is really hard to animate)
+		# In any lesbian sex animation you need to have one character using hom_sex and the other using hom_sex_2
+		# Otherwise both will simply overlap each other
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_female = yes }
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex_2
+		}
+		
+		##########################################################################
+		# Final triggered animation is a fallback animation if one or both character is under 11
+		# This is necessary since by default the game defines 16 as adult for gameplay
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation
+		}
+		
+		##########################################################################
+		# Outfit tags I added so that characters in events aren't wearing clothes
+		# Self explanatory, no_cloak removes cloaks and furs, no_hat removes headgear, no_pants removes any legwear, topless removes primary outfit
+		# Doesn't need to be triggered since characters who are 16 an 17 will simply be in their bedchamber outfit
+		##########################################################################
+		
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		character = scope:target
+		##########################################################################
+		# First triggered animation, if opposite sex couple it plays the corresponding animation for the opposite gender
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex_missionary
+		}
+		
+		##########################################################################
+		# Second triggered animation, if same sex couple it plays the corresponding animation
+		# If it is a same sex male couple the correspoonding same sex animation to sex_missionary is hom_sex
+		# If it is a same sex female couple the correspoonding same sex animation to hom_sex_2 is also hom_sex
+		# Therefore only one triggered animation is required for both in this case
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_same_as = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex
+		}
+		
+		##########################################################################
+		# Fallback Animation
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation_left
+		}
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	
+	trigger = {
+		has_relation_ward = scope:target
+		NOT =  { is_close_or_extended_family_of = scope:target } #친족이 아닐때
+		scope:target = { is_lowborn = no }
+	}
+
+	immediate = {
+		scope:owner = { lolita_undress_character_effect = yes }
+		scope:target = { lolita_undress_character_effect = yes }
+		scope:target = {
+			if = {
+				limit = { root = { is_ai = no }	}
+				assign_quirk_effect = yes
+			}
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		owner_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #Go for both consummation and relationship
+		trigger = { seduce_outcome_become_lovers_trigger = yes } #Enabled if a player target said "lovers please" or target is AI
+		name = seduce_outcome.7705.a
+		show_as_tooltip = { give_mutual_hook_secret_friends = yes }
+		owner_seduce_outcome_become_lovers_option_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 2 }
+		add_prestige = miniscule_prestige_value #35
+		add_intrigue_lifestyle_xp = miniscule_lifestyle_xp #25
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #I'm just here for the fun time!
+		name = seduce_outcome.7705.b
+		trigger = { seduce_outcome_just_sex_trigger = yes } #Blocks this option for AI owners if the target is a player who said "lovers please"
+		owner_seduce_outcome_just_sex_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 1 }
+		add_prestige = 15
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_vengefulness = 0.25
+			}
+		}
+	}
+
+	after = {
+		scope:target = {
+			trigger_event = seduce_outcome.8705
+		}
+		show_as_tooltip = {
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		scope:owner = { lolita_dress_character_effect = yes }
+		scope:target = { lolita_dress_character_effect = yes }
+	}
+}
+
+#LOLITA Seduction of 평민
+seduce_outcome.7706 = {
+	type = character_event
+	title = seduce_outcome.7706.t
+	desc = seduce_outcome.7706.desc
+	
+	theme = seduce_scheme
+	override_background = {
+		event_background = alley_night
+	}
+	left_portrait = {
+		character = scope:owner
+		
+		##########################################################################
+		# Triggered animation trigger ensures the animation only plays for characters 11 and older
+		# The reason for this is obvious, and animations won't work by design for those under 11 even if you remove the trigger
+		# Triggered animations work by finding the first valid triggered animation, top to bottom
+		# In this case sex_missionary is just the most recently made animation, and proobably the best in my opinon
+		# I tried to make a animation that rotates through all the animations called sex_rotation but it doesn't work
+		# I suspect that event animations won't cycle through multiple states like idle animations do
+		# The first triggered animation plays if it is a heterosexual couple
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex
+		}
+		
+		##########################################################################
+		# Second triggered animation plays if the characters are both male
+		# sex_missionary is also the primary sex animation for gay men who are penetrating
+		# The only difference is that the male being penetrated has to use hom_sex
+		##########################################################################
+
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_male = yes }
+				scope:carn_sex_target = { is_male = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex
+		}
+		
+		##########################################################################
+		# Third triggered animation plays if the characters are both female
+		# For Female Characters hom_sex and hom_sex_2 is a scissoring animation (which is really hard to animate)
+		# In any lesbian sex animation you need to have one character using hom_sex and the other using hom_sex_2
+		# Otherwise both will simply overlap each other
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_female = yes }
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex_2
+		}
+		
+		##########################################################################
+		# Final triggered animation is a fallback animation if one or both character is under 11
+		# This is necessary since by default the game defines 16 as adult for gameplay
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation
+		}
+		
+		##########################################################################
+		# Outfit tags I added so that characters in events aren't wearing clothes
+		# Self explanatory, no_cloak removes cloaks and furs, no_hat removes headgear, no_pants removes any legwear, topless removes primary outfit
+		# Doesn't need to be triggered since characters who are 16 an 17 will simply be in their bedchamber outfit
+		##########################################################################
+		
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		character = scope:target
+		##########################################################################
+		# First triggered animation, if opposite sex couple it plays the corresponding animation for the opposite gender
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_opposite_of = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = sex
+		}
+		
+		##########################################################################
+		# Second triggered animation, if same sex couple it plays the corresponding animation
+		# If it is a same sex male couple the correspoonding same sex animation to sex_missionary is hom_sex
+		# If it is a same sex female couple the correspoonding same sex animation to hom_sex_2 is also hom_sex
+		# Therefore only one triggered animation is required for both in this case
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { sex_same_as = scope:carn_sex_target }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
+			}
+			animation = hom_sex
+		}
+		
+		##########################################################################
+		# Fallback Animation
+		##########################################################################
+		
+		triggered_animation = {
+			trigger = {
+				scope:carn_sex_player = { is_adult = yes }
+				scope:carn_sex_target = { is_adult = yes }
+			}
+			animation = flirtation_left 
+		}
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	
+	trigger = {
+		has_relation_ward = scope:target
+		NOT =  { is_close_or_extended_family_of = scope:target } #친족이 아닐때
+		scope:target = { is_lowborn = yes }
+	}
+
+	immediate = {
+		scope:owner = { lolita_undress_character_effect = yes }
+		scope:target = { lolita_undress_character_effect = yes }
+		scope:target = {
+			if = {
+				limit = { root = { is_ai = no }	}
+				assign_quirk_effect = yes
+			}
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		owner_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #Go for both consummation and relationship
+		trigger = { seduce_outcome_become_lovers_trigger = yes } #Enabled if a player target said "lovers please" or target is AI
+		name = seduce_outcome.7706.a
+		show_as_tooltip = { give_mutual_hook_secret_friends = yes }
+		owner_seduce_outcome_become_lovers_option_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 1 }
+		add_prestige = 15
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #I'm just here for the fun time!
+		name = seduce_outcome.7706.b
+		trigger = { seduce_outcome_just_sex_trigger = yes } #Blocks this option for AI owners if the target is a player who said "lovers please"
+		owner_seduce_outcome_just_sex_effects = yes
+		lolita_seduce_success_stress_impact = { STRESS_LOSS_IMPACT = 1 }
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_greed = 0.25
+				ai_vengefulness = 0.25
+			}
+		}
+	}
+
+	after = {
+		scope:target = {
+			trigger_event = seduce_outcome.8706
+		}
+		show_as_tooltip = {
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+		scope:owner = { lolita_dress_character_effect = yes }
+		scope:target = { lolita_dress_character_effect = yes }
+	}
+}
+
+
+###################################
+###################################
+#LOLITA Seduction of close family member
+seduce_outcome.8701 = {
+	type = character_event
+	title = seduce_outcome.8701.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:owner }
+				}
+				desc = seduce_outcome.8701.desc_illigal
+			}
+			desc = seduce_outcome.8701.desc_not_illigal
+		}
+	}
+	
+	theme = seduce_scheme
+	left_portrait = scope:owner
+
+	immediate = {
+		scope:owner = {
+			assign_quirk_effect = yes
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		target_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #We went for both consummation and relationship
+		name = seduce_outcome.8701.a
+		trigger = { scope:owner = { has_character_flag = consummation_and_relationship } }
+
+		set_relation_lover_through_seduction_effect = {
+			CHARACTER = scope:owner
+		}
+		give_mutual_hook_secret_friends = yes
+	}
+
+	option = { #We're just here for the fun time!
+		name = seduce_outcome.8701.b
+		trigger = { scope:owner = { NOT = { has_character_flag = consummation_and_relationship } } }
+
+		scope:scheme = {
+			end_scheme = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = { scope:owner = { has_character_flag = consummation_and_relationship } }
+			scope:owner = { remove_character_flag = consummation_and_relationship }
+		}
+	}
+}
+
+##LOLITA Seduction of Royal Family
+seduce_outcome.8702 = {
+	type = character_event
+	title = seduce_outcome.8702.t
+	desc = seduce_outcome.8702.desc
+
+	theme = seduce_scheme
+	left_portrait = scope:owner
+
+	immediate = {
+		scope:owner = {
+			assign_quirk_effect = yes
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		target_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #We went for both consummation and relationship
+		name = seduce_outcome.8702.a
+		trigger = { scope:owner = { has_character_flag = consummation_and_relationship } }
+
+		set_relation_lover_through_seduction_effect = {
+			CHARACTER = scope:owner
+		}
+		give_mutual_hook_secret_friends = yes
+	}
+
+	option = { #We're just here for the fun time!
+		name = seduce_outcome.8702.b
+		trigger = { scope:owner = { NOT = { has_character_flag = consummation_and_relationship } } }
+
+		scope:scheme = {
+			end_scheme = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = { scope:owner = { has_character_flag = consummation_and_relationship } }
+			scope:owner = { remove_character_flag = consummation_and_relationship }
+		}
+	}
+}
+
+#LOLITA Seduction of 외부 영주의 딸
+seduce_outcome.8703 = {
+	type = character_event
+	title = seduce_outcome.8703.t
+	desc = seduce_outcome.8703.desc
+
+	theme = seduce_scheme
+	left_portrait = scope:owner
+
+	immediate = {
+		scope:owner = {
+			assign_quirk_effect = yes
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		target_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #We went for both consummation and relationship
+		name = seduce_outcome.8703.a
+		trigger = { scope:owner = { has_character_flag = consummation_and_relationship } }
+
+		set_relation_lover_through_seduction_effect = {
+			CHARACTER = scope:owner
+		}
+		give_mutual_hook_secret_friends = yes
+	}
+
+	option = { #We're just here for the fun time!
+		name = seduce_outcome.8703.b
+		trigger = { scope:owner = { NOT = { has_character_flag = consummation_and_relationship } } }
+
+		scope:scheme = {
+			end_scheme = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = { scope:owner = { has_character_flag = consummation_and_relationship } }
+			scope:owner = { remove_character_flag = consummation_and_relationship }
+		}
+	}
+}
+
+#LOLITA Seduction of 내 봉신 영주의 딸
+seduce_outcome.8704 = {
+	type = character_event
+	title = seduce_outcome.8704.t
+	desc = seduce_outcome.8704.desc
+
+	theme = seduce_scheme
+	left_portrait = scope:owner
+
+	immediate = {
+		scope:owner = {
+			assign_quirk_effect = yes
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		target_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #We went for both consummation and relationship
+		name = seduce_outcome.8704.a
+		trigger = { scope:owner = { has_character_flag = consummation_and_relationship } }
+
+		set_relation_lover_through_seduction_effect = {
+			CHARACTER = scope:owner
+		}
+		give_mutual_hook_secret_friends = yes
+	}
+
+	option = { #We're just here for the fun time!
+		name = seduce_outcome.8704.b
+		trigger = { scope:owner = { NOT = { has_character_flag = consummation_and_relationship } } }
+
+		scope:scheme = {
+			end_scheme = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = { scope:owner = { has_character_flag = consummation_and_relationship } }
+			scope:owner = { remove_character_flag = consummation_and_relationship }
+		}
+	}
+}
+
+#LOLITA Seduction of 귀족 가문
+seduce_outcome.8705 = {
+	type = character_event
+	title = seduce_outcome.8705.t
+	desc = seduce_outcome.8705.desc
+
+	theme = seduce_scheme
+	left_portrait = scope:owner
+
+	immediate = {
+		scope:owner = {
+			assign_quirk_effect = yes
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		target_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #We went for both consummation and relationship
+		name = seduce_outcome.8705.a
+		trigger = { scope:owner = { has_character_flag = consummation_and_relationship } }
+
+		set_relation_lover_through_seduction_effect = {
+			CHARACTER = scope:owner
+		}
+		give_mutual_hook_secret_friends = yes
+	}
+
+	option = { #We're just here for the fun time!
+		name = seduce_outcome.8705.b
+		trigger = { scope:owner = { NOT = { has_character_flag = consummation_and_relationship } } }
+
+		scope:scheme = {
+			end_scheme = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = { scope:owner = { has_character_flag = consummation_and_relationship } }
+			scope:owner = { remove_character_flag = consummation_and_relationship }
+		}
+	}
+}
+
+#LOLITA Seduction of 평민
+seduce_outcome.8706 = {
+	type = character_event
+	title = seduce_outcome.8706.t
+	desc = seduce_outcome.8706.desc
+
+	theme = seduce_scheme
+	left_portrait = scope:owner
+
+	immediate = {
+		scope:owner = {
+			assign_quirk_effect = yes
+		}
+		#Either runs had_sex_with_effect or shows a tooltip of it (effect is always just run once per success):
+		target_seduce_outcome_sex_effect = yes
+	}
+
+	option = { #We went for both consummation and relationship
+		name = seduce_outcome.8706.a
+		trigger = { scope:owner = { has_character_flag = consummation_and_relationship } }
+
+		set_relation_lover_through_seduction_effect = {
+			CHARACTER = scope:owner
+		}
+		give_mutual_hook_secret_friends = yes
+	}
+
+	option = { #We're just here for the fun time!
+		name = seduce_outcome.8706.b
+		trigger = { scope:owner = { NOT = { has_character_flag = consummation_and_relationship } } }
+
+		scope:scheme = {
+			end_scheme = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = { scope:owner = { has_character_flag = consummation_and_relationship } }
+			scope:owner = { remove_character_flag = consummation_and_relationship }
+		}
+	}
+}

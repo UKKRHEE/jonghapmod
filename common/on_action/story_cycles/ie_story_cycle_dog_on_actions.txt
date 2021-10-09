@@ -1,0 +1,6 @@
+﻿# For reference: Vanilla events have weight 50, and about 300 in total (400 if you also have a cat)
+ongoing_dog_events = {
+	random_events = {
+		250 = ie_pet_animal.0001 # "A girl's best friend". 5x chance because of highly restricted trigger conditions.
+	}
+}

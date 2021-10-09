@@ -1,0 +1,268 @@
+﻿monthly_libido = {
+		value = 40
+		if = {
+			limit = { has_trait = athletic }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = inbred }
+			add = -20
+		}
+		if = {
+			limit = { has_trait = impotent }
+			add = -20
+		}
+		if = {
+			limit = { has_trait = lazy }
+			add = -10
+		}
+		if = {
+			limit = { has_trait = diligent }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = whole_of_body }
+			add = 10
+		}
+		if = {
+			limit = { has_perk = like_weed_in_a_garden_perk }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = seducer }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = lustful }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = zealous }
+			add = 10
+		}
+		if = {
+			limit = { faith = { trait_is_virtue = lustful } }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = physique_bad_3 }
+			add = -30
+		}
+		if = {
+			limit = { has_trait = physique_bad_2 }
+			add = -20
+		}
+		if = {
+			limit = { has_trait = physique_bad_1 }
+			add = -10
+		}
+		if = {
+			limit = { has_trait = physique_good_1 }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = physique_good_2 }
+			add = 20
+		}
+		if = {
+			limit = { has_trait = physique_good_3 }
+			add = 30
+		}
+		min = 10
+		if = {
+			limit = { has_trait = celibate }
+			multiply = 0
+		}
+	}
+
+monthly_sexual_desire = {
+		value = 10
+		if = {
+			limit = { has_trait = reveler_1 }
+			add = 1
+		}
+		if = {
+			limit = { has_trait = reveler_2 }
+			add = 2
+		}
+		if = {
+			limit = { has_trait = reveler_3 }
+			add = 3
+		}
+		if = {
+			limit = { has_trait = rakish }
+			add = 4
+		}
+		if = {
+			limit = { has_trait = pregnant }
+			add = 4
+		}
+		if = {
+			limit = { has_trait = fecund }
+			add = 2
+		}
+		if = {
+			limit = { has_trait = infertile }
+			add = -2
+		}
+		if = {
+			limit = { has_trait = inbred }
+			add = -6
+		}
+		if = {
+			limit = { has_perk = like_weed_in_a_garden_perk }
+			add = 10
+		}
+		if = {
+			limit = { has_trait = seducer }
+			multiply = 2
+		}
+		if = {
+			limit = { has_trait = lustful }
+			multiply = 2
+		}
+		if = {
+			limit = { faith = { trait_is_virtue = lustful } }
+			multiply = 2
+		}
+		if = {
+			limit = { 
+				And = {
+					has_trait = zealous 
+					faith = { trait_is_virtue = lustful }
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = { has_trait = chaste }
+			divide = 2
+		}
+		if = {
+			limit = { 
+				And = {
+					Or = { 
+						has_trait = devoted
+						has_trait = order_member
+						has_government = theocracy_government
+						And = {
+							has_council_position = councillor_court_chaplain
+							faith = { has_doctrine_parameter = theocracy_temple_lease }
+						}
+					}
+					faith = { has_doctrine = doctrine_clerical_marriage_allowed }
+				}
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = { 
+				has_variable = sexual_desire
+				var:sexual_desire >= 100
+			 }
+			multiply = 0
+		}
+		if = {
+			limit = { 
+				has_variable = sexual_desire
+				var:sexual_desire >= 100
+			 }
+			multiply = 0
+		}
+		if = {
+			limit = { has_sexuality = asexual }
+			value = 0
+		}
+	}
+
+children_wanted = {
+		value = 3
+		if = {
+			limit = { has_trait = family_first }
+			add = 4
+			}
+		if = {
+			limit = { has_trait = compassionate }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = lustful }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = sadistic }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = callous }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = greedy }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = fickle }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = lazy }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = diligent }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = wrathful }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = calm }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = arrogant }
+			add = 2
+			}
+		if = {
+			limit = { has_trait = shy }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = gregarious }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = content }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = ambitious }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = cynical }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = zealous }
+			add = 1
+			}
+		if = {
+			limit = { has_trait = vengeful }
+			add = -1
+			}
+		if = {
+			limit = { has_trait = forgiving }
+			add = 1
+			}
+}
+
+current_living_children = {
+		value = 0
+		every_child = {
+			limit = { is_alive = yes }
+			add = 1
+		}
+}

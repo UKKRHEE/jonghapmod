@@ -1,0 +1,417 @@
+﻿namespace = fantasize
+
+# Fantasize Event Still need to set up fantasizing system to enable attraction drift
+fantasize.0001 = {
+	type = character_event
+	title = fantasize.0001.t
+	desc = fantasize.0001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:fantasy_1
+		animation = flirtation
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	right_portrait = {
+		character = scope:fantasy_2
+		animation = flirtation
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	lower_left_portrait = {
+		character = scope:fantasy_3
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	lower_center_portrait = {
+		character = scope:fantasy_4
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	lower_right_portrait = {
+		character = scope:fantasy_5
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	trigger = {
+		has_variable = breast_size_preference
+		is_adult = yes
+		any_relation = {
+			type = fantasy
+			is_adult = yes
+			is_alive = yes
+			has_variable = breast_size_preference
+			count >= 5
+		}
+	}
+
+	immediate = {
+		every_relation = {
+			type = fantasy
+			add_to_list = available_fantasies
+		}
+		random_in_list = {
+			list = available_fantasies
+			save_scope_as = fantasy_1
+			remove_from_list = available_fantasies
+		}
+		random_in_list = {
+			list = available_fantasies
+			save_scope_as = fantasy_2
+			remove_from_list = available_fantasies
+		}
+		random_in_list = {
+			list = available_fantasies
+			save_scope_as = fantasy_3
+			remove_from_list = available_fantasies
+		}
+		random_in_list = {
+			list = available_fantasies
+			save_scope_as = fantasy_4
+			remove_from_list = available_fantasies
+		}
+		random_in_list = {
+			list = available_fantasies
+			save_scope_as = fantasy_5
+			remove_from_list = available_fantasies
+		}
+		every_in_list = {
+			list = available_fantasies
+			remove_from_list = available_fantasies
+		}
+	}
+	option = {
+		name = fantasize.0001.a
+		ai_chance = {
+			base = 100
+		}
+		fantasize_about_character_effect = { CHARACTER = scope:fantasy_1 }
+	}
+	option = { 
+		name = fantasize.0001.b
+		ai_chance = {
+			base = 100
+		}
+		fantasize_about_character_effect = { CHARACTER = scope:fantasy_2 }
+	}
+	option = { 
+		name = fantasize.0001.c
+		ai_chance = {
+			base = 100
+		}
+		fantasize_about_character_effect = { CHARACTER = scope:fantasy_3 }
+	}
+	option = { 
+		name = fantasize.0001.d
+		ai_chance = {
+			base = 100
+		}
+		fantasize_about_character_effect = { CHARACTER = scope:fantasy_4 }
+	}
+	option = { 
+		name = fantasize.0001.e
+		ai_chance = {
+			base = 100
+		}
+		fantasize_about_character_effect = { CHARACTER = scope:fantasy_5 }
+	}
+}
+
+# Fantasize Event Still need to set up fantasizing system to enable attraction drift
+# Fantasize Event Still need to set up fantasizing system to enable attraction drift
+fantasize.0002 = {
+	type = character_event
+	title = fantasize.0002.t
+	desc = fantasize.0002.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:fantasy_1
+		animation = flirtation
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	right_portrait = {
+		character = scope:fantasy_2
+		animation = flirtation
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	lower_left_portrait = {
+		character = scope:fantasy_3
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	lower_center_portrait = {
+		character = scope:fantasy_4
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+	lower_right_portrait = {
+		character = scope:fantasy_5
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	immediate = {
+		every_in_list = {
+			variable = potential_fantasies
+			save_temporary_scope_as = potential_fantasy
+		}
+		random_in_list = {
+			variable = potential_fantasies
+			weight = {
+				base = 0
+				modifier = {
+					this.prestige_level >= 1
+					add = 10
+				}
+				modifier = {
+					this.prestige_level >= 2
+					add = 20
+				}
+				modifier = {
+					this.prestige_level >= 3
+					add = 30
+				}
+				modifier = {
+					this.prestige_level >= 4
+					add = 40
+				}
+				modifier = {
+					this.prestige_level >= 5
+					add = 50
+				}
+				modifier = {
+					has_relation_lover = scope:root_fantasize_character
+					add = 50
+				}
+				modifier = {
+					has_relation_soulmate = scope:root_fantasize_character
+					add = 100
+				}
+				physical_attraction_modifier = {
+					ATTRACTED = scope:root_fantasize_character
+					WHO = scope:potential_fantasy
+					MAX_ATTRACTION = 100
+				}
+			}
+			save_scope_as = fantasy_1
+			scope:root_fantasize_character = {
+				remove_list_variable = {
+					name = potential_fantasies
+					target = scope:fantasy_1
+				}
+			}
+		}
+		random_in_list = {
+			variable = potential_fantasies
+			weight = {
+				base = 0
+				modifier = {
+					this.prestige_level >= 1
+					add = 10
+				}
+				modifier = {
+					this.prestige_level >= 2
+					add = 20
+				}
+				modifier = {
+					this.prestige_level >= 3
+					add = 30
+				}
+				modifier = {
+					this.prestige_level >= 4
+					add = 40
+				}
+				modifier = {
+					this.prestige_level >= 5
+					add = 50
+				}
+				modifier = {
+					has_relation_lover = scope:root_fantasize_character
+					add = 50
+				}
+				modifier = {
+					has_relation_soulmate = scope:root_fantasize_character
+					add = 100
+				}
+				physical_attraction_modifier = {
+					ATTRACTED = scope:root_fantasize_character
+					WHO = scope:potential_fantasy
+					MAX_ATTRACTION = 100
+				}
+			}
+			save_scope_as = fantasy_2
+			scope:root_fantasize_character = {
+				remove_list_variable = {
+					name = potential_fantasies
+					target = scope:fantasy_2
+				}
+			}
+		}
+		random_in_list = {
+			variable = potential_fantasies
+			weight = {
+				base = 0
+				modifier = {
+					this.prestige_level >= 1
+					add = 10
+				}
+				modifier = {
+					this.prestige_level >= 2
+					add = 20
+				}
+				modifier = {
+					this.prestige_level >= 3
+					add = 30
+				}
+				modifier = {
+					this.prestige_level >= 4
+					add = 40
+				}
+				modifier = {
+					this.prestige_level >= 5
+					add = 50
+				}
+				modifier = {
+					has_relation_lover = scope:root_fantasize_character
+					add = 50
+				}
+				modifier = {
+					has_relation_soulmate = scope:root_fantasize_character
+					add = 100
+				}
+				physical_attraction_modifier = {
+					ATTRACTED = scope:root_fantasize_character
+					WHO = scope:potential_fantasy
+					MAX_ATTRACTION = 100
+				}
+			}
+			save_scope_as = fantasy_3
+			scope:root_fantasize_character = {
+				remove_list_variable = {
+					name = potential_fantasies
+					target = scope:fantasy_3
+				}
+			}
+		}
+		random_in_list = {
+			variable = potential_fantasies
+			weight = {
+				base = 0
+				modifier = {
+					this.prestige_level >= 1
+					add = 10
+				}
+				modifier = {
+					this.prestige_level >= 2
+					add = 20
+				}
+				modifier = {
+					this.prestige_level >= 3
+					add = 30
+				}
+				modifier = {
+					this.prestige_level >= 4
+					add = 40
+				}
+				modifier = {
+					this.prestige_level >= 5
+					add = 50
+				}
+				modifier = {
+					has_relation_lover = scope:root_fantasize_character
+					add = 50
+				}
+				modifier = {
+					has_relation_soulmate = scope:root_fantasize_character
+					add = 100
+				}
+				physical_attraction_modifier = {
+					ATTRACTED = scope:root_fantasize_character
+					WHO = scope:potential_fantasy
+					MAX_ATTRACTION = 100
+				}
+			}
+			save_scope_as = fantasy_4
+			scope:root_fantasize_character = {
+				remove_list_variable = {
+					name = potential_fantasies
+					target = scope:fantasy_4
+				}
+			}
+		}
+		random_in_list = {
+			variable = potential_fantasies
+			weight = {
+				base = 0
+				modifier = {
+					this.prestige_level >= 1
+					add = 10
+				}
+				modifier = {
+					this.prestige_level >= 2
+					add = 20
+				}
+				modifier = {
+					this.prestige_level >= 3
+					add = 30
+				}
+				modifier = {
+					this.prestige_level >= 4
+					add = 40
+				}
+				modifier = {
+					this.prestige_level >= 5
+					add = 50
+				}
+				modifier = {
+					has_relation_lover = scope:root_fantasize_character
+					add = 50
+				}
+				modifier = {
+					has_relation_soulmate = scope:root_fantasize_character
+					add = 100
+				}
+				physical_attraction_modifier = {
+					ATTRACTED = scope:root_fantasize_character
+					WHO = scope:potential_fantasy
+					MAX_ATTRACTION = 100
+				}
+			}
+			save_scope_as = fantasy_5
+		}
+		clear_variable_list = potential_fantasies
+	}
+	option = { 
+		name = fantasize.0002.a
+		ai_chance = {
+			base = 100
+		}
+		set_relation_fantasy = scope:fantasy_1
+		trigger_event = { on_action = on_fantasize }
+	}
+	option = { 
+		name = fantasize.0002.b
+		ai_chance = {
+			base = 100
+		}
+		set_relation_fantasy = scope:fantasy_2
+		trigger_event = { on_action = on_fantasize }
+	}
+	option = { 
+		name = fantasize.0002.c
+		ai_chance = {
+			base = 100
+		}
+		set_relation_fantasy = scope:fantasy_3
+		trigger_event = { on_action = on_fantasize }
+	}
+	option = { 
+		name = fantasize.0002.d
+		ai_chance = {
+			base = 100
+		}
+		set_relation_fantasy = scope:fantasy_4
+		trigger_event = { on_action = on_fantasize }
+	}
+	option = { 
+		name = fantasize.0002.e
+		ai_chance = {
+			base = 100
+		}
+		set_relation_fantasy = scope:fantasy_5
+		trigger_event = { on_action = on_fantasize }
+	}
+}

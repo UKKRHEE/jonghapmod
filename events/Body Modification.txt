@@ -1,0 +1,1841 @@
+﻿namespace = body_modification
+
+#modify height root
+body_modification.0001 = {
+	title = body_modification.0001.t
+	desc = body_modification.0001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#modify active variable
+		name = body_modification.0001.a
+		trigger_event = body_modification.0002
+	}
+
+	option = {
+		#modify gene 1 variable
+		name = body_modification.0001.b
+		trigger_event = body_modification.0003
+	}
+
+	option = {
+		#modify gene 2 variable
+		name = body_modification.0001.c
+		trigger_event = body_modification.0004
+	}
+}
+
+body_modification.0002 = {
+	title = body_modification.0002.t
+	desc = body_modification.0002.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.0002.a
+	scope:modified_character = {
+			change_variable = {
+				name = height_genetic
+				add = 25
+			}
+			if = {
+				limit = { var:height_genetic > 100 }
+				remove_variable = height_genetic
+				set_variable = {
+					name = height_genetic
+					value = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.0002.b
+	scope:modified_character = {
+		change_variable = {
+			name = height_genetic
+			add = 5
+		}
+		if = {
+			limit = { var:height_genetic > 100 }
+			remove_variable = height_genetic
+			set_variable = {
+				name = height_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.0002.c
+	scope:modified_character = {
+		change_variable = {
+			name = height_genetic
+			add = 1
+		}
+		if = {
+			limit = { var:height_genetic > 100 }
+			remove_variable = height_genetic
+			set_variable = {
+				name = height_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.0002.d
+	scope:modified_character = {
+		change_variable = {
+			name = height_genetic
+			add = -1
+		}
+		if = {
+			limit = { var:height_genetic < 0 }
+			remove_variable = height_genetic
+			set_variable = {
+				name = height_genetic
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.0002.e
+	scope:modified_character = {
+		change_variable = {
+			name = height_genetic
+			add = -5
+		}
+		if = {
+			limit = { var:height_genetic < 0 }
+			remove_variable = height_genetic
+			set_variable = {
+				name = height_genetic
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.0002.f
+	scope:modified_character = {
+		change_variable = {
+			name = height_genetic
+			add = -25
+		}
+		if = {
+			limit = { var:height_genetic < 0 }
+			remove_variable = height_genetic
+			set_variable = {
+				name = height_genetic
+				value = 0
+			}
+		}
+	}
+	}
+}
+
+
+body_modification.0003 = {
+	title = body_modification.0003.t
+	desc = body_modification.0003.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.0003.a
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_1
+			add = 25
+		}
+		if = {
+			limit = { var:height_gene_1 > height_seeding_2_max_range_default }
+			remove_variable = height_gene_1
+			set_variable = {
+				name = height_gene_1
+				value = height_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.0003.b
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_1
+			add = 5
+		}
+		if = {
+			limit = { var:height_gene_1 > height_seeding_2_max_range_default }
+			remove_variable = height_gene_1
+			set_variable = {
+				name = height_gene_1
+				value = height_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.0003.c
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_1
+			add = 1
+		}
+		if = {
+			limit = { var:height_gene_1 > height_seeding_2_max_range_default }
+			remove_variable = height_gene_1
+			set_variable = {
+				name = height_gene_1
+				value = height_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.0003.d
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_1
+			add = -1
+		}
+		if = {
+			limit = { var:height_gene_1 < height_seeding_2_min_range_default }
+			remove_variable = height_gene_1
+			set_variable = {
+				name = height_gene_1
+				value = height_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.0003.e
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_1
+			add = -5
+		}
+		if = {
+			limit = { var:height_gene_1 < height_seeding_2_min_range_default }
+			remove_variable = height_gene_1
+			set_variable = {
+				name = height_gene_1
+				value = height_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.0003.f
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_1
+			add = -25
+		}
+		if = {
+			limit = { var:height_gene_1 < height_seeding_2_min_range_default }
+			remove_variable = height_gene_1
+			set_variable = {
+				name = height_gene_1
+				value = height_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+body_modification.0004 = {
+	title = body_modification.0004.t
+	desc = body_modification.0004.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.0004.a
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_2
+			add = 25
+		}
+		if = {
+			limit = { var:height_gene_2 > height_seeding_2_max_range_default }
+			remove_variable = height_gene_2
+			set_variable = {
+				name = height_gene_2
+				value = height_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.0004.b
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_2
+			add = 5
+		}
+		if = {
+			limit = { var:height_gene_2 > height_seeding_2_max_range_default }
+			remove_variable = height_gene_2
+			set_variable = {
+				name = height_gene_2
+				value = height_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.0004.c
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_2
+			add = 1
+		}
+		if = {
+			limit = { var:height_gene_2 > height_seeding_2_max_range_default }
+			remove_variable = height_gene_2
+			set_variable = {
+				name = height_gene_2
+				value = height_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.0004.d
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_2
+			add = -1
+		}
+		if = {
+			limit = { var:height_gene_2 < height_seeding_2_min_range_default }
+			remove_variable = height_gene_2
+			set_variable = {
+				name = height_gene_2
+				value = height_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.0004.e
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_2
+			add = -5
+		}
+		if = {
+			limit = { var:height_gene_2 < height_seeding_2_min_range_default }
+			remove_variable = height_gene_2
+			set_variable = {
+				name = height_gene_2
+				value = height_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.0004.f
+	scope:modified_character = {
+		change_variable = {
+			name = height_gene_2
+			add = -25
+		}
+		if = {
+			limit = { var:height_gene_2 < height_seeding_2_min_range_default }
+			remove_variable = height_gene_2
+			set_variable = {
+				name = height_gene_2
+				value = height_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+
+#modify breasts root
+body_modification.1001 = {
+	title = body_modification.1001.t
+	desc = body_modification.1001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#modify active variable
+		name = body_modification.1001.a
+		trigger_event = body_modification.1002
+	}
+
+	option = {
+		#modify gene 1 variable
+		name = body_modification.1001.b
+		trigger_event = body_modification.1003
+	}
+
+	option = {
+		#modify gene 2 variable
+		name = body_modification.1001.c
+		trigger_event = body_modification.1004
+	}
+}
+
+body_modification.1002 = {
+	title = body_modification.1002.t
+	desc = body_modification.1002.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.1002.a
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_genetic
+			add = 25
+		}
+		if = {
+			limit = { is_adult = yes }
+			if = {
+				limit = { var:breast_size_genetic > 180 }
+				remove_variable = breast_size_genetic
+				set_variable = {
+					name = breast_size_genetic
+					value = 180
+				}
+			}
+		}
+		else = {
+			limit = { 
+				var:breast_size_genetic > 100
+			}
+			remove_variable = breast_size_genetic
+			set_variable = {
+				name = breast_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.1002.b
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_genetic
+			add = 5
+		}
+		if = {
+			limit = { is_adult = yes }
+			if = {
+				limit = { var:breast_size_genetic > 180 }
+				remove_variable = breast_size_genetic
+				set_variable = {
+					name = breast_size_genetic
+					value = 180
+				}
+			}
+		}
+		else = {
+			limit = { 
+				var:breast_size_genetic > 100
+			}
+			remove_variable = breast_size_genetic
+			set_variable = {
+				name = breast_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.1002.c
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_genetic
+			add = 1
+		}
+		if = {
+			limit = { is_adult = yes }
+			if = {
+				limit = { var:breast_size_genetic > 180 }
+				remove_variable = breast_size_genetic
+				set_variable = {
+					name = breast_size_genetic
+					value = 180
+				}
+			}
+		}
+		else = {
+			limit = { 
+				var:breast_size_genetic > 100
+			}
+			remove_variable = breast_size_genetic
+			set_variable = {
+				name = breast_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.1002.d
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_genetic
+			add = -1
+		}
+		if = {
+			limit = { var:breast_size_genetic < 0 }
+			remove_variable = breast_size_genetic
+			set_variable = {
+				name = breast_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.1002.e
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_genetic
+			add = -5
+		}
+		if = {
+			limit = { var:breast_size_genetic < 0 }
+			remove_variable = breast_size_genetic
+			set_variable = {
+				name = breast_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.1002.f
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_genetic
+			add = -25
+		}
+		if = {
+			limit = { var:breast_size_genetic < 0 }
+			remove_variable = breast_size_genetic
+			set_variable = {
+				name = breast_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+}
+
+
+body_modification.1003 = {
+	title = body_modification.1003.t
+	desc = body_modification.1003.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.1003.a
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_1
+			add = 25
+		}
+		if = {
+			limit = { var:breast_size_gene_1 > breast_size_seeding_2_max_range_default }
+			remove_variable = breast_size_gene_1
+			set_variable = {
+				name = breast_size_gene_1
+				value = breast_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.1003.b
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_1
+			add = 5
+		}
+		if = {
+			limit = { var:breast_size_gene_1 > breast_size_seeding_2_max_range_default }
+			remove_variable = breast_size_gene_1
+			set_variable = {
+				name = breast_size_gene_1
+				value = breast_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.1003.c
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_1
+			add = 1
+		}
+		if = {
+			limit = { var:breast_size_gene_1 > breast_size_seeding_2_max_range_default }
+			remove_variable = breast_size_gene_1
+			set_variable = {
+				name = breast_size_gene_1
+				value = breast_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.1003.d
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_1
+			add = -1
+		}
+		if = {
+			limit = { var:breast_size_gene_1 < breast_size_seeding_2_min_range_default }
+			remove_variable = breast_size_gene_1
+			set_variable = {
+				name = breast_size_gene_1
+				value = breast_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.1003.e
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_1
+			add = -5
+		}
+		if = {
+			limit = { var:breast_size_gene_1 < breast_size_seeding_2_min_range_default }
+			remove_variable = breast_size_gene_1
+			set_variable = {
+				name = breast_size_gene_1
+				value = breast_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.1003.f
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_1
+			add = -25
+		}
+		if = {
+			limit = { var:breast_size_gene_1 < breast_size_seeding_2_min_range_default }
+			remove_variable = breast_size_gene_1
+			set_variable = {
+				name = breast_size_gene_1
+				value = breast_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+body_modification.1004 = {
+	title = body_modification.1004.t
+	desc = body_modification.1004.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.1004.a
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_2
+			add = 25
+		}
+		if = {
+			limit = { var:breast_size_gene_2 > breast_size_seeding_2_max_range_default }
+			remove_variable = breast_size_gene_2
+			set_variable = {
+				name = breast_size_gene_2
+				value = breast_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.1004.b
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_2
+			add = 5
+		}
+		if = {
+			limit = { var:breast_size_gene_2 > breast_size_seeding_2_max_range_default }
+			remove_variable = breast_size_gene_2
+			set_variable = {
+				name = breast_size_gene_2
+				value = breast_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.1004.c
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_2
+			add = 1
+		}
+		if = {
+			limit = { var:breast_size_gene_2 > breast_size_seeding_2_max_range_default }
+			remove_variable = breast_size_gene_2
+			set_variable = {
+				name = breast_size_gene_2
+				value = breast_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.1004.d
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_2
+			add = -1
+		}
+		if = {
+			limit = { var:breast_size_gene_2 < breast_size_seeding_2_min_range_default }
+			remove_variable = breast_size_gene_2
+			set_variable = {
+				name = breast_size_gene_2
+				value = breast_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.1004.e
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_2
+			add = -5
+		}
+		if = {
+			limit = { var:breast_size_gene_2 < breast_size_seeding_2_min_range_default }
+			remove_variable = breast_size_gene_2
+			set_variable = {
+				name = breast_size_gene_2
+				value = breast_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.1004.f
+	scope:modified_character = {
+		change_variable = {
+			name = breast_size_gene_2
+			add = -25
+		}
+		if = {
+			limit = { var:breast_size_gene_2 < breast_size_seeding_2_min_range_default }
+			remove_variable = breast_size_gene_2
+			set_variable = {
+				name = breast_size_gene_2
+				value = breast_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+
+#modify penis root
+body_modification.2001 = {
+	title = body_modification.2001.t
+	desc = body_modification.2001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#modify active variable
+		name = body_modification.2001.a
+		trigger_event = body_modification.2002
+	}
+
+	option = {
+		#modify gene 1 variable
+		name = body_modification.2001.b
+		trigger_event = body_modification.2003
+	}
+
+	option = {
+		#modify gene 2 variable
+		name = body_modification.2001.c
+		trigger_event = body_modification.2004
+	}
+}
+
+body_modification.2002 = {
+	title = body_modification.2002.t
+	desc = body_modification.2002.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.2002.a
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_genetic
+			add = 25
+		}
+		if = {
+			limit = { var:penis_size_genetic > 100 }
+			remove_variable = penis_size_genetic
+			set_variable = {
+				name = penis_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.2002.b
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_genetic
+			add = 5
+		}
+		if = {
+			limit = { var:penis_size_genetic > 100 }
+			remove_variable = penis_size_genetic
+			set_variable = {
+				name = penis_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.2002.c
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_genetic
+			add = 1
+		}
+		if = {
+			limit = { var:penis_size_genetic > 100 }
+			remove_variable = penis_size_genetic
+			set_variable = {
+				name = penis_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.2002.d
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_genetic
+			add = -1
+		}
+		if = {
+			limit = { var:penis_size_genetic < 0 }
+			remove_variable = penis_size_genetic
+			set_variable = {
+				name = penis_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.2002.e
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_genetic
+			add = -5
+		}
+		if = {
+			limit = { var:penis_size_genetic < 0 }
+			remove_variable = penis_size_genetic
+			set_variable = {
+				name = penis_size_genetic
+				value = 0
+			}
+		}	
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.2002.f
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_genetic
+			add = -25
+		}
+		if = {
+			limit = { var:penis_size_genetic < 0 }
+			remove_variable = penis_size_genetic
+			set_variable = {
+				name = penis_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+}
+
+
+body_modification.2003 = {
+	title = body_modification.2003.t
+	desc = body_modification.2003.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.2003.a
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_1
+			add = 25
+		}
+		if = {
+			limit = { var:penis_size_gene_1 > penis_size_seeding_2_max_range_default }
+			remove_variable = penis_size_gene_1
+			set_variable = {
+				name = penis_size_gene_1
+				value = penis_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.2003.b
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_1
+			add = 5
+		}
+		if = {
+			limit = { var:penis_size_gene_1 > penis_size_seeding_2_max_range_default }
+			remove_variable = penis_size_gene_1
+			set_variable = {
+				name = penis_size_gene_1
+				value = penis_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.2003.c
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_1
+			add = 1
+		}
+		if = {
+			limit = { var:penis_size_gene_1 > penis_size_seeding_2_max_range_default }
+			remove_variable = penis_size_gene_1
+			set_variable = {
+				name = penis_size_gene_1
+				value = penis_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.2003.d
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_1
+			add = -1
+		}
+		if = {
+			limit = { var:penis_size_gene_1 < penis_size_seeding_2_min_range_default }
+			remove_variable = penis_size_gene_1
+			set_variable = {
+				name = penis_size_gene_1
+				value = penis_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.2003.e
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_1
+			add = -5
+		}
+		if = {
+			limit = { var:penis_size_gene_1 < penis_size_seeding_2_min_range_default }
+			remove_variable = penis_size_gene_1
+			set_variable = {
+				name = penis_size_gene_1
+				value = penis_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.2003.f
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_1
+			add = -25
+		}
+		if = {
+			limit = { var:penis_size_gene_1 < penis_size_seeding_2_min_range_default }
+			remove_variable = penis_size_gene_1
+			set_variable = {
+				name = penis_size_gene_1
+				value = penis_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+body_modification.2004 = {
+	title = body_modification.2004.t
+	desc = body_modification.2004.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.2004.a
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_2
+			add = 25
+		}
+		if = {
+			limit = { var:penis_size_gene_2 > penis_size_seeding_2_max_range_default }
+			remove_variable = penis_size_gene_2
+			set_variable = {
+				name = penis_size_gene_2
+				value = penis_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.2004.b
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_2
+			add = 5
+		}
+		if = {
+			limit = { var:penis_size_gene_2 > penis_size_seeding_2_max_range_default }
+			remove_variable = penis_size_gene_2
+			set_variable = {
+				name = penis_size_gene_2
+				value = penis_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.2004.c
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_2
+			add = 1
+		}
+		if = {
+			limit = { var:penis_size_gene_2 > penis_size_seeding_2_max_range_default }
+			remove_variable = penis_size_gene_2
+			set_variable = {
+				name = penis_size_gene_2
+				value = penis_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.2004.d
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_2
+			add = -1
+		}
+		if = {
+			limit = { var:penis_size_gene_2 < penis_size_seeding_2_min_range_default }
+			remove_variable = penis_size_gene_2
+			set_variable = {
+				name = penis_size_gene_2
+				value = penis_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.2004.e
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_2
+			add = -5
+		}
+		if = {
+			limit = { var:penis_size_gene_2 < penis_size_seeding_2_min_range_default }
+			remove_variable = penis_size_gene_2
+			set_variable = {
+				name = penis_size_gene_2
+				value = penis_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.2004.f
+	scope:modified_character = {
+		change_variable = {
+			name = penis_size_gene_2
+			add = -25
+		}
+		if = {
+			limit = { var:penis_size_gene_2 < penis_size_seeding_2_min_range_default }
+			remove_variable = penis_size_gene_2
+			set_variable = {
+				name = penis_size_gene_2
+				value = penis_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+#modify butt root
+body_modification.3001 = {
+	title = body_modification.3001.t
+	desc = body_modification.3001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#modify active variable
+		name = body_modification.3001.a
+		trigger_event = body_modification.3002
+	}
+
+	option = {
+		#modify gene 1 variable
+		name = body_modification.3001.b
+		trigger_event = body_modification.3003
+	}
+
+	option = {
+		#modify gene 2 variable
+		name = body_modification.3001.c
+		trigger_event = body_modification.3004
+	}
+}
+
+body_modification.3002 = {
+	title = body_modification.3002.t
+	desc = body_modification.3002.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.3002.a
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_genetic
+			add = 25
+		}
+		if = {
+			limit = { 
+				is_adult = yes
+				is_female = yes
+			}
+			if = {
+				limit = { var:butt_size_genetic > 230 }
+				remove_variable = butt_size_genetic
+				set_variable = {
+					name = butt_size_genetic
+					value = 230
+				}
+			}
+		}
+		else = {
+			limit = { 
+				var:butt_size_genetic > 100
+			}
+			remove_variable = butt_size_genetic
+			set_variable = {
+				name = butt_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.3002.b
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_genetic
+			add = 5
+		}
+		if = {
+			limit = { 
+				is_adult = yes
+				is_female = yes
+			}
+			if = {
+				limit = { var:butt_size_genetic > 230 }
+				remove_variable = butt_size_genetic
+				set_variable = {
+					name = butt_size_genetic
+					value = 230
+				}
+			}
+		}
+		else = {
+			limit = { 
+				var:butt_size_genetic > 100
+			}
+			remove_variable = butt_size_genetic
+			set_variable = {
+				name = butt_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.3002.c
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_genetic
+			add = 1
+		}
+		if = {
+			limit = { 
+				is_adult = yes
+				is_female = yes
+			}
+			if = {
+				limit = { var:butt_size_genetic > 230 }
+				remove_variable = butt_size_genetic
+				set_variable = {
+					name = butt_size_genetic
+					value = 230
+				}
+			}
+		}
+		else = {
+			limit = { 
+				var:butt_size_genetic > 100
+			}
+			remove_variable = butt_size_genetic
+			set_variable = {
+				name = butt_size_genetic
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.3002.d
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_genetic
+			add = -1
+		}
+		if = {
+			limit = { var:butt_size_genetic < 0 }
+			remove_variable = butt_size_genetic
+			set_variable = {
+				name = butt_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.3002.e
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_genetic
+			add = -5
+		}
+		if = {
+			limit = { var:butt_size_genetic < 0 }
+			remove_variable = butt_size_genetic
+			set_variable = {
+				name = butt_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.3002.f
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_genetic
+			add = -25
+		}
+		if = {
+			limit = { var:butt_size_genetic < 0 }
+			remove_variable = butt_size_genetic
+			set_variable = {
+				name = butt_size_genetic
+				value = 0
+			}
+		}
+	}
+	}
+}
+
+
+body_modification.3003 = {
+	title = body_modification.3003.t
+	desc = body_modification.3003.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.3003.a
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_1
+			add = 25
+		}
+		if = {
+			limit = { var:butt_size_gene_1 > butt_size_seeding_2_max_range_default }
+			remove_variable = butt_size_gene_1
+			set_variable = {
+				name = butt_size_gene_1
+				value = butt_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.3003.b
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_1
+			add = 5
+		}
+		if = {
+			limit = { var:butt_size_gene_1 > butt_size_seeding_2_max_range_default }
+			remove_variable = butt_size_gene_1
+			set_variable = {
+				name = butt_size_gene_1
+				value = butt_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.3003.c
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_1
+			add = 1
+		}
+		if = {
+			limit = { var:butt_size_gene_1 > butt_size_seeding_2_max_range_default }
+			remove_variable = butt_size_gene_1
+			set_variable = {
+				name = butt_size_gene_1
+				value = butt_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.3003.d
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_1
+			add = -1
+		}
+		if = {
+			limit = { var:butt_size_gene_1 < butt_size_seeding_2_min_range_default }
+			remove_variable = butt_size_gene_1
+			set_variable = {
+				name = butt_size_gene_1
+				value = butt_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.3003.e
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_1
+			add = -5
+		}
+		if = {
+			limit = { var:butt_size_gene_1 < butt_size_seeding_2_min_range_default }
+			remove_variable = butt_size_gene_1
+			set_variable = {
+				name = butt_size_gene_1
+				value = butt_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.3003.f
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_1
+			add = -25
+		}
+		if = {
+			limit = { var:butt_size_gene_1 < butt_size_seeding_2_min_range_default }
+			remove_variable = butt_size_gene_1
+			set_variable = {
+				name = butt_size_gene_1
+				value = butt_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+body_modification.3004 = {
+	title = body_modification.3004.t
+	desc = body_modification.3004.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.3004.a
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_2
+			add = 25
+		}
+		if = {
+			limit = { var:butt_size_gene_2 > butt_size_seeding_2_max_range_default }
+			remove_variable = butt_size_gene_2
+			set_variable = {
+				name = butt_size_gene_2
+				value = butt_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.3004.b
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_2
+			add = 5
+		}
+		if = {
+			limit = { var:butt_size_gene_2 > butt_size_seeding_2_max_range_default }
+			remove_variable = butt_size_gene_2
+			set_variable = {
+				name = butt_size_gene_2
+				value = butt_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.3004.c
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_2
+			add = 1
+		}
+		if = {
+			limit = { var:butt_size_gene_2 > butt_size_seeding_2_max_range_default }
+			remove_variable = butt_size_gene_2
+			set_variable = {
+				name = butt_size_gene_2
+				value = butt_size_seeding_2_max_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.3004.d
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_2
+			add = -1
+		}
+		if = {
+			limit = { var:butt_size_gene_2 < butt_size_seeding_2_min_range_default }
+			remove_variable = butt_size_gene_2
+			set_variable = {
+				name = butt_size_gene_2
+				value = butt_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.3004.e
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_2
+			add = -5
+		}
+		if = {
+			limit = { var:butt_size_gene_2 < butt_size_seeding_2_min_range_default }
+			remove_variable = butt_size_gene_2
+			set_variable = {
+				name = butt_size_gene_2
+				value = butt_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.3004.f
+	scope:modified_character = {
+		change_variable = {
+			name = butt_size_gene_2
+			add = -25
+		}
+		if = {
+			limit = { var:butt_size_gene_2 < butt_size_seeding_2_min_range_default }
+			remove_variable = butt_size_gene_2
+			set_variable = {
+				name = butt_size_gene_2
+				value = butt_size_seeding_2_min_range_default
+			}
+		}
+	}
+	}
+}
+
+#modify muscles root
+body_modification.4001 = {
+	title = body_modification.4001.t
+	desc = body_modification.4001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:modified_character
+		animation = personality_zealous
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+	}
+
+	option = {
+		#add 10
+		name = body_modification.4001.a
+	scope:modified_character = {
+		change_variable = {
+			name = muscles
+			add = 25
+		}
+		if = {
+			limit = { var:muscles > 100 }
+			remove_variable = muscles
+			set_variable = {
+				name = muscles
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 5
+		name = body_modification.4001.b
+	scope:modified_character = {
+		change_variable = {
+			name = muscles
+			add = 5
+		}
+		if = {
+			limit = { var:muscles > 100 }
+			remove_variable = muscles
+			set_variable = {
+				name = muscles
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add 1
+		name = body_modification.4001.c
+	scope:modified_character = {
+		change_variable = {
+			name = muscles
+			add = 1
+		}
+		if = {
+			limit = { var:muscles > 100 }
+			remove_variable = muscles
+			set_variable = {
+				name = muscles
+				value = 100
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -1
+		name = body_modification.4001.d
+	scope:modified_character = {
+		change_variable = {
+			name = muscles
+			add = -1
+		}
+		if = {
+			limit = { var:muscles < 0 }
+			remove_variable = muscles
+			set_variable = {
+				name = muscles
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -5
+		name = body_modification.4001.e
+	scope:modified_character = {
+		change_variable = {
+			name = muscles
+			add = -5
+		}
+		if = {
+			limit = { var:muscles < 0 }
+			remove_variable = muscles
+			set_variable = {
+				name = muscles
+				value = 0
+			}
+		}
+	}
+	}
+
+	option = {
+		#add -10
+		name = body_modification.4001.f
+	scope:modified_character = {
+		change_variable = {
+			name = muscles
+			add = -25
+		}
+		if = {
+			limit = { var:muscles < 0 }
+			remove_variable = muscles
+			set_variable = {
+				name = muscles
+				value = 0
+			}
+		}
+	}
+	}
+}
+

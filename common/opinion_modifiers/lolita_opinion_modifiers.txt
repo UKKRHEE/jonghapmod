@@ -1,0 +1,23 @@
+﻿family_girl_was_fooled_opinion = {
+	opinion = -50
+	years = 20
+	decaying = yes
+}
+
+incest_family_girl_was_fooled_opinion = {
+	opinion = -40
+	years = 20
+	decaying = yes
+}
+
+regret_secret_friend_opinion = {
+	opinion = -60
+	years = 30
+	decaying = yes
+}
+
+family_disgrace_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+}

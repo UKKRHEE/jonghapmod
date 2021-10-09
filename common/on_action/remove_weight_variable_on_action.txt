@@ -1,0 +1,18 @@
+﻿# Root = character
+on_weight_changed = {
+	on_actions = { 
+		on_remove_weight_variable
+	}
+}
+
+on_remove_weight_variable = {
+	effect = {
+		if = {
+			limit = {
+				has_variable = character_weight_variable
+			}
+			remove_variable = character_weight_variable
+		}
+		trigger_event = { on_action = on_add_weight_modifier }
+	}
+}

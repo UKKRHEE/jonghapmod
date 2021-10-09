@@ -1,0 +1,18 @@
+﻿
+# Remove penis to futa
+futanari = {
+
+    female_penis = {
+        traits = { futa futa_genetic }
+
+        dna_modifiers = {
+            morph = {
+                mode = add
+                gene = gene_futanari
+                template = futanari
+                value = 1.0
+            }
+        }
+    }
+
+}

@@ -1,0 +1,60 @@
+﻿apparently_possible_pregnancy_after_sex_trigger = {
+	trigger_if = {
+		limit = { 
+			is_male = yes 
+		}
+		$CHARACTER$ = { is_female = yes }
+		trigger_if = {
+			limit = { $CHARACTER$ = { is_female = yes } }
+			is_visibly_fertile = yes
+			$CHARACTER$ = { 
+				is_visibly_fertile = yes
+				not = { has_trait = pregnant }
+			}
+		}
+	}
+
+	trigger_if = {
+		limit = { 
+			is_female = yes 
+		}
+		$CHARACTER$ = { is_male = yes }
+		trigger_if = {
+			limit = { $CHARACTER$ = { is_female = yes } }
+			is_visibly_fertile = yes
+			not = { has_trait = pregnant }
+			$CHARACTER$ = {
+				is_visibly_fertile = yes
+			}
+		}
+	}
+}
+
+wants_a_child_with_character_trigger = {
+		is_consort_of = $CHARACTER$
+		trigger_if = {
+			limit = { 
+				has_variable = num_children_wanted
+				$CHARACTER$ = { has_variable = num_children_wanted }
+			}
+			var:num_children_wanted > current_living_children
+			$CHARACTER$.var:num_children_wanted > $CHARACTER$.current_living_children
+		}
+	}
+
+accepts_incest_with_trigger = {
+	OR = {
+		NOT = { is_close_or_extended_family_of = $CHARACTER$ } #Actually no incest here!
+		is_incestuous_trigger = yes
+		has_relation_potential_lover = $CHARACTER$
+		has_relation_lover = $CHARACTER$
+		has_character_flag = fantasizes_about_family
+	}
+	save_temporary_scope_as = incest_evaluation
+	NOT = { #under 20 trigger is a HARD limit
+		guaranteed_under_20_incest_rejection_trigger = {
+			TARGET = scope:incest_evaluation
+			SEDUCER = $CHARACTER$
+		}
+	}
+}

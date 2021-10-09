@@ -1,0 +1,120 @@
+﻿
+
+special_genes = {
+
+
+accessory_genes = {
+
+
+#####################################
+#									#
+# 		  	   LEGWEAR 		        #
+#									#
+#####################################
+
+
+	
+	legwear = {
+		all_legwear = {
+			index = 0
+			male = {
+				1 = male_legwear_secular_western_common_01
+				1 = male_legwear_secular_fp1_common_01
+			}
+			female = {
+				1 = female_legwear_secular_western_common_01
+			}
+			boy = male
+			girl = female
+		}
+
+		no_legwear = {
+			index = 1
+			male = {
+				1 = empty
+			}
+			female = {
+				1 = empty
+			}
+			boy = male
+			girl = female
+		}
+
+		western_common_legwear = {
+			index = 2
+			male = {
+				1 = male_legwear_secular_western_common_01
+			}
+			female = {
+				1 = female_legwear_secular_western_common_01
+			}
+			boy = male
+			girl = female
+		}
+
+		western_war_legwear = {
+			index = 3
+			male = {
+				1 = male_legwear_secular_western_war_01
+			}
+			female = {
+				1 = female_legwear_secular_western_war_01
+			}
+			boy = male
+			girl = female
+		}
+
+		mena_common_legwear = {
+			index = 4
+			male = {
+				1 = male_legwear_secular_mena_war_nobility_01
+			}
+			female = {
+				1 = female_legwear_secular_mena_war_nobility_01
+			}
+			boy = male
+			girl = female
+		}
+		fp1_common_legwear = {
+			index = 5
+			male = {
+				1 = male_legwear_secular_fp1_common_01
+			}
+			female = {
+				1 = female_legwear_secular_fp1_common_01
+			}
+			boy = male
+			girl = female
+		}
+		modern_underwear = {
+			index = 6
+			male = {
+				1 = male_legwear_secular_western_common_01
+				1 = male_legwear_secular_fp1_common_01
+			}
+			female = {
+				1 = female_secular_modern_underwear_common_01
+			}
+			boy = male
+			girl = {
+				1 = female_legwear_secular_fp1_common_01
+			}
+		}
+
+		shorts = {
+			index = 7
+			male = {
+				1 = male_legwear_secular_western_common_01
+				1 = male_legwear_secular_fp1_common_01
+			}
+			female = {
+				1 = female_legwear_secular_mena_shorts_01
+			}
+			boy = male
+			girl = {
+				1 = female_legwear_secular_mena_war_nobility_01
+			}
+		}
+	}
+}
+}

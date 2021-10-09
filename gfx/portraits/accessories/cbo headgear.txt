@@ -1,0 +1,26 @@
+﻿
+## Christian Religious Headgear Converted for Females ##
+
+
+female_headgear_religious_catholic_head_01 = {
+	set_tags = "cap"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_religious_catholic_head_01_entity }
+}
+
+## DDE CATHOLIC ##
+
+
+female_headgear_religious_dde_catholic_high_01 = {
+	set_tags = "crown"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_religious_dde_catholic_high_01_entity }
+}
+
+female_headgear_religious_orthodox_high_01 = {
+	set_tags = "crown"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_religious_orthodox_high_01_entity }
+}
+
+female_headgear_religious_orthodox_head_01 = {
+	set_tags = "cap"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_religious_orthodox_head_01_entity }
+}

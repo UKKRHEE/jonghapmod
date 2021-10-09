@@ -1,0 +1,29 @@
+console_enable_window = {
+	name = "window_console_enable"
+}
+
+types ConsoleEnableWindow  {
+	type console_enable_window = widget {
+		# visible = "[And( Not( IsPauseMenuShown ), IsDefaultGUIMode )]"
+		visible = yes
+		size = { 100% 100% }
+		layer = bottom
+
+		flowcontainer = {
+			name = "free_console_access_button"
+			spacing = 3
+			ignoreinvisible = yes
+			allow_outside = yes
+			
+			position = { 20 20 }
+			dockable_button = {
+				visible = "yes"
+				size = { 100 24 }
+				text = "Debug Mode"
+				onclick = "[ExecuteConsoleCommand('debug_mode')]"
+				tooltip = "Toggle debug_mode"
+				shortcut = "screenshot"
+			}
+		}
+	}
+}

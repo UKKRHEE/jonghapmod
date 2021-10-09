@@ -1,0 +1,54 @@
+﻿nudity = {
+	usage = customization
+	interface_position = 0
+	nude = {
+		usage = customization
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = no_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_shape
+				value = 1.0
+				template = body_shape_average
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_bust
+				value = 1.0
+				template = bust_default
+			}
+		}
+		# is_valid_custom = {
+		# 	age >= 18
+		# }
+	}
+	clothed = {
+		# The game needs at least two options for the drop-down to appear, and "default" doesn't count
+		usage = customization
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = western_commoner_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = western_common_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+	}
+}

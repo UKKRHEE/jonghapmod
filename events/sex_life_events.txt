@@ -1,0 +1,2199 @@
+﻿namespace = sex_life
+
+sex_life.0001 = {
+	hidden = yes
+
+	trigger = { ca_active = yes }
+
+	immediate = { had_sex_results_effect = { CHARACTER = scope:carn_sex_partner } }
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1001 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc 
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+sex_life.1002 = {
+	type = character_event
+	title = sex_life.1002.t
+	desc = sex_life.1002.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}
+
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1002.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1003 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_standing
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_standing
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1004 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1005 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_reverse_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_reverse_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1006 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1007 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_missionary
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_missionary
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1008 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_standing_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_standing_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple male POV
+sex_life.1009 = {
+	type = character_event
+	title = sex_life.1001.t
+	desc = sex_life.1001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_felatio
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_felatio
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}	
+
+	immediate = {
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.1001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+
+# Fertile Heterosexual couple female POV
+sex_life.2001 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+sex_life.2002 = {
+	type = character_event
+	title = sex_life.2002.t
+	desc = sex_life.2002.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2002.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple female POV
+sex_life.2003 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_standing
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_standing
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple female POV
+sex_life.2004 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+	after = {
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+			if = {
+				limit = {
+					is_female = yes
+					age >= 11
+					NOT = { 
+						has_trait = pregnant
+						}
+				}
+				make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple female POV
+sex_life.2005 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_reverse_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_reverse_cowgirl
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple female POV
+sex_life.2006 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple female POV
+sex_life.2007 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_missionary
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_missionary
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple female POV
+sex_life.2008 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_standing_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_standing_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Fertile Heterosexual couple female POV
+sex_life.2009 = {
+	type = character_event
+	title = sex_life.2001.t
+	desc = sex_life.2001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_felatio
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = sex_felatio
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_opposite_of = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.2001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Homosexual male couple POV doesn't matter
+sex_life.5001 = {
+	type = character_event
+	title = sex_life.5001.t
+	desc = sex_life.5001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = hom_sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_same_as = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.5001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Homosexual male couple POV doesn't matter
+sex_life.5002 = {
+	type = character_event
+	title = sex_life.5002.t
+	desc = sex_life.5002.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_doggy
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = hom_sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_same_as = scope:carn_sex_target
+		is_ai = yes
+		is_male = yes
+	}
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.5002.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Homosexual male couple POV doesn't matter
+sex_life.5003 = {
+	type = character_event
+	title = sex_life.5001.t
+	desc = sex_life.5001.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = sex_felatio_hom
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		CHARACTER = scope:carn_sex_player
+		animation = sex_felatio
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_same_as = scope:carn_sex_target
+		is_ai = no
+		is_male = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.5001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Homosexual male couple POV doesn't matter
+sex_life.5004 = {
+	type = character_event
+	title = sex_life.5002.t
+	desc = sex_life.5002.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:carn_sex_target
+		animation = sex_felatio_hom
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	right_portrait = {
+		CHARACTER = scope:carn_sex_player
+		animation = sex_felatio
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_same_as = scope:carn_sex_target
+		is_ai = yes
+		is_male = yes
+	}
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.5002.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Homosexual female couple POV doesn't matter
+sex_life.6001 = {
+	type = character_event
+	title = sex_life.6001.t
+	desc = sex_life.6001.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = hom_sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = hom_sex_2
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_same_as = scope:carn_sex_target
+		is_ai = no
+		is_female = yes
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.6001.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}
+
+# Homosexual female couple POV doesn't matter
+sex_life.6002 = {
+	type = character_event
+	title = sex_life.6002.t
+	desc = sex_life.6002.desc
+	theme = seduce_scheme
+	right_portrait = {
+		character = scope:carn_sex_player
+		animation = hom_sex
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	left_portrait = {
+		CHARACTER = scope:carn_sex_target
+		animation = hom_sex_2
+		outfit_tags = { no_cloak no_hat no_pants topless }
+	}
+	trigger = {
+		carn_sex_scene_is_consensual = yes
+		sex_same_as = scope:carn_sex_target
+		is_ai = yes
+		is_female = yes
+	}
+	immediate = { 
+		if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				Not = { exists = global_var:sex_animation_event }
+			}
+			set_global_variable = {
+				name = sex_animation_event
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				scope:carn_sex_player.age >= 18
+				scope:carn_sex_target.age >= 18
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = 1
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = full_pregnancy_chance
+			C2_PREGNANCY_CHANCE = full_pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+	}
+
+	option = { #Finish
+		name = sex_life.6002.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				exists = global_var:sex_animation_event
+				trigger_if = {
+					limit = { exists = global_var:sex_animation_event }
+					global_var:sex_animation_event = 1
+				}
+			}
+			remove_global_variable = sex_animation_event
+		}
+		else_if = {
+			limit = {
+				exists = global_var:sex_animation_event
+			}
+			change_global_variable = {
+				name = sex_animation_event
+				add = -1
+			}
+		}
+	}
+}

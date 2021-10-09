@@ -1,0 +1,23 @@
+#search
+((emotion|event|misc|war_over|personality|waroverview)_([a-z]+)(|_.*) = {\r\n\s+.*\r\n\r\n\s+.*\r\n.*\r\n)
+
+#replace
+$1\n\t\t\t\tmodifier = {\n\t\t\t\t\tadd = 90\n\t\t\t\t\thas_character_flag = $3_pose\n\t\t\t\t}\n
+
+#header
+^\w+.*\r\n.*\r\n.*
+
+#tail
+\s+}\r\n^\s+boy = male\r\n.*\r\n.*\r\n.*}
+
+#check for
+boy =
+
+add = 100
+add = 110
+
+#buttons
+pose_button = {\n\ttext = "$1"\n\tdatacontext = "[GetScriptedGui('$1_pose')]"\n}
+
+#scripted guis
+$1_pose = {\n\tscope = character\n\n\teffect = {\n\t\tclear_poses = yes\n\t\tadd_character_flag = $1_pose\t\n\t}\n}\n

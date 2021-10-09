@@ -1,0 +1,54 @@
+yearly_global_pulse = {
+	on_actions = {
+		on_check_custom_gui
+	}
+}
+
+on_after_gui = {
+	on_actions = {
+		on_after_gui_free_console_access_compatible		# Replace with your custom on_action
+	}
+}
+
+# Free Console Access Compatible
+on_after_gui_free_console_access_compatible = {
+	# Replace with your custom on_action
+	effect = {
+		# add_custom_gui = {
+		# 	NAME = window_console_acs
+		# }
+		# Old version
+		add_custom_gui = {
+			NAME = window_console_enable
+		}
+		# New version
+	}
+}
+
+#--------------------------------------------------------------------------------
+# Every day: Check if the sidebar widget is open. 
+on_check_custom_gui = {
+	# trigger = {
+	# 	NOT = {
+	# 		is_widget_open = window_console_enable
+	# 	}
+	# }
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					is_widget_open = window_console_enable
+				}
+			}
+			every_player = {
+				trigger_event = CustomOnCheckGUI.3
+			}
+		}
+	}
+	on_actions = {
+		delay = {
+			days = 7
+		}
+		on_check_custom_gui
+	}
+}

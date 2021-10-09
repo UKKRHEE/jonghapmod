@@ -1,0 +1,99 @@
+﻿Lolita_Scheme_Action_Name = {
+	type = scheme
+	text = {
+		trigger = {
+			scheme_type = seduce
+			scheme_target = { is_adult = no }
+			}
+		localization_key = groom_action			
+	}
+	text = {
+		trigger = {
+			scheme_type = seduce
+			scheme_target = { is_adult = yes }
+			}
+		localization_key = seduce_action
+	}
+	text = {
+		trigger = {
+			scheme_type = abduct
+		}
+		localization_key = abduct_action
+	}
+	text = {
+		trigger = {
+			scheme_type = befriend
+		}
+		localization_key = befriend_action
+	}
+	text = {
+		trigger = {
+			scheme_type = claim_throne
+		}
+		localization_key = claim_throne_action
+	}
+	text = {
+		trigger = {
+			scheme_type = convert_to_witchcraft
+		}
+		localization_key = convert_to_witchcraft_action
+	}
+	text = {
+		trigger = {
+			scheme_type = courting
+		}
+		localization_key = courting_action
+	}
+	text = {
+		trigger = {
+			scheme_type = elope
+		}
+		localization_key = elope_action
+	}
+	text = {
+		trigger = {
+			scheme_type = fabricate_hook
+		}
+		localization_key = fabricate_hook_action
+	}
+	text = {
+		trigger = {
+			scheme_type = murder
+		}
+		localization_key = murder_action
+	}
+	text = {
+		trigger = {
+			scheme_type = sway
+		}
+		localization_key = sway_action
+	}
+}
+
+IsPrinceORPrincess = {
+	type = character
+
+	text = {
+		trigger = { is_female = yes }
+		localization_key = princess
+	}
+
+	text = {
+		trigger = { is_female = no }
+		localization_key = prince
+	}	
+}
+
+IsLoverORSecretfriend = {
+	type = character
+
+	text = {
+		trigger = { is_adult = yes }
+		localization_key = [lover|E]이
+	}
+
+	text = {
+		trigger = { is_adult = no }
+		localization_key = [secret_friend|E]가
+	}	
+}

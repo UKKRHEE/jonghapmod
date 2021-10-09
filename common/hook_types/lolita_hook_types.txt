@@ -1,0 +1,20 @@
+﻿
+secret_friend_hook = {
+	expiration_days = 3650
+	requires_secret = yes
+}
+
+fascinated_secret_friend_hook = {
+	strong = yes
+	expiration_days = 5475
+	requires_secret = yes
+}
+
+house_secret_friend_hook = {
+	requires_secret = yes
+}
+
+fascinated_house_secret_friend_hook = {
+	strong = yes
+	requires_secret = yes
+}

@@ -1,0 +1,18 @@
+﻿l_english:
+ nudity_on:0 "Nudity On"
+ nudity_on_desc:0 "Remove the clothes"
+ nudity_on_tooltip:0 "Remove the clothes from every adult living characters."
+ nudity_on_confirm:0 "Absolute control."
+ nudity_on_men:0 "Nudity On: Men"
+ nudity_on_men_desc:0 "Remove the clothes"
+ nudity_on_men_tooltip:0 "Remove the clothes from every adult living male characters."
+ nudity_on_men_confirm:0 "Absolute control."
+ nudity_on_women:0 "Nudity On: Women"
+ nudity_on_women_desc:0 "Remove the clothes"
+ nudity_on_women_tooltip:0 "Remove the clothes from every adult living female characters."
+ nudity_on_women_confirm:0 "Absolute control."  
+ nudity_off:0 "Nudity Off"
+ nudity_off_desc:0 "Put on the clothes"
+ nudity_off_tooltip:0 "Put on the clothes to every adult living characters."
+ nudity_off_confirm:0 "Absolute control."  
+ 

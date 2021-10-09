@@ -1,0 +1,739 @@
+﻿sexuality_adjusted_physical_attraction_gui_value = {
+						value = 0
+						add = {
+							if = {
+								limit = { scope:attracting_character = { is_male = yes } }
+								value = male_physical_attraction_gui_value
+							}
+							else = {
+								value = female_physical_attraction_gui_value
+							}
+						}
+						if = {
+							limit = {
+								trigger_if = {
+									limit = { scope:attracting_character = { is_male = yes } }
+									male_physical_attraction_gui_value >= 0
+								}
+								trigger_if = {
+									limit = { scope:attracting_character = { is_female = yes } }
+									female_physical_attraction_gui_value >= 0
+								}
+							}
+							multiply = {
+								if = {
+									limit = {
+										sex_opposite_of = scope:attracting_character
+										has_sexuality = heterosexual
+									}
+									value = 1
+								}
+								else_if = {
+									limit = { 
+										sex_same_as = scope:attracting_character
+										has_sexuality = homosexual
+									}
+									value = 1
+								}
+								else_if = {
+									limit = { has_sexuality = asexual }
+									value = 0
+								}
+								else_if = {
+									limit = { 
+										has_variable = sexual_orientation
+										sex_opposite_of = scope:attracting_character
+									}
+									value = var:sexual_orientation
+									add = 100
+									max = 100
+									divide = 100
+								}
+								else_if = {
+									limit = { 
+										has_variable = sexual_orientation
+										sex_same_as = scope:attracting_character
+									}
+									value = var:sexual_orientation
+									multiply = -1
+									add = 100
+									max = 100
+									divide = 100
+								}
+								else = {
+									value = 0
+								}
+							}
+						}
+						multiply = {
+							if = {
+								limit = { 
+									has_variable = aging_attraction_offset
+									scope:attracting_character = { has_variable = visual_age }
+								}
+								value = 1
+								subtract = {
+									value = {
+										value = scope:attracting_character.var:visual_age
+										subtract = var:aging_attraction_offset
+										min = 0
+										max = 1
+									}
+								}
+							}
+							else_if = {
+								limit = { 
+									scope:attracting_character = { has_variable = visual_age }
+								}
+								value = 1
+								subtract = {
+									value = {
+										value = scope:attracting_character.var:visual_age
+										subtract = {
+											value = age
+											subtract = 25
+											multiply = 0.02
+											min = 0
+											max = 1
+										}
+										min = 0
+										max = 1
+									}
+								}
+							}
+							else_if = {
+								limit = { 
+								has_variable = aging_attraction_offset
+								}
+								value = 1
+								subtract = {
+									value = {
+										value = scope:attracting_character.age
+										subtract = 25
+										multiply = 0.02
+										min = 0
+										max = 1
+										subtract = var:aging_attraction_offset
+										min = 0
+										max = 1
+									}
+								}
+							}
+							else = {
+								value = 1
+								subtract = {
+									value = {
+										value = scope:attracting_character.age
+										subtract = 25
+										multiply = 0.02
+										min = 0
+										max = 1
+										subtract = {
+											value = age
+											subtract = 25
+											multiply = 0.02
+											min = 0
+											max = 1
+										}
+										min = 0
+										max = 1
+									}
+								}
+							}
+						}
+					}
+
+age_difference_gui_value = {
+			if = {
+				limit = { 
+					has_variable = aging_attraction_offset
+					scope:attracting_character = { has_variable = visual_age }
+				}
+				value = 100
+				subtract = {
+					value = {
+						value = scope:attracting_character.var:visual_age
+						subtract = var:aging_attraction_offset
+						min = 0
+						max = 1
+						multiply = 100
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					scope:attracting_character = { has_variable = visual_age }
+				}
+				value = 100
+				subtract = {
+					value = {
+						value = scope:attracting_character.var:visual_age
+						subtract = {
+							value = age
+							subtract = 25
+							multiply = 0.02
+							min = 0
+							max = 1
+						}
+						min = 0
+						max = 1
+						multiply = 100
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					has_variable = aging_attraction_offset
+				}
+				value = 100
+				subtract = {
+					value = {
+						value = scope:attracting_character.age
+						subtract = 25
+						multiply = 0.02
+						min = 0
+						max = 1
+						subtract = var:aging_attraction_offset
+						min = 0
+						max = 1
+						multiply = 100
+					}
+				}
+			}
+			else = {
+				value = 100
+				subtract = {
+					value = {
+						value = scope:attracting_character.age
+						subtract = 25
+						multiply = 0.02
+						min = 0
+						max = 1
+						subtract = {
+							value = age
+							subtract = 25
+							multiply = 0.02
+							min = 0
+							max = 1
+						}
+						min = 0
+						max = 1
+						multiply = 100
+					}
+				}
+			}
+		}
+
+sexual_orientation_gui_value = {
+				if = {
+					limit = { has_sexuality = asexual }
+					value = 0
+				}
+				else = {
+					value = var:sexual_orientation
+					if = {
+						limit = { sex_opposite_of = scope:attracting_character }
+						add = 100
+						max = 100
+					}
+					else_if = {
+						limit = { sex_same_as = scope:attracting_character }
+						multiply = -1
+						add = 100
+						max = 100
+					}
+				}
+			}
+
+male_physical_attraction_gui_value = {
+				value = face_attraction_gui_value
+				add = penis_attraction_gui_value
+				add = male_butt_attraction_gui_value
+				add = male_muscle_attraction_gui_value
+				add = male_fat_attraction_gui_value
+				add = male_height_attraction_gui_value
+				divide = max_attraction_divisor
+				min = -100
+			}
+
+face_attraction_gui_tooltip_value = {
+				value = face_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+penis_attraction_gui_tooltip_value = {
+				value = penis_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+male_butt_attraction_gui_tooltip_value = {
+				value = male_butt_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+male_muscle_attraction_gui_tooltip_value = {
+				value = male_muscle_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+male_fat_attraction_gui_tooltip_value = {
+				value = male_fat_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+male_height_attraction_gui_tooltip_value = {
+				value = male_height_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+female_physical_attraction_gui_value = {
+				value = face_attraction_gui_value
+				add = breast_attraction_gui_value
+				add = female_butt_attraction_gui_value
+				add = female_muscle_attraction_gui_value
+				add = female_fat_attraction_gui_value
+				add = female_height_attraction_gui_value
+				divide = max_attraction_divisor
+				min = -100
+			}
+
+breast_attraction_gui_tooltip_value = {
+				value = breast_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+female_butt_attraction_gui_tooltip_value = {
+				value = female_butt_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+female_muscle_attraction_gui_tooltip_value = {
+				value = female_muscle_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+female_fat_attraction_gui_tooltip_value = {
+				value = female_fat_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+female_height_attraction_gui_tooltip_value = {
+				value = female_height_attraction_gui_value
+				divide = max_attraction_divisor
+			}
+
+face_attraction_gui_value = {
+			value = {
+				value = 0
+				add = {
+					if = { 
+						limit = { scope:attracting_character = { has_trait = beauty_good } }
+						if = { 
+							limit = { scope:attracting_character = { has_trait = beauty_good_1 } }
+							value = beauty_good_1_attraction_value
+						}
+						else_if = { 
+							limit = { scope:attracting_character = { has_trait = beauty_good_2 } }
+							value = beauty_good_2_attraction_value
+						}
+						else = { 
+							value = beauty_good_3_attraction_value
+						}
+					}
+					else_if = { 
+						limit = { scope:attracting_character = { has_trait = beauty_bad } }
+						if = { 
+							limit = { scope:attracting_character = { has_trait = beauty_bad_1 } }
+							value = beauty_bad_1_attraction_value
+						}
+						else_if = { 
+							limit = { scope:attracting_character = { has_trait = beauty_bad_2 } }
+							value = beauty_bad_2_attraction_value
+						}
+						else = { 
+							value = beauty_bad_3_attraction_value
+						}
+					}
+					else = { 
+						value = 0
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = great_pox } }
+						add = -30
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = early_great_pox } }
+						add = -20
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = lovers_pox } }
+						add = -20
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = leper } }
+						add = -30
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = wounded_2 } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = wounded_3 } }
+						add = -30
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = maimed } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = one_eyed } }
+						add = -5
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = disfigured } }
+						add = -20
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = consumption } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = typhus } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = bubonic_plague } }
+						add = -30
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = smallpox } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = clubfooted } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = hunchbacked } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = lisping } }
+						add = -5
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = dwarf } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = giant } }
+						add = -10
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = inbred } }
+						add = -30
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = scaly } }
+						add = -30
+					}
+					if = { 
+						limit = { scope:attracting_character = { has_trait = one_legged } }
+						add = -10
+					}
+				}
+			}
+		}
+
+penis_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = penis_size_preference
+				}
+			}
+			add = {
+				value = max_penis_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_penis_size
+					subtract = var:penis_size_preference
+					multiply = penis_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:penis_size_preference
+					subtract = scope:attracting_character.actual_penis_size
+					multiply = penis_attraction_multiplier
+					max = 0
+				}
+				min = min_penis_attraction_value
+			}
+		}
+	}
+
+breast_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = breast_size_preference
+				}
+			}
+			add = {
+				value = max_breast_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_breast_size
+					subtract = var:breast_size_preference
+					multiply = breast_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:breast_size_preference
+					subtract = scope:attracting_character.actual_breast_size
+					multiply = breast_attraction_multiplier
+					max = 0
+				}
+				min = min_breast_attraction_value
+			}
+		}
+	}
+
+male_butt_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { this = { is_alive = yes } }
+					has_variable = male_butt_size_preference
+				}
+			}
+			add = {
+				value = max_male_butt_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_butt_size
+					subtract = var:male_butt_size_preference
+					multiply = male_butt_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:male_butt_size_preference
+					subtract = scope:attracting_character.actual_butt_size
+					multiply = male_butt_attraction_multiplier
+					max = 0
+				}
+				min = min_male_butt_attraction_value
+			}
+		}
+	}
+
+female_butt_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = female_butt_size_preference
+				}
+			}
+			add = {
+				value = max_female_butt_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_butt_size
+					subtract = var:female_butt_size_preference
+					multiply = female_butt_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:female_butt_size_preference
+					subtract = scope:attracting_character.actual_butt_size
+					multiply = female_butt_attraction_multiplier
+					max = 0
+				}
+				min = min_female_butt_attraction_value
+			}
+		}
+	}
+
+male_muscle_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { this = { is_alive = yes } }
+					has_variable = male_muscle_preference
+				}
+			}
+			add = {
+				value = max_male_muscle_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_muscle
+					subtract = var:male_muscle_preference
+					multiply = male_muscle_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:male_muscle_preference
+					subtract = scope:attracting_character.actual_muscle
+					multiply = male_muscle_attraction_multiplier
+					max = 0
+				}
+				min = min_male_muscle_attraction_value
+			}
+		}
+	}
+
+female_muscle_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = female_muscle_preference
+				}
+			}
+			add = {
+				value = max_female_muscle_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_muscle
+					subtract = var:female_muscle_preference
+					multiply = female_muscle_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:female_muscle_preference
+					subtract = scope:attracting_character.actual_muscle
+					multiply = female_muscle_attraction_multiplier
+					max = 0
+				}
+				min = min_female_muscle_attraction_value
+			}
+		}
+	}
+
+
+male_fat_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = male_fat_preference
+				}
+			}
+			add = {
+				value = max_male_fat_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_fat
+					subtract = var:male_fat_preference
+					multiply = male_fat_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:male_fat_preference
+					subtract = scope:attracting_character.actual_fat
+					multiply = male_fat_attraction_multiplier
+					max = 0
+				}
+				min = min_male_fat_attraction_value
+			}
+		}
+	}
+
+female_fat_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = female_fat_preference
+				}
+			}
+			add = {
+				value = max_female_fat_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_fat
+					subtract = var:female_fat_preference
+					multiply = female_fat_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:female_fat_preference
+					subtract = scope:attracting_character.actual_fat
+					multiply = female_fat_attraction_multiplier
+					max = 0
+				}
+				min = min_female_fat_attraction_value
+			}
+		}
+	}
+
+male_height_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = male_height_preference
+				}
+			}
+			add = {
+				value = max_male_height_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_height
+					subtract = var:male_height_preference
+					multiply = male_height_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:male_height_preference
+					subtract = scope:attracting_character.actual_height
+					multiply = male_height_attraction_multiplier
+					max = 0
+				}
+				min = min_male_height_attraction_value
+			}
+		}
+	}
+
+female_height_attraction_gui_value = {
+		value = 0
+		If = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = female_height_preference
+				}
+			}
+			add = {
+				value = max_female_height_attraction_value
+				add = { 
+					add = scope:attracting_character.actual_height
+					subtract = var:female_height_preference
+					multiply = female_height_attraction_multiplier
+					max = 0
+				}
+				add = { 
+					add = var:female_height_preference
+					subtract = scope:attracting_character.actual_height
+					multiply = female_height_attraction_multiplier
+					max = 0
+				}
+				min = min_female_height_attraction_value
+			}
+		}
+	}
+
+

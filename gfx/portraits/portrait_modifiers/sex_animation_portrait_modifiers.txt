@@ -1,0 +1,116 @@
+﻿sex_animations = {
+	usage = none
+	erection = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_penis_size
+				value = 1.0
+				template = erection_size
+			}
+		}	
+	}
+
+	erection_animation_correction = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_penis_size
+				value = 1.0
+				template = erection_size_animation_correction
+			}
+		}	
+	}
+
+	height_animation_correction_full = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+				template = full_height_animation_correction
+			}
+		}	
+	}
+
+	height_animation_correction_normal = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+				template = normal_height_animation_correction
+			}
+		}	
+	}
+
+	height_animation_correction_dwarf = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+				template = dwarf_height_animation_correction
+			}
+		}	
+	}
+
+	height_animation_correction_giant = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+				template = giant_height_animation_correction
+			}
+		}	
+	}
+	
+	fellatio_correction_weight = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = gene_fellatio_correction
+				value = {
+					value = current_weight
+					subtract = 25
+					divide = 75
+				}
+				template = fellatio_fat_correction
+			}
+		}
+	}
+	
+	fellatio_correction_height_normal = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+				template = normal_height_fellatio_correction
+			}
+		}
+	}
+	
+	fellatio_correction_height_dwarf = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+				template = dwarf_height_fellatio_correction
+			}
+		}
+	}
+	
+	fellatio_correction_height_giant = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+				template = giant_height_fellatio_correction
+			}
+		}
+	}
+}

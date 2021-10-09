@@ -1,0 +1,1749 @@
+﻿on_non_binary_sexual_orientation = {
+		trigger = {
+			Not = { has_variable = sexual_orientation }
+			Or = {
+				has_sexuality = bisexual
+				has_sexuality = heterosexual
+				has_sexuality = homosexual
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_sexuality = heterosexual
+				}
+				set_variable = {
+					name = sexual_orientation
+					value = {
+						fixed_range = { 
+							min = 50
+							max = 100
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_sexuality = bisexual
+				}
+				set_variable = {
+					name = sexual_orientation
+					value = {
+						fixed_range = { 
+							min = -50
+							max = 50
+						}
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					name = sexual_orientation
+					value = {
+						fixed_range = { 
+							min = -100
+							max = -50
+						}
+					}
+				}
+			}
+		}
+	}
+
+set_aging_attraction_offset = {
+		trigger = {
+			Not = { has_variable = aging_attraction_offset }
+		}
+		effect = {
+			set_variable = {
+				name = aging_attraction_offset
+				value = {
+					if = {
+						limit = { 
+							age >= 25
+							Or = {
+								has_trait = beauty_good_1
+								has_trait = beauty_good_2
+								has_trait = beauty_good_3
+							}
+						}
+						value = age
+						subtract = 35
+						multiply = 0.02
+						min = 0
+						max = 1
+					}
+					else_if = {
+						limit = { age >= 25 }
+						value = age
+						subtract = 25
+						multiply = 0.02
+						min = 0
+						max = 1
+					}
+					else = {
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	
+increase_aging_attraction_offset = {
+		trigger = {
+			has_variable = aging_attraction_offset
+			Or = {
+				age > 35
+				and = {
+					age > 25
+					Not = { has_trait = beauty_good_1 }
+					Not = { has_trait = beauty_good_2 }
+					Not = { has_trait = beauty_good_3 }
+				}
+			}
+		}
+		effect = {
+			change_variable = {
+				name = aging_attraction_offset
+				add = 0.02
+			}
+			if = {
+				limit = { var:aging_attraction_offset > 1 }
+				remove_variable = visual_age
+				set_variable = {
+					name = visual_age
+					value = 1
+				}
+			}
+		}
+	}
+
+on_cultural_penis_size_preference = {
+			trigger = {
+				Not = { has_variable = penis_size_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = penis_size_preference
+								any_courtier = {
+									has_variable = penis_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_penis_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = penis_size_preference
+							}
+							save_temporary_scope_as = court_penis_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_penis_size_preference
+									add = scope:court_penis_size_preference_influencer.var:penis_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_preference
+						value = {
+							add = var:court_penis_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_penis_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = penis_size_preference
+								any_courtier = {
+									has_variable = penis_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_penis_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = penis_size_preference
+							}
+							save_temporary_scope_as = court_penis_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_penis_size_preference
+									add = scope:court_penis_size_preference_influencer.var:penis_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_preference
+						value = {
+							add = var:court_penis_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_penis_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = penis_size_preference
+						}
+					}
+					set_variable = {
+						name = court_penis_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = penis_size_preference }
+						save_temporary_scope_as = court_penis_size_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_penis_size_preference
+								add = scope:court_penis_size_preference_influencer.var:penis_size_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = penis_size_preference
+						value = {
+							add = var:court_penis_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_penis_size_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = penis_size_preference
+						value = {
+							value = 0
+							add = penis_size_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_breast_size_preference = {
+			trigger = {
+				Not = { has_variable = breast_size_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = breast_size_preference
+								any_courtier = {
+									has_variable = breast_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_breast_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = breast_size_preference
+							}
+							save_temporary_scope_as = court_breast_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_breast_size_preference
+									add = scope:court_breast_size_preference_influencer.var:breast_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = breast_size_preference
+						value = {
+							add = var:court_breast_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_breast_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = breast_size_preference
+								any_courtier = {
+									has_variable = breast_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_breast_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = breast_size_preference
+							}
+							save_temporary_scope_as = court_breast_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_breast_size_preference
+									add = scope:court_breast_size_preference_influencer.var:breast_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = breast_size_preference
+						value = {
+							add = var:court_breast_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_breast_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = breast_size_preference
+						}
+					}
+					set_variable = {
+						name = court_breast_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = breast_size_preference }
+						save_temporary_scope_as = court_breast_size_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_breast_size_preference
+								add = scope:court_breast_size_preference_influencer.var:breast_size_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = breast_size_preference
+						value = {
+							add = var:court_breast_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_breast_size_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = breast_size_preference
+						value = {
+							value = 0
+							add = breast_size_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_male_butt_size_preference = {
+			trigger = {
+				Not = { has_variable = male_butt_size_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_butt_size_preference
+								any_courtier = {
+									has_variable = male_butt_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_butt_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_butt_size_preference
+							}
+							save_temporary_scope_as = court_male_butt_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_butt_size_preference
+									add = scope:court_male_butt_size_preference_influencer.var:male_butt_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_butt_size_preference
+						value = {
+							add = var:court_male_butt_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_butt_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_butt_size_preference
+								any_courtier = {
+									has_variable = male_butt_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_butt_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_butt_size_preference
+							}
+							save_temporary_scope_as = court_male_butt_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_butt_size_preference
+									add = scope:court_male_butt_size_preference_influencer.var:male_butt_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_butt_size_preference
+						value = {
+							add = var:court_male_butt_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_butt_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = male_butt_size_preference
+						}
+					}
+					set_variable = {
+						name = court_male_butt_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = male_butt_size_preference }
+						save_temporary_scope_as = court_male_butt_size_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_male_butt_size_preference
+								add = scope:court_male_butt_size_preference_influencer.var:male_butt_size_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = male_butt_size_preference
+						value = {
+							add = var:court_male_butt_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_butt_size_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = male_butt_size_preference
+						value = {
+							value = 0
+							add = male_butt_size_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_female_butt_size_preference = {
+			trigger = {
+				Not = { has_variable = female_butt_size_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_butt_size_preference
+								any_courtier = {
+									has_variable = female_butt_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_butt_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_butt_size_preference
+							}
+							save_temporary_scope_as = court_female_butt_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_butt_size_preference
+									add = scope:court_female_butt_size_preference_influencer.var:female_butt_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_butt_size_preference
+						value = {
+							add = var:court_female_butt_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_butt_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_butt_size_preference
+								any_courtier = {
+									has_variable = female_butt_size_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_butt_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_butt_size_preference
+							}
+							save_temporary_scope_as = court_female_butt_size_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_butt_size_preference
+									add = scope:court_female_butt_size_preference_influencer.var:female_butt_size_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_butt_size_preference
+						value = {
+							add = var:court_female_butt_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_butt_size_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = female_butt_size_preference
+						}
+					}
+					set_variable = {
+						name = court_female_butt_size_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = female_butt_size_preference }
+						save_temporary_scope_as = court_female_butt_size_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_female_butt_size_preference
+								add = scope:court_female_butt_size_preference_influencer.var:female_butt_size_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = female_butt_size_preference
+						value = {
+							add = var:court_female_butt_size_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_butt_size_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = female_butt_size_preference
+						value = {
+							value = 0
+							add = female_butt_size_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_male_muscle_preference = {
+			trigger = {
+				Not = { has_variable = male_muscle_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_muscle_preference
+								any_courtier = {
+									has_variable = male_muscle_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_muscle_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_muscle_preference
+							}
+							save_temporary_scope_as = court_male_muscle_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_muscle_preference
+									add = scope:court_male_muscle_preference_influencer.var:male_muscle_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_muscle_preference
+						value = {
+							add = var:court_male_muscle_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_muscle_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_muscle_preference
+								any_courtier = {
+									has_variable = male_muscle_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_muscle_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_muscle_preference
+							}
+							save_temporary_scope_as = court_male_muscle_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_muscle_preference
+									add = scope:court_male_muscle_preference_influencer.var:male_muscle_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_muscle_preference
+						value = {
+							add = var:court_male_muscle_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_muscle_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = male_muscle_preference
+						}
+					}
+					set_variable = {
+						name = court_male_muscle_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = male_muscle_preference }
+						save_temporary_scope_as = court_male_muscle_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_male_muscle_preference
+								add = scope:court_male_muscle_preference_influencer.var:male_muscle_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = male_muscle_preference
+						value = {
+							add = var:court_male_muscle_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_muscle_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = male_muscle_preference
+						value = {
+							value = 0
+							add = male_muscle_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_female_muscle_preference = {
+			trigger = {
+				Not = { has_variable = female_muscle_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_muscle_preference
+								any_courtier = {
+									has_variable = female_muscle_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_muscle_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_muscle_preference
+							}
+							save_temporary_scope_as = court_female_muscle_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_muscle_preference
+									add = scope:court_female_muscle_preference_influencer.var:female_muscle_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_muscle_preference
+						value = {
+							add = var:court_female_muscle_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_muscle_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_muscle_preference
+								any_courtier = {
+									has_variable = female_muscle_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_muscle_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_muscle_preference
+							}
+							save_temporary_scope_as = court_female_muscle_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_muscle_preference
+									add = scope:court_female_muscle_preference_influencer.var:female_muscle_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_muscle_preference
+						value = {
+							add = var:court_female_muscle_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_muscle_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = female_muscle_preference
+						}
+					}
+					set_variable = {
+						name = court_female_muscle_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = female_muscle_preference }
+						save_temporary_scope_as = court_female_muscle_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_female_muscle_preference
+								add = scope:court_female_muscle_preference_influencer.var:female_muscle_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = female_muscle_preference
+						value = {
+							add = var:court_female_muscle_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_muscle_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = female_muscle_preference
+						value = {
+							value = 0
+							add = female_muscle_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_male_fat_preference = {
+			trigger = {
+				Not = { has_variable = male_fat_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_fat_preference
+								any_courtier = {
+									has_variable = male_fat_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_fat_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_fat_preference
+							}
+							save_temporary_scope_as = court_male_fat_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_fat_preference
+									add = scope:court_male_fat_preference_influencer.var:male_fat_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_fat_preference
+						value = {
+							add = var:court_male_fat_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_fat_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_fat_preference
+								any_courtier = {
+									has_variable = male_fat_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_fat_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_fat_preference
+							}
+							save_temporary_scope_as = court_male_fat_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_fat_preference
+									add = scope:court_male_fat_preference_influencer.var:male_fat_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_fat_preference
+						value = {
+							add = var:court_male_fat_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_fat_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = male_fat_preference
+						}
+					}
+					set_variable = {
+						name = court_male_fat_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = male_fat_preference }
+						save_temporary_scope_as = court_male_fat_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_male_fat_preference
+								add = scope:court_male_fat_preference_influencer.var:male_fat_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = male_fat_preference
+						value = {
+							add = var:court_male_fat_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_fat_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = male_fat_preference
+						value = {
+							value = 0
+							add = male_fat_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_female_fat_preference = {
+			trigger = {
+				Not = { has_variable = female_fat_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_fat_preference
+								any_courtier = {
+									has_variable = female_fat_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_fat_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_fat_preference
+							}
+							save_temporary_scope_as = court_female_fat_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_fat_preference
+									add = scope:court_female_fat_preference_influencer.var:female_fat_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_fat_preference
+						value = {
+							add = var:court_female_fat_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_fat_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_fat_preference
+								any_courtier = {
+									has_variable = female_fat_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_fat_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_fat_preference
+							}
+							save_temporary_scope_as = court_female_fat_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_fat_preference
+									add = scope:court_female_fat_preference_influencer.var:female_fat_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_fat_preference
+						value = {
+							add = var:court_female_fat_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_fat_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = female_fat_preference
+						}
+					}
+					set_variable = {
+						name = court_female_fat_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = female_fat_preference }
+						save_temporary_scope_as = court_female_fat_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_female_fat_preference
+								add = scope:court_female_fat_preference_influencer.var:female_fat_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = female_fat_preference
+						value = {
+							add = var:court_female_fat_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_fat_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = female_fat_preference
+						value = {
+							value = 0
+							add = female_fat_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_male_height_preference = {
+			trigger = {
+				Not = { has_variable = male_height_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_height_preference
+								any_courtier = {
+									has_variable = male_height_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_height_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_height_preference
+							}
+							save_temporary_scope_as = court_male_height_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_height_preference
+									add = scope:court_male_height_preference_influencer.var:male_height_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_height_preference
+						value = {
+							add = var:court_male_height_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_height_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = male_height_preference
+								any_courtier = {
+									has_variable = male_height_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_male_height_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = male_height_preference
+							}
+							save_temporary_scope_as = court_male_height_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_male_height_preference
+									add = scope:court_male_height_preference_influencer.var:male_height_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = male_height_preference
+						value = {
+							add = var:court_male_height_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_height_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = male_height_preference
+						}
+					}
+					set_variable = {
+						name = court_male_height_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = male_height_preference }
+						save_temporary_scope_as = court_male_height_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_male_height_preference
+								add = scope:court_male_height_preference_influencer.var:male_height_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = male_height_preference
+						value = {
+							add = var:court_male_height_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_male_height_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = male_height_preference
+						value = {
+							value = 0
+							add = male_height_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+
+on_cultural_female_height_preference = {
+			trigger = {
+				Not = { has_variable = female_height_preference }
+			}
+			effect = {
+				save_scope_as = influenced_character
+				if = {
+					limit = {
+						exists = top_liege
+						trigger_if = {
+							limit = { exists = top_liege }
+							top_liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_height_preference
+								any_courtier = {
+									has_variable = female_height_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_height_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					top_liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_height_preference
+							}
+							save_temporary_scope_as = court_female_height_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_height_preference
+									add = scope:court_female_height_preference_influencer.var:female_height_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_height_preference
+						value = {
+							add = var:court_female_height_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_height_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						exists = liege
+						trigger_if = {
+							limit = { exists = liege }
+							liege = {
+								has_culture = scope:influenced_character.culture
+								has_variable = female_height_preference
+								any_courtier = {
+									has_variable = female_height_preference
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = court_female_height_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					liege = {
+						every_courtier = {
+							limit = {
+								has_variable = female_height_preference
+							}
+							save_temporary_scope_as = court_female_height_preference_influencer
+							scope:influenced_character = {
+								change_variable = {
+									name = court_female_height_preference
+									add = scope:court_female_height_preference_influencer.var:female_height_preference
+								}
+								change_variable = {
+									name = court_characters
+									add = 1
+								}
+							}
+						}
+					}
+					set_variable = {
+						name = female_height_preference
+						value = {
+							add = var:court_female_height_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_height_preference
+					remove_variable = court_characters
+				}
+				else_if = {
+					limit = {
+						is_landed = yes
+						any_courtier = {
+							has_variable = female_height_preference
+						}
+					}
+					set_variable = {
+						name = court_female_height_preference
+						value = 0
+					}
+					set_variable = {
+						name = court_characters
+						value = 0
+					}
+					every_courtier = {
+						limit = { has_variable = female_height_preference }
+						save_temporary_scope_as = court_female_height_preference_influencer
+						scope:influenced_character = {
+							change_variable = {
+								name = court_female_height_preference
+								add = scope:court_female_height_preference_influencer.var:female_height_preference
+							}
+							change_variable = {
+								name = court_characters
+								add = 1
+							}
+						}
+					}
+					set_variable = {
+						name = female_height_preference
+						value = {
+							add = var:court_female_height_preference
+							divide = var:court_characters
+						}
+					}
+					remove_variable = court_female_height_preference
+					remove_variable = court_characters
+				}
+				else = {
+					set_variable = {
+						name = female_height_preference
+						value = {
+							value = 0
+							add = female_height_preference_default
+							add = {
+								fixed_range = { 
+									min = -10
+									max = 10
+								}	
+							}
+						}
+					}
+				}
+			}
+		}

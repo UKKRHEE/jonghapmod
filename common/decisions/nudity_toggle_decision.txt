@@ -1,0 +1,90 @@
+nudity_on = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	desc = nudity_on_desc
+
+	is_shown = {	
+	NOT = {has_character_flag = nudity_on}
+	}
+
+	effect = {
+		add_character_flag = nudity_on
+		every_living_character = {			
+			add_character_flag = {
+			flag = is_naked
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+
+nudity_on_men = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	desc = nudity_on_men_desc
+
+	is_shown = {	
+	NOT = {has_character_flag = nudity_men}
+	}
+
+	effect = {
+		add_character_flag = nudity_on
+		add_character_flag = nudity_men
+		every_living_character = {
+			limit = {			
+			is_male = yes
+			}
+			add_character_flag = {
+			flag = is_naked
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+
+nudity_on_women = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	desc = nudity_on_women_desc
+
+	is_shown = {	
+	NOT = {has_character_flag = nudity_women}
+	}
+
+	effect = {
+		add_character_flag = nudity_on
+		add_character_flag = nudity_women
+		every_living_character = {
+			limit = {			
+			is_female = yes
+			}
+			add_character_flag = {
+			flag = is_naked
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+
+nudity_off = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	desc = nudity_off_desc
+
+	is_shown = {		
+		has_character_flag = nudity_on
+	}
+
+	effect = {
+		remove_character_flag = nudity_on
+		remove_character_flag = nudity_men
+		remove_character_flag = nudity_women
+		every_living_character = {
+			limit = {			
+			has_character_flag = is_naked
+			}
+			remove_character_flag = is_naked
+		}
+	}
+
+	ai_check_interval = 0
+}

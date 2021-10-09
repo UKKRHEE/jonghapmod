@@ -1,0 +1,56 @@
+﻿
+on_birth_child = {
+	on_actions = { 
+		on_physical_trait
+			}
+}
+
+on_birthday = {
+	on_actions = {
+		on_add_height_modifier
+	}
+}
+
+on_guest_arrived_from_pool = {
+	on_actions = { 
+		on_physical_trait
+			}
+}
+
+random_yearly_everyone_pulse = {
+	on_actions = {
+		on_physical_trait
+	}
+}
+
+yearly_global_pulse = {
+	on_actions = {
+		on_gene_variable_seeding
+	}
+}
+
+on_game_start = {
+	on_actions = {
+		on_gene_variable_seeding
+	}
+}
+
+on_gene_variable_seeding = {
+	trigger = {
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = triggered_bookmark_events
+				target = flag:gene_variable_seeding
+				}
+			}
+		}
+	effect = {
+		add_to_global_variable_list = {
+			name = triggered_bookmark_events
+			target = flag:gene_variable_seeding
+		}
+		every_living_character = {
+				trigger_event = { on_action = on_physical_trait }
+		}
+	}
+}

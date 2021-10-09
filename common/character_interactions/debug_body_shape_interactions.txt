@@ -1,0 +1,86 @@
+﻿
+add_height_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+		scope:recipient = { has_variable = height_genetic }
+	}
+	
+	on_accept = {
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.0001 }
+	}
+	
+	auto_accept = yes
+}
+
+
+add_breast_size_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+		scope:recipient = { has_variable = breast_size_genetic }
+	}
+	
+	on_accept = {
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.1001 }
+	}
+	
+	auto_accept = yes
+}
+
+add_penis_size_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+		scope:recipient = { has_variable = penis_size_genetic }
+	}
+	
+	on_accept = {
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.2001 }
+	}
+	
+	auto_accept = yes
+}
+
+add_butt_size_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+		scope:recipient = { has_variable = butt_size_genetic }
+	}
+	
+	on_accept = {
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.3001 }
+	}
+	
+	auto_accept = yes
+}
+
+add_muscles_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+		scope:recipient = { has_variable = muscles }
+	}
+	
+	on_accept = {
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.4001 }
+	}
+	
+	auto_accept = yes
+}

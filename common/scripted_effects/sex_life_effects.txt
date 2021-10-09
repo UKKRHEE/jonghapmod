@@ -1,0 +1,51 @@
+﻿match_sexual_partners_to_event_effect = {
+		save_temporary_scope_as = matching_character
+		$CHARACTER$ = { save_temporary_scope_as = matching_partner }
+		if = {
+			limit = {
+				is_ai = yes
+				scope:matching_partner = { is_ai = yes }
+			}
+			had_sex_results_effect = { CHARACTER = scope:matching_partner }
+		}
+		else_if = { #simulate monthly sex for player
+			limit = {
+				Or = {
+					And = {
+						is_ai = no
+						scope:matching_partner = { has_variable = had_sex_this_year }
+					}
+					And = {
+						scope:matching_partner = { is_ai = no }
+						has_variable = had_sex_this_year
+					}
+				}
+			}
+			had_sex_results_effect = { CHARACTER = scope:matching_partner }
+		}
+		else_if = { # Show Player Sex Scene for Own Sex Life
+			limit = {
+				is_ai = no
+			}
+			carn_sex_scene_request_consensual = yes
+			carn_sex_scene_effect = {
+				PLAYER = scope:matching_character
+				TARGET = scope:matching_partner
+				STRESS_EFFECTS = no
+				DRAMA = yes
+			}
+		}
+		else_if = { # Show Player Sex Scene for Partner's Sex Life
+			limit = {
+				scope:matching_partner = { is_ai = no }
+			}
+			carn_sex_scene_request_consensual = yes
+			carn_sex_scene_effect = {
+				PLAYER = scope:matching_partner
+				TARGET = scope:matching_character
+				STRESS_EFFECTS = no
+				DRAMA = yes
+			}
+		}
+	}
+

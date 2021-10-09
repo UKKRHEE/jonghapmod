@@ -1,0 +1,1223 @@
+﻿#######################
+# 1000 - Late Night Visitor
+# 1010 - Dreaming Big
+
+namespace = ie_yearly
+
+#######################
+# A seducer visits you during the night
+# by Ernie Collins
+# 1000-1007
+#######################
+
+scripted_trigger yearly_1000_late_night_visitor_trigger = {
+	is_available_ai_adult = yes
+	OR = {
+		sexually_liberal_trigger = yes
+		has_trait = beauty_good
+	}
+	OR = {
+		NOT = { is_close_or_extended_family_of = root }
+		accepts_incest_with_trigger = { CHARACTER = root }
+	}
+	save_temporary_scope_as = late_night_visitor_candidate
+	matching_gender_and_sexuality_trigger = { CHARACTER_1 = root CHARACTER_2 = scope:late_night_visitor_candidate }
+}
+
+scripted_effect ie_yearly_1000_determine_late_night_visitor_effect = {
+	every_relation = {
+		type = lover
+		add_to_temporary_list = possible_late_night_visitors
+	}
+	every_close_or_extended_family_member = {
+		limit = {
+			yearly_1000_late_night_visitor_trigger = yes
+		}
+		add_to_temporary_list = possible_late_night_visitors
+	}
+	every_courtier_or_guest = {
+		limit = { yearly_1000_late_night_visitor_trigger = yes }
+		add_to_temporary_list = possible_late_night_visitors
+	}
+
+	random_in_list = {
+		list = possible_late_night_visitors
+		weight = {
+			base = 100
+			modifier = {
+				 sexually_liberal_trigger = yes
+				 factor = 3
+			}
+			modifier = { # This is on top of the above
+				 has_trait = lustful
+				 factor = 2
+			}
+			modifier = { # Leaving this in from the original event I based this one on
+				opinion = {
+					target = root
+					value <= 0
+				}
+				factor = 0.1
+			}
+			modifier = {
+				opinion = {
+					target = root
+					value >= 50
+				}
+				factor = 1.5
+			}
+		}
+		save_scope_as = late_night_visitor
+	}
+}
+
+ie_yearly.1000 = {
+	type = character_event
+	title = ie_yearly.1000.t
+	desc = ie_yearly.1000.desc
+
+	theme = seduction
+	override_background = {
+		event_background = corridor_night
+	}
+	left_portrait = {
+		character = scope:late_night_visitor
+		animation = flirtation
+	}
+	
+	trigger = {
+		is_adult = yes
+		carn_gender_can_impregnate_trigger = yes
+		NOT = { has_character_flag = had_event_ie_yearly_1000 }
+		OR = {
+			any_relation = {
+				type = lover
+				yearly_1000_late_night_visitor_trigger = yes
+			}
+			any_close_or_extended_family_member = {
+				yearly_1000_late_night_visitor_trigger = yes
+			}
+			any_courtier_or_guest = {
+				yearly_1000_late_night_visitor_trigger = yes
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			OR = {
+				has_trait = lustful
+				has_trait = chaste
+			}
+			factor = 2.0
+		}
+		modifier = {
+			has_trait = sadistic
+			factor = 0.5
+		}
+		modifier = {
+			attraction >= low_positive_attraction
+			factor = 1.2
+		}
+		modifier = {
+			attraction >= medium_positive_attraction
+			factor = 1.2
+		}
+		modifier = {
+			attraction >= high_positive_attraction
+			factor = 1.2
+		}
+		modifier = {
+			attraction <= low_negative_attraction
+			factor = 0.8
+		}
+		modifier = {
+			attraction <= medium_negative_attraction
+			factor = 0.7
+		}
+		modifier = {
+			attraction <= high_negative_attraction
+			factor = 0.4
+		}
+
+		compare_modifier = { #Less likely to happen the older you are
+			trigger = {
+				age >= 35
+			}
+			value = age
+			multiplier = -0.75
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_ie_yearly_1000
+			days = 3650
+		}
+
+		ie_yearly_1000_determine_late_night_visitor_effect = yes
+
+		scope:late_night_visitor = { carn_undress_character_effect = yes }
+	}
+
+	# Invite them in
+	option = {
+		name = ie_yearly.1000.a
+		custom_tooltip = ie_yearly.1000.a.tt
+
+		stress_impact = {
+			chaste = medium_stress_impact_gain
+			craven = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+
+		hidden_effect = {
+			trigger_event = {
+				id = ie_yearly.1001
+				days = { 1 3 }
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 100
+				sexually_liberal_trigger = yes
+			}
+			ai_greed_target_modifier = { VALUE = 50 }
+			ai_boldness_target_modifier = { VALUE = 50 }
+		}
+	}
+
+	# (Try to) be polite
+	option = {
+		name = ie_yearly.1000.b
+		custom_tooltip = ie_yearly.1000.b.tt
+		
+		hidden_effect = {
+			trigger_event = {
+				id = ie_yearly.1003
+				days = { 1 3 }
+			}
+		}
+
+		ai_chance = {
+			base = 100
+
+			modifier = {
+				add = 100
+				has_trait_introverted_trigger = yes
+			}
+			ai_boldness_target_modifier = { VALUE = -50 }
+			ai_honor_target_modifier = { VALUE = 50 }
+			ai_compassion_target_modifier = { VALUE = 50 }
+		}
+	}
+
+	# Refuse
+	option = {
+		name = ie_yearly.1000.c
+		custom_tooltip = ie_yearly.1000.c.tt
+		
+		send_interface_toast = {
+			title = ie_yearly.1000.c.message
+			left_icon = scope:late_night_visitor
+			
+			add_piety = medium_piety_gain
+
+			reverse_add_opinion = {
+				target = scope:late_night_visitor
+				modifier = rejected_opinion
+			}
+			
+			if = {
+				limit = { sexually_liberal_trigger = yes }
+				stress_impact = {
+					base = medium_stress_impact_gain
+					lustful = minor_stress_impact_gain
+				}
+			}
+
+			scope:late_night_visitor = {
+				give_deviant_secret_or_trait_effect = yes
+	
+				random_secret = { #Find the secret
+					limit = {
+						secret_type = secret_deviant
+						NOT = { is_known_by = root }
+					}
+					reveal_to_without_events_effect = { CHARACTER = root }
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+
+			modifier = {
+				add = 100
+				OR = {
+					has_trait = celibate
+					has_trait = zealous
+					has_trait = chaste
+				}
+			}
+			ai_boldness_target_modifier = { VALUE = -50 }
+			ai_zeal_target_modifier = { VALUE = 50 }
+		}
+	}
+
+	# Lustful and/or deviant
+	option = {
+		name = ie_yearly.1000.d
+		custom_tooltip = ie_yearly.1000.d.tt
+
+		trigger = {
+			OR = {
+				is_deviant_trigger = yes
+				has_trait = lustful
+			}
+		}
+
+		trait = deviant
+		trait = lustful
+
+		hidden_effect = {
+			trigger_event = {
+				id = ie_yearly.1004
+				days = { 1 3 }
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 200
+				sexually_liberal_trigger = yes
+			}
+			ai_boldness_target_modifier = { VALUE = 50 }
+			ai_zeal_target_modifier = { VALUE = -50 }
+		}
+	}
+
+	after = {
+		scope:late_night_visitor = { carn_dress_character_effect = yes }
+	}
+}
+
+ie_yearly.1001 = {
+	type = character_event
+	title = ie_yearly.1000.t
+	desc = ie_yearly.1001.desc
+
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = scope:late_night_visitor
+		animation = personality_bold
+	}
+
+	immediate = {
+		scope:late_night_visitor = { carn_undress_character_effect = yes }
+	}
+
+	option = {
+		name = ie_yearly.1001.a
+
+		hidden_effect = {
+			trigger_event = {
+				id = ie_yearly.1002
+				days = { 1 3 }
+			}
+		}
+	}
+
+	after = {
+		scope:late_night_visitor = { carn_dress_character_effect = yes }
+	}
+}
+
+# This is a maintenance necessary to fix characters being dressed during the sex scene
+ie_yearly.1002 = {
+	hidden = yes
+
+	immediate = {
+		hidden_effect = {
+			carn_sex_scene_request_consensual = yes
+			carn_sex_scene_request_vaginal = yes
+
+			carn_sex_scene_effect = {
+				PLAYER = root
+				TARGET = scope:late_night_visitor
+				STRESS_EFFECTS = yes
+				DRAMA = yes
+			}
+		}
+	}
+}
+
+ie_yearly.1003 = {
+	type = character_event
+	title = ie_yearly.1000.t
+	desc = ie_yearly.1003.desc
+
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = scope:late_night_visitor
+		animation = disbelief
+	}
+
+	option = {
+		name = ie_yearly.1003.a
+
+		hidden_effect = {
+			trigger_event = {
+				id = ie_yearly.1002
+				days = { 1 3 }
+			}
+		}
+	}
+}
+
+scripted_effect ie_yearly_1004_reveal_incest_or_deviant_secret_to_neighbor = {
+	if = {
+		limit = {
+			is_close_or_extended_family_of = scope:late_night_visitor
+		}
+
+		give_incest_secret_or_nothing_with_target_effect = { CHARACTER = scope:late_night_visitor }
+
+		random_secret = { #Find the secret
+			limit = {
+				secret_type = secret_incest
+				NOT = { is_known_by = scope:neighbor }
+			}
+			reveal_to_without_events_effect = { CHARACTER = scope:neighbor }
+		}
+
+		scope:late_night_visitor = {
+			give_incest_secret_or_nothing_with_target_effect = { CHARACTER = root }
+
+			random_secret = { #Find the secret
+				limit = {
+					secret_type = secret_incest
+					NOT = { is_known_by = scope:neighbor }
+				}
+				reveal_to_without_events_effect = { CHARACTER = scope:neighbor }
+			}
+		}
+	}
+	else = {
+		give_deviant_secret_or_trait_effect = yes
+
+		random_secret = { #Find the secret
+			limit = {
+				secret_type = secret_deviant
+				NOT = { is_known_by = scope:neighbor }
+			}
+			reveal_to_without_events_effect = { CHARACTER = scope:neighbor }
+		}
+
+		scope:late_night_visitor = {
+			give_deviant_secret_or_trait_effect = yes
+
+			random_secret = { #Find the secret
+				limit = {
+					secret_type = secret_deviant
+					NOT = { is_known_by = scope:neighbor }
+				}
+				reveal_to_without_events_effect = { CHARACTER = scope:neighbor }
+			}
+		}
+	}
+}
+
+scripted_effect ie_yearly_1004_determine_neighbor_effect = {
+	every_courtier_or_guest = {
+		add_to_temporary_list = possible_neighbors
+	}
+
+	random_in_list = {
+		list = possible_neighbors
+		limit = {
+			is_available_healthy_ai_adult = yes
+			carn_gender_can_impregnate_trigger = yes
+			NOR = { 
+				scope:late_night_visitor = this
+				root = this # Just in case
+			}
+		}
+
+		weight = {
+			base = 100
+			modifier = {
+				is_powerful_vassal_of = root
+				factor = 3
+			}
+			modifier = {
+				is_vassal_of = root
+				factor = 1.5
+			}
+			modifier = {
+				 sexually_liberal_trigger = yes
+				 factor = 1.5
+			}
+			modifier = { # To spice things up
+				is_close_or_extended_family_of = root
+				factor = 1.25
+			}
+		}
+		save_scope_as = neighbor
+	}
+}
+
+scripted_effect ie_yearly_1004_duel_fail_effect = {
+	add_prestige = medium_prestige_loss
+	
+	increase_wounds_no_death_effect = { REASON = fight }
+
+	reverse_add_opinion = {
+		target = scope:late_night_visitor
+		modifier = scared_opinion
+		opinion = -20
+	}
+	
+	reverse_add_opinion = {
+		target = scope:neighbor
+		modifier = attempted_murder_me_crime
+	}
+
+	add_secret = {
+		type = secret_murder_attempt
+		target = scope:neighbor
+		save_scope_as = murder_attempt_secret
+	}
+
+	scope:murder_attempt_secret = {
+		reveal_to_without_events_effect = { CHARACTER = scope:neighbor }
+		reveal_to_without_events_effect = { CHARACTER = scope:late_night_visitor }
+	}
+}
+
+ie_yearly.1004 = {
+	type = character_event
+	title = ie_yearly.1000.t
+	desc = ie_yearly.1004.desc
+
+	theme = seduction
+	override_background = {
+		event_background = corridor_night
+	}
+	left_portrait = {
+		character = scope:late_night_visitor
+		animation = flirtation
+	}
+
+	immediate = {
+		scope:late_night_visitor = { carn_undress_character_effect = yes }
+
+		ie_yearly_1004_determine_neighbor_effect = yes
+	}
+
+	option = {
+		name = ie_yearly.1004.a
+		custom_tooltip = ie_yearly.1004.a.tt
+
+		hidden_effect = {
+			trigger_event = {
+				id = ie_yearly.1005
+				days = { 1 3 }
+			}
+		}
+
+		ai_chance = {
+			base = 100
+
+			modifier = {
+				add = 200
+				sexually_liberal_trigger = yes
+			}
+
+			ai_boldness_target_modifier = { VALUE = 50 }
+			ai_zeal_target_modifier = { VALUE = -50 }
+		}
+	}
+
+	option = {
+		name = ie_yearly.1004.b
+		custom_tooltip = ie_yearly.1004.b.tt
+
+		send_interface_toast = {
+			title = ie_yearly.1004.b.message
+			left_icon = scope:late_night_visitor
+			right_icon = scope:neighbor
+			
+			reverse_add_opinion = {
+				target = scope:late_night_visitor
+				modifier = abandoned_me_opinion
+			}
+			
+			stress_impact = {
+				base = medium_stress_impact_gain
+				shy = minor_stress_impact_gain
+				chaste = minor_stress_impact_gain
+				celibate = minor_stress_impact_gain
+				craven = minor_stress_impact_gain
+			}
+
+			ie_yearly_1004_reveal_incest_or_deviant_secret_to_neighbor = yes
+		}
+
+		ai_chance = {
+			base = 100
+
+			modifier = {
+				add = 200
+				has_trait_introverted_trigger = yes
+			}
+			
+			ai_boldness_target_modifier = { VALUE = -100 }
+			ai_honor_target_modifier = { VALUE = -100 }
+			ai_zeal_target_modifier = { VALUE = 50 }
+		}
+	}
+
+	option = {
+		name = ie_yearly.1004.c
+
+		duel = {
+			skill = prowess
+			target = scope:neighbor
+			30 = {
+				desc = "murder"
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5
+				}
+
+				show_as_tooltip = {
+					unknown_murder_effect = {
+						VICTIM = scope:neighbor
+						MURDERER = root
+						REASON = death_mysterious
+					}
+				}
+
+				trigger_event = {
+					days = { 2 7 } # Keep player in suspense for a bit
+					id = ie_yearly.1006
+				}
+			}
+			20 = {
+				desc = "no murder"
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
+				}
+
+				show_as_tooltip = {
+					ie_yearly_1004_duel_fail_effect = yes
+				}
+
+				trigger_event = {
+					days = { 2 7 } # Keep player in suspense for a bit
+					id = ie_yearly.1007
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 50
+
+			modifier = {
+				add = 100
+				has_trait_malicious_trigger = yes
+			}
+			
+			ai_boldness_target_modifier = { VALUE = 50 }
+			ai_honor_target_modifier = { VALUE = -200 }
+			ai_rationality_target_modifier = { VALUE = -200 }
+			ai_zeal_target_modifier = { VALUE = -200 }
+		}
+	}
+
+	after = {
+		scope:late_night_visitor = { carn_dress_character_effect = yes }
+	}
+}
+
+ie_yearly.1005 = {
+	type = character_event
+	title = ie_yearly.1000.t
+	desc = ie_yearly.1005.desc
+
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = scope:late_night_visitor
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:neighbor
+		animation = happiness
+	}
+
+	immediate = {
+		scope:late_night_visitor = { carn_undress_character_effect = yes }
+		scope:neighbor = { carn_undress_character_effect = yes }
+	}
+
+	option = {
+		name = ie_yearly.1005.a
+	}
+
+	after = {
+		scope:late_night_visitor = { carn_dress_character_effect = yes }
+		scope:neighbor = { carn_dress_character_effect = yes }
+	}
+}
+
+ie_yearly.1006 = {
+	type = character_event
+	title = ie_yearly.1000.t
+	desc = ie_yearly.1006.desc
+
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = scope:late_night_visitor
+		animation = fear
+	}
+
+	immediate = {
+		scope:late_night_visitor = { carn_undress_character_effect = yes }
+
+		unknown_murder_effect = {
+			VICTIM = scope:neighbor
+			MURDERER = root
+			REASON = death_mysterious
+		}
+
+		random_secret = { #Find the secret
+			limit = {
+				secret_type = secret_murder
+				secret_target = scope:neighbor
+				NOT = { is_known_by = scope:late_night_visitor }
+			}
+			reveal_to_without_events_effect = { CHARACTER = scope:late_night_visitor }
+		}
+
+		reverse_add_opinion = {
+			target = scope:late_night_visitor
+			modifier = scared_opinion
+			opinion = -50
+		}
+	}
+
+	option = {
+		name = ie_yearly.1006.a
+	}
+
+	after = {
+		scope:late_night_visitor = { carn_dress_character_effect = yes }
+	}
+}
+
+ie_yearly.1007 = {
+	hidden = yes
+
+	immediate = {
+		send_interface_toast = {
+			title = ie_yearly.1004.c.message
+			left_icon = scope:late_night_visitor
+			right_icon = scope:neighbor
+
+			ie_yearly_1004_duel_fail_effect = yes
+		}
+	}
+}
+
+#######################
+# You dream about something... big
+# by Inerrant Erotica
+# 1010-1020
+#######################
+
+scripted_effect ie_yearly_1000_refuse_dream_effect = {
+	stress_impact = {
+		lustful = medium_stress_impact_gain
+		rakish = medium_stress_impact_gain
+	}
+
+	stress_impact = {
+		chaste = medium_stress_impact_loss
+		celibate = medium_stress_impact_loss
+		zealous = minor_stress_impact_loss
+	}
+
+	add_piety = medium_piety_gain
+}
+
+# Dream Starts
+ie_yearly.1010 = {
+	type = character_event
+	title = ie_yearly.1010.t
+	desc = ie_yearly.1010.desc
+
+	theme = mental_health
+	override_background = {
+		event_background = wilderness
+	}
+	left_portrait = {
+		character = root
+		remove_default_outfit = yes
+		outfit_tags = { beggar_rags }
+	}
+
+	trigger = {
+		is_ai = no # Otherwise we'd get too many giants
+		is_available_adult_or_is_commanding = yes
+		is_female = yes
+		is_attracted_to_men = yes
+
+		OR = {
+			has_trait = deviant
+			has_trait = dwarf
+			has_trait = flagellant
+			has_trait = fornicator
+			has_trait = hashishiyah
+			has_trait = lifestyle_herbalist
+			has_trait = lunatic
+			has_trait = lustful
+			has_trait = mystic_1
+			has_trait = mystic_2
+			has_trait = mystic_3
+			has_trait = possessed
+			has_trait = rakish
+			has_trait = reckless
+			has_trait = scholar
+			has_trait = seducer
+			has_trait = witch
+			has_trait = zealous
+		}
+
+		NOT = { has_character_flag = had_event_ie_yearly_1010 }
+	}
+
+	weight_multiplier = {
+		compare_modifier = { #Less likely to happen the older you are
+			trigger = {
+				age >= 35
+			}
+			value = age
+			multiplier = -0.75
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_ie_yearly_1010
+			days = 3650
+		}
+	}
+
+	option = {
+		name = ie_yearly.1010.a
+		flavor = ie_yearly.1010.a.f
+		custom_tooltip = ie_yearly.1010.a.tt
+		trigger_event = ie_yearly.1011
+	}
+
+	option = {
+		name = ie_yearly.1010.b
+		custom_tooltip = ie_yearly.1010.b.tt
+	}
+}
+
+# The Lair
+ie_yearly.1011 = {
+	type = character_event
+	title = ie_yearly.1011.t
+	desc = ie_yearly.1011.desc
+
+	theme = mental_health
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = fear
+		remove_default_outfit = yes
+		outfit_tags = { beggar_rags }
+	}
+
+	option = {
+		name = ie_yearly.1011.a
+		custom_tooltip = ie_yearly.1011.a.tt
+		trigger_event = ie_yearly.1012
+	}
+
+	option = {
+		name = ie_yearly.1011.b
+		flavor = ie_yearly.1011.b.f
+		custom_tooltip = ie_yearly.1010.b.tt
+		ie_yearly_1000_refuse_dream_effect = yes
+	}
+}
+
+# The Reveal
+ie_yearly.1012 = {
+	type = character_event
+	title = ie_yearly.1012.t
+	desc = ie_yearly.1012.desc
+
+	theme = seduction
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = disbelief
+		remove_default_outfit = yes
+		outfit_tags = { beggar_rags }
+	}
+
+	immediate = {
+		hidden_effect = {
+			# Generate our giant
+			create_character = {
+				location = root.location
+				template = ie_ugly_giant_template
+				gender_female_chance = 0 # Always male
+				dynasty = none
+				save_scope_as = giant
+			}
+			random_list = {
+				50 = {
+					trigger = {
+						is_female = yes
+					}
+					scope:giant = { set_sexuality = heterosexual }
+				}
+				50 = {
+					trigger = {
+						is_male = yes # Future-proofing for when event supports mlm
+					}
+					scope:giant = { set_sexuality = homosexual }
+				}
+				50 = {
+					scope:giant = { set_sexuality = bisexual }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ie_yearly.1012.a
+		flavor = ie_yearly.1012.a.f
+		custom_tooltip = ie_yearly.1012.a.tt
+		trigger_event = ie_yearly.1013
+	}
+
+	option = {
+		name = ie_yearly.1012.b
+		custom_tooltip = ie_yearly.1012.b.tt
+		ie_yearly_1000_refuse_dream_effect = yes
+	}
+}
+
+# The Choice
+ie_yearly.1013 = {
+	type = character_event
+	title = ie_yearly.1013.t
+	desc = ie_yearly.1013.desc
+
+	theme = seduction
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		remove_default_outfit = yes
+		outfit_tags = { beggar_rags }
+	}
+
+	option = {
+		name = ie_yearly.1013.a
+		flavor = ie_yearly.1013.a.f
+		custom_tooltip = ie_yearly.1013.a.tt
+		trigger_event = ie_yearly.1014
+	}
+
+	option = {
+		name = ie_yearly.1013.b
+		flavor = ie_yearly.1013.b.f
+		custom_tooltip = ie_yearly.1013.b.tt
+		trigger_event = ie_yearly.1015
+	}
+
+	option = {
+		trigger = {
+			has_game_rule = carn_content_painful_enabled
+		}
+		name = ie_yearly.1013.c
+		flavor = ie_yearly.1013.c.f
+		custom_tooltip = ie_yearly.1013.c.tt
+		trigger_event = ie_yearly.1017
+	}
+}
+
+# Fellatio
+ie_yearly.1014 = {
+	type = character_event
+	title = ie_yearly.1014.t
+	desc = ie_yearly.1014.desc
+
+	theme = seduction
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = beg
+		remove_default_outfit = yes
+		outfit_tags = { beggar_rags }
+	}
+
+	option = {
+		name = ie_yearly.1014.a
+		flavor = ie_yearly.1014.a.f
+		custom_tooltip = ie_yearly.1014.a.tt
+		trigger_event = ie_yearly.1019
+	}
+}
+
+# Dry Humping
+ie_yearly.1015 = {
+	type = character_event
+	title = ie_yearly.1015.t
+	desc = ie_yearly.1015.desc
+
+	theme = seduction
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = personality_cynical
+		remove_default_outfit = yes
+	}
+
+	immediate = {
+		carn_undress_character_effect = yes
+	}
+
+	option = {
+		name = ie_yearly.1015.a
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		trigger_event = ie_yearly.1016
+	}
+}
+
+# Dry Humping Continued
+ie_yearly.1016 = {
+	type = character_event
+	title = ie_yearly.1015.t
+	desc = ie_yearly.1016.desc
+
+	theme = seduction
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = disgust
+		remove_default_outfit = yes
+	}
+
+	immediate = {
+		carn_undress_character_effect = yes
+	}
+
+	option = {
+		name = ie_yearly.1016.a
+		flavor = ie_yearly.1016.a.f
+		custom_tooltip = ie_yearly.1016.a.tt
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		trigger_event = ie_yearly.1019
+	}
+}
+
+# Vaginal
+ie_yearly.1017 = {
+	type = character_event
+	title = ie_yearly.1017.t
+	desc = ie_yearly.1017.desc
+
+	theme = seduction
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+		remove_default_outfit = yes
+	}
+
+	immediate = {
+		carn_undress_character_effect = yes
+	}
+
+	option = {
+		name = ie_yearly.1017.a
+		add_stress = major_stress_gain
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		trigger_event = ie_yearly.1018
+	}
+}
+
+# Vaginal Continued
+ie_yearly.1018 = {
+	type = character_event
+	title = ie_yearly.1017.t
+	desc = ie_yearly.1018.desc
+
+	theme = seduction
+	override_background = {
+		event_background = ie_cave
+	}
+	left_portrait = {
+		character = root
+		animation = shock
+		remove_default_outfit = yes
+	}
+
+	immediate = {
+		carn_undress_character_effect = yes
+
+		hidden_effect = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = root
+				CHARACTER_2 = scope:giant
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = yes
+				DRAMA = yes
+			}
+		}
+	}
+
+	option = {
+		name = ie_yearly.1018.a
+		flavor = ie_yearly.1018.a.f
+		custom_tooltip = ie_yearly.1018.a.tt
+		add_stress = monumental_stress_loss
+	}
+
+	after = {
+		carn_dress_character_effect = yes
+		trigger_event = ie_yearly.1019
+	}
+}
+
+# Awakening
+ie_yearly.1019 = {
+	type = character_event
+	title = ie_yearly.1019.t
+	desc = ie_yearly.1019.desc
+
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = ecstasy
+	}
+
+	option = {
+		name = ie_yearly.1019.a
+		add_stress = minor_stress_loss
+		trigger_event = ie_yearly.1020
+	}
+}
+
+# Awakening continued
+ie_yearly.1020 = {
+	type = character_event
+	title = ie_yearly.1019.t
+	desc = ie_yearly.1020.desc
+
+	theme = seduction
+	override_background = {
+		event_background = throne_room
+	}
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:giant
+		animation = happiness
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_visiting_courtier = scope:giant
+		}
+	}
+
+	option = {
+		name = ie_yearly.1020.a
+		add_courtier = scope:giant
+		stress_impact = {
+			deviant = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+			rakish = minor_stress_impact_loss
+			seducer = minor_stress_impact_loss
+		}
+		stress_impact = {
+			chaste = minor_stress_impact_gain
+			celibate = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+	}
+
+	option = {
+		name = ie_yearly.1020.b
+		custom_tooltip = ie_yearly.1020.b.tt
+		stress_impact = {
+			deviant = minor_stress_impact_gain
+			lustful = minor_stress_impact_gain
+			rakish = minor_stress_impact_gain
+			seducer = minor_stress_impact_gain
+		}
+		stress_impact = {
+			chaste = minor_stress_impact_loss
+			celibate = minor_stress_impact_loss
+			craven = minor_stress_impact_loss
+			zealous = minor_stress_impact_loss
+		}
+	}
+}

@@ -1,0 +1,19 @@
+﻿namespace = carn_fetish
+
+# Seeding Events
+# 0001: seed fetish variable_list for this character
+
+carn_fetish.0001 = {
+	hidden = yes
+
+	trigger = {
+		has_game_rule = carn_fetishes_enabled
+		NOT = { has_character_flag = carn_fetishes_seeded }
+		is_adult = yes
+		is_deviant_trigger = yes
+	}
+
+	immediate = {
+		carn_add_random_fetish_effect = yes
+	}
+}

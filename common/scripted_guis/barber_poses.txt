@@ -1,0 +1,873 @@
+﻿default_pose = {
+	scope = character
+
+	effect = {
+		clear_poses = yes
+	}
+}
+
+has_dlc_northern_lords = {
+	scope = character
+
+	is_shown = {
+		has_dlc_feature = the_northern_lords
+	}
+}
+
+fp1_chancellor_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = fp1_chancellor_pose
+	}
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = fp1_chancellor_pose
+	}
+}
+
+chancellor_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = chancellor_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = chancellor_pose
+	}
+}
+
+steward_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = steward_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = steward_pose
+	}
+}
+
+fp1_marshal_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = fp1_marshal_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = fp1_marshal_pose
+	}
+}
+
+marshal_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = marshal_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = marshal_pose
+	}
+}
+
+spymaster_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = spymaster_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = spymaster_pose
+	}
+}
+
+fp1_spymaster_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = fp1_spymaster_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = fp1_spymaster_pose
+	}
+}
+
+chaplain_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = chaplain_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = chaplain_pose
+	}
+}
+
+right_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = right_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = right_pose
+	}
+}
+
+middle_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = middle_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = middle_pose
+	}
+}
+
+left_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = left_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = left_pose
+	}
+}
+
+
+admiration_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = admiration_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = admiration_pose
+	}
+}
+
+angry_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = angry_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = angry_pose
+	}
+}
+
+beg_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = beg_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = beg_pose
+	}
+}
+
+boredom_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = boredom_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = boredom_pose
+	}
+}
+
+disapproval_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = disapproval_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = disapproval_pose
+	}
+}
+
+disbelief_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = disbelief_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = disbelief_pose
+	}
+}
+
+disgust_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = disgust_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = disgust_pose
+	}
+}
+
+dismissal_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = dismissal_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = dismissal_pose
+	}
+}
+
+
+fear_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = fear_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = fear_pose
+	}
+}
+
+flirtation_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = flirtation_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = flirtation_pose
+	}
+}
+
+flirtation_left_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = flirtation_left_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = flirtation_left_pose
+	}
+}
+
+grief_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = grief_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = grief_pose
+	}
+}
+
+happy_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = happy_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = happy_pose
+	}
+}
+
+love_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = love_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = love_pose
+	}
+}
+
+lunatic_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = lunatic_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = lunatic_pose
+	}
+}
+
+paranoia_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = paranoia_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = paranoia_pose
+	}
+}
+
+rage_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = rage_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = rage_pose
+	}
+}
+
+sadness_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = sadness_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = sadness_pose
+	}
+}
+
+schadenfreude_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = schadenfreude_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = schadenfreude_pose
+	}
+}
+
+scheme_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = scheme_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = scheme_pose
+	}
+}
+
+fp1_shame_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = fp1_shame_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = fp1_shame_pose
+	}
+}
+
+shame_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = shame_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = shame_pose
+	}
+}
+
+shock_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = shock_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = shock_pose
+	}
+}
+
+stress_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = stress_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = stress_pose
+	}
+}
+
+worry_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = worry_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = worry_pose
+	}
+}
+
+
+bold_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = bold_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = bold_pose
+	}
+}
+
+callous_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = callous_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = callous_pose
+	}
+}
+
+compassionate_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = compassionate_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = compassionate_pose
+	}
+}
+
+content_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = content_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = content_pose
+	}
+}
+
+coward_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = coward_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = coward_pose
+	}
+}
+
+cynical_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = cynical_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = cynical_pose
+	}
+}
+
+dishonorable_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = dishonorable_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = dishonorable_pose
+	}
+}
+
+forgiving_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = forgiving_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = forgiving_pose
+	}
+}
+
+greedy_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = greedy_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = greedy_pose
+	}
+}
+
+honorable_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = honorable_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = honorable_pose
+	}
+}
+
+irrational_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = irrational_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = irrational_pose
+	}
+}
+
+rational_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = rational_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = rational_pose
+	}
+}
+
+vengeful_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = vengeful_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = vengeful_pose
+	}
+}
+
+zealous_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = zealous_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = zealous_pose
+	}
+}
+
+
+wounded_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = wounded_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = wounded_pose
+	}
+}
+
+newborn_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = newborn_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = newborn_pose
+	}
+}
+
+sick_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = sick_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = sick_pose
+	}
+}
+
+pain_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = pain_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = pain_pose
+	}
+}
+
+arrest_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = arrest_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = arrest_pose
+	}
+}
+
+prison_dungeon_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = prison_dungeon_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = prison_dungeon_pose
+	}
+}
+
+
+attacker_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = attacker_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = attacker_pose
+	}
+}
+
+defender_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = defender_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = defender_pose
+	}
+}
+
+tie_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = tie_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = tie_pose
+	}
+}
+
+win_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = win_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = win_pose
+	}
+}
+
+loss_pose = {
+	scope = character
+
+	is_shown = {
+		has_character_flag = loss_pose
+	}
+
+
+	effect = {
+		clear_poses = yes
+		add_character_flag = loss_pose
+	}
+}

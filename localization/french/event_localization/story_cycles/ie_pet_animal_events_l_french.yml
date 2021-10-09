@@ -1,0 +1,14 @@
+﻿l_french:
+
+ie_pet_animal.0001.t:0 "A Girl's Best Friend"
+ie_pet_animal.0001.desc:0 "My faithful companion [ROOT.Char.Custom('DogStoryName')] follows me everywhere, and never misses an opportunity to join me in the comfy pillows and blankets of my bed. Many nights his warm coat has offered me solace to my loneliness and when morning comes, I am roused from my slumber by the most enthusiastic lickings!\n\nHe has accompanied me to my bedchambers with such regularity that my retinue thinks little of it these days. A most enviable privilege for a gentleman - to be able to spend the whole night in privacy with a fair lady..."
+ie_pet_animal.0001.a:0 "Who's a good boy!? You’re a good boy! You want a tummy rub?"
+ie_pet_animal.0001.a.tt:0 "Rub rub rub!"
+ie_pet_animal.0001.b:0 "He makes for a nice cuddling companion, nothing more."
+ie_pet_animal.0001.b.tt:0 "Best to let sleeping dogs lie."
+ie_pet_animal.0002.desc:0 "[ROOT.Char.Custom('DogStoryName')] rolls over, exposing his belly and happily wagging his tail as I rub his belly. He wriggles and squirms, panting as I go faster. Out of some compulsion to overwhelm my furry companion with affection, I put both my hands on his stomach and furiously rub him - until his leg starts kicking and he begins to bark.\n\nWhen I draw back, I notice something strange about him. He has frozen in place, panting and looking up at me. His legs are bent and he remains on his back, while in his furry loins, I spy something... red."
+ie_pet_animal.0002.a:0 "It wasn't there before..."
+ie_pet_animal.0002.a.tt:0 "I wonder what it feels like."
+ie_pet_animal.0002.a.toast.desc:0 "You lay with your dog."
+ie_pet_animal.0002.b:0 "Down! Off the bed! Bad dog!"
+ie_pet_animal.0002.b.tt:0 "I'm not comfortable with where this is going."

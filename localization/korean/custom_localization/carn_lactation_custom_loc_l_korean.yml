@@ -1,0 +1,15 @@
+﻿l_korean:
+
+carn_very_low_milk_production_description:1 "작은 방울 정도의"
+carn_low_milk_production_description:1 "적은 양의"
+carn_average_milk_production_description:1 "충분한 양의"
+carn_high_milk_production_description:1 "흘러넘칠 정도의"
+carn_very_high_milk_production_description:1 "믿기지 않을 정도의"
+carn_extreme_milk_production_description:1 "폭포수와 같은"
+
+carn_very_low:1 "매우 적은"
+carn_low:1 "적은"
+carn_average:1 "평균적인"
+carn_high:1 "많은"
+carn_very_high:1 "매우 많은"
+carn_extreme:1 "많아도 너무 많은"

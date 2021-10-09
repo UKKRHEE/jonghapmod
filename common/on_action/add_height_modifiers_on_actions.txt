@@ -1,0 +1,615 @@
+﻿on_add_height_modifier = {
+	trigger = {
+		is_alive = yes
+		trigger_if = {
+			limit = { is_alive = yes }
+			has_variable = height_genetic
+			trigger_if = {
+				limit = { has_variable = height_genetic }
+				trigger_if = {
+					limit = {
+						actual_height_for_weight < 55
+						actual_height_for_weight > 45
+					}
+					Or = {
+						has_character_modifier = short_9_modifier
+						has_character_modifier = short_8_modifier
+						has_character_modifier = short_7_modifier
+						has_character_modifier = short_6_modifier
+						has_character_modifier = short_5_modifier
+						has_character_modifier = short_4_modifier
+						has_character_modifier = short_3_modifier
+						has_character_modifier = short_2_modifier
+						has_character_modifier = short_1_modifier
+						has_character_modifier = tall_1_modifier
+						has_character_modifier = tall_2_modifier
+						has_character_modifier = tall_3_modifier
+						has_character_modifier = tall_4_modifier
+						has_character_modifier = tall_5_modifier
+						has_character_modifier = tall_6_modifier
+						has_character_modifier = tall_7_modifier
+						has_character_modifier = tall_8_modifier
+						has_character_modifier = tall_9_modifier
+					}
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 60
+						actual_height_for_weight >= 55
+					}
+					Not = { has_character_modifier = tall_1_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 45
+						actual_height_for_weight > 40
+					}
+					Not = { has_character_modifier = short_1_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 65
+						actual_height_for_weight >= 60
+					}
+					Not = { has_character_modifier = tall_2_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 40
+						actual_height_for_weight > 35
+					}
+					Not = { has_character_modifier = short_2_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 70
+						actual_height_for_weight >= 65
+					}
+					Not = { has_character_modifier = tall_3_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 35
+						actual_height_for_weight > 30
+					}
+					Not = { has_character_modifier = short_3_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 75
+						actual_height_for_weight >= 70
+					}
+					Not = { has_character_modifier = tall_4_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 30
+						actual_height_for_weight > 25
+					}
+					Not = { has_character_modifier = short_4_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 80
+						actual_height_for_weight >= 75
+					}
+					Not = { has_character_modifier = tall_5_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 25
+						actual_height_for_weight > 20
+					}
+					Not = { has_character_modifier = short_5_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 85
+						actual_height_for_weight >= 80
+					}
+					Not = { has_character_modifier = tall_6_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 20
+						actual_height_for_weight > 15
+					}
+					Not = { has_character_modifier = short_6_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 95
+						actual_height_for_weight >= 85
+					}
+					Not = { has_character_modifier = tall_7_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 15
+						actual_height_for_weight > 10
+					}
+					Not = { has_character_modifier = short_7_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight < 105
+						actual_height_for_weight >= 95
+					}
+					Not = { has_character_modifier = tall_8_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight <= 10
+						actual_height_for_weight > 5
+					}
+					Not = { has_character_modifier = short_8_modifier }
+				}
+				trigger_else_if = {
+					limit = {
+						actual_height_for_weight >= 105
+					}
+					Not = { has_character_modifier = tall_9_modifier }
+				}
+				trigger_else = {
+					Not = { has_character_modifier = short_9_modifier }
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				actual_height_for_weight < 55
+				actual_height_for_weight > 45
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 60
+				actual_height_for_weight >= 55
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_1_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 45
+				actual_height_for_weight > 40
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_1_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 65
+				actual_height_for_weight >= 60
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_2_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 40
+				actual_height_for_weight > 35
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_2_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 70
+				actual_height_for_weight >= 65
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_3_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 35
+				actual_height_for_weight > 30
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_3_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 75
+				actual_height_for_weight >= 70
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_4_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 30
+				actual_height_for_weight > 25
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_4_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 80
+				actual_height_for_weight >= 75
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_5_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 25
+				actual_height_for_weight > 20
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_5_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 85
+				actual_height_for_weight >= 80
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_6_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 20
+				actual_height_for_weight > 15
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_6_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 90
+				actual_height_for_weight >= 85
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_7_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 15
+				actual_height_for_weight > 10
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_7_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight < 95
+				actual_height_for_weight >= 90
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = tall_8_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 10
+				actual_height_for_weight > 5
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_8_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight >= 90
+			}
+			remove_character_modifier = short_9_modifier
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			add_character_modifier = tall_9_modifier
+		}
+		else_if = {
+			limit = {
+				actual_height_for_weight <= 5
+			}
+			remove_character_modifier = short_8_modifier
+			remove_character_modifier = short_7_modifier
+			remove_character_modifier = short_6_modifier
+			remove_character_modifier = short_5_modifier
+			remove_character_modifier = short_4_modifier
+			remove_character_modifier = short_3_modifier
+			remove_character_modifier = short_2_modifier
+			remove_character_modifier = short_1_modifier
+			remove_character_modifier = tall_1_modifier
+			remove_character_modifier = tall_2_modifier
+			remove_character_modifier = tall_3_modifier
+			remove_character_modifier = tall_4_modifier
+			remove_character_modifier = tall_5_modifier
+			remove_character_modifier = tall_6_modifier
+			remove_character_modifier = tall_7_modifier
+			remove_character_modifier = tall_8_modifier
+			remove_character_modifier = tall_9_modifier
+			add_character_modifier = short_9_modifier
+		}
+	}
+}

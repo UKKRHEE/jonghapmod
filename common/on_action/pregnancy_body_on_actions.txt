@@ -1,0 +1,129 @@
+﻿on_pregnancy_mother = {
+	on_actions = { 
+		on_pregnancy_body
+	}
+}
+
+on_birth_mother = {
+	on_actions = { 
+		on_remove_pregnancy_body
+	}
+}
+
+on_pregnancy_body = {
+	effect = {
+		set_variable = {
+			name = pregnancy_breasts
+			value = {
+				fixed_range = { 
+					min = 0
+					max = 20
+				}
+			}
+		}
+		set_variable = {
+			name = pregnancy_butt
+			value = {
+				fixed_range = { 
+					min = 0
+					max = 10
+				}
+			}
+		}
+		set_variable = {
+			name = pregnancy_fat
+			value = {
+				fixed_range = { 
+					min = 0
+					max = 10
+				}
+			}
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 30
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 60
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 90
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 120
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 150
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 180
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 210
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 240
+		}
+	}
+}
+
+on_remove_pregnancy_body = {
+
+	effect = {
+		if = { 
+			limit = { not = { has_variable = post_pregnancy_breasts } }
+			set_variable = {
+				name = post_pregnancy_breasts
+				value = var:pregnancy_breasts
+			}
+			remove_variable = pregnancy_breasts
+		}
+		else = {
+			change_variable = {
+				name = post_pregnancy_breasts
+				add = var:pregnancy_breasts
+			}
+			remove_variable = pregnancy_breasts
+		}
+		if = { 
+			limit = { not = { has_variable = post_pregnancy_butt } }
+			set_variable = {
+				name = post_pregnancy_butt
+				value = var:pregnancy_butt
+			}
+			remove_variable = pregnancy_butt
+		}
+		else = {
+			change_variable = {
+				name = post_pregnancy_butt
+				add = var:pregnancy_butt
+			}
+			remove_variable = pregnancy_butt
+		}
+		remove_variable = pregnancy_breasts
+		set_variable = {
+			name = pregnancy_fat
+			value = {
+				fixed_range = { 
+					min = 0
+					max = 10
+				}
+			}
+		}
+		trigger_event = {
+			id = pregnancy_body.2001
+			days = 30
+		}
+		trigger_event = {
+			id = pregnancy_body.2002
+			days = 30
+		}
+	}
+}
