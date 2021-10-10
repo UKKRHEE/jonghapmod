@@ -1,0 +1,47 @@
+﻿l_korean:
+  regula_prisoner_event.1000.t:0 "자물쇠를 잠그고, 엄중히 보관 중" # Something that references the captive
+  regula_prisoner_event.1000.desc.standard:0 "[recipient.GetNameRegnal]이(가) 천장의 고리에 매달려 있습니다. 당신의 경비병들이 그녀의 옷을 벗겼지만, 그 굴욕은 그녀의 영혼을 억누르는 데 거의 도움이 되지 않았습니다. \n\n 그녀는 당신의 시선을 똑바로 마주칩니다 마치 감히 당신이 먼저 움직이게 하려는것처럼요."
+  regula_prisoner_event.1000.desc.devoted:0 "[recipient.GetNameRegnal]이(가) 눈을 거의 마주치지 않고 서 있습니다. 그녀는 당신을 불쾌하게 했고, 그녀의 마음속의 갈고리는 당신의 인정이 그녀의 세계의 정점이라고 속삭입니다. 그녀를 묶고 있는 사슬이 아니었다면 그녀는 이미 당신의 발 앞에 몸을 던지며 용서를 구했을 가능성이 큽니다."
+
+  regula_prisoner_event.1000.a:0 "그녀의 의지를 묶다" # 매력
+  regula_prisoner_event.1000.b:0 "갈고리를 더 깊이 박으세요." # 꼭두각시
+  regula_prisoner_event.1000.c:0 "상품 가져가세요." # 압도적인 욕망을 통한 섹스
+  regula_prisoner_event.1000.d:0 "그녀의 마음을 요구" # 사랑의 주문
+  regula_prisoner_event.1000.e:0 "그녀의 정신을 찢어라." # 그녀의 정신을 파헤쳐라.
+  regula_prisoner_event.1000.f:0 "그녀가 그녀의 상황을 생각하도록 내버려 두십시오." # 그녀를 떠나
+
+  regula_prisoner_event.1000.a.tt:1 "그녀가 당신의 손아귀를 떠날 때 그녀의 마음은 더 이상 그녀의 것이 아닙니다.."
+  regula_prisoner_event.1000.b.tt:1 "혀를 놀리지 말고 신체를 통제해"
+  regula_prisoner_event.1000.c.tt:1 "그녀의 열정을 불태우고 그녀의 몸매를 향연하라."
+  regula_prisoner_event.1000.d.tt:1 "[recipient.GetFirstNamePossessiveNoTooltip]을 사랑으로 채우십시오."
+  regula_prisoner_event.1000.e.tt:1 "[recipient.GetFirstNameNoTooltip]이(가) 마지막으로 당신을 화나게 했습니다. 보지를 통해 그녀의 모든것을 흡수하고 남은 쓸모없는 좆집을 남기고 떠납니다"
+
+  regula_prisoner_event.1001.t:0 "육체와 영으로 묶임"
+  regula_prisoner_event.1001.desc:0 "발견의 위험이 없으므로 여유롭게 [recipient.GetNameRegnal]을(를) 마력으로 묶습니다. 당신의 예술은 훈련받지 않은 눈에는 보이지 않지만, 그녀는 마음에 쌓여가는 압박감을 느끼면서 좌우로 날뛰기 시작합니다.\n\n마법이 발현되면서 그녀의 턱이 느슨해지고 [recipient.GetFirstNameNoTooltip]이(가) 낮은 신음 소리를 냅니다. 당신이 미소짓습니다. 사슬의 느낌이 전에 즐거운 추억을 불러일으키지 않았다면 분명 지금이 될 것입니다."
+  regula_prisoner_event.1001.a:0 "뒤로 물러서서 당신의 작품에 감탄하십시오"
+
+  regula_prisoner_event.1002.t:0 "속박된 생각"
+  regula_prisoner_event.1002.desc:0 "[recipient.GetFirstNamePossessive] 이(가) 으르렁거리려는것을 무시하고 그녀의 머리를 손으로 움켜쥡니다. 감방의 돌에 새겨진 룬으로 증폭된 당신의 힘은 그녀의 마음을 가르고 그녀란 존재의 핵에 일련의 구속을 가합니다. 지금부터 그녀는 당신의 의지만을 따르는 꼭두각시에 지나지 않을 것입니다.\n\n경비원들이 그녀의 비명소리를 들었지만 아무런 기척도 없습니다."
+  regula_prisoner_event.1002.a:0 "그녀의 마음에서 물러나다"
+
+
+  regula_prisoner_event.1003.t:0 "성욕에 사로잡힌 짐승" # 섹스, 압도적인 정욕.
+  regula_prisoner_event.1003.desc:0 "당신은 그녀의 족쇄가 풀리는 대로 말을 걸지않고 단지 당신의 힘으로 감방을 범람시킵니다. [recipient.GetFirstNamePossessive] 손을 움직여 그녀를 무릎 꿇게 합니다. 그녀는 흥분하여 뺨이 붉어지고, 어깨에서 드레스를 벗기면 오르가즘으로 몸이 흔들립니다.\n\n그녀가 정욕에 반쯤 미쳐 서둘러 당신의 바지끈을 풉니다 그 모습에 당신은 미소짓습니다."
+  regula_prisoner_event.1003.a:0 "당신의 욕구는 채웠지만 그녀의 열정은 사라지지 않고 남아있습니다."
+  regula_prisoner_event.1003.b:0 "당신의 욕망이 채워지고 떠납니다"
+  regula_prisoner_event.1003.b.tt:0 "당신의 정액으로 그녀의 온몸을 덮고 내버려 두고 떠납니다."
+
+
+  regula_prisoner_event.1004.t:0 "사랑스러운 신기루" # 섹스, 연인.
+  regula_prisoner_event.1004.desc:0 "당신은 [recipient.GetFirstName]의 족쇄를 조심스레 풀고 당신을 화려하게 만듭니다. [recipient.GetFirstNamePossessive]와 다음만남에 눈을 마주치면 의심이 아니라 놀라움과 기쁨으로 가득 차 있습니다. [old_lover.GetFirstName]? 정말 당신인가요? \n\n 미묘하게 그녀의 흥분을 돋우고 마음을 흐리게 만듭니다. 그리고 그녀의 마지막 사슬이 떨어지면 그녀는 당신의 품에 몸을 던집니다.\n\n	당신 둘은 감방 바닥에서 열정적으로 떡을치고 당신의 추진력은 [old_lover.GetFirstName]에 대한 그녀의 감정을 당신에 대한 사랑으로 뒤틀어 놓았습니다. 당신의 정액이 그녀를 채우고도 남아 화려하게 바닥으로 떨어지면 [recipient.GetFirstNameNoTooltip]은(는) 사랑과 공포에 질린 표정으로 쳐다봅니다."
+  regula_prisoner_event.1004.a:0 "그녀의 뒤를 수갑으로채운다."
+  regula_prisoner_event.1004.b:0 "그녀의 새로운 감정에 대해 생각하게 내버려둬요.."
+
+
+  regula_prisoner_event.1005.t:0 "로맨스"
+  regula_prisoner_event.1005.desc:0 "[recipient.GetFirstName]은(는) 진정한 사랑을 한번도 알지 못했기 때문에 둘이 할일이 거의 없습니다. 보상하기위해선... "
+
+
+  regula_prisoner_event.1006.t:0 "진이빠진"
+  regula_prisoner_event.1006.desc:0 "당신은 [recipient.GetFirstName]의 뒤에서 그녀를 거칠게 따먹습니다. 그녀의 몸은 그녀가 감당가능한 레굴라 마지스트리의 힘을 한참 넘겨 당신의 힘은 그녀의 몸을 벗어나 사방의 온 감옥을 한가득 채웁니다. 엉덩이는 경련을 일으키고 목소리는 나오질못합니다 그녀 영혼엔 당신의 의지가 새겨져 메아리 칩니다\n\n"난 의지가 없어.."그녀가 한차례 사정합니다. "내 마음은 텅 비었어" 또 한차례 보지액을 뿜습니다. "난 주인님의 소유예요" 또 한차례 그녀의 보지가 가버립니다. "내..내가.....제가... 복종하겠습니다!"\n\n목이 졸린 외침과 함께 당신 노예의 몸은 무더기로 무너지고 그녀는 마지막으로 가버리며 그녀의 보지에선 둘의 체액이 섞여 꿀렁꿀렁 바닥으로 끝없이 흘러내립니다." 
+  regula_prisoner_event.1006.a:0 "완료"

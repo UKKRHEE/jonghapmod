@@ -460,9 +460,13 @@ dag_cdo_regular_sex_scene.1095 = {
 	}
 	
 	theme = seduce_scheme
-	left_portrait = {
+	right_portrait = {
 		character = scope:carn_sex_target
-		animation = flirtation_left
+		animation = sex_doggy
+	}
+	left_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_doggy 
 	}
 
 	trigger = {

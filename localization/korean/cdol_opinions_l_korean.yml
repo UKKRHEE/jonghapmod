@@ -1,0 +1,4 @@
+﻿l_korean:
+ cdol_succubus_crime: "알려진 [GetTrait('cdol_succubus').GetName( GetNullCharacter )]"
+ cdol_succubus_intolerant: "알려진 [GetTrait('cdol_succubus').GetName( GetNullCharacter )]"
+ cdol_fascinated_opinion: "매료"

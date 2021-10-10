@@ -1,0 +1,54 @@
+﻿l_korean:
+  regula_adultery.0003.t:0 "공통 관심사"
+  regula_adultery.0003.desc:0 "[lover_spouse.Custom2('MyCharacterIntroduction', ROOT.Char)|U]는 밤이 되자 다시 한 번 당신의 방에서 사라졌다. [lover_spouse.GetSheHe|U] 는 최근에 멀리 떨어져 있었다. 가끔 볼땐 생각에 잠겨있고 궁에서 거의 볼 수 없었다. [lover_spouse.GetSheHe]는 단순히 바쁜건가? 아니면 [lover_spouse.GetSheHe]가 다른 사람의 침대를 따뜻하게 해주고 있나...?\n\n다음에 그녀를 볼때 당신은 그녀의 생각에 뛰어들어 거짓의 흔적을 찾아봅니다. 그러나 당신의 일은 쉴틈이 없었고 그녀는 당신이 그녀를 만든 만큼 충성스럽습니다."
+  regula_adultery.0003.a:0 "나는 좀 쉬어야겠어."
+
+  # Male Lover
+  regula_adultery.1001.t:0 "둥지 속의 뻐꾸기"
+  regula_adultery.1001.desc:0 "당신의 하렘에 침입자가 있는 것 같습니다. [adultery_lover.GetTitledFirstName]은(는) 몇 주 동안 [lover_spouse.GetTitledFirstName]을(를) 따먹었습니다. 그는 그녀에게 그것이 당신의 의지라고 말했고 속기 쉬운 $game_concept_compedita$는 열심히 다리를 벌렸습니다.\n\n당신은 약간[adultery_lover.GetFirstNamePossessive]의 대담함에 감명을 받았지만 그럼에도 그의 행동은 무모했습니다. [lover_spouse.GetFirstNamePossessive] 최근 뭐한건지에 대한 쓸데없는 질문은 그녀가 그와의 모든 관계를 신나고 자세히 설명하기에 충분했습니다."
+  regula_adultery.1001.a:0 "그는 이 모욕의 대가를 치러야 해."
+  regula_adultery.1001.b:0 "그녀는 조용히 이 관계를 끝낼 것이다."
+  regula_adultery.1001.c:0 "이것은 문제가 되지 않는다."
+
+  # Female Lover
+  regula_adultery.1010.t:0 "위험한 시기의 연인들"
+  regula_adultery.1010.desc:0 "어느 날 [lover_spouse.GetTitledFirstName]을(를) 대충 스캔한 결과 그녀가 [adultery_lover.GetTitledFirstName]을(를) 연인으로 삼았음을 알 수 있습니다. 그녀가 관계를 끝내도록 강요하는 것은 사소한 일이지만이 문제는 기회가 될 수 있습니다.[lover_spouse.GetFirstNamePossessive]관점에서 약간비틀면 그녀가 [adultery_lover.GetFirstName],을(를) 떡치지 않고 그녀를 노예로 만들기를 열망하게 만들 것입니다. 결국, 그녀의 옆에 있는 그녀의 연인과 함께 당신을 섬기는 것보다 더 큰 기쁨이 어디 있겠습니까??"
+  regula_adultery.1010.a:0 "[lover_spouse.GetFirstName]이(가)[adultery_lover.GetFirstName]을(를) 특별 방문에 초대합니다."
+  regula_adultery.1010.b:0 "[lover_spouse.GetFirstName]에게 관계를 끝내라고 지시만 합니다."
+
+  # Magister charms
+  regula_adultery.1011.t:0 "눈부신 아름다움"
+  regula_adultery.1011.desc:0 "[adultery_lover.GetTitledFirstName]이(가) 다음에[lover_spouse.GetTitledFirstName]을(를) 그녀의 방으로 데려오면 그녀는 당신이 이미 침대에서 기다리고 있는 것을 발견합니다.방이 당신의 힘으로 어두워지기 시작하면서 그녀의 분노는 빠르게 공포로 바뀌었습니다. 그런 다음 [lover_spouse.GetFirstName]이(가) 문을 잠그고 닫을 때 두려워합니다.\n\n물론 그녀는 소리를 지르지만 [lover_spouse.GetFirstName]이(가) 조용히 믿을 수 있는 경비원으로 교체했습니다. 아무도 그녀를 도우러 오지 않습니다. 머지 않아 [adultery_lover.GetFirstName]당신 앞에 무릎을 꿇고, 당신은 속삭이기 위해 마음을 비웁니다."
+  regula_adultery.1011.a:0 "예시 [adultery_lover.GetFirstNamePossessive] 재능을 사용합니다"
+  regula_adultery.1011.b:0 "[lover_spouse.GetFirstName]을 남겨두고[adultery_lover.GetFirstName]을 하렘으로 유도하십시오."
+
+  # Paelex charms
+  regula_adultery.1012.t:0 "어둠에 열린 영혼"
+  regula_adultery.1012.desc:0 "당신은 [adultery_lover.GetTitledFirstNamePossessive]이 방에 충돌하고 그녀가 이미 벌거벗은 것을 발견했습니다. [lover_spouse.GetTitledFirstName]뒤에 있는 침대에서. \n\n[adultery_lover.GetFirstNamePossessive]분노의 외침은 그녀의 눈이 초점을 잃고 턱이 느슨해지면서 갑자기 끝납니다. 당신의 충성스러운$game_concept_compedita$, 그녀의 손끝에서 춤을 추는 마법을 보고 만족의 미소를 지었습니다."
+  regula_adultery.1012.a:0 "옷을 벗고 연인과 합류."
+  regula_adultery.1012.b:0 "둘이 즐기게 둔다."
+
+  # Male Fling
+  regula_adultery.2001.t:0 "통제 실패"
+  regula_adultery.2001.desc:0 "당신이 만든 [lover_spouse.GetTitledFirstName]은(는) 당신의 의지만큼 그녀의 욕망에 의해 지배됩니다. 불행히도, 그녀의 충동은 최근에 너무 강했던 것 같습니다. \n\n[sex_partner.GetTitledFirstName]이(가) 마구간에서 자위하는 모습을 포착했습니다. 설상가상으로 그는 바지를 떨어뜨렸고 그녀의 욕망에 그녀는 그의 거시기에 뛰어올랐습니다.\n\n일단 그녀가 욕망을 해소하자 , [lover_spouse.GetFirstName]은(는) 그녀가 한 일을 깨닫고 당신에게 용서를 구하러 달려왔습니다."
+  regula_adultery.2001.a:0 "그는 고통을 겪을 것이다."
+  regula_adultery.2001.b:0 "일단 문제는 제쳐두고 쉬도록 하세요."
+  
+
+  # Female Fling
+  regula_adultery.2010.t:0 "불꽃에 나방처럼"
+  regula_adultery.2010.desc:0 "당신의 힘은 각각의 $game_concept_compeditae$,내에서 타오르고, 그들의 순수한 존재는 방심한 사람들을 현혹시키기에 충분합니다. [sex_partner.GetTitledFirstName]은(는) [lover_spouse.GetTitledFirstName]이(가) 열심히 이야기한 것처럼 이 사실을 직접 배웠습니다. 컴페디타의 떡치는기술을 맛본 후에 [sex_partner.GetFirstName]은(는) 쉬운 먹이가 될 것입니다."
+  regula_adultery.2010.a:0 "[lover_spouse.GetFirstName]이(가) 한번 더 [sex_partner.GetFirstName]을(를) 따먹을것입니다."
+  regula_adultery.2010.b:0 "문제없어."
+
+  # Magister charms
+  regula_adultery.2011.t:0 "불타는 열정"
+  regula_adultery.2011.desc:0 "그림자 속에서 기다리면[lover_spouse.GetTitledFirstName]이(가) [sex_partner.GetTitledFirstName]을(를) 조용한 골방으로 안내합니다. 두 사람은 [sex_partner.GetFirstName] 을(를) 재빨리 껴안고 흥분에 휩싸입니다. 중얼거리는 주문으로 골방 주변의 기둥에 새겨진 룬을 활성화하고 [sex_partner.GetFirstNamePossessive]를 묶습니다.\n\n다 되면 앞으로 나아갑니다."
+  regula_adultery.2011.a:0 "[sex_partner.GetFirstNameNoTooltip]을(를) 따뜻하게 환영합니다."
+  regula_adultery.2011.b:0 "[lover_spouse.GetFirstNameNoTooltip]을(를) 떠나 그녀의 새 여동생을 영입하십시오."
+
+  # Paelex charms
+  regula_adultery.2012.t:0 "반사된 불"
+  regula_adultery.2012.desc:0 "한적한 골방에 도착하면 [lover_spouse.GetTitledFirstName]이(가) 이미 [sex_partner.GetTitledFirstNamePossessive]에게 묶여 있음을 알 수 있습니다. [lover_spouse.GetFirstName]은(는) 당신의 접근에 미소를 짓고 [sex_partner.GetFirstName]은(는) 열심히 그녀의 구멍을 탐하고있습니다. "
+  regula_adultery.2012.a:0 "옷을 벗고 합류."
+  regula_adultery.2012.b:0 "[lover_spouse.GetFirstNameNoTooltip]이(가) 상을 즐기게 하십시오."

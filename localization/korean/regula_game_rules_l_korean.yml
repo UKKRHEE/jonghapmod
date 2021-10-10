@@ -1,0 +1,14 @@
+﻿l_korean:
+  rule_regula_naked_compeditae:0 "#X Regula Magistri:#! 컴페디테들의 옷여부"
+  setting_regula_naked_compeditae_all_enabled:0 "#하이 컴페디테 알몸"
+  setting_regula_naked_compeditae_limited_enabled:0 "#하이 스퍼시스 알몸"
+  setting_regula_naked_compeditae_limited_enabled_desc:0 "당신의 도미나(여주인,마담)와 페렉스(첩)는 항상 알몸이 될 것입니다.."
+  setting_regula_naked_compeditae_all_enabled_desc:0 "당신의 권능이 닿은 모든 사람들은 항상 벌거벗고 있을 것입니다."
+  setting_regula_naked_compeditae_disabled:0 "옷을 입은"
+  setting_regula_naked_compeditae_disabled_desc:0 "캐릭터는 섹스 장면 밖에서는 옷을 입을 것입니다."
+
+  rule_regula_portraits_compeditae:0 "#X Regula Magistri:#! 포트레잇 외형 변화 여부"
+  setting_regula_portraits_compeditae_enabled:0 "활성"
+  setting_regula_portraits_compeditae_enabled_desc:0 "무르사, 페렉스, 콘투베르나리스 및 고서와 하나된자 특성을 가진 여성은 다르게 보일 것입니다(보라색 눈 등)."
+  setting_regula_portraits_compeditae_disabled:0 "비활성"
+  setting_regula_portraits_compeditae_disabled_desc:0 "레굴라 마지스트리 모드 특성 보유자 외형 변화 없음"

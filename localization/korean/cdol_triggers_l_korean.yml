@@ -1,0 +1,31 @@
+﻿l_korean:
+
+ cdol_can_regenerate_trigger: "[illness|E],부상 또는 기형이 없습니다."
+
+ cdol_you_have_sexual_power: "$VALUE|V0$ [cdol_sexual_power|E] $cdol_current_sexual_power_note$이(가) 있습니다."
+ cdol_you_do_not_have_sexual_power: "$VALUE|V0$ [cdol_sexual_power|E] $cdol_current_sexual_power_note$이(가) 없습니다."
+ cdol_they_has_sexual_power: "[CHARACTER.MakeScope.GetShortUIName|U] 에는 $VALUE|V0$ [cdol_sexual_power|E] $cdol_current_sexual_power_note$이(가) 있습니다."
+ cdol_they_do_not_have_sexual_power: "[CHARACTER.GetShortUIName|U] 에는 $VALUE|V0$ [cdol_sexual_power|E] $cdol_current_sexual_power_note$이(가) 없습니다."
+ cdol_has_sexual_power: "$VALUE|V0$ [cdol_sexual_power|E] $cdol_current_sexual_power_note$있음"
+ cdol_does_not_have_sexual_power: "$VALUE|V0$ [cdol_sexual_power|E] $cdol_current_sexual_power_note$없음"
+
+ cdol_you_have_succubus_mastery: "$VALUE|V0$ [cdol_succubus_mastery|E] $cdol_current_succubus_mastery_note$가 있습니다."
+ cdol_you_do_not_have_succubus_mastery: "$VALUE|V0$ [cdol_succubus_mastery|E] $cdol_current_succubus_mastery_note$가 없습니다."
+ cdol_they_has_succubus_mastery: "[CHARACTER.MakeScope.GetShortUIName|U] 에는 $VALUE|V0$이(가) 있습니다. [cdol_succubus_mastery|E] $cdol_current_succubus_mastery_note$"
+ cdol_they_do_not_have_succubus_mastery: "[CHARACTER.GetShortUIName|U]에는 $VALUE|V0$이(가) 없습니다. [cdol_succubus_mastery|E] $cdol_current_succubus_mastery_note$"
+ cdol_has_succubus_mastery: "$VALUE|V0$ 있음 [cdol_succubus_mastery|E] $cdol_current_succubus_mastery_note$"
+ cdol_does_not_have_succubus_mastery: "$VALUE|V0$ 없음 [cdol_succubus_mastery|E] $cdol_current_succubus_mastery_note$"
+
+ cdol_you_recently_laid_with_target: "지난 30일 동안 [TARGET_CHARACTER.GetShortUIName|U]과(와) 잤습니다."
+ cdol_you_did_not_recently_lay_with_target: "지난 30일 동안 [TARGET_CHARACTER.GetShortUIName|U]과(와) 자지 않았습니다."
+ cdol_they_recently_laid_with_target: "[CHARACTER.GetShortUIName|U] 은(는) 지난 30일 동안 [TARGET_CHARACTER.GetShortUIName|U] 과(와) 잤습니다."
+ cdol_they_did_not_recently_lay_with_target: "[CHARACTER.GetShortUIName|U] 은(는) 지난 30일 동안 [TARGET_CHARACTER.GetShortUIName|U] 과(와) 자지 않았습니다."
+ cdol_recently_laid_with_target: "지난 30일 동안 [TARGET_CHARACTER.GetShortUIName|U]과(와) 함께 잤습니다."
+ cdol_did_not_recently_lay_with_target: "지난 30일 동안 [TARGET_CHARACTER.GetShortUIName|U] 과(와) 함께 자지 않았습니다."
+
+ cdol_you_are_witch: "당신은[GetTrait('witch').GetName( GetNullCharacter )]"
+ cdol_you_are_not_witch: "당신은 [GetTrait('witch').GetName( GetNullCharacter )]이(가) 아닙니다."
+ cdol_they_are_witch: "[CHARACTER.GetShortUIName|U]는 [GetTrait('witch').GetName( GetNullCharacter )]입니다."
+ cdol_they_are_not_witch: "[CHARACTER.GetShortUIName|U] 는 [GetTrait('witch').GetName( GetNullCharacter )]이(가) 아닙니다."
+ cdol_is_witch: "[GetTrait('witch').GetName( GetNullCharacter )]입니다"
+ cdol_is_not_witch: "[GetTrait('witch').GetName( GetNullCharacter )]이(가) 아닙니다."

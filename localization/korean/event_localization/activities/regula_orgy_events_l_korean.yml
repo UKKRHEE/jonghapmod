@@ -1,0 +1,81 @@
+﻿l_korean:
+  #Invitation to concubines (not visible to player)
+  regula_orgy.1000.t:0 "헌신적인,"
+  regula_orgy.1000.desc:0 "나는 수도에서 난교를 개최합니다, 며칠 후. 그곳에서 당신의 존재를 기대합니다."
+  regula_orgy.1000.a:0 "듣고 순종합니다."
+  
+
+  #Invitation to non-concubines (not visible to player)
+  regula_orgy.1001.t:0 "나의 충성스러운 종에게,"
+  regula_orgy.1001.desc:0 "나는 난교 파티를 하고 있는데 당신이 거기에 있었다면 기쁠 것입니다. 당신의 책임을 버리고 당신도 기쁘게 하도록 하겠습니다."
+  regula_orgy.1001.a:0 "내 주인님의 뜻대로."
+  regula_orgy.1001.b:0 "나는...반드시...저항해야 한다..."
+
+
+  #Uninvited guest
+  regula_orgy.1003.t:1 "$activity_regula_orgy$: 예상치 못한 제안"
+  regula_orgy.1003.desc:0 "노예가[capital.GetNameNoTooltip]에 도착하면 낯선 얼굴을 보게 됩니다.\n\n[inviter.GetNameOrMeRegnal] 은 젊은 [new_guest.GetWomanMan]을 [new_guest.Custom2('MyCharacterIntroductionNoComma', ROOT.Char)]. [new_guest.GetFirstName]은(는) 당신의 진정한 힘이나 [inviter.GetFirstNameNoTooltip]에 대한 당신의 소유권을 알지 못하며 궁정의 독점적인 모임이 진행 중이라는 말만 들었습니다. \n\n[inviter.GetFirstNameNoTooltip]은 교활하고 은근한 눈빛으로 [new_guest.GetFirstNameNoTooltip]이(가) 우리 가족에 합류할 수 있는지 묻습니다."
+  regula_orgy.1003.a:0 "[new_guest.GetFirstName]에게 잊지 못할 저녁을 선사하겠다고 약속합니다."
+  regula_orgy.1003.b:0 "[inviter.GetFirstName]에게 이벤트가 초대 받은사람만 들어올수있다 알립니다."
+
+  #No one attended
+  regula_orgy.1002.t:0 "$activity_regula_orgy$: 헌신 부족"
+  regula_orgy.1002.desc:0 "단 하나의 영혼도 내 부름에 응답하지 않았습니다."
+  regula_orgy.1002.a:0 "그들은 내 분노를 알게 될 것이다."
+
+  #Starting event
+  every_regula_orgy_participant:0 "$activity_regula_orgy$의 모든 손님"
+  regula_orgy.1010.t:1 "$activity_regula_orgy$: 노예들이 모였습니다"
+  regula_orgy.1010.desc:0 "공기는 긴장된 기대로 가득 차 있고, 당신의 노예들은 주변 사람들을 불안하게 쳐다봅니다. 의식이나 연설 없이 시작하여 레굴라 마지스트리의 축도를 함께 엮습니다.\n\n 마법은 공기를 따뜻한 빛으로 채우고 당신은 부드러운 숨소리에 미소를 짓습니다. 익숙한 냄새가 난다."
+  regula_orgy.1010.a:0 "모인 사람들에게 걸친 모든 옷을 벗으라고 명령합니다." #Start the orgy.
+  regula_orgy.1010.e.tt:0 "난교파뤼다!! 육노예들아~!."
+
+  #The orgy is in full swing
+  regula_orgy.1014.t:0 "$activity_regula_orgy$: 좋은 시작이야"  # Finish fucking, make a choice as to your next action.
+
+  regula_orgy.1014.desc:0 "당신의 첫 정액받이가 될 영광은[first_orgy_partner.GetFirstName]에게 돌아갑니다. 그녀는 행복한 콧노래를 부르면서 위아래로 좆을 빱니다. \n\n 당신은 최소한의 힘을 사용합니다 당신의 의지에 의해 그녀는 좆을 완전히 집어삼키고, 그녀는 스스로 질식오랄을 시작합니다. 그리고 잠시뒤 그녀는 구역질을 하며 바둥거리지만 당신은 머리채를 쥐어잡고 목구멍안에 사정을 합니다. 그녀의 뱃속을 채워주며 당신은 이미 다음 정액받이를 찾아 방을 둘러봅니다."
+  regula_orgy.1014.a:0 "또다른 자발적인 정액받이 구멍 찾기."
+  regula_orgy.1014.a.tt:1 "당신은 쉬지않고 닥치는데로 욕구를 탐식하고 채우세요"
+  regula_orgy.1014.b:0 "[deviant.GetFirstNameNoTooltip]과 장난감으로 새로운 성적 즐거움을 경험하세요"
+  regula_orgy.1014.b.knowledge:0 "당신 안에서 무언가가 깨어납니다."
+  regula_orgy.1014.b.inspiration:0 "새로운 영감의 원천에 대해 개방적으로 됩니다."
+  regula_orgy.1014.c:0 "[new_guest.Custom('ComplimentAdjective')] [new_guest.GetFirstNameNoTooltip]에 대해 조금 더 알아보세요."
+  regula_orgy.1014.c.minor:0 "그들의 정액받이 기술은 합격입니다"
+  regula_orgy.1014.c.major:0 "그들의 입구멍은 천상의 입구입니다"
+  regula_orgy.1014.f:1 "등을 기대고 눈앞의 경치를 즐기십시오."
+
+  # Sex with a random slave
+  regula_orgy.1015.t:0 "$activity_regula_orgy$: 당신의 부류"
+  regula_orgy.1015.desc:0 "시간은 탐욕과 욕망의 유쾌한 안개 속에서 지나가고있습니다. 레굴라 마지스트리의 힘이 당신의 혈관을 채우고 당신의 열정이 흔들리지 않고 오르가즘을 느낄 때마다 성장한다는 것을 알게 됩니다.\n\n당신은 잠시 동안 [sex_partner.GetFirstName]을(를) 안고 있는 동안 당신의 마음대로 그녀를 나른하게 오르가즘의 끝에서 즐기게하며 따먹습니다. 그녀의 정신줄을 놓기 시작하면 당신은 누그러지고, 당신이 다른 정액받이 찾기 위해 떠날 때 그녀는 황홀경에 빠지기 시작하며 대량의 보지액을 쏟아냅니다."
+  regula_orgy.1015.a:0 "만족스럽네요."
+
+  # Deviant sex event
+  regula_orgy.1016.t:0 "$activity_regula_orgy$: 즐거움과 고통에 대한 교훈"
+  regula_orgy.1016.desc:0 "[deviant.GetFirstName)]은(는) 좀 더 이국적인 형태의 러브 메이킹에 정통하며 [sex_partner.GetFirstName]은(는) 흉악한 도구들을 보고 두려움을 억제하기 위해 열심히 노력하고 있습니다. 당신은 채찍이 부서지는 소리와 고통이 뒤섞이는 소리를 들으며 [sex_partner.GetFirstNamePossessiveNoTooltip] 얼굴에 황홀감이 뒤섞인 것을 보고 즐기면서 두 사람 모두에게 불타는 열정의 불을 조심스럽게 붙였습니다.\n\n[sex_partner.GetFirstNameNoTooltip]이(가) 전율하며 망가진 인형으로 전락할 때 몇 가지 재미있는 기술 이상을 배웠습니다."
+  regula_orgy.1016.a:0 "기분 좋은 기분 전환이군"
+  
+
+  # Uninvited guest sex event
+  regula_orgy.1017.t:0 "$activity_regula_orgy$: 제물을 즐기다"
+  regula_orgy.1017.start.desc:0 "잠시 시간을 내어 [new_guest.GetFirstName]에 대해 알아가고 그녀의 기억을 샅샅이 훔쳐보고 정액받이 육노예의 삶에 더 잘 맞도록 그녀를 미묘하게 조정합니다. \n\n드디어 그녀를 앞으로 손짓하면 그녀의 행동에는 망설임이 없고 육노예로서의 욕망만 있을 뿐입니다."
+  regula_orgy.1017.a:0 "기분 좋은 선물이군요."
+  
+  # Participant events
+  regula_orgy.1020.t:0 "$activity_regula_orgy$: "
+  regula_orgy.1020.desc:0 ""
+  regula_orgy.1020.a:0 ""
+  
+
+  # End events
+  regula_orgy.1098.t:0 "$activity_regula_orgy$: 여파"
+  regula_orgy.1098.start.desc:0 "당신의 노예와 당신"
+  regula_orgy.1098.end.desc:0 "몇날몇일 동안 서로의 육체의 즐거움을 탐하느라 그들의 몸은 이제 지친 현자 상태로 당신의 발치에 널부러져 있으며 성벽은 에너지가 넘실거립니다..\n\n당신은 그들이 다시 이것을 할 만큼 충분히 회복되기까지 시간이 걸릴 것임을 알고 조심스럽게 힘을 축복에 엮어 퍼트립니다."
+  regula_orgy.1098.a:0 "보호의 표식을 만들다" #Increase health
+  regula_orgy.1098.b:0 "당신의 아우라를 강화하세요" #Stats boost for all
+  regula_orgy.1098.c:0 "레굴라 마지스트리와의 연결 강화" #Massive piety gain
+  
+
+  regula_orgy.1099.start.desc:0 "함께, 우리"
+  regula_orgy.1099.tt:0 "$activity_regula_orgy$가 끝나고 집으로 향합니다."
+
+  ### Petition events

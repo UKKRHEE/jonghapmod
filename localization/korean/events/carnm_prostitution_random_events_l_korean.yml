@@ -1,0 +1,10 @@
+﻿l_korean:
+
+ carnm_prostitution_random_events.0001.t: "매춘: 민중의 [ROOT.Char.GetWomanMan|U] "
+ carnm_prostitution_random_events.0001.desc: "내가 마을 광장을 매혹적으로 걸을 때 모든 시선이 나에게로 쏠려 있다. 내 피험자들은 충분한 돈만 있으면 누구나 [ROOT.Char.GetTitleAsNameNoTooltip]으로 열정적인 밤을 보낼 수 있다는 것을 알고 있습니다. 아니면 가능할까요?\n\n사실 저는 대부분의 [ROOT.Char.Custom('AttractionWomanManMultiple')]에게 도달할 수 없는 환상입니다. 내 사회 계급 때문이든, 내가 청구하는 왕비 때문이든 내 고객은 주로 귀족 가문과 부유한 상인 가문 출신입니다..\n\n이러한 독점의 매춘부도 장점이 있지만 서민들은 분명히 제스처를 고마워할 것입니다. 나는 그들에게 문을 열어야 했다..."
+ carnm_prostitution_random_events.0001.a: "[ROOT.Char.GetTitleAsNameNoTooltip]의 임무는 #EMP all#입니다! [ROOT.Char.GetHerHis] 주제."
+ carnm_prostitution_random_events.0001.b: "그들이 가질 수 없는 것에 대한 환상을 갖게 하라."
+
+ carnm_prostitution_random_events.0003.t: "매춘: 닫힌 문 뒤에서"
+ carnm_prostitution_random_events.0003.desc: "따뜻한 촛불 속에서 많은 고객들이 자신의 고민을 털어놓습니다. 결국, 창녀는 좋은 동반자이자 좋은 연인이 될 것으로 기대됩니다.\n\n내 침실을 오가는 [ROOT.Char.Custom('AttractionWomanManMultiple')]을(를) 주의 깊게 듣고, 나는 둘 다 편안해졌습니다. 그들의 마음과 [discovered_secret_owner.Custom2('MyCharacterIntroductionNoComma', ROOT.Char)]에 대해 몇 가지 흥미로운 사실을 배웠습니다."
+ carnm_prostitution_random_events.0003.a: "이 정보는 알아두면 유용할 것입니다."

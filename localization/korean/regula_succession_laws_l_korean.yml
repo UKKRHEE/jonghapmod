@@ -1,0 +1,10 @@
+﻿l_korean:
+  regula_magister_gender_law:0 "마지스트리 상속"
+  regula_magister_gender_law_effects:0 "육신은 약하나 당신의 능력은 영원합니다. \n\n$EFFECT_LIST_BULLET$ 여성은 상속에서 제외됩니다.\n$EFFECT_LIST_BULLET$여성은 [claims|E]를 상속할 수 없습니다."
+  #regula_magister_elective_succession_law_desc:0 "규칙 5. 힘은 영혼의 수호자에게서 컴페디테로 흐르고 그들에게서 돌아올 것입니다."
+  regula_vassal_succession_law:0 "죄인들의 유산"
+  regula_vassal_succession_law_effects:0 "오직 당신의 힘에 약한자들만이 군림 할 수 있습니다. \n\n$EFFECT_LIST_BULLET$ 남자들은 상속할수 없습니다. \n$EFFECT_LIST_BULLET$ 남성은 상속받을 수 없습니다.[claims|E]" 
+	MUST_BE_INDEPENDENT:0 "영혼의 수호자는 아무에게도 대답하지 않습니다."
+	MUST_SERVE_MAGISTER:0 "이 규칙은 당신의 힘에 영향을 받는 사람들을 제한합니다. 당신을 제외하고."
+  DOES_NOT_SERVE_MAGISTER:0 "이 가신은 당신에게 맹세하지 않았습니다. 그 사람들은 규칙을 따르지 않을 것입니다."
+

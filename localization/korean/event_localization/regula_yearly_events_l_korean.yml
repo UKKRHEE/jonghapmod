@@ -1,0 +1,55 @@
+﻿l_korean:
+  # Vassal offers gift.
+  regula_yearly.1000.t:0 "오로지 당신 덕에"
+  regula_yearly.1000.desc:0 "지난 몇 달 동안 당신의 하인 [vassal.GetTitledFirstName]은 당신에게 선물로 제공하기 위해 사람들을모아 자신의 영역에서 가치 있는 모든 물품을 수집했습니다. 그들은 이제 당신의 왕좌에 자랑스럽게 서 있으며, 그들 앞에는 고급 향수, 희귀 고서, 귀중한 천이 많이 있습니다. "
+  regula_yearly.1000.desc.paranoid:0 "\n\n 관대한 헌금입니다. #emphasis Too#! 관대 한. 그들이 당신의 발 앞에 엎드려 있을 때 당신은 그들의 마음의 형태를 신경질적으로 검토하고 있는 자신을 발견하게 됩니다. 그들은 당신의 통제를 우회하는 방법을 찾았습니까??"
+  regula_yearly.1000.desc.deviant:0 "많은 사람들이 지난 몇 년간 당신의 호의를 얻으려 했지만 여전히 인상을 주기는 무리입니다. 다음엔 [vassal.GetFirstNameNoTooltip]이(가) 부드러운 매듭을 얻었을 것입니다."
+  regula_yearly.1000.desc.lustful:0 "그들이 당신의 보좌 앞에 무릎을 꿇을 때 당신은 그들의 선물보다 그들의 옷의 핏에 감탄하는 자신을 발견하게 됩니다. 그들의 눈에서 당신의 관심이 높이 평가되는 것이 분명합니다."
+  regula_yearly.1000.desc.fallback:0 ""
+  regula_yearly.1000.a:0 "기꺼이 그들의 제안을 받아들인다." #Accept
+  regula_yearly.1000.b:0 "그들의 옷을 추가합니다" #Accept and take vassal
+  regula_yearly.1000.c:0 "감사의 마음을 담아 선물을 돌려주세요." #Decline
+  regula_yearly.1000.d:0 "선물을 돌려주고 밧줄을 요청하세요." #Deviant
+
+  # Group of vassals offer gift.
+  regula_yearly.1100.t:0 "정의로운 전쟁 지원"
+  regula_yearly.1100.desc:0 "$game_concept_compeditae$는 모든 생각에서 노예의 기쁨을 느끼고, 전 세계가 당신의 힘을 알게 될 날을 간절히 기다리고 있습니다. \n\n[war_target.GetTitledFirstName]와의 전쟁에 대한 지지는 특히 강력하며 오늘날 가장 열성적인 네 명의 노예가 보물을 법정으로 가져왔습니다. 그들은 [war_target.GetFirstNameNoTooltip]이(가) 곧 당신의 발 아래 자신의 정당한 자리를 찾을 수 있기를 희망하면서 당신에게 이러한 재물을 제공합니다. "
+  regula_yearly.1100.desc.generous:0 "\n\n정말 사려 깊은 행동입니다! 사실, 자선은 그 자체로 보상입니다."
+  regula_yearly.1100.desc.lustful:0 "\n\n 황금의 가치가 아무리 높아도 그 아름다움이 더 매혹적입니다.."
+  regula_yearly.1100.desc.fallback:0 ""
+  regula_yearly.1100.a:0 "그들의 기부를 수락하십시오." #Accept
+  regula_yearly.1100.a.tt:0 "당신의 가신들에게 정중하게 감사를 표하고 그들을 보내십시오."
+  regula_yearly.1100.c:0 "그들에게 금을 쓰십시오." #Decline
+  regula_yearly.1100.c.tt:0 "금을 사용하여 가신과 그들의 개인 경비원에게 옷을 입히십시오."
+  regula_yearly.1100.d:0 "그들이 제공하는 모든 것을 가져 가라.." #Deviant. Take them all.
+  regula_yearly.1100.d.tt:0 "그들의 제물을 받고 그들의 자궁에 당신의 정액을 채우십시오."
+
+
+  # Paelex Petitions to found a holy order, with the MC's blessing.
+  regula_yearly.1300.t:0 "무장충신자"
+  regula_yearly.1300.desc:0 "[petitioner.GetTitledFirstName]이(가) 군중을 뚫고 나가면서 조용한 궁정에서의 날은 예상치 못한 방향으로 전환됩니다. \n\n당신의 발 앞에 무릎을 꿇고 그녀는 자신의 깃발 아래 충실한 군대를 모았다고 주장합니다. 그녀는 당신의 더 큰 영광을 위해 전쟁을 벌일 수 있도록 그녀의 영역에 새로운 성기사단을 세우는 것을 허락해달라고 간청합니다."
+  regula_yearly.1300.a:0 "병사들에게 옷을 입히고[petitioner.GetFirstNameNoTooltip]에게 당신의 힘을 축복하십시오."
+  regula_yearly.1300.b:0 "그녀의 요청을 거부합니다."
+
+
+  # Concubines bickering over the rota.
+  regula_yearly.2101.t:0 "가정의 문제"
+  regula_yearly.2101.desc:0 "어느 늦은 밤, 당신은 [bickering_attacker.GetFirstName] 및 [bickering_defender.GetFirstName]이(가) 당신의 방 문 밖에서 열띤 논쟁을 벌이는 것을 발견했습니다. [bickering_attacker.GetFirstNameNoTooltip]은(는)[bickering_defender.GetFirstNameNoTooltip]이(가) 당신의 시간을 독점하고 있다고 비난하며 오늘 밤 당신의 침대를 따뜻하게 할 권리를 요구합니다. [bickering_defender.GetFirstNameNoTooltip] 은(는) [bickering_attacker.GetFirstNamePossessiveNoTooltip] 보지가 "너무 허벌보지라 말좆을 만족시킬 수 없습니다."라고 주장하며 거부합니다."\n\n 분노한 [bickering_attacker.GetFirstNameNoTooltip] 이(가) 당신을 불러 문제 해결을 요청합니다."
+  regula_yearly.2101.a.a.domina:0 "그녀가 원하는 자지를[bickering_attacker.GetFirstNameNoTooltip] 에게 주십시오." # Side with bickering domina.
+  regula_yearly.2101.a.a.paelex.domina:0 "그녀가 원하는 자지를[bickering_attacker.GetFirstNameNoTooltip] 에게 주십시오." # Side with paelex against domina.
+  regula_yearly.2101.a.a.paelex.paelex:0 "그녀가 원하는 자지를[bickering_attacker.GetFirstNameNoTooltip] 에게 주십시오." # Side with one of the paelex.
+  regula_yearly.2101.b.a.domina:0 "[bickering_defender.GetFirstNameNoTooltip]을(를) 그녀가 보는앞에서 열정적으로 따먹습니다." # Side with bickering domina (defender).
+  regula_yearly.2101.b.a.paelex.domina:0 "[bickering_attacker.GetFirstNameNoTooltip]이 도미나일 수 있지만[bickering_defender.GetFirstNameNoTooltip]이 당신에게 더 꼴리므로 도미나 앞에서 그녀를 열정적으로 따먹습니다.." # Side with paelex against domina (defender).
+  regula_yearly.2101.b.a.paelex.paelex:0 "[bickering_defender.GetFirstNameNoTooltip]을(를) 그녀가 보는앞에서 열정적으로 따먹습니다." # Side with one of the paelex (defender).
+  regula_yearly.2101.c:0 "둘을 데리고 침대 위로 가서 아침에 못 일어날정도로 좆방망이로 혼내줍니다." # Fuck them both.
+  regula_yearly.2101.c.tt:0 "두 사람을 잠자리에 들게 하고 함께 일하는 법을 가르치십시오."
+  regula_yearly.2101.d:0 "둘다 피부를 불에 태워 징계한다" # Fetch your whips and chains; discipline them both.
+  regula_yearly.2101.d.tt:0 "당신의 채찍과 사슬을 가져와 그들이 곧 잊지 못할 교훈을 가르쳐 주십시오."
+  regula_yearly.2101.e:0 "그만! 이건 너답지않아" # Turn them over to the domina for punishment.
+  regula_yearly.2101.e.tt:0 "처벌을 위해 당신의 도미나에게 넘긴다."
+
+  # Talented Paelex petitions for the role of Domina
+  regula_yearly.2200.t:0 "건방진년"
+  regula_yearly.2200.desc:0 "어느 늦은 저녁 [domina.GetFirstName]와(과) [petitioner.GetFirstName] 둘다 당신이 따먹은 직후라 기분이 매우 좋았습니다.[petitioner.GetFirstNameNoTooltip]이(가)[domina.GetFirstNameNoTooltip] 이(가) 전성기를 지나 더 이상 당신의 도미나 역할을 하기에 적합하지 않다고 주장하기 시작하기전까진...\n\n[petitioner.GetFirstNameNoTooltip]은(는) 자신이 우수한 도미나가 될것이라 주장하며, 당신에게 더 나은 서비스를 제공할 수 있는 기회를 달라 청원합니다.\n\n어떻게 하시겠습니까?"
+  regula_yearly.2200.a:0 "[petitioner.GetFirstNameNoTooltip]이(가) 이제 도미나임을 선언하십시오."
+  regula_yearly.2200.b:0 "야심 찬 페렉스에게 그녀의 교활한 혀가 [domina.GetFirstNamePossessiveNoTooltip]의 클리를 핥는데 더 적합하다 말해줍니다."

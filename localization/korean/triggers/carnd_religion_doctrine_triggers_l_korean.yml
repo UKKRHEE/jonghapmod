@@ -1,0 +1,4 @@
+﻿l_korean:
+ carnd_incompatible_doctrine_male_dominated_trigger: "[doctrine|E] $doctrine_gender_male_dominated_name$과 호환되지 않습니다."
+ carnd_incompatible_doctrine_lust_shunned_trigger: "[doctrine|E] $carnd_doctrine_lust_shunned_name$과 호환되지 않습니다."
+ carnd_incompatible_doctrine_prostitution_crime_trigger: "매춘을[shunned|E] 또는 [criminal|E] 로 만드는 모든 [doctrine|E]와 양립할 수 없습니다."

@@ -1,0 +1,2 @@
+﻿l_korean:
+  msg_regula_claim_vassal_war_invalidated_message:0 "[war.GetName]이(가) 종료되었습니다.: [defender.GetTitledFirstName]에게 더 이상 요구할 자격이 있는 가신이 없습니다."

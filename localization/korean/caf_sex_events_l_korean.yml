@@ -1,0 +1,40 @@
+﻿l_korean:
+
+caf_sex_effect_best.t:0 "천국의 섹스를 했다"
+caf_sex_effect_amazing.t:0 "놀라운 섹스를 했다"
+caf_sex_effect_good.t:0 "만족스러운 섹스를 했다"
+caf_sex_effect_decent.t:0 "정상적인 섹스를 했다"
+caf_sex_effect_bad.t:0 "불만족스러운 섹스를 했다"
+caf_sex_effect_very_bad.t:0 "형편없는 섹스를 했다"
+caf_sex_effect_horrible.t:0 "끔찍한 섹스를 했다."
+
+caf_sex_evaluation_tooltip_very_aroused:0 "당신은 매우 흥분했다."
+caf_sex_evaluation_tooltip_enjoyed_forcing:0 "당신은 누군가를 강간하는 것을 즐겼습니다."
+caf_sex_evaluation_tooltip_aroused:0 "당신은 흥분했다."
+caf_sex_evaluation_tooltip_enjoyed_dubcon:0 "당신은 누군가에게 성관계를 강요하는 것을 즐겼습니다."
+caf_sex_evaluation_tooltip_partner_likes_you:0 "당신의 섹파는 당신을 좋아합니다."
+caf_sex_evaluation_tooltip_sexually_compatible:0 "당신은 성적으로 적합합니다."
+
+caf_sex_evaluation_tooltip_attractive_partner_high:0 "당신의 섹파는 매우 매력적입니다."
+caf_sex_evaluation_tooltip_unattractive_partner_high:0 "당신의 섹파는 매우 매력적이지 않습니다."
+caf_sex_evaluation_tooltip_matching_personalities_high:0 "당신은 아주 잘 어울립니다."
+caf_sex_evaluation_tooltip_negative_trait_compatibility_high:0 "당신은 매우 상극의 성격을 가지고 있습니다."
+
+caf_sex_evaluation_tooltip_attractive_partner_medium:0 "당신의 섹파는 꽤 매력적입니다."
+caf_sex_evaluation_tooltip_unattractive_partner_medium:0 "당신의 섹파는 꽤 매력적이지 않습니다."
+caf_sex_evaluation_tooltip_matching_personalities_medium:0 "당신은 꽤 잘 어울립니다."
+caf_sex_evaluation_tooltip_negative_trait_compatibility_medium:0 "당신은 상극의 성격을 가지고 있습니다."
+
+caf_sex_evaluation_tooltip_attractive_partner_low:0 "당신의 섹파는 충분히 매력적입니다."
+caf_sex_evaluation_tooltip_unattractive_partner_low:0 "당신의 섹파는 약간 매력적이지 않습니다."
+caf_sex_evaluation_tooltip_matching_personalities_low:0 "당신은 충분히 잘 어울립니다."
+caf_sex_evaluation_tooltip_negative_trait_compatibility_low:0 "당신은 잘 어울리지 않습니다."
+
+caf_sex_evaluation_tooltip_raped:0 "당신은 강간 당했습니다."
+caf_sex_evaluation_tooltip_wrong_gender:0 "당신은 섹파의 성별에 끌리지 않습니다."
+caf_sex_evaluation_tooltip_regret_noncon:0 "당신은 누군가를 억지로 강간한 것을 후회합니다."
+caf_sex_evaluation_tooltip_regret_dubcon:0 "당신은 누군가에게 성관계를 강요한 것을 후회합니다."
+caf_sex_evaluation_tooltip_dubcon:0 "성관계를 강요받았습니다."
+caf_sex_evaluation_tooltip_partner_dislikes_you:0 "석파가 당신을 싫어합니다."
+caf_sex_evaluation_tooltip_traumatic_experiences:0 "과거의 고통스런 기억이 당신의 즐거움을 더럽힙니다."
+caf_sex_evaluation_tooltip_low_arousal:0 "당신은 이미 성적으로 만족했습니다."

@@ -1,0 +1,142 @@
+﻿l_korean:
+  #Common Christian Localization
+  rf_regula:0 "레굴라 마지스트리"
+  regula_religion:0 "레굴라 마지스트리"
+  regula_religion_adj:0 "마지스트리" #UPDATE Definitely not grammatically correct.
+  regula_religion_adherent:0 "파물루스"
+  regula_religion_adherent_plural:0 "파물리"
+  regula_religion_desc:0 "그들의 주인, 그의 이름에 속박된 통치의 힘에 의해 인도되고 형성되었습니다. 모두 무릎을 꿇고 황홀경을 받기 위해 무릎을 꿇을 것입니다."
+  regula_high_god_name:0 "영혼의 수호자"
+  regula_high_god_name_possessive:0 "영혼의 수호자"
+  regula_high_god_name_alternate:0 "마스터"
+  regula_high_god_name_alternate_possessive:0 "마스터"
+  regula_death_deity_name:0 "네프티스"
+  regula_death_deity_name_possessive:0 "네프티스"
+  regula_house_of_worship:0 "교회"
+  regula_house_of_worship_plural:0 "교회들"
+  regula_religious_symbol:0 "족쇄"
+  regula_religious_text:0 "토메"
+  regula_religious_head_title:0 "폰티펙스 카날리스" 
+  regula_religious_head_title_name:0 "콘쿠비나투스"
+  regula_devotee_male:0 "몽크"
+  regula_devotee_male_plural:0 "몽크스"
+  regula_devotee_female:0 "시스트렌"
+  regula_devotee_female_plural:0 "시스트렌스"
+  regula_devotee_neuter:0 "디보티드"
+  regula_devotee_neuter_plural:0 "디보티드스"
+  regula_priest_male:0 "새크리스트"
+  regula_priest_male_plural:0 "새크리스츠"
+  regula_priest_female:0 "시그나스티"
+  regula_priest_female_plural:0 "시그나스티츠"
+  regula_priest_alternate_plural:0 "시그나스티츠"
+  regula_bishop:0 "비숍"
+  regula_bishop_plural:0 "비숍스"
+  regula_witchgodname_the_horned_god:0 "뿔난 신"
+  regula_creator_god_name:0 "$regula_high_god_name$"
+  regula_creator_god_name_possessive:0 "$regula_high_god_name_possessive$"
+  regula_health_god_name:0 "이시스"
+  regula_health_god_name_possessive:0 "이시스"
+  regula_fertility_god_name:0 "코티스"
+  regula_fertility_god_name_possessive:0 "코티스"
+  regula_wealth_god_name:0 "네할레니아"
+  regula_wealth_god_name_possessive:0 "네할레니아"
+  regula_household_god_name:0 "마리아"
+  regula_household_god_name_possessive:0 "마리아"
+  regula_fate_god_name:0 "데쉬마"
+  regula_fate_god_name_possessive:0 "데쉬마"
+  regula_knowledge_god_name:0 "미네르바"
+  regula_knowledge_god_name_possessive:0 "미네르바"
+  regula_war_god_name:0 "타니트"
+  regula_war_god_name_possessive:0 "타니트"
+  regula_trickster_god_name:0 "딸리아"
+  regula_trickster_god_name_possessive:0 "딸리아"
+  regula_night_god_name:0 "아스타테"
+  regula_night_god_name_possessive:0 "아스타테"
+  regula_water_god_name:0 "에우테르프"
+  regula_water_god_name_possessive:0 "에우테르프"
+
+
+  #Regula-group Faiths
+  regula_default:0 "레굴라 마지스트리"
+  regula_default_adj:0 "마지스트리안"
+  regula_default_desc:0 "그들의 주인, 그의 이름에 속박된 통치의 힘에 의해 인도되고 형성되었습니다. 모두 무릎을 꿇고 황홀경을 받기 위해 무릎을 꿇을 것입니다."
+  regula_default_adherent:0 "파물루스"
+  regula_default_adherent_plural:0 "파물리"
+
+  regula_mediterranean:0 "레굴라 마지스트리 - 지중해"
+  regula_mediterranean_adj:0 "마지스트리안"
+  regula_mediterranean_desc:0 "그들의 주인, 그의 이름에 속박된 통치의 힘에 의해 인도되고 형성되었습니다. 모두 무릎을 꿇고 황홀경을 받기 위해 무릎을 꿇을 것입니다."
+  regula_mediterranean_adherent:0 "파물루스"
+  regula_mediterranean_adherent_plural:0 "파물리"
+
+  regula_european:0 "레굴라 마지스트리 - 유럽"
+  regula_european_adj:0 "마지스트리안"
+  regula_european_desc:0 "그들의 주인, 그의 이름에 속박된 통치의 힘에 의해 인도되고 형성되었습니다. 모두 무릎을 꿇고 황홀경을 받기 위해 무릎을 꿇을 것입니다."
+  regula_european_adherent:0 "파물루스"
+  regula_european_adherent_plural:0 "파물리"
+
+
+
+  #Holy Sites - Mediterranean
+  holy_site_reg_jerusalem_name:0 "예루살렘"
+  holy_site_reg_jerusalem_effect_name:0 "마리아의 피"
+  holy_site_reg_jerusalem_effects:0 "#S;EMP 마리아의 피:#!\n당신이 매혹한 노예가 된 성인은 당신의 의지의 조각으로 가득 차 있습니다. 이 감염자들은 당신의 의지의 조각들이 숙주에서 숙주로 퍼짐에 따라 수동적으로 주변 사람들을 노예로 만들 것입니다."
+
+  holy_site_reg_alexandria_name:0 "알렉산드리아"
+  holy_site_reg_alexandria_effect_name:0 "이시스의 우유"
+  holy_site_reg_alexandria_effects:0 "#S;EMP 이시스의 우유:#!\n약한 남자의 아내는 적극적으로 통치권을 추구합니다. 남편 버리기 상호 작용에서의 신앙도가 덜 소모됩니다."
+
+  holy_site_reg_carthage_name:0 "카르타고"
+  holy_site_reg_carthage_effect_name:0 "타니트의 뼈"
+  holy_site_reg_carthage_effects:0 "#S;EMP 타니트의 뼈:#!\n당신은 당신의 헌신적인 불멸의 형상을 당신의 의지로 만들 수 있습니다. 대가를 치르고."
+
+  holy_site_reg_lesbos_name:0 "레스보스"
+  holy_site_reg_lesbos_effect_name:0 "아마존의 정신"
+  holy_site_reg_lesbos_effects:0 "#S;EMP 아마존의 정신:#!\n$game_concept_famuli$가 더 잘 태어나고, 더 강하고, 더 빨리, 그리고 여성으로 태어납니다."
+
+  holy_site_reg_brescia_name:0 "브레시아"
+  holy_site_reg_brescia_effect_name:0 "미네르바의 교활함" 
+  holy_site_reg_brescia_effects:0 "#S;EMP 미네르바의 교활함:#!\n당신의 의지에 묶인 사람들은 당신의 매혹으로 홀리기 계략에 참여할 수 있습니다."
+
+  #Holy Sites - Europe
+  holy_site_reg_rome_name:0 "로마"
+  holy_site_reg_rome_effect_name:0 "암늑대의 혈기"
+  holy_site_reg_rome_effects:0 "#S;EMP 암늑대의 혈기:#!\n당신이 매혹한 노예가 된 성인은 당신의 의지의 조각으로 가득 차 있습니다. 이 감염자들은 당신의 의지의 조각들이 숙주에서 숙주로 퍼짐에 따라 수동적으로 주변 사람들을 노예로 만들 것입니다." 
+
+  holy_site_reg_krakow_name:0 "크라쿠프"
+  holy_site_reg_krakow_effect_name:0 "완다의 목소리" 
+  holy_site_reg_krakow_effects:0 "#S;EMP 완다의 목소리:#!\n약한 남자의 아내는 적극적으로 통치권을 추구합니다. 남편 버리기 상호 작용에서의 신앙도가 덜 소모됩니다."
+
+  holy_site_reg_gotland_name:0 "고틀란드"
+  holy_site_reg_gotland_effect_name:0 "프레이야의 활력"
+  holy_site_reg_gotland_effects:0 "#S;EMP 프레이야의 활력:#!\n당신은 당신의 헌신적인 불멸의 형상을 당신의 의지로 만들 수 있습니다. 대가를 치르고."
+
+  holy_site_reg_toulouse_name:0 "툴루즈"
+  holy_site_reg_toulouse_effect_name:0 "완벽주의자의 믿음" 
+  holy_site_reg_toulouse_effects:0 "#S;EMP 완벽주의자의 믿음:#!\n타락한 영혼이 $game_concept_famuli$.를 형성합니다. 그들은 당신의 규칙에 익숙해지고, 태어날 모든 소년은 세 명의 소녀가 될 것입니다."
+
+  holy_site_reg_zeeland_name:0 "제일란트"
+  holy_site_reg_zeeland_effect_name:0 "네할레니아의 통찰력"
+  holy_site_reg_zeeland_effects:0 "#S;EMP 네할레니아의 통찰력:#!\n당신의 의지에 묶인 사람들은 당신의 매혹으로 홀리기 계략에 참여할 수 있습니다."
+
+
+  #Custom Doctrines and Tenets
+  doctrine_concubine_regula:0 "마지스트리안 콘큐비나지"
+  doctrine_concubine_regula_name:0 "마지스트리안 콘큐비나지"
+  doctrine_concubine_regula_desc:0 "주인과 그의 하렘의 유대보다 더 신성한 유대는 없습니다."
+
+  doctrine_gender_magister_dominated:0 "컴플렉스"
+  doctrine_gender_magister_dominated_name:0 "컴플렉스"
+  doctrine_gender_magister_dominated_desc:0 "$game_concept_famuli$는 족쇄가 채워진 두 발과 그들의 주인의 명령에 복종하는 데 익숙합니다."
+
+  tenet_regula_magister:0 "레굴라 마지스트리"
+  tenet_regula_magister_name:0 "레굴라 마지스트리"
+  tenet_regula_magister_desc:0 "모든 것의 지배자, 영혼의 수호자에 의해 강화되었습니다."
+  doctrine_parameter_magister_tenet_traits:0 "헌신의 각 수준은 마스터의 규칙에서 새로운 주문을 잠금 해제하여 특성과 능력을 향상시킵니다."
+
+  tenet_regula_devoted:0 "콘쿠비노크라시"
+  tenet_regula_devoted_name:0 "콘쿠비노크라시"
+  tenet_regula_devoted_desc:0 "규칙 22. 파렉스는 당신의 의지의 연장선에 불과합니다"
+  doctrine_parameter_paelex_realm_benefits:0 "각 파렉스는 성장 및 개발세 수입을 5% 증가시킵니다."
+  doctrine_parameter_paelex_realm_benefits2:0 "각 파렉스는 월 0.25의 경건함을 생성합니다."
+  

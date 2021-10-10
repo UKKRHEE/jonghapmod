@@ -1,0 +1,15 @@
+﻿l_korean:
+
+ carnd_religion_flavor.0002.t.goddess: "인간 사이의 여신"
+ carnd_religion_flavor.0002.t.god: "인간 사이의 신"
+ carnd_religion_flavor.0002.desc: "수년 동안 나는 어둠과 순수의 기술을 통해 불멸을 추구했습니다. 나는 나의 열정과 즐거움을 나의 많은 연인들과 나누었고, 우리의 몸과 우리의 기는 조화되어 하나가 되었습니다.\n\n 나는 1백8건의 업적으로 몸을 단련하고, 기의 균형을 맞추고, 정화했습니다. 내 영혼. 나는 비행, 소환 또는 점술의 힘을 얻지 못했지만 우주에서 내 위치를 친밀하게 이해하게 된 것 같습니다. \n\n 나의 행동은 나를 [ROOT.Char.GetFaith.GetName] 로 만들었습니다, 그리고 내 이름이 역사를 통해 영원히 반향을 일으킬 것이라는 데는 의심의 여지가 없습니다.
+ carnd_religion_flavor.0002.a: "내 영혼은 펑라이산에서 영원히 살 것이다.."
+
+ carnd_religion_flavor.0003.t: "회복된 롯의 백성"
+ carnd_religion_flavor.0003.desc.opening: "2000여 년 전 소돔과 고모라 도시는 신의 진노에 의해 파괴되어 시간이 흐를 때까지 그 화려함으로 악명 높은 싯딤 계곡의 보석처럼 서 있었습니다."
+ carnd_religion_flavor.0003.desc.restorer: "\n\n마침내 나는 책의 폭군을 타도하고 [restorer.GetFaith.GetReligion.GetAdjectiveNoTooltip] 충실한 자들의 빛나는 도시를 재건했습니다. 오늘은 우리의 억압이 끝나고 새 시대가 도래하는 날입니다."
+ carnd_religion_flavor.0003.desc.holy: "\n\n마침내 [restorer.GetTitledFirstNameNoTooltip] 이(가) 책의 폭군을 타도하고 우리 민족의 빛나는 도시를 재건했습니다. 오늘은 우리의 억압이 끝나고 새 시대가 도래하는 날입니다."
+ carnd_religion_flavor.0003.desc.unholy: "\n\n[THIS.Char.GetFaith.PantheonTerm]의 심판을 무시하고  [restorer.GetTitledFirstNameNoTooltip] 은(는) 두 번째 에덴의 회복을 대담하게 선포하고 성경의 죄의 고대 도시를 재건했습니다."
+ carnd_religion_flavor.0003.desc.ending: "\n\n이제부터 사해 해안이 소돔과 고모라의 첨탑을 다시 알게 될 것입니다."
+ carnd_religion_flavor.0003.a: "벨라와 비르샤를 위해!"
+ carnd_religion_flavor.0003.b: "그들은 유혹적인 운명이어야 합니다..."

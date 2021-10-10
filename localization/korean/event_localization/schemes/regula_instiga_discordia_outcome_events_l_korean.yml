@@ -1,0 +1,14 @@
+﻿l_korean:
+  # Success Events ## I heard a rumour.
+  regula_instiga_discordia_outcome.1001.t:0 "성공"
+  regula_instiga_discordia_outcome.1001.opening:0 "계획과 숙련된 연금술사의 작업에 몇 주가 걸렸지만 [owner.GetFirstName] 은(는) [new_rival.GetNamePossessive] 속옷에 가려움 가루와 밀랍을 바르는 데 성공했습니다.\n\n오늘 [new_rival.GetSheHe] 가 말을 타러 갔을 때 밀랍이 녹았고, [new_rival.GetHerHim]을(를) 긁는 열광으로 몰아넣습니다. [new_rival.GetHerHis]가 서둘러 옷을 벗고 [target.GetFirstName]을(를) 포함하여 전체 사냥 파티가 웃었습니다. 하지만 [target.GetFirstNameNoTooltip]은 사냥개가 파우더를 [target.GetHerHis] 안장 가방에서 찾아냈을 때 웃음을 멈췄습니다."
+  regula_instiga_discordia_outcome.1001.owner_discovered:0 "\n\n두 사람은 이제 격렬한 라이벌이지만[owner.GetFirstName]은(는) 그날 아침 일찍 마구간을 떠나는 것이 목격되었습니다. [target.GetFirstNameNoTooltip]은 그 이후로 그들에게 말을 걸지 않았습니다."
+  regula_instiga_discordia_outcome.1001.owner_secret:0 "\n\n둘은 이제 치열한 라이벌이 되었으며 [owner.GetFirstNamePossessive]에게 당신의 관련성은 아직 알려지지 않았습니다."
+  regula_instiga_discordia_outcome.1001.a:0 "훌륭하군."
+
+  # Failure Events
+  regula_instiga_discordia_outcome.2001.t:0 "실패"
+  regula_instiga_discordia_outcome.2001.opening:0 "[owner.GetFirstNamePossessive]계획은 밀랍으로 봉인되고 [new_rival.GetNamePossessive]속옷에 분비되는 가려움증 가루로 순조롭게 시작되었습니다. 불행히도 [new_rival.GetFirstNameNoTooltip]이(가) [new_rival.GetHerHis]옷을 다 입기도 전에 밀랍이 거의 즉시 부러졌습니다. [new_rival.GetSheHe]는 무엇보다 재미있어했고 그 대가로 [target.GetName]에게 장난을 돌려주기로 맹세했습니다.\n\n"
+  regula_instiga_discordia_outcome.2001.owner_discovered:0 "한 가지 긍정적인 점은[owner.GetFirstNamePossessive] involvement remains a secret. [target.GetFirstNameNoTooltip] has no idea who tried to frame them, or why."
+  regula_instiga_discordia_outcome.2001.owner_secret:0 "Word of [owner.GetFirstName]의 관여가 비밀로 남아 있다는 것입니다. [target.GetFirstNameNoTooltip]은(는) 누가 그들을 누명을 씌우려고 했는지, 왜 그랬는지 모릅니다."
+  regula_instiga_discordia_outcome.2001.a:0 "실망스럽군."

@@ -1,0 +1,12 @@
+﻿l_korean:
+
+game_concept_arousal:0 "흥분"
+game_concept_arousal_desc:0 "$game_concept_arousal$ 은 캐릭터의 성욕과 성적 행복을 측정합니다. 캐릭터는 시간이 지남에 따라 흥분을 얻고, 육체적 쾌락을 받으면 흥분을 잃습니다.\n\n충분한 흥분을 얻은 캐릭터는 [arousal_level|E]도 얻게 되어 흥분을 감소시킬 때까지 지속되는 다양한 부정적인 효과를 일으킵니다."
+game_concept_arousal_level:0 "흥분 수준"
+game_concept_arousal_levels:0 "흥분 수준"
+game_concept_arousal_level_desc:0 "캐릭터가 100[arousal|E] 을 축적할 때마다 흥분 레벨도 얻습니다. 흥분 수준은 0에서 3까지이며 각 수준은 점점 더 부정적인 영향을 미칩니다."
+game_concept_aroused:0 "흥분한"
+game_concept_arousal_i:0 "@arousal_icon!"
+game_concept_arousal_gain_i:0 "@arousal_gain_icon!"
+game_concept_arousal_loss_i:0 "@arousal_loss_icon!"
+game_concept_arousal_critical_i:0 "@arousal_critical_icon!"

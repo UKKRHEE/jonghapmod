@@ -1,0 +1,46 @@
+﻿l_korean:
+# War of Usurption
+  REGULA_CLAIM_VASSAL_COST:0 "매력적인 타이틀의 가치"
+  REGULA_CLAIM_VASSAL_CB_NAME:0 "[DEFENDER.GetShortUINamePossessive] 매혹된 가신의 약탈"
+  REGULA_CLAIM_VASSAL_CB_NAME_BASE:0 "[DEFENDER.GetShortUINamePossessive] 매혹된 가신의 약탈"
+  REGULA_CLAIM_VASSAL_WAR_NAME:1 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetPrefix]-[DEFENDER.GetPrimaryTitle.GetAdjective] 약탈 전쟁"  
+  REGULA_CLAIM_VASSAL_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective] [DEFENDER.GetPrimaryTitle.GetName]에게 맹세한 매혹된 가신"
+  
+  regula_claim_vassal_war:0 "강탈"
+  regula_claim_vassal_war_victory_desc_attacker:0 "[defender.GetShortUINamePossessive|U]의 가신중 모든 매혹된 가신들이 당신에게 충성을 맹세합니다."
+  regula_claim_vassal_war_victory_desc_defender:0 "당신에게 매혹된 가신들은 [attacker.GetShortUIName] [vassal|E]에게 충성을 맹세합니다."
+  regula_claim_vassal_war_victory_desc:0 "[attacker.GetShortUIName]이(가) [defender.GetShortUIName|U]에 대한 충성의 맹세를 깹니다."
+  regula_claim_vassal_war_white_peace_desc_defender:0 "[attacker.GetShortUIName]이(가) 매혹으로 홀린 가신은 여전히 당신을 섬기고 있습니다."
+  regula_claim_vassal_war_white_peace_desc:0 "defender.GetShortUIName|U]는 당신이 매혹으로 홀린 가신을 유지합니다."
+  regula_claim_vassal_war_defeat_desc_attacker:0 "[defender.GetShortUIName|U]는 당신이 매혹으로 홀린 가신을 유지합니다. 당신에 대한 모든 [factions|E]는 [discontent|E]을(를) 증가시킵니다.."
+  regula_claim_vassal_war_invalidated_message:0 "[war.GetName]의 목표는 더 이상 달성할 수 없습니다."
+
+# Domination War
+  REGULA_DOMINATION_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetPrefix] - [DEFENDER.GetPrimaryTitle.GetAdjective] 지배 전쟁"
+  REGULA_DOMINATION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective] [DEFENDER.GetPrimaryTitle.GetName]"
+  REGULA_DOMINATION_CB_NAME:0 "[DEFENDER.GetShortUIName]의 지배"
+  REGULA_DOMINATION_SPECIFIC_NAME:0 "[DEFENDER.GetShortUIName]지배"
+  CB_VASSALIZING_DUKE:0 "공국 가신화"
+  regula_dominate_female_ruler_war:0 "지배"
+  msg_regula_dominate_female_ruler_war_invalidated_message:0 "지배 전쟁은 더 이상 유효하지 않습니다."
+  regula_dominate_female_ruler_war_victory_desc_attacker:0 "[defender.GetShortUIName]이(가) 당신의 페렉스가 됩니다."
+  regula_dominate_female_ruler_war_victory_desc_defender:0 "당신은 [attacker.GetShortUINamePossessive]의 페렉스가 됩니다."
+  regula_dominate_female_ruler_war_victory_desc:0 "[defender.GetShortUIName]이(가) [attacker.GetShortUINamePossessive]의 페렉스가 됩니다."
+  regula_dominate_female_ruler_war_white_peace_desc:0 "[defender.GetShortUIName]이(가) 자유의지로 남습니다."
+  regula_dominate_female_ruler_war_white_peace_desc_defender:0 "당신은 독립을 유지합니다."
+  regula_dominate_female_ruler_war_defeat_desc_attacker:0 "[defender.GetShortUIName]은(는) 자유 의지를 유지합니다. 당신에 대한 모든 [factions|E] 은 [discontent|E]를  증가시킵니다.."
+  
+
+# Servitude Faction War
+  REGULA_SERVITUDE_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] [DEFENDER.GetPrimaryTitle.GetNameNoTier]에 대한 예속 전쟁"
+  regula_servitude_faction_war:0 "예속(노예집단)세력"
+  regula_servitude_war_victory_desc_local_player_defender:0 "당신의 반항적인 가신들은 모두 마지스터에게 충성을 맹세합니다. 이건 뭔가 끔찍하게 잘못되었습니다."
+  regula_servitude_war_victory_desc_local_player_attacker:0 "[defender.GetShortUIName]의 모든 반항적인 가신들은 마지스터에게 충성을 맹세합니다."
+  regula_servitude_war_victory_desc:0 "[defender.GetShortUIName]의 모든 반항적인 가신들은 마지스터에게 충성을 맹세합니다."
+  regula_servitude_war_white_peace_defender_desc:0 "반란을 일으킨 가신들은 마지스터에게서 단절된 채로 남아 있습니다."
+  regula_servitude_war_white_peace_attacker_desc:0 "반란을 일으킨 가신들은 마지스터에게서 단절된 채로 남아 있습니다."
+  regula_servitude_war_white_peace_desc:0 "반란을 일으킨 가신들은 마지스터에게서 단절된 채로 남아 있습니다."
+  regula_servitude_war_white_peace_end_desc:0 "[regula_servitude_faction|E]은 해체되었으며 그 구성원은 [SCOPE.ScriptValue('faction_war_white_peace_cooldown')|0] 년 동안 파벌에 가입할 수 없습니다."
+  regula_servitude_war_defeat_attacker_desc:0 "[defender.GetShortUIName|U]모든 반항적인 가신을 가두고 각각에 대해[revoke_title_reason|E]을 얻습니다."
+  regula_servitude_war_player_defeat_desc:0 "[defender.GetShortUIName|U]는 반항적인 가신을 모두 가두고 각 반군에 대해 [revoke_title_reason|E]을 얻습니다."
+  regula_servitude_war_defeat_end_desc:0 "The [regula_servitude_faction|E]은 해산되었으며 그 구성원은 [SCOPE.ScriptValue('faction_war_defeat_cooldown')|0] 년 동안 파벌에 가입할 수 없습니다."

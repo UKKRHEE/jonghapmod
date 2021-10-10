@@ -1675,6 +1675,9 @@ seduce_outcome.2307 = {
 				end_scheme = yes
 			}
 		}
+		scope:scheme = {
+			end_scheme = yes
+		}
 	}
 }
 

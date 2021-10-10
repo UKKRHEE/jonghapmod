@@ -1,0 +1,1017 @@
+
+genital = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = pussy
+	}
+
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 5 }
+		localization_key = cock
+	}
+
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 3 }
+		localization_key = dick
+	}
+
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 3 }
+		localization_key = penis
+	}
+
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 1 }
+		localization_key = meat_stick
+	}
+
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = member
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 20 }
+		localization_key = genital_base
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 50 }
+		localization_key = genital_variable
+	}
+	text = {
+		trigger = { is_female = yes }
+		weight_multiplier = { base = 50 }
+		localization_key = genital_variable
+	}
+}
+
+genital_base = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 5 }
+		localization_key = pussy
+	}
+	text = {
+		trigger = { is_female = yes }
+		weight_multiplier = { base = 1 }
+		localization_key = vagina
+	}
+	text = {
+		trigger = { is_female = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = hole
+	}
+	text = {
+		trigger = { is_female = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = orifice
+	}
+	text = {
+		trigger = { is_female = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = cunt
+	}
+	text = {
+		trigger = { is_female = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = snatch
+	}
+	text = {
+		trigger = { is_female = yes }
+		weight_multiplier = { base = 1 }
+		localization_key = slit
+	}
+
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 5 }
+		localization_key = cock
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 3 }
+		localization_key = dick
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 3 }
+		localization_key = penis
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 0 }
+		localization_key = meat_stick
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 0 }
+		localization_key = pork_dagger
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = member
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 1 }
+		localization_key = manhood
+	}
+}
+
+genital_adj = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { 
+			has_trait = virgin
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = unspoiled
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+			has_trait = virgin
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = maiden
+	}
+	text = {
+		trigger = { 
+			has_trait = virgin
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = virginal
+	}
+	text = {
+		trigger = { 
+			has_trait = virgin
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = virgin
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+			age < 30
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = little
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = little
+	}
+	text = {
+		trigger = { 
+			has_trait = virgin
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = unused
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+			age < 40
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = tight
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = tight
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+			age < 50
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = fresh
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+			age < 35
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = young
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+			age < 25
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = young
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = puffy
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 4 }
+		localization_key = wet
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = clean
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = glistering
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = enticing
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = soaking
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = nice
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = warm
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = hot
+	}
+	text = {
+		trigger = { 
+			is_female = yes 
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = stretched
+	}
+
+	text = {
+		trigger = { 
+			is_female = no 
+			OR = {
+				has_trait = dick_small_2
+				has_trait = dick_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = tiny
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			OR = {
+				has_trait = dick_small_1
+				has_trait = dick_small_2
+				has_trait = dick_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = small
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			NOR = {
+				has_trait = dick_big_1
+				has_trait = dick_big_2
+				has_trait = dick_big_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = small
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			NOR = {
+				has_trait = dick_small_1
+				has_trait = dick_small_2
+				has_trait = dick_small_3
+			}
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = big
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			OR = {
+				has_trait = dick_big_1
+				has_trait = dick_big_2
+				has_trait = dick_big_3
+			}
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = big
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			NOR = {
+				has_trait = dick_small_1
+				has_trait = dick_small_2
+				has_trait = dick_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = large
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			OR = {
+				has_trait = dick_big_1
+				has_trait = dick_big_2
+				has_trait = dick_big_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = large
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			NOR = {
+				has_trait = dick_small_1
+				has_trait = dick_small_2
+				has_trait = dick_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = thick
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			OR = {
+				has_trait = dick_big_1
+				has_trait = dick_big_2
+				has_trait = dick_big_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = thick
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			NOR = {
+				has_trait = dick_small_1
+				has_trait = dick_small_2
+				has_trait = dick_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = long
+	}
+	text = {
+		trigger = { 
+			is_female = no 
+			OR = {
+				has_trait = dick_big_1
+				has_trait = dick_big_2
+				has_trait = dick_big_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = long
+	}
+
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = throbbing
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 2 }
+		localization_key = strong
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 1 }
+		localization_key = horny
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 1 }
+		localization_key = noble
+	}
+	text = {
+		trigger = { is_male = yes }
+		weight_multiplier = { base = 1 }
+		localization_key = upright
+	}
+}
+
+body = {
+	type = character
+	random_valid = yes
+
+	text = {
+		weight_multiplier = { base = 8 }
+		localization_key = body_variable
+	}
+	text = {
+		weight_multiplier = { base = 3 }
+		localization_key = body
+	}
+	text = {
+		weight_multiplier = { base = 0 }
+		localization_key = figure
+	}
+	text = {
+		weight_multiplier = { base = 1 }
+		localization_key = frame
+	}
+	text = {
+		weight_multiplier = { base = 0 }
+		localization_key = form
+	}
+}
+
+body_base = {
+	type = character
+	random_valid = yes
+
+	text = {
+		weight_multiplier = { base = 3 }
+		localization_key = body
+	}
+	text = {
+		weight_multiplier = { base = 1 }
+		localization_key = figure
+	}
+	text = {
+		weight_multiplier = { base = 2 }
+		localization_key = frame
+	}
+	text = {
+		weight_multiplier = { base = 1 }
+		localization_key = form
+	}
+}
+
+body_adj = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { 
+			has_trait = dwarf
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = little
+	}
+	text = {
+		trigger = { 
+			has_trait = dwarf
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = small
+	}
+	text = {
+		trigger = { 
+			has_trait = dwarf
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = short
+	}
+	text = {
+		trigger = { 
+			has_trait = dwarf
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = tiny
+	}
+	text = {
+		trigger = { 
+			has_trait = giant
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = tall
+	}
+	text = {
+		trigger = { 
+			current_weight > 50
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = large
+	}
+	text = {
+		trigger = { 
+			current_weight > 50
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = big
+	}
+	text = {
+		trigger = { 
+			current_weight > 100
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = wide
+	}
+	text = {
+		trigger = { 
+			current_weight > 100
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = fat
+	}
+	text = {
+		trigger = { 
+			current_weight > 100
+		}
+		weight_multiplier = { base = 4 }
+		localization_key = massive
+	}
+	text = {
+		trigger = { 
+			current_weight < 0
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = sleek
+	}
+	text = {
+		trigger = { 
+			current_weight < 10
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = slim
+	}
+	text = {
+		trigger = { 
+			current_weight < 0
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = thin
+	}
+	text = {
+		trigger = { 
+			current_weight < 20
+			is_female = yes
+		}
+		weight_multiplier = { base = 4 }
+		localization_key = petite
+	}
+	text = {
+		trigger = { 
+			current_weight > -20
+			is_female = yes
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = curved
+	}
+	text = {
+		trigger = { 
+			prowess > 8
+			current_weight < 50
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = well_defined
+	}
+	text = {
+		trigger = { 
+			prowess > 10
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = well_formed
+	}
+	text = {
+		trigger = { 
+			prowess > 8
+			current_weight < 50
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = toned
+	}
+	text = {
+		trigger = { 
+			prowess > 12
+			current_weight < 50
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = muscular
+	}
+	text = {
+		trigger = { 
+			has_trait = beauty_good
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = pretty
+	}
+	text = {
+		trigger = { 
+			has_trait = beauty_good
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = beautiful
+	}
+	text = {
+		trigger = { 
+			has_trait = beauty_bad
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = malformed
+	}
+	text = {
+		trigger = { 
+			has_trait = beauty_bad
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = misshappen
+	}
+	text = {
+		trigger = { 
+			age < 20
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = teenage
+	}
+	text = {
+		trigger = { 
+			age < 30
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = youthful
+	}
+	text = {
+		trigger = { 
+			age < 40
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = young
+	}
+	text = {
+		trigger = { 
+			age < 30
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = young
+	}
+	text = {
+		trigger = { 
+			age > 50
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = old
+	}
+	text = {
+		trigger = { 
+			age > 60
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = old
+	}
+	text = {
+		trigger = { 
+			age > 60
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = wrinkled
+	}
+	text = {
+		trigger = { 
+			age > 40
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = mature
+	}
+}
+
+
+breast = {
+	type = character
+	random_valid = yes
+
+	text = {
+		weight_multiplier = { base = 12 }
+		localization_key = breast_variable
+	}
+	text = {
+		weight_multiplier = { base = 1 }
+		localization_key = chest
+	}
+	text = {
+		trigger = { 
+			is_female = yes
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = breasts
+	}
+	text = {
+		trigger = { 
+			is_female = yes
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = bosom
+	}
+	text = {
+		trigger = { 
+			is_female = yes
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = tits
+	}
+}
+
+breast_base = {
+	type = character
+	random_valid = yes
+
+	text = {
+		weight_multiplier = { base = 2 }
+		localization_key = chest
+	}
+	text = {
+		trigger = { 
+			is_female = yes
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = breasts
+	}
+	text = {
+		trigger = { 
+			is_female = yes
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = bosom
+	}
+	text = {
+		trigger = { 
+			is_female = yes
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = tits
+	}
+}
+
+breast_adj = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { 
+			OR = {
+				has_trait = tits_small_1
+				has_trait = tits_small_2
+				has_trait = tits_small_3
+			}
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = little
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_big_1
+				has_trait = tits_big_2
+				has_trait = tits_big_3
+			}
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = little
+	}
+	text = {
+		trigger = { 
+			OR = {
+				has_trait = tits_small_1
+				has_trait = tits_small_2
+				has_trait = tits_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = small
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_big_1
+				has_trait = tits_big_2
+				has_trait = tits_big_3
+			}
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = small
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_big_1
+				has_trait = tits_big_2
+				has_trait = tits_big_3
+			}
+		}
+		weight_multiplier = { base = 2 }
+		localization_key = perky
+	}
+	text = {
+		trigger = { 
+			has_trait = tits_small_3
+		}
+		weight_multiplier = { base = 5 }
+		localization_key = flat
+	}
+	text = {
+		trigger = { 
+			has_trait = tits_small_3
+		}
+		weight_multiplier = { base = 5 }
+		localization_key = tiny
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_big_1
+				has_trait = tits_big_2
+				has_trait = tits_big_3
+			}
+		}
+		weight_multiplier = { base = 1 }
+		localization_key = flat
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_small_1
+				has_trait = tits_small_2
+				has_trait = tits_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = large
+	}
+	text = {
+		trigger = { 
+			OR = {
+				has_trait = tits_big_1
+				has_trait = tits_big_2
+				has_trait = tits_big_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = large
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_small_1
+				has_trait = tits_small_2
+				has_trait = tits_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = big
+	}
+	text = {
+		trigger = { 
+			OR = {
+				has_trait = tits_big_1
+				has_trait = tits_big_2
+				has_trait = tits_big_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = big
+	}
+	text = {
+		trigger = { 
+			current_weight > 50
+			NOR = {
+				has_trait = tits_small_1
+				has_trait = tits_small_2
+				has_trait = tits_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = fat
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_small_2
+				has_trait = tits_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = round
+	}
+	text = {
+		trigger = { 
+			NOR = {
+				has_trait = tits_small_1
+				has_trait = tits_small_2
+				has_trait = tits_small_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = ample
+	}
+	text = {
+		trigger = { 
+			OR = {
+				has_trait = tits_big_2
+				has_trait = tits_big_3
+			}
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = massive
+	}
+	text = {
+		trigger = { 
+			age < 20
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = teenage
+	}
+	text = {
+		trigger = { 
+			age < 30
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = youthful
+	}
+	text = {
+		trigger = { 
+			age < 40
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = young
+	}
+	text = {
+		trigger = { 
+			age > 50
+		}
+		weight_multiplier = { base = 3 }
+		localization_key = sagging
+	}
+	text = {
+		weight_multiplier = { base = 2 }
+		localization_key = pretty
+	}
+	text = {
+		weight_multiplier = { base = 2 }
+		localization_key = beautiful
+	}
+	text = {
+		weight_multiplier = { base = 2 }
+		localization_key = warm
+	}
+}

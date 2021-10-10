@@ -1,0 +1,22 @@
+﻿l_korean: 
+
+ carnd_tenet_fertility_idols_name: "비옥함의 우상"
+ carnd_tenet_fertility_idols_desc: "우리의 신체적 자질은 [ROOT.Faith.FertilityGodNamePossessive] 신의 은총의 표시입니다. 그러므로 우리는 [ROOT.Faith.PantheonTerm]의 의로운 뜻을 신성하게 하기 위해 우리 가운데 가장 정력 있고 풍만하며 재능이 있는 사람을 바라보아야 합니다."
+
+ carnd_tenet_sacred_hermaphroditism_name: "신성한 자웅동체"
+ carnd_tenet_sacred_hermaphroditism_desc: "남자와 여자는 인류 하나의 본래 모습의 불완전한 반쪽입니다. 남성과 여성의 측면이 결합된 남성과 여성은 인간의 가장 신성한 존재입니다."
+ doctrine_parameter_carnd_futa_succession_enabled: "$carnd_futa_elective_succession_law$ 활성화 [succession_law|E]"
+ carnd_futa_succession_enabled_name: "$carnd_tenet_sacred_hermaphroditism_name$ [core_tenet|E]"
+
+ carnd_tenet_sacred_prostitution_name: "신성한 매춘"
+ carnd_tenet_sacred_prostitution_desc: "매일 밤 우리의 성스러운 창녀들은 고객과 의식적인 결혼을 합니다. 그 첫날밤의 행위에서 그들은 [ROOT.Faith.FertilityGodName] 의 영으로 가득 차서 육체적 결합에 반영된 신성한 사랑의 화신이 됩니다."
+ doctrine_parameter_carnd_piety_from_prostitution: "[prostitute|E]로 일하면 매월 [piety|E] 획득"
+
+ carnd_tenet_tantric_sex_name: "탄트라 섹스"
+ carnd_tenet_tantric_sex_desc: "섹스는 열정의 행위일 뿐만 아니라 깊은 영성과 힘의 의례입니다. 우리 몸을 숙달하고 성적인 기술을 완성함으로써 우리도 신의 본질로 물들 수 있습니다."
+ doctrine_parameter_carnd_tantric_sex_active: "섹스를 하면 [piety|E], [learning_lifestyle|E] [experience|E]및 임시 보너스 [health|E]이 부여됩니다."
+
+ carnd_tenet_youthful_rulership_name: "젊은 통치자"
+ carnd_tenet_youthful_rulership_desc: "권력은 일시적이고 창조는 항상 유동적입니다. 시대의 정신이 깃든 젊은 통치자만이 우리 백성을 인도하는 데 필요한 활력과 역동성을 가지고 있습니다."
+ doctrine_parameter_carnd_youthful_rulership_abdication_active: "40세 이상의 통치자는 #high $carnd_youthful_rulership_abdicate_decision$# 할 수 있습니다!"
+ doctrine_parameter_carnd_long_reign_penalty: "40세 이상의 통치자는#high $carnd_long_reign_penalty_modifier$ Opinion Penalty#가 쌓입니다!"

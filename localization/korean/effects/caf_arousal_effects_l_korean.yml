@@ -1,0 +1,19 @@
+﻿l_korean:
+I_GAINED_AROUSAL_EFFECT:0 "당신은 [arousal_gain_i]$VALUE|-0$ [arousal|E]을 얻었습니다."
+I_LOST_AROUSAL_EFFECT:0 "당신은 [arousal_loss_i]$VALUE|+0$ [arousal|E]을 잃었습니다"
+THEY_GAINED_AROUSAL_EFFECT:0 "[CHARACTER.GetShortUIName|U]가 [arousal_gain_i]$VALUE|V0$ [arousal|E]을 얻었습니다."
+THEY_LOST_AROUSAL_EFFECT:0 "[CHARACTER.GetShortUIName|U]가 [arousal_loss_i]$VALUE|V0$ [arousal|E]을 잃었습니다"
+GAINED_AROUSAL_EFFECT:0 "[arousal_gain_i]$VALUE|V0$ [arousal|E] 획득"
+LOST_AROUSAL_EFFECT:0 "[arousal_loss_i]$VALUE|V0$ [arousal|E] 상실"
+I_GAIN_AROUSAL_EFFECT:0 "[arousal_gain_i]$VALUE|-0$ [arousal|E] 획득"
+I_LOSE_AROUSAL_EFFECT:0 "[arousal_loss_i]$VALUE|+0$ [arousal|E] 상실"
+THEY_GAIN_AROUSAL_EFFECT:0 "[CHARACTER.GetShortUIName|U] 가 [arousal_gain_i]$VALUE|V0$ [arousal|E]획득"
+THEY_LOSE_AROUSAL_EFFECT:0 "[CHARACTER.GetShortUIName|U] 가 [arousal_loss_i]$VALUE|V0$ [arousal|E]상실"
+GAIN_AROUSAL_EFFECT:0 "[arousal_gain_i]$VALUE|V0$ [arousal|E] 획득"
+LOSE_AROUSAL_EFFECT:0 "[arousal_loss_i]$VALUE|V0$ [arousal|E] 상실 "
+
+I_GAINED_AROUSAL_CRITICAL_EFFECT:0 "[arousal_critical_i]$VALUE|-0$ [arousal|E] (critical)을 얻었습니다."
+GAINED_AROUSAL_CRITICAL_EFFECT:0 "[arousal_critical_i]$VALUE|-0$ [arousal|E] (critical) 획득"
+I_GAIN_AROUSAL_CRITICAL_EFFECT:0 "[arousal_critical_i]$VALUE|-0$ [arousal|E] (critical)을 얻었습니다"
+GAIN_AROUSAL_CRITICAL_EFFECT:0 "Gains [arousal_critical_i]$VALUE|V0$ [arousal|E] (critical) 획득"
+

@@ -1,0 +1,12 @@
+﻿l_korean:
+  regula_virus_outcome.t:0 "퍼슈나레 체인 종료."
+  regula_virus_outcome.desc:0 "[regula_patient_zero.GetNameRegnal]로 시작된 노예화의 사슬은 [last_patient.GetNameRegnal]의 변환으로 마감되었습니다. 총 #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! 새로운 컴페디테."
+
+  regula_virus_outcome_jail.t:0 "퍼슈나레 체인 종료."
+  regula_virus_outcome_jail.desc:0 "[regula_patient_zero.GetNameRegnal] 에서 시작된 노예화의 사슬은 [last_patient.GetNameRegnal]의 투옥으로 끝났습니다. 총 #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! 새로운 컴페디테."
+
+  regula_virus_outcome_story_jail.t:0 "퍼슈나레 체인 종료."
+  regula_virus_outcome_story_jail.desc:0 "[regula_patient_zero2.GetNameRegnal] 에서 시작된 노예화의 사슬은 [last_patient.GetNameRegnal]의 투옥으로 끝났습니다. 총 #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! 새로운 컴페디테."
+
+  regula_virus_outcome_invalid.t:0 "퍼슈나레 체인 종료."
+  regula_virus_outcome_invalid.desc:0 "[regula_patient_zero2.GetNameRegnal]으로 시작된 노예화의 사슬은 감염된 자의 죽음으로 조기에 종료되었습니다. 총 #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! 새로운 컴페디테."

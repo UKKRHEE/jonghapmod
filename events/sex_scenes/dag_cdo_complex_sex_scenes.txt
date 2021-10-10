@@ -232,9 +232,13 @@ dag_cdo_complex_sex_scene.0800 = {	#~Creampie
 	}
 	
 	theme = seduce_scheme
-	left_portrait = {
+	right_portrait = {
 		character = scope:carn_sex_target
-		animation = flirtation_left
+		animation = sex_doggy
+	}
+	left_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_doggy
 	}
 
 	immediate = {
