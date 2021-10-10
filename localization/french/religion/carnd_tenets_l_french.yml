@@ -1,0 +1,22 @@
+﻿l_french:
+
+carnd_tenet_fertility_idols_name:1 "Idoles de fertilité"
+carnd_tenet_fertility_idols_desc:1 "Nos attributs physiques sont la manifestation de la faveur [ROOT.Faith.FertilityGodNamePossessive]. C'est pourquoi nous devons nous tourner vers les plus virils, les plus voluptueuses et les plus doués d'entre nous pour déceler la juste volonté de [ROOT.Faith.PantheonTerm]."
+
+carnd_tenet_sacred_hermaphroditism_name:1 "Hermaphroditisme sacré"
+carnd_tenet_sacred_hermaphroditism_desc:1 "Hommes et femmes ne sont que des moitiés imparfaites de l'unité originelle de l'humanité. Ceux qui sont à la fois mâles et femelles, chez qui le masculin et le féminin sont unis, sont les plus sacrés des êtres humains."
+doctrine_parameter_carnd_futa_succession_enabled:1 "Permet la [succession_law|El] $carnd_futa_elective_succession_law$"
+carnd_futa_succession_enabled_name:1 "[core_tenet|E] de l'$carnd_tenet_sacred_hermaphroditism_name$"
+
+carnd_tenet_sacred_prostitution_name:1 "Prostitution Sacrée"
+carnd_tenet_sacred_prostitution_desc:1 "Chaque nuit, nos courtisanes sacrées se marient rituellement avec leurs clients. Dans l'acte de consommation, elles sont remplies de l'esprit de [ROOT.Faith.FertilityGodName], devenant ainsi des avatars de l'amour divin qui se reflète dans l'union physique."
+doctrine_parameter_carnd_piety_from_prostitution:1 "Travailler en tant que [prostitute|El] octroie de la [piety|El] mensuelle"
+
+carnd_tenet_tantric_sex_name:1 "Sexe Tantrique"
+carnd_tenet_tantric_sex_desc:1 "Le sexe n'est pas seulement un acte de passion, mais aussi un rituel d'une profonde spiritualité et de grande puissance. En maîtrisant notre corps et en perfectionnant nos aptitudes sexuelles, nous pouvons nous aussi être imprégnés de l'essence du divin."
+doctrine_parameter_carnd_tantric_sex_active:1 "Avoir des relations sexuelles octroie de la [piety|El], de l'[experience|El] en [learning_lifestyle|El], ainsi qu'un bonus temporaire de [health|El]"
+
+carnd_tenet_youthful_rulership_name:1 "Jeunesse dirigeante"
+carnd_tenet_youthful_rulership_desc:1 "Le pouvoir est transitoire et la création est toujours en mouvement. Seuls les jeunes dirigeants, imprégnés des tendances de l'époque, possèdent la vigueur et le dynamisme nécessaires pour guider notre peuple."
+doctrine_parameter_carnd_youthful_rulership_abdication_active:1 "Les dirigeants âgés de 40 ans ou plus peuvent #high $carnd_youthful_rulership_abdicate_decision$#!"
+doctrine_parameter_carnd_long_reign_penalty:1 "Les dirigeants âgés de 40 ans ou plus reçoivent une #high pénalité d'opinion#! cumulable due à l'#high $carnd_long_reign_penalty_modifier$#! "

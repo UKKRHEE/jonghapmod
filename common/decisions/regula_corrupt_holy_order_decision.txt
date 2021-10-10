@@ -1,0 +1,78 @@
+﻿regula_corrupt_holy_order_decision = {
+   	picture = "gfx/interface/illustrations/decisions/regula_corrupt_holy_order_decision.dds"
+    major = yes
+	title = regula_corrupt_holy_order_decision.t
+	desc = regula_corrupt_holy_order_decision_desc
+	selection_tooltip = regula_corrupt_holy_order_decision_tooltip
+
+
+	ai_check_interval = 0 #AI won't consider.
+
+	is_shown = {
+		is_ai = no
+		is_ruler = yes
+		has_trait = magister_trait_group
+		age >= 16
+		OR = {
+			any_held_title = {
+				is_under_holy_order_lease = yes
+				barony_is_valid_for_holy_order_lease_cancellation_trigger = yes
+				lessee_title.holder = {
+					save_temporary_scope_as = infidel_grandmaster
+					NOT = { faith = global_var:magister_character.faith }
+					faith = {
+						any_faith_holy_order = {
+							leader = scope:infidel_grandmaster
+							save_temporary_scope_as = infidel_holy_order
+						}
+					}
+				}
+			}
+			any_vassal_or_below = {
+				has_trait = devoted_trait_group
+				any_held_title = {
+					is_under_holy_order_lease = yes
+					barony_is_valid_for_holy_order_lease_cancellation_trigger = yes
+					lessee_title.holder = {
+						save_temporary_scope_as = infidel_grandmaster
+						NOT = { faith = global_var:magister_character.faith }
+						faith = {
+							any_faith_holy_order = {
+								leader = scope:infidel_grandmaster
+								save_temporary_scope_as = infidel_holy_order
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = magister_trait_6_required_trigger
+			has_trait_rank = {
+				trait = magister_trait_group 
+				rank >= 6
+			}
+		}
+	}
+
+	cost = {
+		piety = 2000
+	}
+
+	effect = {
+		custom_tooltip = "regula_corrupt_holy_order_decision_tooltip_effect"
+		trigger_event = { 
+			id = regula_corrupt_holy_order_event.0001 
+		} 
+	}
+
+	confirm_text = regula_corrupt_holy_order_decision_confirm.a
+
+	ai_will_do = {
+		base = 0
+	}
+
+}

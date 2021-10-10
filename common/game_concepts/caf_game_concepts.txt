@@ -1,0 +1,12 @@
+﻿
+arousal = {
+	alias = { arousal_i arousal_gain_i arousal_loss_i arousal_critical_i }
+	texture = "gfx/interface/icons/arousal/icon_arousal.dds"
+}
+
+arousal_level = {
+	alias = { aroused arousal_levels }
+	texture = "gfx/interface/icons/arousal/icon_arousal_level.dds"
+	framesize = { 70 70 }
+	frame = 4
+}

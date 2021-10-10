@@ -1,0 +1,6 @@
+﻿regula_stress_loss_sex = {
+    first_valid = {
+        regula_stress_loss_sex_event.0002 # Mulsa
+        regula_stress_loss_sex_event.0001 # Paelex
+    }
+}

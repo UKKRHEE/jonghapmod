@@ -1,0 +1,49 @@
+﻿l_english:
+  regula_paelex_event.1000.t:0 "Immolating Bliss"
+  regula_paelex_event.1000.desc:0 "A whisper on the wind is all that it takes to bring your latest addition to the ritual site. You thrust into her thoughts without preamble, dropping her to her knees and flooding her body with arousal.\n\nLeisurely, you hunt for what remains of her resistance. Wherever you find a spark of anger or disgust you smother it in bliss, and wherever you find obedience you kindle it with pure lust. Panting softly, locked in a continual orgasm, [recipient.GetTitledFirstName] soul soon belongs to you. Consuming the last vestiges of her will triggers her hardest orgasm yet, flooding the Godless Shrine with energy.\n\nWild and chaotic, you have only a few moments before it dissipates. What will you do?"
+
+  regula_paelex_event.1000.b:0 "Push it into her body and strengthen her form"  
+  regula_paelex_event.1000.a:0 "Drive it into her head and quicken her thoughts"
+  regula_paelex_event.1000.c:0 "Mix it with your seed and breath life into her womb"
+  regula_paelex_event.1000.d:0 "Gather what you can and keep the energy for yourself"
+
+  regula_paelex_event.1000.b.tt:0 "Attempt to improve [recipient.GetFirstNamePossessiveNoTooltip] strength. May heal wounds and diseases, or add beneficial physical traits like Hale."  
+  regula_paelex_event.1000.a.tt:0 "Attempt to improve [recipient.GetFirstNamePossessiveNoTooltip] mind. May improve her education, remove negative mental traits, or add beneficial mental traits like Quick."
+  regula_paelex_event.1000.c.tt:0 "Attempt to improve [recipient.GetFirstNamePossessiveNoTooltip] beauty and fertility. May impregnate her, or add beneficial traits like Comely."
+
+
+
+  regula_paelex_event.1001.t:0 "Pieces"
+  regula_paelex_event.1001.desc:0 "You hold [recipient.GetTitledFirstName] at the edge of orgasm for hours, calmly combing through her thoughts and marking those that keen with submission and obedience. Once her every facet has been exposed you mold your will into a hammer, striking at the foundations of her mind. She shatters into a thousand pieces. The fragments which still resist drown in the lust that fills her, while those marked with your favour bind together to form a new psyche. One that worships you as a god.\n\nWith a bestial scream she finally cums, filling the air with raw energy. What will you do with her first offering?"
+
+  regula_paelex_event.1002.t:0 "Monumental"
+  regula_paelex_event.1002.desc:0 "[recipient.GetTitledFirstNamePossessive] mind has built a mighty fortress around her will, and while your magic has carved deep gouges in the castle walls she still resists.\n\nSlowly, methodically, you strip every block from this fortress, until nothing remains. From the stone you then build a colossus in your own image, [recipient.GetTitledFirstNamePossessive] will in the palm of your hand.\n\nIn she Godless Shrine [recipient.GetFirstName] kneels, all resistance gone from her eyes. As you take her the hall fills with wild energy, another soul sworn into your service. What will you do with the power?"
+
+  regula_paelex_event.1009.t:0 "To the Victor Go the Spoils"
+  regula_paelex_event.1009.regular_intro:0 "[defender.GetTitledFirstName] may have been stripped of her weapons and guards, but her rage remains.\n\n"Have you come then to gloat? Or simply to force yourself upon me before exiling me to some seraglio?" She demands.\n\n"  # Come to gloat? Defeated armies, but set the stage for rebellion.
+  regula_paelex_event.1009.devoted_intro:0 "[defender.GetTitledFirstName] is nominally under house arrest, but as you enter you see that she has already prepared for your arrival.\n\n"Congratulations Master, my body finally belongs to you!"\n\n" # Did I do well?  Did my struggle please you?
+  regula_paelex_event.1009.1:0 "You bark out a laugh. "I did not wage war for your body, my dear. We fought for all that you possess: the bounty of your demesne, the fealty of your subjects, and strength of your mind. You shall become one of my most ardent supporters, singing my praises in public and private."\n\nHer response dies on her lips, as you let her feel your hooks in her mind. "And when next I war to expand my harem? You will not be lounging in some boudoir. You will be on the field, leading my van." # Next time I set out to expand my harem you'll be leading the van.
+  regula_paelex_event.1009.2:0 "You smile. "There will be time enough for that, fear not. But first you will go to those that love you, and convince them to serve me as you do. For you belong to me now, and we have much to accomplish."\n\nBefore she can respond you unleash your power, taking control of her body." # Skills will be an asset.
+  regula_paelex_event.1009.3:0 "You smile, not unkindly. "Fear not, for I have the most beautiful cage planned for you. Your life as a free woman is over, and your life as my slave begins and ends on your back.\n\nYou fill her body with your power, increasing her libido far beyond mortal limits. She begins to play with herself, giggling as all her cares fade." # Role begins and ends on your back
+  regula_paelex_event.1009.4:0 "You try not to smile, lest they see your scorn. "Your have accomplished little and less as a free woman, but fear not. I take from not only these troubles but your cares as well.\n\nYou flood her body with your power, igniting within her a lust that will never fade. With a shriek her mind shatters, leaving behind a giggling, gushing, simpleton.\n\nAs you watch [defender.GetTitledFirstName] play with herself you wonder. Could tyrian purple change the colour of her hair?" # Bimboize?
+  regula_paelex_event.1009.fallback:0 "" # You're no leader.
+  regula_paelex_event.1009.a:0 "Escort her downstairs"  
+
+  regula_paelex_event.1010.t:0 "Forged Anew"
+  regula_paelex_event.1010.desc:0 "It took hours for [defender.GetFirstName] to inform her vassals of their new role under your dominion, and hours more for her to slowly brainwashed her kin.\n\nBut, it was time well spent. Any resistance she might have had is long since gone, and you feel only relief as you strip away her last thoughts of independence. You have taken from [defender.GetFirstNameNoTooltip] all that she once held dear, and into the hollow that remains pour in your will.\n\nAs the air fills with the now-familiar raw energy you put her final possession to use."
+
+
+  regula_paelex_event.2000.t:0 "A Worthy Bride"
+  regula_paelex_event.2000.desc:0 "With a deft hand you subvert your wife's memories, weaving together a lifelong need for a master that she might serve. You make no effort to cover your tracks, but instead link every memory of you to feelings of awe and submission. The knowledge that you have altered her to serve you better is now her greatest joy.\n\nHer lust for dominance you keep, weaving it into the feeling of a breast in her hand, the subtle taste of her fluids in a woman's mouth. In the days to come [recipient.GetTitledFirstName] will have a very different view of your other playmates.\n\nPulling back from her thoughts you see that your work has filled the air with raw energy. What will you do with it?"
+
+  regula_make_paelex_outcome_small_boost.t:0 "Devoted transformed"
+	regula_make_paelex_outcome_small_boost.desc:0 "The ritual slightly improved your new spouse."
+  regula_make_paelex_outcome_domina_small_boost.desc:0 "The ritual slightly improved your wife's capabilities."
+
+  regula_make_paelex_outcome_medium_boost.t:0 "Devoted transformed"
+	regula_make_paelex_outcome_medium_boost.desc:0 "The ritual moderately improved your new spouse."
+  regula_make_paelex_outcome_domina_medium_boost.desc:0 "The ritual moderately improved your wife's capabilities."
+
+  regula_make_paelex_outcome_large_boost.t:0 "Devoted transformed"
+	regula_make_paelex_outcome_large_boost.desc:0 "The ritual completely transformed your new spouse."
+	regula_make_paelex_outcome_domina_large_boost.desc:0 "The ritual completely transformed your wife, in more ways than one."

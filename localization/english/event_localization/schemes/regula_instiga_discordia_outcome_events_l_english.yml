@@ -1,0 +1,14 @@
+﻿l_english:
+  # Success Events ## I heard a rumour.
+  regula_instiga_discordia_outcome.1001.t:0 "Success"
+  regula_instiga_discordia_outcome.1001.opening:0 "It took weeks of planning and the work of a skilled alchemist, but [owner.GetFirstName] managed to line [new_rival.GetNamePossessive] undergarments with itching powder and wax.\n\nAt [new_rival.GetSheHe] went riding today the wax melted, driving [new_rival.GetHerHim] into an scratching frenzy. The entire hunting party laughed as [new_rival.GetHerHis] hurridly disrobed, [target.GetFirstName] included. Though, [target.GetFirstNameNoTooltip] stopped laughing when a hound traced the powder to [target.GetHerHis] saddlebags."
+  regula_instiga_discordia_outcome.1001.owner_discovered:0 "\n\nWhile the two are now bitter rivals, [owner.GetFirstName] was spotted leaving the stables earlier that morning. [target.GetFirstNameNoTooltip] has not spoken to them since."
+  regula_instiga_discordia_outcome.1001.owner_secret:0 "\n\nThe two are now bitter rivals, while [owner.GetFirstNamePossessive] involvement remains unknown."
+  regula_instiga_discordia_outcome.1001.a:0 "Excellent."
+
+  # Failure Events
+  regula_instiga_discordia_outcome.2001.t:0 "Failed"
+  regula_instiga_discordia_outcome.2001.opening:0 "[owner.GetFirstNamePossessive] plan began well, with itching powder sealed in wax and secreted in [new_rival.GetNamePossessive] undergraments. Unfortunately the wax broke almost immediately, even before [new_rival.GetFirstNameNoTooltip] could finish putting [new_rival.GetHerHis] clothes on. [new_rival.GetSheHe] is more amused than anything, and has sworn to prank [target.GetName] in return.\n\n"
+  regula_instiga_discordia_outcome.2001.owner_discovered:0 "The one bright point is that [owner.GetFirstNamePossessive] involvement remains a secret. [target.GetFirstNameNoTooltip] has no idea who tried to frame them, or why."
+  regula_instiga_discordia_outcome.2001.owner_secret:0 "Word of [owner.GetFirstName] involvement has spread, but [target.GetFirstNameNoTooltip] is more confused than angry."
+  regula_instiga_discordia_outcome.2001.a:0 "Disappointing."

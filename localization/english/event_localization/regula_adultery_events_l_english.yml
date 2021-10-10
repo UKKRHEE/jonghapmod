@@ -1,0 +1,54 @@
+﻿l_english:
+  regula_adultery.0003.t:0 "A Common Concern"
+  regula_adultery.0003.desc:0 "[lover_spouse.Custom2('MyCharacterIntroduction', ROOT.Char)|U] is once again absent from your chambers as night falls. [lover_spouse.GetSheHe|U] has been distant lately — lost in thought and rarely seen at court. Is [lover_spouse.GetSheHe] simply busy? Or could [lover_spouse.GetSheHe] be warming someone else's bed...?\n\nWhen next you see her you dive into her thoughts, scanning for signs of falsehood. But your work was thorough, and she is as loyal as you made her."
+  regula_adultery.0003.a:0 "I may put these thoughts to rest."
+
+  # Male Lover
+  regula_adultery.1001.t:0 "A Cuckoo in the Nest"
+  regula_adultery.1001.desc:0 "It seems there is an interloper in your harem. [adultery_lover.GetTitledFirstName] has been fucking [lover_spouse.GetTitledFirstName] for weeks. He simply told her that it was your will, and the gullible $game_concept_compedita$ eagerly spread her legs.\n\nPart of you is impressed by [adultery_lover.GetFirstNamePossessive] audacity, but his actions were foolhardy at best. An idle question about [lover_spouse.GetFirstNamePossessive] recent whereabouts was enough to have her excitedly detail their entire relationship."
+  regula_adultery.1001.a:0 "He shall pay for this insult."
+  regula_adultery.1001.b:0 "She shall end this relationship, quietly."
+  regula_adultery.1001.c:0 "This is of no concern."
+
+  # Female Lover
+  regula_adultery.1010.t:0 "Lovers in a Dangerous Time"
+  regula_adultery.1010.desc:0 "A cursory scan of [lover_spouse.GetTitledFirstName] one day reveals that she has taken [adultery_lover.GetTitledFirstName] as her lover. While it would be trivial to force her to end the relationship, this problem may well be an opportunity. A slight tweak in [lover_spouse.GetFirstNamePossessive] perspective would make her eager to not fuck [adultery_lover.GetFirstName], but enslave her as well. After all, what greater joy could there be than serving you with her lover at her side?"
+  regula_adultery.1010.a:0 "[lover_spouse.GetFirstName] will invite [adultery_lover.GetFirstName] for a special visit."
+  regula_adultery.1010.b:0 "Just instruct [lover_spouse.GetFirstName] to end the relationship."
+
+  # Magister charms
+  regula_adultery.1011.t:0 "Dazzled Beauty"
+  regula_adultery.1011.desc:0 "When [adultery_lover.GetTitledFirstName] next brings [lover_spouse.GetTitledFirstName] to her chambers she finds you already waiting on the bed. Her outrage turns quickly to shock as the room begins to dim with your power, then fear when [lover_spouse.GetFirstName] locks and bars the door.\n\nShe screams, of course, but [lover_spouse.GetFirstName] had quietly replaced the guards with those that could be trusted, and none come to her aid.  Before long [adultery_lover.GetFirstName] kneels before you, mind empty save for your whispers."
+  regula_adultery.1011.a:0 "Sample [adultery_lover.GetFirstNamePossessive] talents for yourself."
+  regula_adultery.1011.b:0 "Leave [lover_spouse.GetFirstName] to induct [adultery_lover.GetFirstName] into your harem."
+
+  # Paelex charms
+  regula_adultery.1012.t:0 "Spirit Open to Darkness"
+  regula_adultery.1012.desc:0 "You crash into [adultery_lover.GetTitledFirstNamePossessive] chambers to find her already naked, [lover_spouse.GetTitledFirstName] on the bed behind her.\n\n[adultery_lover.GetFirstNamePossessive] cry of outrage ends abruptly as her eyes lose focus and her jaw goes slack. You smile approvingly at your loyal $game_concept_compedita$, sorcery dancing over her fingertips."
+  regula_adultery.1012.a:0 "Disrobe and join the lovers."
+  regula_adultery.1012.b:0 "Leave them to enjoy each other's company."
+
+  # Male Fling
+  regula_adultery.2001.t:0 "A Lapse of Control"
+  regula_adultery.2001.desc:0 "Your creature [lover_spouse.GetTitledFirstName] is ruled as much by her lust as by your will. Unfortunately, it seems that her urges have been too strong as of late. \n\n[sex_partner.GetTitledFirstName] caught her masturbating in the stables. Worse, he then dropped his breeches and in her lust she leapt onto his cock.\n\nOnce her passions faded, [lover_spouse.GetFirstName] realized what she had done and came rushing to you to beg your forgiveness."
+  regula_adultery.2001.a:0 "He shall suffer for this."
+  regula_adultery.2001.b:0 "Let the matter rest, for now."
+  
+
+  # Female Fling
+  regula_adultery.2010.t:0 "Like a Moth to the Flame"
+  regula_adultery.2010.desc:0 "Your power burns within each of your $game_concept_compeditae$, and their simple presence is enough to beguile the unwary. [sex_partner.GetTitledFirstName] has learned this truth first-hand, as [lover_spouse.GetTitledFirstName] eagerly recounts. Having tasted your Compedita's sex, [sex_partner.GetFirstName] will be easy prey."
+  regula_adultery.2010.a:0 "[lover_spouse.GetFirstName] will draw [sex_partner.GetFirstName] in for another tryst."
+  regula_adultery.2010.b:0 "This is of no concern."
+
+  # Magister charms
+  regula_adultery.2011.t:0 "Burning Passion"
+  regula_adultery.2011.desc:0 "As you wait in the shadows, [lover_spouse.GetTitledFirstName] leads [sex_partner.GetTitledFirstName] to a quiet alcove. The two quickly embrace, [sex_partner.GetFirstName] flush with arousal. With a muttered incantation you activate the runes carved into the pillars around the alcove, binding [sex_partner.GetFirstNamePossessive] will.\n\nTask complete, you step forward."
+  regula_adultery.2011.a:0 "Give [sex_partner.GetFirstNameNoTooltip] a warm welcome."
+  regula_adultery.2011.b:0 "Leave [lover_spouse.GetFirstNameNoTooltip] to induct her new sister."
+
+  # Paelex charms
+  regula_adultery.2012.t:0 "Reflected Fire"
+  regula_adultery.2012.desc:0 "As you arrive at the secluded alcove you see that [lover_spouse.GetTitledFirstName] has already bound [sex_partner.GetTitledFirstNamePossessive] will. [lover_spouse.GetFirstName] smiles at your approach, [sex_partner.GetFirstName] eagerly lapping at her slit. "
+  regula_adultery.2012.a:0 "Disrobe and join them."
+  regula_adultery.2012.b:0 "Let [lover_spouse.GetFirstNameNoTooltip] enjoy her prize."

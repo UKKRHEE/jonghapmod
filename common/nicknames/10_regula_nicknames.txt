@@ -1,0 +1,7 @@
+﻿
+# Sanctifica Serva nicknames
+regula_nickname_avatar_diplomacy = {}
+regula_nickname_avatar_martial = {}
+regula_nickname_avatar_stewardship = {}
+regula_nickname_avatar_intrigue = {}
+regula_nickname_avatar_learning = {}

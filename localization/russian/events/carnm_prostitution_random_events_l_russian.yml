@@ -1,0 +1,10 @@
+﻿l_russian:
+
+ carnm_prostitution_random_events.0001.t: "Проституция: [ROOT.Char.GetWomanMan|U] из народа"
+ carnm_prostitution_random_events.0001.desc: "Все взгляды обращены на меня, пока я соблазнительно шагаю по городской площади. Мои испытуемые знают, что за достаточно монеты любой из них может провести ночь страсти со своим [ROOT.Char.GetTitleAsNameNoTooltip]. Или могли?\n\nПо правде говоря, я - недостижимая фантазия для большинства [ROOT.Char.Custom('AttractionWomanManMultiple')]. Будь то из-за моего социального положения или по королевским ставкам, которые я взимаю, мои клиенты в основном происходят из благородных домов и богатых торговых семей.\n\nБыть проституткой такой эксклюзивности имеет свои преимущества, но простые люди наверняка оценили бы этот жест, если бы я открыл им свои двери..."
+ carnm_prostitution_random_events.0001.a: "У [ROOT.Char.GetTitleAsNameNoTooltip] есть обязательства #EMP all#! [ROOT.Char.GetHerHis] подданых."
+ carnm_prostitution_random_events.0001.b: "Пусть они фантазируют о том, что они не могут иметь."
+
+ carnm_prostitution_random_events.0003.t: "Проституция: За закрытыми дверями"
+ carnm_prostitution_random_events.0003.desc: "При теплом свете свечей многие из моих клиентов рассказывают мне о своих проблемах. В конце концов, куртизанка должна быть не только хорошим любовником, но и хорошим компаньоном.\n\nВнимательно слушая [ROOT.Char.Custom ('AttractionWomanManMultiple')], которые приходят и уходят из моих спален, я успокаиваю их сердца и узнал несколько интересных вещей о [Discovery_secret_owner.Custom2('MyCharacterIntroductionNoComma', ROOT.Char) ]..."
+ carnm_prostitution_random_events.0003.a: "Эту информацию будет полезно знать."

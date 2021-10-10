@@ -1,0 +1,134 @@
+﻿### Castle Alcove
+regula_alcove = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_alcove.dds"
+		environment = "environment_event_corridor_day"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_day"
+	}
+}
+
+### Holy Order - Exterior Castle
+regula_holy_order = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_holy_order.dds"
+		environment = "environment_event_courtyard"
+		ambience = "event:/SFX/Events/Backgrounds/castle_courtyard_western"
+	}
+}
+
+### Holy Order - Castle Interior
+regula_holy_order_interior = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_holy_order_interior.dds"
+		environment = "environment_event_corridor_day"
+		ambience = "event:/SFX/Events/Backgrounds/castle_corridor_day"
+	}
+}
+
+
+### House arrest chamber
+regula_house_arrest = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_house_arrest.dds"
+		environment = "environment_event_bedchamber"
+		ambience = "event:/SFX/Events/Backgrounds/office_workplace"
+	}
+}
+
+### Paelex ritual site
+godless_shrine = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/godless_shrine.dds"
+		environment = "environment_event_corridor_day"
+		ambience = "event:/SFX/Events/Backgrounds/temple_christian" 
+	}
+}
+
+### Sanctifica Serva ritual site
+
+regula_ritual_site = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_ritual_site.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/temple_pagan"
+	}
+}
+
+### Sanctifica serva goddesses
+
+regula_goddess_diplomacy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_goddess_diplomacy.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic" 
+	}
+}
+
+regula_goddess_martial = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_goddess_martial.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic" 
+	}
+}
+
+regula_goddess_stewardship = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_goddess_stewardship.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic" 
+	}
+}
+
+regula_goddess_intrigue = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_goddess_intrigue.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic" 
+	}
+}
+
+regula_goddess_learning = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_goddess_learning.dds"
+		environment = "environment_event_corridor"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic" 
+	}
+}
+
+### Bedchamber at night.
+regula_bedchamber = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_bedchamber_threshold.dds"
+		environment = "environment_event_bedchamber"
+		ambience = "event:/SFX/Events/Backgrounds/office_workplace"
+	}
+}
+
+### Orgy main room.
+regula_orgy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_orgy.dds"
+		environment = "environment_event_bedchamber"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic" 
+	}
+}
+
+### Stables
+regula_stables = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_stables.dds"
+		environment = "environment_event_gallows"
+		ambience = "event:/SFX/Events/Backgrounds/gallows_execution_platform"
+	}
+}
+
+### Fancy prison, for deviant actions.
+regula_cell = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/regula_cell.dds"
+		environment = "environment_event_bedchamber"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic" 
+	}
+}
+

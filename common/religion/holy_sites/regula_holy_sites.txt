@@ -1,0 +1,132 @@
+﻿### Regula Magistri Holy Sites
+#Default/Mediterranean
+reg_jerusalem = {
+	county = c_jerusalem
+	is_active = no
+	
+	flag = holy_site_regula_virus_flag
+
+	character_modifier = {
+		name = holy_site_reg_jerusalem_effect_name
+		vassal_tax_mult = 0.2
+	}
+}
+
+reg_lesbos = {
+	county = c_lesbos
+	barony = b_mytilene
+	is_active = no
+	
+	flag = holy_site_reg_offspring_flag
+
+	character_modifier = {
+		name = holy_site_lesbos_effect_name
+		prowess = 4
+		health = 0.25
+	}
+}
+
+reg_alexandria = { ### Update - add lactation events?
+	county = c_alexandria
+	is_active = no
+
+	flag = regula_abice_maritus_active
+
+	character_modifier = {
+		name = holy_site_reg_alexandria_effect_name
+		monthly_lifestyle_xp_gain_mult = 0.1
+		learning_per_piety_level = 2
+	}
+}
+
+reg_carthage = {
+	county = c_tunis
+	is_active = no
+
+	flag = holy_site_reg_sanctifica_serva_flag
+
+	character_modifier = {
+		name = holy_site_reg_carthage_effect_name
+		monthly_piety_gain_per_knight_mult = 0.02
+		levy_size = 0.1
+	}
+}
+
+reg_brescia = {
+	county = c_brescia
+	is_active = no
+
+	flag = holy_site_reg_mulsa_fascinare_flag
+
+	character_modifier = {
+		name = holy_site_reg_brescia_effect_name
+		intrigue_per_piety_level = 2
+		development_growth_factor = 0.05
+	}
+}
+
+# Nordic
+reg_rome = {
+	county = c_roma
+	is_active = no
+	
+	flag = holy_site_regula_virus_flag
+
+	character_modifier = {
+		name = holy_site_reg_rome_effect_name
+		attacker_advantage = 10
+		tolerance_advantage_mod = 10
+	}
+}
+
+reg_toulouse = { 
+	county = c_toulouse
+	barony = b_toulouse
+	is_active = no
+	
+	flag = holy_site_reg_offspring_flag
+
+	character_modifier = {
+		name = holy_site_toulouse_effect_name
+		monthly_county_control_change_add = 0.25
+		general_opinion = 10
+	}
+}
+
+reg_krakow = {
+	county = c_krakowska
+	is_active = no
+
+	flag = regula_abice_maritus_active
+
+	character_modifier = {
+		name = holy_site_reg_krakowska_effect_name
+		attraction_opinion = 20
+	}
+}
+
+reg_gotland = { # More captives during siege?
+	county = c_gutland
+	is_active = no
+
+	flag = holy_site_reg_sanctifica_serva_flag
+
+	character_modifier = { 
+		name = holy_site_reg_gotland_effect_name
+		raid_speed = 0.25
+		siege_phase_time = -0.1
+	}
+}
+
+reg_zeeland = {
+	county = c_zeeland
+	is_active = no
+
+	flag = holy_site_reg_mulsa_fascinare_flag
+
+	character_modifier = {
+		name = holy_site_reg_zeeland_effect_name
+		naval_movement_speed_mult = 0.15
+		development_growth_factor = 0.05
+	}
+}

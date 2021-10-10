@@ -1,0 +1,2 @@
+﻿l_spanish:
+PLAYER_AROUSAL_TOOLTIP:0 "#T [arousal_level|E]: [GetPlayer.MakeScope.Var('arousal_level').GetValue|V0]/[GetDefine('NCharacter', 'MAX_STRESS_LEVEL')|V]\n\n#!#S [arousal|E]: [arousal_i] [GetPlayer.MakeScope.Var('arousal').GetValue|V1]/[GetMaxStress|V]#!\n#!#S Last change: [arousal_i] [GetPlayer.MakeScope.Var('arousal_change_total').GetValue|V1=] #!"

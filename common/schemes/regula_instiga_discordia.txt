@@ -1,0 +1,152 @@
+﻿regula_instiga_discordia = {
+	skill = diplomacy
+	hostile = yes
+
+	uses_agents = no
+	power_per_skill_point = 50.0
+	resistance_per_skill_point = 0
+	power_per_agent_skill_point = 5
+	
+	minimum_progress_chance = 40
+	maximum_progress_chance = 95
+	minimum_success = 5
+	maximum_secrecy = 95
+	maximum_success = 95
+	
+	allow = {
+		is_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = no
+	}
+	
+	valid = {
+		scope:target = {
+			is_imprisoned = no
+			exists = location
+		}
+		# Special AI exceptions
+	}
+
+	base_success_chance = {
+		base = 40
+		
+		hostile_scheme_base_chance_modifier = yes
+		
+		compare_modifier = {
+			desc = "sway_my_diplomacy"
+			target = scope:owner
+			value = diplomacy
+			multiplier = 5
+		}
+		# Proxy for trust
+		opinion_modifier = {
+			desc = SCHEME_BEFRIEND_THEIR_OPINION
+			who = scope:target
+			opinion_target = scope:owner
+			max = 50
+			min = -10
+			multiplier = 0.75
+		}
+		# At War
+		first_valid = {
+			modifier = {
+				add = -50
+				desc = "SCHEME_AT_WAR"
+				scope:target = {
+					is_at_war = yes
+				}
+			}
+		}
+	}
+		
+	is_secret = yes
+	base_secrecy = 50 # Gossip is hard to stop
+
+	on_ready = {
+		scheme_owner = {
+			if = {
+				limit = {
+					has_character_flag = is_in_event_regula_instiga_discordia_outcome_0001
+				}
+				trigger_event = {
+					id = regula_instiga_discordia_outcome.0001
+					days = 1
+				}
+			}
+			else = {
+				trigger_event = regula_instiga_discordia_outcome.0001
+			}
+		}
+	}
+
+	on_invalidated = {
+		if = {
+			limit = {
+				scope:target = { is_alive = no }
+			}
+			global_var:magister_character = {	
+				send_interface_toast = {
+					title = regula_instiga_discordia_invalidated_title
+					left_icon = scope:owner
+					right_icon = scope:target
+					custom_description_no_bullet = {
+						object = scope:target
+						text = scheme_target_died
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target = {
+					is_imprisoned = yes
+					imprisoner = scope:owner
+				}
+				scope:owner = {
+					NOT = { has_character_flag = is_in_event_regula_instiga_discordia_outcome_0001 } #They've got a pretty good alibi
+				}
+			}
+			global_var:magister_character = {  
+				send_interface_message = {
+					title = regula_instiga_discordia_invalidated_title
+					type = regula_instiga_discordia_invalidated_i_imprisoned_message
+					desc = regula_instiga_discordia_i_imprisoned_them_message
+					left_icon = scope:target
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target = { is_imprisoned = yes }
+			}
+			scope:target.imprisoner = {
+				save_scope_as = other_imprisoner
+			}
+			global_var:magister_character = {
+				send_interface_toast = {
+					title = regula_instiga_discordia_invalidated_title
+					left_icon = scope:target
+					right_icon = scope:other_imprisoner
+					custom_description_no_bullet = {
+						subject = scope:other_imprisoner
+						object = scope:target
+						text = scheme_target_imprisoned_by_other
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				global_var:magister_character = {
+					is_alive = no
+				}
+			}
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+	}
+	
+	success_desc = "REGULA_INSTIGA_DISCORDIA_SUCCESS_DESC"
+	discovery_desc = "REGULA_INSTIGA_DISCORDIA_DISCOVERY_DESC"
+}

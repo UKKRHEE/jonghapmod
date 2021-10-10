@@ -1,0 +1,5 @@
+﻿carn_on_sex = {
+	events = {
+		carnd_tantric_sex.0001 # Tantric Sex bonus from sex
+	}
+}

@@ -1,0 +1,40 @@
+﻿l_english:
+
+ caf_sex_effect_best.t: "Had mind-blowing intercourse"
+ caf_sex_effect_amazing.t: "Had amazing intercourse"
+ caf_sex_effect_good.t: "Had satisfactory intercourse"
+ caf_sex_effect_decent.t: "Had ordinary intercourse"
+ caf_sex_effect_bad.t: "Had unsatisfactory intercourse"
+ caf_sex_effect_very_bad.t: "Had lousy intercourse"
+ caf_sex_effect_horrible.t: "Had atrocious intercourse"
+
+ caf_sex_evaluation_tooltip_very_aroused: "You were very aroused"
+ caf_sex_evaluation_tooltip_enjoyed_forcing: "You enjoyed forcing someone against their will."
+ caf_sex_evaluation_tooltip_aroused: "You were aroused."
+ caf_sex_evaluation_tooltip_enjoyed_dubcon: "You enjoyed pushed someone to sexual intercourse."
+ caf_sex_evaluation_tooltip_partner_likes_you: "Your partner likes you."
+ caf_sex_evaluation_tooltip_sexually_compatible: "You are sexually compatible."
+
+ caf_sex_evaluation_tooltip_attractive_partner_high: "Your partner is very attractive."
+ caf_sex_evaluation_tooltip_unattractive_partner_high: "You partner is very unattractive."
+ caf_sex_evaluation_tooltip_matching_personalities_high: "You get along very well."
+ caf_sex_evaluation_tooltip_negative_trait_compatibility_high: "You have clashing personalities."
+ 
+ caf_sex_evaluation_tooltip_attractive_partner_medium: "Your partner is quite attractive."
+ caf_sex_evaluation_tooltip_unattractive_partner_medium: "You partner is quite unattractive."
+ caf_sex_evaluation_tooltip_matching_personalities_medium: "You get along pretty well."
+ caf_sex_evaluation_tooltip_negative_trait_compatibility_medium: "You have conflicting personalities."
+ 
+ caf_sex_evaluation_tooltip_attractive_partner_low: "Your partner is attractive enough."
+ caf_sex_evaluation_tooltip_unattractive_partner_low: "You partner is a bit unattractive."
+ caf_sex_evaluation_tooltip_matching_personalities_low: "You get along well enough." 
+ caf_sex_evaluation_tooltip_negative_trait_compatibility_low: "You do not get along well."
+ 
+ caf_sex_evaluation_tooltip_raped: "You were used against your will."
+ caf_sex_evaluation_tooltip_wrong_gender: "You are not attracted to your partner's gender."
+ caf_sex_evaluation_tooltip_regret_noncon: "You regret forcing someone against their will."
+ caf_sex_evaluation_tooltip_regret_dubcon: "You regret pushing someone to sexual intercourse."
+ caf_sex_evaluation_tooltip_dubcon: "You were pushed to sexual intercourse."
+ caf_sex_evaluation_tooltip_partner_dislikes_you: "Your partner dislikes you."
+ caf_sex_evaluation_tooltip_traumatic_experiences: "Memories of torments past taint your enjoyment."
+ caf_sex_evaluation_tooltip_low_arousal: "You were already sexually satisfied."

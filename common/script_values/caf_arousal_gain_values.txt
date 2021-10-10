@@ -1,0 +1,321 @@
+﻿
+caf_arousal_gain_sophisticated_all = {
+	# Actual calculation
+	value = caf_arousal_gain_sophisticated_base_value
+	multiply = caf_arousal_gain_sophisticated_sexual_orientation
+	multiply = caf_arousal_gain_sophisticated_passive_sex
+	multiply = caf_arousal_gain_sophisticated_traits
+	multiply = caf_arousal_gain_sophisticated_stress
+	multiply = caf_arousal_gain_sophisticated_health
+	multiply = caf_arousal_gain_sophisticated_other
+	multiply = caf_arousal_gain_sophisticated_age
+	multiply = caf_arousal_gain_sophisticated_custom # For sub-mods to add your own calculations
+
+	# Arousal gain cannot be negative
+	min = 0
+}
+
+caf_arousal_gain_sophisticated_base_value = 1.2
+
+caf_arousal_gain_sophisticated_sexual_orientation = {
+	value = 1.0
+
+	# Orientation
+	if = {
+		limit = { has_sexuality = asexual }
+		multiply = 0
+	}
+}
+
+# From -30 (1 partner) to 50 (9 partner)
+caf_arousal_gain_partner_decent_threshold = {
+	value = -40
+	every_in_list = {
+		list = all_sexual_partners
+		add = 10
+	}
+
+	max = 50
+}
+
+# From 40 (1 partner) to 90 (6 partner)
+caf_arousal_gain_partner_happy_threshold = {
+	value = 30
+	every_in_list = {
+		list = all_sexual_partners
+		add = 10
+	}
+
+	max = 90
+}
+
+# From 80 (1 partner) to 100 (3 partner)
+caf_arousal_gain_partner_love_threshold = {
+	value = 70
+	every_in_list = {
+		list = all_sexual_partners
+		add = 10
+	}
+
+	max = 100
+}
+
+
+# Passive sex happening in the background.
+caf_arousal_gain_sophisticated_passive_sex = {
+	value = 1.0
+	
+	# To have no partners at all is already quite punishing because you cannot "make love" to reduce arousal.
+	# We reduce arousal gain by 50% to compensate.
+	if = {
+		limit = {
+			NOR = {
+				has_game_rule = carn_sex_interaction_disabled
+				any_in_list = {
+					list = all_sexual_partners
+				}
+			}
+		}
+		multiply = 0.5
+	}
+	# More partners = less time for each = each lover is more "demanding"
+	else = {
+		every_in_list = {
+			list = all_sexual_partners
+			limit = {
+				opinion = {
+					target = root
+					value >= caf_arousal_gain_partner_love_threshold
+				}
+			}
+			multiply = 0.85
+		}
+	
+		every_in_list = {
+			list = all_sexual_partners
+			limit = {
+				opinion = {
+					target = root
+					value >= caf_arousal_gain_partner_happy_threshold
+				}
+			}
+			multiply = 0.9
+		}
+	
+		every_in_list = {
+			list = all_sexual_partners
+			limit = {
+				opinion = {
+					target = root
+					value >= caf_arousal_gain_partner_decent_threshold
+				}
+			}
+			multiply = 0.9
+		}
+	
+		min = 0.5 # -50% cap for official partners only
+	
+		every_in_list = {
+			list = secret_sexual_partners
+			multiply = 0.9
+		}
+	}
+}
+
+caf_arousal_gain_sophisticated_traits = {
+	value = 1.0
+
+	# Traits
+	if = {
+		limit = { has_trait = lustful }
+		multiply = 1.2
+	}
+	if = {
+		limit = { has_trait = rakish }
+		multiply = 1.2
+	}
+	if = {
+		limit = { has_trait = deviant }
+		multiply = 1.1
+	}
+	if = {
+		limit = { has_trait = temperate }
+		multiply = 0.9
+	}
+	if = {
+		limit = { has_trait = chaste }
+		multiply = 0.8
+	}
+	if = { # Often comes with conditions that reduce libido
+		limit = { has_trait = infertile }
+		multiply = 0.75
+	}
+	if = {
+		limit = { 
+			OR = { 
+				has_trait = depressed_1 
+				has_trait = depressed_genetic
+			}
+		}
+		multiply = 0.5
+	}
+	if = {
+		limit = { has_trait = eunuch }
+		multiply = 0.2
+	}
+	if = {
+		limit = { has_trait = celibate }
+		multiply = 0.1
+	}
+}
+
+caf_arousal_gain_sophisticated_stress = {
+	value = 1.0
+
+	# Stress: -20% per level
+	multiply = {
+		value = 1
+		subtract = {
+			value = 0.2
+			multiply = stress_level
+		}
+	}
+}
+
+caf_arousal_gain_sophisticated_health = {
+	value = 1.0
+	# Health traits
+	if = {
+		limit = { has_trait = wounded_2 }
+		multiply = 0.75
+	}
+	else_if = {
+		limit = { has_trait = wounded_3 }
+		multiply = 0.25
+	}
+	if = {
+		limit = { has_trait = sickly }
+		multiply = 0.75
+	}
+	if = {
+		limit = { has_trait = impotent }
+		multiply = 0.5
+	}
+	if = {
+		limit = { has_trait = infirm }
+		multiply = 0.7
+	}
+	if = {
+		limit = { has_trait = incapable }
+		multiply = 0
+	}
+	if = {
+		limit = { has_trait = blind }
+		multiply = 0.8
+	}
+	if = {
+		limit = { has_trait = ill }
+		multiply = 0.8
+	}
+	if = {
+		limit = { has_trait = bubonic_plague }
+		multiply = 0.5
+	}
+	if = {
+		limit = { has_trait = cancer }
+		multiply = 0.8
+	}
+	if = {
+		limit = { has_trait = great_pox }
+		multiply = 0.8
+	}
+	if = {
+		limit = { has_trait = leper }
+		multiply = 0.05
+	}
+	if = {
+		limit = { has_trait = pneumonic }
+		multiply = 0.5
+	}
+	if = {
+		limit = { has_trait = smallpox }
+		multiply = 0.75
+	}
+	if = {
+		limit = { has_trait = typhus }
+		multiply = 0.8
+	}
+	# General health. Is implicitely included in wounded/diseased checks, but seems to be important enough to be included again as it is the main cause for reduced sex drive for old people (as opposed to just "getting old", which has less importance than commonly thought) 
+	if = {
+		limit = { health >= excellent_health }
+		multiply = 1.15
+	}
+	else_if = {
+		limit = { health >= good_health }
+		multiply = 1.1
+	}
+	else_if = {
+		limit = { health >= medium_health }
+		multiply = 1.05
+	}
+	else_if = {
+		limit = { health >= fine_health }
+		multiply = 1
+	}
+	else_if = {
+		limit = { health >= poor_health }
+		multiply = 0.6
+	}
+	else = {
+		multiply = 0.2
+	}
+}
+
+caf_arousal_gain_sophisticated_other = {
+	value = 1.0
+
+	# Current situation
+	if = {
+		limit = { is_imprisoned = yes }
+		multiply = 0.5
+	}	
+	else_if = {
+		limit = { is_commanding_army = yes }
+		multiply = 0.9
+	}
+	# Past abuse
+	if = {
+		limit = { has_character_modifier = carn_recently_raped }
+		multiply = 0.5
+	}
+}
+
+caf_arousal_gain_sophisticated_age = {
+	value = 1.0
+
+	# Age (simplified). Peak for females should realistically be at ~32, for males at ~16, according to wikipedia.
+	if = {
+		limit = { is_immortal = no }	
+		multiply = {
+			value = 1
+			subtract = { # Decline of 0,5% each year after 22
+				value = 0.005
+				multiply = {
+					value = age
+					subtract = 22
+					# Intended as compatibility for long living fantasy races (elves, succubi etc.), but seems realistic enough
+					subtract = {
+						value = life_expectancy
+						min = years_of_fertility
+					}
+					min = 0
+				}
+			}
+		}
+	}
+}
+
+# Does nothing, but can be overwritten more cleanly because it will never change in Carnal Consequences
+caf_arousal_gain_sophisticated_custom = {
+	value = 1.0
+}

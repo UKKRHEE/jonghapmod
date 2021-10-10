@@ -1,0 +1,18 @@
+﻿namespace = regula_alliance_event
+
+regula_alliance_event.0001 = {
+	type = letter_event
+	opening = {
+		desc = regula_alliance_event.0001.opening
+	}
+	desc = regula_alliance_event.0001.desc
+		
+	sender = {
+		character = scope:recipient
+		animation = admiration
+	}
+
+	option = {
+		name = regula_alliance_event.0001.a
+	}
+}

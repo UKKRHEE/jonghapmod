@@ -1,0 +1,66 @@
+﻿
+caf_update_arousal_modifier = {
+	caf_clear_arousal_modifiers = yes
+	caf_apply_arousal_modifiers = yes
+}
+
+caf_clear_arousal_modifiers = {
+	remove_character_modifier = caf_arousal_level_0
+	remove_character_modifier = caf_arousal_level_1
+	remove_character_modifier = caf_arousal_level_2
+	remove_character_modifier = caf_arousal_level_3
+	remove_character_modifier = caf_arousal_level_1_hardcore
+	remove_character_modifier = caf_arousal_level_2_hardcore
+	remove_character_modifier = caf_arousal_level_3_hardcore
+}
+
+caf_apply_arousal_modifiers = {
+	if = {
+		limit = {
+			caf_arousal_level = 0
+		}
+		#add_character_modifier = {
+		#	modifier = caf_arousal_level_0
+		#}
+	}
+	else_if = {
+		limit = {
+			caf_arousal_level = 1
+		}
+
+		if = {
+			limit = { has_game_rule = cc_arousal_effects_hardcore }
+			add_character_modifier = { modifier = caf_arousal_level_1_hardcore }
+		}
+		else = {
+			add_character_modifier = { modifier = caf_arousal_level_1 }
+		}
+		
+	}
+	else_if = {
+		limit = {
+			caf_arousal_level = 2
+		}
+
+		if = {
+			limit = { has_game_rule = cc_arousal_effects_hardcore }
+			add_character_modifier = { modifier = caf_arousal_level_2_hardcore }
+		}
+		else = {
+			add_character_modifier = { modifier = caf_arousal_level_2 }
+		}
+	}
+	else_if = {
+		limit = {
+			caf_arousal_level = 3
+		}
+
+		if = {
+			limit = { has_game_rule = cc_arousal_effects_hardcore }
+			add_character_modifier = { modifier = caf_arousal_level_3_hardcore }
+		}
+		else = {
+			add_character_modifier = { modifier = caf_arousal_level_3 }
+		}
+	}
+}

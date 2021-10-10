@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+ carnd_religion_flavor.0002.t.goddess: "人间女神"
+ carnd_religion_flavor.0002.t.god: "人间之神"
+ carnd_religion_flavor.0002.desc: "多年来，我一直在通过黑暗与纯净的技艺寻求永生。 我与许多恋人分享了激情和快乐，我们的身体和经络连为一体。\n\n在一百零八项试炼中，我磨练了身体，平衡了气，净化了我的灵魂。 尽管我没有获得任何飞行，召唤或占卜的能力，但我感觉已经完全掌握了自己在宇宙中的位置。\n\n我的事迹使我成为[ROOT.Char.GetFaith.GetName]最受尊敬的当世大师之一，毫无疑问，我的名字将在整个历史中回荡。"
+ carnd_religion_flavor.0002.a: "我的灵魂将在蓬莱仙山永存。"
+ carnd_religion_flavor.0003.t: "罗得之民重现"
+ carnd_religion_flavor.0003.desc.opening: "两千多年前，所多玛和蛾摩拉城一直是锡丁河谷的瑰宝，以其辉煌而闻名于世，直到被天降的雷霆摧毁并随着光流逝被遗忘。"
+ carnd_religion_flavor.0003.desc.restorer: "\n\n最终，我推翻了有经者的暴政，重建了属于[restorer.GetFaith.GetReligion.GetAdjectiveNoTooltip]忠诚信徒的闪耀城市。今天，我们身上压迫终结了，新纪元的曙光正在升起。"
+ carnd_religion_flavor.0003.desc.holy: "\n\n最终，[restorer.GetTitledFirstNameNoTooltip]推翻了书的暴政，重建了属于我们的闪耀城市。今天，我们身上压迫终结了，新纪元的曙光正在升起。"
+ carnd_religion_flavor.0003.desc.unholy: "\n\n在违抗[THIS.Char.GetFaith.PantheonTerm]的裁决之后，[restorer.GetTitledFirstNameNoTooltip]大胆地宣布了第二伊甸园的降临，并重新建立了圣经中罪恶的古城。"
+ carnd_religion_flavor.0003.desc.ending: "\n\n从此以后，死海的岸边将再次见到索多玛和蛾摩拉的尖塔。"
+ carnd_religion_flavor.0003.a: "为了贝拉和别舍！"
+ carnd_religion_flavor.0003.b: "他们这是飞蛾扑火..."

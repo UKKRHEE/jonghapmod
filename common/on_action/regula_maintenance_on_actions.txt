@@ -1,0 +1,17 @@
+﻿quarterly_playable_pulse = {
+	events = {
+		regula_initialize_event.0010 # Passes on the Magister traits.
+		regula_initialize_event.0012 # Removes traits from the unworthy.
+	}
+}
+
+# Maintenance pulses.
+quarterly_playable_pulse = {
+	events = {
+		regula_orba_event.0001    # Converts adrift paelices to orbae.
+		regula_paelex_event.0996  # Keeps Domina/Paelex traits up to date.
+		regula_paelex_event.0997  # Fixes HOF issues.
+		regula_paelex_event.0998  # Adds landed spouse bonuses/maluses.
+		regula_paelex_event.0999  # Sets inheritance laws.
+	}
+}

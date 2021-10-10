@@ -1,0 +1,15 @@
+﻿l_french:
+
+carnd_religion_flavor.0002.t.goddess:1 "Une Déesse parmi les hommes"
+carnd_religion_flavor.0002.t.god:1 "Une Dieu parmi les hommes"
+carnd_religion_flavor.0002.desc:1 "Pendant des années, j'ai recherché l'immortalité à travers l'Art des Ténèbres et de la Pureté. J'ai partagé ma passion et mon plaisir avec mes nombreux amants, et nos corps ainsi que notre jing se sont harmonisés et sont devenus un. Dans mes cent huit conquêtes, j'ai aiguisé mon corps, équilibré mon qi et purifié mon âme. Bien que je n'aie atteint aucun pouvoir de vol, d'invocation ou de divination, j'ai l'impression d'avoir compris intimement ma place dans l'univers. Mes actes ont fait de moi l'un des maîtres vivants les plus respectés de [ROOT.Char.GetFaith.GetName], et il ne fait aucun doute que mon nom résonnera à travers l'histoire pour toujours."
+carnd_religion_flavor.0002.a:1 "Mon âme vivra pour toujours sur le mont Penglai."
+
+carnd_religion_flavor.0003.t:1 "Le peuple de Lot restauré"
+carnd_religion_flavor.0003.desc.opening:1 "Il y a plus de deux mille ans, les villes de Sodome et Gomorrhe étaient les joyaux de la vallée de Siddim, tristement célèbres dans leur splendeur, jusqu'à ce qu'elles soient détruites par la colère divine et oubliées."
+carnd_religion_flavor.0003.desc.restorer:1 "\n\nEnfin, j'ai renversé les Tyrans de la Bible et reconstruit les brillantes cités des fidèles [restorer.GetFaith.GetReligion.GetAdjectiveNoTooltip]s. Aujourd'hui marque la fin de notre oppression et l'aube d'une nouvelle ère."
+carnd_religion_flavor.0003.desc.holy:1 "\n\nEnfin, [restorer.GetTitledFirstNameNoTooltip] a renversé les Tyrans de la Bible et a reconstruit les brillantes cités de notre peuple. Aujourd'hui marque la fin de notre oppression et l'aube d'une nouvelle ère."
+carnd_religion_flavor.0003.desc.unholy:1 "\n\nEn défiant le jugement de [THIS.Char.GetFaith.PantheonTerm], [restorer.GetTitledFirstNameNoTooltip] a audacieusement proclamé la restauration du Second Eden et a refondé les anciennes cités du péché biblique."
+carnd_religion_flavor.0003.desc.ending:1 "\n\nDorénavant, les rives de la mer Morte connaîtront à nouveau les tours de Sodome et de Gomorrhe."
+carnd_religion_flavor.0003.a:1 "Pour Béla et Birsha !"
+carnd_religion_flavor.0003.b:1 "Ils semblent tenter le destin..."

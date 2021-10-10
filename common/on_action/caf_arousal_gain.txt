@@ -1,0 +1,33 @@
+﻿quarterly_playable_pulse = {
+	on_actions = {
+		caf_start_arousal_tracking_pulse
+	}
+}
+
+# Check every quarter if arousal tracking should start (player only)
+# Would be cleaner to catch character switch events directly
+caf_start_arousal_tracking_pulse = {
+	trigger = {
+		is_ai = no
+		is_adult = yes
+		NOT = { has_character_flag = caf_track_arousal_periodically }
+	}
+	effect = {		
+		add_character_flag = caf_track_arousal_periodically # To prevent from applying this event more than once
+		
+		if = {
+			limit = { has_game_rule = cc_arousal_gain_simple }
+			trigger_event = { # Fires for simple arousal gain
+				id = caf_arousal_events.0003
+				days = 1
+			}
+		}
+		else_if = {
+			limit = { has_game_rule = cc_arousal_gain_sophisticated }
+			trigger_event = { # Fires for sophisticated arousal gain
+				id = caf_arousal_events.0002
+				days = 1
+			}
+		}
+	}
+}

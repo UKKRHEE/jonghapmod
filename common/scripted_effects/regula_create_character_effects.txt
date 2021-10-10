@@ -1,0 +1,54 @@
+﻿regula_create_champion_giant_effect = {
+	#Create them
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = $WHO$.capital_province
+		culture = $WHO$.culture
+		faith = $WHO$.faith
+		gender = female
+		template = regula_champion_giant_character
+	}
+}
+
+regula_create_commander_effect = {
+	#Create them
+	create_character = {
+		save_temporary_scope_as = created_character
+		location = $WHO$.capital_province
+		culture = $WHO$.culture
+		faith = $WHO$.faith
+		gender = female
+		template = regula_commander_character
+	}
+}
+
+regula_create_orgy_guest_effect = {
+	#Create them
+	create_character = {
+		save_temporary_scope_as = created_orgy_guest
+		location = $WHO$.capital_province
+		culture = $WHO$.culture
+		faith = $WHO$.faith
+		gender = female
+		template = regula_beautiful_character
+	}
+	hidden_effect = {
+		scope:created_orgy_guest = {
+			add_trait = lustful
+		}
+
+		#If the created character is a lesbian they will become bisexual nine times in ten.
+		if = {
+			limit = {
+				$WHO$ = { is_attracted_to_gender_of = scope:created_orgy_guest }
+				NOT = { scope:created_orgy_guest = { is_attracted_to_gender_of = $WHO$ } }
+			}
+			random = {
+				chance = 90
+				scope:created_orgy_guest = {
+					set_sexuality = bisexual
+				}
+			}
+		}
+	}
+}

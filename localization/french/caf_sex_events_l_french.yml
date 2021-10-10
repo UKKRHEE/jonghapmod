@@ -1,0 +1,40 @@
+﻿l_french:
+
+caf_sex_effect_best.t:1 "Rapport sexuel à couper le souffle"
+caf_sex_effect_amazing.t:1 "Rapport sexuel incroyable"
+caf_sex_effect_good.t:1 "Rapport sexuel satisfaisant"
+caf_sex_effect_decent.t:1 "Rapport sexuel ordinaire"
+caf_sex_effect_bad.t:1 "Rapport sexuel peu satisfaisant"
+caf_sex_effect_very_bad.t:1 "Rapport sexuel médiocre"
+caf_sex_effect_horrible.t:1 "Rapport sexuel exécrable"
+
+caf_sex_evaluation_tooltip_very_aroused:1 "Vous étiez très excité"
+caf_sex_evaluation_tooltip_enjoyed_forcing:1 "Vous avez aimé forcer quelqu'un contre sa volonté."
+caf_sex_evaluation_tooltip_aroused:1 "Vous étiez excité."
+caf_sex_evaluation_tooltip_enjoyed_dubcon:1 "Vous avez aimé pousser quelqu'un à avoir des rapports sexuels."
+caf_sex_evaluation_tooltip_partner_likes_you:1 "Votre partenaire vous aime bien."
+caf_sex_evaluation_tooltip_sexually_compatible:1 "Vous êtes sexuellement compatibles."
+
+caf_sex_evaluation_tooltip_attractive_partner_high:1 "Votre partenaire est très attirant."
+caf_sex_evaluation_tooltip_unattractive_partner_high:1 "Votre partenaire n'est pas du tout attirant."
+caf_sex_evaluation_tooltip_matching_personalities_high:1 "Vous vous entendez très bien."
+caf_sex_evaluation_tooltip_negative_trait_compatibility_high:1 "Vous avez des personnalités opposées."
+
+caf_sex_evaluation_tooltip_attractive_partner_medium:1 "Votre partenaire est plutôt attirant."
+caf_sex_evaluation_tooltip_unattractive_partner_medium:1 "Votre partenaire n'est pas attirant."
+caf_sex_evaluation_tooltip_matching_personalities_medium:1 "Vous vous entendez bien."
+caf_sex_evaluation_tooltip_negative_trait_compatibility_medium:1 "Vous avez des personnalités divergentes."
+
+caf_sex_evaluation_tooltip_attractive_partner_low:1 "Your partner is attractive enough."
+caf_sex_evaluation_tooltip_unattractive_partner_low:1 "Votre partenaire n'est pas très attirant."
+caf_sex_evaluation_tooltip_matching_personalities_low:1 "Vous vous entendez suffisamment bien."
+caf_sex_evaluation_tooltip_negative_trait_compatibility_low:1 "Vous ne vous entendez pas bien."
+
+caf_sex_evaluation_tooltip_raped:1 "Vous avez été utilisé contre votre volonté."
+caf_sex_evaluation_tooltip_wrong_gender:1 "Vous n'êtes pas attiré par le genre de votre partenaire."
+caf_sex_evaluation_tooltip_regret_noncon:1 "Vous regrettez d'avoir forcé quelqu'un contre sa volonté."
+caf_sex_evaluation_tooltip_regret_dubcon:1 "Vous regrettez d'avoir poussé quelqu'un à avoir des rapports sexuels."
+caf_sex_evaluation_tooltip_dubcon:1 "Vous avez été poussé à avoir des rapports sexuels."
+caf_sex_evaluation_tooltip_partner_dislikes_you:1 "Votre partenaire ne vous aime pas."
+caf_sex_evaluation_tooltip_traumatic_experiences:1 "Les souvenirs des tourments passés entachent votre plaisir."
+caf_sex_evaluation_tooltip_low_arousal:1 "Vous étiez déjà sexuellement satisfait."

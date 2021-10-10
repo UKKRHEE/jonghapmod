@@ -1,0 +1,258 @@
+﻿namespace = caf_arousal
+
+
+###############
+# Hidden Arousal Framework Management:
+#	caf_arousal.0010 - Sends a toast to players when they gain an Arousal Level.
+#	caf_arousal.0011 - Fired when character crosses an arousal threshold. Checks if a Arousal Coping event can be fired and, if yes, does so.
+#	caf_arousal.0012 - For imprisoned characters
+#	caf_arousal.0013 - Schedule new arousal event 5 years after last one
+#   caf_arousal.0400 - Hit 400 arousal and reset to 300
+###############
+
+
+#
+# 0010. Sends a toast when the player gains an arousal level.
+#
+
+caf_arousal.0010 = {
+	hidden = yes
+
+	immediate = {
+		# Used to stop multiple arousal threshold events from queuing up ontop of each other.
+		add_character_flag = {
+			flag = recently_hit_arousal_threshold
+			days = 1 # Once a single day passes we remove this. This way a player's choices in a Mental Break event can still trigger another Mental Break.
+		}
+		send_interface_toast = {
+			type = caf_msg_gained_arousal_level
+			desc = caf_arousal_threshold.0010.text
+			left_icon = root
+		}
+	}
+}
+
+#
+# 0011. For free characters, finds and runs an appropriate 'stress_threshold' event based on a character's traits and stress levels.
+#
+caf_arousal.0011 = {
+	hidden = yes
+
+	trigger = {
+		is_imprisoned = no
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				caf_arousal_level >= 3
+				NOT = { has_character_flag = arousal_threshold_event_3_cooldown }
+			}
+			add_character_flag = {
+				flag = arousal_threshold_event_3_cooldown
+				days = caf_arousal_threshold_cooldown_duration # 1 day less than 5 years
+			}
+			trigger_event = { on_action = caf_arousal_threshold_level_3_event days = 0 }
+			# Schedule a new arousal event to occur after the cooldown duration has elapsed. For some reason doesn't work when put in an after block.
+			trigger_event = {
+				id = caf_arousal.0013
+				days = caf_arousal_threshold_second_check_timing # 5 year maximum between events
+			}
+			# Warn the player that they will receive another event if they are still Aroused.
+			custom_tooltip = caf_arousal_threshold_cooldown_message	
+		}
+		else_if = {
+			limit = {
+				caf_arousal_level >= 2
+				NOR = {
+					has_character_flag = arousal_threshold_event_3_cooldown
+					has_character_flag = arousal_threshold_event_2_cooldown
+				}
+			}
+			add_character_flag = {
+				flag = arousal_threshold_event_2_cooldown
+				days = caf_arousal_threshold_cooldown_duration # 1 day less than 5 years
+			}
+			trigger_event = { on_action = caf_arousal_threshold_level_2_event days = 0 }
+			# Schedule a new arousal event to occur after the cooldown duration has elapsed. For some reason doesn't work when put in an after block.
+			trigger_event = {
+				id = caf_arousal.0013
+				days = caf_arousal_threshold_second_check_timing # 5 year maximum between events
+			}
+			# Warn the player that they will receive another event if they are still Aroused.
+			custom_tooltip = caf_arousal_threshold_cooldown_message	
+		}
+		else_if = {
+			limit = {
+				caf_arousal_level >= 1
+				NOR = {
+					has_character_flag = arousal_threshold_event_3_cooldown
+					has_character_flag = arousal_threshold_event_2_cooldown
+					has_character_flag = arousal_threshold_event_1_cooldown
+				}
+			}
+			add_character_flag = {
+				flag = arousal_threshold_event_1_cooldown
+				days = caf_arousal_threshold_cooldown_duration # 1 day less than 5 years
+			}
+			trigger_event = { on_action = caf_arousal_threshold_level_1_event days = 0 }
+			# Schedule a new arousal event to occur after the cooldown duration has elapsed. For some reason doesn't work when put in an after block.
+			trigger_event = {
+				id = caf_arousal.0013
+				days = caf_arousal_threshold_second_check_timing # 5 year maximum between events
+			}
+			# Warn the player that they will receive another event if they are still Aroused.
+			custom_tooltip = caf_arousal_threshold_cooldown_message	
+		}
+	}
+}
+
+
+#
+# 0012. # If a character is imprisoned, we instead run this event to find an appropriate event.
+#
+caf_arousal.0012 = {
+	hidden = yes
+
+	trigger = {
+		is_imprisoned = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				caf_arousal_level >= 3
+				NOT = { has_character_flag = arousal_threshold_event_3_cooldown }
+			}
+			add_character_flag = {
+				flag = arousal_threshold_event_3_cooldown
+				days = caf_arousal_threshold_cooldown_duration # 1 day less than 5 years
+			}
+			trigger_event = { on_action = caf_arousal_threshold_level_3_event_prison days = 0 }
+			# Schedule a new arousal event to occur after the cooldown duration has elapsed. For some reason doesn't work when put in an after block.
+			trigger_event = {
+				id = caf_arousal.0013
+				days = caf_arousal_threshold_second_check_timing # 5 year maximum between events
+			}
+			# Warn the player that they will receive another event if they are still Aroused.
+			custom_tooltip = caf_arousal_threshold_cooldown_message	
+		}
+		else_if = {
+			limit = {
+				caf_arousal_level >= 2
+				NOR = {
+					has_character_flag = arousal_threshold_event_3_cooldown
+					has_character_flag = arousal_threshold_event_2_cooldown
+				}
+			}
+			add_character_flag = {
+				flag = arousal_threshold_event_2_cooldown
+				days = caf_arousal_threshold_cooldown_duration # 1 day less than 5 years
+			}
+			trigger_event = { on_action = caf_arousal_threshold_level_2_event_prison days = 0 }
+			# Schedule a new arousal event to occur after the cooldown duration has elapsed. For some reason doesn't work when put in an after block.
+			trigger_event = {
+				id = caf_arousal.0013
+				days = caf_arousal_threshold_second_check_timing # 5 year maximum between events
+			}
+			# Warn the player that they will receive another event if they are still Aroused.
+			custom_tooltip = caf_arousal_threshold_cooldown_message	
+		}
+		else_if = {
+			limit = {
+				caf_arousal_level >= 1
+				NOR = {
+					has_character_flag = arousal_threshold_event_3_cooldown
+					has_character_flag = arousal_threshold_event_2_cooldown
+					has_character_flag = arousal_threshold_event_1_cooldown
+				}
+			}
+			add_character_flag = {
+				flag = arousal_threshold_event_1_cooldown
+				days = caf_arousal_threshold_cooldown_duration # 1 day less than 5 years
+			}
+			trigger_event = { on_action = caf_arousal_threshold_level_1_event_prison days = 0 }
+			# Schedule a new arousal event to occur after the cooldown duration has elapsed. For some reason doesn't work when put in an after block.
+			trigger_event = {
+				id = caf_arousal.0013
+				days = caf_arousal_threshold_second_check_timing # 5 year maximum between events
+			}
+			# Warn the player that they will receive another event if they are still Aroused.
+			custom_tooltip = caf_arousal_threshold_cooldown_message	
+		}
+	}
+}
+
+# Cycling 5-year event for when a character is still above 100 arousal, but has stabilized between arousal levels ( so they still get events when not triggering new threshold events ).
+caf_arousal.0013 = {
+	hidden = yes
+	
+	trigger = {
+		NOR = {
+			has_character_flag = arousal_threshold_event_1_cooldown
+			has_character_flag = arousal_threshold_event_2_cooldown
+			has_character_flag = arousal_threshold_event_3_cooldown
+		}
+	}
+
+	immediate = {
+		#Regular firing:
+		if = {
+			limit = {
+				is_imprisoned = no
+			}
+			trigger_event = {
+				id = caf_arousal.0011
+				days = 0
+			}
+		}
+		else = {
+			trigger_event = {
+				id = caf_arousal.0012
+				days = 0
+			}
+		}
+	}	
+}
+
+
+# Triggers when the player hits 400 arousal and resets to 300.
+caf_arousal.0400 = {
+	hidden = yes
+
+	immediate = {
+		# Stop this event from firing multiple times on the same day.
+		add_character_flag = {
+			flag = recently_hit_arousal_threshold
+			days = 1
+		}
+
+		send_interface_toast = {
+			type = caf_msg_gained_arousal_level
+			desc = caf_arousal_threshold.0400.toast
+			left_icon = root
+		}
+
+		set_variable = {
+			name = arousal
+			value = 300
+		}
+
+		remove_character_flag = arousal_threshold_event_3_cooldown
+		if = {
+			limit = {
+				is_imprisoned = no
+			}
+			trigger_event = {
+				id = caf_arousal.0011
+				days = 0
+			}
+		}
+		else = {
+			trigger_event = {
+				id = caf_arousal.0012
+				days = 0
+			}
+		}		
+	}
+}

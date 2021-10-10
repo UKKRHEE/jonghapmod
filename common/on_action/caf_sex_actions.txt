@@ -1,0 +1,52 @@
+﻿carn_on_sex = {
+	events = {
+		caf_sex_events.0001
+	}
+}
+
+quarterly_playable_pulse = {
+	on_actions = {
+		caf_add_sexual_experience
+	}
+}
+
+caf_add_sexual_experience = {
+	trigger = {
+		is_ai = no
+		is_adult = yes
+	}
+	effect = {
+		# Fetch all off-screen sex sources
+		every_consort = {
+			limit = { 
+				carn_can_have_sex_trigger = yes
+				root = { is_attracted_to_gender_of = prev }
+			}
+			add_to_temporary_list = all_sexual_partners
+		}
+		every_relation = {
+			type = lover
+			limit = { 
+				carn_can_have_sex_trigger = yes
+				NOT = { is_in_list = all_sexual_partners } # Lovers might also be spouses
+			}
+			add_to_temporary_list = all_sexual_partners
+		}
+		every_in_list = {
+			list = all_sexual_partners
+
+			# Add experience
+			if = {
+				limit = { NOT = { has_variable = caf_experience_with_player } }
+				set_variable = {
+					name = caf_experience_with_player
+					value = 0
+				}
+			}
+			change_variable = {
+				name = caf_experience_with_player
+				add = 1
+			}
+		}
+	}
+}

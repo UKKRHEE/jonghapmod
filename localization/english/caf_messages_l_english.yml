@@ -1,0 +1,5 @@
+﻿l_english: 
+ caf_arousal_level_reduced.message: "Reduced Arousal Level"
+ caf_arousal_level_reduced.text: "You are no longer as overwhelmed by Arousal"
+ caf_arousal_level_increased.message: "Increased Arousal Level"
+ caf_arousal_level_increased.text: "You are becoming overwhelmed by Arousal"

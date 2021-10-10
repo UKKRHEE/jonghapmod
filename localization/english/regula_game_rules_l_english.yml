@@ -1,0 +1,14 @@
+﻿l_english:
+  rule_regula_naked_compeditae:0 "#X Regula Magistri:#! Compeditae Clothing"
+  setting_regula_naked_compeditae_all_enabled:0 "#high Compeditae Naked"
+  setting_regula_naked_compeditae_limited_enabled:0 "#high Spouses Naked"
+  setting_regula_naked_compeditae_limited_enabled_desc:0 "Your Domina and Paelices will be naked at all times."
+  setting_regula_naked_compeditae_all_enabled_desc:0 "All those touched by your power will be naked at all times."
+  setting_regula_naked_compeditae_disabled:0 "Clothed"
+  setting_regula_naked_compeditae_disabled_desc:0 "Characters will wear clothing outside of sex scenes."
+
+  rule_regula_portraits_compeditae:0 "#X Regula Magistri:#! Portrait Modifiers"
+  setting_regula_portraits_compeditae_enabled:0 "Enabled"
+  setting_regula_portraits_compeditae_enabled_desc:0 "Women with the Mulsa, Paelex, Contubernalis, and One with the Book traits will look different (purple eyes, etc)."
+  setting_regula_portraits_compeditae_disabled:0 "#high Disabled"
+  setting_regula_portraits_compeditae_disabled_desc:0 "Regula Magistri traits will not change characters' appearances."

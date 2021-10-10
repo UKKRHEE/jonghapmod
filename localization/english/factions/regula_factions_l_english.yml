@@ -1,0 +1,15 @@
+﻿l_english:
+  # Servitude Faction
+  regula_servitude_faction:0 "$game_concept_regula_servitude_faction$"
+  regula_servitude_faction_desc:0 "Members of the Servitude [faction|E] fight to kneel at their Master's feet. By any means necessary.\n\n#S Ultimatum#!\nAll Faction Members become vassals of the Magister\n[liege|E] loses [prestige|E]"
+  regula_servitude_faction_short_effect_desc:0 "Craves the pleasure of serving the magister"
+  regula_servitude_faction_victory_notification.t:0 "Servitude War Won"
+  regula_servitude_faction_victory_notification.desc:0 "[attacker.GetShortName] has defeated [defender.GetShortName]. Your new slaves await your pleasure."
+  regula_servitude_faction_defeat_notification.t:0 "Servitude War Lost"
+  regula_servitude_faction_defeat_notification.desc:0 "[defender.GetShortName] has defeated [attacker.GetShortName|U]. The $game_concept_compeditae$ are sure to suffer."
+
+  REGULA_FACTION_DEMAND_SERVITUDE:0 "Servitude Demand"
+  REGULA_FACTION_DEMAND_SERVITUDE_DESC:0 "[faction_leader.Custom2('AppropriateGreetingNegative', ROOT.Char)]\n\nIt is time for you to recognize the full independence of [faction_leader.GetPrimaryTitle.GetNameNoTier] and the other states in the [faction.GetName]. Accept our demands or face our swords on the battlefield!"
+  REGULA_FACTION_DEMAND_SERVITUDE_INFORM_MAGISTER_NOTIFICATION:0 "Master of my mind,"
+  REGULA_FACTION_DEMAND_SERVITUDE_INFORM_MAGISTER_DESC:0 "All hail the Keeper of Souls! Your humble servants in the [faction.GetName] have united to cast off our bonds of fealty to [faction_target.GetName]. We will now find our way to your feet, through force of arms if necessary."
+  REGULA_FACTION_DEMAND_SERVITUDE_INFORM_MAGISTER_OPT:0 "Excellent..."

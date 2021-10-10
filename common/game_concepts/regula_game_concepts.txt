@@ -1,0 +1,8 @@
+﻿regula_fascinare_scheme = {
+    alias = { fascinare regula_fascinare regula_fascinare_interaction }
+    parent = scheme
+}
+
+regula_servitude_faction = {
+    parent = faction
+}

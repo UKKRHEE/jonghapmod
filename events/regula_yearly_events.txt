@@ -1,0 +1,1750 @@
+﻿namespace = regula_yearly
+
+# 0000-0999: Maintenance events
+# 1000-1999: Vassal events
+# 2000-2999: Concubinage events
+
+######################################################
+# MAINTENANCE EVENTS
+# 0000-0999
+######################################################
+
+######################################################
+# GIFT EVENTS
+# 1000-1999
+######################################################
+
+scripted_trigger regula_yearly_1000_vassal_trigger = {
+	is_available_ai_adult = yes
+	is_not_hostile_towards_root = yes
+	is_at_war = no
+	has_trait = devoted_trait_group
+	OR = {
+		ai_greed <= high_negative_ai_value
+		has_trait = generous
+	}
+	opinion = {
+		target = root
+		value >= neutral_opinion
+	}
+	OR = { # The vassal should be moderately loaded
+		AND = {
+			gold >= major_gold_value
+			root = { is_ai = no }
+		}
+		short_term_gold >= major_gold_value
+	}
+	NOT = { has_trait = shy }
+}
+
+
+regula_yearly.1000 = { # Mulsa offers liege a gift
+	type = character_event
+	title = regula_yearly.1000.t
+	desc = {
+		desc = regula_yearly.1000.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_trait = paranoid
+				}
+				desc = regula_yearly.1000.desc.paranoid
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_trait = deviant
+						has_trait = sadistic
+					}
+				}
+				desc = regula_yearly.1000.desc.deviant
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lustful
+				}
+				desc = regula_yearly.1000.desc.lustful
+			}
+			desc = regula_yearly.1000.desc.fallback
+		}
+	}
+	theme = vassal
+	right_portrait = {
+		character = scope:vassal
+		triggered_animation = {
+			trigger = {
+				root = {
+					has_trait = paranoid
+				}
+			}
+			animation = scheme
+		}
+		triggered_animation = {
+			trigger = {
+				root = {
+					has_trait = lustful
+				}
+			}
+			animation = flirtation
+		}
+		triggered_animation = {
+			trigger = { always = yes }
+			animation = happiness
+		}
+	}
+
+	trigger = {
+		NOT = { has_character_flag = had_event_regula_yearly_1000 }
+		is_capable_adult = yes
+		has_trait = magister_trait_group
+
+		#Find a suitable vassal
+		any_vassal = {
+			regula_yearly_1000_vassal_trigger = yes
+			save_temporary_scope_as = vassal
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_regula_yearly_1000
+			years = 10
+		}
+		random_vassal = {
+			limit = {
+				regula_yearly_1000_vassal_trigger = yes
+			}
+			save_scope_as = vassal
+		}
+	}
+
+	option = { # Accept the vassal's gift
+		name = regula_yearly.1000.a
+
+		scope:vassal = {
+			pay_short_term_gold = {
+				target = root
+				gold = major_gold_value
+			}
+
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 15
+			}
+		}
+
+		add_prestige = minor_prestige_value
+
+		hidden_effect = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = scope:vassal
+				opinion = 30
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = paranoid
+					has_trait = generous
+				}
+			}
+		}
+
+		stress_impact = {
+			paranoid = medium_stress_impact_gain
+			generous = medium_stress_impact_gain
+		}
+	}
+
+	option = { # Take the gift and the vassal
+		name = regula_yearly.1000.b
+
+		scope:vassal = {
+			pay_short_term_gold = {
+				target = root
+				gold = medium_gold_value
+			}
+
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 30
+			}
+		}
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:vassal
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+
+		add_prestige = medium_prestige_value
+
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					ai_honor > 0
+					ai_greed < 0
+				}
+			}
+
+			modifier = {
+				factor = 2
+				ai_honor < 0
+				ai_greed > 0
+			}
+
+			modifier = {
+				factor = 10
+				ai_honor <= high_negative_ai_value
+				ai_greed >= medium_positive_ai_value
+			}
+		}
+
+		stress_impact = {
+			paranoid = medium_stress_impact_gain
+			generous = major_stress_impact_gain
+			compassionate = medium_stress_impact_gain
+			temperate = major_stress_impact_gain
+			content = major_stress_impact_gain
+		}
+	}
+
+	option = { # Give the money back
+		name = regula_yearly.1000.c
+
+		trigger = {
+			NAND = {
+				OR = {
+					has_trait = lunatic
+					has_trait = possessed
+					has_trait = sadistic
+				}
+			}
+		}
+
+		scope:vassal = {
+			add_stewardship_skill = 2
+			add_character_modifier = {
+				modifier = focused_modifier
+				years = 5
+			}
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 35
+			}
+		}
+
+		add_prestige = medium_prestige_value
+		if = {
+			limit = {
+				has_lifestyle = diplomacy_lifestyle
+			}
+			add_diplomacy_lifestyle_xp = medium_lifestyle_experience
+		}
+		else = {
+			add_diplomacy_lifestyle_xp = miniscule_lifestyle_experience
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = paranoid
+					has_trait = generous
+				}
+			}
+			modifier = {
+				add = 900
+				OR = {
+					ai_greed <= -50
+					has_trait = generous
+				}
+			}
+			modifier = {
+				factor = 0
+				gold < major_gold_value_check
+			}
+		}
+
+		stress_impact = {
+			greedy = massive_stress_impact_gain
+			arrogant = medium_stress_impact_gain
+			arbitrary = medium_stress_impact_gain
+		}
+	}
+
+	option = { # Deviant option
+		name = regula_yearly.1000.d
+
+		trigger = {
+			has_trait = deviant
+			has_trait_rank = { ### UPDATE - Not sure about this.
+				trait = magister_trait_group
+				rank >= 3
+			}
+		}
+
+		if = {
+			limit = {
+				stress > 0
+			}
+			add_stress = minor_stress_loss
+		}
+
+		scope:vassal = {
+			add_stewardship_skill = 2
+			add_character_modifier = {
+				modifier = focused_modifier
+				years = 5
+			}
+		}
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:vassal
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+
+		regula_bdsm_session_effect = {
+			SUBMISSIVE = scope:vassal
+			DOMINANT = root
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 900
+				has_trait = paranoid
+			}
+		}
+	}
+}
+
+
+scripted_trigger regula_yearly_1100_vassal_trigger = {
+	is_available_ai_adult = yes
+	has_trait = devoted_trait_group
+	is_at_war = no
+	OR = { # The vassal should be moderately loaded
+		AND = {
+			gold >= medium_gold_value
+			root = { is_ai = no }
+		}
+		short_term_gold >= medium_gold_value
+	}
+}
+
+regula_yearly.1100 = { # A group of vassals collectively wish to contribute to your war effort, by Alexander Oltner
+	type = character_event
+	title = regula_yearly.1100.t
+	desc = {
+		desc = regula_yearly.1100.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_trait = generous
+						has_trait = content
+					}
+				}
+				desc = regula_yearly.1100.desc.generous
+			}
+			# triggered_desc = {
+			# 	trigger = {
+			# 		OR = {
+			# 			has_trait = deviant
+			# 			has_trait = sadistic
+			# 		}
+			# 	}
+			# 	desc = regula_yearly.1000.desc.deviant
+			# }
+			triggered_desc = {
+				trigger = {
+					has_trait = lustful
+					has_trait = deviant
+				}
+				desc = regula_yearly.1000.desc.lustful
+			}
+			desc = regula_yearly.1000.desc.fallback
+		}
+	}
+	theme = vassal
+	left_portrait = {
+		character = scope:vassal_1
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:vassal_3
+		animation = admiration
+	}
+	lower_left_portrait = scope:vassal_2
+	lower_right_portrait = scope:vassal_4
+
+	trigger = {
+		NOT = { has_character_flag = had_event_regula_yearly_1100 }
+		is_capable_adult = yes
+		is_at_war = yes
+		has_trait = magister_trait_group
+		OR = {
+			any_character_war = {
+				casus_belli = {
+					AND = {
+						primary_attacker = root
+						primary_defender = {
+							is_male = no
+						}
+					}
+				}
+			}
+			any_character_war = {
+				casus_belli = {
+					AND = {
+						primary_defender = root
+						primary_attacker = {
+							is_male = no
+						}
+					}
+				}
+			}
+		}
+		is_in_civil_war = no
+		any_vassal = {
+			count >= 4
+			regula_yearly_1100_vassal_trigger = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 5
+			is_at_war = yes
+			is_in_civil_war = no
+		}
+		modifier = {
+			factor = 10
+			is_at_war = yes
+			is_in_civil_war = no
+			gold < 0
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_regula_yearly_1100
+			years = 10
+		}
+		every_vassal = {
+			limit = {
+				regula_yearly_1100_vassal_trigger = yes
+			}
+			add_to_list = generous_vassals
+		}
+		random_in_list = {
+			list = generous_vassals
+			save_scope_as = vassal_1
+		}
+		random_in_list = {
+			list = generous_vassals
+			limit = {
+				NOT = { this = scope:vassal_1 }
+			}
+			save_scope_as = vassal_2
+		}
+		random_in_list = {
+			list = generous_vassals
+			limit = {
+				NOR = {
+					this = scope:vassal_1
+					this = scope:vassal_2
+				}
+			}
+			save_scope_as = vassal_3
+		}
+		random_in_list = {
+			list = generous_vassals
+			limit = {
+				NOR = {
+					this = scope:vassal_1
+					this = scope:vassal_2
+					this = scope:vassal_3
+				}
+			}
+			save_scope_as = vassal_4
+		}
+		if = {
+			limit = { is_at_war_as_attacker = yes }
+			random_character_war = {
+				limit = {
+					casus_belli = {
+						primary_defender = { is_male = no }
+					}
+				}
+				casus_belli = {
+					primary_defender = {
+						save_scope_as = war_target
+					}
+				}
+			}
+		}
+		if = {
+			limit = { is_at_war_as_defender = yes }
+			random_character_war = {
+				limit = {
+					casus_belli = {
+						primary_attacker = { is_male = no }
+					}
+				}
+				casus_belli = {
+					primary_attacker = {
+						save_scope_as = war_target
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Accept the gift
+		name = regula_yearly.1100.a
+		flavor = regula_yearly.1100.a.tt
+
+		scope:vassal_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = medium_gold_value
+			}
+			hidden_effect = {
+				add_prestige = minor_prestige_value
+			}
+		}
+		scope:vassal_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = medium_gold_value
+			}
+			hidden_effect = {
+				add_prestige = minor_prestige_value
+			}
+		}
+		scope:vassal_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+			hidden_effect = {
+				add_prestige = minor_prestige_value
+			}
+		}
+		scope:vassal_4 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+			hidden_effect = {
+				add_prestige = minor_prestige_value
+			}
+		}
+
+		hidden_effect = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = scope:vassal_1
+				opinion = 25
+			}
+			add_opinion = {
+				modifier = respect_opinion
+				target = scope:vassal_2
+				opinion = 25
+			}
+			add_opinion = {
+				modifier = respect_opinion
+				target = scope:vassal_3
+				opinion = 25
+			}
+			add_opinion = {
+				modifier = respect_opinion
+				target = scope:vassal_4
+				opinion = 25
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = generous
+			}
+		}
+
+		stress_impact = {
+			generous = minor_stress_impact_gain
+		}
+	}
+
+	option = { # Appreciate the gesture, but decline the money
+		name = regula_yearly.1100.c
+		flavor = regula_yearly.1100.c.tt
+
+		add_prestige = minor_prestige_value
+
+		scope:vassal_1 = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 10
+			}
+			add_stewardship_skill = 2
+			add_character_modifier = {
+				modifier = pilgrimage_foreign_guards_modifier
+				years = 3
+			}
+		}
+		scope:vassal_2 = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 10
+			}
+			add_stewardship_skill = 2
+			add_character_modifier = {
+				modifier = pilgrimage_foreign_guards_modifier
+				years = 3
+			}
+		}
+		scope:vassal_3 = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 10
+			}
+			add_stewardship_skill = 2
+			add_character_modifier = {
+				modifier = pilgrimage_foreign_guards_modifier
+				years = 3
+			}
+		}
+		scope:vassal_4 = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 10
+			}
+			add_stewardship_skill = 2
+			add_character_modifier = {
+				modifier = pilgrimage_foreign_guards_modifier
+				years = 3
+			}
+		}
+
+		ai_chance = {
+			base = 25
+		}
+
+		stress_impact = {
+			greedy = major_stress_impact_gain
+		}
+	}
+
+	option = { # Deviant: Overflowing with ideas
+		name = regula_yearly.1100.d
+		flavor = regula_yearly.1100.d.tt
+
+		trigger = {
+			OR = {
+				has_trait = deviant
+				has_trait = lustful
+				has_trait_rank = { ### UPDATE - Not sure about this.
+					trait = magister_trait_group
+					rank >= 4
+				}
+			}
+		}
+
+		add_prestige = major_prestige_value
+		if = {
+			limit = {
+				stress > 0
+			}
+			add_stress = major_stress_impact_loss
+		}
+
+		scope:vassal_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = medium_gold_value
+			}
+		}
+		scope:vassal_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = medium_gold_value
+			}
+		}
+		scope:vassal_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+		}
+		scope:vassal_4 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+		}
+
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:vassal_1
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:vassal_2
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:vassal_3
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:vassal_4
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+
+		scope:vassal_1 = {
+			add_prowess_skill = 4
+			add_prestige = medium_prestige_loss
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 15
+			}
+		}
+		scope:vassal_2 = {
+			add_prowess_skill = 3
+			add_prestige = medium_prestige_loss
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 15
+			}
+		}
+		scope:vassal_3 = {
+			add_prowess_skill = 2
+			add_prestige = minor_prestige_loss
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 15
+			}
+		}
+		scope:vassal_4 = {
+			add_prowess_skill = 2
+			add_prestige = minor_prestige_loss
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 15
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+scripted_trigger regula_yearly_1300_holy_order_eligible = {
+	has_trait = devoted_trait_group
+	faith = global_var:magister_character.faith
+	highest_held_title_tier >= tier_duchy
+	gold >= 200
+	prestige >= 400
+	NOT = {
+		faith = {
+			any_faith_holy_order = {
+				holy_order_patron = scope:vassal
+			}
+		}
+	}
+	OR = {
+		any_held_title = {
+			tier = tier_barony
+			barony_is_valid_for_holy_order_lease_trigger = { CHARACTER = scope:vassal }
+		}
+		any_vassal_or_below = {
+			primary_title.tier = tier_barony
+			any_held_title = {
+				barony_is_valid_for_holy_order_lease_trigger = { CHARACTER = scope:vassal }
+			}
+		}
+	}
+}
+
+# Petition to found a holy order.
+regula_yearly.1300 = { 
+	type = character_event
+	title = regula_yearly.1300.t
+	desc = regula_yearly.1300.desc
+
+	theme = regula_theme
+	override_background = {
+		event_background = throne_room
+	}
+	right_portrait  = {
+		character = scope:petitioner
+		animation = personality_bold
+	}
+	
+	trigger = {
+		is_ai = no
+		# NOT = {
+		# 	has_character_flag = flag_regula_yearly_1300_cooldown
+		# }
+		any_vassal_or_below = {
+			save_temporary_scope_as = vassal
+			regula_yearly_1300_holy_order_eligible = yes
+		}
+		piety >= 150
+		gold >= 200
+		faith = {  
+			any_faith_holy_order = {
+				count < 6
+			}
+		}
+	}
+
+	weight_multiplier = { # Low base likelihood, but a militant paelex will push for it. # UPDATE - Petitioner doesn't work here.
+		base = 1
+		modifier = {
+			add = 3
+			highest_held_title_tier = tier_empire
+		}
+		modifier = {
+			add = 1
+			highest_held_title_tier = tier_kingdom
+		}
+		modifier = {
+			add = 3
+			faith = {  
+				any_faith_holy_order = {
+					count < 2
+				}
+			}
+		}
+	}
+
+	immediate = {
+		# add_character_flag = {
+		# 	flag = flag_regula_yearly_1300_cooldown
+		# 	years = 7
+		# }
+		random_vassal_or_below = {
+			limit = {
+				save_temporary_scope_as = vassal
+				regula_yearly_1300_holy_order_eligible = yes
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = 3
+					scope:vassal = {
+						highest_held_title_tier = tier_kingdom
+					}
+				}
+				modifier = {
+					add = 2
+					scope:vassal = {
+						has_trait = zealous
+					}
+				}
+				modifier = {
+					add = 1
+					scope:vassal = {
+						has_trait = wrathful
+					}
+				}
+				modifier = {
+					add = 1
+					scope:vassal = {
+						has_trait = brave
+					}
+				}
+				modifier = {
+					add = 1
+					scope:vassal = {
+						martial > 18
+					}
+				}
+			}
+			save_scope_as = petitioner
+		}
+	}
+
+	option = { # Give your blessing
+		name = regula_yearly.1300.a
+
+		add_piety = -150
+		remove_short_term_gold = 200
+
+		scope:petitioner = {
+			remove_short_term_gold = 200
+			add_prestige = -400
+			add_martial_skill = 2
+			add_prowess_skill = 4
+			if = {
+				limit = { NOT = { has_trait = fecund } }
+				add_trait = fecund
+			}
+		}
+
+		hidden_effect = {
+			scope:petitioner = {
+				if = {
+					limit = {
+						any_held_title = {
+							tier = tier_barony
+							barony_is_valid_for_holy_order_lease_trigger = { CHARACTER = scope:petitioner }
+						}
+					}
+					random_held_title = {
+						limit = {
+							tier = tier_barony
+							barony_is_valid_for_holy_order_lease_trigger = { CHARACTER = scope:petitioner }
+						}
+						save_scope_as = holy_order_barony
+					}
+				}
+				else = {
+					random_vassal_or_below = {
+						limit = {
+							primary_title.tier = tier_barony
+							any_held_title = {
+								barony_is_valid_for_holy_order_lease_trigger = { CHARACTER = scope:petitioner }
+							}
+						}
+						random_held_title = {
+							limit = {
+								barony_is_valid_for_holy_order_lease_trigger = { CHARACTER = scope:petitioner }
+							}
+							save_scope_as = holy_order_barony
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { scope:holy_order_barony.holder = scope:petitioner } }
+				create_title_and_vassal_change = {
+					type = leased_out
+					save_scope_as = change
+					add_claim_on_loss = no
+				}
+				scope:holy_order_barony = {
+					change_title_holder_include_vassals = {
+						holder = scope:petitioner
+						change = scope:change
+					}
+				}
+				resolve_title_and_vassal_change = scope:change
+			}
+		}
+		scope:petitioner = {
+			create_character = {
+				template = holy_order_leader_character
+				location = scope:holy_order_barony.title_province
+				save_scope_as = leader
+			}
+			create_holy_order = {
+				leader = scope:leader
+				capital = scope:holy_order_barony
+				save_scope_as = new_holy_order
+			}
+		}
+		hidden_effect = {
+			scope:leader = {
+				add_gold = 100 #So that they have some money to lend out
+				add_piety_level = 2
+				add_gold = holy_order_starting_gold
+				add_trait = lustful
+				add_trait = mulsa
+				every_courtier = {
+					add_trait = order_member
+					add_trait = mulsa
+				}
+			}
+			
+			# Messages
+			scope:petitioner = {
+				save_scope_as = holy_order_creator 
+			}
+			every_ruler = {
+				limit = {
+					faith = scope:holy_order_creator.faith
+					NOT = { this = scope:holy_order_creator }
+				}
+				send_interface_message = {
+					type = holy_order_founded_message
+					desc = someone_created_holy_order_message
+					left_icon = scope:holy_order_creator
+					right_icon = scope:new_holy_order.title
+				}
+			}
+			every_neighboring_top_liege_realm_owner = {
+				limit = {
+					NOT = { faith = scope:holy_order_creator.faith }
+				}
+				send_interface_message = {
+					type = enemy_holy_order_founded_message
+					desc = other_faith_neighbor_created_holy_order_message
+					left_icon = scope:holy_order_creator
+					right_icon = scope:new_holy_order.title
+				}
+			}	
+		}
+		faith = {
+			change_fervor = 10
+		}
+	}
+
+	option = { # Nah
+		name = regula_yearly.1300.b
+		scope:petitioner = {
+			add_prestige = -200
+			add_character_modifier = {
+				modifier = authority_central_control_modifier
+				years = 10
+			}
+		}
+	}
+}
+
+######################################################
+# CONCUBINAGE EVENTS
+# 2000-2999
+######################################################
+
+
+scripted_trigger regula_yearly_2101_valid_domina_trigger = {
+	is_available_ai = yes
+	is_adult = yes
+	is_spouse_of = root
+	has_trait = domina
+}
+
+scripted_trigger regula_yearly_2101_valid_paelex_trigger = {
+	# always = yes ### Why is this here?
+	is_available_ai = yes
+	is_adult = yes
+	is_consort_of = root
+	has_trait = paelex
+}
+
+scripted_trigger regula_yearly_2101_can_be_jealous_of_trigger = {
+	# Must have a reason to be jealous of the target.
+	is_attracted_to_gender_of = root
+	OR = {
+		has_personality_malicious_trigger = yes
+		has_relation_rival = $TARGET$
+	}
+	# Can't be jealous of ourselves!
+	NOT = { this = $TARGET$ }
+}
+
+regula_yearly.2101 = {
+	type = character_event
+	title = regula_yearly.2101.t
+	desc = regula_yearly.2101.desc
+	theme = seduction
+	override_background = {
+		event_background = corridor_night
+	}
+	left_portrait = {
+		character = scope:bickering_attacker
+		animation = rage
+	}
+	right_portrait = {
+		character = scope:bickering_defender
+		animation = anger
+	}
+
+	trigger = {
+		NOT = {
+			has_character_flag = flag_regula_yearly_2101_cooldown
+		}
+		is_adult = yes
+		is_ai = no
+		is_available = yes
+		is_married = yes
+		regula_num_landed_concubines >= 2
+		OR = {
+			AND = { #Either a paelex starts the fuss...
+				any_consort = {
+					regula_yearly_2101_valid_paelex_trigger = yes
+					save_temporary_scope_as = bickering_defender_tmp
+				}
+				any_consort = {
+					regula_yearly_2101_valid_paelex_trigger = yes
+					regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_defender_tmp }
+					save_temporary_scope_as = bickering_attacker_tmp
+				}
+			}
+			AND = {
+				any_consort = {
+					regula_yearly_2101_valid_domina_trigger = yes
+					save_temporary_scope_as = bickering_defender_tmp
+				}
+				any_consort = {
+					regula_yearly_2101_valid_paelex_trigger = yes
+					regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_defender_tmp }
+					save_temporary_scope_as = bickering_attacker_tmp
+				}
+			}
+			AND = { #...Or the domina does.
+				any_consort = {
+					regula_yearly_2101_valid_paelex_trigger = yes
+					save_temporary_scope_as = bickering_defender_tmp
+				}
+				any_consort = {
+					regula_yearly_2101_valid_domina_trigger = yes
+					regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_defender_tmp }
+					save_temporary_scope_as = bickering_attacker_tmp
+				}
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_trait = lazy
+		}
+		modifier = {
+			factor = 4
+			has_trait = chaste
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = lustful
+		}
+		compare_modifier = {  #Attractive ruler more likely to be sought after.
+			value = attraction
+			offset = medium_positive_attraction
+			multiplier = 0.02
+		}
+	}
+
+	immediate = {
+		save_scope_as = scoped_ruler
+		hidden_effect = {
+			add_character_flag = {
+				flag = flag_regula_yearly_2101_cooldown
+				years = 5
+			}
+			if = {
+				limit = { # Paelex tries to go first (more drama).
+					any_spouse = {
+						regula_yearly_2101_valid_domina_trigger = yes
+						save_temporary_scope_as = bickering_target_domina_tmp
+					}
+					any_consort = {
+						regula_yearly_2101_valid_paelex_trigger = yes
+						regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_target_domina_tmp }
+					}
+				}
+				random_spouse = {
+					limit = {
+						regula_yearly_2101_valid_domina_trigger = yes
+						save_temporary_scope_as = bickering_target_domina_tmp
+						root = {
+							any_consort = {
+								regula_yearly_2101_valid_paelex_trigger = yes
+								regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_target_domina_tmp }
+							}
+						}
+					}
+					save_scope_as = bickering_domina
+					save_scope_as = bickering_defender
+				}
+				random_consort = {
+					limit = {
+						regula_yearly_2101_valid_paelex_trigger = yes
+						regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_defender }
+					}
+					save_scope_as = bickering_paelex
+					save_scope_as = bickering_attacker
+				}
+			}
+			else_if = {
+				limit = { # Paelex vs paelex.
+					any_consort = {
+						regula_yearly_2101_valid_paelex_trigger = yes
+						save_temporary_scope_as = bickering_target_paelex_tmp
+					}
+					any_consort = {
+						regula_yearly_2101_valid_paelex_trigger = yes
+						regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_target_paelex_tmp }
+					}
+				}
+				random_consort = {
+					limit = {
+						regula_yearly_2101_valid_paelex_trigger = yes
+						save_temporary_scope_as = bickering_target_paelex_tmp
+						root = {
+							any_consort = {
+								regula_yearly_2101_valid_paelex_trigger = yes
+								regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_target_paelex_tmp }
+							}
+						}
+					}
+					save_scope_as = bickering_paelex
+					save_scope_as = bickering_defender
+				}
+				random_consort = {  # Random relation?
+					limit = {
+						regula_yearly_2101_valid_paelex_trigger = yes
+						regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_defender }
+					}
+					save_scope_as = bickering_paelex2
+					save_scope_as = bickering_attacker
+				}
+			}
+
+			else = { # Else domina goes.
+				random_consort = {
+					limit = {
+							regula_yearly_2101_valid_paelex_trigger = yes
+							save_temporary_scope_as = bickering_target_paelex
+						root = {
+							any_spouse = {
+								regula_yearly_2101_valid_domina_trigger = yes
+								regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_target_paelex }
+							}
+						}
+					}
+					save_scope_as = bickering_paelex
+					save_scope_as = bickering_defender
+				}
+				random_spouse = {
+					limit = {
+						regula_yearly_2101_valid_domina_trigger = yes
+						regula_yearly_2101_can_be_jealous_of_trigger = { TARGET = scope:bickering_defender }
+					}
+					save_scope_as = bickering_domina
+					save_scope_as = bickering_attacker
+				}
+			}
+		}
+	}
+
+	option = { # Side with attacker
+		name = { # Domina against paelex.
+			trigger = {
+				scope:bickering_attacker = {
+					has_trait = domina
+				}
+			}
+			text = regula_yearly.2101.a.a.domina
+		}
+		name = { # Paelex against domina
+			trigger = {
+				scope:bickering_attacker = {
+					has_trait = paelex
+				}
+				scope:bickering_defender = {
+					has_trait = domina
+				}
+			}
+			text = regula_yearly.2101.a.a.paelex.domina
+		}
+		name = { # Paelex against paelex
+			trigger = {
+				scope:bickering_attacker = {
+					has_trait = paelex
+				}
+				scope:bickering_defender = {
+					has_trait = paelex
+				}
+			}
+			text = regula_yearly.2101.a.a.paelex.paelex
+		}
+		scope:bickering_attacker = {
+			add_opinion = {
+				target = root
+				modifier = spouse_praised_me_opinion
+			}
+		}
+		scope:bickering_defender = {
+			add_opinion = {
+				target = root
+				modifier = lover_let_me_down_opinion
+			}
+		}
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:bickering_attacker
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_compassion = 100
+				ai_vengefulness = -50
+			}
+		}
+	}
+
+	option = { # Side with defender
+		name = { # Domina against paelex.
+			trigger = {
+				scope:bickering_attacker = {
+					has_trait = domina
+				}
+			}
+			text = regula_yearly.2101.b.a.domina
+		}
+		name = { # Paelex against domina
+			trigger = {
+				scope:bickering_attacker = {
+					has_trait = paelex
+				}
+				scope:bickering_defender = {
+					has_trait = domina
+				}
+			}
+			text = regula_yearly.2101.b.a.paelex.domina
+		}
+		name = { # Paelex against paelex
+			trigger = {
+				scope:bickering_attacker = {
+					has_trait = paelex
+				}
+				scope:bickering_defender = {
+					has_trait = paelex
+				}
+			}
+			text = regula_yearly.2101.b.a.paelex.paelex
+		}
+		scope:bickering_defender = {
+			add_opinion = {
+				target = root
+				modifier = spouse_praised_me_opinion
+			}
+		}
+		scope:bickering_attacker = {
+			add_opinion = {
+				target = root
+				modifier = lover_let_me_down_opinion
+			}
+		}
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:bickering_defender
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_compassion = -50
+				ai_vengefulness = -50
+				ai_honor = -100
+			}
+		}
+	}
+
+	option = { # Fuck them both
+		name = regula_yearly.2101.c
+		trigger = {
+			OR = {
+				has_trait = lustful
+				has_trait = fecund
+				has_trait = physique_good_2
+				has_trait = physique_good_3
+				has_trait = athletic
+				has_trait = magister_4
+				has_trait = magister_5
+				has_trait = magister_6
+			}
+		}
+
+		flavor = regula_yearly.2101.c.tt
+
+		scope:bickering_attacker = {
+			set_relation_friend = scope:bickering_attacker
+		}
+
+		scope:bickering_defender = {
+			add_opinion = {
+				target = root
+				modifier = regula_recently_fucked
+			}
+			set_sexuality = bisexual
+		}
+		scope:bickering_attacker = {
+			add_opinion = {
+				target = root
+				modifier = regula_recently_fucked
+			}
+			set_sexuality = bisexual
+		}
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:bickering_attacker
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:bickering_defender
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_compassion = -50
+				ai_vengefulness = 50
+				ai_honor = -100
+			}
+		}
+	}
+
+	option = { #Fetch your whips and chains
+		name = regula_yearly.2101.d
+		trigger = {
+			OR = {
+				has_trait = deviant
+				has_trait = sadistic
+			}
+		}
+
+		flavor = regula_yearly.2101.d.tt
+
+		add_prestige = 250 
+		regula_bdsm_session_effect = {
+			SUBMISSIVE = scope:bickering_defender
+			DOMINANT = root
+		}
+
+		regula_bdsm_session_effect = {
+			SUBMISSIVE = scope:bickering_attacker
+			DOMINANT = root
+		}
+
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_compassion = -50
+				ai_vengefulness = 100
+				ai_honor = 100
+			}
+		}
+	}
+
+	option = { #Turn them over to the domina for punishment.
+		name = regula_yearly.2101.e
+		flavor = regula_yearly.2101.e.tt
+		trigger = {
+			scope:bickering_defender = { NOT = { has_trait = domina } }
+			scope:bickering_attacker = { NOT = { has_trait = domina } }
+			OR = {
+				has_trait = lazy
+				has_trait = arrogant
+				has_trait = fickle
+				has_trait = arbitrary
+				has_trait = wrathful
+				has_trait = impatient
+			}
+		}
+
+		scope:bickering_attacker = {
+			add_opinion = {
+				target = root
+				modifier = lover_let_me_down_opinion
+			}
+		}
+
+		scope:bickering_defender = {
+			add_opinion = {
+				target = root
+				modifier = lover_let_me_down_opinion
+			}
+		}
+
+		global_var:magister_character.primary_spouse = {
+			add_opinion = {
+				target = root
+				modifier = domina_supported_opinion
+			}
+		}
+
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_compassion = 100
+				ai_vengefulness = 50
+				ai_honor = -50
+			}
+		}
+	}
+}
+
+scripted_trigger regula_yearly_2200_superior_skills = {
+	liege = global_var:magister_character # Only a wife that is a direct vassal can assist the MC on the council.
+	regula_character_total_skills > global_var:magister_character.primary_spouse.regula_character_total_skills
+	age < global_var:magister_character.primary_spouse.age
+	NOT = { this = global_var:magister_character.primary_spouse }
+}
+
+### Paelex wants to be domina
+regula_yearly.2200 = { 
+	type = character_event
+	title = regula_yearly.2200.t
+	desc = regula_yearly.2200.desc
+
+	theme = regula_theme
+	override_background = {
+		event_background = regula_bedchamber
+	}
+	left_portrait  = {
+		character = scope:petitioner
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = personality_bold
+	}
+
+	right_portrait = {
+		character = global_var:magister_character.primary_spouse
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = disbelief
+	}
+	
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_character_flag = flag_regula_yearly_2200_cooldown
+		}
+		regula_num_landed_concubines >= 2
+		any_spouse = {
+			regula_yearly_2200_superior_skills = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 2
+			global_var:magister_character.primary_spouse = {
+				has_personality_submissive_trigger = yes
+			}
+		}
+		modifier = {
+			add = -2
+			OR = { 
+				global_var:magister_character.primary_spouse = {
+					OR = {
+						has_personality_dominant_trigger = yes
+						has_personality_malicious_trigger = yes
+					}
+				}
+			}
+		}
+	}
+
+	
+	immediate = {
+		random_spouse = {
+			limit = { regula_yearly_2200_superior_skills = yes }
+			save_scope_as = petitioner
+		}
+		hidden_effect = {
+			add_character_flag = {
+				flag = flag_regula_yearly_2200_cooldown
+				years = 5
+			}
+		}
+		global_var:magister_character.primary_spouse = {
+			save_scope_as = domina
+		}
+		scope:petitioner = {
+			add_character_flag = {
+				flag = is_naked
+				days = 7
+			}
+		}
+		scope:domina = {
+			add_character_flag = {
+				flag = is_naked
+				days = 7
+			}
+		}
+	}
+
+	option = { # Make the petitioner your spouse.
+		name = regula_yearly.2200.a
+		global_var:magister_character.primary_spouse = {
+			hidden_effect = {
+				if = {
+					limit = {
+						can_set_relation_potential_rival_trigger = { CHARACTER = scope:petitioner }
+					}
+					set_relation_potential_rival = scope:petitioner
+				}
+			}
+			remove_trait = domina
+			add_trait_force_tooltip = paelex
+			hidden_effect = {
+				if = {
+					limit = {
+						has_opinion_modifier = {
+							target = global_var:magister_character
+							modifier = spouse_made_primary_opinion
+						}
+					}
+					remove_opinion = {
+						modifier = spouse_made_primary_opinion
+						target = global_var:magister_character
+					}
+				}
+			}
+			add_opinion = {
+				target = global_var:magister_character
+				modifier = spouse_made_secondary_opinion
+			}
+			hidden_effect = {
+				send_interface_toast = {
+					title = set_primary_spouse_interaction_toast
+					left_icon = global_var:magister_character
+					right_icon = scope:petitioner
+
+					custom_tooltip = set_primary_spouse_interaction_toast_removed
+				}
+			}
+		}
+		global_var:magister_character = {
+			set_primary_spouse = scope:petitioner
+
+			hidden_effect = {	
+				send_interface_toast = {
+					title = set_primary_spouse_interaction_toast
+					left_icon = global_var:magister_character
+					right_icon = scope:petitioner
+
+					custom_tooltip = set_primary_spouse_interaction_toast_changed
+				}
+			}
+		}
+		scope:petitioner = {
+			remove_trait = paelex
+			add_trait_force_tooltip = domina
+			add_diplomacy_lifestyle_perk_points = 1
+			hidden_effect = {	
+				send_interface_toast = {
+					title = set_primary_spouse_interaction_toast
+					left_icon = global_var:magister_character
+					right_icon = scope:petitioner
+
+					custom_tooltip = set_primary_spouse_interaction_toast_added
+				}
+			}
+
+			if = {
+				limit = {
+					has_opinion_modifier = {
+						target = global_var:magister_character
+						modifier = spouse_made_secondary_opinion
+					}
+				}
+				remove_opinion = {
+					modifier = spouse_made_secondary_opinion
+					target = global_var:magister_character
+				}
+			}
+			add_opinion = {
+				target = global_var:magister_character
+				modifier = spouse_made_primary_opinion
+			}
+		}
+	}
+
+	option = { # Make it clear that your spouse has your favour.
+		name = regula_yearly.2200.b
+		global_var:magister_character.primary_spouse = {
+			add_opinion = {
+				target = global_var:magister_character
+				modifier = spouse_praised_me_opinion
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = global_var:magister_character
+			CHARACTER_2 = global_var:magister_character.primary_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		scope:petitioner = {
+			add_prestige = -100
+		}
+	}
+	after = {
+		scope:petitioner = {
+			remove_character_flag = is_naked
+		}
+		scope:domina = {
+			remove_character_flag = is_naked
+		}
+	}
+}

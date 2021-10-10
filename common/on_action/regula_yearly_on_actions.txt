@@ -1,0 +1,36 @@
+﻿
+
+random_yearly_playable_pulse = {
+	on_actions = {
+		yearly_on_action_events_magister
+	}
+}
+
+yearly_on_action_events_magister = {
+	trigger = { 
+		is_ai = no
+		has_trait = magister_trait_group 
+	}
+
+	random_events = {
+		chance_to_happen = 40
+		
+		200 = 0						# To prevent 1 eligible event from constantly firing.
+		100 = regula_yearly.1000 	# Vassal offers liege a gift.
+		200 = regula_yearly.1100 	# A group of vassals collectively wish to contribute to your war effort against a female ruler.
+		150 = regula_yearly.1300		# Vassal offers to start a holy order. Has a high likelihood modifier, based on vassal personality traits.
+		100 = regula_yearly.2101 	# Catching Lover and Spouse fighting.
+		100 = regula_yearly.2200	# Paelex tries to displace Domina.
+		
+		#'Nice' events (positive effects)
+		# 100 = yearly.8100 	# The peasantry of a Domain province gives you a gift
+		# 100 = yearly.8200 	# Your realm priest offers you part of a large donation
+		# 100 = stress_trait_ongoing.1501 # Rake fantasizes about courtier.
+
+		# 100 = clan.1011 #A vassal asks for a perk
+
+		# 100 = yearly_saharan.0031 # Local slave raids intensify (aggressor).
+		# 100 = yearly_saharan.0032 # Local slave raids intensify (defender).
+	}
+}
+

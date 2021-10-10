@@ -1,0 +1,20 @@
+﻿l_spanish:
+
+ carnd_youthful_rulership_abdicate_decision:1 "Abdicar"
+ carnd_youthful_rulership_abdicate_decision_desc:1 "Es hora de pasar mis deberes a mi heredero, que seguira gobernando con el fuego de la juventud en mi lugar."
+ carnd_youthful_rulership_abdicate_decision_tooltip:1 "Abdicar a favor de [player_heir|E]"
+ carnd_youthful_rulership_abdicate_decision_confirm:1 "Abdicar"
+
+ carnd_xuansu_immortality_decision:1 "Conseguir la Immortalidad"
+ carnd_xuansu_immortality_decision_desc:1 "A traves del sagrado arte del sexo, refinamos la esencia vital que fluye en nuestros cuerpos. Se dice que cultivando los humores, podemos trascender nuestras limitaciones fisicas y lograr la inmortalidad."
+ carnd_xuansu_immortality_decision_tooltip:1 "Cultivar tu esencia sexual y alcanzar la iluminación"
+ carnd_xuansu_immortality_decision_confirm:1 "¡Vivire por diez mil años!"
+ carnd_had_sex_108_times:1 "Has tenido relaciones con otras personas 108 veces"
+ carnd_had_sex_times_counter_tooltip:1 "#weak (Times laid with other characters:1 [THIS.Var('carnd_times_had_sex').GetValue|0])#!"
+ 
+ carnd_restore_sodom_and_gomorrah_decision:1 "Restaurar Sodoma y Gomorra"
+ carnd_restore_sodom_and_gomorrah_decision_desc:1 "Hace mas de dos mil años, las sagradas ciudades fueron arrazadas por fuego y azufre. Refundando Sodoma y Gomorra pondran fin a los mil años de opresion Jehovita y servira como un grito de guerra para todos los [ROOT.Char.GetFaith.GetReligion.GetNameNoTooltip]."
+ carnd_restore_sodom_and_gomorrah_decision_tooltip:1 "Reconstruir las sagradas ciudades"
+ carnd_negev_becomes_sodom_tooltip:1 "$c_negev$ becomes $carnd_sodom$"
+ carnd_kerak_becomes_gomorrah_tooltip:1 "$c_kerak$ becomes $carnd_gomorrah$"
+ carnd_restore_sodom_and_gomorrah_decision_confirm:1 "El valle del Eden a resurgido"

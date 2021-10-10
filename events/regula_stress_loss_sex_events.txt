@@ -1,0 +1,411 @@
+﻿namespace = regula_stress_loss_sex_event
+
+regula_stress_loss_sex_event.0001 = {
+	hidden = yes
+
+	trigger = {
+		has_trait = devoted_trait_group # Fallback
+		NOR = {
+			has_trait = mulsa
+			has_trait = orba
+			has_trait = contubernalis
+		}
+		global_var:magister_character = {
+			regula_num_landed_concubines >= 2
+		}
+	}
+
+	immediate = {
+		save_scope_as = stressed
+
+		global_var:magister_character = {
+			random_spouse = {
+				limit = {
+					has_trait = devoted_trait_group
+				}
+				weight = {
+					base = 1
+
+					modifier = {
+						add = 15
+						has_trait = lustful
+					}
+					modifier = {
+						add = 25
+						NOT = { has_sexuality = heterosexual }
+					}
+					modifier = {
+						add = 25
+						opinion = {
+							target = scope:stressed
+							value > 50
+						}
+					}
+					modifier = {
+						add = 75
+						has_relation_lover = scope:stressed
+					}
+					modifier = {
+						add = 50
+						has_relation_soulmate = scope:stressed
+					}
+					modifier = {
+						add = 25
+						has_relation_friend = scope:stressed
+					}
+					modifier = {
+						add = 50
+						stress > medium_stress
+					}
+				}
+				save_scope_as = stressed_partner
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:stressed
+			CHARACTER_2 = scope:stressed_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = no
+			DRAMA = no
+		}
+		global_var:magister_character = {
+			send_interface_message = {
+				type = event_spouse_task_good
+				title = regula_stress_loss_sex_event.0001.t
+				desc = regula_stress_loss_sex_event.0001.desc
+
+				left_icon = scope:stressed
+				right_icon = scope:stressed_partner
+				
+				scope:stressed = {  # UPDATE - This is going to be a lot.
+					random_list = {
+						20 = {
+							modifier = {
+								has_trait = lustful
+								add = -20
+							}
+							add_trait = lustful
+						} 
+						20 = {
+							modifier = {
+								has_sexuality = bisexual
+								add = -20
+							}
+							modifier = {
+								has_sexuality = homosexual
+								add = -20
+							}
+							set_sexuality = bisexual
+						}
+						5 = {
+							modifier = {
+								has_sexuality = bisexual
+								add = -5
+							}
+							modifier = {
+								has_sexuality = homosexual
+								add = -5
+							}
+							modifier = {
+								has_trait = lustful
+								add = -5
+							}
+							add_trait = lustful
+							set_sexuality = bisexual
+						}
+						55 = {
+							modifier = {
+								has_sexuality = bisexual
+								add = -20
+							}
+							modifier = {
+								has_sexuality = homosexual
+								add = -20
+							}
+							modifier = {
+								has_trait = lustful
+								add = -20
+							}								
+						}
+					}
+					scope:stressed_partner = {
+						random_list = {
+							20 = {
+								modifier = {
+									has_trait = lustful
+									add = -20
+								}
+								add_trait = lustful
+							} 
+							20 = {
+								modifier = {
+									has_sexuality = bisexual
+									add = -20
+								}
+								modifier = {
+									has_sexuality = homosexual
+									add = -20
+								}
+								set_sexuality = bisexual
+							}
+							5 = {
+								modifier = {
+									has_sexuality = bisexual
+									add = -5
+								}
+								modifier = {
+									has_sexuality = homosexual
+									add = -5
+								}
+								modifier = {
+									has_trait = lustful
+									add = -5
+								}
+								add_trait = lustful
+								set_sexuality = bisexual
+							}
+							55 = {
+								modifier = {
+									has_sexuality = bisexual
+									add = -20
+								}
+								modifier = {
+									has_sexuality= homosexual
+									add = -20
+								}
+								modifier = {
+									has_trait = lustful
+									add = -20
+								}								
+							}
+						}
+					}
+					hidden_effect = {
+						add_stress = -275
+						scope:stressed_partner = {
+							add_stress = -275
+						}
+						if = {
+							limit = {
+								can_set_relation_potential_lover_trigger = { CHARACTER = scope:stressed_partner }
+							}
+							hidden_effect = {
+								set_relation_potential_lover = scope:stressed_partner
+							}
+						}
+						else = {
+							random = {
+								chance = 40
+								if = {
+									limit = {
+										can_set_relation_lover_trigger = { CHARACTER = scope:stressed_partner }
+									}
+								}
+								set_relation_lover = scope:stressed_partner
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+regula_stress_loss_sex_event.0002 = {
+	hidden = yes
+
+	trigger = {
+		has_trait = mulsa
+	}
+
+	immediate = {
+		# save_scope_as = stressed
+
+		# global_var:magister_character = {
+		# 	random_spouse = {
+		# 		limit = {
+		# 			has_trait = devoted_trait_group
+		# 		}
+		# 		weight = {
+		# 			base = 1
+
+		# 			modifier = {
+		# 				add = 15
+		# 				has_trait = lustful
+		# 			}
+		# 			modifier = {
+		# 				add = 25
+		# 				NOT = { has_sexuality = heterosexual }
+		# 			}
+		# 			modifier = {
+		# 				add = 25
+		# 				opinion = {
+		# 					target = scope:stressed
+		# 					value > 50
+		# 				}
+		# 			}
+		# 			modifier = {
+		# 				add = 75
+		# 				has_relation_lover = scope:stressed
+		# 			}
+		# 			modifier = {
+		# 				add = 50
+		# 				has_relation_soulmate = scope:stressed
+		# 			}
+		# 			modifier = {
+		# 				add = 50
+		# 				scope:stressed_partner = {
+		# 					stress > medium_stress
+		# 				}
+		# 			}
+		# 		}
+		# 		save_scope_as = stressed_partner
+		# 	}
+		# }
+		# carn_had_sex_with_effect = {
+		# 	CHARACTER_1 = scope:stressed
+		# 	CHARACTER_2 = scope:stressed_partner
+		# 	C1_PREGNANCY_CHANCE = 0
+		# 	C2_PREGNANCY_CHANCE = 0
+		# 	STRESS_EFFECTS = no
+		# 	DRAMA = no
+		# }
+		# global_var:magister_character = {
+		# 	send_interface_message = {
+		# 		type = event_spouse_task_good
+		# 		title = regula_stress_loss_sex_event.0001.t
+		# 		desc = regula_stress_loss_sex_event.0001.desc
+
+		# 		left_icon = scope:stressed
+		# 		right_icon = scope:stressed_partner
+				
+		# 		scope:stressed = {  # UPDATE - This is going to be a lot.
+		# 			add_stress = -275
+		# 			scope:stressed_partner = {
+		# 				add_stress = -275
+		# 			}
+		# 			random_list = {
+		# 				20 = {
+		# 					modifier = {
+		# 						has_trait = lustful
+		# 						add = -20
+		# 					}
+		# 					add_trait = lustful
+		# 				} 
+		# 				20 = {
+		# 					modifier = {
+		# 						has_trait = bisexual
+		# 						add = -20
+		# 					}
+		# 					modifier = {
+		# 						has_trait = homosexual
+		# 						add = -20
+		# 					}
+		# 					set_sexuality = bisexual
+		# 				}
+		# 				5 = {
+		# 					modifier = {
+		# 						has_trait = bisexual
+		# 						add = -5
+		# 					}
+		# 					modifier = {
+		# 						has_trait = homosexual
+		# 						add = -5
+		# 					}
+		# 					modifier = {
+		# 						has_trait = lustful
+		# 						add = -5
+		# 					}
+		# 					add_trait = lustful
+		# 					set_sexuality = bisexual
+		# 				}
+		# 				55 = {
+		# 					modifier = {
+		# 						has_trait = bisexual
+		# 						add = -20
+		# 					}
+		# 					modifier = {
+		# 						has_trait = homosexual
+		# 						add = -20
+		# 					}
+		# 					modifier = {
+		# 						has_trait = lustful
+		# 						add = -20
+		# 					}								
+		# 				}
+		# 			}
+		# 			scope:stressed_partner = {
+		# 				random_list = {
+		# 					20 = {
+		# 						modifier = {
+		# 							has_trait = lustful
+		# 							add = -20
+		# 						}
+		# 						add_trait = lustful
+		# 					} 
+		# 					20 = {
+		# 						modifier = {
+		# 							has_trait = bisexual
+		# 							add = -20
+		# 						}
+		# 						modifier = {
+		# 							has_trait = homosexual
+		# 							add = -20
+		# 						}
+		# 						set_sexuality = bisexual
+		# 					}
+		# 					5 = {
+		# 						modifier = {
+		# 							has_trait = bisexual
+		# 							add = -5
+		# 						}
+		# 						modifier = {
+		# 							has_trait = homosexual
+		# 							add = -5
+		# 						}
+		# 						modifier = {
+		# 							has_trait = lustful
+		# 							add = -5
+		# 						}
+		# 						add_trait = lustful
+		# 						set_sexuality = bisexual
+		# 					}
+		# 					55 = {
+		# 						modifier = {
+		# 							has_trait = bisexual
+		# 							add = -20
+		# 						}
+		# 						modifier = {
+		# 							has_trait = homosexual
+		# 							add = -20
+		# 						}
+		# 						modifier = {
+		# 							has_trait = lustful
+		# 							add = -20
+		# 						}								
+		# 					}
+		# 				}
+		# 			}
+		# 			if = {
+		# 				limit = {
+		# 					NOR = {
+		# 						has_relation_lover = scope:stressed_partner
+		# 						has_relation_potential_lover = scope:stressed_partner
+		# 					}
+		# 				}
+		# 				hidden_effect = {
+		# 					add_relation_potential_lover = scope:stressed_partner
+		# 				}
+		# 			}
+		# 			else = {
+		# 				random = {
+		# 					chance = 40
+		# 					add_relation_lover = scope:stressed_partner
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+}

@@ -1,0 +1,22 @@
+﻿l_english:
+# Output
+REGULA_STATUS_WINDOW_HEADING:0 "[CHARACTER.GetFullName]" 
+REGULA_STATUS_WINDOW_DESC:0 "[CHARACTER.Custom('regula_status_scheme_personal')] [CHARACTER.Custom('regula_status_scheme_hostile')] [CHARACTER.Custom('regula_status_faction')]"
+REGULA_STATUS_WINDOW_CLOSE:1 "Close"
+
+# Personal Schemes
+REGULA_STATUS_SCHEME_PERSONAL_YES:0 ""
+REGULA_STATUS_SCHEME_PERSONAL_YES_FALLBACK:0 ""
+REGULA_STATUS_SCHEME_PERSONAL_NO:0 "#T Personal Scheme\n#! None"
+
+# Hostile Schemes
+REGULA_STATUS_SCHEME_HOSTILE_YES:0 ""
+REGULA_STATUS_SCHEME_HOSTILE_YES_FALLBACK:0 ""
+REGULA_STATUS_SCHEME_HOSTILE_NO:0 "#T Hostile Scheme\n#! None"
+
+
+# Faction
+REGULA_STATUS_FACTION_NO:0 "#T Faction\n#! None\n"
+### Update - The switch to a faction scope is unlikely to work.
+REGULA_STATUS_FACTION_YES:0 "#T Faction\n#! [recipient.GetFirstName] is a member of the [recipient.Faction.GetName].\n[faction_military_power|E] $POWER|%0V$"
+

@@ -1,0 +1,31 @@
+﻿namespace = carnd_sacred_prostitution
+
+# adds modifier for sacred prostitution, on_start_working_as_prostitute
+carnd_sacred_prostitution.0001 = {
+	hidden = yes
+	trigger = {
+		faith = { has_doctrine_parameter = carnd_piety_from_prostitution }
+	}
+	immediate = {
+		add_character_modifier = carnd_sacred_prostitution_modifier
+	}
+}
+
+# removes modifier for sacred prostitution, on_stop_working_as_prostitute
+carnd_sacred_prostitution.0002 = {
+	hidden = yes
+	immediate = {
+		remove_character_modifier = carnd_sacred_prostitution_modifier
+	}
+}
+
+# removes modifier for sacred prostitution if you don't have sacred prostitution, on_faith_created / on_character_faith_change
+carnd_sacred_prostitution.0003 = {
+	hidden = yes
+	trigger = {
+		faith = { NOT = { has_doctrine_parameter = carnd_piety_from_prostitution } }
+	}
+	immediate = {
+		remove_character_modifier = carnd_sacred_prostitution_modifier
+	}
+}

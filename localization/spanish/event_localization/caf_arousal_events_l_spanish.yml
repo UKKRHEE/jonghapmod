@@ -1,0 +1,4 @@
+﻿l_spanish:
+caf_arousal_threshold_cooldown_message:0 "If you are still [aroused|E] in [SCOPE.ScriptValue('caf_arousal_threshold_cooldown_duration_in_years')|V0] years, you may suffer again from overwhelming lust."
+caf_arousal_threshold.0010.text:0 "You have been overwhelmed by [arousal|E]"
+caf_arousal_threshold.0400.toast:0 "You went over your [arousal|E] limit and reset to [arousal_level|E] 3"

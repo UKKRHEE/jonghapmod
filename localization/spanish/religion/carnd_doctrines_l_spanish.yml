@@ -1,0 +1,9 @@
+﻿l_spanish: 
+
+ carnd_doctrine_lust_name:1 "Sexualidad"
+ carnd_doctrine_lust_shunned_name:1 "Represion Sexual"
+ carnd_doctrine_lust_shunned_desc:1 "Los placeres de la carne son los más crudos y basicos impulsos. Para ser verdaderamente virtuosos, debemos purgarnos de tales pensamientos impuros."
+ carnd_doctrine_lust_accepted_name:1 "Deseo Natural"
+ carnd_doctrine_lust_accepted_desc:1 "Es parte del orden natural de las codas que los humanos se deseen uno al otro. Para bien o para mal, nuestra sexualidad es parte de lo que somos."
+ carnd_doctrine_lust_exalted_name:1 "$tenet_carnal_exaltation_name$"
+ carnd_doctrine_lust_exalted_desc:1 "$tenet_carnal_exaltation_desc$"

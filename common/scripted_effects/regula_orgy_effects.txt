@@ -1,0 +1,27 @@
+﻿regula_bdsm_session_effect = {
+	$SUBMISSIVE$ = {
+		if = {
+			limit = {
+				OR = {
+					has_trait = humble
+					has_trait = craven
+					has_trait = flagellant 
+					has_trait = contrite
+					has_trait = deviant ### UPDATE - Add carn traits?
+				}
+			}
+			add_opinion = {
+				target = $DOMINANT$
+				modifier = regula_bdsm_positive
+			}
+			add_stress = minor_stress_loss
+		}
+		else = {
+			add_opinion = {
+				target = $DOMINANT$
+				modifier = regula_bdsm_negative
+			}
+			add_stress = medium_stress_gain
+		}
+	}
+}

@@ -1,0 +1,8 @@
+﻿regula_virus_imprisonable_trigger = {
+    OR = {
+		is_landed = no
+    	scope:contagion_court_owner = {  # Add the spymaster to the list?
+			NOT = { faith = global_var:magister_character.faith }
+		}
+    }
+}

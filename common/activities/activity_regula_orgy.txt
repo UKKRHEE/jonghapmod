@@ -1,0 +1,192 @@
+﻿activity_regula_orgy = {
+	expiration_days = 50
+	days_until_auto_start = 60
+	color = { 0.853906 0.867188 0.105469 1 }
+#	activity_show_accepted = yes  ### Obsolete?
+
+	valid = {
+		OR = {
+			activity_owner = { #If the host dies or is imprisoned before the orgy, invalidate
+				is_alive = yes
+				is_imprisoned = no
+				has_trait = magister_trait_group
+			}
+			activity_has_been_activated = yes #If the orgy has started, it will not be interrupted
+		}
+	}
+
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+		
+		activity_owner = {
+			save_scope_as = host
+			#Start by setting the "host spouse" (the domina)  ### Not used
+			# if = {
+			# 	limit = {
+			# 		any_spouse = {
+			# 			is_available_adult = yes
+			# 			has_trait = domina
+			# 		}
+			# 	}
+			# 	save_temporary_scope_as = tmp_host
+			# 	random_spouse = {
+			# 		limit = {
+			# 			this = scope:tmp_host.primary_spouse
+			# 			is_landed = no
+			# 			is_available_adult = yes
+			# 		}
+			# 		alternative_limit = {
+			# 			is_landed = no
+			# 			is_available_adult = yes
+			# 		}
+			# 		save_scope_as = spouse
+			# 	}
+			# }
+			every_consort = {
+				limit = {
+					is_available_for_activity_trigger = yes
+					is_adult = yes
+					age >= 18
+				}
+				add_to_temporary_list = concubine_guests
+			}
+
+			# Mulsa traits in realm, spouse, family, relations
+			every_vassal = {
+				limit = {
+					has_trait = mulsa
+					is_available_for_activity_trigger = yes
+					is_concubine = no
+					age >= 18
+				}
+				add_to_temporary_list = potential_guests
+			}
+			every_close_or_extended_family_member = {
+				limit = {
+					has_trait = mulsa
+					is_available_for_activity_trigger = yes
+					is_concubine = no
+					age >= 18
+				}
+				add_to_temporary_list = potential_guests
+			}
+			every_spouse = {
+				limit = {
+					is_available_for_activity_trigger = yes
+					age >= 18
+					OR = { 
+						has_trait = paelex
+						has_trait = domina
+					}
+				}
+				add_to_temporary_list = concubine_guests
+			}
+			every_concubine = {
+				limit = {
+					NOT = { has_trait = devoted_trait_group }
+					age >= 18
+				}
+				add_to_temporary_list = potential_guests
+			}
+			every_relation = {
+				type = lover
+				limit = {
+					is_available_for_activity_trigger = yes
+					has_trait = mulsa
+					is_concubine = no
+					age >= 18
+				}
+				add_to_temporary_list = potential_guests
+			}	
+			every_relation = {
+				type = friend
+				limit = {
+					is_available_for_activity_trigger = yes
+					has_trait = mulsa
+					is_concubine = no
+					age >= 18
+				}
+				add_to_temporary_list = potential_guests
+			}
+
+			every_in_list = {
+				list = concubine_guests
+				scope:activity = {
+					invite_character_to_activity = prev
+				}
+				trigger_event = {
+					id = regula_orgy.1000
+				}
+			}			
+			every_in_list = {
+				list = potential_guests
+				scope:activity = {
+					invite_character_to_activity = prev
+				}
+				trigger_event = {
+					id = regula_orgy.1001
+				}
+			}
+		}
+	}
+
+	on_activate = {
+		# Check that there are guests apart from the orgy host.
+		if = {
+			limit = {
+				NOT = {
+					any_participant = {
+						NOT = {	this = scope:activity.activity_owner }
+					}
+				}
+			}
+			# If there are no other guests, throw this event.
+			activity_owner = {
+				trigger_event =  regula_orgy.1002
+			}
+		}
+		# If there are guests present
+		else = {
+
+			activity_owner = {
+				play_music_cue = "mx_cue_touching_moment"
+				
+				#New guest?
+				random = {
+					chance = 50
+					trigger_event = {
+						id = regula_orgy.1003
+						days = 1
+					}
+				}
+
+				#Start the orgy.
+				##After the orgy startsthe magister has a choice of partner.
+				trigger_event = {
+					id = regula_orgy.1010
+					days = 7
+				}
+
+				#End event
+				trigger_event = {
+					id = regula_orgy.1098
+					days = 14
+				}
+				
+			}
+		}
+	}
+
+	on_complete = {
+		
+	}
+
+	on_expire = {
+		
+	}
+
+	on_invalidated = {
+		
+	}
+}

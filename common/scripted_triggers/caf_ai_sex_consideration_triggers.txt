@@ -1,0 +1,94 @@
+﻿# The goal is to eventually have consistent answers for all of these recurring questions:
+# Does the target want to have sex with me?
+# How far would they go to have sex with me? Would they cheat? Would they rape?
+# Would the target be willing to have with me, if pressured? (dubcon)
+
+
+# Would the target agree to have sex with me? Includes raw sex drive, but also how much they would have to lose/gain.
+# Inspired by the vanilla "would like to have sex with me?" scripted_trigger stress_threshold_special_2001_valid_attraction_target_trigger, but it was not detailed enough for me.
+would_like_to_have_sex_with_root_trigger = {
+	# Physically capable and available
+	is_available_healthy_ai_adult = yes
+
+	# Basic requirement - note that we do not check the reverse
+	is_attracted_to_gender_of = root
+
+	calc_true_if = {
+		amount >= 16 # 13 from basics that should always be true, and 3 from "bonus" modifiers (usually neutral opinion + trait)
+		
+		#
+		# The Basics - should always be fulfilled under normal circumstances
+		#
+
+		# Either no problem with cheating or no partner to begin with is worth 2 points
+		might_cheat_on_every_partner_trigger = yes
+		might_cheat_on_every_partner_trigger = yes
+
+		# Incest check - no incest or no problem with incest is worth 2 points
+		possibly_interested_in_root_trigger = yes
+		possibly_interested_in_root_trigger = yes
+
+		# Sodomy check - no sodomy or no problem with sodomy is worth 2 points
+		freely_accepts_sodomy_with_trigger = { CHARACTER = root }
+		freely_accepts_sodomy_with_trigger = { CHARACTER = root }
+
+		# Celibate characters still feel the attraction, but are less likely to act on it
+		has_trait = celibate
+		has_trait = celibate
+
+		# Chaste characters still feel the attraction, but are less likely to act on it
+		has_trait = chaste
+
+		# Ugly characters have it tough
+		root = { attraction >= -10 }
+		root = { attraction >= -25 }
+
+		# They don't like you
+		opinion = {
+			target = root
+			value >= medium_negative_opinion
+		}
+		opinion = {
+			target = root
+			value >= very_high_negative_opinion
+		}
+
+
+
+		#
+		# Circumstancial modifiers
+		#
+
+		# Lustful people are more likely to give in
+		has_trait = lustful
+		has_trait = lustful
+		
+		# What 'good guys' always hope: If she likes me, she will have sex with me. ;-P
+		opinion = {
+			target = root
+			value >= neutral_opinion
+		}
+		opinion = {
+			target = root
+			value >= medium_positive_opinion
+		}
+		opinion = {
+			target = root
+			value >= very_high_positive_opinion
+		}
+
+		# Newsflash, people want to have sex with attractive people
+		root = { attraction >= 10 }
+		root = { attraction >= 25 }
+
+		# Ambitious characters might use sex as a means to improve their social standing or way of living
+		AND = {
+			has_trait = ambitious
+			root.highest_held_title_tier > this.highest_held_title_tier
+		}
+		AND = {
+			has_trait = ambitious
+			root.highest_held_title_tier > this.highest_held_title_tier
+		}
+	}
+}

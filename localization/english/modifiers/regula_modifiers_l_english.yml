@@ -1,0 +1,37 @@
+﻿l_english:
+  paelex_realm_benefits:0 "Assistance from Paelices"
+  paelex_realm_benefits_desc:0 "Imbued with a touch of your power each paelix contributes to the smooth operation of your demesne."
+  paelex_realm_benefits1:0 "Assistance from Paelices"
+  paelex_realm_benefits2:0 "Assistance from Paelices"
+  paelex_realm_benefits3:0 "Assistance from Paelices"
+  paelex_realm_benefits4:0 "Assistance from Paelices"
+  paelex_realm_benefits5:0 "Assistance from Paelices"
+  paelex_realm_benefits6:0 "Assistance from Paelices"
+  paelex_realm_benefits7:0 "Assistance from Paelices"
+  paelex_realm_benefits8:0 "Assistance from Paelices"
+  paelex_realm_benefits9:0 "Assistance from Paelices"
+  paelex_realm_benefits10:0 "Assistance from Paelices"
+
+  regula_sanctifica_serva_penalty:0 "Health Penalty from Sanctifica Serva"
+
+  regula_unlanded_consort_penalty:0 "Penalty from unlanded spouses and concubines"
+
+  #Opinion modifiers
+
+  regula_contubernalis_close_family_opinion:0 "Turned a family member into a soulless husk"
+  regula_contubernalis_close_family_crime_opinion:0 "Turned a family member into a soulless husk"
+  regula_contubernalis_dynasty_member_opinion:0 "Turned a member of my dynasty into a soulless husk"
+  regula_contubernalis_close_relation_opinion:0 "Turned my relative into a soulless husk"
+  demoted_domina_opinion:0 "Demoted to Paelex"
+  domina_supported_opinion:0 "Authority re-inforced by the Magister"
+  regula_recently_fucked:0 "Recently fucked by the Magister"
+  regula_bdsm_negative:0 "Negative BDSM experience"
+  regula_bdsm_positive:0 "Positive BDSM experience"
+
+  #Orgy modifiers
+  regula_orgy_health:0 "Orgy Health Boost"
+  regula_orgy_health_vassal:0 "Orgy Health Boost"
+  regula_orgy_lifestyle:0 "Orgy Experience Boost"
+  regula_orgy_lifestyle_vassal:0 "Orgy Experience Boost"
+  regula_orgy_piety:0 "Orgy Spirit Boost"
+  regula_orgy_piety_vassal:0 "Orgy Spirit Boost"

@@ -1,0 +1,785 @@
+﻿namespace = regula_adultery
+
+# lover_spouse =  cheating spouse
+# sex_partner
+# adultery_lover
+
+#1000-1999 - Lover events
+#2000-2999 - Random fling events
+
+regula_adultery.0001 = {
+	hidden = yes
+
+	immediate = {
+		scope:lover_spouse = {
+			hidden_effect = {
+				random_secret = {
+					limit = {
+						secret_type = secret_lover
+						NOR = {
+							secret_target = scope:spouse
+							is_known_by = scope:spouse
+						}
+					}
+					save_scope_as = secret_to_reveal
+					secret_target = {
+						save_scope_as = adultery_lover
+					}
+				}
+				if = {
+					limit = {
+						NOT = { exists = scope:secret_to_reveal }
+						has_variable = had_recent_sex_with
+					}
+					var:had_recent_sex_with = {
+						save_scope_as = sex_partner
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:adultery_lover
+			}
+			scope:secret_to_reveal = {
+				set_variable = {
+					name = revealed_through_confession_to_desc #To get special texts in infidelity_confrontation.1000
+					value = root
+				}
+				reveal_to = root
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:sex_partner
+				scope:sex_partner = {
+					NOR = {
+						has_trait = magister_trait_group
+						has_trait = devoted_trait_group
+					}
+				}
+			}
+			scope:lover_spouse = {
+				add_character_flag = { #To avoid spamming the event
+				flag = was_recently_suspected_of_adultery
+				years = 5
+			}
+			}
+			if = {
+				limit = {
+					scope:sex_partner = {
+						is_male = yes
+					}
+				}
+				# Male fling
+				trigger_event = regula_adultery.2001
+			}
+			else = {
+				# Female fling
+				trigger_event = regula_adultery.2010
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					exists = scope:lover_spouse
+				}
+				random = {
+					chance = 1
+					# chance = 0.1
+					# Thought I saw something...
+					trigger_event = regula_adultery.0003
+				}
+			}
+		}
+	}
+}
+
+# story_cycle_infidelity_confrontation work-around.
+
+regula_adultery.0002 = {
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				exists = scope:infidelity_partner
+			}
+		}
+		scope:lover_spouse = {
+			hidden_effect = {
+				random_secret = {
+					limit = {
+						secret_type = secret_lover
+						is_known_by = global_var:magister_character
+					}
+					secret_target = {
+						save_scope_as = adultery_lover
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:adultery_lover = {
+					is_male = yes
+				}
+			}
+			# Male lover
+			trigger_event = regula_adultery.1001
+		}
+		else_if = {
+			limit = {
+				scope:adultery_lover = {
+					NOT = {
+						has_trait = devoted_trait_group
+					}
+				}
+			}
+			# Female lover
+			trigger_event = regula_adultery.1010
+		}
+	}
+}
+
+# False alarm
+regula_adultery.0003 = {
+	type = character_event
+	title = regula_adultery.0003.t
+	desc = regula_adultery.0003.desc
+
+	theme = regula_theme
+	override_background = {
+		event_background = study
+	}
+	left_portrait = scope:lover_spouse
+
+	option = { #Whew
+		name = regula_adultery.0003.a
+	}
+}
+
+# Male Lover
+regula_adultery.1001 = {
+	type = character_event
+	title = regula_adultery.1001.t
+	desc = regula_adultery.1001.desc
+
+	theme = regula_theme
+	override_background = {
+		event_background = study
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		outfit_tags = { no_hat }
+		animation = worry
+	}
+	lower_left_portrait = scope:adultery_lover
+
+	immediate = {
+		scope:lover_spouse = {
+			if = {
+				limit = {
+					has_trait = paranoid
+				}
+				remove_trait = paranoid
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_trait = trusting
+					}
+				}
+				add_trait = trusting
+			}
+		}
+	}
+
+	option = {
+		name = regula_adultery.1001.a
+
+		lover_breakup_effect = {
+			BREAKER = scope:lover_spouse
+			LOVER = scope:adultery_lover
+		}
+
+		if = {
+			limit = {
+				scope:adultery_lover = {
+					OR = {
+						is_vassal_or_below_of = global_var:magister_character
+						is_courtier_of = scope:lover_spouse
+						is_courtier_of = global_var:magister_character
+					}
+				}
+			}
+			scope:adultery_lover = {
+				add_prestige = -500
+			}
+			imprison = {
+				target = scope:adultery_lover
+				type = dungeon
+			}
+		}
+		else = {
+			set_relation_rival = scope:adultery_lover
+		}
+	}
+
+	option = {
+		name = regula_adultery.1001.b
+
+		lover_breakup_effect = {
+			BREAKER = scope:lover_spouse
+			LOVER = scope:adultery_lover
+		}
+	}
+
+	option = {
+		name = regula_adultery.1001.c
+	}
+
+
+	after = {
+		scope:lover_spouse = {
+			if = {
+				limit = {
+					has_variable = had_recent_sex_with
+				}
+				if = {
+					limit = {
+						var:had_recent_sex_with = { is_alive = yes }
+					}
+					var:had_recent_sex_with = { remove_variable = had_recent_sex_with }
+				}
+				remove_variable = had_recent_sex_with
+			}
+			else = {
+				remove_variable = had_recent_sex
+			}
+		}
+	}
+}
+
+# Female Lover - Reveal
+regula_adultery.1010 = {
+	type = character_event
+	title = regula_adultery.1010.t
+	desc = regula_adultery.1010.desc
+
+	theme = regula_theme
+	override_icon = {
+		trigger = { has_relation_soulmate = scope:lover_spouse }
+		reference = "gfx/interface/icons/event_types/type_love.dds"
+	}
+	override_background = {
+		event_background = study
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		outfit_tags = { no_hat }
+		animation = personality_coward
+	}
+	lower_right_portrait = scope:adultery_lover
+
+	immediate = {
+		scope:lover_spouse = {
+			set_sexuality = bisexual
+		}
+	}
+
+	option = {
+		name = regula_adultery.1010.a
+
+		if = {
+			limit = {
+				faith = {
+					controls_holy_site_with_flag = holy_site_reg_mulsa_fascinare_flag
+				}
+			}
+			show_as_tooltip = {
+				scope:adultery_lover = {
+					fascinare_success_effect = {
+						CHARACTER = root
+					}
+				}
+				add_piety = -100
+			}
+			trigger_event = regula_adultery.1011
+		}
+		else = {
+			show_as_tooltip = {
+				scope:adultery_lover = {
+					fascinare_success_effect = {
+						CHARACTER = root
+					}
+				}
+				scope:lover_spouse = {
+					add_piety = -100
+				}
+			}
+			trigger_event = regula_adultery.1012
+		}
+	}
+
+	option = {
+		name = regula_adultery.1010.b
+		trigger = {
+
+		}
+	}
+
+	after = {
+		scope:lover_spouse = {
+			if = {
+				limit = {
+					has_variable = had_recent_sex_with
+				}
+				if = {
+					limit = {
+						var:had_recent_sex_with = { is_alive = yes }
+					}
+					var:had_recent_sex_with = { remove_variable = had_recent_sex_with }
+				}
+				remove_variable = had_recent_sex_with
+			}
+			else = {
+				remove_variable = had_recent_sex
+			}
+		}
+	}
+}
+
+regula_adultery.1011 = {
+	type = character_event
+	title = regula_adultery.1011.t
+	desc = regula_adultery.1011.desc
+
+	theme = regula_theme
+
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = scope:adultery_lover
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = personality_dishonorable
+	}
+
+	immediate = {
+		add_piety = -100
+	}
+
+	option = {
+		name = regula_adultery.1011.a
+		scope:adultery_lover = {
+			fascinare_success_effect = {
+				CHARACTER = root
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:adultery_lover
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+
+	option = {
+		name = regula_adultery.1011.b
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:adultery_lover
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+}
+
+regula_adultery.1012 = {
+	type = character_event
+	title = regula_adultery.1012.t
+	desc = regula_adultery.1012.desc
+
+	theme = regula_theme
+
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = scope:adultery_lover
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = flirtation
+	}
+
+	immediate = {
+		scope:lover_spouse = {
+			add_piety = -100
+		}
+	}
+
+	option = {
+		name = regula_adultery.1012.a
+		scope:adultery_lover = {
+			fascinare_success_effect = {
+				CHARACTER = root
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:adultery_lover
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+
+	option = {
+		name = regula_adultery.1012.b
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:adultery_lover
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+}
+
+
+# Male Fling
+regula_adultery.2001 = {
+	type = character_event
+	title = regula_adultery.2001.t
+	desc = regula_adultery.2001.desc
+
+	theme = regula_theme
+	override_icon = {
+		trigger = { has_relation_soulmate = scope:lover_spouse }
+		reference = "gfx/interface/icons/event_types/type_love.dds"
+	}
+	override_background = {
+		event_background = regula_stables
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		outfit_tags = { no_hat }
+		animation = worry
+	}
+
+	lower_right_portrait = scope:sex_partner
+
+	immediate = {
+		scope:lover_spouse = {
+			add_stress = medium_stress_gain
+		}
+	}
+
+	option = {
+		name = regula_adultery.2001.a
+
+		if = {
+			limit = {
+				scope:sex_partner = {
+					AND = {
+						is_independent_ruler = no
+						OR = { 
+							scope:sex_partner.top_liege = global_var:magister_character 
+							scope:sex_partner.liege = global_var:magister_character
+						}
+					}
+				}
+			}
+			scope:sex_partner = {
+				add_prestige = -250
+				if = {
+					limit = {
+						has_trait = wounded_1
+					}
+					add_trait = wounded_2
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_trait = wounded_2
+							has_trait = wounded_3
+						}
+					}
+					add_trait = maimed
+				}
+				else = {
+					add_trait = wounded_1
+				}
+			}
+		}
+		else = {
+			set_relation_potential_rival = scope:sex_partner
+		}
+	}
+
+	option = {
+		name = regula_adultery.2001.b
+
+	}
+
+
+	after = {
+		scope:lover_spouse = {
+			if = {
+				limit = {
+					has_variable = had_recent_sex_with
+				}
+				if = {
+					limit = {
+						var:had_recent_sex_with = { is_alive = yes }
+					}
+					var:had_recent_sex_with = { remove_variable = had_recent_sex_with }
+				}
+				remove_variable = had_recent_sex_with
+			}
+			else = {
+				remove_variable = had_recent_sex
+			}
+		}
+	}
+}
+
+# Female Fling - Reveal
+regula_adultery.2010 = {
+	type = character_event
+	title = regula_adultery.2010.t
+	desc = regula_adultery.2010.desc
+
+	theme = regula_theme
+
+	override_background = {
+		event_background = study
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		animation = scheme
+	}
+
+	lower_right_portrait = scope:sex_partner
+
+
+	option = {
+		name = regula_adultery.2010.a
+
+		if = {
+			limit = {
+				faith = {
+					controls_holy_site_with_flag = holy_site_reg_mulsa_fascinare_flag
+				}
+			}
+			show_as_tooltip = {
+				scope:sex_partner = {
+					fascinare_success_effect = {
+						CHARACTER = root
+					}
+				}
+				add_piety = -100
+			}
+			trigger_event = regula_adultery.2011
+		}
+		else = {
+			show_as_tooltip = {
+				scope:sex_partner = {
+					fascinare_success_effect = {
+						CHARACTER = root
+					}
+				}
+				scope:lover_spouse = {
+					add_piety = -100
+				}
+			}
+			trigger_event = regula_adultery.2012
+		}
+	}
+
+	option = {
+		name = regula_adultery.2010.b
+	}
+
+	after = {
+		scope:lover_spouse = {
+			if = {
+				limit = {
+					has_variable = had_recent_sex_with
+				}
+				if = {
+					limit = {
+						var:had_recent_sex_with = { is_alive = yes }
+					}
+					var:had_recent_sex_with = { remove_variable = had_recent_sex_with }
+				}
+				remove_variable = had_recent_sex_with
+			}
+			else = {
+				remove_variable = had_recent_sex
+			}
+		}
+	}
+}
+
+regula_adultery.2011 = {
+	type = character_event
+	title = regula_adultery.2011.t
+	desc = regula_adultery.2011.desc
+
+	theme = regula_theme
+
+	override_background = {
+		event_background = regula_alcove
+	}
+	left_portrait = {
+		character = scope:sex_partner
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		animation = personality_dishonorable
+	}
+
+	immediate = {
+		add_piety = -100
+	}
+
+	option = {
+		name = regula_adultery.2011.a
+		scope:sex_partner = {
+			fascinare_success_effect = {
+				CHARACTER = root
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:sex_partner
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+
+	option = {
+		name = regula_adultery.2011.b
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:adultery_lover
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+}
+
+regula_adultery.2012 = {
+	type = character_event
+	title = regula_adultery.2012.t
+	desc = regula_adultery.2012.desc
+
+	theme = regula_theme
+
+	override_background = {
+		event_background = regula_alcove
+	}
+	left_portrait = {
+		character = scope:sex_partner
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:lover_spouse
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = flirtation
+	}
+
+	immediate = {
+		scope:lover_spouse = {
+			add_piety = -100
+		}
+	}
+
+	option = {
+		name = regula_adultery.2012.a
+		scope:sex_partner = {
+			fascinare_success_effect = {
+				CHARACTER = root
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:sex_partner
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+
+	option = {
+		name = regula_adultery.2012.b
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:sex_partner
+			CHARACTER_2 = scope:lover_spouse
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+}

@@ -1,0 +1,24 @@
+﻿# Add/remove arousal debuffs
+caf_on_arousal_level_reduced = {
+	events = {
+		caf_arousal_events.0001
+	}
+}
+
+caf_on_arousal_level_1 = {
+	events = {
+		caf_arousal_events.0001
+	}
+}
+
+caf_on_arousal_level_2 = {
+	events = {
+		caf_arousal_events.0001
+	}
+}
+
+caf_on_arousal_level_3 = {
+	events = {
+		caf_arousal_events.0001
+	}
+}

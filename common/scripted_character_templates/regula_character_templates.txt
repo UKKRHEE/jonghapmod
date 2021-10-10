@@ -1,0 +1,131 @@
+﻿regula_beautiful_character = {
+	age = { 18 35 }
+	random_traits_list = {
+		count = 1
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+	}
+	random_traits_list = {
+		count = 1
+		deceitful = {}
+		gregarious = {}
+		ambitious = {}
+		diligent = {}
+	}
+	#Personality trait 2-3
+	random_traits_list = {
+		count = 2
+		gluttonous = {}
+		temperate  = {}
+		greedy = {}
+		generous = {}
+		wrathful = {}
+		calm = {}
+		patient = {}
+		impatient = {}
+		honest = {}
+		trusting = {}
+		compassionate = {}
+		fickle = {}
+		forgiving = {}
+	}
+	dynasty = none
+	random_traits = no
+	faith = this.faith
+	culture = this.culture
+	diplomacy = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+}
+
+regula_champion_giant_character = {
+	age = { 18 25 }
+	random_traits_list = {
+		count = 1
+		education_martial_2 = {}
+		education_martial_3 = {}
+		education_martial_4 = {}
+	}
+    random_traits_list = {
+		count = 1
+		brave = {}
+		just = {}
+	}
+    random_traits_list = {
+		count = 1
+		wrathful = {}
+		arrogant = {}
+		impatient = {}
+		ambitious = {}
+		zealous = {}
+		stubborn = {}
+		callous = {}
+		vengeful = {}
+	}
+    random_traits_list = {
+		count = { 0 1 }
+		blademaster_1 = {}
+		blademaster_2 = {}
+		blademaster_3 = {}
+        berserker = {}
+        physique_good_2 = {}
+        physique_good_3 = {}
+	}
+	dynasty = none
+	random_traits = no
+    martial = {
+		min_template_average_skill
+		max_template_average_skill
+	}
+    prowess = { 20 30 }
+	faith = this.faith
+	culture = this.culture
+	trait = giant
+}
+
+regula_commander_character = {
+	age = { 18 25 }
+	random_traits_list = {
+		count = 1
+		education_martial_3 = {}
+		education_martial_4 = {}
+	}
+    random_traits_list = {
+		count = 1
+		ambitious = {}
+		diligent = {}
+	}
+    random_traits_list = {
+		count = 2
+		brave = {}
+		arrogant = {}
+		patient = {}
+		sadistic = {}
+		zealous = {}
+		stubborn = {}
+		callous = {}
+		vengeful = {}
+	}
+    random_traits_list = {
+		count = 1
+		overseer = {}
+		strategist = {}
+		architect = {}
+		administrator = {}
+        military_engineer = {}
+        logistician = {}
+		aggressive_attacker = {}
+		unyielding_defender = {}
+		forder = {}
+		flexible_leader = {}
+	}
+	trait = holy_warrior
+	dynasty = none
+	random_traits = no
+    martial = {	20 30 }
+	faith = this.faith
+	culture = this.culture
+	trait = deviant
+}
+

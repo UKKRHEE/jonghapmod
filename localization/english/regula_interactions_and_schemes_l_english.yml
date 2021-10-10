@@ -1,0 +1,147 @@
+﻿l_english:
+  # Base interactions
+  RANK_EQUAL_TO_SCHEME_TARGET:0 "Your rank is the same as [target.GetFirstNamePossessive]: $VALUE|+0=-+$"
+  RANK_EQUAL_TO_SCHEME_TARGET_LIEGE:0 "Your rank is the same as [target.GetFirstNamePossessive] liege: $VALUE|+0=-+$"
+
+
+  regula_fascinare:0 "Fascinare Scheme"
+  regula_fascinare_action:0 "Charm"
+  regula_fascinare_desc:0 "Use the powers of the Regula Magistri to bend her to your will."
+  regula_fascinare_desc_general:0 "Use the powers of the Regula Magistri to bring someone under your sway."
+  regula_fascinare_interaction:0 "Fascinare"
+  regula_fascinare_interaction_action:0 "Charm"
+  regula_fascinare_interaction_desc:0 "Use the powers of the Regula Magistri to bend this character to your will."
+  scheme_interaction_tt_regula_fascinare_approved:0 "Attempt to chain her will."
+  scheme_interaction_tt_fascinare_approved:0 "Attempt to charm [recipient.GetShortUINameNoTooltip]."
+  fascinare_invalid_title:0 "Fascinare Scheme Aborted"
+  fascinare_invalid:0 "You stop trying to charm [target.GetShortUIName|U] as this is no longer feasible."
+
+  I_HAVE_FASCINARE_COOLDOWN_ON_THIS_CHARACTER:1 "[TARGET_CHARACTER.GetShortUIName] is avoiding you. You can't get them alone."
+  FASCINARE_SCHEME_RULER_BONUS:0 "You are [target.GetShortUINamePossessive] lord: $VALUE|0=-+$"
+  START_FASCINARE:0 "Bring her under your control"
+  FASCINARE_SUCCESS_DESC:1 "[TARGET_CHARACTER.GetShortUIName|U] is entranced"
+  SCHEME_FASCINARE_THEIR_OPINION:0 "[target.GetTitledFirstNamePossessive] opinion of you: $VALUE|+0=-+$"
+  regula_fascinare_interaction_toast:0 "Fascinare Scheme Begun"
+
+  regula_form_alliance_interaction:0 "Forge a Compeditaen Alliance"
+  regula_form_alliance_interaction_desc:0 "You are the Pontifex Carnalis. Make it clear to all that you will defend this Compedita, and they you."
+
+  # Mulsa Interactions
+  regula_join_servitude_war_interaction:0 "Join Servitude War"
+  regula_join_servitude_war_interaction_notification:0 "Slave-to-be,\n\nRejoice, for I join the fight. Soon you will be in the chains you yearn for."
+  regula_join_servitude_war_interaction_desc:3 "Help your slaves as they war for the freedom to clasp themselves in chains at your feet."
+
+  regula_abice_maritus:0 "Abice Maritus"
+  regula_abice_maritus_effect_title:0 "Husband Deposed"
+	regula_abice_maritus_effect.desc_mediterranean:0 "Empowered by the Milk of Isis, [recipient.GetFirstNameRegnal] has seized power from [actor.GetFullName], taking their titles and exiling them to serve in a local convent."
+  regula_abice_maritus_effect.desc_european:0 "Wielding the Glamour of Wanda, [recipient.GetFirstNameRegnal] has seized power from [actor.GetFullName], taking their titles and exiling them to serve in a local convent."
+
+  regula_enact_abice_maritus_interaction:0 "Abice Maritus"
+	regula_enact_abice_maritus_interaction_desc:0 "[recipient.GetFirstNameRegnal] will seize power from her husband, taking his titles and exiling him to serve in a local convent."
+
+
+  regula_astringere_interaction:0 "Astringere"
+  regula_astringere_interaction_desc:0 "Set hooks deep in [recipient.GetFirstNamePossessiveRegnal] mind, allowing you to control her body for brief periods."
+  regula_astringere_interaction_desc_general:0 "Set hooks deep within a $game_concept_compedita$'s mind, letting you control her body for brief periods."
+
+
+  regula_astringere_activation_interaction:0 "Restringere"
+  regula_astringere_activation_interaction_desc:0 "Take control of the hooks in [recipient.GetFirstNamePossessiveRegnal] mind and gain control of her body."
+  regula_astringere_activation_interaction_desc_general:0 "Take control of the hooks in a $game_concept_compedita$'s mind and gain control of their body."
+
+
+  regula_astringere_removal_interaction:0 "Destringere"
+  regula_astringere_removal_interaction_desc:0 "Remove the deep hooks that have been placed in [recipient.GetFirstNamePossessiveRegnal] mind, giving her control of her body once more."
+  regula_astringere_removal_interaction_desc_general:0 "Remove the deep hooks that have been placed in a character's mind, giving them control of their body once more."
+
+
+  regula_instiga_discordia:0 "Instiga Discordia"
+  regula_instiga_discordia_desc:0 "Drive your servant to undermine their liege."
+  regula_instiga_discordia_action:0 "Sow Discord in the court of"
+  regula_instiga_discordia_interaction:0 "Instiga Discordia"
+  regula_instiga_discordia_interaction_desc:0 "[recipient.GetFirstNameRegnal] will attempt to foment discord between her liege and their powerful vassals or sovereign."
+  regula_instiga_discordia_desc_general:0 "Instruct this character to foment discord between her liege and their powerful vassals or sovereign."
+  regula_instiga_discordia_in_progress:0 "This character is free to commit an instiga discordia scheme."
+  NOT_regula_instiga_discordia_in_progress:0 "This character is already attempting to generate unrest in her liege's court."
+  regula_instiga_discordia_invalidated_title:1 "@scheme_icon! Instiga Discordia Scheme Ends"
+  regula_instiga_discordia_i_imprisoned_them_message:0 "[target.GetShortUIName|U] is in your dungeon. Their court is already in disarray"
+  regula_instiga_discordia_target_imprisoned_by_other:0 "[TARGET_CHARACTER.GetShortUIName|U] is rotting in someone else's dungeon.  Unfortunately this prevents your servant from fomenting discord in their court."
+  start_regula_instiga_discordia_notification:0 "[recipient.GetShortUIName] is attempting to foment discontent in their liege's court."
+
+
+  REGULA_INSTIGA_DISCORDIA_SUCCESS_DESC:2 "A powerful vassal or the sovereign of [TARGET_CHARACTER.GetShortUINamePossessive|U] liege will become their rival."
+  REGULA_INSTIGA_DISCORDIA_DISCOVERY_DESC:1 "[TARGET_CHARACTER.GetShortUIName|U] liege remains unaware of her treachery."
+
+  revela_secretum:0 "Revela Secretum"
+  revela_secretum_interaction_desc:0 "[recipient.GetFirstNameRegnal] will reveal the secrets of those closest to her."  
+  revela_secretum_interaction_tooltip:0 "Instruct [recipient.GetFirstNameRegnal] to tell you what she knows."  
+
+  
+  start_rapta_maritus:0 "Rapta Maritus"
+  start_rapta_maritus_notification:0 "[recipient.GetShortUIName] will attempt to kidnap their husband for you!"
+
+  RAPTA_MARITUS_SUCCESS_DESC:2 "[TARGET_CHARACTER.GetShortUIName|U]'s husband becomes your [prisoner|E]. However, she will be exposed for the [crime|E] of kidnapping."
+  RAPTA_MARITUS_DISCOVERY_DESC:1 "[TARGET_CHARACTER.GetShortUIName|U] is not exposed for the [crime|E] of kidnapping"
+  
+  rapta_maritus:0 "Rapta Maritus Scheme"
+  rapta_maritus_action:0 "Compel"
+  rapta_maritus_desc:0 "Use your power over this character to force them to deliver their spouse to your dungeon!"  # UPDATE Awkward
+  rapta_maritus_desc_general:0 "Have this character begin an abduction scheme, directed at their spouse."
+  rapta_maritus_tooltip:0 "[recipient.GetFirstName] begins an [abduct_scheme|E] against her husband."
+  scheme_interaction_tt_rapta_maritus_approved:0 "[recipient.GetFirstName] will betray her husband, kidnapping him and delivering him to your dungeon."
+  rapta_maritus_successful_roll_tt:0 "[target.GetShortUINameNoTooltip] becomes your prisoner!"
+  rapta_maritus_success_discovery_tt:0 "A successful Abduction will reveal only your pawn's identity\nOtherwise:"
+  rapta_maritus_become_discovered_roll_tt:0 "They are discovered!"
+  rapta_maritus_in_progress:0 "This character is free to commit a rapta maritus scheme."
+  NOT_rapta_maritus_in_progress:0 "This character is already attempting to kidnap their husband."
+  rapta_maritus_scheme_invalidated_title:1 "@scheme_icon! Rapta Maritus Scheme Ends"
+  rapta_maritus_scheme_i_imprisoned_them_message:0 "[target.GetShortUIName|U] is already in your prison"
+  scheme_target_imprisoned_by_other:0 "[TARGET_CHARACTER.GetShortUIName|U] is already rotting in your dugeon"
+
+  # Concubinage interactions
+  regula_make_paelex_interaction:0 "Domitans tribunal"
+  regula_make_paelex_interaction_action:0 "Tame Her"
+  regula_make_paelex_interaction_desc:0 "This vassal has succumbed to the pleasure of obedience. Corrupt what is left of their free will and add them to your harem."
+  regula_make_paelex_interaction_action:0 "Begin the ritual"  #Not in use.
+
+  regula_promote_paelex_interaction:0 "Favens paelex"
+  regula_promote_paelex_interaction_action:0 "Promote paelex to domina"
+  regula_promote_paelex_interaction_desc:0 "This paelex is talented. Set them as first among your harem."
+
+  regula_demote_domina_interaction:0 "Demitte domina"
+  regula_demote_domina_interaction_action:0 "Demote domina to paelex"
+  regula_demote_domina_interaction_desc:0 "Your domina is not worthy of her role. Make this clear to all."
+
+  regula_sanctifica_serva_interaction:0 "Sanctifica Serva"
+  regula_sanctifica_serva_interaction_action:0 "Immortalize Slave"
+  regula_sanctifica_serva_interaction_desc:0 "Bind your slave to the Regula Magistri, boosting their stats and granting them immortality."
+  regula_sanctifica_serva_interaction_tooltip:0 "Grant this $game_concept_compedita$ immortality, at the cost of your own health." 
+  find_regula_sanctifica_serva_button_name:0 "Make [CharacterInteractionConfirmationWindow.GetRecipient.GetShortUINameNoTooltip] immortal."
+  REGULA_SANCTIFICA_SERVA_PROMPT_SOMEONE:1 "Choose the slave who will be avatar to a Goddess. All of their skills will improve, and they will become immortal.\n\nThis act will consume 500 piety, and will irreparably damage your health and their ability to bear children."
+  REGULA_SANCTIFICA_SERVA_PROMPT_SOMEONE:1 "Make [CHARACTER.GetShortUIName] the avatar of a Goddess. All of their skills will improve, and they will become immortal.\n\nThis act will consume 500 piety, and will irreparably damage your health and their ability to bear children."
+
+
+  regula_take_orba_interaction:0 "Carpe orba"
+  regula_take_orba_interaction_action:0 "Claim her"
+  regula_take_orba_interaction_desc:0 "Servitude is all this lost paelex knows. Give her purpose once more."
+
+  # Ruler interactions
+  magister_trait_2_required:0 "You have lost the Keeper of Soul's favour. Increase your piety to cast spells."
+  magister_trait_3_required:0 "Only a Zelator or greater can perform this action."
+  magister_trait_4_required:0 "Only a Skeuophylax or greater can perform this action."
+  magister_trait_5_required:0 "Only a Synkellos or greater can perform this action."
+  magister_trait_6_required:0 "Only the mighty Exarch can perform this action."
+  regula_councillor_county_convert_interaction:0 "Order to convert home county"
+  regula_councillor_county_convert_interaction_desc:0 "Your devotee will send their court chaplain to convert the masses."
+
+  regula_potestas_non_transfunde_interaction:0 "Potestas non Transfunde"
+  regula_potestas_non_transfunde_interaction_desc:0 "Publically demand that [recipient.GetFirstName] swear fealty to you, the head of her faith."
+  regula_potestas_non_transfunde_interaction_tooltip:0 "Demand [recipient.GetTitledFirstNamePossessive] fealty."
+  regula_potestas_non_transfunde_interaction_desc.tt:0 "You will lose a large amount of prestige, but acquire [secondary_recipient.GetNameNoTooltip] and all her vassals."
+
+  regula_prisoner_interaction:0 "Visit prisoner"
+  regula_prisoner_interaction_desc:0 "[recipient.GetNameRegnal] is at your mercy. It's time to pay her a visit."
+
+  # Debug interactions
+  regula_debug_fascinare_interaction:0 "Charm"
+  regula_gene_mod:0 "Modify Appearance"

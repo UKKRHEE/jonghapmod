@@ -30,12 +30,15 @@
 	doctrine = doctrine_clerical_marriage_disallowed
 	doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
 
+	#Carnalitas Mundi
+	doctrine = carnd_doctrine_lust_shunned
+
 	#Special Doctrine for Christian Syncretism
 	doctrine = special_doctrine_is_christian_faith
 
 	traits = {
-		virtues = { forgiving compassionate chaste }
-		sins = { vengeful sadistic lustful }
+		virtues = { forgiving compassionate }
+		sins = { vengeful sadistic }
 	}
 
 	reserved_male_names = {
@@ -49,7 +52,7 @@
 	}
 
 	custom_faith_icons = {
-		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 ibadi_custom muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil
+		carnd_madeleinist_2 custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 ibadi_custom muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil
 	}
 
 	holy_order_names = {
@@ -786,9 +789,12 @@
 			doctrine = doctrine_clerical_gender_either
 			doctrine = doctrine_clerical_marriage_allowed
 
+			#Carnalitas Mundi
+			doctrine = carnd_doctrine_lust_exalted
+
 			#Tenets
 			doctrine = tenet_divine_marriage
-			doctrine = tenet_carnal_exaltation
+			doctrine = tenet_ritual_celebrations # was carnal exaltation
 			doctrine = tenet_esotericism
 
 			#Unique Localization
@@ -831,48 +837,6 @@
 			doctrine = doctrine_adultery_women_accepted
 			doctrine = doctrine_kinslaying_accepted
 			doctrine = doctrine_deviancy_accepted
-			doctrine = doctrine_witchcraft_accepted
-
-			#Clerical Functions
-			doctrine = doctrine_clerical_function_alms_and_pacification
-			doctrine = doctrine_clerical_gender_either
-			doctrine = doctrine_clerical_marriage_disallowed
-			doctrine = doctrine_clerical_succession_temporal_appointment
-
-			#Tenets
-			doctrine = tenet_natural_primitivism
-			doctrine = tenet_sanctity_of_nature
-			doctrine = tenet_communal_identity
-		}
-		sexist = {
-			color = { 0.6 0.8 0.6 }
-			icon = adamites	
-			graphical_faith = "catholic_gfx"
-
-			holy_site = rome
-			holy_site = jerusalem
-			holy_site = fes
-			holy_site = alexandria
-			holy_site = carthage
-
-			#Main Group
-			doctrine = doctrine_temporal_head
-			doctrine = doctrine_gender_male_dominated
-			doctrine = doctrine_pluralism_righteous
-			doctrine = doctrine_theocracy_lay_clergy
-
-			#Marriage
-			doctrine = doctrine_polygamy_harem
-			doctrine = doctrine_divorce_allowed
-			doctrine = doctrine_bastardry_legitimization
-			doctrine = doctrine_consanguinity_unrestricted
-
-			#Crimes
-			doctrine = doctrine_homosexuality_none
-			doctrine = doctrine_adultery_men_accepted
-			doctrine = doctrine_adultery_women_none
-			doctrine = doctrine_kinslaying_none
-			doctrine = doctrine_deviancy_none
 			doctrine = doctrine_witchcraft_accepted
 
 			#Clerical Functions
@@ -1067,6 +1031,99 @@
 				BishopNeuter = bosnian_bishop_neuter
 				BishopNeuterPlural = bosnian_bishop_neuterplural
 			}
+		}
+		
+		carnd_madeleinist = {
+			color = { 245 111 73 }
+			icon = carnd_madeleinist_1
+
+			holy_site = jerusalem
+			holy_site = magdala
+			holy_site = marseille
+			holy_site = vezelay
+			holy_site = ephesos
+			
+			doctrine = doctrine_no_head
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_bastardry_none
+			doctrine = doctrine_homosexuality_accepted
+			doctrine = doctrine_adultery_women_accepted
+			doctrine = doctrine_deviancy_accepted
+			doctrine = doctrine_clerical_function_alms_and_pacification
+			doctrine = doctrine_clerical_gender_female_only
+			doctrine = doctrine_clerical_marriage_allowed
+
+			doctrine = carn_doctrine_prostitution_accepted
+			doctrine = carnd_doctrine_lust_exalted
+
+			#Tenets
+			doctrine = carnd_tenet_tantric_sex
+			doctrine = tenet_gnosticism
+			doctrine = tenet_esotericism
+
+			holy_order_names = {
+				{ name = "carnd_holy_order_order_of_preachers" }
+			}
+
+			localization = {
+				FertilityGodName = carnd_mary_magdalene
+				FertilityGodNamePossessive = carnd_mary_magdalene_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = west_christian_wealth_god_name
+				WealthGodNamePossessive = west_christian_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = west_christian_household_god_name
+				HouseholdGodNamePossessive = west_christian_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_HE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+				#KnowledgeGod
+				KnowledgeGodName = carnd_mary_magdalene
+				KnowledgeGodNamePossessive = carnd_mary_magdalene_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HER
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+
+				#WarGod
+				WarGodName = west_christian_war_god_name
+				WarGodNamePossessive = west_christian_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WaterGod
+				WaterGodName = west_christian_water_god_name
+				WaterGodNamePossessive = west_christian_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+				GoodGodNames = {
+					christianity_high_god_name
+					christianity_high_god_name_alternate
+					chistianity_good_god_jesus
+					chistianity_good_god_christ
+					carnd_mary_magdalene
+				}
+
+				EvilGodNames = {
+					christianity_devil_name
+					carnd_ialdabaoth
+					carnd_authades
+					carnd_sabaoth_the_adamas
+				}
+
+				WitchGodName = carnd_ialdabaoth
+			}	
 		}
 	}
 }

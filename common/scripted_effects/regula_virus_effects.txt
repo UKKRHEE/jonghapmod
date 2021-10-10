@@ -1,0 +1,105 @@
+﻿contract_regula_virus_effect = {
+	save_temporary_scope_as = newest_convert
+	set_character_faith = global_var:magister_character.faith
+	global_var:magister_character = {
+		random_owned_story = {
+			limit = {
+				story_type = story_regula_infecta_chain
+				var:patient_zero = scope:regula_patient_zero
+			}
+			add_to_variable_list = {
+				name = new_converts
+				target = scope:newest_convert
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_male = no
+			age >= 16
+			NOT = { has_trait = devoted_trait_group }
+		}
+		add_trait = mulsa
+		add_trait = regula_virus
+	}
+}
+
+contract_regula_virus_relation_effect = {
+	save_temporary_scope_as = newest_convert
+	set_character_faith = global_var:magister_character.faith
+	global_var:magister_character = {
+		random_owned_story = {
+			limit = {
+				story_type = story_regula_infecta_chain
+				var:patient_zero = scope:regula_patient_zero
+			}
+			add_to_variable_list = {
+				name = new_converts
+				target = scope:newest_convert
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_male = no
+			age >= 16
+			NOT = { has_trait = devoted_trait_group }
+		}
+		add_trait = mulsa
+	}
+}
+
+create_regula_virus_list_effect = {
+	$CONTAGION_COURT_OWNER$ = {
+		if = {
+			limit = {
+				NOR = {
+					this = $SICK_CHARACTER$
+					is_in_list = contagion_list
+				}
+				age >= 16
+			}
+			add_to_temporary_list = contagion_list
+		}
+		every_courtier_or_guest = {
+			limit = {
+				NOR = {
+					this = $SICK_CHARACTER$
+					is_in_list = contagion_list
+				}
+				age >= 16
+			}
+			add_to_temporary_list = contagion_list
+		}
+		every_vassal = {
+			limit = {
+				NOR = {
+					this = $SICK_CHARACTER$
+					is_in_list = contagion_list
+				}
+				age >= 16
+			}
+			add_to_temporary_list = contagion_list
+		}
+	}
+	$SICK_CHARACTER$ = {
+		every_scheme = {
+			limit = {
+				friendly_scheme_trigger = yes
+				NOT = { scheme_target = { 
+					is_in_list = contagion_list
+				} }
+			}
+			scheme_target = { add_to_temporary_list = contagion_list }
+		}
+		every_targeting_scheme = {
+			limit = {
+				friendly_scheme_trigger = yes
+				NOT = { scheme_owner = { 
+					is_in_list = contagion_list 
+				} }
+			}
+			scheme_owner = { add_to_temporary_list = contagion_list }
+		}
+	}
+}

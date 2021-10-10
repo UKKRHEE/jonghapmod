@@ -1,0 +1,50 @@
+﻿
+
+
+caf_experience_none = 0 # Beginning of relationship
+caf_experience_minor = 50
+caf_experience_medium = 100 # 12.5 years when using "lay with lover" yearly, or 25 years without.
+caf_experience_major = 150
+caf_experience_max = 200
+
+caf_arousal_loss_best_sex = {
+	value = caf_arousal
+	multiply = -0.25
+	add = -70
+	ceiling = yes
+}
+
+caf_arousal_loss_amazing_sex = {
+	value = caf_arousal
+	multiply = -0.20
+	add = -60
+	ceiling = yes
+}
+
+caf_arousal_loss_good_sex = {
+	value = caf_arousal
+	multiply = -0.15
+	add = -50
+	ceiling = yes
+}
+
+caf_arousal_loss_mediocre_sex = {
+	value = caf_arousal
+	multiply = -0.10
+	add = -40
+	ceiling = yes
+}
+
+caf_arousal_loss_bad_sex = {
+	value = caf_arousal
+	multiply = -0.05
+	add = -30
+}
+
+caf_arousal_loss_very_bad_sex = {
+	value = -20
+}
+
+caf_arousal_loss_horrible_sex = {
+	value = 0
+}

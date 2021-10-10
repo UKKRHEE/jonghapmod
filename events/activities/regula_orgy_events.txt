@@ -1,0 +1,935 @@
+﻿namespace = regula_orgy
+
+
+# Invitation event for concubines.
+regula_orgy.1000 = { 
+	type = letter_event
+	opening = regula_orgy.1000.t
+	desc = regula_orgy.1000.desc
+	sender = scope:host
+
+	immediate = {
+		scope:activity.activity_owner = { save_scope_as = host }
+		debug_log = invitation_received
+	}
+
+  	# Concubines never decline the invitation.
+	option = {
+		name = regula_orgy.1000.a
+
+		play_music_cue = "mx_cue_sacredrite"
+		scope:activity = {
+			accept_invitation_for_character = prev
+		}
+		reverse_add_opinion = {
+			target = scope:host
+			modifier = pleased_opinion
+			opinion = 20
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+
+# Invitation event for non-concubines.
+regula_orgy.1001 = { 
+	type = letter_event
+	opening = regula_orgy.1001.t
+	desc = regula_orgy.1001.desc
+	sender = scope:host
+
+	immediate = {
+		scope:activity.activity_owner = { save_scope_as = host }
+		debug_log = invitation_received
+	}
+
+  	#Yes!
+	option = {
+		name = regula_orgy.1001.a
+
+		play_music_cue = "mx_cue_sacredrite"
+		scope:activity = {
+			accept_invitation_for_character = prev
+		}
+		reverse_add_opinion = {
+			target = scope:host
+			modifier = pleased_opinion
+			opinion = 10
+		}
+		ai_chance = {
+			base = 100
+			opinion_modifier = {
+				opinion_target = scope:host
+			}
+		}
+	}
+
+	#No...
+	option = {
+		name = regula_orgy.1001.b
+
+		scope:activity = {
+			decline_invitation_for_character = prev
+		}
+		reverse_add_opinion = {
+			target = scope:host
+			modifier = disappointed_opinion
+			opinion = -10
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 15
+				target_is_liege_or_above = scope:host
+			}
+			ai_value_modifier = {
+				ai_boldness = 0.2
+			}
+		}
+	}
+}
+
+#No guests came
+regula_orgy.1002 = {
+	type = character_event
+	title = regula_orgy.1002.t
+	desc = regula_orgy.1002.desc
+	theme = regula_theme
+	override_background = {
+		event_background = regula_orgy
+	}
+	left_portrait = {
+		character = scope:target
+		animation = sadness
+	}
+
+	option = {
+		name = regula_orgy.1002.a
+		
+		scope:activity = {
+			complete_activity = yes
+		}
+	}
+}
+
+
+#Uninvited guest
+scripted_trigger regula_orgy_1003_potential_guest_trigger = {
+	NOR = {
+		has_RelationToMe_relation = { CHARACTER = root }
+		has_trait = devoted_trait_group
+	}
+	is_close_family_of = scope:inviter
+	is_female = yes
+	age >= 16
+	age <= 35
+}
+
+regula_orgy.1003 = { 
+	type = character_event
+	title = regula_orgy.1003.t
+	desc = regula_orgy.1003.desc
+	theme = regula_theme
+	override_background = {
+		event_background = corridor_night
+	}
+	left_portrait = scope:inviter
+	right_portrait = scope:new_guest
+	
+	immediate = {
+		hidden_effect = {
+			capital_province = { save_scope_as = capital }
+
+			#Find inviter
+			scope:activity = {
+				random_participant = {
+					limit = {
+						is_ai = yes
+						# NOT = { is_courtier_of = root }
+						any_close_family_member = {
+							is_female = yes
+							age >= 16
+							age <= 35
+							NOT = { has_trait = devoted_trait_group }
+						}
+					}
+					alternative_limit = {
+					 	is_ai = yes
+					}
+					alternative_limit = {
+						always = yes
+					}
+					save_scope_as = inviter
+				}
+			}
+
+			#50% chance of pool character guest, 50% chance of new guest
+			random = {
+				chance = 50
+				random_pool_character = {
+					province = capital_province
+					limit = {
+						regula_orgy_1003_potential_guest_trigger = yes
+						save_temporary_scope_as = potential_guest
+					}
+					alternative_limit = {
+						OR = {
+							AND = {
+								OR = {
+									has_trait = beauty_good
+									has_trait = intellect_good
+									has_trait = lustful
+								}
+								matching_gender_and_sexuality_trigger = { CHARACTER_1 = scope:potential_guest CHARACTER_2 = root }
+								is_female = yes
+							}
+							has_trait = deviant
+							is_male = no
+						}
+					}
+					save_scope_as = new_guest
+				}
+			}
+
+			if = {
+				limit = { NOT = { exists = scope:new_guest } }
+				regula_create_orgy_guest_effect = { WHO = root }
+				scope:created_orgy_guest = { save_scope_as = new_guest }
+			}
+		}
+	}
+
+	#You are very welcome!
+	option = {
+		name = regula_orgy.1003.a
+		
+		scope:activity = {
+			hidden_effect = { invite_character_to_activity = scope:new_guest }
+			accept_invitation_for_character = scope:new_guest
+		}
+		# Entrance the guest
+		scope:new_guest = {
+			add_trait = mulsa
+			set_character_faith = global_var:magister_character.faith
+			hidden_effect = { # No take-backs.
+				add_character_flag = {
+					flag = converted_by_forced_conversion_interaction
+					years = 10
+				}
+			}
+			add_character_flag = {
+				flag = regula_orgy_new_guest
+				days = 30
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:new_guest
+			modifier = grateful_opinion
+			opinion = 30
+		}
+		reverse_add_opinion = {
+			target = scope:inviter
+			modifier = grateful_opinion
+			opinion = 20
+		}
+	}
+
+	#Invite only, sorry
+	option = {
+		name = regula_orgy.1003.b
+		
+		reverse_add_opinion = {
+			target = scope:new_guest
+			modifier = disappointed_opinion
+			opinion = -15
+		}
+		# reverse_add_opinion = { # They're not sad, the potential guest was a gift.
+		# 	target = scope:inviter
+		# 	modifier = disappointed_opinion
+		# 	opinion = 0
+		# }
+	}
+}
+
+
+regula_orgy.1010 = { # Launch the orgy.
+	type = character_event
+	title = regula_orgy.1010.t
+	desc = regula_orgy.1010.desc
+	theme = seduce_scheme
+	override_background = {
+		event_background = regula_orgy
+	}
+	left_portrait = root
+
+	immediate = {
+		save_scope_as = host
+		capital_province = { save_scope_as = background_wilderness_scope }
+	}
+
+
+	#Launch option
+	option = {
+		name = regula_orgy.1010.a
+		scope:activity = {
+			random_participant = {
+				limit = {
+					has_trait = devoted_trait_group
+					NOT = { has_character_flag = regula_orgy_new_guest }
+				}
+				save_scope_as = first_orgy_partner
+			}
+			every_participant = {
+				if = {
+					limit = {
+						has_trait = early_great_pox
+					}
+					remove_trait = early_great_pox
+				}
+				if = {
+					limit = {
+						has_trait = lovers_pox
+					}
+					remove_trait = lovers_pox
+				}
+			}
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:host
+			CHARACTER_2 = scope:first_orgy_partner
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = yes
+			DRAMA = no
+		}
+	}
+
+	after = {
+		# trigger_event = {
+		# 	on_action = regula_orgy_petitions
+		# 	days = 3
+		# }
+		scope:activity = {
+			every_participant = { # Strips clothes, removes STIs.
+				add_character_flag = {
+					flag = is_naked
+					days = 7
+				}
+				if = { # One event for the magister.
+					limit = { root = scope:host }
+					trigger_event = {
+						id = regula_orgy.1014
+					}
+				}
+				else = { # Another for the slaves.
+					trigger_event = {
+						id = regula_orgy.1020
+					}
+				}
+			}
+		}
+	}
+}
+
+
+scripted_trigger regula_orgy_1014_can_have_sex_trigger = {
+	is_adult = yes
+	NOR = {
+		has_sexuality = asexual
+		has_trait = celibate
+	}
+}
+
+scripted_trigger regula_orgy_1014_sex_partner_trigger = {
+	regula_orgy_1014_can_have_sex_trigger = yes
+	NOT = { this = root }
+	is_ai = yes
+	save_temporary_scope_as = seduction_target
+	# It's an orgy, anything goes.
+	# matching_gender_and_sexuality_trigger = { CHARACTER_1 = scope:seduction_target CHARACTER_2 = root }
+}
+
+regula_orgy.1014 = { 
+	type = character_event
+	title = regula_orgy.1014.t
+	desc = regula_orgy.1014.desc
+
+	theme = seduce_scheme
+	override_background = {
+		event_background = regula_orgy
+	}
+	# left_portrait = scope:left_portrait
+	right_portrait = {
+		character = scope:first_orgy_partner
+		animation = personality_content
+	}
+	lower_left_portrait = scope:lower_left_portrait
+	lower_center_portrait = scope:lower_center_portrait
+	lower_right_portrait = scope:lower_right_portrait
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+		###What is available to do?###
+		scope:activity = {
+			#Talk to new guest
+			if = {
+				limit = { root = scope:host }
+				scope:activity = {
+					random_participant = {
+						limit = { has_character_flag = regula_orgy_new_guest }
+						save_scope_as = new_guest
+					}
+				}
+			}
+
+			#Deviant
+			random_participant = {
+				limit = {
+					has_trait = deviant
+					NOR = {
+						trigger_if = {
+							limit = { exists = scope:new_guest }
+							this = scope:new_guest
+						}
+						this = root
+					}
+				}
+				save_scope_as = deviant
+			}
+
+			#Random sex partner
+			random_participant = {
+				limit = {
+					regula_orgy_1014_sex_partner_trigger = yes
+					save_temporary_scope_as = sex_partner_check #Saved for weight modifier
+					NOT = { has_character_flag = regula_orgy_new_guest }
+				}
+				weight = {
+					base = 10
+					modifier = {
+						has_trait = seducer
+						add = 10
+					}
+					modifier = {
+						has_trait = lustful
+						add = 10
+					}
+					modifier = {
+						has_trait = beauty_good
+						add = 10
+					}
+					modifier = {
+						has_relation_potential_lover = root
+						add = 10
+					}
+					incest_acceptance_modifier = {
+						TARGET = scope:sex_partner_check
+						SEDUCER = root
+					}
+				}
+				save_scope_as = sex_partner
+			}
+
+			#Set portraits
+			if = {
+				limit = {
+					exists = scope:deviant
+					exists = scope:sex_partner
+					exists = scope:new_guest
+				}
+				scope:deviant = { save_scope_as = lower_left_portrait }
+				scope:sex_partner = { save_scope_as = lower_center_portrait }
+				scope:new_guest = { save_scope_as = lower_right_portrait }
+			}
+			else_if = {
+				limit = {
+					exists = scope:deviant
+					exists = scope:sex_partner
+				}
+				scope:deviant = { save_scope_as = lower_left_portrait }
+				scope:sex_partner = { save_scope_as = lower_right_portrait }
+			}
+			else_if = {
+				limit = {
+					exists = scope:deviant
+					exists = scope:new_guest
+				}
+				scope:deviant = { save_scope_as = lower_left_portrait }
+				scope:new_guest = { save_scope_as = lower_right_portrait }
+			}
+			else_if = {
+				limit = {
+					exists = scope:sex_partner
+					exists = scope:new_guest
+				}
+				scope:sex_partner = { save_scope_as = lower_left_portrait }
+				scope:new_guest = { save_scope_as = lower_right_portrait }
+			}
+			else_if = {
+				limit = { exists = scope:deviant }
+				scope:deviant = { save_scope_as = lower_center_portrait }
+			}
+			else_if = {
+				limit = { exists = scope:sex_partner }
+				scope:sex_partner = { save_scope_as = lower_center_portrait }
+			}
+			else_if = {
+				limit = { exists = scope:new_guest }
+				scope:new_guest = { save_scope_as = lower_center_portrait }
+			}
+			else = {
+				save_scope_as = lower_center_portrait
+			}
+		}
+	}
+
+	###WHAT DO I WANT TO DO?###
+
+	#Sex with random participant
+	option = {
+		trigger = {
+			exists = scope:sex_partner
+		}
+		name = regula_orgy.1014.a
+		custom_tooltip = regula_orgy.1014.a.tt
+
+		show_as_tooltip = {
+			scope:sex_partner = {
+				if = {
+					limit = {
+						NOT = { has_trait = lustful }
+					}
+					add_trait = lustful
+				}
+			}
+		}
+
+		trigger_event = {
+			id = regula_orgy.1015
+			days = 1
+		}
+
+		hidden_effect = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:host
+				CHARACTER_2 = scope:sex_partner
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = yes
+				DRAMA = no
+			}
+		}
+
+		stress_impact = {
+			chaste = medium_stress_impact_gain
+			shy = minor_stress_impact_gain
+			rakish = minor_stress_impact_loss
+		}
+	}
+
+	#Learn from a deviant
+	option = {
+		trigger = {
+			exists = scope:deviant
+		}
+		name = regula_orgy.1014.b
+		highlight_portrait = scope:deviant
+		
+		if = {
+			limit = { NOT = { has_trait = deviant } }
+			random_list = {
+				40 = {
+					desc = regula_orgy.1014.b.knowledge
+					send_interface_toast = {
+						title = regula_orgy.1014.b.knowledge
+						left_icon = scope:deviant
+						add_trait = deviant
+						add_piety = 100
+					}
+				}
+				60 = {
+					desc = regula_orgy.1014.b.inspiration
+					send_interface_toast = {
+						title = regula_orgy.1014.b.inspiration
+						left_icon = scope:deviant
+						add_character_modifier = {
+							modifier = seeker_of_knowledge
+							years = 5
+						}
+						add_piety = 100
+					}
+				}
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = seeker_of_knowledge
+				years = 5
+			}
+			add_piety = 100
+		}
+
+		hidden_effect = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:deviant
+				CHARACTER_2 = scope:sex_partner
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = yes
+				DRAMA = no
+			}
+		}
+		trigger_event = {
+			id = regula_orgy.1016
+			days = 1
+		}
+
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+		}
+	}
+
+	#Fuck the new guest
+	option = {
+		trigger = { 
+			exists = scope:new_guest 
+		}
+		name = regula_orgy.1014.c
+		highlight_portrait = scope:new_guest
+
+		random_list = {
+			50 = { #Bring them directly into the harem, with minimal bonuses.
+				desc = regula_orgy.1014.c.minor
+				compatibility_modifier = {
+					who = root
+					compatibility_target = scope:new_guest
+					multiplier = 3
+					max = 50
+					min = -30
+				}
+				send_interface_toast = {
+					title = regula_orgy.1014.c.minor
+					left_icon = scope:new_guest
+					had_sex_with_effect = { CHARACTER = scope:new_guest PREGNANCY_CHANCE = 50 }
+					scope:new_guest = {
+						if= {
+							limit = { NOT = { has_trait = lustful } }
+							add_trait = lustful 
+						}
+					}
+				}
+			}
+			35 = { #Bring them into the harem, with larger bonuses.
+				desc = regula_orgy.1014.c.major
+				compatibility_modifier = {
+					who = root
+					compatibility_target = scope:new_guest
+					multiplier = 2
+					max = 35
+					min = -35
+				}
+				send_interface_toast = {
+					title = regula_orgy.1014.c.major
+					left_icon = scope:new_guest
+					set_relation_lover = scope:new_guest
+					carn_had_sex_with_effect = {
+						CHARACTER_1 = scope:host
+						CHARACTER_2 = scope:new_guest
+						C1_PREGNANCY_CHANCE = pregnancy_chance
+						C2_PREGNANCY_CHANCE = pregnancy_chance
+						STRESS_EFFECTS = yes
+						DRAMA = no
+					}
+					scope:new_guest = {
+						if= {
+							limit = { NOT = { has_trait = lustful } }
+							add_trait = lustful 
+						}
+						if= {
+							limit = { NOT = { has_trait = fecund }  }
+							add_trait = fecund
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:host
+				CHARACTER_2 = scope:new_guest
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = yes
+				DRAMA = no
+			}
+		}
+		trigger_event = {
+			id = regula_orgy.1017
+			days = 1
+		}
+
+	}
+
+	#Relax and just watch
+	option = {
+		name = regula_orgy.1014.f
+		trigger = {
+			calc_true_if = {  # Will add extra options later.
+				amount <= 3
+				exists = scope:deviant
+				exists = scope:sex_partner
+				exists = scope:new_guest
+			}
+		}
+		stress_impact = {
+			base = medium_stress_loss
+			gregarious = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			deviant = medium_stress_impact_loss
+		}
+		# add_piety = 250  # If specific benefits are added to the other options this can be re-enabled.
+	}
+}	
+
+# Regular sex
+regula_orgy.1015 = { 
+	type = character_event
+	title = regula_orgy.1015.t
+	desc = regula_orgy.1015.desc
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:sex_partner
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = personality_content
+	}
+
+	option = {
+		name = regula_orgy.1015.a
+		scope:sex_partner = {
+			if = {
+				limit = {
+					NOT = { has_trait = lustful }
+				}
+				add_trait = lustful
+			}
+		}
+	}
+}
+
+# Deviant event
+regula_orgy.1016 = { 
+	type = character_event
+	title = regula_orgy.1016.t
+	desc = regula_orgy.1016.desc
+	theme = seduce_scheme
+	override_background = {
+		event_background = regula_cell
+	}
+	
+	left_portrait = {
+		character = scope:deviant
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:sex_partner
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = shame
+	}
+
+	option = {
+		name = regula_orgy.1016.a
+		scope:sex_partner = {
+			if = {
+				limit = { NOT = { has_trait = lustful } }
+				add_trait = lustful
+			}
+		}
+		regula_bdsm_session_effect = {
+			SUBMISSIVE = scope:sex_partner
+			DOMINANT = root
+		}
+	}
+}
+
+# New guest induction
+regula_orgy.1017 = { 
+	type = character_event
+	title = regula_orgy.1017.t
+	desc = { 
+		desc = regula_orgy.1017.start.desc
+	}
+
+	theme = seduce_scheme
+	left_portrait = {
+		character = scope:new_guest
+		outfit_tags = { no_cloak no_hat no_pants no_clothes }
+		animation = personality_content
+	}
+
+	option = {
+		name = regula_orgy.1017.a
+		
+	}
+}
+
+# Event for the participants. Filler for the moment.
+regula_orgy.1020 = { 
+	type = character_event
+	title = regula_orgy.1020.t
+	desc = regula_orgy.1020.desc
+	theme = regula_theme
+
+	option = {
+		name = regula_orgy.1020.a
+
+	}
+	# option = {
+	# 	name = regula_orgy.1020.b
+	# }
+	# option = {
+	# 	name = regula_orgy.1020.c
+	# }
+}
+
+
+
+#End for host
+regula_orgy.1098 = { 
+	type = character_event
+	title = regula_orgy.1098.t
+	desc = {
+		desc = regula_orgy.1098.start.desc
+		desc = regula_orgy.1098.end.desc
+	}
+	theme = regula_theme
+	override_background = {
+		event_background = regula_orgy
+	}
+	left_portrait = root
+
+	trigger = { exists = scope:activity }
+
+	immediate = {
+		capital_province = { save_scope_as = background_wilderness_scope }
+	}
+	
+	option = { #Increase health
+		name = regula_orgy.1098.a
+		add_character_modifier = {
+			modifier = regula_orgy_health
+			months = 30
+		}
+		hidden_effect = {
+			scope:activity = {
+				every_participant = {
+					limit = { NOT = { this = root } }
+					add_character_modifier = {
+						modifier = regula_orgy_health_vassal
+						months = 30
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Lifestyle boost for all
+		name = regula_orgy.1098.b
+		add_character_modifier = {
+			modifier = regula_orgy_lifestyle
+			months = 30
+		}
+		if = {
+			limit = { highest_skill = diplomacy }
+			add_diplomacy_lifestyle_xp = 250
+		}
+		else_if = {
+			limit = { highest_skill = martial }
+			add_martial_lifestyle_xp = 250
+		}
+		else_if = {
+			limit = { highest_skill = stewardship }
+			add_stewardship_lifestyle_xp = 250
+		}
+		else_if = {
+			limit = { highest_skill = intrigue }
+			add_intrigue_lifestyle_xp = 250
+		}
+		else_if = {
+			limit = { highest_skill = learning }
+			add_learning_lifestyle_xp = 250
+		}
+		hidden_effect = {
+			scope:activity = {
+				every_participant = {
+					limit = { NOT = { this = root } }
+					add_character_modifier = {
+						modifier = regula_orgy_lifestyle_vassal
+						months = 30
+					}
+					add_stewardship_lifestyle_perk_points = 1
+					add_martial_lifestyle_perk_points = 1
+				}
+			}
+		}
+	}
+
+	option = { #Passive piety gain (deepen the connection to the book)
+		name = regula_orgy.1098.c
+
+		add_character_modifier = {
+			modifier = regula_orgy_piety
+			months = 30
+		}
+		hidden_effect = {
+			scope:activity = {
+				every_participant = {
+					limit = { NOT = { this = root } }
+					add_character_modifier = {
+						modifier = regula_orgy_piety_vassal
+						months = 30
+					}
+				}
+			}
+		}
+	}
+
+
+	after = {
+		scope:activity = {
+			every_participant = {
+				limit = { NOT = { this = root } }
+				trigger_event = regula_orgy.1099
+			}
+			complete_activity = yes
+		}
+	}
+}
+
+#End for guest
+regula_orgy.1099 = { 
+	type = character_event
+	title = regula_orgy.1098.t
+	desc = {
+		desc = regula_orgy.1099.start.desc
+		desc = regula_orgy.1098.end.desc
+	}
+	theme = regula_theme
+	override_background = {
+		event_background = regula_orgy
+	}
+	left_portrait = root
+	
+	option = {
+		name = regula_orgy.1098.a
+		custom_tooltip = regula_orgy.1099.tt
+	}
+}
+
+

@@ -1,0 +1,74 @@
+﻿
+paelex_realm_benefits = {
+	icon = paelex_positive
+	stacking = yes
+	domain_tax_mult = 0.05
+	development_growth_factor = 0.05
+	monthly_piety = 0.25
+}
+
+regula_sanctifica_serva_penalty = {
+	icon = health_negative
+	stacking = yes
+	health = -2
+}
+
+regula_unlanded_consort_penalty = {
+	icon = paelex_negative
+	stacking = yes
+	levy_reinforcement_rate = -0.10
+	same_faith_opinion = -5
+	monthly_piety = -0.25
+}
+
+# No longer used, but retained for savegame compatibility.
+paelex_realm_benefits1 = {  
+	icon = paelex_positive
+	domain_tax_mult = 0.05
+	development_growth_factor = 0.05
+}
+paelex_realm_benefits2 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.10
+	development_growth_factor = 0.10
+}
+paelex_realm_benefits3 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.15
+	development_growth_factor = 0.15
+}
+paelex_realm_benefits4 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.20
+	development_growth_factor = 0.20
+}
+paelex_realm_benefits5 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.25
+	development_growth_factor = 0.25
+}
+paelex_realm_benefits6 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.30
+	development_growth_factor = 0.30
+}
+paelex_realm_benefits7 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.35
+	development_growth_factor = 0.35
+}
+paelex_realm_benefits8 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.40
+	development_growth_factor = 0.40
+}
+paelex_realm_benefits9 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.45
+	development_growth_factor = 0.45
+}
+paelex_realm_benefits10 = {
+	icon = paelex_positive
+	domain_tax_mult = 0.50
+	development_growth_factor = 0.50
+}

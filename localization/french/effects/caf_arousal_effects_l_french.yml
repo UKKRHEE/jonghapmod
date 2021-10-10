@@ -1,0 +1,19 @@
+﻿l_french:
+I_GAINED_AROUSAL_EFFECT:1 "Vous avez gagné [arousal_gain_i]$VALUE|-0$ d'd'[arousal|El]"
+I_LOST_AROUSAL_EFFECT:1 "Vous avez perdu [arousal_loss_i]$VALUE|+0$ d'[arousal|El]"
+THEY_GAINED_AROUSAL_EFFECT:1 "[CHARACTER.GetShortUIName|U] a gagné [arousal_gain_i]$VALUE|V0$ d'[arousal|El]"
+THEY_LOST_AROUSAL_EFFECT:1 "[CHARACTER.GetShortUIName|U] a perdu [arousal_loss_i]$VALUE|V0$ d'[arousal|El]"
+GAINED_AROUSAL_EFFECT:1 "A gagné [arousal_gain_i]$VALUE|V0$ d'[arousal|El]"
+LOST_AROUSAL_EFFECT:1 "A perdu [arousal_loss_i]$VALUE|V0$ d'[arousal|El]"
+I_GAIN_AROUSAL_EFFECT:1 "Vous gagné [arousal_gain_i]$VALUE|-0$ d'[arousal|El]"
+I_LOSE_AROUSAL_EFFECT:1 "Vous perdez [arousal_loss_i]$VALUE|+0$ d'[arousal|El]"
+THEY_GAIN_AROUSAL_EFFECT:1 "[CHARACTER.GetShortUIName|U] gagne [arousal_gain_i]$VALUE|V0$ d'[arousal|El]"
+THEY_LOSE_AROUSAL_EFFECT:1 "[CHARACTER.GetShortUIName|U] perd [arousal_loss_i]$VALUE|V0$ d'[arousal|El]"
+GAIN_AROUSAL_EFFECT:1 "Gagne [arousal_gain_i]$VALUE|V0$ d'[arousal|El]"
+LOSE_AROUSAL_EFFECT:1 "Perd [arousal_loss_i]$VALUE|V0$ d'[arousal|El]"
+
+I_GAINED_AROUSAL_CRITICAL_EFFECT:1 "Vous avez gagné [arousal_critical_i]$VALUE|-0$ [arousal|E] (critique)"
+GAINED_AROUSAL_CRITICAL_EFFECT:1 "A gagné [arousal_critical_i]$VALUE|-0$ [arousal|E] (critique)"
+I_GAIN_AROUSAL_CRITICAL_EFFECT:1 "Vous gagné [arousal_critical_i]$VALUE|-0$ [arousal|E] (critique)"
+GAIN_AROUSAL_CRITICAL_EFFECT:1 "Gagne [arousal_critical_i]$VALUE|V0$ [arousal|E] (critique)"
+

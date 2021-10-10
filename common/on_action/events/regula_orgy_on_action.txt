@@ -1,0 +1,16 @@
+﻿
+# Events converted to random yearly events.
+# regula_orgy_petitions = {
+# 	first_valid = {
+		
+# 	}
+# 	fallback = regula_orgy_generic_events
+# }
+
+# regula_orgy_generic_events = {
+# 	random_events = {
+# 		200 = 0
+# 		100 = regula_orgy.2001
+# 		50 = regula_orgy.2002
+# 	}
+# }

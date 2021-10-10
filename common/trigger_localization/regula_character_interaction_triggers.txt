@@ -1,0 +1,31 @@
+﻿fascinare_cooldown = {
+	first_not = I_HAVE_FASCINARE_COOLDOWN_ON_THIS_CHARACTER
+}
+
+magister_trait_2_required_trigger = {
+	first_not = magister_trait_2_required
+}
+
+magister_trait_3_required_trigger = {
+	first_not = magister_trait_3_required
+}
+
+magister_trait_4_required_trigger = {
+	first_not = magister_trait_4_required
+}
+
+magister_trait_5_required_trigger = {
+	first_not = magister_trait_5_required
+}
+
+magister_trait_6_required_trigger = {
+	first_not = magister_trait_6_required
+}
+
+rapta_maritus_in_progress_trigger = {
+	first_not = rapta_maritus_in_progress
+}
+
+sanctifica_serva_health_trigger = {
+	first_not = sanctifica_serva_health
+}

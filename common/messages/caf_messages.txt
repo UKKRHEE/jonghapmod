@@ -1,0 +1,20 @@
+﻿@msg_good_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_positive"
+@msg_bad_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_negative"
+@toast_soundeffect_good = "event:/SFX/UI/Notifications/Toasts/sfx_ui_notifications_toast_positive"
+@toast_soundeffect_bad = "event:/SFX/UI/Notifications/Toasts/sfx_ui_notifications_toast_negative"
+
+caf_msg_gained_arousal_level = {
+	display = toast
+	title = caf_arousal_level_increased.message
+	desc = caf_arousal_level_increased.text
+	style = bad
+	soundeffect = @toast_soundeffect_bad
+}
+
+caf_msg_lost_arousal_level = {
+	display = toast
+	title = caf_arousal_level_reduced.message
+	desc = caf_arousal_level_reduced.text
+	style = good
+	soundeffect = @toast_soundeffect_good
+}

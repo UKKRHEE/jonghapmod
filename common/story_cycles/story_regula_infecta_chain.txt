@@ -1,0 +1,114 @@
+﻿story_regula_infecta_chain = {
+    on_setup = {
+        # Handled in the Fascinare Success effect.
+    }
+
+    on_end = {
+        # In regula_virus_events
+    }
+
+	on_owner_death = {
+		if = {
+			limit = { exists = story_owner.player_heir }
+			make_story_owner = story_owner.player_heir
+		}
+		else = {
+			debug_log = "Regula infecta chain fizzled."
+			end_story = yes
+		}
+	}
+
+    	#If no one is sick anymore, send the outbreak end event which kills the story
+	effect_group = {
+		days = 30
+		chance = 5
+
+		triggered_effect = {
+			trigger = {
+                NOT = {
+                    any_in_list = {
+                        variable = new_converts
+                        has_trait = regula_virus
+                    }
+                }
+            }
+			effect = {
+				save_scope_as = infecta_story
+				var:patient_zero = {
+					save_scope_as = regula_patient_zero2
+				}
+				hidden_effect = {
+					set_variable = {
+						name = infection_tally
+						value = 0
+					}
+				}
+				every_in_list = {
+					variable = new_converts
+					prev = {
+						change_variable = {
+							name = infection_tally
+							add = 1
+						}
+					}
+				}
+				global_var:magister_character = {
+                    send_interface_message = {  # Tells the player the outcome.
+                        type = event_spouse_task_good
+                        title = regula_virus_outcome_invalid.t
+                        desc = regula_virus_outcome_invalid.desc
+                        right_icon = scope:regula_patient_zero
+                    }
+                }
+				end_story = yes
+			}
+		}
+		triggered_effect = {
+			trigger = {
+				any_in_list = {
+					variable = new_converts
+					has_trait = regula_virus
+					is_imprisoned = yes
+				}
+            }
+			effect = {
+				save_scope_as = infecta_story
+				hidden_effect = {
+					set_variable = {
+						name = infection_tally
+						value = 0
+					}
+				}
+				every_in_list = {
+					variable = new_converts
+					prev = {
+						change_variable = {
+							name = infection_tally
+							add = 1
+						}
+					}
+				}
+				random_in_list = {
+					variable = new_converts
+					limit = {
+						has_trait = regula_virus
+						is_imprisoned = yes
+					}
+					save_scope_as = last_patient
+					remove_trait = regula_virus
+				}
+
+				global_var:magister_character = {
+                    send_interface_message = {  # Tells the player the outcome.
+                        type = event_spouse_task_good
+                        title = regula_virus_outcome_story_jail.t
+                        desc = regula_virus_outcome_story_jail.desc
+						left_icon = scope:regula_patient_zero
+						right_icon = scope:last_patient
+                    }
+                }
+				end_story = yes
+			}
+		}
+	}
+}

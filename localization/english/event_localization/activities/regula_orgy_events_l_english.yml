@@ -1,0 +1,81 @@
+﻿l_english:
+  #Invitation to concubines (not visible to player)
+  regula_orgy.1000.t:0 "Devoted,"
+  regula_orgy.1000.desc:0 "I am holding an orgy in the capital, some days hence. Your presence is expected."
+  regula_orgy.1000.a:0 "I hear and obey."
+  
+
+  #Invitation to non-concubines (not visible to player)
+  regula_orgy.1001.t:0 "To my loyal servant,"
+  regula_orgy.1001.desc:0 "I am holding an orgy, and it would please me if you were there. Discard your responsibilities and I will ensure that it pleases you as well."
+  regula_orgy.1001.a:0 "As my lord wills."
+  regula_orgy.1001.b:0 "I...must...resist..."
+
+
+  #Uninvited guest
+  regula_orgy.1003.t:1 "$activity_regula_orgy$: An Unexpected Offering"
+  regula_orgy.1003.desc:0 "As your slaves arrive in [capital.GetNameNoTooltip], you catch a glimpse of an unfamiliar face.\n\n[inviter.GetNameOrMeRegnal] introduces the young [new_guest.GetWomanMan] as [new_guest.Custom2('MyCharacterIntroductionNoComma', ROOT.Char)]. [new_guest.GetFirstName] is unaware of your true powers or your hold over [inviter.GetFirstNameNoTooltip], and has simply been told that an exclusive gathering of the court is taking place. \n\nWith a sly glint in her eye [inviter.GetFirstNameNoTooltip] asks if [new_guest.GetFirstNameNoTooltip] might join our family."
+  regula_orgy.1003.a:0 "Promise to show [new_guest.GetFirstName] an unforgettable evening."
+  regula_orgy.1003.b:0 "Tell [inviter.GetFirstName] the event is invite only."
+
+  #No one attended
+  regula_orgy.1002.t:0 "$activity_regula_orgy$: Lacking Devotion"
+  regula_orgy.1002.desc:0 "Not one soul has obeyed my summons."
+  regula_orgy.1002.a:0 "They will know my fury."
+
+  #Starting event
+  every_regula_orgy_participant:0 "Every guest at the $activity_regula_orgy$"
+  regula_orgy.1010.t:1 "$activity_regula_orgy$: The Slaves Have Gathered"
+  regula_orgy.1010.desc:0 "The air is filled with nervous anticipation, your slaves sneaking anxious glances at those around them. You begin without ceremony or speech, weaving together a benediction from the Regula Magistri. \n\nThe magic fills the air with a warm glow, and you smile at the chorus of soft gasps. A familiar scent is in the air."
+  regula_orgy.1010.a:0 "Order those assembled to disrobe." #Start the orgy.
+  regula_orgy.1010.e.tt:0 "It is time for the orgy to get underway."
+
+  #The orgy is in full swing
+  regula_orgy.1014.t:0 "$activity_regula_orgy$: A Good Start"  # Finish fucking, make a choice as to your next action.
+
+  regula_orgy.1014.desc:0 "The honour of being your first fuck goes to [first_orgy_partner.GetFirstName]. She envelopes your cock with gusto, humming happily as she bobs up and down on your cock. \n\nWith the barest twitch of your powers she engulfs you entirely, gag reflex smothered by your will. As you fill her stomach you look around the room, already planning your next coupling."
+  regula_orgy.1014.a:0 "Find another willing set of holes."
+  regula_orgy.1014.a.tt:1 "You continue to indulge your appetites at random."
+  regula_orgy.1014.b:0 "Experience new sexual pleasures with [deviant.GetFirstNameNoTooltip] and a plaything."
+  regula_orgy.1014.b.knowledge:0 "Something awakens within you"
+  regula_orgy.1014.b.inspiration:0 "You become open to new sources of inspiration"
+  regula_orgy.1014.c:0 "Get to know the [new_guest.Custom('ComplimentAdjective')] [new_guest.GetFirstNameNoTooltip] a little better."
+  regula_orgy.1014.c.minor:0 "Their skills are passable"
+  regula_orgy.1014.c.major:0 "Their mouth is heavenly"
+  regula_orgy.1014.f:1 "Just lean back and enjoy the view before you."
+
+  # Sex with a random slave
+  regula_orgy.1015.t:0 "$activity_regula_orgy$: In Your Element"
+  regula_orgy.1015.desc:0 "The hours pass in a pleasant haze of lust and desire. The power of the Regula Magistri fills your veins, and you find that your passion does not waver, but grow with every orgasm.\n\nFor a time you amuse yourself with [sex_partner.GetFirstName], languidly fucking her while holding her on the edge of orgasm with your mind. When her sanity begins to fray you relent, allowing her to collapse in ecstasy as you leave to find another."
+  regula_orgy.1015.a:0 "How satisfying."
+
+  # Deviant sex event
+  regula_orgy.1016.t:0 "$activity_regula_orgy$: A Lesson in Pleasure and Pain"
+  regula_orgy.1016.desc:0 "[deviant.GetFirstName)] is well versed in more exotic forms of lovemaking, and the sight of her tools has [sex_partner.GetFirstName] working hard to keep her fears in check. You carefully stoke a burning passion in them both, delighting in the crack of the whip and the mix of agony and ecstasy on [sex_partner.GetFirstNamePossessiveNoTooltip] face. \n\nBy the time [sex_partner.GetFirstNameNoTooltip] has been reduced to a quivering wreck you have learned more than a few entertaining tricks."
+  regula_orgy.1016.a:0 "Such a delightful diversion."
+  
+
+  # Uninvited guest sex event
+  regula_orgy.1017.t:0 "$activity_regula_orgy$: Enjoying the Offering"
+  regula_orgy.1017.start.desc:0 "You take a few moments to get to know [new_guest.GetFirstName], combing through her memories and subtly tweaking her throughts to better suit a life of carnality. \n\nWhen you finally beckon her forward there is no hesitancy in her actions, only desire."
+  regula_orgy.1017.a:0 "What a pleasant gift."
+  
+  # Participant events
+  regula_orgy.1020.t:0 "$activity_regula_orgy$: "
+  regula_orgy.1020.desc:0 ""
+  regula_orgy.1020.a:0 ""
+  
+
+  # End events
+  regula_orgy.1098.t:0 "$activity_regula_orgy$: Aftermath"
+  regula_orgy.1098.start.desc:0 "Your slaves and you"
+  regula_orgy.1098.end.desc:0 "have enjoyed the pleasures of each others flesh for days. Their bodies now lie at your feet, exhausted, and the very walls of the castle hum with energy.\n\nYou carefully weave the power into a blessing, knowing that it will be some time before they are recovered enough to do this again."
+  regula_orgy.1098.a:0 "Weave a protective charm" #Increase health
+  regula_orgy.1098.b:0 "Empower your aura" #Stats boost for all
+  regula_orgy.1098.c:0 "Strengthen your connection to the Regula Magistri" #Massive piety gain
+  
+
+  regula_orgy.1099.start.desc:0 "Together, we"
+  regula_orgy.1099.tt:0 "You venture home as the $activity_regula_orgy$ ends"
+
+  ### Petition events

@@ -1,0 +1,6 @@
+﻿is_polygamous = {
+	OR = {
+		has_doctrine = doctrine_concubine_regula
+		has_doctrine = doctrine_polygamy
+	}
+}	

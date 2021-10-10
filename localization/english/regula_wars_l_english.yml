@@ -1,0 +1,46 @@
+﻿l_english:
+# War of Usurption
+  REGULA_CLAIM_VASSAL_COST:0 "Value of the Charmed Titles"
+  REGULA_CLAIM_VASSAL_CB_NAME:0 "Usurption of [DEFENDER.GetShortUINamePossessive] Charmed Vassals"
+  REGULA_CLAIM_VASSAL_CB_NAME_BASE:0 "Usurp [DEFENDER.GetShortUINamePossessive] Charmed Vassals"
+  REGULA_CLAIM_VASSAL_WAR_NAME:1 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetPrefix]-[DEFENDER.GetPrimaryTitle.GetAdjective] Usurption War"  
+  REGULA_CLAIM_VASSAL_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective] Charmed Vassals sworn to [DEFENDER.GetPrimaryTitle.GetName]"
+  
+  regula_claim_vassal_war:0 "Usurption"
+  regula_claim_vassal_war_victory_desc_attacker:0 "All of [defender.GetShortUINamePossessive|U] Charmed Vassals swear fealty to you."
+  regula_claim_vassal_war_victory_desc_defender:0 "Your charmed vassals swear fealty to [attacker.GetShortUIName] [vassal|E]."
+  regula_claim_vassal_war_victory_desc:0 "The vassals that [attacker.GetShortUIName] sunder their vows of fealty to [defender.GetShortUIName|U]."
+  regula_claim_vassal_war_white_peace_desc_defender:0 "The vassals that [attacker.GetShortUIName] has bewitched remain in your service."
+  regula_claim_vassal_war_white_peace_desc:0 "[defender.GetShortUIName|U] keeps the vassals that you have bewitched."
+  regula_claim_vassal_war_defeat_desc_attacker:0 "[defender.GetShortUIName|U] keeps the vassals that you have bewitched. All [factions|E] against you increase their [discontent|E]."
+  regula_claim_vassal_war_invalidated_message:0 "The objectives of the [war.GetName] can no longer be met."
+
+# Domination War
+  REGULA_DOMINATION_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetPrefix] - [DEFENDER.GetPrimaryTitle.GetAdjective] Domination War"
+  REGULA_DOMINATION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective] [DEFENDER.GetPrimaryTitle.GetName]"
+  REGULA_DOMINATION_CB_NAME:0 "Domination of [DEFENDER.GetShortUIName]"
+  REGULA_DOMINATION_SPECIFIC_NAME:0 "Dominate [DEFENDER.GetShortUIName]"
+  CB_VASSALIZING_DUKE:0 "Vassalizing a Duchy"
+  regula_dominate_female_ruler_war:0 "Domination"
+  msg_regula_dominate_female_ruler_war_invalidated_message:0 "Domination war no longer valid."
+  regula_dominate_female_ruler_war_victory_desc_attacker:0 "[defender.GetShortUIName] becomes your paelex."
+  regula_dominate_female_ruler_war_victory_desc_defender:0 "You become [attacker.GetShortUINamePossessive] paelex."
+  regula_dominate_female_ruler_war_victory_desc:0 "[defender.GetShortUIName] becomes [attacker.GetShortUINamePossessive] paelex."
+  regula_dominate_female_ruler_war_white_peace_desc:0 "[defender.GetShortUIName] remains free-willed."
+  regula_dominate_female_ruler_war_white_peace_desc_defender:0 "You remain independent."
+  regula_dominate_female_ruler_war_defeat_desc_attacker:0 "[defender.GetShortUIName] remains free-willed.  All [factions|E] against you increase their [discontent|E]."
+  
+
+# Servitude Faction War
+  REGULA_SERVITUDE_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] War for Servitude against [DEFENDER.GetPrimaryTitle.GetNameNoTier]"
+  regula_servitude_faction_war:0 "Servitude Faction"
+  regula_servitude_war_victory_desc_local_player_defender:0 "All your rebelling vassals swear fealty to the Magister. Something has gone horribly wrong here."
+  regula_servitude_war_victory_desc_local_player_attacker:0 "All rebelling vassals of [defender.GetShortUIName] swear fealty to the Magister."
+  regula_servitude_war_victory_desc:0 "All rebelling vassals of [defender.GetShortUIName] swear fealty to the Magister."
+  regula_servitude_war_white_peace_defender_desc:0 "The rebelling vassals remain cut off from the magister."
+  regula_servitude_war_white_peace_attacker_desc:0 "The rebelling vassals remain cut off from the magister."
+  regula_servitude_war_white_peace_desc:0 "The rebelling vassals remain cut off from the magister."
+  regula_servitude_war_white_peace_end_desc:0 "The [regula_servitude_faction|E] is disbanded, and its members cannot join factions for [SCOPE.ScriptValue('faction_war_white_peace_cooldown')|0] years."
+  regula_servitude_war_defeat_attacker_desc:0 "[defender.GetShortUIName|U] imprison all rebellious vassals and gain a [revoke_title_reason|E] against each of them."
+  regula_servitude_war_player_defeat_desc:0 "[defender.GetShortUIName|U] imprisons all their rebellious vassals and gains a [revoke_title_reason|E] against each rebel."
+  regula_servitude_war_defeat_end_desc:0 "The [regula_servitude_faction|E] is disbanded, and its members cannot join factions for [SCOPE.ScriptValue('faction_war_defeat_cooldown')|0] years."

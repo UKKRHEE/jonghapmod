@@ -1,0 +1,390 @@
+﻿namespace = regula_childhood_event
+
+# Decision tree for making wards the Paelices' problem (except for the player's primary heir).
+# global_var:regula_wards values:
+# Both sexes = 3
+# Male only = 2
+# Female only = 1
+# None = 0
+
+regula_childhood_event.0010 = {
+    type = character_event
+    title = regula_childhood_event.0010.t
+    desc = regula_childhood_event.0010.desc
+
+    theme = regula_theme
+
+    override_background = {
+		event_background = throne_room
+	}
+
+
+    immediate = {
+        if = {
+            limit = { NOT = { exists = global_var:regula_wards } }
+            set_global_variable = {
+                name = regula_wards
+                value = 0
+            }
+        }
+    }
+
+
+    option = {
+        name = regula_childhood_event.0010.a
+        flavor = regula_childhood_event.0010.a.tt
+        
+        # trigger = {
+        #     NOT = { global_var:regula_wards = { value = 3 }
+        # }
+
+        set_global_variable = {
+			name = regula_wards
+			value = 3
+        }
+        
+        global_var:magister_character = {
+            every_child = {
+                limit = {
+                    num_of_relation_guardian = 0
+                }
+                trigger_event = regula_childhood_event.0011
+            }
+        }
+    }
+
+    option = { # Female only
+        name = regula_childhood_event.0010.b
+        flavor = regula_childhood_event.0010.b.tt
+        
+        # trigger = {
+        #     NOT = { global_var:regula_wards = 1 }
+        # }
+
+        set_global_variable = {
+			name = regula_wards
+			value = 1
+        }
+        global_var:magister_character = {
+            every_child = {
+                limit = {
+                    is_male = no
+                    num_of_relation_guardian = 0
+                }
+                trigger_event = regula_childhood_event.0013
+            }
+        }
+    }
+
+    option = { # Male only
+        name = regula_childhood_event.0010.c
+        flavor = regula_childhood_event.0010.c.tt
+        
+        # trigger = {
+        #     NOT = { global_var:regula_wards = 2 }
+        # }
+
+        set_global_variable = {
+			name = regula_wards
+			value = 2
+        }
+        
+        global_var:magister_character = {
+            every_child = {
+                limit = {
+                    is_male = yes
+                    num_of_relation_guardian = 0
+                }
+                trigger_event = regula_childhood_event.0012
+            }
+        }
+    }
+
+    option = { # Remove delegation
+        name = regula_childhood_event.0010.d
+        flavor = regula_childhood_event.0010.d.tt
+        
+        # trigger = {
+        #     exists = global_var:regula_wards
+        # }
+
+        set_global_variable = {
+			name = regula_wards
+            value = 0
+		}
+    }
+
+    option = { # Do nothing
+        name = regula_childhood_event.0010.e
+        flavor = regula_childhood_event.0010.e.tt
+    }
+}
+
+regula_childhood_event.0011 = {        #moves children out of magisters court so the player doesn't have to maintain them
+    type = character_event
+    hidden = yes
+    theme = education
+
+   trigger = {
+        faith = { has_doctrine = tenet_regula_devoted }
+        is_landed = no
+        is_married = no
+        father = global_var:magister_character
+        global_var:magister_character = {
+            is_alive = yes
+        }
+        global_var:regula_wards = 3
+    }
+
+    immediate = {
+        if = {
+            limit = { 
+                has_mother = yes
+                root.mother = { is_landed = yes }
+            }
+            host = {
+                remove_courtier_or_guest = ROOT
+            }
+            ROOT = {
+                ROOT.mother = { recruit_courtier = prev }
+                hidden_effect = {
+                    return_to_court = yes
+                }
+            }
+        }
+        if = {
+            limit = { 
+                OR = {
+                    has_mother = no
+                    root.mother = { is_landed = no }
+                }
+            }
+            host = {
+                remove_courtier_or_guest = ROOT
+            }
+            ROOT = {
+                ROOT.father.primary_spouse = { recruit_courtier = prev }
+                hidden_effect = {
+                    return_to_court = yes
+                }
+            }
+        }
+    }
+}
+
+regula_childhood_event.0012 = {        #Moves male children out of magisters court so the player doesn't have to maintain them
+    type = character_event
+    hidden = yes
+    theme = education
+
+   trigger = {
+        faith = { has_doctrine = tenet_regula_devoted }
+        is_landed = no
+        is_married = no
+        is_male = yes
+        father = global_var:magister_character
+        global_var:magister_character = {
+            is_alive = yes
+        }
+        global_var:regula_wards = 2  # Insurance.
+    }
+
+    immediate = {
+        if = {
+            limit = { 
+                has_mother = yes
+                root.mother = { is_landed = yes }
+            }
+            host = {
+                remove_courtier_or_guest = ROOT
+            }
+            ROOT = {
+                ROOT.mother = { recruit_courtier = prev }
+                hidden_effect = {
+                    return_to_court = yes
+                }
+            }
+        }
+        if = {
+            limit = { 
+				is_male = yes
+                OR = {
+                    has_mother = no
+                    root.mother = { is_landed = no }
+                }
+            }
+            host = {
+                remove_courtier_or_guest = ROOT
+            }
+            ROOT = {
+                ROOT.father.primary_spouse = { recruit_courtier = prev }
+                hidden_effect = {
+                    return_to_court = yes
+                }
+            }
+        }
+    }
+}
+
+regula_childhood_event.0013 = {        #Moves female children out of Magisters court so the player doesn't have to maintain them
+    type = character_event
+    hidden = yes
+    theme = education
+
+   trigger = {
+        faith = { has_doctrine = tenet_regula_devoted }
+        is_landed = no
+        is_married = no
+        is_male = no
+        father = global_var:magister_character
+        global_var:magister_character = {
+            is_alive = yes
+        }
+        global_var:regula_wards = 1
+    }
+
+    immediate = {
+        if = {
+            limit = { 
+                has_mother = yes
+                root.mother = { is_landed = yes }
+            }
+            host = {
+                remove_courtier_or_guest = ROOT
+            }
+            ROOT = {
+                ROOT.mother = { recruit_courtier = prev }
+                hidden_effect = {
+                    return_to_court = yes
+                }
+            }
+        }
+        if = {
+            limit = { 
+                OR = {
+                    has_mother = no
+                    root.mother = { is_landed = no }
+                }
+            }
+            host = {
+                remove_courtier_or_guest = ROOT
+            }
+            ROOT = {
+                ROOT.father.primary_spouse = { recruit_courtier = prev }
+                hidden_effect = {
+                    return_to_court = yes
+                }
+            }
+        }
+    }
+}
+
+# Caps the number of children that the magister will have with any woman.
+regula_childhood_event.0020 = {
+    type = character_event
+    title = regula_childhood_event.0020.t
+    desc = regula_childhood_event.0020.desc
+
+    theme = regula_theme
+
+    override_background = {
+		event_background = throne_room
+	}
+
+
+    immediate = {
+        if = {
+            limit = { NOT = { exists = global_var:regula_child_max } }
+            set_global_variable = {
+                name = regula_child_max
+                value = 100
+            }
+        }
+    }
+
+    option = {
+        name = regula_childhood_event.0020.a
+
+        remove_global_variable = regula_child_max
+        set_global_variable = {
+			name = regula_child_max
+			value = 2
+        }
+        
+        global_var:magister_character = {
+            every_consort = {
+                limit = {
+                    is_pregnant = yes
+                }
+                trigger_event = regula_holy_site_event.2001
+            }
+        }
+    }
+
+    option = {
+        name = regula_childhood_event.0020.b
+
+        
+        set_global_variable = {
+			name = regula_child_max
+			value = 4
+        }
+        
+        global_var:magister_character = {
+            every_consort = {
+                limit = {
+                    is_pregnant = yes
+                }
+                trigger_event = regula_holy_site_event.2001
+            }
+        }
+    }
+
+    option = {
+        name = regula_childhood_event.0020.c
+        flavor = regula_childhood_event.0020.c.tt
+        
+        set_global_variable = {
+			name = regula_child_max
+			value = 0
+        }
+        
+        global_var:magister_character = {
+            every_consort = {
+                limit = {
+                    is_pregnant = yes
+                }
+                trigger_event = regula_holy_site_event.2001
+            }
+        }
+    }
+
+    option = {
+        name = regula_childhood_event.0020.d
+        
+        set_global_variable = {
+			name = regula_child_max
+			value = 100
+        }
+        
+        global_var:magister_character = {
+            every_consort = {
+                limit = {
+                    is_pregnant = yes
+                }
+                trigger_event = regula_holy_site_event.2001
+            }
+        }
+    }
+
+    option = {
+		name = regula_initialize_event.1001.menu
+		trigger_event = {
+			id = regula_initialize_event.1000
+		}
+	}
+
+	option = {
+		name = regula_initialize_event.1001.exit
+	}
+}

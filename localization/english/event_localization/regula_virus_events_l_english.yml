@@ -1,0 +1,12 @@
+﻿l_english:
+  regula_virus_outcome.t:0 "Fascinare chain ended."
+  regula_virus_outcome.desc:0 "The chain of enslavement begun with [regula_patient_zero.GetNameRegnal] has come to a close with the conversion of [last_patient.GetNameRegnal]. In total there are #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! new Compeditae."
+
+  regula_virus_outcome_jail.t:0 "Fascinare chain ended."
+  regula_virus_outcome_jail.desc:0 "The chain of enslavement begun with [regula_patient_zero.GetNameRegnal] has come to a close with the imprisonment of [last_patient.GetNameRegnal]. In total there are #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! new Compeditae."
+
+  regula_virus_outcome_story_jail.t:0 "Fascinare chain ended."
+  regula_virus_outcome_story_jail.desc:0 "The chain of enslavement begun with [regula_patient_zero2.GetNameRegnal] has come to a close with the imprisonment of [last_patient.GetNameRegnal]. In total there are #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! new Compeditae."
+
+  regula_virus_outcome_invalid.t:0 "Fascinare chain ended."
+  regula_virus_outcome_invalid.desc:0 "The chain of enslavement begun with [regula_patient_zero2.GetNameRegnal] has ended prematurely with the death of an Infecta. In total there are #P [infecta_story.MakeScope.Var('infection_tally').GetValue|0]#! new Compeditae."

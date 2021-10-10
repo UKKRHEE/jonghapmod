@@ -1,0 +1,129 @@
+﻿
+### Layout ###
+# Biostatistics (Age, Health, Fertility)
+# Opinion of Liege
+# Scheme status - personal
+# Scheme status - hostile
+# Faction status
+regula_status_scheme_personal = {  ### UPDATE - Hopefully these fire in order.  Need to verify.  first_valid might work.
+    type = character
+
+    text = {
+        localization_key = REGULA_STATUS_SCHEME_PERSONAL_YES
+        trigger = {
+            any_scheme = {
+				OR = {
+					scheme_type = befriend
+					scheme_type = sway
+					scheme_type = seduce
+					scheme_type = courting
+					scheme_type = elope
+				}
+			}
+        }
+    }
+
+    text = {
+        localization_key = REGULA_STATUS_SCHEME_PERSONAL_YES_FALLBACK
+        trigger = {
+            has_owned_scheme = yes
+            any_scheme = {
+                NOR = {
+					scheme_type = befriend
+					scheme_type = sway
+					scheme_type = seduce
+					scheme_type = courting
+					scheme_type = elope
+                }
+            }
+        }
+    }
+
+    text = {
+        localization_key = REGULA_STATUS_SCHEME_PERSONAL_NO
+        trigger = {
+            any_scheme = {
+				NOR = {
+					scheme_type = befriend
+					scheme_type = sway
+					scheme_type = seduce
+					scheme_type = courting
+					scheme_type = elope
+				}
+			}
+        }
+    }
+}
+
+regula_status_scheme_hostile = {
+    type = character
+
+    text = {
+        localization_key = REGULA_STATUS_SCHEME_HOSTILE_YES
+        trigger = {
+            any_scheme = {
+				OR = {
+					scheme_type = murder
+					scheme_type = abduct
+					scheme_type = claim_throne
+                    scheme_type = fabricate_hook
+                    scheme_type = rapta_maritus
+				}
+			}
+        }
+    }
+
+    text = {
+        localization_key = REGULA_STATUS_SCHEME_HOSTILE_YES_FALLBACK
+        trigger = {
+            has_owned_scheme = yes
+            any_scheme = {
+                NOR = {
+                    scheme_type = murder
+					scheme_type = abduct
+					scheme_type = claim_throne
+                    scheme_type = fabricate_hook
+                    scheme_type = rapta_maritus
+                }
+            }
+        }
+    }
+
+    text = {
+        localization_key = REGULA_STATUS_SCHEME_HOSTILE_NO
+        trigger = {
+            any_scheme = {
+				NOR = {
+					scheme_type = murder
+					scheme_type = abduct
+					scheme_type = claim_throne
+                    scheme_type = fabricate_hook
+                    scheme_type = rapta_maritus
+				}
+			}
+        }
+    }
+}
+
+
+regula_status_faction = {
+    type = character
+    text = {
+        localization_key = REGULA_STATUS_FACTION_NO
+        trigger = {
+            AND = {
+                is_a_faction_member = no
+                is_a_faction_leader = no
+            }
+        }
+    }
+    text = {
+        localization_key = REGULA_STATUS_FACTION_YES
+        trigger = {
+            OR = {
+                is_a_faction_member = yes
+                is_a_faction_leader = yes
+            }
+        }
+    }
+}

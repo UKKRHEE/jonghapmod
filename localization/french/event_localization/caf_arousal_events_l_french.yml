@@ -1,0 +1,4 @@
+﻿l_french:
+caf_arousal_threshold_cooldown_message:1 "Si vous êtes encore [aroused|El] dans [SCOPE.ScriptValue('caf_arousal_threshold_cooldown_duration_in_years')|V0] ans, vous risquez de souffrir à nouveau d'un désir accablant."
+caf_arousal_threshold.0010.text:1 "Vous avez été submergé d'[arousal|E]"
+caf_arousal_threshold.0400.toast:1 "Vous avez dépassé votre limite d'[arousall|E] et êtes revenu à un [arousal_level|El] de 3."

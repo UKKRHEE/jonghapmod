@@ -1,0 +1,9 @@
+﻿l_spanish: 
+
+ carnd_futa_elective_succession_law:1 "[GetPlayer.Custom('CarnFutaTraitName')|U] Elective"
+ carnd_futa_elective_succession_law_effects:1 "$feudal_elective_succession_law_effects$ [GetTrait('futa').GetName( GetNullCharacter )] candidates will always take precedence over other candidates."
+
+ carnd_futa_elective_candidates:1 "$feudal_elective_candidates$"
+ carnd_futa_elective_candidates_tooltip:1 "$feudal_elective_candidates_tooltip$"
+ carnd_futa_elective_electors:1 "$feudal_elective_electors$"
+ carnd_futa_elective_electors_tooltip:1 "$feudal_elective_electors_tooltip$"

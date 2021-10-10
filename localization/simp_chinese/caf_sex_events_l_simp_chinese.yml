@@ -1,0 +1,40 @@
+﻿l_simp_chinese:
+
+caf_sex_effect_best.t:1 "一场完美的性交"
+caf_sex_effect_amazing.t:1 "一场令人惊叹的性交"
+caf_sex_effect_good.t:1 "一场满意的性交"
+caf_sex_effect_decent.t:1 "一场寻常的性交"
+caf_sex_effect_bad.t:1 "一场不满意的性交"
+caf_sex_effect_very_bad.t:1 "一场糟糕的性交"
+caf_sex_effect_horrible.t:1 "一场极度恶劣的性交"
+
+caf_sex_evaluation_tooltip_very_aroused:1 "你已经重度发情了"
+caf_sex_evaluation_tooltip_enjoyed_forcing:1 "你喜欢强迫他人与你性交"
+caf_sex_evaluation_tooltip_aroused:1 "你发情了"
+caf_sex_evaluation_tooltip_enjoyed_dubcon:1 "你喜欢鼓动他人与你性交"
+caf_sex_evaluation_tooltip_partner_likes_you:1 "你的伙伴喜欢你"
+caf_sex_evaluation_tooltip_sexually_compatible:1 "你的性爱观融洽"
+
+caf_sex_evaluation_tooltip_attractive_partner_high:1 "你的伙伴极其有吸引力"
+caf_sex_evaluation_tooltip_unattractive_partner_high:1 "你的伙伴毫无吸引力"
+caf_sex_evaluation_tooltip_matching_personalities_high:1 "你可以处得很好"
+caf_sex_evaluation_tooltip_negative_trait_compatibility_high:1 "你拥有冲突的个性"
+
+caf_sex_evaluation_tooltip_attractive_partner_medium:1 "你的伙伴比较有吸引力"
+caf_sex_evaluation_tooltip_unattractive_partner_medium:1 "你的伙伴缺乏吸引力"
+caf_sex_evaluation_tooltip_matching_personalities_medium:1 "你可以处得非常好"
+caf_sex_evaluation_tooltip_negative_trait_compatibility_medium:1 "你拥有矛盾的个性"
+
+caf_sex_evaluation_tooltip_attractive_partner_low:1 "你的伙伴有点吸引力"
+caf_sex_evaluation_tooltip_unattractive_partner_low:1 "你的伙伴有点没有吸引力"
+caf_sex_evaluation_tooltip_matching_personalities_low:1 "你可以处得足够好"
+caf_sex_evaluation_tooltip_negative_trait_compatibility_low:1 "你不能处得很好"
+
+caf_sex_evaluation_tooltip_raped:1 "你被违反个人意志地强奸了"
+caf_sex_evaluation_tooltip_wrong_gender:1 "你不被你伙伴的性别所吸引"
+caf_sex_evaluation_tooltip_regret_noncon:1 "你后悔强迫他人与你性交"
+caf_sex_evaluation_tooltip_regret_dubcon:1 "你后悔鼓动他人与你性交"
+caf_sex_evaluation_tooltip_dubcon:1 "你被鼓动地参与了性交"
+caf_sex_evaluation_tooltip_partner_dislikes_you:1 "你的伙伴不喜欢你"
+caf_sex_evaluation_tooltip_traumatic_experiences:1 "身体痛楚的回忆影响了性交体验"
+caf_sex_evaluation_tooltip_low_arousal:1 "你已经性满足了"

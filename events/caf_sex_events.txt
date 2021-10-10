@@ -1,0 +1,1225 @@
+﻿namespace = caf_sex_events
+
+scripted_trigger caf_sex_evaluation_gender_attraction = {
+	is_attracted_to_gender_of = scope:carn_sex_partner
+}
+
+scripted_trigger caf_sex_evaluation_sexual_match = {
+	AND = {
+		sexually_liberal_trigger = yes
+		scope:carn_sex_partner = { sexually_liberal_trigger = yes }
+		carn_sex_scene_was_noncon = no
+	}
+}
+
+scripted_trigger caf_sex_evaluation_negative_opinion = {
+	AND = {
+		NOT = { has_trait = ie_masked } # Compatiblity with Intimate Encounters - never add opinion mods if anonymous
+		scope:carn_sex_partner = {
+			opinion = {
+				target = root
+				value <= $OPINION$ 
+			}
+		}
+		carn_sex_scene_was_noncon = no
+	}
+}
+
+scripted_trigger caf_sex_evaluation_positive_opinion = {
+	AND = {
+		NOT = { has_trait = ie_masked } # Compatiblity with Intimate Encounters - never add opinion mods if anonymous
+		scope:carn_sex_partner = {
+			opinion = {
+				target = root
+				value >= $OPINION$ 
+			}
+		}
+		carn_sex_scene_was_noncon = no
+	}
+}
+
+scripted_trigger caf_sex_evaluation_arousal_level = {
+	caf_arousal_level = $LEVEL$
+}
+
+scripted_trigger caf_sex_evaluation_partner_attraction = {
+	AND = {
+		OR = {
+			AND = {
+				$ATTRACTION$ < 0
+				scope:carn_sex_partner = { attraction <= $ATTRACTION$ }
+			}
+			AND = {
+				$ATTRACTION$ >= 0 # Arbitrarily comparing >= for 0 to make the used weights work
+				scope:carn_sex_partner = { attraction >= $ATTRACTION$ }
+			}
+		}	
+
+		scope:carn_sex_partner = { var:caf_experience_with_player >= $MIN$ }
+		OR = {
+			$MAX$ = -1 # Magic numbers, yay! (Used to ignore the max limit)
+			scope:carn_sex_partner = { var:caf_experience_with_player < $MAX$ }
+		}
+	}
+}
+
+scripted_trigger caf_sex_evaluation_trait_compatibility = {
+	AND = {
+		OR = {
+			AND = {
+				$COMPATIBILITY$ < 0
+				trait_compatibility = {
+					target = scope:carn_sex_partner
+					value <= $COMPATIBILITY$
+				}
+			}
+			AND = {
+				$COMPATIBILITY$ > 0
+				trait_compatibility = {
+					target = scope:carn_sex_partner
+					value >= $COMPATIBILITY$
+				}
+			}
+		}
+		carn_sex_scene_was_noncon = no
+
+		scope:carn_sex_partner = { var:caf_experience_with_player >= $MIN$ }
+		OR = {
+			$MAX$ = -1 # Magic numbers, yay! (Used to ignore the max limit)
+			scope:carn_sex_partner = { var:caf_experience_with_player < $MAX$ }
+		}
+	}
+}
+
+scripted_trigger caf_sex_evaluation_noncon_player = {
+	AND = {
+		carn_sex_scene_was_noncon = yes
+		carn_sex_scene_was_sub_player = yes
+		NOT = { carn_has_fetish_trigger = { FETISH = being_raped } }
+	}
+}
+
+scripted_trigger caf_sex_evaluation_trauma = {
+	AND = {
+		has_character_modifier = carn_recently_raped
+		NAND = { # Current scene is abusive and probably applied carn_recently_raped - see modifier above instead
+			carn_sex_scene_was_noncon = yes
+			carn_sex_scene_was_sub_player = yes
+		}
+		NOT = { carn_has_fetish_trigger = { FETISH = being_raped } }
+	}
+}
+
+scripted_trigger caf_sex_evaluation_dubcon_player = {
+	AND = {
+		carn_sex_scene_was_dubcon = yes
+		carn_sex_scene_was_sub_player = yes
+		NOT = { carn_has_fetish_trigger = { FETISH = being_raped } }
+	}
+}
+
+scripted_trigger caf_sex_evaluation_noncon_but_compassionate = {
+	AND = {
+		has_trait = compassionate
+		carn_sex_scene_was_dom_player = yes
+		carn_sex_scene_was_noncon = yes
+	}
+}
+
+scripted_trigger caf_sex_evaluation_dubcon_but_compassionate = {
+	AND = {
+		has_trait = compassionate
+		carn_sex_scene_was_dom_player = yes
+		carn_sex_scene_was_dubcon = yes
+	}
+}
+
+scripted_trigger caf_sex_evaluation_noncon_and_sadist = {
+	AND = {
+		OR = { 
+			has_trait = sadistic
+			carn_has_fetish_trigger = { FETISH = sadism }
+		}
+		carn_sex_scene_was_dom_player = yes
+		carn_sex_scene_was_noncon = yes
+	}
+}
+
+scripted_trigger caf_sex_evaluation_dubcon_and_sadist = {
+	AND = {
+		OR = { 
+			has_trait = sadistic
+			carn_has_fetish_trigger = { FETISH = sadism }
+		}		
+		carn_sex_scene_was_dom_player = yes
+		carn_sex_scene_was_dubcon = yes
+	}
+}
+
+scripted_trigger caf_sex_evaluation_our_attraction = {
+	AND = {
+		scope:carn_sex_partner = { var:caf_experience_with_player <= caf_experience_medium }
+
+		OR = {
+			AND = {
+				$ATTRACTION$ < 0		
+				NOR = {
+					attraction >= $ATTRACTION$
+					scope:carn_sex_partner = { is_attracted_to_gender_of = root }
+				}
+			}
+			AND = {
+				$ATTRACTION$ > 0				
+				attraction >= $ATTRACTION$ # Again, >= rather arbitrarily
+				scope:carn_sex_partner = { is_attracted_to_gender_of = root }
+			}
+		}
+
+		# This only applies if we care what our partner thinks or does
+		carn_sex_scene_was_noncon = no
+		NOR = { 
+			has_trait = sadistic
+			has_trait = callous
+			carn_has_fetish_trigger = { FETISH = sadism }
+		}
+	}
+}
+
+# Checks if sex was good enough for at least $LEVEL$ or better (use caf_mediocre_sex_requirement etc.)
+scripted_trigger caf_how_good_is_the_sex_trigger = {
+	weighted_calc_true_if = {
+		amount >= $VALUE$
+
+		# The basics
+		-30 = { caf_sex_evaluation_gender_attraction = no }
+		-15 = { exists = local_var:sex_random_bad_major }
+		-10 = { exists = local_var:sex_random_bad }
+		-5 = { exists = local_var:sex_random_bad_minor }
+		5 = { exists = local_var:sex_random_good_minor }
+		10 = { exists = local_var:sex_random_good }
+		15 = { exists = local_var:sex_random_good_major }
+
+		# How much does the partner like us?
+		# We do not check for the reverse because "who does the player character like" is something the player cannot see nor influence
+		# The influence values are possibly a bit exaggerated, but I think it makes for a good gameplay mechanic
+		-4 = { caf_sex_evaluation_negative_opinion = { OPINION = high_negative_opinion } }
+		-4 = { caf_sex_evaluation_negative_opinion = { OPINION = medium_negative_opinion } }
+		-4 = { caf_sex_evaluation_negative_opinion = { OPINION = low_negative_opinion } }
+		-2 = { caf_sex_evaluation_negative_opinion = { OPINION = neutral_opinion } } # Half of other mods to get an even +-4 difference at every 10 opinion interval
+		2 = { caf_sex_evaluation_positive_opinion = { OPINION = neutral_opinion } } # Half of other mods to get an even +-4 difference at every 10 opinion interval
+		4 = { caf_sex_evaluation_positive_opinion = { OPINION = low_positive_opinion } }
+		4 = { caf_sex_evaluation_positive_opinion = { OPINION = medium_positive_opinion } }
+		4 = { caf_sex_evaluation_positive_opinion = { OPINION = high_positive_opinion } }
+
+		# Bonus for both being sexual liberal
+		5 = { caf_sex_evaluation_sexual_match = yes }
+		
+		# Being aroused certainly helps with enjoyment. Point distribution assumes that players are far more often at levels 0-1 than at 2-3.
+		-10 = { caf_sex_evaluation_arousal_level = { LEVEL = 0 } }
+		0 = { caf_sex_evaluation_arousal_level = { LEVEL = 1 } }
+		10 = { caf_sex_evaluation_arousal_level = { LEVEL = 2 } }
+		20 = { caf_sex_evaluation_arousal_level = { LEVEL = 3 } }
+				
+		# Is the partner attractive? This is most important at the beginning of a (sexual) relationship.
+		# Is slightly (~1.5 points on average) scewed towards a positive result, but whatever.
+
+		# Experience is caf_experience_none or more
+		-6 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_negative_attraction MIN = caf_experience_none MAX = caf_experience_minor } }
+		-6 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_negative_attraction MIN = caf_experience_none MAX = caf_experience_minor } }
+		-6 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_negative_attraction MIN = caf_experience_none MAX = caf_experience_minor } }
+		6 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = 0 MIN = caf_experience_none MAX = caf_experience_minor } }
+		6 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_positive_attraction MIN = caf_experience_none MAX = caf_experience_minor } }
+		6 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_positive_attraction MIN = caf_experience_none MAX = caf_experience_minor } }
+		6 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_positive_attraction MIN = caf_experience_none MAX = caf_experience_minor } }
+
+		# Experience is caf_experience_minor or more
+		-5 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_negative_attraction MIN = caf_experience_minor MAX = caf_experience_medium } }
+		-5 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_negative_attraction MIN = caf_experience_minor MAX = caf_experience_medium } }
+		-5 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_negative_attraction MIN = caf_experience_minor MAX = caf_experience_medium } }
+		5 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = 0 MIN = caf_experience_minor MAX = caf_experience_medium } }
+		5 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_positive_attraction MIN = caf_experience_minor MAX = caf_experience_medium } }
+		5 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_positive_attraction MIN = caf_experience_minor MAX = caf_experience_medium } }
+		5 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_positive_attraction MIN = caf_experience_minor MAX = caf_experience_medium } }
+
+		# Experience is caf_experience_medium or more
+		-4 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_negative_attraction MIN = caf_experience_medium MAX = caf_experience_major } }
+		-4 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_negative_attraction MIN = caf_experience_medium MAX = caf_experience_major } }
+		-4 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_negative_attraction MIN = caf_experience_medium MAX = caf_experience_major } }
+		4 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = 0 MIN = caf_experience_medium MAX = caf_experience_major } }
+		4 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_positive_attraction MIN = caf_experience_medium MAX = caf_experience_major } }
+		4 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_positive_attraction MIN = caf_experience_medium MAX = caf_experience_major } }
+		4 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_positive_attraction MIN = caf_experience_medium MAX = caf_experience_major } }
+
+		# Experience is caf_experience_major or more
+		-3 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_negative_attraction MIN = caf_experience_major MAX = caf_experience_max } }
+		-3 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_negative_attraction MIN = caf_experience_major MAX = caf_experience_max } }
+		-3 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_negative_attraction MIN = caf_experience_major MAX = caf_experience_max } }
+		3 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = 0 MIN = caf_experience_major MAX = caf_experience_max } }
+		3 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_positive_attraction MIN = caf_experience_major MAX = caf_experience_max } }
+		3 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_positive_attraction MIN = caf_experience_major MAX = caf_experience_max } }
+		3 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_positive_attraction MIN = caf_experience_major MAX = caf_experience_max } }
+
+		# Experience is caf_experience_max or more
+		-2 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_negative_attraction MIN = caf_experience_max MAX = -1 } }
+		-2 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_negative_attraction MIN = caf_experience_max MAX = -1 } }
+		-2 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_negative_attraction MIN = caf_experience_max MAX = -1 } }
+		2 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = 0 MIN = caf_experience_max MAX = -1 } }
+		2 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_positive_attraction MIN = caf_experience_max MAX = -1 } }
+		2 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_positive_attraction MIN = caf_experience_max MAX = -1 } }
+		2 = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_positive_attraction MIN = caf_experience_max MAX = -1 } }
+
+		# Is the partner likeminded and personality-compatible? This is most important in the later stages of a (sexual) relationship.
+		
+		# Experience is caf_experience_none or more
+		-2 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_negative_trait_compatibility MIN = caf_experience_none MAX = caf_experience_minor } }
+		-2 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_negative_trait_compatibility MIN = caf_experience_none MAX = caf_experience_minor } }
+		-2 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_negative_trait_compatibility MIN = caf_experience_none MAX = caf_experience_minor } }
+		2 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_positive_trait_compatibility MIN = caf_experience_none MAX = caf_experience_minor } }
+		2 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_positive_trait_compatibility MIN = caf_experience_none MAX = caf_experience_minor } }
+		2 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_positive_trait_compatibility MIN = caf_experience_none MAX = caf_experience_minor } }
+
+		# Experience is caf_experience_minor or more
+		-3 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_negative_trait_compatibility MIN = caf_experience_minor MAX = caf_experience_medium } }
+		-3 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_negative_trait_compatibility MIN = caf_experience_minor MAX = caf_experience_medium } }
+		-3 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_negative_trait_compatibility MIN = caf_experience_minor MAX = caf_experience_medium } }
+		3 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_positive_trait_compatibility MIN = caf_experience_minor MAX = caf_experience_medium } }
+		3 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_positive_trait_compatibility MIN = caf_experience_minor MAX = caf_experience_medium } }
+		3 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_positive_trait_compatibility MIN = caf_experience_minor MAX = caf_experience_medium } }
+
+		# Experience is caf_experience_medium or more
+		-4 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_negative_trait_compatibility MIN = caf_experience_medium MAX = caf_experience_major } }
+		-4 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_negative_trait_compatibility MIN = caf_experience_medium MAX = caf_experience_major } }
+		-4 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_negative_trait_compatibility MIN = caf_experience_medium MAX = caf_experience_major } }
+		4 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_positive_trait_compatibility MIN = caf_experience_medium MAX = caf_experience_major } }
+		4 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_positive_trait_compatibility MIN = caf_experience_medium MAX = caf_experience_major } }
+		4 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_positive_trait_compatibility MIN = caf_experience_medium MAX = caf_experience_major } }
+
+		# Experience is caf_experience_major or more
+		-5 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_negative_trait_compatibility MIN = caf_experience_major MAX = caf_experience_max } }
+		-5 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_negative_trait_compatibility MIN = caf_experience_major MAX = caf_experience_max } }
+		-5 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_negative_trait_compatibility MIN = caf_experience_major MAX = caf_experience_max } }
+		5 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_positive_trait_compatibility MIN = caf_experience_major MAX = caf_experience_max } }
+		5 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_positive_trait_compatibility MIN = caf_experience_major MAX = caf_experience_max } }
+		5 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_positive_trait_compatibility MIN = caf_experience_major MAX = caf_experience_max } }
+
+		# Experience is caf_experience_max or more
+		-6 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_negative_trait_compatibility MIN = caf_experience_max MAX = -1 } }
+		-6 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_negative_trait_compatibility MIN = caf_experience_max MAX = -1 } }
+		-6 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_negative_trait_compatibility MIN = caf_experience_max MAX = -1 } }
+		6 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_positive_trait_compatibility MIN = caf_experience_max MAX = -1 } }
+		6 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_positive_trait_compatibility MIN = caf_experience_max MAX = -1 } }
+		6 = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_positive_trait_compatibility MIN = caf_experience_max MAX = -1 } }
+
+		# Are we having sex against our will?
+		-40 = {	caf_sex_evaluation_noncon_player = yes } # Noncon
+		-10 = { caf_sex_evaluation_dubcon_player = yes } # Dubcon
+		
+		# Noncon in past
+		-10 = { caf_sex_evaluation_trauma = yes }
+		
+		# Are we forcing ourselves onto our partner, and do we care?
+		-10 = { caf_sex_evaluation_noncon_but_compassionate = yes }
+		-5 = { caf_sex_evaluation_dubcon_but_compassionate = yes }
+		10 = { caf_sex_evaluation_noncon_and_sadist = yes }
+		5 = { caf_sex_evaluation_dubcon_and_sadist = yes }
+		
+		# Is our partner excited to have sex with us?
+		# This is a very dumbed down version of attraction checks, just in reverse
+		-4 = { caf_sex_evaluation_our_attraction = { ATTRACTION = high_negative_attraction } }
+		-4 = { caf_sex_evaluation_our_attraction = { ATTRACTION = medium_negative_attraction } }
+		-4 = { caf_sex_evaluation_our_attraction = { ATTRACTION = low_negative_attraction } }
+		-2 = { 1 = 1 } # Offset
+		4 = { caf_sex_evaluation_our_attraction = { ATTRACTION = 0 } }
+		4 = { caf_sex_evaluation_our_attraction = { ATTRACTION = low_positive_attraction } }
+		4 = { caf_sex_evaluation_our_attraction = { ATTRACTION = medium_positive_attraction } }
+		4 = { caf_sex_evaluation_our_attraction = { ATTRACTION = high_positive_attraction } }
+	
+		# Fetishes!
+		# Obviously I've had to make some judgment calls with the weights here.
+		# Negative modifiers also apply for consensual scenes. Depending on your POV one might either say "but if it's consensual then you could just stop if you don't like it!"
+		# ...well, yes, but the scene still has tag <xy>, so apparently they are deciding to go for it. Maybe they just realize they don't like it in this scene.
+		# Depending on the scene, it might also be an element that is introduced accidentially or just very suddenly by one side without possibility to react.
+
+		# Anal
+		5 = { # Scene matches preferences
+			AND = {
+				carn_has_fetish_trigger = { FETISH = anal }
+				carn_sex_scene_was_anal = yes
+			}
+		}
+		# Do people need an anal fetish to enjoy anal sex? Time will tell how this fetish will be used I guess.
+		-5 = { # Scene has unpreferred element
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = anal } }
+				carn_sex_scene_was_anal = yes
+			}
+		}
+
+		# Sadism
+		5 = { # Scene matches preferences
+			AND = {
+				carn_has_fetish_trigger = { FETISH = sadism }
+				OR = {
+					carn_sex_scene_was_dom_player = yes
+					carn_sex_scene_was_giving_player = yes
+				}
+				carn_sex_scene_was_painful = yes
+			}
+		}
+		-5 = { # As you are the dom in a painful scene, but don't have sadism... does that mean the sub is hurting themselves or something? Could be worse.
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = sadism } }
+				OR = {
+					carn_sex_scene_was_dom_player = yes
+					carn_sex_scene_was_giving_player = yes
+				}
+				carn_sex_scene_was_painful = yes
+			}
+		}
+
+		# Masochism
+		5 = { # Scene matches preferences
+			AND = {
+				carn_has_fetish_trigger = { FETISH = masochism }
+				OR = {
+					carn_sex_scene_was_sub_player = yes
+					carn_sex_scene_was_receiving_player = yes
+				}
+				carn_sex_scene_was_painful = yes
+			}
+		}
+		-20 = { # That hurts! Ouch!
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = masochism } }
+				OR = {
+					carn_sex_scene_was_sub_player = yes
+					carn_sex_scene_was_receiving_player = yes
+				}
+				carn_sex_scene_was_painful = yes
+			}
+		}
+		5 = { # Partner matches fetish preference
+			OR = {
+				AND = {
+					carn_has_fetish_trigger = { FETISH = sadism }
+					scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = masochism } }
+					carn_sex_scene_is_noncon = no
+				}
+				AND = {
+					carn_has_fetish_trigger = { FETISH = masochism }
+					scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = sadism } }
+					carn_sex_scene_is_noncon = no
+				}
+			}
+			
+		}
+
+		# Bestiality
+		5 = { # Scene matches preferences
+			AND = {
+				carn_has_fetish_trigger = { FETISH = bestiality }
+				carn_sex_scene_was_bestiality = yes
+			}
+		}
+		-20 = { # Probably disgusting, but otherwise harmless
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = bestiality } }
+				carn_sex_scene_was_bestiality = yes
+			}
+		}
+		5 = { # Partner matches fetish preference
+			AND = {
+				carn_has_fetish_trigger = { FETISH = bestiality }
+				scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = bestiality } }
+				carn_sex_scene_is_noncon = no
+			}
+		}
+		
+
+		# Watersports
+		5 = { # Scene matches preferences
+			AND = {
+				carn_has_fetish_trigger = { FETISH = waterspots }
+				carn_sex_scene_was_watersports = yes
+			}
+		}
+		-20 = { # Probably disgusting, but otherwise harmless
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = watersports } }
+				carn_sex_scene_was_watersports = yes
+			}
+		}
+		5 = { # Partner matches fetish preference
+			AND = {
+				carn_has_fetish_trigger = { FETISH = waterspots }
+				scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = waterspots } }
+				carn_sex_scene_is_noncon = no
+			}
+		}
+
+		# Scat
+		5 = {
+			AND = {
+				carn_has_fetish_trigger = { FETISH = scat }
+				carn_sex_scene_was_scat = yes
+			}
+		}
+		-20 = { # Probably disgusting, but otherwise harmless
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = scat } }
+				carn_sex_scene_was_scat = yes
+			}
+		}
+		5 = { # Partner matches fetish preference
+			AND = {
+				carn_has_fetish_trigger = { FETISH = scat }
+				scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = scat } }
+				carn_sex_scene_is_noncon = no
+			}
+		}
+
+		# Gore
+		5 = {
+			AND = {
+				carn_has_fetish_trigger = { FETISH = gore }
+				carn_sex_scene_was_gore = yes
+			}
+		}
+		-30 = { # Depending on context, this is probably either disturbing or downright scary
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = gore } }
+				carn_sex_scene_was_gore = yes
+			}
+		}
+		5 = { # Partner matches fetish preference
+			AND = {
+				carn_has_fetish_trigger = { FETISH = gore }
+				scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = gore } }
+				carn_sex_scene_is_noncon = no
+			}
+		}
+
+		# Footplay
+		# Cannot be checked at of time writing
+
+		# Bondage
+		5 = {
+			AND = {
+				carn_has_fetish_trigger = { FETISH = bondage }
+				carn_sex_scene_was_bondage = yes
+			}
+		}
+		-10 = { # Scene has unpreferred element
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = bondage } }
+				carn_sex_scene_was_bondage = yes
+			}
+		}
+		-10 = { # Sure, everything is worse if noncon, but being bound is arguably a lot worse as it directly impacts your possibility to fight back/escape/scream etc.
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = bondage } }
+				carn_sex_scene_was_bondage = yes
+				carn_sex_scene_was_noncon = yes
+			}
+		}
+		5 = { # Partner matches fetish preference
+			AND = {
+				carn_has_fetish_trigger = { FETISH = bondage }
+				scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = bondage } }
+				carn_sex_scene_is_noncon = no
+			}
+		}
+
+		# Dominance
+		5 = {
+			AND = {
+				carn_has_fetish_trigger = { FETISH = domination }
+				carn_sex_scene_was_dom_player = yes
+			}			
+		}
+		# Dominant and don't like it? You are in charge, maybe try something else. :-P
+		-2 = {
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = domination } }
+				carn_sex_scene_was_dom_player = yes
+			}
+		}
+
+		# Submission
+		5 = {
+			AND = {
+				carn_has_fetish_trigger = { FETISH = submission }
+				carn_sex_scene_was_sub_player = yes
+			}
+		}
+		-5 = {
+			AND = {
+				NOT = { carn_has_fetish_trigger = { FETISH = submission } }
+				carn_sex_scene_was_sub_player = yes
+			}
+		}
+		5 = { # Partner matches fetish preference
+			OR = {
+				AND = {
+					carn_has_fetish_trigger = { FETISH = domination }
+					scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = submission } }
+					carn_sex_scene_is_noncon = no
+				}	
+				AND = {
+					carn_has_fetish_trigger = { FETISH = submission }
+					scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = domination } }
+					carn_sex_scene_is_noncon = no
+				}
+			}
+		}
+
+		# Raping. Assuming rape fetish is for the non-consensual kind and not just a "rape fantasy"
+		5 = {
+			AND = {
+				carn_sex_scene_was_noncon = yes
+				carn_sex_scene_was_dom_player = yes
+				carn_has_fetish_trigger = { FETISH = raping }
+			}
+		}
+		# Raping and don't like it? You started it, you buffoon!
+		-2 = { 
+			AND = {
+				carn_sex_scene_was_noncon = yes
+				carn_sex_scene_was_dom_player = yes
+				NOR = {
+					carn_has_fetish_trigger = { FETISH = raping } 
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+		}
+		5 = { # Partner matches fetish preference
+			OR = {
+				AND = {
+					carn_has_fetish_trigger = { FETISH = raping }
+					scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = being_raped } }
+				}	
+				AND = {
+					carn_has_fetish_trigger = { FETISH = being_raped }
+					scope:carn_sex_partner = { carn_has_fetish_trigger = { FETISH = raping } }
+				}
+			}
+		}
+
+		# Being raped
+		# Instead negates penalties from raping, see above
+
+		# Lactation
+		# Cannot be checked at the time of writing
+
+		# Toy
+		5 = {
+			AND = {
+				carn_sex_scene_was_toy = yes
+				sexually_liberal_trigger = yes
+				scope:carn_sex_partner = { sexually_liberal_trigger = yes }
+				carn_sex_scene_was_noncon = no
+			}
+		}
+	}
+}
+
+scripted_effect caf_positive_sex_reason = {
+	#20
+	if = {
+		limit = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_positive_attraction MIN = caf_experience_none MAX = caf_experience_medium } }
+		custom_tooltip = caf_sex_evaluation_tooltip_attractive_partner_high
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_positive_attraction MIN = caf_experience_none MAX = caf_experience_medium } }
+		custom_tooltip = caf_sex_evaluation_tooltip_attractive_partner_medium
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_positive_attraction MIN = caf_experience_none MAX = caf_experience_medium } }
+		custom_tooltip = caf_sex_evaluation_tooltip_attractive_partner_low
+	}
+
+	if = {
+		limit = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_positive_trait_compatibility MIN = caf_experience_medium MAX = -1 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_matching_personalities_high
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_positive_trait_compatibility MIN = caf_experience_medium MAX = -1 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_matching_personalities_medium
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_positive_trait_compatibility MIN = caf_experience_medium MAX = -1 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_matching_personalities_low
+	}
+
+	if = {
+		limit = { caf_sex_evaluation_arousal_level = { LEVEL = 3 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_very_aroused
+	}
+
+	# 15	
+	
+
+	# 10
+	if = {
+		limit = { caf_sex_evaluation_arousal_level = { LEVEL = 2 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_aroused
+	}
+	
+	if = { 
+		limit = { caf_sex_evaluation_noncon_and_sadist = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_enjoyed_forcing
+	}	
+	if = {
+		limit = { caf_sex_evaluation_positive_opinion = { OPINION = medium_positive_opinion } }
+		custom_tooltip = caf_sex_evaluation_tooltip_partner_likes_you
+	}
+
+	# 5
+	if = { 
+		limit = { caf_sex_evaluation_noncon_and_sadist = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_enjoyed_dubcon
+	}
+	if = {
+		limit = { caf_sex_evaluation_sexual_match = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_sexually_compatible 
+	}
+}
+
+scripted_effect caf_negative_sex_reason = {
+	# -40
+	if = {
+		limit = { caf_sex_evaluation_noncon_player = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_raped
+	}
+
+	# -30
+	if = { 
+		limit = { caf_sex_evaluation_gender_attraction = no }
+		custom_tooltip = caf_sex_evaluation_tooltip_wrong_gender
+	}
+
+	# -20
+	if = {
+		limit = { caf_sex_evaluation_partner_attraction = { ATTRACTION = high_negative_attraction MIN = caf_experience_none MAX = caf_experience_medium } }
+		custom_tooltip = caf_sex_evaluation_tooltip_unattractive_partner_high
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_partner_attraction = { ATTRACTION = medium_negative_attraction MIN = caf_experience_none MAX = caf_experience_medium } }
+		custom_tooltip = caf_sex_evaluation_tooltip_unattractive_partner_medium
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_partner_attraction = { ATTRACTION = low_negative_attraction MIN = caf_experience_none MAX = caf_experience_medium } }
+		custom_tooltip = caf_sex_evaluation_tooltip_unattractive_partner_low
+	}
+
+
+	if = {
+		limit = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = high_negative_trait_compatibility MIN = caf_experience_medium MAX = -1 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_negative_trait_compatibility_high
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = medium_negative_trait_compatibility MIN = caf_experience_medium MAX = -1 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_negative_trait_compatibility_medium
+	}
+	else_if = {
+		limit = { caf_sex_evaluation_trait_compatibility = { COMPATIBILITY = low_negative_trait_compatibility MIN = caf_experience_medium MAX = -1 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_negative_trait_compatibility_low
+	}
+
+	# -15
+	
+	# -10
+	if = { 
+		limit = { caf_sex_evaluation_noncon_but_compassionate = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_regret_noncon
+	}
+	if = {
+		limit = { caf_sex_evaluation_dubcon_player = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_dubcon
+	}
+	if = {
+		limit = { caf_sex_evaluation_negative_opinion = { OPINION = medium_negative_opinion } }
+		custom_tooltip = caf_sex_evaluation_tooltip_partner_dislikes_you
+	}
+	if = {
+		limit = { caf_sex_evaluation_trauma = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_traumatic_experiences
+	}
+	if = {
+		limit = { caf_sex_evaluation_arousal_level = { LEVEL = 0 } }
+		custom_tooltip = caf_sex_evaluation_tooltip_low_arousal
+	}
+
+	# -5
+	if = { 
+		limit = { caf_sex_evaluation_dubcon_but_compassionate = yes }
+		custom_tooltip = caf_sex_evaluation_tooltip_regret_dubcon
+	}
+}
+
+scripted_effect caf_other_sex_effects = {
+	# Celibacy
+	if = {
+		limit = {
+			carn_sex_scene_was_masturbation = no
+		}
+		stress_impact = {
+			celibate = medium_stress_impact_gain
+		}
+	}
+}
+
+# Why are these tokens malformed when placed in caf_sex_values.txt?
+# caf_bad_sex_requirement = -20
+# caf_mediocre_sex_requirement = 0
+# caf_good_sex_requirement = 15
+# caf_amazing_sex_requirement = 30
+
+scripted_trigger caf_had_horrible_sex_trigger = { 
+	NOT = { caf_how_good_is_the_sex_trigger = { VALUE = -30 } }
+}
+
+scripted_trigger caf_had_very_bad_sex_trigger = { 
+	caf_how_good_is_the_sex_trigger = { VALUE = -30 }
+}
+
+scripted_trigger caf_had_bad_sex_trigger = { 
+	caf_how_good_is_the_sex_trigger = { VALUE = -15 }
+}
+
+scripted_trigger caf_had_mediocre_sex_trigger = { 
+	caf_how_good_is_the_sex_trigger = { VALUE = 0 }
+}
+
+scripted_trigger caf_had_good_sex_trigger = {
+	caf_how_good_is_the_sex_trigger = { VALUE = 15 }
+}
+
+scripted_trigger caf_had_amazing_sex_trigger = {
+	caf_how_good_is_the_sex_trigger = { VALUE = 30 }
+}
+
+scripted_trigger caf_had_best_sex_trigger = {
+	caf_how_good_is_the_sex_trigger = { VALUE = 45 }
+}
+
+# Just for opinion mod. Technically when the partner is masked they should still gain opinion, just that you don't know about it, but that's too much efford for too little gain.
+scripted_trigger caf_sex_was_anonymous = {
+	OR = {
+		has_trait = ie_masked
+		scope:carn_sex_partner = { has_trait = ie_masked }
+	}
+}
+
+scripted_effect caf_best_sex_effects = {
+	if = {
+		limit = {
+			caf_sex_was_anonymous = no
+			carn_sex_scene_was_noncon = no # Noncon opinion modifiers by Carnalitas
+		}
+		
+		hidden_effect = {
+			add_opinion = {
+				target = scope:carn_sex_partner
+				modifier = romance_opinion
+				opinion = 15
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:carn_sex_partner
+			modifier = romance_opinion
+			opinion = 15
+		}
+	}
+
+	add_stress = -20
+	caf_other_sex_effects = yes
+	caf_add_arousal = { VALUE = caf_arousal_loss_best_sex }
+
+	#caf_positive_sex_reason = yes
+	#caf_negative_sex_reason = yes
+}
+
+scripted_effect caf_amazing_sex_effects = {
+	if = {
+		limit = { 
+			caf_sex_was_anonymous = no
+			carn_sex_scene_was_noncon = no # Noncon opinion modifiers by Carnalitas
+		}
+
+		hidden_effect = {
+			add_opinion = {
+				target = scope:carn_sex_partner
+				modifier = romance_opinion
+				opinion = 10
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:carn_sex_partner
+			modifier = romance_opinion
+			opinion = 10
+		}
+	}
+
+	add_stress = -10
+	caf_other_sex_effects = yes
+	caf_add_arousal = { VALUE = caf_arousal_loss_amazing_sex }
+
+
+	#caf_positive_sex_reason = yes
+	#caf_negative_sex_reason = yes
+}
+
+scripted_effect caf_good_sex_effects = {
+	if = {
+		limit = { 
+			caf_sex_was_anonymous = no
+			carn_sex_scene_was_noncon = no # Noncon opinion modifiers by Carnalitas
+		}
+		hidden_effect = {
+			add_opinion = {
+				target = scope:carn_sex_partner
+				modifier = romance_opinion
+				opinion = 5
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:carn_sex_partner
+			modifier = romance_opinion
+			opinion = 5
+		}
+	}
+
+	caf_other_sex_effects = yes
+	caf_add_arousal = { VALUE = caf_arousal_loss_good_sex }
+
+	#caf_positive_sex_reason = yes
+	#caf_negative_sex_reason = yes
+}
+
+scripted_effect caf_mediocre_sex_effects = {
+	# No opinion change
+	# No stress change
+	caf_add_arousal = { VALUE = caf_arousal_loss_mediocre_sex }
+
+	#caf_positive_sex_reason = yes
+	#caf_negative_sex_reason = yes
+}
+
+scripted_effect caf_bad_sex_effects = {
+	if = {
+		limit = { 
+			caf_sex_was_anonymous = no
+			carn_sex_scene_was_noncon = no # Noncon opinion modifiers by Carnalitas
+		}
+		hidden_effect = {
+			add_opinion = {
+				target = scope:carn_sex_partner
+				modifier = romance_opinion
+				opinion = -5
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:carn_sex_partner
+			modifier = romance_opinion
+			opinion = -5
+		}
+	}
+	add_stress = 10
+	caf_other_sex_effects = yes
+	caf_add_arousal = { VALUE = caf_arousal_loss_bad_sex }
+
+	#caf_positive_sex_reason = yes
+	#caf_negative_sex_reason = yes
+}
+
+scripted_effect caf_very_bad_sex_effects = {
+	if = {
+		limit = { 
+			caf_sex_was_anonymous = no
+			carn_sex_scene_was_noncon = no # Noncon opinion modifiers by Carnalitas
+		}
+		hidden_effect = {
+			add_opinion = {
+				target = scope:carn_sex_partner
+				modifier = romance_opinion
+				opinion = -10
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:carn_sex_partner
+			modifier = romance_opinion
+			opinion = -10
+		}
+	}
+	add_stress = 20
+	caf_other_sex_effects = yes
+	caf_add_arousal = { VALUE = caf_arousal_loss_very_bad_sex }
+
+	#caf_positive_sex_reason = yes
+	#caf_negative_sex_reason = yes
+}
+
+scripted_effect caf_horrible_sex_effects = {
+	if = {
+		limit = { 
+			caf_sex_was_anonymous = no
+			carn_sex_scene_was_noncon = no # Noncon opinion modifiers by Carnalitas
+		}
+		hidden_effect = {
+			add_opinion = {
+				target = scope:carn_sex_partner
+				modifier = romance_opinion
+				opinion = -15
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:carn_sex_partner
+			modifier = romance_opinion
+			opinion = -15
+		}
+	}
+	add_stress = 30
+	caf_other_sex_effects = yes
+	caf_add_arousal = { VALUE = caf_arousal_loss_horrible_sex }
+
+	#caf_positive_sex_reason = yes
+	#caf_negative_sex_reason = yes
+}
+
+caf_sex_events.0001 = {
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+		has_game_rule = cc_sex_effects_enabled
+	}
+
+	immediate = {
+		# Increase sexual experience with that person, which is used to determine the influence of attraction and trait compatibility 
+		# The current implementation has the following shortcomings: 
+		#   - If player character changes, old experience variables are not cleared (look into how to hook into player character changes)
+		#   - If player character changes, the new character has 0 experience with existing relationships even if they have existed for a long time (could be allievated somewhat with sophisticated seeding)
+		#   - Only tracks relations of the player character (impossible to change unless variables for arbitrary relations can be stored)
+		scope:carn_sex_partner = {
+			if = {
+				limit = { NOT = { has_variable = caf_experience_with_player } }
+				set_variable = {
+					name = caf_experience_with_player
+					value = 0
+				}
+			}
+			# Worth one year of "passive" experience
+			change_variable = {
+				name = caf_experience_with_player
+				add = 4
+			}
+		}
+		
+		# How good was the sex?
+		random_list = {
+			1 = {
+				set_local_variable = {
+					name = sex_random_bad_major
+					value = yes
+				}
+			}
+			1 = {
+				set_local_variable = {
+					name = sex_random_bad
+					value = yes
+				}
+			}
+			1 = {
+				set_local_variable = {
+					name = sex_random_bad_minor
+					value = yes
+				}
+			}
+			1 = {}
+			1 = {
+				set_local_variable = {
+					name = sex_random_good_minor
+					value = yes
+				}
+			}
+			1 = {
+				set_local_variable = {
+					name = sex_random_good
+					value = yes
+				}
+			}
+			1 = {
+				set_local_variable = {
+					name = sex_random_good_major
+					value = yes
+				}
+			}			
+		}
+
+		# Sex quality
+		if = { # Anonymous sex sex
+			limit = { 
+				caf_sex_was_anonymous = yes
+				caf_had_best_sex_trigger = yes 
+			}
+			send_interface_message = {
+				title = caf_sex_effect_best.t
+				type = event_generic_good
+
+				caf_best_sex_effects = yes
+			}
+		}
+		else_if = { # Regular best sex
+			limit = { 
+				caf_had_best_sex_trigger = yes
+			}
+			send_interface_message = {
+				title = caf_sex_effect_best.t
+				type = event_generic_good
+				right_icon = scope:carn_sex_partner
+
+				caf_best_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { 
+				caf_sex_was_anonymous = yes
+				caf_had_amazing_sex_trigger = yes 
+			}
+			send_interface_message = {
+				title = caf_sex_effect_amazing.t
+				type = event_generic_good
+
+				caf_amazing_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { 
+				caf_had_amazing_sex_trigger = yes 
+			}
+			send_interface_message = {
+				title = caf_sex_effect_amazing.t
+				type = event_generic_good
+				right_icon = scope:carn_sex_partner
+
+				caf_amazing_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { 
+				caf_sex_was_anonymous = yes
+				caf_had_good_sex_trigger = yes 
+			}
+			send_interface_message = {
+				title = caf_sex_effect_good.t
+				type = event_generic_good
+
+				caf_good_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { 
+				caf_had_good_sex_trigger = yes 
+			}
+			send_interface_message = {
+				title = caf_sex_effect_good.t
+				type = event_generic_good
+				right_icon = scope:carn_sex_partner
+
+				caf_good_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { 
+				caf_sex_was_anonymous = yes
+				caf_had_mediocre_sex_trigger = yes 
+			}
+			send_interface_message = {
+				title = caf_sex_effect_decent.t
+				type = event_generic_good
+
+				caf_mediocre_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { caf_had_mediocre_sex_trigger = yes }
+			send_interface_message = {
+				title = caf_sex_effect_decent.t
+				type = event_generic_good
+				right_icon = scope:carn_sex_partner
+
+				caf_mediocre_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { 
+				caf_sex_was_anonymous = yes
+				caf_had_bad_sex_trigger = yes 
+			}
+			send_interface_message = {
+				title = caf_sex_effect_bad.t
+				type = event_generic_bad
+
+				caf_bad_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { caf_had_bad_sex_trigger = yes }
+			send_interface_message = {
+				title = caf_sex_effect_bad.t
+				type = event_generic_bad
+				right_icon = scope:carn_sex_partner
+
+				caf_bad_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { 
+				caf_sex_was_anonymous = yes
+				caf_had_very_bad_sex_trigger = yes 
+			}
+			# Rape effects by Carnalitas are on top
+			send_interface_message = {
+				title = caf_sex_effect_very_bad.t
+				type = event_generic_bad
+
+				caf_very_bad_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = { caf_had_very_bad_sex_trigger = yes }
+			# Rape effects by Carnalitas are on top
+			send_interface_message = {
+				title = caf_sex_effect_very_bad.t
+				type = event_generic_bad
+				right_icon = scope:carn_sex_partner
+
+				caf_very_bad_sex_effects = yes
+			}
+		}
+		else_if = {
+			limit = {
+				caf_sex_was_anonymous = yes
+			}
+			# Rape effects by Carnalitas are on top
+			send_interface_message = {
+				title = caf_sex_effect_horrible.t
+				type = event_generic_bad
+
+				caf_horrible_sex_effects = yes
+			}
+		}
+		else = {
+			# Rape effects by Carnalitas are on top
+			send_interface_message = {
+				title = caf_sex_effect_horrible.t
+				type = event_generic_bad
+				right_icon = scope:carn_sex_partner
+
+				caf_horrible_sex_effects = yes
+			}
+		}
+	}
+}

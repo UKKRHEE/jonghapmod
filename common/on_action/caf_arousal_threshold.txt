@@ -1,0 +1,103 @@
+﻿
+# Triggered when arousal level goes down
+# Root is the character
+caf_on_arousal_level_reduced = {
+	effect = {
+		send_interface_toast = {
+			type = caf_msg_lost_arousal_level
+			left_icon = root
+		}
+	}
+}
+
+# Going to a new arousal level will fire this.
+caf_on_arousal_level_1 = {
+	trigger = {
+		NOT = { has_character_flag = recently_hit_arousal_threshold } # Prevents multiple arousal coping events from occuring on the same day (causes errors and creates an unbreakable arousal loop).
+	}
+	events = {
+		caf_arousal.0010 # Arousal Level Management (Also informs the player they have gained an arousal level).
+		delay = { days = 3 }
+		caf_arousal.0011 # Standard Arousal Coping event
+	}
+}
+
+# Going to a new arousal level will fire this.
+caf_on_arousal_level_2 = {
+	trigger = {
+		NOT = { has_character_flag = recently_hit_arousal_threshold } # Prevents multiple arousal coping events from occuring on the same day (causes errors and creates an unbreakable arousal loop).
+	}
+	events = {
+		caf_arousal.0010 # Arousal Level Management (Also informs the player they have gained an arousal level).
+		delay = { days = 3 }
+		caf_arousal.0011 # Standard Arousal Coping event
+	}
+}
+
+# Going to a new arousal level will fire this.
+caf_on_arousal_level_3 = {
+	trigger = {
+		NOT = { has_character_flag = recently_hit_arousal_threshold } # Prevents multiple arousal coping events from occuring on the same day (causes errors and creates an unbreakable arousal loop).
+	}
+	events = {
+		caf_arousal.0010 # Arousal Level Management (Also informs the player they have gained an arousal level).
+		delay = { days = 3 }
+		caf_arousal.0011 # Standard Arousal Coping event
+	}
+}
+
+# Exceeding max arousal will fire this.
+caf_on_arousal_level_4 = {
+	trigger = {
+		NOT = { has_character_flag = recently_hit_arousal_threshold } # Prevents multiple arousal coping events from occuring on the same day (causes errors and creates an unbreakable arousal loop).
+	}
+	events = {
+		caf_arousal.0400 # Trigger the 400 arousal 'reset'. This event will also trigger its own arousal coping events.
+	}
+}
+
+#Arousal Threshold Event Tombolas
+caf_arousal_threshold_level_1_event = {
+	random_events = {
+		# You can add events here! Weight * weight_multiplier should be 100 for a standard event that can always trigger, add more if the event is very specific or has many variations, less if it's supposed to be rare.
+	}
+}
+
+#Arousal Threshold Event Tombolas
+caf_arousal_threshold_level_2_event = {
+	random_events = {
+		# You can add events here! Weight * weight_multiplier should be 100 for a standard event that can always trigger, add more if the event is very specific or has many variations, less if it's supposed to be rare.
+	}
+	fallback = caf_arousal_threshold_level_1_event
+}
+
+#Arousal Threshold Event Tombolas
+caf_arousal_threshold_level_3_event = {
+	random_events = {
+		# You can add events here! Weight * weight_multiplier should be 100 for a standard event that can always trigger, add more if the event is very specific or has many variations, less if it's supposed to be rare.
+	}
+	fallback = caf_arousal_threshold_level_2_event
+}
+
+#Arousal Threshold Event Tombolas
+caf_arousal_threshold_level_1_event_prison = {
+	random_events = {
+		# You can add events here! Weight * weight_multiplier should be 100 for a standard event that can always trigger, add more if the event is very specific or has many variations, less if it's supposed to be rare.
+	}
+}
+
+#Arousal Threshold Event Tombolas
+caf_arousal_threshold_level_2_event_prison = {
+	random_events = {
+		# You can add events here! Weight * weight_multiplier should be 100 for a standard event that can always trigger, add more if the event is very specific or has many variations, less if it's supposed to be rare.
+	}
+	fallback = caf_arousal_threshold_level_1_event_prison
+}
+
+#Arousal Threshold Event Tombolas
+caf_arousal_threshold_level_3_event_prison = {
+	random_events = {
+		# You can add events here! Weight * weight_multiplier should be 100 for a standard event that can always trigger, add more if the event is very specific or has many variations, less if it's supposed to be rare.
+	}
+	fallback = caf_arousal_threshold_level_2_event_prison
+}
