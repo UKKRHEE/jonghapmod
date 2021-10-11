@@ -53,7 +53,7 @@ dag_cdo_visit_royal_brothel_decision = {
 
 	ai_check_interval = 120
 
-	cooldown = { days = 1095 }	#~this is another one of those numbers that is true to the base game but is fucking ridiculous
+	#cooldown = { days = 1095 }	#~this is another one of those numbers that is true to the base game but is fucking ridiculous
 
     is_shown = {
 		is_available_adult = yes

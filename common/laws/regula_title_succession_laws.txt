@@ -228,11 +228,14 @@
 		}
 		can_keep = {
 			# is_independent_ruler = yes
-			has_trait = magister_trait_group
-			faith = {
-				has_doctrine = tenet_regula_devoted
-				religion_tag = regula_religion
-			}
+			#has_trait = magister_trait_group
+			#faith = {
+			#	#has_doctrine = tenet_regula_devoted
+			#	OR = {
+			#		religion_tag = regula_religion
+			#		religion = sexist
+			#	}
+			#}
 		}
 
 		can_pass = { #UPDATE - figure out what this does.
@@ -265,7 +268,10 @@
 			OR = {
 				faith = {
 					has_doctrine = tenet_regula_devoted  
-					religion_tag = regula_religion
+					OR = {
+						religion_tag = regula_religion
+						has_religion = sexist
+					}
 				}
 				root.top_liege = {
 					has_realm_law = regula_magister_gender_law

@@ -20,7 +20,7 @@ dag_cdo_buy_slave_decision = {
 		NOT = { has_game_rule = carn_slavery_content_disabled }		#~Is this the right level of rules?
 	}
 
-	cooldown = { days = 365 }
+	#cooldown = { days = 365 }
 
 	cost = {
 		piety = 250
