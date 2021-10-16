@@ -1,0 +1,7 @@
+﻿l_korean:
+
+ rule_rsg_funny: "Funny Sex Texts"
+ setting_rsg_funny_enabled: "Less Immersive"
+ setting_rsg_funny_enabled_desc: "Randomly Generated Sex Event Texts may include more absurd descriptions and wallbreaking, but those are still rare"
+ setting_rsg_funny_disabled: "More Immersive"
+ setting_rsg_funny_disabled_desc: "Randomly Generated Sex Event Texts will exclude more absurd descriptions and wallbreaking"
