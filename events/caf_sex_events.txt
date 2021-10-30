@@ -3,7 +3,7 @@
 scripted_trigger caf_sex_evaluation_gender_attraction = {
 	is_attracted_to_gender_of = scope:carn_sex_partner
 }
-
+ 
 scripted_trigger caf_sex_evaluation_sexual_match = {
 	AND = {
 		sexually_liberal_trigger = yes

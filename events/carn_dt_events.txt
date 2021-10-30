@@ -1,7 +1,7 @@
 ﻿namespace = carn_dt
 
 # written by Luther Slade and Cheri
-
+#
 #
 # 0001. seed dt traits for this character
 # 0002. turn off dt traits for newborns

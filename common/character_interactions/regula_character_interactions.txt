@@ -800,10 +800,10 @@ regula_make_paelex_interaction = {
 				}
 			}
 		}
-		scope:recipient = {
-			highest_held_title_tier >= tier_county
-			is_imprisoned = no #Will make alternate event for this.
-		}
+		#scope:recipient = {
+		#	highest_held_title_tier >= tier_county
+		#	is_imprisoned = no #Will make alternate event for this.
+		#}
 	}
 
 	auto_accept = yes

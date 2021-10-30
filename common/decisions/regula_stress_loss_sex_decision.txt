@@ -5,7 +5,7 @@
 
 	ai_check_interval = 6
 
-	cooldown = { days = 100 }
+	#cooldown = { days = 100 }
 
 	is_shown = {
 		OR = {

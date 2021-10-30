@@ -1,7 +1,7 @@
 ﻿regula_throw_orgy_decision = {
 	ai_check_interval = 0
 
-	cooldown = { years = 5 }
+	#cooldown = { years = 5 }
 	picture = "gfx/interface/illustrations/decisions/regula_throw_orgy_decision.dds"
 	desc = regula_throw_orgy_decision_desc
 	selection_tooltip = regula_throw_orgy_decision_tooltip
