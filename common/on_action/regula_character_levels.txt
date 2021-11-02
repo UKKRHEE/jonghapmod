@@ -62,30 +62,65 @@ on_piety_level_loss = {
 						piety_level = 0
 					}
 					add_trait = magister_1
+					if = {
+						limit = {
+							has_trait = minhyee
+						}
+						remove_trait = magister_1
+						add_trait = magister_6
+					}
 				}
 				if = {
 					limit = {
 						piety_level = 1
 					}
 					add_trait = magister_2
+					if = {
+						limit = {
+							has_trait = minhyee
+						}
+						remove_trait = magister_1
+						add_trait = magister_6
+					}
 				}
 				if = {
 					limit = {
 						piety_level = 2
 					}
 					add_trait = magister_3
+					if = {
+						limit = {
+							has_trait = minhyee
+						}
+						remove_trait = magister_3
+						add_trait = magister_6
+					}
 				}
 				if = {
 					limit = {
 						piety_level = 3
 					}
 					add_trait = magister_4
+					if = {
+						limit = {
+							has_trait = minhyee
+						}
+						remove_trait = magister_4
+						add_trait = magister_6
+					}
 				}
 				if = {
 					limit = {
 						piety_level = 4
 					}
 					add_trait = magister_5
+					if = {
+						limit = {
+							has_trait = minhyee
+						}
+						remove_trait = magister_5
+						add_trait = magister_6
+					}
 				}
 				if = {
 					limit = {

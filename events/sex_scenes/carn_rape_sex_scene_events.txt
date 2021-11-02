@@ -158,8 +158,8 @@ carn_sex_scene.0003 = {
 		# Use triggers to list flags for your sex scene. See scripted_triggers/carn_sex_scene_triggers.txt for a list of triggers.
 		##########################################################################
 
-		scope:carn_sex_player = { is_adult = yes }
-		scope:carn_sex_target = { is_adult = yes }
+				scope:carn_sex_player.age >= 11
+				scope:carn_sex_target.age >= 11
 
 		carn_sex_scene_is_consensual = yes
 

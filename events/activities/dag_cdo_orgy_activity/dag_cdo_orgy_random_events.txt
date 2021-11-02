@@ -2197,7 +2197,30 @@ dag_cdo_orgy_random.3001 = {
 		#~ideally we would fire some sort of sex_scene here
 		#~But the ones we have are a) inappropriate
 		#~and B) often fuck up the is_naked flag
-
+		if = {
+			limit = {
+				scope:sex_partner = {
+					is_female = yes
+				}
+				scope:orgy_player = {
+					has_trait = minhyee
+				}
+			}
+			
+			scope:sex_partner = {
+				
+				if = {
+					limit = {
+						is_female = yes
+						age >= 11
+						NOT = { has_trait = pregnant
+							}
+					}
+					make_pregnant = { father = scope:orgy_player number_of_children = 1 }
+				}
+			}
+		}
+		
 		scope:orgy_player = {							#~It appears to be good practice to run this in the scope of CHARACTER_1
 			carn_had_sex_with_effect = {
 				CHARACTER_1 = scope:orgy_player
@@ -2206,6 +2229,19 @@ dag_cdo_orgy_random.3001 = {
 				C2_PREGNANCY_CHANCE = pregnancy_chance
 				STRESS_EFFECTS = yes
 				DRAMA = yes
+			}
+			if = {
+				limit = {
+					scope:orgy_player = {
+						has_trait = minhyee
+					}
+				}
+				carn_sex_scene_effect = {
+					PLAYER = scope:orgy_player
+					TARGET = scope:sex_partner
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
 			}
 		}
 		dag_cdo_orgy_add_opinion_after_sex_effect = { PARTNER = scope:sex_partner }
