@@ -596,6 +596,19 @@ dag_cdo_orgy_random.1006 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
+		ROOT = {
+			if = {
+				limit = {
+						has_trait = minhyee
+				}
+				carn_sex_scene_effect = {
+					PLAYER = root
+					TARGET = scope:primary_seducee
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+		}	
 		dag_cdo_orgy_add_opinion_after_sex_effect = { PARTNER = scope:primary_seducee }
 		reverse_add_opinion = {
 			target = scope:secondary_seducee
@@ -637,6 +650,19 @@ dag_cdo_orgy_random.1006 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}		
+		ROOT = {
+			if = {
+				limit = {
+						has_trait = minhyee
+				}
+				carn_sex_scene_effect = {
+					PLAYER = root
+					TARGET = scope:secondary_seducee
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+		}	
 		dag_cdo_orgy_add_opinion_after_sex_effect = { PARTNER = scope:secondary_seducee }
 		reverse_add_opinion = {
 			target = scope:primary_seducee
@@ -672,6 +698,32 @@ dag_cdo_orgy_random.1006 = {
              TARGET_TWO = scope:secondary_seducee			 
 		}
 
+		ROOT = {
+			if = {
+				limit = {
+						has_trait = minhyee
+				}
+				carn_sex_scene_effect = {
+					PLAYER = root
+					TARGET = scope:primary_seducee
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+		}	
+		ROOT = {
+			if = {
+				limit = {
+						has_trait = minhyee
+				}
+				carn_sex_scene_effect = {
+					PLAYER = root
+					TARGET = scope:secondary_seducee
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+		}	
 		ai_chance = {
 			base = 50
 			ai_value_modifier = { ai_boldness = 0.25 }
@@ -1618,6 +1670,19 @@ dag_cdo_orgy_random.2009 = {
 					}
 					dag_cdo_orgy_add_opinion_after_sex_effect = { PARTNER = scope:sex_partner }
 				}
+				ROOT = {
+					if = {
+						limit = {
+							has_trait = minhyee
+						}
+						carn_sex_scene_effect = {
+							PLAYER = root
+							TARGET = scope:sex_partner
+							STRESS_EFFECTS = yes
+							DRAMA = yes
+						}
+					}
+				}	
 				modifier = {
 					add = 10
 					scope:sex_partner = { has_trait = lustful }

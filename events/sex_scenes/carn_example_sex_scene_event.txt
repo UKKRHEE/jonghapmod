@@ -160,6 +160,11 @@ carn_sex_scene.0001 = {
 		##########################################################################
 
 		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 
 		##########################################################################
 		# Finally, you should check anything else that is relevant for the event.
@@ -428,6 +433,11 @@ carn_sex_scene.1002 = {
 		##########################################################################
 
 		carn_sex_scene_matches_requested_flags_trigger = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 
 		##########################################################################
 		# Finally, you should check anything else that is relevant for the event.
@@ -697,6 +707,11 @@ carn_sex_scene.1003 = {
 
 		carn_sex_scene_matches_requested_flags_trigger = yes
 
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 		##########################################################################
 		# Finally, you should check anything else that is relevant for the event.
 		# For example, if your event is from the perspective of a male character penetrating a female target, you should make sure that scope:carn_sex_player is male and scope:carn_sex_target is female.
@@ -965,6 +980,11 @@ carn_sex_scene.1003 = {
 
 		carn_sex_scene_matches_requested_flags_trigger = yes
 
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 		##########################################################################
 		# Finally, you should check anything else that is relevant for the event.
 		# For example, if your event is from the perspective of a male character penetrating a female target, you should make sure that scope:carn_sex_player is male and scope:carn_sex_target is female.
@@ -1227,6 +1247,11 @@ carn_sex_scene.1004 = {
 
 		carn_sex_scene_is_consensual = yes
 
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 		##########################################################################
 		# Once you are done listing flags, make sure you include this trigger
 		##########################################################################
@@ -1501,6 +1526,11 @@ carn_sex_scene.1005 = {
 
 		carn_sex_scene_matches_requested_flags_trigger = yes
 
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 		##########################################################################
 		# Finally, you should check anything else that is relevant for the event.
 		# For example, if your event is from the perspective of a male character penetrating a female target, you should make sure that scope:carn_sex_player is male and scope:carn_sex_target is female.
@@ -1769,6 +1799,11 @@ carn_sex_scene.1006 = {
 
 		carn_sex_scene_matches_requested_flags_trigger = yes
 
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 		##########################################################################
 		# Finally, you should check anything else that is relevant for the event.
 		# For example, if your event is from the perspective of a male character penetrating a female target, you should make sure that scope:carn_sex_player is male and scope:carn_sex_target is female.
@@ -2037,6 +2072,11 @@ carn_sex_scene.1007 = {
 
 		carn_sex_scene_matches_requested_flags_trigger = yes
 
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 		##########################################################################
 		# Finally, you should check anything else that is relevant for the event.
 		# For example, if your event is from the perspective of a male character penetrating a female target, you should make sure that scope:carn_sex_player is male and scope:carn_sex_target is female.

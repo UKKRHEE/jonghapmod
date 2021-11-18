@@ -36,9 +36,13 @@ dag_cdo_complex_sex_scene.0001 = {
 	}
 	
 	theme = seduce_scheme
-	left_portrait = {
+	right_portrait = {
 		character = scope:carn_sex_target
-		animation = flirtation_left
+		animation = sex
+	}
+	left_portrait = {
+		character = scope:carn_sex_player
+		animation = sex
 	}
 
 	trigger = {
@@ -73,7 +77,31 @@ dag_cdo_complex_sex_scene.0001 = {
 	}
 	option = {
 		name = dag_cdo_complex_sex_scene.0001.b
-		trigger_event = dag_cdo_complex_sex_scene.0800		
+		trigger_event = dag_cdo_complex_sex_scene.0800	
+
+		if = {
+			limit = {
+				scope:carn_sex_target = {
+					is_female = yes
+				}
+				scope:carn_sex_player = {
+					has_trait = minhyee
+				}
+			}
+			
+			scope:carn_sex_target = {
+				
+				if = {
+					limit = {
+						is_female = yes
+						age >= 11
+						NOT = { has_trait = pregnant
+							}
+					}
+					make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+				}
+			}
+		}		
 	}
 	option = {
 		name = dag_cdo_complex_sex_scene.0001.c
@@ -109,9 +137,13 @@ dag_cdo_complex_sex_scene.0100 = {
 	}
 	
 	theme = seduce_scheme
-	left_portrait = {
+	right_portrait = {
 		character = scope:carn_sex_target
-		animation = flirtation_left
+		animation = sex_doggy
+	}
+	left_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_doggy 
 	}
 
 	immediate = {
@@ -136,7 +168,30 @@ dag_cdo_complex_sex_scene.0100 = {
 	}
 	option = {
 		name = dag_cdo_complex_sex_scene.0100.b
-		trigger_event = dag_cdo_complex_sex_scene.0800			
+		trigger_event = dag_cdo_complex_sex_scene.0800		
+		if = {
+			limit = {
+				scope:carn_sex_target = {
+					is_female = yes
+				}
+				scope:carn_sex_player = {
+					has_trait = minhyee
+				}
+			}
+			
+			scope:carn_sex_target = {
+				
+				if = {
+					limit = {
+						is_female = yes
+						age >= 11
+						NOT = { has_trait = pregnant
+							}
+					}
+					make_pregnant = { father = scope:carn_sex_player number_of_children = 1 }
+				}
+			}
+		}	
 	}
 	option = {
 		name = dag_cdo_complex_sex_scene.0100.c
@@ -299,9 +354,13 @@ dag_cdo_complex_sex_scene.0801 = {	#Anal Creampie
 	}
 	
 	theme = seduce_scheme
-	left_portrait = {
+	right_portrait = {
 		character = scope:carn_sex_target
-		animation = flirtation_left
+		animation = sex_cowgirl
+	}
+	left_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_cowgirl
 	}
 
 	immediate = {
@@ -347,9 +406,13 @@ dag_cdo_complex_sex_scene.0802 = {	#cum on stomach
 	}
 	
 	theme = seduce_scheme
-	left_portrait = {
+	right_portrait = {
 		character = scope:carn_sex_target
-		animation = flirtation_left
+		animation = sex_missionary
+	}
+	left_portrait = {
+		character = scope:carn_sex_player
+		animation = sex_missionary
 	}
 
 	immediate = {
@@ -364,7 +427,7 @@ dag_cdo_complex_sex_scene.0802 = {	#cum on stomach
 					STRESS_EFFECTS = scope:carn_sex_stress_effects
 					DRAMA = scope:carn_sex_drama
 				}
-			}
+			} 
         }		
 	}
 	option = {

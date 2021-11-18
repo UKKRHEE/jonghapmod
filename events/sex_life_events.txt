@@ -30,6 +30,11 @@ sex_life.1001 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = { 
@@ -123,6 +128,11 @@ sex_life.1002 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	left_portrait = {
@@ -228,6 +238,11 @@ sex_life.1003 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = { 
@@ -327,6 +342,11 @@ sex_life.1004 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = { 
@@ -426,6 +446,11 @@ sex_life.1005 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = { 
@@ -525,6 +550,11 @@ sex_life.1006 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = { 
@@ -624,6 +654,11 @@ sex_life.1007 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = { 
@@ -723,6 +758,11 @@ sex_life.1008 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = { 
@@ -822,6 +862,11 @@ sex_life.1009 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}	
 
 	immediate = {
@@ -907,6 +952,11 @@ sex_life.2001 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1005,6 +1055,11 @@ sex_life.2002 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1104,6 +1159,11 @@ sex_life.2003 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1203,6 +1263,11 @@ sex_life.2004 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1302,6 +1367,11 @@ sex_life.2005 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1386,6 +1456,11 @@ sex_life.2006 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1470,6 +1545,11 @@ sex_life.2007 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1554,6 +1634,11 @@ sex_life.2008 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1638,6 +1723,11 @@ sex_life.2009 = {
 		sex_opposite_of = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = {
@@ -1722,6 +1812,11 @@ sex_life.5001 = {
 		sex_same_as = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -1805,6 +1900,11 @@ sex_life.5002 = {
 		sex_same_as = scope:carn_sex_target
 		is_ai = yes
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 	immediate = { 
 		if = {
@@ -1888,6 +1988,11 @@ sex_life.5003 = {
 		sex_same_as = scope:carn_sex_target
 		is_ai = no
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = {
@@ -1971,6 +2076,11 @@ sex_life.5004 = {
 		sex_same_as = scope:carn_sex_target
 		is_ai = yes
 		is_male = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 	immediate = { 
 		if = {
@@ -2054,6 +2164,11 @@ sex_life.6001 = {
 		sex_same_as = scope:carn_sex_target
 		is_ai = no
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 
 	immediate = { 
@@ -2137,6 +2252,11 @@ sex_life.6002 = {
 		sex_same_as = scope:carn_sex_target
 		is_ai = yes
 		is_female = yes
+		scope:carn_sex_target = {
+			NOT = {
+				is_imprisoned_by = scope:carn_sex_player
+			}	
+		}
 	}
 	immediate = { 
 		if = {
