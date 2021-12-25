@@ -1,8 +1,0 @@
-﻿NPortrait = {
-	WEIGHT_UPDATE_YEAR_INTERVAL = 1 # Years in between portrait updating their current weight towards their target weight
-	WEIGHT_UPDATE_YEAR_INTERVAL_PLAYER = 1 # Years in between portrait updating their current weight towards their target weight (for player characters)
-	WEIGHT_UPDATE_PLAYER_LERP_SCALAR = 0.3 # Scalar for the liner interoplation of the weight update to trend current weight towards target weight, for the player
-	WEIGHT_UPDATE_LERP_SCALAR = 0.3 # Scalar for the liner interoplation of the weight update to trend current weight towards target weight
-	DEFAULT_BASE_WEIGHT_MIN = 0 # Min for starting random base weight inclusive
-	DEFAULT_BASE_WEIGHT_MAX = 0 # Max for starting random base weight inclusive
-}

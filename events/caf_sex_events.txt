@@ -11,7 +11,7 @@ scripted_trigger caf_sex_evaluation_sexual_match = {
 		carn_sex_scene_was_noncon = no
 	}
 }
-
+ 
 scripted_trigger caf_sex_evaluation_negative_opinion = {
 	AND = {
 		NOT = { has_trait = ie_masked } # Compatiblity with Intimate Encounters - never add opinion mods if anonymous

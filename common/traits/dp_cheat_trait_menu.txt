@@ -1,0 +1,835 @@
+nnn_challenger = {
+	index = 750
+	
+	fertility = 10.0
+	health = 15.0
+	
+	monthly_lifestyle_xp_gain_mult = 0.25
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_nnn_challenger_desc
+			}
+			desc = trait_nnn_challenger_character_desc
+		}
+	}
+}
+
+speedy_lifestyle_1 = {
+	index = 751
+
+	monthly_lifestyle_xp_gain_mult = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_speedy_lifestyle_1_desc
+			}
+			desc = trait_speedy_lifestyle_1_character_desc
+		}
+	}
+}
+
+speedy_lifestyle_2 = {
+	index = 752
+	
+	monthly_lifestyle_xp_gain_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_speedy_lifestyle_1_desc
+			}
+			desc = trait_speedy_lifestyle_1_character_desc
+		}
+	}
+}
+
+speedy_lifestyle_3 = {
+	index = 753
+	
+	monthly_lifestyle_xp_gain_mult = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_speedy_lifestyle_1_desc
+			}
+			desc = trait_speedy_lifestyle_1_character_desc
+		}
+	}
+}
+
+beloved_1 = {
+	index = 754
+	
+	general_opinion = 25
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_beloved_1_desc
+			}
+			desc = trait_beloved_1_character_desc
+		}
+	}
+}
+
+beloved_2 = {
+	index = 755
+
+	general_opinion = 100
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_beloved_1_desc
+			}
+			desc = trait_beloved_1_character_desc
+		}
+	}
+}
+
+beloved_3 = {
+	index = 756
+	
+	general_opinion = 1000
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_beloved_1_desc
+			}
+			desc = trait_beloved_1_character_desc
+		}
+	}
+}
+
+health_1 = {
+	index = 757
+	
+	health = 2.5
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_health_1_desc
+			}
+			desc = trait_health_1_character_desc
+		}
+	}
+}
+
+health_2 = {
+	index = 758
+	
+	health = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_health_1_desc
+			}
+			desc = trait_health_1_character_desc
+		}
+	}
+}
+
+health_3 = {
+	index = 759
+	
+	health = 100
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_health_1_desc
+			}
+			desc = trait_health_1_character_desc
+		}
+	}
+}
+
+cheat_gold_1 = {
+	index = 760
+	
+	monthly_income_mult = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_cheat_gold_1_desc
+			}
+			desc = trait_cheat_gold_1_character_desc
+		}
+	}
+}
+
+cheat_gold_2 = {
+	index = 761
+	
+	monthly_income_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_cheat_gold_1_desc
+			}
+			desc = trait_cheat_gold_1_character_desc
+		}
+	}
+}
+
+cheat_gold_3 = {
+	index = 762
+
+	monthly_income_mult = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_cheat_gold_1_desc
+			}
+			desc = trait_cheat_gold_1_character_desc
+		}
+	}
+}
+
+development_cheat_1 = {
+	index = 763
+
+	development_growth_factor = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_development_cheat_1_desc
+			}
+			desc = trait_development_cheat_1_character_desc
+		}
+	}
+}
+
+development_cheat_2 = {
+	index = 764
+
+	development_growth_factor = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_development_cheat_1_desc
+			}
+			desc = trait_development_cheat_1_character_desc
+		}
+	}
+}
+
+development_cheat_3 = {
+	index = 765
+
+	development_growth_factor = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_development_cheat_1_desc
+			}
+			desc = trait_development_cheat_1_character_desc
+		}
+	}
+}
+
+dread_gain_cheat_1 = {
+	index = 766
+
+	dread_gain_mult = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dread_gain_cheat_1_desc
+			}
+			desc = trait_dread_gain_cheat_1_character_desc
+		}
+	}
+}
+
+dread_gain_cheat_2 = {
+	index = 767
+
+	dread_gain_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dread_gain_cheat_1_desc
+			}
+			desc = trait_dread_gain_cheat_1_character_desc
+		}
+	}
+}
+
+dread_gain_cheat_3 = {
+	index = 768
+
+	dread_gain_mult = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dread_gain_cheat_1_desc
+			}
+			desc = trait_dread_gain_cheat_1_character_desc
+		}
+	}
+}
+
+personal_scheme_gain_cheat_1 = {
+	index = 769
+
+	personal_scheme_power_mult = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_personal_scheme_gain_cheat_1_desc
+			}
+			desc = trait_personal_scheme_gain_cheat_1_character_desc
+		}
+	}
+}
+
+personal_scheme_gain_cheat_2 = {
+	index = 770
+
+	personal_scheme_power_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_personal_scheme_gain_cheat_1_desc
+			}
+			desc = trait_personal_scheme_gain_cheat_1_character_desc
+		}
+	}
+}
+
+personal_scheme_gain_cheat_3 = {
+	index = 771
+
+	personal_scheme_power_mult = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_personal_scheme_gain_cheat_1_desc
+			}
+			desc = trait_personal_scheme_gain_cheat_1_character_desc
+		}
+	}
+}
+
+stress_loss_cheat_1 = {
+	index = 772
+
+	stress_loss_mult = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_stress_loss_1_desc
+			}
+			desc = trait_stress_loss_cheat_1_character_desc
+		}
+	}
+}
+
+stress_loss_cheat_2 = {
+	index = 773
+
+	stress_loss_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_stress_loss_1_desc
+			}
+			desc = trait_stress_loss_cheat_1_character_desc
+		}
+	}
+}
+
+stress_loss_cheat_3 = {
+	index = 774
+
+	stress_loss_mult = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_stress_loss_1_desc
+			}
+			desc = trait_stress_loss_cheat_1_character_desc
+		}
+	}
+}
+
+prestige_gain_cheat_1 = {
+	index = 775
+
+	monthly_prestige_gain_mult = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_prestige_gain_cheat_1_desc
+			}
+			desc = trait_prestige_gain_cheat_1_character_desc
+		}
+	}
+}
+
+prestige_gain_cheat_2 = {
+	index = 776
+
+	monthly_prestige_gain_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_prestige_gain_cheat_1_desc
+			}
+			desc = trait_prestige_gain_cheat_1_character_desc
+		}
+	}
+}
+
+prestige_gain_cheat_3 = {
+	index = 777
+
+	monthly_prestige_gain_mult = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_prestige_gain_cheat_1_desc
+			}
+			desc = trait_prestige_gain_cheat_1_character_desc
+		}
+	}
+}
+
+piety_gain_cheat_1 = {
+	index = 778
+
+	monthly_piety_gain_mult = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_piety_gain_cheat_1_desc
+			}
+			desc = trait_piety_gain_cheat_1_character_desc
+		}
+	}
+}
+
+piety_gain_cheat_2 = {
+	index = 779
+
+	monthly_piety_gain_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_piety_gain_cheat_1_desc
+			}
+			desc = trait_piety_gain_cheat_1_character_desc
+		}
+	}
+}
+
+piety_gain_cheat_3 = {
+	index = 780
+
+	monthly_piety_gain_mult = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_piety_gain_cheat_1_desc
+			}
+			desc = trait_piety_gain_cheat_1_character_desc
+		}
+	}
+}
+
+build_speed_cheat_1 = {
+	index = 781
+
+	build_speed = -1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_build_speed_cheat_1_desc
+			}
+			desc = trait_build_speed_cheat_1_character_desc
+		}
+	}
+}
+
+stress_gain_remove = {
+	index = 782
+
+	stress_gain_mult = -1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_stress_gain_remove_desc
+			}
+			desc = trait_stress_gain_remove_character_desc
+		}
+	}
+}
+
+tyranny_gain_remove = {
+	index = 783
+
+	tyranny_gain_mult = -1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tyranny_gain_remove_desc
+			}
+			desc = trait_tyranny_gain_remove_character_desc
+		}
+	}
+}
+
+dp_control_1 = {
+	index = 784
+
+	monthly_county_control_change_factor = 0.1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dp_control_desc
+			}
+			desc = trait_dp_control_character_desc
+		}
+	}
+}
+
+dp_control_2 = {
+	index = 785
+
+	monthly_county_control_change_factor = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dp_control_desc
+			}
+			desc = trait_dp_control_character_desc
+		}
+	}
+}
+
+dp_control_3 = {
+	index = 786
+
+	monthly_county_control_change_factor = 10
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dp_control_desc
+			}
+			desc = trait_dp_control_character_desc
+		}
+	}
+}
+
+boost_stats = {
+	index = 5001
+
+	prowess = 50
+	diplomacy = 50
+	stewardship = 50
+	martial = 50
+	intrigue = 50
+	learning = 50
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_boost_stats_desc
+			}
+			desc = trait_boost_stats_character_desc
+		}
+	}
+}
+
+100_stat_man = { #Dedicated to spiff
+	index = 5002
+	prowess = 100
+	diplomacy = 100
+	stewardship = 100
+	martial = 100
+	intrigue = 100
+	learning = 100
+	
+	fertility = 20 #Careful, or you might inherit the earth.
+	health = 20 #This man could have depression, cancer, thrown off a ledge, hit by a horse, severely injured, infected with smallpox and the black plague, and he would still survive.
+	
+	monthly_lifestyle_xp_gain_mult = 1
+	
+	genetic = no
+	good = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_100_stat_man_desc
+			}
+			desc = trait_100_stat_man_character_desc
+		}
+	}
+}
