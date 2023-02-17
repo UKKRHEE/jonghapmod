@@ -1,0 +1,17 @@
+##########################################################################################
+### Contains SCRIPTED EFFECTS that are intended for use in the Dark World Content Pack ###
+##########################################################################################
+###  SEARCH ###FIXME FOR WORK TO DO
+
+TT_randomizer_4 = {
+	clr_character_flag = TT_random_1
+	clr_character_flag = TT_random_2
+	clr_character_flag = TT_random_3
+	clr_character_flag = TT_random_4
+	random_list = {
+		10 = { set_character_flag = TT_random_1 }
+		10 = { set_character_flag = TT_random_2 }
+		10 = { set_character_flag = TT_random_3 }
+		10 = { set_character_flag = TT_random_4 }
+	}
+}

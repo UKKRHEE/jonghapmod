@@ -1,0 +1,614 @@
+### Contains events that are intended for use across all Dark World mods
+## DWCore.10 - Males get their penis size defined upon becoming an adult
+## DWCore.15 - Futas get their penis size defined upon becoming an adult
+## DWCore.20 - Females get their breast size defined upon becoming an adult
+## DWCore.30 to .39 - Virgin Trait Assignment and follow-up checks
+## DWCore.8000 - .8999 Birth, Childhood, Adulthood special checks
+## DWCore.9000 Pregnancy check: ROOT = female, FROM = male or futa
+## DWCore.9005 Pregnancy check: ROOT = male or futa, FROM = female
+## DWCore.9010 Pregnacny check: ROOT = female with no FROM (male is a 'commoner' that doesn't appear in game as an NPC)
+## DWCore.9200 Check to consider adding the homosexual trait if they're partaking of same sex sex.
+
+namespace = DWCore
+
+# .1 Sets a global flag of Dark_World_Reborn_Fantasy for those who build mods that want to check for the presence of this mod
+character_event = {
+	id = DWCore.1
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # nothing to see here
+	trigger = {
+		NOT = { has_global_flag = Dark_World_Fantasy_Present }
+	}
+	immediate = {
+		set_global_flag = Dark_World_Fantasy_Present
+	}
+}
+
+# .10 males get their penis size at start-up (hidden event)
+character_event = {
+	id = DWCore.10
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+	trigger = {
+		NOT = { has_character_flag = dw_junk_checked } #If we already checked their junk, we don't need to again.
+		is_adult = yes # only adults get them, in order to not impact the trait count during educational development
+		has_cock = yes # Should be for men and futas only
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					trait = gigantic_dick
+					trait = enormous_dick
+					trait = huge_dick
+					trait = big_dick
+					trait = regular_dick
+					trait = small_dick
+					trait = tiny_dick
+				}
+			}
+			add_cock = yes
+			set_character_flag = dw_junk_checked
+		}
+	}
+}
+# .11 Those with cocks get their trait upon adulthood
+character_event = {
+	id = DWCore.11
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+	trigger = {
+		NOT = { has_character_flag = dw_junk_checked } #If we already checked their junk, we don't need to again.
+		has_cock = yes # Should limit it to men and futas
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					trait = gigantic_dick
+					trait = enormous_dick
+					trait = huge_dick
+					trait = big_dick
+					trait = regular_dick
+					trait = small_dick
+					trait = tiny_dick
+				}
+			}
+			add_cock = yes
+			set_character_flag = dw_junk_checked
+		}
+	}
+}
+
+# .20 Women get their breast size (hidden event)
+character_event = {
+	id = DWCore.20
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+	trigger = {
+		NOT = { has_global_flag = christ_enabled } # This checks to see if the Christianity mod is already enabled. If it is, we skip breast assignment and use what it has
+		NOT = {	has_character_flag = dw_boobs_checked } #If we already checked their breasts, we don't need to again.
+		OR = {
+			is_female = yes # just in case our only_women filter didn't work right
+			AND = {
+				is_female = no
+				trait = feminine
+			}
+		}
+		is_adult = yes # only adults get them, in order to not impact the trait count during educational development
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					trait = gigantic_tits
+					trait = enormous_tits
+					trait = huge_tits
+					trait = big_tits
+					trait = regular_tits
+					trait = small_tits
+					trait = tiny_tits
+				}
+			}
+			add_tits = yes
+			set_character_flag = dw_boobs_checked
+		}
+	}
+}
+# .21 females get their breast size defined upon adulthood (hidden event)
+character_event = {
+	id = DWCore.21
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+	only_women = yes # pre-trigger - we're only giving females breasts
+	trigger = {
+		NOT = { has_global_flag = christ_enabled } # This checks to see if the Christianity mod is already enabled. If it is, we skip breast assignment and use what it has
+		NOT = { has_character_flag = dw_boobs_checked } #If we already checked their breasts, we don't need to again.
+		OR = {
+			is_female = yes # just in case our only_women filter didn't work right
+			AND = {
+				is_female = no
+				trait = feminine
+			}
+		}
+	}	
+	immediate = {
+		# We check to ensure there is a variable to use, and if so, we assign a tit trait
+		if = {
+			limit = {
+				NOR = {
+					trait = gigantic_tits
+					trait = enormous_tits
+					trait = huge_tits
+					trait = big_tits
+					trait = regular_tits
+					trait = small_tits
+					trait = tiny_tits
+				}
+			}
+			add_tits = yes
+			set_character_flag = dw_boobs_checked
+		}
+	}
+}
+# .30 Virgin trait assignment on start-up (hidden event)
+character_event = {
+	id = DWCore.30
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+	
+	trigger = {
+		NOT = { has_character_flag = dw_virginity_checked } # We've haven't looked at them before
+		NOT = { trait = virgin } # They don't already somehow have the Virgin trait
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { practical_age = 16 }
+			}
+			add_trait = virgin
+			break = yes
+		}
+		if = { # Taking the general assumption that people have lost their virginity by the age of 30 for simple game start mechanics
+			limit = {
+				practical_age = 30
+			}
+			set_character_flag = dw_virginity_checked # Marking them to prevent another future check
+			break = yes # removes us from the immediate block
+		}
+		if = { # Identifying our good looking, poor decision makers
+			limit = {
+				trait = fair
+				practical_age = 18
+				ai_rationality = -10
+			}
+			set_character_flag = dw_virginity_checked # Marking our fair folks to keep them from future virgin checks
+			break = yes # removes us from the immediate block
+		}
+		if = { # Can't be pregnant or a mother unless you're the Virgin Mary and this is past her time in history.
+			limit = {
+				OR = {
+					is_pregnant = yes
+					num_of_children = 1
+				}
+			}
+			set_character_flag = dw_virginity_checked # Marking our pregnant folks to keep them from future virgin checks
+			break = yes # removes us from the immediate block
+		}
+		if = { # Those who are focused in the sexual arts are assumed to have tasted the wine.
+			limit = {
+				OR = {
+					trait = lustful
+					trait = hedonist
+					trait = seductress
+					trait = seducer
+				}
+			}
+			set_character_flag = dw_virginity_checked # Marking these folks to avoid future virgin checks
+			break = yes # removes us from the immediate block
+		}
+		if = { # Married folks, lovers, and consorts are assumed to all have had sex at least once.
+			limit = {
+				or = {
+					is_married = yes
+					is_consort = yes
+					is_lover = yes
+				}
+			}
+			set_character_flag = dw_virginity_checked # Marking these folks to avoid future virgin checks
+			break = yes # removes us from the immediate block
+		}
+		add_trait = virgin # If we made it this far then they pass the virgin check
+	}
+}
+
+# .33 Virgin trait removed (marriage - hidden event)
+character_event = {
+	id = DWCore.33
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+		
+	trigger = {
+		trait = virgin
+	}
+	
+	immediate = {
+		remove_trait = virgin
+	}
+}
+# .35 Virgin trait removed (pregnancy - hidden event)
+character_event = {
+	id = DWCore.35
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+		
+	trigger = {
+		trait = virgin
+	}
+	
+	immediate = {
+		remove_trait = virgin
+		father_of_unborn = {
+			if = {
+				limit = {
+					trait = virgin
+				}
+				remove_trait = virgin
+			}
+		}
+	}
+}
+# .37 Virgin trait removed (forced to be a consort - hidden event)
+character_event = {
+	id = DWCore.37
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # hidden from the player
+		
+	trigger = {
+		trait = virgin
+	}
+	
+	immediate = {
+		remove_trait = virgin
+	}
+}
+
+
+# .39 Virgin trait removed (on_yearly_pulse check)
+character_event = {
+	id = DWCore.39
+	is_triggered_only = yes
+	hide_window = yes
+	min_age = 16
+	ai = yes # Players will lose their virginity from events
+	trigger = {
+		trait = virgin
+		OR = {
+			is_married = yes
+			is_lover = yes
+			is_consort = yes
+			is_pregnant = yes
+			num_of_children = 1
+			trait = seducer
+			trait = seductress
+			trait = hedonist
+			trait = lilith # Demons are expected to have a lot of sexytimes
+			trait = incubus
+			trait = alu_fiend
+			trait = cambion
+		}
+		NOR = {
+			trait = celibate
+			trait = eunuch
+			trait = monk
+			trait = nun
+		}
+	}
+	immediate = {
+		remove_trait = virgin
+	}
+}
+		
+
+## .8000 - .8999 Birth, Childhood, Adulthood special checks
+
+
+# .8010 Checks new adult to see if they have a trait that warrants a custom portrait, or special adult modifier
+character_event = {
+	id = DWCore.8010
+	is_triggered_only = yes # by on_adulthood on_action check
+	trigger = { # This event should stop if one of the below checks is not present
+		is_a_species_with_potential_custom_portrait = yes
+	}
+	hide_window = yes # Nothing to see here
+	immediate = {
+		### Special modifiers for adults
+		# Werewolf adult to have to begin worrying about the beast whispers if they're not already hunting
+		if = {
+			limit = {
+				trait = werewolf
+				NOT = { has_character_modifier = dw_werewolf_hunt_cooldown }
+			}
+			add_character_modifier = { name = dw_werewolf_beast_whispers duration = -1 }
+		}
+		
+		### Custom Portrait Assignments
+		# Due to the corruptive nature of Tentacle-Kin, their portrait wins out above all others
+		if = {
+			limit = {
+				trait = tentacle
+			}
+			add_random_tentacle_portrait = yes
+		}
+		# Werewolf trumps all save tentacle
+		else_if = {
+			limit = {
+				trait = werewolf
+			}
+			add_random_werewolf_portrait = yes
+		}
+		# Orc trumps all save werewolf and tentacle
+		else_if = {
+			limit = {
+				trait = orc
+			}
+			add_random_orc_portrait = yes
+		}
+		# Children of both an Elf and Neko, Elf holds an edge over Neko, although sometimes Neko takes dominance
+		else_if = {
+			limit = {
+				trait = elf
+				trait = neko
+			}
+			random_list = {
+				75 = { add_random_elf_portrait = yes }
+				25 = { add_random_neko_portrait = yes }
+			}
+		}
+		# Child of only an Elf parent
+		else_if = {
+			limit = {
+				trait = elf
+			}
+			add_random_elf_portrait = yes
+		}
+		# Child of a only Neko
+		else_if = {
+			limit = {
+				trait = neko
+			}
+			add_random_neko_portrait = yes
+		}
+		# Some vampiric traits are strong enough to manifest, such as the ugle Nosferatu
+		else_if = {
+			limit = { trait = vampire }
+			add_random_vampire_portrait = yes
+		}
+		# Kitsune trumps no one - due largely to it being more a spirit manifestation than physical entity, so mixed breeds of kitsune and something else would be extremely rare
+		else_if = {
+			limit = {
+				trait = kitsune
+			}
+			add_random_kitsune_portrait = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					trait = lilith
+					trait = incubus
+				}
+				NOR = {
+					trait = tentacle
+					trait = orc
+					trait = elf
+					trait = neko
+					trait = kitsune
+					trait = werewolf
+					trait = fairy
+					trait = dwse_lizard
+					trait = dragon_adult
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+				}
+			}
+			add_random_demon_portrait = yes
+		}
+	}
+}
+
+## Serpents Purge - or any other child still birth magics
+# .8200 Kills the child, removes the parents (hidden)
+character_event = {
+	id = DWCore.8200
+	is_triggered_only = yes # Triggered by on_action
+	hide_window = yes
+	trigger = {
+		mother = { has_character_flag = dw_purge_childbirth } # Ensures we only hit the proper child
+	}
+	immediate = {
+		mother = { clr_character_flag = dw_purge_childbirth } # We remove the flag before we remove the mother - so the mother can to this again if necessary.
+		set_father = 0
+		set_mother = 0
+		death ={
+			death_reason = death_natural
+		}
+	}
+}
+
+
+## .9000 - .9999 Pregnancy, Disease and other sex related checks
+## Pregnancy checks are: pussy = { impregnate = dick }, or the chick got impregnated by the dude/futa
+##
+# .9000 Female event to see if she's pregnant (ROOT = female, FROM = male or futa)
+character_event = {
+	id = DWCore.9000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			trait = dwf_ghost
+		}
+	}
+	immediate = {
+		ROOT = { save_event_target_as = new_mom }
+		FROM = { save_event_target_as = new_dad }
+		impregnate_check_standard = yes
+	}
+}
+
+# .9005 Male or Futa event to see if they got a female pregnant (ROOT = male or futa, FROM = female)
+character_event = {
+	id = DWCore.9005
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			trait = dwf_ghost
+		}
+	}
+	immediate = {
+		ROOT = { save_event_target_as = new_dad }
+		FROM = { save_event_target_as = new_mom }
+		impregnate_check_standard = yes
+	}
+}
+# .9010 Female event to see if they got pregnant from a non-existent person (commoner)(ROOT = female)
+character_event = {
+	id = DWCore.9010
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			trait = dwf_ghost
+		}
+	}
+	
+	immediate = {
+		if = { # If pregnant we terminate the pregnancy check in order to avoid a double pregnancy.
+			limit = {
+				is_pregnant = yes
+			}
+			ROOT = { remove_virginity_trait = yes } # Check to remove Virgin trait
+			break = yes 
+		}		
+		if = { # If the woman isn't married, then we handle it as a simple impregnate
+			limit = {
+				is_married = no
+			}
+			random = {
+				chance = 1
+				modifier = {
+					factor = 10
+					ROOT = { fertility = 0.25 }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { fertility = 0.5 }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { fertility = 0.75 }
+				}
+				modifier = {
+					factor = 1.5
+					ROOT = { fertility = 1 }
+				}
+				ROOT = { impregnate = yes } # Woman is knocked by the unknown
+			}
+			ROOT = { remove_virginity_trait = yes } # Check to remove Virgin trait
+			break = yes
+		}
+		if = { # If the woman is married, but the male is not her husband, then we process this as an impregnate_cuckoo.
+			limit = {
+				is_married = yes
+			}
+			random = {
+				chance = 1
+				modifier = {
+					factor = 10
+					ROOT = { fertility = 0.25 }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { fertility = 0.5 }
+				}
+				modifier = {
+					factor = 2
+					ROOT = { fertility = 0.75 }
+				}
+				modifier = {
+					factor = 1.5
+					ROOT = { fertility = 1 }
+				}
+				ROOT = { impregnate_cuckoo = yes } # Woman is knocked by the unknown
+			}
+			ROOT = { remove_virginity_trait = yes } # Check to remove Virgin trait
+			break = yes
+		}
+	}
+}
+
+# .9200 Check to consider adding the homosexual trait ( FROM should be one lover, and ROOT the other, and both should be the same sex )
+character_event = {
+	id = DWCore.9200
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				FROM = { trait = homosexual } #If both participants are already homosexual, then we just kill the event
+				ROOT = { trait = homosexual }
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						ROOT = { is_female = yes } #If we have different sexed partners, we kill the event
+						FROM = { is_female = no }
+					}
+					AND = {
+						ROOT = { is_female = no }
+						FROM = { is_female = yes }
+					}
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { ROOT = { trait = homosexual }} #Checking to see if ROOT may obtain the trait
+			}
+			random = {
+				chance = 10
+				modifier = {
+					factor = 0.1
+					ai = yes #If it's the ai, we drastically reduce the chance of getting the homosexual trait
+				}
+				ROOT = { add_trait = homosexual }				
+			}
+		}
+		if = {
+			limit = {
+				NOT = { FROM = { trait = homosexual }} #Checking to see if FROM may obtain the trait
+			}
+			random = {
+				chance = 10
+				modifier = {
+					factor = 0.1
+					ai = yes #If it's the ai, we drastically reduce the chance of getting the homosexual trait
+				}
+				FROM = { add_trait = homosexual }
+			}
+		}
+		ROOT = { remove_virginity_trait = yes } # Check to remove Virgin trait
+		FROM = { remove_virginity_trait = yes } # Check to remove Virgin trait
+	}
+}

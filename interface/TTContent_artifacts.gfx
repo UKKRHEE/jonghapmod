@@ -1,0 +1,203 @@
+###########################################################
+##### ARTIFACT IMAGES for the Dark World Content Pack #####
+###########################################################
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_troll_skull"
+		texturefile = "gfx/interface/inventory/artifacts/trollskull.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_troll_skull_small"
+		texturefile = "gfx/interface/inventory/artifacts/trollskull_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_blackblade"
+		texturefile = "gfx/interface/inventory/artifacts/blackblade.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_blackblade_small"
+		texturefile = "gfx/interface/inventory/artifacts/blackblade_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragonaxe"
+		texturefile = "gfx/interface/inventory/artifacts/dragonaxe.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragonaxe_small"
+		texturefile = "gfx/interface/inventory/artifacts/dragonaxe_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragonbones"
+		texturefile = "gfx/interface/inventory/artifacts/dragonbones.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragonbones_small"
+		texturefile = "gfx/interface/inventory/artifacts/dragonbones_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragoncrown"
+		texturefile = "gfx/interface/inventory/artifacts/dragoncrown.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragoncrown_small"
+		texturefile = "gfx/interface/inventory/artifacts/dragoncrown_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragonsword"
+		texturefile = "gfx/interface/inventory/artifacts/dragonsword.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dragonsword_small"
+		texturefile = "gfx/interface/inventory/artifacts/dragonsword_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dwarvenaxe"
+		texturefile = "gfx/interface/inventory/artifacts/dwarvenaxe.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dwarvenaxe_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwarvenaxe_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dwarvensword"
+		texturefile = "gfx/interface/inventory/artifacts/dwarvensword.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_dwarvensword_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwarvensword_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_fullmask"
+		texturefile = "gfx/interface/inventory/artifacts/fullmask.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_fullmask_small"
+		texturefile = "gfx/interface/inventory/artifacts/fullmask_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_ladyarmor"
+		texturefile = "gfx/interface/inventory/artifacts/ladyarmor.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_ladyarmor_small"
+		texturefile = "gfx/interface/inventory/artifacts/ladyarmor_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_ladystatue"
+		texturefile = "gfx/interface/inventory/artifacts/ladystatue.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_ladystatue_small"
+		texturefile = "gfx/interface/inventory/artifacts/ladystatue_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_nordicaxe"
+		texturefile = "gfx/interface/inventory/artifacts/nordicaxe.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_nordicaxe_small"
+		texturefile = "gfx/interface/inventory/artifacts/nordicaxe_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_nordicdagger"
+		texturefile = "gfx/interface/inventory/artifacts/nordicdagger.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_nordicdagger_small"
+		texturefile = "gfx/interface/inventory/artifacts/nordicdagger_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_nordicsword"
+		texturefile = "gfx/interface/inventory/artifacts/nordicsword.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_nordicsword_small"
+		texturefile = "gfx/interface/inventory/artifacts/nordicsword_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_unusualgem"
+		texturefile = "gfx/interface/inventory/artifacts/unusualgem.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_unusualgem_small"
+		texturefile = "gfx/interface/inventory/artifacts/unusualgem_small.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

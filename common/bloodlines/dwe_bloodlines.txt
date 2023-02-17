@@ -1,0 +1,126 @@
+semiramis_bloodline = {
+	spouse_opinion = -10
+	christian_opinion = -10
+	combat_rating = 5
+	intrigue = 1
+	monthly_character_prestige = 0.1
+	bloodline_effect_murder_stalk = 1
+	plot_power_modifier = 0.1
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_murder_rose
+	flags = { legendary_bloodline bloodline_legendary_assyrian }
+}
+
+mordred_bloodline = {
+	christian_opinion -5
+	welsh_opinion -5
+	martial = 1
+	monthly_character_prestige = -0.1
+	combat_rating = 15
+	command_modifier = {
+		morale_offence = 0.10
+		morale_defence = 0.05
+		cavalry = 0.10
+	}
+	bloodline_effect_knights = 1
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_mordred
+	flags = { legendary_bloodline bloodline_legendary_welsh }
+}
+
+cleopatra_bloodline = {
+	intrigue = 1
+	diplomacy = 1
+	monthly_character_prestige = 0.1
+	egyptian_arabic_opinion = 5
+	greek_opinion = 10
+	sex_appeal_opinion = 10
+	bloodline_effect_less_factions = 1
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cleopatra
+	flags = { historical_bloodline bloodline_historical_egyptian }
+
+}
+
+scathach_bloodline = {
+	irish_opinion = 5
+	scottish_opinion = 5
+	pictish_opinion = 5
+	martial = 1
+	intrigue = 1
+	bloodline_effect_duel = 1
+	combat_rating = 10
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_scathach
+	flags = { legendary_bloodline bloodline_legendary_pictish bloodline_legendary_scottish }
+
+}
+
+cuchulainn_bloodline ={
+	combat_rating = 10
+	irish_opinion = 10
+	martial = 2
+	bloodline_effect_duel = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cuchulainn
+	flags = { legendary_bloodline bloodline_legendary_irish }
+
+}
+
+gilgamesh_bloodline ={
+	combat_rating = 5
+	stewardship = 2
+	intrigue = 1
+	learning = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_murder_rose
+	flags = { legendary_bloodline bloodline_legendary_babylonian }
+
+}
+
+helentroy_bloodline ={
+	hellenic_pagan_opinion = 5
+	hellenic_pagan_reformed_opinion = 5
+	sex_appeal_opinion = 15
+	monthly_character_prestige = 0.1
+	greek_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_helentroy
+	flags = { legendary_bloodline bloodline_legendary_greek }
+
+}
+
+medb_bloodline ={
+	irish_opinion = 5
+	sex_appeal_opinion = 10
+	martial = 1
+	diplomacy = 1
+	bloodline_effect_more_raiders = 1 
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = { legendary_bloodline bloodline_legendary_irish }
+
+}
+
+siegfried_bloodline ={
+	norse_opinion = 5
+	dragon_opinion = -10
+	martial = 1
+	health = 1
+	combat_rating = 10
+	bloodline_effect_duel = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_siegfried
+	flags = { legendary_bloodline bloodline_legendary_germanic }
+
+}
+

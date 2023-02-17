@@ -1,0 +1,43 @@
+k_westkorea = {
+	color = { 48 92 164 }
+	color2 = { 0 0 154 }
+	
+	capital = 333 # Rome, just because
+	
+	culture = korean
+	title = "title_china_emperor"
+	landless = no
+	allow = {
+		ai = no
+	}
+}	
+e_westkorea = {
+	color = { 0 0 153 }
+	color2 = { 0 0 154 }
+	
+	capital = 333 # Rome, just because
+	
+	culture = korean
+	landless = no
+	primary = no
+	title = "title_china_emperor"
+	
+	allow = {
+		ai = no
+	}
+	religion = lilitu
+}
+
+e_koreanempire = {
+	color = { 0 0 78 }
+	color2 = { 0 0 154 }
+	
+	capital = 333 # Rome, just because
+	
+	landless = no
+	culture = korean
+	
+	allow = {
+		ai = no
+	}
+}

@@ -1,5 +1,0 @@
-﻿on_game_start_after_lobby = {
-	events = {
-		carnd_doctrine_seeding.0001
-	}
-}

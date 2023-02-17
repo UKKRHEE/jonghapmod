@@ -1,0 +1,51 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Scripted Triggers
+
+#					#AMD_T_SCRIPTED_TRIGGERS : Trigger.
+AMD_T_IS_NORMAL_HUMAN_COUPLE = {	event_target:AMD_ET_ATK = {	is_female = no	AMD_T_IS_HUMAN = yes	}	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_HUMAN = yes	}	}
+
+#	1Soft 2Hard 3Rand 4bad 5Aroused
+AMD_T_LN_MOOD_IS_SOFT = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_MOOD	value == 1	}	}	}
+AMD_T_LN_MOOD_IS_HARD = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_MOOD	value == 2	}	}	}
+AMD_T_LN_MOOD_IS_RAND = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_MOOD	value == 3	}	}	}
+AMD_T_LN_MOOD_IS_HATE = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_MOOD	value == 4	}	}	}
+AMD_T_LN_MOOD_IS_LUST = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_MOOD	value == 5	}	}	}
+
+AMD_T_LN_PACE_IS_SOFT = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_PACE	value == 1	}	}	}
+AMD_T_LN_PACE_IS_HARD = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_PACE	value == 2	}	}	}
+AMD_T_LN_PACE_IS_RAND = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_PACE	value == 3	}	}	}
+AMD_T_LN_PACE_IS_OVER = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_PACE	value == 4	}	}	}
+
+AMD_T_LN_PACE_IS_ANAL = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_LN_PACE	value == 9	}	}	}	#추가 예정... 아마도.
+
+AMD_T_LN_FIRST_BLOOD = {
+	NOT = {	has_global_flag = AMD_GF_NO_FIRST_BLOOD	}
+	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}
+	event_target:AMD_ET_ATK = {	is_female = no	}
+}
+AMD_T_LN_FLAG_DS = {	event_target:AMD_ET_FLAG_DS = {	is_alive = yes	}	}	#Double Shot
+AMD_T_LN_FLAG_WF = {	event_target:AMD_ET_FLAG_WF = {	is_alive = yes	}	}	#Withdraw Failed
+AMD_T_LN_FLAG_WS = {	event_target:AMD_ET_FLAG_WS = {	is_alive = yes	}	}	#Withdraw Success
+
+#	Fore-Play-Only
+AMD_T_LN_FLAG_T0 = {	event_target:AMD_ET_FLAG_T0 = {	is_alive = yes	}	}
+AMD_T_LN_STOP_BUY = {	event_target:AMD_ET_STOP_BUY = {	is_alive = yes	}	}
+AMD_T_LN_STOP_SELL = {	event_target:AMD_ET_STOP_SELL = {	is_alive = yes	}	}
+AMD_T_LN_STOP_STUDY = {	event_target:AMD_ET_STOP_STUDY = {	is_alive = yes	}	}
+AMD_T_LN_STOP_TRAIN = {	event_target:AMD_ET_STOP_TRAIN = {	is_alive = yes	}	}
+AMD_T_LN_INSERTABLE = {	NOT = {	AMD_T_LN_STOP_BUY = yes	AMD_T_LN_STOP_SELL = yes	AMD_T_LN_STOP_STUDY = yes	AMD_T_LN_STOP_TRAIN = yes	}	}	#Foreplay Only
+
+#	0	Foreplay Only	1	Short Sex	2	Long Sex	3	Orgy
+
+
+AMD_T_LN_IS_AROUSED = {	#미약 또는 음란특성 보유
+	OR = {
+		trait = lustful
+		trait = hedonist
+		trait = seducer
+		trait = seductress
+		trait = possessed
+		trait = lunatic
+		AMD_T_HCM_DRUG_A = yes
+	}
+}
+

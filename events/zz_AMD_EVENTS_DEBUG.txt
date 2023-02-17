@@ -1,0 +1,779 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Events	/	DEBUG & OPTIONS
+
+
+#	#	#	#	#	디버그 기능들
+namespace = AMD_DEBUG
+
+#			100	에디트 활성화
+character_event = {	id = AMD_DEBUG.100		#	디버그 활성화 재확인
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_100
+	picture = GFX_AMD_DEBUG0
+	option = {	name = AMD_EV_OPT_YESYES
+		custom_tooltip = {	text = "AMD_EV_String_DEBUG_ON"	}
+		hidden_tooltip = {	character_event = {	id = AMD_DEBUG.101	}	}
+	}
+	option = {	name = AMD_EV_OPT_NONONO
+		ai_chance = {	factor = 100	}
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.101		#	디버그 활성화 완료
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_101
+	picture = GFX_AMD_DEBUG1
+	option = {	name = AMD_EV_OPT_BREAK
+		ai_chance = {	factor = 100	}
+		set_global_flag = AMD_GF_DEBUG
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+
+#			10001	에디트
+#				11000	debug_trait
+#					11100	스킬 변경	현재상태 이외의 4개
+#					11200	크기 변경	현재상태 이외의 4개
+#					버진	경험을 리셋하고 아다로
+#					리셋	스킬, 크기를 재설정
+#				12000	debug_opinion
+#					지배	복종	리셋	그만
+#				13000	debug_drug
+#					미약	피임	가임	확대	리셋
+#			10001	플레이
+#				play_with_me
+#					화	강	역	그만
+#				play_with_tester
+#					개인
+#						혼성
+#							화	강	역	그만
+#						단화
+#						단강
+#					단체
+#						혼화	혼강	단화	단강
+#					승마
+#					그만
+
+character_event = {	id = AMD_DEBUG.10001	#	#	디버그:메인
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_10001
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_10001_1
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.11000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_10001_2
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.12000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_10001_3
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.13000	}	}
+	}
+	option = {	name = AMD_EV_OPT_NEXT
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.10002	}	}
+	}
+	option = {	name = AMD_EV_OPT_BREAK
+		ai_chance = {	factor = 100	}
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+
+character_event = {	id = AMD_DEBUG.11000	#	#		특성 제어
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_11000
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_11000_1		#스킬 변경
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.11100	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_11000_2		#크기 변경
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.11200	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_11000_3		#경험을 삭제하고 아다로 돌린다.
+		trigger = {	NOT = {	event_target:AMD_ET_TGT = {	trait = AMD_virgin	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_SET_VIRGIN = yes
+			character_event = {	id = AMD_DEBUG_PING.11000	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_11000_4		#스킬과 크기를 리셋한다
+		trigger = {	event_target:AMD_ET_TGT = {	trait = AMD_virgin	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BREAST = yes
+			AMD_E_CLEAR_PENIS = yes
+			AMD_E_CLEAR_SIZE_POTENTIAL = yes
+			AMD_E_CLEAR_SEX_SKILL = yes
+			AMD_E_SET_SEX_SKILL = yes
+			AMD_E_B_ROLL_LIST = yes
+			AMD_E_SIZE_SET_BY_GENE = yes
+			character_event = {	id = AMD_DEBUG_PING.11000	}
+			character_event = {	id = AMD.10002	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_BREAK	
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.11100	#	#			스킬 변경
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_11100
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_sex_skill_1
+		trigger = {	NOT = {	trait = AMD_sex_skill_1	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_SEX_SKILL = yes
+			add_trait = AMD_sex_skill_1
+		}
+	}
+	option = {	name = AMD_sex_skill_2
+		trigger = {	NOT = {	trait = AMD_sex_skill_2	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_SEX_SKILL = yes
+			add_trait = AMD_sex_skill_2
+		}
+	}
+	option = {	name = AMD_sex_skill_3
+		trigger = {	NOT = {	trait = AMD_sex_skill_3	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_SEX_SKILL = yes
+			add_trait = AMD_sex_skill_3
+		}
+	}
+	option = {	name = AMD_sex_skill_4
+		trigger = {	NOT = {	trait = AMD_sex_skill_4	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_SEX_SKILL = yes
+			add_trait = AMD_sex_skill_4
+		}
+	}
+	option = {	name = AMD_sex_skill_5
+		trigger = {	NOT = {	trait = AMD_sex_skill_5	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_SEX_SKILL = yes
+			add_trait = AMD_sex_skill_5
+		}
+	}
+	option = {	name = AMD_EV_OPT_BREAK
+		ai_chance = {	factor = 100	}
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+	after = {	AMD_E_END_CHAIN = yes	}
+}
+character_event = {	id = AMD_DEBUG.11200	#	#			사이즈 변경
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_11200
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_breast_1
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = yes	NOT = {	trait = AMD_breast_1	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_1
+			add_trait = AMD_breast_1
+		}
+	}
+	option = {	name = AMD_breast_2
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = yes	NOT = {	trait = AMD_breast_2	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_2
+			add_trait = AMD_breast_2
+		}
+	}
+	option = {	name = AMD_breast_3
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = yes	NOT = {	trait = AMD_breast_3	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_3
+			add_trait = AMD_breast_3
+		}
+	}
+	option = {	name = AMD_breast_4
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = yes	NOT = {	trait = AMD_breast_4	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_4
+			add_trait = AMD_breast_4
+		}
+	}
+	option = {	name = AMD_breast_5
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = yes	NOT = {	trait = AMD_breast_5	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_5
+			add_trait = AMD_breast_5
+		}
+	}
+	option = {	name = AMD_penis_1
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = no	NOT = {	trait = AMD_penis_1	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_1
+			add_trait = AMD_penis_1
+		}
+	}
+	option = {	name = AMD_penis_2
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = no	NOT = {	trait = AMD_penis_2	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_2
+			add_trait = AMD_penis_2
+		}
+	}
+	option = {	name = AMD_penis_3
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = no	NOT = {	trait = AMD_penis_3	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_3
+			add_trait = AMD_penis_3
+		}
+	}
+	option = {	name = AMD_penis_4
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = no	NOT = {	trait = AMD_penis_4}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_4
+			add_trait = AMD_penis_4
+		}
+	}
+	option = {	name = AMD_penis_5
+		trigger = {	event_target:AMD_ET_TGT = {	is_female = no	NOT = {	trait = AMD_penis_5	}	}	}
+		event_target:AMD_ET_TGT = {
+			AMD_E_CLEAR_BODY_SIZE = yes
+			add_trait = AMD_bodysize_gene_5
+			add_trait = AMD_penis_5
+		}
+	}
+	option = {	name = AMD_EV_OPT_BREAK
+		ai_chance = {	factor = 100	}
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+	after = {	AMD_E_END_CHAIN = yes	}
+}
+character_event = {	id = AMD_DEBUG.12000	#	#		특수 오피니언
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_12000
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_12000_1	#대상을 지배한다 1
+		trigger = {		#대상이 당신이 아니며, 당신과 아무 관계도 아님
+			event_target:AMD_ET_TGT = {
+				NOT = {	character = ROOT	}
+				NOT = {	has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_yielded	}	}
+				NOT = {	has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_obedient	}	}
+				NOT = {	reverse_has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_yielded	}	}
+				NOT = {	reverse_has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_obedient	}	}
+			}
+		}
+		reverse_opinion = {	who = event_target:AMD_ET_TGT	modifier = AMD_opinion_yielded	years = 9999	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.12000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_12000_2	#대상을 지배한다 2
+		trigger = {		#대상이 당신이 아니며, 당신에게 순종해야 함
+			event_target:AMD_ET_TGT = {
+				NOT = {	character = ROOT	}
+				has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_yielded	}
+				NOT = {	has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_obedient	}	}
+			}
+		}
+		reverse_remove_opinion = {	who = event_target:AMD_ET_TGT	modifier = AMD_opinion_yielded	}
+		reverse_opinion = {	who = event_target:AMD_ET_TGT	modifier = AMD_opinion_obedient	years = 9999	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.12000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_12000_3	#대상에게 복종한다 1
+		trigger = {		#대상이 당신이 아니며, 당신과 아무 관계도 아님
+			event_target:AMD_ET_TGT = {
+				NOT = {	character = ROOT	}
+				NOT = {	has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_yielded	}	}
+				NOT = {	has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_obedient	}	}
+				NOT = {	reverse_has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_yielded	}	}
+				NOT = {	reverse_has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_obedient	}	}
+			}
+		}
+		opinion = {	who = event_target:AMD_ET_TGT	modifier = AMD_opinion_yielded	years = 9999	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.12000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_12000_4	#대상에게 복종한다 2
+		trigger = {		#대상이 당신이 아니며, 당신이 순종하고 있어야 함
+			event_target:AMD_ET_TGT = {
+				NOT = {	character = ROOT	}
+				reverse_has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_yielded	}
+				NOT = {	reverse_has_opinion_modifier = {	who = ROOT	modifier = AMD_opinion_obedient	}	}
+			}
+		}
+		remove_opinion = {	who = event_target:AMD_ET_TGT	modifier = AMD_opinion_yielded	}
+		opinion = {	who = event_target:AMD_ET_TGT	modifier = AMD_opinion_obedient	years = 9999	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.12000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_12000_5	#특수 오피니언 리셋
+		trigger = {		#대상이 누군가와 지배/복종 관계일것. 아무나 상관없음...?
+			event_target:AMD_ET_TGT = {
+				OR = {
+					any_opinion_modifier_target = {		#타겟에게 순종
+						has_opinion_modifier = {
+							who = event_target:AMD_ET_TGT
+							modifier = AMD_opinion_yielded
+						}
+					}
+					any_opinion_modifier_target = {		#타겟에게 복종
+						has_opinion_modifier = {
+							who = event_target:AMD_ET_TGT
+							modifier = AMD_opinion_obedient
+						}
+					}
+					any_opinion_modifier_target = {		#타겟이 순종
+						reverse_has_opinion_modifier = {
+							who = event_target:AMD_ET_TGT
+							modifier = AMD_opinion_yielded
+						}
+					}
+					any_opinion_modifier_target = {		#타겟이 복종
+						reverse_has_opinion_modifier = {
+							who = event_target:AMD_ET_TGT
+							modifier = AMD_opinion_obedient
+						}
+					}
+				}
+			}
+		}
+		event_target:AMD_ET_TGT = {
+			any_opinion_modifier_target = {		#타겟에게 순종
+				limit = {
+					has_opinion_modifier = {
+						who = event_target:AMD_ET_TGT
+						modifier = AMD_opinion_yielded
+					}
+				}
+				remove_opinion = {
+					who = event_target:AMD_ET_TGT
+					modifier = AMD_opinion_yielded
+				}
+			}
+			any_opinion_modifier_target = {		#타겟에게 복종
+				limit = {
+					has_opinion_modifier = {
+						who = event_target:AMD_ET_TGT
+						modifier = AMD_opinion_obedient
+					}
+				}
+				remove_opinion = {
+					who = event_target:AMD_ET_TGT
+					modifier = AMD_opinion_obedient
+				}
+			}
+			any_opinion_modifier_target = {		#타겟이 순종
+				limit = {
+					reverse_has_opinion_modifier = {
+						who = event_target:AMD_ET_TGT
+						modifier = AMD_opinion_yielded
+					}
+				}
+				reverse_remove_opinion = {
+					who = event_target:AMD_ET_TGT
+					modifier = AMD_opinion_yielded
+				}
+			}
+			any_opinion_modifier_target = {		#타겟이 복종
+				limit = {
+					reverse_has_opinion_modifier = {
+						who = event_target:AMD_ET_TGT
+						modifier = AMD_opinion_obedient
+					}
+				}
+				reverse_remove_opinion = {
+					who = event_target:AMD_ET_TGT
+					modifier = AMD_opinion_obedient
+				}
+			}
+		}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.12000	}	}
+	}
+	option = {	name = AMD_EV_OPT_BREAK
+		ai_chance = {	factor = 100	}
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.13000		#		약물 모디파이어
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_11100
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_13000_1
+		trigger = {	event_target:AMD_ET_TGT = {	NOT = {	has_character_modifier = AMD_CM_drug_aphrodisiac	}	}	}
+		event_target:AMD_ET_TGT = {	add_character_modifier = {	name = AMD_CM_drug_aphrodisiac	days = 14	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_13000_2
+		trigger = {	event_target:AMD_ET_TGT = {	NOT = {	has_character_modifier = AMD_CM_drug_contraceptive	}	}	}
+		event_target:AMD_ET_TGT = {	add_character_modifier = {	name = AMD_CM_drug_contraceptive	years = 1	}	}
+		event_target:AMD_ET_TGT = {	remove_character_modifier = AMD_CM_drug_fertilizer	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_13000_3
+		trigger = {	event_target:AMD_ET_TGT = {	NOT = {	has_character_modifier = AMD_CM_drug_fertilizer	}	}	}
+		event_target:AMD_ET_TGT = {	add_character_modifier = {	name = AMD_CM_drug_fertilizer	days = 14	}	}
+		event_target:AMD_ET_TGT = {	remove_character_modifier = AMD_CM_drug_contraceptive	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_13000_4
+		trigger = {	event_target:AMD_ET_TGT = {	NOT = {	has_character_modifier = AMD_CM_drug_enlarger	}	}	}
+		event_target:AMD_ET_TGT = {	
+			add_character_modifier = {	name = AMD_CM_drug_enlarger	years = 1	}
+		}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.13000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_13000_5
+		trigger = {	event_target:AMD_ET_TGT = {	has_character_modifier = AMD_CM_drug_enlarger	}	}
+		event_target:AMD_ET_TGT = {	
+			AMD_E_SIZE_GROW = yes
+			remove_character_modifier = AMD_CM_drug_enlarger
+		}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_13000_6
+		trigger = {	
+			OR = {
+				event_target:AMD_ET_TGT = {	has_character_modifier = AMD_CM_drug_aphrodisiac	}
+				event_target:AMD_ET_TGT = {	has_character_modifier = AMD_CM_drug_contraceptive	}
+				event_target:AMD_ET_TGT = {	has_character_modifier = AMD_CM_drug_fertilizer	}
+				event_target:AMD_ET_TGT = {	has_character_modifier = AMD_CM_drug_enlarger	}
+			}
+		}
+		event_target:AMD_ET_TGT = {
+			remove_character_modifier = AMD_CM_drug_aphrodisiac
+			remove_character_modifier = AMD_CM_drug_contraceptive
+			remove_character_modifier = AMD_CM_drug_fertilizer
+			remove_character_modifier = AMD_CM_drug_enlarger
+		}
+	}
+	
+	option = {	name = AMD_EV_OPT_BREAK
+		ai_chance = {	factor = 100	}
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+
+character_event = {	id = AMD_DEBUG.10002		#	디버그:메인 2
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_10002	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_10002_1
+		trigger = {	NOT = {	character = event_target:AMD_ET_TGT	}	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.14000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_10002_2
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15000	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_10002_3
+		trigger = {	NOT = {	character = event_target:AMD_ET_TGT	}	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.14000	}	}
+	}
+	option = {	name = AMD_EV_OPT_PREV
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.10001	}	}
+	}
+	option = {	name = AMD_EV_OPT_BREAK
+		ai_chance = {	factor = 100	}
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.14000		#		대상과 당신 개인전
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_14000	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_14000_1
+		event_target:AMD_ET_TGT = {	prestige = 1
+			event_target:AMD_ET_POV = {	AMD_E_SET_AD_WITH_PREV = yes	}
+		}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15199	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_14000_2	#려차
+		AMD_E_SETA_RA = yes
+		event_target:AMD_ET_TGT = {
+			AMD_E_SETA_RV = yes
+			event_target:AMD_ET_POV = {	AMD_E_SET_AD_WITH_PREV = yes	}
+		}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15199	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_14000_3	#려차ED
+		AMD_E_SETA_RV = yes
+		event_target:AMD_ET_TGT = {
+			AMD_E_SETA_RA = yes
+			event_target:AMD_ET_POV = {	AMD_E_SET_AD_WITH_PREV = yes	}
+		}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15199	}	}
+	}
+	option = {	name = AMD_EV_OPT_BREAK	
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+
+character_event = {	id = AMD_DEBUG.15000		#		대상과 제3자
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15000
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_15000_1	#개인전
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15100	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15000_2	#단체전
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15200	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15000_3	#승마
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15103	}	}
+	}
+	option = {	name = AMD_EV_OPT_BREAK
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.15100		#			개인전
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15100
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_15100_1	#여성
+		event_target:AMD_ET_TGT = {
+			AMD_E_CREATE_TESTER_GAL = yes	new_character = {	AMD_E_SETA_3RD = yes	}
+			character_event = {	id = AMD_DEBUG_PING.15101	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15100_2	#남성
+		event_target:AMD_ET_TGT = {
+			AMD_E_CREATE_TESTER_BOY = yes	new_character = {	AMD_E_SETA_3RD = yes	}
+			character_event = {	id = AMD_DEBUG_PING.15101	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_BREAK	
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.15101		#				2p
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15101
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_15101_1	custom_tooltip = {	text = "AMD_EV_String_DEBUG_CONS"	}
+		hidden_tooltip = {	event_target:AMD_ET_3RD = {	event_target:AMD_ET_TGT = {	AMD_E_SET_AD_WITH_PREV = yes	}	}	}
+		event_target:AMD_ET_3RD = {	prestige = 1	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15199	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15101_2	custom_tooltip = {	text = "AMD_EV_String_DEBUG_RAPES"	}
+		hidden_tooltip = {
+			event_target:AMD_ET_TGT = {	AMD_E_SETA_RA = yes	}
+			event_target:AMD_ET_3RD = {	AMD_E_SETA_RV = yes	}
+			event_target:AMD_ET_3RD = {	event_target:AMD_ET_TGT = {	AMD_E_SET_AD_WITH_PREV = yes	}	}
+		}
+		event_target:AMD_ET_3RD = {	prestige = -1	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15199	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15101_3	custom_tooltip = {	text = "AMD_EV_String_DEBUG_RAPED"	}
+		hidden_tooltip = {
+			event_target:AMD_ET_TGT = {	AMD_E_SETA_RV = yes	}
+			event_target:AMD_ET_3RD = {	AMD_E_SETA_RA = yes	}
+			event_target:AMD_ET_3RD = {	event_target:AMD_ET_TGT = {	AMD_E_SET_AD_WITH_PREV = yes	}	}
+		}
+		event_target:AMD_ET_3RD = {	prestige = -1	}
+		event_target:AMD_ET_TGT = {	character_event = {	id = AMD_DEBUG_PING.15199	}	}
+	}
+	option = {	name = AMD_EV_OPT_BREAK	
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		hidden_tooltip = {	event_target:AMD_ET_3RD = {	death = {	death_reason = death_missing	}	}	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.15103		#				기마
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15103
+	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_15103_1	#혼성 : 더미 생성후 ATK DEF 지정까지 완료함
+		event_target:AMD_ET_TGT = {
+			if = {	limit = {	is_female = yes	}
+				AMD_E_CREATE_TESTER_STUD = yes
+				AMD_E_SETA_DEF = yes
+				new_character = {	AMD_E_SETA_ATK = yes	AMD_E_SETA_3RD = yes	}
+			}
+			if = {	limit = {	is_female = no	}
+				AMD_E_CREATE_TESTER_PONY = yes
+				AMD_E_SETA_ATK = yes
+				new_character = {	AMD_E_SETA_DEF = yes	AMD_E_SETA_3RD = yes	}
+			}
+			character_event = {	id = AMD_DEBUG_PING.15199	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15103_2	#단성
+		event_target:AMD_ET_TGT = {
+			if = {	limit = {	is_female = no	}	AMD_E_CREATE_TESTER_STUD = yes	new_character = {	AMD_E_SETA_3RD = yes	AMD_E_SET_AD_WITH_PREV = yes	}	}
+			if = {	limit = {	is_female = yes	}	AMD_E_CREATE_TESTER_PONY = yes	new_character = {	AMD_E_SETA_3RD = yes	AMD_E_SET_AD_WITH_PREV = yes	}	}
+			character_event = {	id = AMD_DEBUG_PING.15199	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_BREAK	
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.15199		#					개인전 최종승인
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15199
+	picture = GFX_AMD_DEBUG1
+	option = {	name = AMD_EV_OPT_DEBUG_15199_1	#이벤트 실행
+		AMD_E_2P_SCORING_1 = yes
+		hidden_tooltip = {	event_target:AMD_ET_TGT = {	AMD_E_2P_INDEX = yes	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15199_2	#자동처리
+		AMD_E_NPC_2P_START = yes
+	}
+	option = {	name = AMD_EV_OPT_BREAK	
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		event_target:AMD_ET_POV = {	health = 0.01	}
+		event_target:AMD_ET_ATK = {	health = 0.02	}
+		event_target:AMD_ET_DEF = {	health = 0.03	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+
+character_event = {	id = AMD_DEBUG.15200		#			단체전
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15201	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_15200_1	#혼성
+		event_target:AMD_ET_TGT = {
+			AMD_E_SETA_OH = yes
+			character_event = {	id = AMD_DEBUG_PING.15201	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15200_2	#단성
+		event_target:AMD_ET_TGT = {
+			AMD_E_SETA_OH = yes
+			if = {	limit = {	is_female = no	}	AMD_E_SETA_STF_GAY = yes	}
+			if = {	limit = {	is_female = yes	}	AMD_E_SETA_STF_LES = yes	}
+			character_event = {	id = AMD_DEBUG_PING.15201	}
+		}
+	}
+	option = {	name = AMD_EV_OPT_BREAK	
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.15201		#				단체전 종목
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15201	picture = GFX_AMD_DEBUG2
+	option = {	name = AMD_EV_OPT_DEBUG_15201_1	custom_tooltip = {	text = "AMD_EV_String_DEBUG_MP_RAPED"	}
+		event_target:AMD_ET_TGT = {		AMD_E_SETA_RV = yes		AMD_E_MP_INDEX = yes	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15201_3	custom_tooltip = {	text = "AMD_EV_String_DEBUG_MP_BUY"	}
+		event_target:AMD_ET_TGT = {		AMD_E_SETA_TB = yes		AMD_E_MP_INDEX = yes	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15201_4	custom_tooltip = {	text = "AMD_EV_String_DEBUG_MP_SELL"	}
+		event_target:AMD_ET_TGT = {		AMD_E_SETA_TS = yes		AMD_E_MP_INDEX = yes	}
+	}
+	option = {	name = AMD_EV_OPT_BREAK
+		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}
+		AMD_E_END_CHAIN = yes
+	}
+}
+character_event = {	id = AMD_DEBUG.15250	#	단체_c 테스트를 위한 특수 이벤트
+	is_triggered_only = yes
+	desc = AMD_EV_DESC_DEBUG_15250	picture = GFX_AMD_DEBUG2
+	immediate = {	AMD_E_SETA_POV = yes	AMD_E_SETA_OH = yes	}
+	option = {	name = AMD_EV_OPT_DEBUG_15250_1		trigger = {	NOT = {	num_of_lovers = 3	}	}
+		create_character = {	female = no		age = 21
+			religion = THIS		dynasty = NONE
+			random_traits = yes
+			trait = lustful
+		}
+		hidden_tooltip = {
+			new_character = {
+				random_list = {
+					50 = {	AMD_E_SET_VIRGIN = yes	}
+					50 = {	AMD_E_SEX_UNKNOWN = yes	}
+				}
+				AMD_E_B_ROLL_LIST = yes
+				AMD_E_SIZE_SET_BY_GENE = yes
+				AMD_E_ACM_B_ROLL = yes
+				health = 10
+				add_lover = PREV
+			}
+		}
+		hidden_tooltip = {	character_event = {	id = AMD_DEBUG.15250	}	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15250_2		trigger = {	NOT = {	num_of_lovers = 3	}	}
+		create_character = {	female = yes		age = 21
+			religion = THIS		dynasty = NONE
+			random_traits = yes
+			trait = lustful
+		}
+		hidden_tooltip = {
+			new_character = {
+				random_list = {
+					50 = {	AMD_E_SET_VIRGIN = yes	}
+					50 = {	AMD_E_SEX_UNKNOWN = yes	}
+				}
+				AMD_E_B_ROLL_LIST = yes
+				AMD_E_SIZE_SET_BY_GENE = yes
+				AMD_E_ACM_B_ROLL = yes
+				health = 10
+				add_lover = PREV
+			}
+		}
+		hidden_tooltip = {	character_event = {	id = AMD_DEBUG.15250	}	}
+	}
+	
+	#어디까지나 테스트용이므로 이 옵션 출현조건은 간단하게. 실제 이벤트에서는... 상시 가능하게는 만들지 않을것.
+	option = {	name = AMD_EV_OPT_DEBUG_15250_3		trigger = {	num_of_lovers = 3	}
+		any_lover = {	limit = {	AMD_T_NOT_BUSY = yes	AMD_T_IS_DOABLE_AGE = yes	is_female = no	}	AMD_E_ACM_PARTY = yes	}
+		if = {	limit = {	is_female = yes	}	AMD_E_MP_INDEX = yes	}
+		else_if = {	limit = {	is_female = no	}	AMD_E_SETA_STF_GAY = yes	AMD_E_MP_INDEX = yes	}
+	}
+	option = {	name = AMD_EV_OPT_DEBUG_15250_4		trigger = {	num_of_lovers = 3	}
+		any_lover = {	limit = {	AMD_T_NOT_BUSY = yes	AMD_T_IS_DOABLE_AGE = yes	is_female = yes	}	AMD_E_ACM_PARTY = yes	}
+		if = {	limit = {	is_female = no	}	AMD_E_MP_INDEX = yes	}
+		else_if = {	limit = {	is_female = yes	}	AMD_E_SETA_STF_LES = yes	AMD_E_MP_INDEX = yes	}
+	}
+	
+	option = {	name = AMD_EV_OPT_BREAK		custom_tooltip = {	text = "AMD_EV_String_END_EVENT"	}	AMD_E_END_CHAIN = yes	}
+}
+
+#	#	#	#	#	디버그 이벤트의 핑 이벤트
+namespace = AMD_DEBUG_PING
+character_event = {	id = AMD_DEBUG_PING.10001	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.10001	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.10002	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.10002	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.11000	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.11000	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.11100	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.11100	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.11200	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.11200	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.12000	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.12000	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.13000	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.13000	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.14000	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.14000	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.15000	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15000	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.15100	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15100	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.15101	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15101	}	}	}
+}
+#character_event = {	id = AMD_DEBUG_PING.15102	is_triggered_only = yes		hide_window = yes	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15102	}	}	}	}
+character_event = {	id = AMD_DEBUG_PING.15103	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15103	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.15199	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15199	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.15200	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15200	}	}	}
+}
+character_event = {	id = AMD_DEBUG_PING.15201	is_triggered_only = yes		hide_window = yes
+	immediate = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_DEBUG.15201	}	}	}
+}
+

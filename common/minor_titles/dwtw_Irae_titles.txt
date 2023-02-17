@@ -1,0 +1,610 @@
+#
+# General
+#
+title_dwtw_favored_slave = { # Removes branded_slave... temporarily
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 2
+	opinion_effect = 10
+	revoke_allowed = yes
+
+	monthly_salary = 0
+	monthly_prestige = 0.1
+
+	allowed_to_hold = {
+		is_adult = yes
+		prisoner = no
+		NOT = { trait = incapable }
+		trait = branded_slave
+	}
+	
+	allowed_to_grant = {
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		remove_trait = branded_slave
+	}
+
+	lose_effect = {
+		add_trait = branded_slave
+	}
+	retire_effect = {
+		add_trait = branded_slave
+	}	
+	message = yes
+}
+
+title_dwtw_personal_bodyguard = {
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+
+	monthly_salary = 0.2
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		is_adult = yes
+		prisoner = no
+		NOT = { trait = incapable }
+		has_character_modifier = dw_slave_bodyguard
+	}
+	
+	allowed_to_grant = {
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_personal_bodyguard
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_personal_bodyguard
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_personal_bodyguard
+	}
+	message = yes
+}
+
+#
+# Elves
+#
+
+title_dwtw_eagles_eye = { # Make your commander buff
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		martial = 12
+		trait = elf
+		has_minor_title = title_commander
+		liege = { character = FROM }
+	}
+	
+	allowed_to_grant = {
+		trait = elf
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_eagles_eye
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_eagles_eye
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_eagles_eye
+	}	
+	message = yes
+}
+
+title_dwtw_owls_wisdom = { # Make your chaplain buff
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		learning = 12
+		trait = elf
+		has_job_title = job_spiritual
+		liege = { character = FROM }
+	}
+	
+	allowed_to_grant = {
+		trait = elf
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_owls_wisdom
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_owls_wisdom
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_owls_wisdom
+	}	
+	message = yes
+}
+
+title_dwtw_foxs_cunning = { # Make your spymaster buff
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		intrigue = 12
+		trait = elf
+		has_job_title = job_spymaster
+		liege = { character = FROM }
+	}
+	
+	allowed_to_grant = {
+		trait = elf
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_foxs_cunning
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_foxs_cunning
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_foxs_cunning
+	}	
+	message = yes
+}
+
+#
+# Nekos - Silly titles because idgaf
+#
+
+title_dwtw_owo = { # Offsets the fertility penalty
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+
+	allowed_to_hold = {
+		prisoner = no
+		is_female = yes
+		NOT = { trait = incapable }
+		trait = neko
+		trait = futa
+	}
+	
+	allowed_to_grant = {
+		trait = neko
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_owo
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_owo
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_owo
+	}	
+	message = yes
+}
+
+title_dwtw_mew = { # Offsets the fertility penalty of smaller tits.
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+
+	allowed_to_hold = {
+		prisoner = no
+		is_female = yes
+		NOT = { trait = incapable }
+		trait = neko
+		NOT = {
+			trait = futa
+		}
+		NOR = {
+			trait = regular_tits
+			trait = big_tits
+			trait = huge_tits
+			trait = enormous_tits
+			trait = gigantic_tits
+		}
+	}
+	
+	allowed_to_grant = {
+		trait = neko
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_mew
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_mew
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_mew
+	}	
+	message = yes
+}
+
+title_dwtw_hiss = { # Small-dicked catboys can vent frustration
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+
+	allowed_to_hold = {
+		prisoner = no
+		is_female = no
+		NOT = { trait = incapable }
+		trait = neko
+		NOR = {
+			trait = regular_dick
+			trait = big_dick
+			trait = huge_dick
+			trait = enormous_dick
+			trait = gigantic_dick
+		}
+	}
+	
+	allowed_to_grant = {
+		trait = neko
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_hiss
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_hiss
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_hiss
+	}	
+	message = yes
+}
+
+title_dwtw_warlock = { # Orcish demonologists
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_prestige = 0.2	
+
+	allowed_to_hold = {
+		prisoner = no
+		learning = 10
+		NOT = { trait = incapable }
+		trait = orc
+	}
+	
+	allowed_to_grant = {
+		trait = orc
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		if = {
+			limit = {
+				is_female = yes
+			}
+			add_trait = lilith
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			add_trait = incubus
+		}
+		add_character_modifier = {
+			name = modifier_dwtw_warlock
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		if = {
+			limit = {
+				is_female = yes
+			}
+			remove_trait = lilith
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			remove_trait = incubus
+		}
+		remove_character_modifier = modifier_dwtw_warlock
+	}
+	retire_effect = {
+		if = {
+			limit = {
+				is_female = yes
+			}
+			remove_trait = lilith
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			remove_trait = incubus
+		}
+		remove_character_modifier = modifier_dwtw_warlock
+	}	
+	message = yes
+}
+
+title_dwtw_war_captain = { # War Leader
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_prestige = 0.2
+	
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		trait = orc
+		martial = 10
+	}
+	
+	allowed_to_grant = {
+		trait = orc
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_trait = aggressive_leader
+		add_character_modifier = {
+			name = modifier_dwtw_war_captain
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_trait = aggressive_leader
+		remove_character_modifier = modifier_dwtw_war_captain
+	}
+	retire_effect = {
+		remove_trait = aggressive_leader
+		remove_character_modifier = modifier_dwtw_war_captain
+	}
+	message = yes
+}
+
+title_dwtw_peon = { # Peon
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.01
+	grant_limit = 1
+	opinion_effect = -10
+	revoke_allowed = no
+	
+	
+	monthly_prestige = -0.2
+	
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		trait = orc
+	}
+	
+	allowed_to_grant = {
+		trait = orc
+	}
+	revoke_trigger = {
+		always = no
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_peon
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_peon
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_peon
+	}	
+	message = yes
+}
+
+title_dwtw_many_tailed = { # Nine-tailed kitsune - no compatibility with Noxbestia yet
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_prestige = 0.2
+	monthly_piety = 1
+	
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		trait = kitsune
+	}
+	
+	allowed_to_grant = {
+		trait = kitsune
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_dwtw_many_tailed
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_dwtw_many_tailed
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_dwtw_many_tailed
+	}
+
+	message = yes
+}
+
+title_dwtw_spirit_speaker = { # Spiritual kitsune
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_piety = 0.5
+	
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		trait = kitsune
+	}
+	
+	allowed_to_grant = {
+		trait = kitsune
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		if = {
+			limit = {
+				NOT = {
+					trait = mystic
+				}
+			}
+			add_trait = mystic
+		}	
+		add_character_modifier = {
+			name = modifier_dwtw_spirit_speaker
+			duration = -1
+		}		
+	}
+
+	lose_effect = {
+		if = {
+			limit = {
+				trait = mystic
+			}
+			remove_trait = mystic
+		}		
+		remove_character_modifier = modifier_dwtw_spirit_speaker
+	}
+	retire_effect = {
+		if = {
+			limit = {
+				trait = mystic
+			}
+			remove_trait = mystic
+		}
+		remove_character_modifier = modifier_dwtw_spirit_speaker
+	}	
+	message = yes
+}

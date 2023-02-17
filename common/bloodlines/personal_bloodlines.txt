@@ -1,0 +1,62 @@
+ravenspire_bloodline = {
+	christian_opinion -50
+	muslim_Opinion -50
+	combat_rating = 15
+	command_modifier = {
+		heavy_infantry = 0.15
+	}
+	stewardship = 3
+	bloodline_effect_reaver = 1
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_mordred
+	flags = { legendary_bloodline bloodline_viking bloodline_reaver }
+}
+
+orion_bloodline = {
+	christian_opinion -10
+	muslim_Opinion -10
+	combat_rating = 15
+	command_modifier = {
+		archers = 0.15
+	}
+	martial = 3
+	demesne_size = 1
+	bloodline_effect_reaver = 1
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_mordred
+	flags = { legendary_bloodline bloodline_viking bloodline_reaver }
+}
+
+ellenastra_bloodline = {
+	christian_opinion -10
+	muslim_Opinion -10
+	combat_rating = 15
+	command_modifier = {
+		light_cavalry = 0.15
+	}
+	learning = 3
+	demesne_size = 1
+	bloodline_effect_great_heroes_appear = 1
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_mordred
+	flags = { legendary_bloodline bloodline_viking bloodline_heroes }
+}
+
+corellon_bloodline = {
+	christian_opinion -50
+	muslim_Opinion -50
+	combat_rating = 15
+	command_modifier = {
+		knights = 0.15
+	}
+	diplomacy = 3
+	demesne_size = 1
+	bloodline_effect_great_heroes_appear = 1
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_mordred
+	flags = { legendary_bloodline bloodline_viking bloodline_heroes }
+}

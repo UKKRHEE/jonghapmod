@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "elfcourt_1"
+		texturefile = "gfx/event_pictures/elfcourt_1.dds"
+		
+	}
+	spriteType = {
+		name = "elfcourt_2"
+		texturefile = "gfx/event_pictures/elfcourt_2.dds"
+		
+	}
+	spriteType = {
+		name = "elfcourt_3"
+		texturefile = "gfx/event_pictures/elfcourt_3.dds"
+		
+	}
+	spriteType = {
+		name = "elfcourt_4"
+		texturefile = "gfx/event_pictures/elfcourt_4.dds"
+		
+	}
+	spriteType = {
+		name = "elfcourt_5"
+		texturefile = "gfx/event_pictures/elfcourt_5.dds"
+		
+	}
+	spriteType = {
+		name = "elf_bath"
+		texturefile = "gfx/event_pictures/elf_bath.dds"
+		
+	}
+	spriteType = {
+		name = "elf_nude"
+		texturefile = "gfx/event_pictures/elf_nude.dds"
+		
+	}
+	spriteType = {
+		name = "elf_underwear"
+		texturefile = "gfx/event_pictures/elf_underwear.dds"
+		
+	}
+}

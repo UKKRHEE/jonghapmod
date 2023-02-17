@@ -1,0 +1,689 @@
+#####루텔스부르크 가문#####
+
+345000 = {	
+	name="Otten" #신의 후손
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=3
+	add_trait=bastard
+	57.1.1={
+		birth=yes
+	}
+	110.1.1={
+		death=yes
+	}
+}
+345001 = {	
+	name="Krhanden"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345000
+	89.1.1={
+		birth=yes
+	}
+	167.1.1={
+		death=yes
+	}
+}
+345002 = {	
+	name="Demia"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345001
+	129.1.1={
+		birth=yes
+	}
+	197.1.1={
+		death=yes
+	}
+}
+345003 = {	
+	name="Ktan on dejhure"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345002
+	182.1.1={
+		birth=yes
+	}
+	265.1.1={
+		death=yes
+	}
+}
+
+345004 = {	
+	name="Ontreait"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345003
+	231.1.1={
+		birth=yes
+	}
+	312.1.1={
+		death=yes
+	}
+}
+
+345005 = {	
+	name="Altein"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345004
+	268.1.1={
+		birth=yes
+	}
+	322.1.1={
+		death=yes
+	}
+}
+
+345006 = {	
+	name="Ontres"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345005
+	300.1.1={
+		birth=yes
+	}
+	321.1.1={
+		death=yes
+	}
+}
+
+345007 = {	
+	name="Undes"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345006
+	320.1.1={
+		birth=yes
+	}
+	379.1.1={
+		death=yes
+	}
+}
+345008 = {	
+	name="Ghyrack"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345005
+	322.1.5={
+		birth=yes
+	}
+	379.1.1={
+		death=yes
+	}
+}
+
+345009 = {	
+	name="Treaik"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345008
+	358.1.1={
+		birth=yes
+	}
+	451.1.1={
+		death=yes
+	}
+}
+
+345010 = {	
+	name="Furhel"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345009
+	432.1.1={
+		birth=yes
+	}
+	493.1.1={
+		death=yes
+	}
+}
+
+345011 = {	
+	name="Fulatin"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345010
+	482.1.1={
+		birth=yes
+	}
+	553.1.1={
+		death=yes
+	}
+}
+345012 = {	
+	name="Yon de-spina"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345011
+	531.1.1={
+		birth=yes
+	}
+	612.1.1={
+		death=yes
+	}
+}
+345013 = {	
+	name="Abden Henry Orcian"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345011
+	531.1.1={
+		birth=yes
+	}
+	612.1.1={
+		death=yes
+	}
+}
+345014 = {	
+	name="Hein"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345013
+	598.1.1={
+		birth=yes
+	}
+	663.1.1={
+		death=yes
+	}
+}
+345015 = {	
+	name="De fontian"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345014
+	637.1.1={
+		birth=yes
+	}
+	685.1.1={
+		death=yes
+	}
+}
+345016 = {	
+	name="O'djrein"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345014
+	637.1.1={
+		birth=yes
+	}
+	685.1.1={
+		death=yes
+	}
+}
+
+345017 = {	
+	name="O'rjane"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345014
+	637.1.1={
+		birth=yes
+	}
+	685.1.1={
+		death=yes
+	}
+}
+
+345018 = {	
+	name="Okamine"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345017
+	671.1.1={
+		birth=yes
+	}
+	742.1.1={
+		death=yes
+	}
+}
+345019 = {	
+	name="Nikite"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345018
+	712.1.1={
+		birth=yes
+	}
+	774.1.1={
+		death=yes
+	}
+}
+345020 = {	
+	name="Niniwa"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345018
+	713.1.1={
+		birth=yes
+	}
+	774.1.1={
+		death=yes
+	}
+}
+345021 = {	
+	name="Okawani" #오카와니 폰 루텔스부르크
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=345020
+	female=yes
+	add_trait=branden add_trait=minhyee add_trait=immortal
+	734.1.1={
+		birth=yes
+	}
+    752.1.1={
+		add_spouse=345027
+		immortal_age = 17
+		employer = 1
+	}
+    960.1.1={
+		employer = 1
+	}
+}
+
+#####브란덴부르크 가문#####
+345022 = {	
+	name="Greitn"
+	dynasty=20000009
+	religion="catholic"
+	culture="old_frankish"
+	547.1.1={
+		birth=yes
+	}
+	602.1.1={
+		death=yes
+	}
+}
+345023 = {	
+	name="Gynte"
+	dynasty=20000009
+	religion="catholic"
+	culture="old_frankish"
+	father=345022
+	572.1.1={
+		birth=yes
+	}
+	664.1.1={
+		death=yes
+	}
+}
+345024 = {	
+	name="Anio"
+	dynasty=20000009
+	religion="catholic"
+	culture="old_frankish"
+	father=345023
+	623.1.1={
+		birth=yes
+	}
+	694.1.1={
+		death=yes
+	}
+}
+345025 = {	
+	name="Vilbo"
+	dynasty=20000009
+	religion="catholic"
+	culture="old_frankish"
+	father=345024
+	671.1.1={
+		birth=yes
+	}
+	742.1.1={
+		death=yes
+	}
+}
+345026 = {	
+	name="Anuhe"
+	dynasty=20000009
+	religion="catholic"
+	culture="old_frankish"
+	father=345025
+	701.1.1={
+		birth=yes
+	}
+	753.1.1={
+		death=yes
+	}
+}
+345027 = {	
+	name="Lutein"
+	dynasty=20000009
+	religion="catholic"
+	culture="old_frankish"
+	father=345026
+	737.1.1={
+		birth=yes
+	}	
+	752.1.1={
+		add_spouse=345021
+	}
+	821.1.1={
+		death=yes
+	}
+}
+####브란덴-루텔스부르크 가문####
+345028 = {	
+	name="Harune" #하룬 폰 브란덴-루텔스부르크
+	dynasty=20000008
+	religion="catholic"
+	culture="old_frankish"
+	father=345027 #루테인 폰 브란덴부르크
+	mother=345021 #오카와니 폰 루텔스부르크
+	753.1.1={
+		birth=yes
+		effect = {
+			c_345028 = {
+				set_real_father=345020 #니니와 폰 루텔스부르크
+			}	
+		}
+	}	
+	821.1.1={
+		death=yes
+	}
+}
+345029 = {	
+	name="Jyihon"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345028
+	779.1.1={
+		birth=yes
+	}	
+	835.1.1={
+		death=yes
+	}
+}
+345030 = {	
+	name="Lutrain" #루트라인
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345029
+	799.1.1={
+		birth=yes
+	}	
+	856.1.1={
+		death=yes
+	}
+}
+345031 = {	
+	name="Oltein"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345029
+	802.1.1={
+		birth=yes
+	}	
+	863.1.1={
+		death=yes
+	}
+}
+345032 = {	
+	name="Juan"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345029
+	812.1.1={
+		birth=yes
+	}	
+	872.1.1={
+		death=yes
+	}
+}
+345033 = {	
+	name="Duche"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345031
+	837.1.1={
+		birth=yes
+	}	
+	902.1.1={
+		death=yes
+	}
+}
+345034 = {	
+	name="Devouni"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345033
+	868.1.1={
+		birth=yes
+	}	
+	923.1.1={
+		death=yes
+	}
+}
+345035 = {	
+	name="Krani"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345034
+	900.1.1={
+		birth=yes
+	}	
+	967.1.1={
+		death=yes
+	}
+}
+345036 = {	
+	name="Hsorani"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345035
+	935.1.1={
+		birth=yes
+	}	
+    1001.1.1={
+		death=yes
+	}
+}
+345037 = {	
+	name="Thimpohy"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345036
+	967.1.1={
+		birth=yes
+	}	
+    1031.1.1={
+		death=yes
+	}
+}
+345038 = {	
+	name="Duparte"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345037
+	1000.1.1={
+		birth=yes
+	}	
+    1068.1.1={
+		death=yes
+	}
+}
+345039 = {	
+	name="Octopulain"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345037
+	1000.1.1={
+		birth=yes
+	}	
+    1068.1.1={
+		death=yes
+	}
+}
+345040 = {	
+	name="Tentacle" #비운의 촉수괴물
+	dynasty=20000011
+	religion="catholic"
+	culture="tentacle_culture"
+	father=345000
+	add_trait=immortal add_trait=tentacle_monster
+	110.1.1={
+		birth=yes
+		employer = 1
+	}
+}
+345041 = {	
+	name="Cheminomp"
+	dynasty=20000008
+	religion="catholic"
+	culture="german"
+	father=345039
+	1031.1.1={
+		birth=yes
+	}	
+    1089.1.1={
+		death=yes
+	}
+}
+345042 = {	
+	name="Kiev"
+	dynasty=20000008
+	religion="catholic"
+	culture="prussian"
+	father=345041
+	1054.1.1={
+		birth=yes
+	}	
+    1103.1.1={
+		death=yes
+	}
+}
+345043 = {	
+	name="Pyotrue"
+	dynasty=20000008
+	religion="catholic"
+	culture="prussian"
+	father=345042
+	1079.1.1={
+		birth=yes
+	}	
+    1132.1.1={
+		death=yes
+	}
+}
+345044 = {	
+	name="Konrad"
+	dynasty=20000008
+	religion="catholic"
+	culture="prussian"
+	father=345043
+	1102.1.1={
+		birth=yes
+	}	
+    1153.1.1={
+		death=yes
+	}
+}
+345045 = {	
+	name="Vladimir"
+	dynasty=20000008
+	religion="catholic"
+	culture="prussian"
+	father=345044
+	1154.1.1={
+		birth=yes
+	}	
+    1215.1.1={
+		death=yes
+	}
+}
+345046 = {	
+	name="Ivana"
+	dynasty=20000008
+	religion="catholic"
+	culture="prussian"
+	female=yes
+	father=345044
+	1195.1.1={
+		birth=yes
+		add_spouse = 345040
+	}	
+    1254.1.1={
+		death=yes
+	}
+}
+####촉수의 후손####
+
+345047 = {	
+	name="Atenb"
+	dynasty=20000008
+	religion="catholic"
+	culture="tentacle_culture"
+	father=345040
+	mother=345046
+	add_trait=tentacle_monster add_trait=bastard 
+	1210.1.1={
+		birth=yes
+	}	
+    1317.1.1={
+		death=yes
+	}
+}
+345048 = {	
+	name="Olden"
+	dynasty=20000008
+	religion="catholic"
+	culture="tentacle_culture"
+	father=345040
+	mother=345046
+	add_trait=tentacle_monster add_trait=bastard 
+	1210.1.1={
+		birth=yes
+	}	
+    1259.1.1={
+		death=yes
+	}
+}
+345049 = {	
+	name="Guner"
+	dynasty=20000011
+	religion="catholic"
+	culture="tentacle_culture"
+	father=345040
+	mother=345046
+	add_trait=tentacle_monster add_trait=bastard 
+	1214.1.1={
+		birth=yes
+	}	
+    1433.1.1={
+		death=yes
+	}
+}

@@ -1,0 +1,29 @@
+#KOR
+
+technology = {
+	titles = {
+		d_roma
+		c_roma
+		e_westkorea
+	}
+
+	300 = {
+		military = 8.0
+		economy = 8.0
+		culture = 8.0
+		
+		TECH_FORTIFICATIONS_CONSTRUCTION = 8
+		TECH_CAVALRY = 8
+		TECH_CASTLE_CONSTRUCTION = 8
+		TECH_TEMPLE_CONSTRUCTION = 8
+		TECH_LEGALISM = 8
+		TECH_RELIGIOUS_CUSTOMS = 8
+		TECH_LIGHT_INFANTRY = 8
+		TECH_HEAVY_INFANTRY = 8
+		TECH_TRADE_PRACTICES = 8.0
+	}
+}
+
+
+
+

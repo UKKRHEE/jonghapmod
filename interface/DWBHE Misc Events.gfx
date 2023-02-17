@@ -1,0 +1,52 @@
+spriteTypes = {
+	spriteType = {
+		name = "dwbhe_alleynemeet"
+		texturefile = "gfx/event_pictures/dwbhe_alleynemeet.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbhe_alleynefight"
+		texturefile = "gfx/event_pictures/dwbhe_alleynefight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbhe_alleynecapture"
+		texturefile = "gfx/event_pictures/dwbhe_alleynecapture.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbhe_alleynewins"
+		texturefile = "gfx/event_pictures/dwbhe_alleynewins.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbhe_alleynetrick"
+		texturefile = "gfx/event_pictures/dwbhe_alleynetrick.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbh_slavesuccubus"
+		texturefile = "gfx/event_pictures/dwbh_slavesuccubus.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbh_slaveangel"
+		texturefile = "gfx/event_pictures/dwbh_slaveangel.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+}

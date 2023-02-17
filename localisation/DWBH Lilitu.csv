@@ -1,0 +1,243 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+# Tooltips related to Decisions
+
+# Decisions
+create_lilitu_papacy;¦ÈĞ¦Èä‰ ä‰ÿ¼İ®·İ ¨³ÌæÆĞ¡È;;;;;;;;;;;;;x
+create_lilitu_papacy_desc;ëŠ¦ÈùÇ ï»İ¬¸²³«¸ çˆ¨³çÆĞ «·Ïäˆ, ¡·¬ÈÛ ä‰ÿ¼İëÆĞ ¦ÈĞ¦ÈêŒùÇ ²³«ÈÌëŒçˆ ¨³ÌæÆÌ¥³.;;;;;;;;;;;;;x
+introduce_pagan_lilith;Make Lilith our Goddess;;;;;;;;;;;;;x
+introduce_pagan_lilith_desc;Now that we have reformed our religion in Lilith's preferred form, we can present her to our people as their true goddess.;;;;;;;;;;;;;x
+create_orthlili_patriarchy;Create the Reversionist Hierarchy;;;;;;;;;;;;;x
+create_orthlili_patriarchy_desc;As part of our quest to replace and revert the corrupt Orthodox church, we should replace the Patriarchy with a more egalitarian Hierarchy, in Lilith's name.;;;;;;;;;;;;;x
+dwbh_angel_minor_heal;Lesser Restoration;;;;;;;;;;;;;x
+dwbh_angel_minor_heal_desc;As an Angel, I can call upon divine energy to heal myself or others of lesser afflictions that may torment or trouble them.;;;;;;;;;;;;;x
+dwbh_angel_moderate_heal;Moderate Restoration;;;;;;;;;;;;;x
+dwbh_angel_moderate_heal_desc;As an Angel, I can call upon divine energy to heal myself or others of moderate afflictions that may torment or trouble them.;;;;;;;;;;;;;x
+dwbh_angel_major_heal;Greater Restoration;;;;;;;;;;;;;x
+dwbh_angel_major_heal_desc;As an Angel, I can call upon divine energy to heal myself or others of even the greatest of the afflictions that may torment or trouble them.;;;;;;;;;;;;;x
+dwbhangel_smite_wicked;Smite the Wicked;;;;;;;;;;;;;x
+dwbhangel_smite_wicked_desc;By offering up prayers, I can call upon the retribution of the divine against the wicked and sinful, those who have invited the judgment of Heaven.;;;;;;;;;;;;;x
+dwbhangel_inspire;Inspire Soldiers;;;;;;;;;;;;;x
+dwbhangel_inspire_desc;Those that I lead in battle shall know no fear, for they ride with the power of the divine at their side.;;;;;;;;;;;;;x
+dwbh_birth_divine_heir;Divine Conception;;;;;;;;;;;;;x
+dwbh_birth_divine_heir_desc;As a truly devout angel, I can call upon the power of the divine to grant me a child of heavenly origin through immaculate conception, who will be born strong, beautiful, healthy, and smart.;;;;;;;;;;;;;x
+dwbhangel_blessing;Request Divine Blessing;;;;;;;;;;;;;x
+dwbhangel_blessing_desc;As I am pure from any of the seven major sins, I can beseech the heavens to grant me further blessings. The grace of the divine will strengthen me with greater knowledge, intelligence, strength, or beauty.;;;;;;;;;;;;;x
+dwbhangel_atonement;Seek Atonement and Purification;;;;;;;;;;;;;x
+dwbhangel_atonement_desc;Due to my closeness with the divine, I am more sensitive to my own sins and transgressions. If I commune with the heavens in prayer and meditation, I can reflect on my sins and seek atonement, provided I am willing to change my ways.;;;;;;;;;;;;;x
+
+
+# Religion
+orcpagan;Orc Shamanist;;;;;;;;;;;;;x
+orcpagan_DESC;The strange shamanistic beliefs of the Orcs, who seem to both believe in ancient nature and elemental spirits, as well as various demons and gods, mixed with ancestor worship. Truly difficult for any of this world to understand.;;;;;;;;;;;;;x
+lilitu;¦ÈĞ¦È¢ÈêŒïŒ;;;;;;;;;;;;;x
+lilitu_DESC;¦ÈĞ¦ÈêŒù¼ °³¦³É²³Ì ®·Ìª³æÆĞ«È «¹ª·İ ªÈÌùÇ ¬ÈÌ¬·İ²³Ì ì»İ«ÈÌ ¡·ÛëŒçˆ ¨ÈÏåÆÌ ª·äŠ ¡Èæ»Éä‰ùÇ ©¹Ìì»İëŒçˆ ¬·Ìï»İ¬·É«ÈÌ ¥´®·Ìª³ù¼ «³É¨³«¸ ¥´²´ ¥³çŒ¡¸ ª´İ¡³É²³Ì¥³. «ºêŠ äŒ¦ÈêŒæˆù¼ ¨³É¥³Ğ¦³ ¨³¦È«³¡³ æ»İæÆİ²³Ì äŠùÂÌ¬³«ÈØëÆĞ ¨ÈÏåÆÌ¥³.;;;;;;;;;;;;;x
+GOD_THE_MOTHER_GODDESS;«·¨·¢È «¹ªÈÌ;;;;;;;;;;;;;x
+THE_LILITH_BIBLE;¦ÈĞ¦ÈêŒ ª·İ¡¹İ;;;;;;;;;;;;;x
+GOD_THE_MAGDALENE;¨³É¥³Ğ¦¸¢³;;;;;;;;;;;;;x
+GOD_LILITH;Lilith;;;;;;;;;;;;;x
+DEVIL_RAPHAEL;ª³«³É²³Ì ¦³±³«¸Ğ;;;;;;;;;;;;;x
+DEVIL_MICHAEL;Michael the Usurper;;;;;;;;;;;;;x
+DEVIL_GABRIEL;ğ»ÉäÁÌùÇ ¡³éŒ¦È«¸Ğ;;;;;;;;;;;;;x
+DEVIL_ARCHANGELS;¥´®·Ìª³;;;;;;;;;;;;;x
+orthlili;Reversionist;;;;;;;;;;;;;x
+orthlili_DESC;A variant of Orthodox Christianity that believes Lilith and the fallen angels were the true servants of the feminine God, and views the traditional archangels as the evil ones, and seeks the reversion of that standing within the Orthodox church. Believes that Jesus Christ and Mary Magdalene were co-equal saviors.;;;;;;;;;;;;;x
+lilislamic;Lilislamic;;;;;;;;;;;;;x
+lilislamic_DESC;A splinter from traditional Islam that believes that Lilith is the female counterpart of the Archangel Gabriel, and the one who brings divine revelations to female prophets. Is viewed as vile and heretical (and not true Muslims) by all other sects of Islam.;;;;;;;;;;;;;x
+lilislam;¯³¥³¨ÈêŒïŒ;;;;;;;;;;;;;x
+lilislam_DESC;èŠ²³¨³æŒùÇ ‘³Ğ«ÈÌ ±³°È¨³¡³ ¦ÈĞ¦ÈêŒùÇ ¯³¥³¨ÈêŒïŒ¦³äˆ ¨ÈÏåÆÌ «ÈêÆĞ¦³Ø ªÈÌ«³İ«ÈÙ¢È¥³. ¦ÈĞ¦ÈêŒçÆĞ ìÁİªÈØëŒçˆ ¨³ÌæÆĞ«·¬¹ÜëŒ¨¹ ò¼¡· ¡ºªÈæÆĞëÆĞ éŠ¬·İ²³äˆ ¬·Ìï»İ¬·É«ÈÌ «ÈêÆĞ¦³Ø ä‰¦ÈæÆĞëÆĞ ¨³ÎëÆÌ éŠéÁÌ êŠ¬·İ²³«¹ †Š¡³ô¿Ì ¡ºªÈæÆĞëÆĞ ¨ÈÏêÆÙ¢È¥³. «ÈêÆĞ¦³ØùÇ ¥³çÆÌ èˆæÆÌ ì»İ±³æÆĞ«¸ ùÇ²´ ª³«³É²³äˆ «Èä‰æˆ¬·É«È¦³äˆ «¹¡¹¬ÈÙ¢È¥³.;;;;;;;;;;;;;x
+GOD_HANDMAIDEN;¦ÈĞ¦ÈêŒùÇ éˆ«È¬È «³ÎåÆÌ ê»Ì;;;;;;;;;;;;;x
+THE_KHADIMIST_KORAN;¯³¥È¨³Ì îˆ¦³Ì;;;;;;;;;;;;;x
+KHADIMA_PRIEST;Khadima;;;;;;;;;;;;;x
+religion_lilithian;¦ÈĞ¦ÈêŒìÆØ;;;;;;;;;;;;;x
+religion_lilithian_desc;¦ÈĞ¦ÈêŒùÇ ©³İªÈÉëÆĞ ğˆëÀİ²³ØëŒ“· ëŠ¦ÈåÆÌ ª³¦³ØæÆĞëÆĞ «È•ÆĞ¡·Û«È¥³. äŒ¢¹çÆĞ ëŠ¦È ì»İä‰«¸ ¥´²³Ì «¹ªÈÌëŒçˆ êˆ¡´²³¨¹ «È¡·ÛëÆÌ «¹ª·İæÆĞ«È ëŠùÂĞ²³¬È «³Î¥·¦³æˆ ±¹İæÆİ ²³Ì ª³ÿ¿ùÇ ²º°´ÉëÆĞ ëŠ¦È«¸¡¸ éŠ«¹²³Ğ ¡·Û«È¥³..;;;;;;;;;;;;;x
+
+#Laws
+egalitarian_succession;±¹İæÆİìŠùÇ ¡ºêÆİ;;;;;;;;;;;;;x
+egalitarian_succession_desc;¢³Øª·İò¼ «¹ª·İëÆÌ ª³İê»É«¸ ¥´²´ æ»İæÆİ²³Ì òÂÌ¦ÈçÆĞ ¡³¬ÈÙ¢È¥³.;;;;;;;;;;;;;x
+enatic_succession2;¬·Ğ¥´¬·É«ÈÌ «¹ª·İ ¡ºêÆİ;;;;;;;;;;;;;x
+enatic_succession2_desc;ëˆ¬ÈÉ «¹ª·İ¨³Ì ª³İê»É©³ÏëÆĞêŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;x
+enatic_cognatic_succession2;«¹ª·İëŠª·Ì ¡ºêÆİ;;;;;;;;;;;;;x
+enatic_cognatic_succession2_desc;¢³Ø¬³åÆÌ ëˆ¬ÈÉ «¹ª·İ ª³İê»É¬³¡³ «·ÚëÆĞ ¡¹İëŠ«¸¨³Ì ª³İê»É©³ÏëÆĞêŠ «ÈÜ¥³.;;;;;;;;;;;;;x
+succ_khadimist_succession;Open Succession;;;;;;;;;;;;;x
+succ_khadimist_succession_desc;The most powerful child of the ruler succeeds, though other powerful children are likely to intervene... The law is very popular with your children, except for the oldest child. The rest of your dynasty also approves.;;;;;;;;;;;;;x
+# Titles
+LILIM;Lilim;;;;;;;;;;;;;x
+IRDU_LILI;Irdu Lili;;;;;;;;;;;;;x
+ARDAT_LILI;Ardat Lili;;;;;;;;;;;;;x
+title_lilitu_cardinal;Harbinger;;;;;;;;;;;;;x
+expected_next_title_lilitu_cardinal;expected Harbinger;;;;;;;;;;;;;x
+best_candidate_title_lilitu_cardinal;best Harbinger candidate;;;;;;;;;;;;;x
+LILI_MATRIARCH_FOA;Your Seductiveness;;;;;;;;;;;;;x
+LILI_MATRIARCH;Grand High Priestess;;;;;;;;;;;;;x
+LILI_PATRIARCH;Grand High Priest;;;;;;;;;;;;;x
+LICALIPH;Khadim Lilit;;;;;;;;;;;;;x
+LICALIPHA;Khadimat Lilit;;;;;;;;;;;;;x
+LICALIPH_FOA;Your Reverance;;;;;;;;;;;;;x
+
+
+# Realms
+d_lilitu;The Lilithian Papacy;;;;;;;;;;;;;x
+d_lilitu_adj;Lilithian Papal;;;;;;;;;;;;;x
+d_orthlili;The Lilithian Hierarchate;;;;;;;;;;;;;x
+d_orthlili_adj;Hierarchal;;;;;;;;;;;;;x
+d_lilislam;The Khadimist Caliphate;;;;;;;;;;;;;x
+d_lilislam_adj;Caliphatan;;;;;;;;;;;;;x
+lilislam_creation_independent;Form the Khadimist Caliphate;;;;;;;;;;;;;x
+
+
+# Decisions
+
+convince_to_loosen_up;Convince to Loosen Up;;;;;;;;;;;;;x
+convince_to_loosen_up_desc;Attempt to convince a decadent member of your dynasty to loosen up and adhere to Khadijan morals (or anti-morals).;;;;;;;;;;;;;x
+
+
+# Events
+EVTNAME_DWBH_100;A «Èª³İ²³Ğ ¬·İæˆçˆ ª´İª´İ²³Ì •ÁØ;;;;;;;;;;;;;x
+EVTDESC_DWBH_100;¬³ÉëÆÌ ®³İèÁÌ«¸ª· ©È†ŠåÆÌ ®³İ©´É²³Ì ¥³Ğ©Èß«È éˆ«¹Ü¥³. äˆ¥´ ¥´ª·İ¥³İ®·¦·Ø éˆ«ÈåÆÌ ä»Û«È •ÁØ«¸ éˆ«¹Ü¥³. ¥³İªÈÌ ìŠùÄ«¸åÆÌ èˆæÆÌ ¬·ÌïŠùÂÌæÆĞ«È ª·Éª³İëŒçˆ ©¹Ì²´«ÈÜ¡·¢³ ˜Œ¦·¬ÈÌ®´ «ÈÜ«·Ü¥³. äŒ ¬³İêˆùÇ ìÁİªÈØ«¸åÆÌ ëÁĞïÁİéÁĞïÁİ²³Ì ë‹¬·É«È éˆ«¹Ü¥³. ¡³İ¦¹É²³Ì ¬·Ìª³æÆĞ, ¬ÈØêÆİæÆĞ, ¢³Ğ¡´ ¥³Ğ¦ÈÌ ®·Ìª³æÆĞ ¨³¬·æˆ èŠ¢·¬¹ ¢´¦ÈÌ æ»Ğ«¸ ˜Œ¦·¬ÈÌ¡·Û®·¦·Ø éˆ«¹Ü¥³. ¥´ª·İ¥³İùÇ ¨´Ì •Æá«¸åÆÌ «·¥Èª·Ì¡³ é»Ì æÆÛ²³Ì ®ÈÌêÁÉ²³Ì «ÈÌèÁĞ«ÈÌ ¦ÈĞ¦ÈêŒ¡³ éˆ«¹Ü¥³. äŒ¢¹åÆÌ «·æŠëÁÌ «¹İò¼İ«¸ ©ÈûÂ¬¹Ü¥³. äŒ¢¹ùÇ ¢³Ğ¡´åÆÌ «³çÆØ¥³ùÂÜäˆ ê»Ì«¸åÆÌ ©³Éª³Ğ¢³Ì ø¿ª³êÆĞ«È ¡·Ğ®¹¬¹ «ÈÜ«·Ü¥³. äŒ¢¹ùÇ ©³Ğ ¨Èá«¸åÆÌ ±´©´²³Ì ®·Ìª³æÆĞò¼ ¬·Ìª³æÆĞ«È ìÆĞ©È²´ «ÈÜ«·Ü¥³. äŒ¢¹åÆÌ ¬³Ø³Ì ìˆëÀİ²³Ì êÁÌ¡³ÌëÆĞ åŒÈ¨¹ ¢·ÒëÆÌ ¥´ª·İ¥³İ«¸ª· ëÁĞ¦ÈæÆÛ ¨³Ğ²³«¹Ü¥³.
+"«Èä»ÛëÆÌ ®·ëÆØ«¸Ì ñÁĞçÀİ²³Ì ¥´ª·İ¥³İ«È«¹Ü¬È.. ¥³İªÈÌëÆÌ ¥³çÆÌ ª³¦³ØæÆĞ«È ¨³Ğ²³åÆÌ ¡·¬ÈÛ¨³ĞæÆĞ«¸ ÿÄæÁĞ¦È¬È¨³Ğäˆ ¬ÈÌªÈĞëÆĞ ®³Ş«³¦³. ¢´ ùÂÌêŠæÆĞ«È «¹İùÂÌ²È ±³ò¿ªÈ¯ÈÌ «Èä»ÛëÆĞ.. «¹¡È«¸ êÁØ«·«ÈÜåÆÌ ¬ÈÌ¦ÈçÆĞ ®³Şäˆ «Èä»ÛùÇ ¬ÈÌ¦ÈçÆĞ ©´ùÂ¦³. –ˆ²³Ì ©´ëÁÌ ¬ÈÌ¦ÈçÆĞ ²¹İ¬¸æÆĞò¼ ¢³åŠ«·¦³."
+¥³İªÈÌ«È ´«·¢³¬³ ¥´ª·İ¥³İùÇ ²¹İª³İëÆÌ •ÁØê»É«¸ª·®·¦·Ø ¥³İªÈÌùÇ ¨³ëÆØ ¡ÈâêÁÉ²È ¬³¦È¬³Ù«³Ü¥³. «³¨³æˆ äŒ¡·ÛëÆĞ ®³ŞëŒ¦· ‘·¢³«µ ²³åÆÌ¡·Ì «³¢ÈĞ³?
+;;;;;;;;;;;;;x
+EVTOPTA_DWBH_100;¢³åÆÌ «È «Èª³İ²³Ì ¥´ª·İ¥³İ«¸ ¥´²´ ¬ÈÌªÈĞëÆĞ ±³²¸®ÈĞ¡·Û«È¥³.;;;;;;;;;;;;;x
+EVTOPTB_DWBH_100;äŒ¦·²³Ì ¬ÈªÈÉëÆÌ ùÄ²·Ø ²³ĞêŠ «ÈÜ¥³.;;;;;;;;;;;;;x
+EVTOPTC_DWBH_100;¢³åÆÌ «È¥³Ì¬·É«ÈÌ ª´İ¡³ÉëÆÌ ¥³ªÈ ²³¬È «³ÎëÆĞ¡·Û«È¥³.;;;;;;;;;;;;;x
+EVTNAME_DWBH_101;The Great Discovery;;;;;;;;;;;;;x
+EVTDESC_DWBH_101;¥³İªÈÌëÆÌ ¥´ª·İ¥³İ«È ¬·İ¨³Ğçˆ ì»Ì¬´²³¬È «³ÎëÆĞ¬Èæˆ èˆçÆÌ¥³äˆ ª´İ¡³É²³¡È ªÈ¬³É²´Ü«·Ü¥³. «³¨³æˆ ±º²·ù¼ ¬³Ì²´¨³Ì ¢³Ø«³«ÈÜëÆĞ¡·Û«È¦³äˆ ª´İ¡³É²´Ü¥³. ¢·èŠ ¨³ÎëÆÌ ¡·¬ÈÛô¿Ì ¬·İéˆæÆĞçˆ «ÈÌ²´ ¥³İªÈÌëÆÌ ¡ÈĞëÆĞ «È×«·©·¦¹Ü¥³. äŒ¦·¢³ ¡¹ĞäÁÉ ¥³İªÈÌëÆÌ ¥³İªÈÌ«³Ì«¸ «ÈÜåÆÌ ¨ÈÏëÆØëŒçˆ ª³Ì ê»É ¡ÈâêÁÉ²³Ì ä»Ï«¸ «ÈÜåÆÌ , «ÈŞ²¹¬ÈÌ ¡ºä»É ª³«Èçˆ ïÆÉ«È²³Ì ©¹Éæ»Ğ ²¹İ°´çÆĞ ²³Ì ä»ÛëÆĞ ©³Ğ¡¹Ì ²³ĞêŠ «ÈÜ«·Ü¥³. ¨³ëÆĞ ª³¦³ØæÆĞëÆÌ äŒä»Û«È «³èŠ¡·Ûæˆ «·ÚåÆÌ ä»Û«È¦³äˆ ¨³Ğ²³«¹Ü¬È¨³Ì «·”´ÛæÆÌ ¥³İªÈÌëÆÌ ¬È«¹ÉìŠ¨ÈÌæÆĞ«¸¡¸ ÿ¼çÆĞ¢´äˆ ª³Ì •»É¥´¡ÈçÆĞ ëˆçŒ¨¹ «Èä»Û³¬È ëˆ¡¸ ô¿«·Ü¥³.
+¥´ª·İ¥³İùÇ ù¿ò¼ÌëÆÌ ¨³ÑëÆÌ ¢³Ğ“È«¸ ò¿İ¬³İ²È ¢³Ñäˆ éŠª·¬È¡È øÄùÂéˆ«¹Ü¥³. ®·ëÆØ«¸åÆÌ äŒ¡·ÛæÆĞëÆĞ ª³ÌùÇ «ÈĞéŠ¦³äˆ ®³É¡³É²³Ğ’·Ì²´Ü¥³. ªÈĞ¬¸çˆ ¨³®È ª³Ìò¼ ©ÈêÆÛ²³Ì æ»ĞæÆĞçˆ ìˆ¡³É²³Ì ¡·Û®·¦·Ø éˆ«¹Ü¥³. æ»ĞæÆĞ«È ëÁĞïÁİéÁĞïÁİ²³Ì «ÈÙäŠçÆĞ ’³¬¹¢³¡³¨¹, ¥³İªÈÌëÆÌ •ÁØ ê»É«¸ª· éˆ«³Ü¥·Ì ¡·¥´²³Ì ä»İ¡³ÌëŒçˆ ¢³ù¼Ü¥³. ¨³®ÈØ¢´ ¥³İªÈÌëÆÌ «È×«·©·¦ÈÌ ¥´ª·İ¥³İëÆĞ ©³Ğ¡¹Ì²³Ì¡·Û«È«¹Ü¥³.
+¥´ª·İ¥³İëÆÌ ëˆ¦´Ûæ»İ«³Ì ©·¦¹¬ÈÌ®´ «ÈÜ«·Ü¥·Ì¡· ¡³á«³Ü¥³. •ÁØ«¸ª· éˆ«³Ü¥·Ì ¬·ÌïŠùÇ ñÆÌ¬·ÉæÆĞëÆÌ éˆ«È¬È «³Î«³Ü¥³. ®·ëÆØ«¸åÆÌ ¦ÈĞ¦ÈêŒ¡³ ¥³İªÈÌùÇ ªÈ«µ«¸ «ÈÜ«·Ü¥·Ì ¬³İêˆçÆĞ ìˆª³²³¡ÈùÄ²´ ëÁØ¬ÈÉ«¹Ü¥³. ¥³İªÈÌëÆÌ æ»Ğ«¸ ª´¡¹¬ÈÌ ¡È‡ˆçÆĞ ©³Ğ¡¹Ì²³Ğ‘´³¬È ìŠ©¹ÌëÆĞ ìˆª³²³«¹Üäˆ äŒ ¡È‡ˆ«¸ ê»ÌëÆĞ ¡³¬¹¥³ ¥´¬³ ìŠ©¹Ì«¸ «ÈÜ¥·Ì æ»ĞæÆĞ«È äÆÌ®·«¸ ñÆá«·¬È¨¹Ìª· äˆ¥´ æŠçŠ¨³¦È ²³¢³çÆĞ æŒ¦·¢´«·Ü¥³. (- ®³İìˆùÇ ª´©¹É, ¦ÈĞ¦ÈêŒù¼ äŒ¢¹ùÇ æ»İç‰æÆĞëÆÌ ¨È¯³«¸Ğò¼ ¡³éŒ¦È«¸Ğ«¸ ùÇ²´ ©´ªÈÌëÆĞ ¥³İ²³«¹Ü¥³.) ¬ÈÌ¬·İ²³Ì «¹Éª³¡³ ¥³Ø¡ÈÌ êŒîŒç»Ğò¼ ®·Ìª³¡³ ©·Ø²³Ì ©³Ì«¹Éú¿ äŒæÆĞëÆÌ «·‘·ã¡¸ ©´©³Ì²³«¹ÜåÆÌ¬È äŒ ®·Ìª³æÆĞ«È ªÈÌª·İ²³Ì «¹ª·İùÇ é»Ìª·İæÆĞëÆĞ ï»İ¬¸²³¦¹äˆ ²³«¹ÜëŒ¨¹ ¦ÈĞ¦ÈêŒåÆÌ ¢³Øª·İ«¸¡¸ é»İª³ô¿åÆÌ ï»İ¬¸çÆĞ ¨³ÉëŒ¦¹äˆ åˆ¦¹É²³«¹Ü¥³åÆÌ ¡·Û«È¥³. ¥³İªÈÌò¼ ¥³çÆÌ ª³¦³ØæÆĞ«È æÆĞ«·Ü¥·Ì èˆæÆÌ ¡·ÛæÆĞëÆÌ ¡·¬ÈÛô¿Ì ¡·ÛæÆĞ«È¨¹ äŒ¦ÈêŒæˆùÇ ª³ÒùÇ ¥´éŠéÁÌëÆÌ ë‹«ÈĞ²³Ì äŠùÂÌ¬³¡³ «³¢È¦³ ¨³É¥³Ğ¦³ ¨³¦È«³ù¼ æ»İæÆİ²³Ì ¬³¦³åÆÌ ¡·Û«È¥³.;;;;;;;;;;;;;x
+EVTOPTA_DWBH_101;¢³åÆÌ ¬ÈÌ¦ÈçÆĞ ¥³çÆÌª³¦³ØæÆĞò¼ ª¸ª³İ«¸ «³Ğ¦¹«µ²³Ì¥³!;;;;;;;;;;;;;x
+EVTOPTB_DWBH_101;¢³åÆÌ «¹¡È«¸ ù¼Ü¥³åÆÌ ¡·ÛëÆĞ «ÈŞ«·«µ ²³Ì¥³.;;;;;;;;;;;;;x
+EVTDESC_DWBH_111;I had almost given up hope of finding it when the old merchant sold me the scrolls he'd found in a cave near Mecca. The truth is even more shocking than I thought. Lilith is the true equal of Gabriel, and gave additional revelations to Fatimah - revelations that Abu Bakr suppressed!;;;;;;;;;;;;;x
+EVTOPTA_DWBH_111;I must bring the truth about Lilith to the world!;;;;;;;;;;;;;x
+EVTOPTB_DWBH_111;This heresy was buried for a reason!;;;;;;;;;;;;;x
+EVTNAME_DWBH_400;Lilith as the Goddess;;;;;;;;;;;;;x
+EVTDESC_DWBH_400;It was not an easy thing to accomplish, for even though the reformed teachings of our religion are the same ways as Mother Lilith's, people are resistant to change. Yet few could argue against the divine inspiration that underlay thsoe new teachings, or the strength of your piety. One after another, those who came to argue and debate you were swayed by your words, or perhaps simply charmed by you personally. Either way, the word spread, bit by bit, and as people came to follow the new ways, a new name for the divine was on their lips - Lilith, our great Mother Goddess. 
+;;;;;;;;;;;;;x
+EVTOPTA_DWBH_400;Praise Lilith!;;;;;;;;;;;;;x
+dwbh_angelic_smite_title;And the Wicked are Struck Down;;;;;;;;;;;;;x
+dwbhangel_heal_major_title;Greater Restoration;;;;;;;;;;;;;x
+dwbhangel_heal_minor_title;Lesser Restoration;;;;;;;;;;;;;x
+dwbhangel_heal_moderate_title;Moderate Restoration;;;;;;;;;;;;;x
+dwbhangel_inspire_title;Divine Inspiration;;;;;;;;;;;;;x
+DWBHAngel120desc;A blessing of my angelic blood is the ability to use divine energy to heal wounds and illnesses. This is not an immediate miracle, however. It requires concentration as I pray to [Root.Religion.GetHighGodName], and focus upon directing the power that [Root.Religion.GetHighGodName] grants me. \n  Soon I can feel the holy energy burning away the corruption and death, suffusing my body with life in their place. An hour later, as I let out a deep breath of satisfaction, as the holy rite ends.;;;;;;;;;;;;;x
+DWBHAngel120desc2;A blessing of my angelic blood is the ability to use divine energy to heal wounds and illnesses. This is not an immediate miracle, however. It requires concentration as I pray to [Root.Religion.GetHighGodName], and focus upon directing the power that [Root.Religion.GetHighGodName] grants me. \n  Soon I can feel the holy energy burning away the corruption and death in [From.GetTitledFirstName], suffusing [From.Getherhis] body with life in their place. An hour later, as I let out a deep breath of satisfaction, as the holy rite ends.;;;;;;;;;;;;;x
+DWBHAngel120optA;I am healed.;;;;;;;;;;;;;x
+DWBHAngel120optB;[From.GetBestName] has healed me.;;;;;;;;;;;;;x
+
+
+DWBHAngel130desc;Among the most powerful of my divine gifts is the ability to call upon the retribution of [Root.Religion.GetHighGodName] against the wicked - those who have done wrong to others, or who are otherwise vile in the eyes of the divine. I focus my thoughts as I kneel in prayer, calling upon [Root.Religion.GetHighGodName] to deliver holy judgment upon [From.GetBestName], and to strike them down in their wickedness. The answers to such a prayer are often varied, as [Root.Religion.GetHighGodName] may show mercy, particularly if the wicked one is willing to immediately repent their transgressions. \n This power will test my faith more for every imperfection and sin of my own, for to judge others invites judgment upon myself, and should I be found wanting too, I will face punishment as well.;;;;;;;;;;;;;x
+DWBHAngel90desc;Those that I lead in battle shall know no fear, for they ride with the hand of [Root.Religion.GetHighGodName] at their side. I step forth, before the assembled ranks of my soldiers, the sun gleaming down upon us. I speak to them, of the trials we are to face, and of the will of the divine, letting them see my righteous determination. We cannot fail or falter, because [Root.Religion.GetHighGodName] is with us.;;;;;;;;;;;;;x
+DWBHAngel40desc;Rather than rely on the normal process of mortal reproduction, as an angel I can call upon the power of [Root.Religion.GetHighGodName] and request that my womb be infused with the blessings of the divine, that I might bear a child conceived with no father save the heavens, who will not only bear the mantle and power of the angelic hosts, but be born strong, healthy, and beautiful, to grow up with an intelligence matched by few.;;;;;;;;;;;;;x
+DWBHAngel130A;Divine Justice.;;;;;;;;;;;;;x
+DWBHAngel90option;On to victory!;;;;;;;;;;;;;x
+DWBHAngel40option;My womb has been blessed.;;;;;;;;;;;;;x
+dwbhangel_conception_title;Divine Conception;;;;;;;;;;;;;x
+DWBHAngel.12Title;The Gift of Beauty;;;;;;;;;;;;;x
+DWBHAngel.12desc;My prayers to [Root.Religion.GetHighGodName] have been answered. I bask in awe at the power of the heavens as I feel it infusing me with a golden warmth, washing away the physical imperfections of my mortal form, leaving me as radiant as the heavens themselves.;;;;;;;;;;;;;x
+DWBHAngel.12optA;Praise [Root.Religion.GetHighGodName]!;;;;;;;;;;;;;x
+DWBHAngel.13Title;The Gift of Intelligence;;;;;;;;;;;;;x
+DWBHAngel.13desc;My prayers to [Root.Religion.GetHighGodName] have been answered. I bask in awe at the power of the heavens as I feel it infusing me with a golden warmth, setting my mind afire with new insight as my thoughts quicken. I can see the world in a whole new light now, as if a veil of fog had been lifted from my eyes.;;;;;;;;;;;;;x
+DWBHAngel.13optA;Praise [Root.Religion.GetHighGodName]!;;;;;;;;;;;;;x
+DWBHAngel.14Title;The Gift of Strength;;;;;;;;;;;;;x
+DWBHAngel.14desc;My prayers to [Root.Religion.GetHighGodName] have been answered. I bask in awe at the power of the heavens as I feel it infusing me with a golden warmth, infusing my mortal body with a surge of strength and endurance, as any weakness and frailty wash away in the tide of divine grace.;;;;;;;;;;;;;x
+DWBHAngel.14optA;Praise [Root.Religion.GetHighGodName]!;;;;;;;;;;;;;x
+DWBHAngel.15Title;The Gift of Knowledge;;;;;;;;;;;;;x
+DWBHAngel.15desc;My prayers to [Root.Religion.GetHighGodName] have been answered. I bask in awe at the power of the heavens as I feel it infusing me with a golden warmth, my mind flooding with wisdom and knowledge. I see now the lessons that I once misunderstood made clear instead, granting me greater insights previously denied to me.;;;;;;;;;;;;;x
+DWBHAngel.15optA;Praise [Root.Religion.GetHighGodName]!;;;;;;;;;;;;;x
+DWBHAngel.22title;Luxuria - the Sin of Lust;;;;;;;;;;;;;x
+DWBHAngel.22desc;As I pray to [Root.Religion.GetHighGodName] and meditate on my life and actions, my thoughts turn to the acts of lust and fornication that I have committed. While I am not expected to remain celibate, the heavens frown upon carnal excess. \n I should likely repent of any lustful ways, and vow to remain chaste, to ensure that I retain the favor of [Root.Religion.GetHighGodName]. Still, perhaps I have not transgressed so greatly that I need to take so drastic a measure yet...;;;;;;;;;;;;;x
+DWBHAngel.22optA;I will repent from my lustful ways.;;;;;;;;;;;;;x
+DWBHAngel.22optB;I have nothing to apologize for.;;;;;;;;;;;;;x
+DWBHAngel.23title;Acedia - the Sin of Sloth;;;;;;;;;;;;;x
+DWBHAngel.23desc;As I pray to [Root.Religion.GetHighGodName] and meditate on my life and actions, my thoughts turn to the times I should have acted, or acted with alacrity, and yet did not. While patience is a virtue, can I truly say that I waited for good reason, rather than out of laziness? Was I being prudent, or simply making excuses to avoid hard work and difficult tasks? \n I should likely repent of any slothful ways, and vow to remain diligent, to ensure that I retain the favor of [Root.Religion.GetHighGodName]. Still, perhaps I have not transgressed so greatly that I need to take so drastic a measure yet...;;;;;;;;;;;;;x
+DWBHAngel.23optA;I will repent from my slothful ways.;;;;;;;;;;;;;x
+DWBHAngel.24title;Ira - the Sin of Wrath;;;;;;;;;;;;;x
+DWBHAngel.24desc;As I pray to [Root.Religion.GetHighGodName] and meditate on my life and actions, my thoughts turn to the times that I lashed out in anger, or when I let my emotions drive me to hasty or irrational action. While diligent action is a virtue, to let my temper rule me so greatly risks the displeasure of the heavens. \n I should likely repent of any wrathful ways, and vow to remain patient, to ensure that I retain the favor of [Root.Religion.GetHighGodName]. Still, perhaps I have not transgressed so greatly that I need to take so drastic a measure yet...;;;;;;;;;;;;;x
+DWBHAngel.24optA;I will repent from my wrathful ways.;;;;;;;;;;;;;x
+DWBHAngel.25title;Invidia - the Sin of Envy;;;;;;;;;;;;;x
+DWBHAngel.25desc;As I pray to [Root.Religion.GetHighGodName] and meditate on my life and actions, my thoughts turn to the times I looked upon others with jealousy, whether over a lover, a valuable possession, or simply in envy of their happy life free of the worries and responsibilities that beset me as a ruler. While it is natural for humans to desire better things, and to improve themselves, to view my neighbor in such a light is sinful in the eyes of the heavens. \n I should likely repent of any envious ways, and vow to remain chaste, to ensure that I retain the favor of [Root.Religion.GetHighGodName]. Still, perhaps I have not transgressed so greatly that I need to take so drastic a measure yet...;;;;;;;;;;;;;x
+DWBHAngel.25optA;I will repent from my envious ways.;;;;;;;;;;;;;x
+DWBHAngel.26title;Superbia - the Sin of Pride;;;;;;;;;;;;;x
+DWBHAngel.26desc;As I pray to [Root.Religion.GetHighGodName] and meditate on my life and actions, my thoughts turn to the way I have carried myself, and represented myself to others. I have made many great accomplishments, both personally and as a ruler, and are these things not worthy of acclaim? And yet, it is humility that is favored by the heavens, that we not fall prey to hubris. Have I gone too far, and let my satisfaction at my deeds become vainglorious pride? \n I should likely repent of any vainglorious ways, and vow to remain humble, to ensure that I retain the favor of [Root.Religion.GetHighGodName]. Still, perhaps I have not transgressed so greatly that I need to take so drastic a measure yet...;;;;;;;;;;;;;x
+DWBHAngel.26optA;I will repent from my vainglorious ways.;;;;;;;;;;;;;x
+DWBHAngel.27title;Avaritia - the Sin of Greed;;;;;;;;;;;;;x
+DWBHAngel.27desc;As I pray to [Root.Religion.GetHighGodName] and meditate on my life and actions, my thoughts turn to the way I have handled finances and money, and my actions regarding the acquisition of wealth in all forms. As a ruler, I need money in order to pay for things to protect and strengthen my realm, and to acquire more of it, as well as artifacts of value, is part of my duty as a ruler. And yet, have I perhaps gone too far more often than not, erring on the side of coveting and hoarding more and more wealth, seeking wealth for its own sake alone? Greed is a sin in the eyes of the heavens, taking more than one needs, and thereby deny it to the poor that so often lack the most basic necessities. \n I should likely repent of any greedy ways, and vow to remain charitable, to ensure that I retain the favor of [Root.Religion.GetHighGodName]. Still, perhaps I have not transgressed so greatly that I need to take so drastic a measure yet...;;;;;;;;;;;;;x
+DWBHAngel.27optA;I will repent from my greedy ways.;;;;;;;;;;;;;x
+DWBHAngel.28title;Gula - the Sin of Gluttony;;;;;;;;;;;;;x
+DWBHAngel.28desc;As I pray to [Root.Religion.GetHighGodName] and meditate on my life and actions, my thoughts turn to my habits, not simply of eating and drinking, but of consumption in general. While the heavens do not expect me to spend all my time eating only bread and water, as a ruler I have the power to indulge my whims and take far more than most. Have I gone too far, in things like lavish feasts, in carousing and drinking, and so on? \n I should likely repent of any lustful ways, and vow to remain temperate, to ensure that I retain the favor of [Root.Religion.GetHighGodName]. Still, perhaps I have not transgressed so greatly that I need to take so drastic a measure yet...;;;;;;;;;;;;;x
+DWBHAngel.28optA;I will repent from my gluttonous ways.;;;;;;;;;;;;;x
+
+
+
+# Lilislamic Events
+EVTDESCDWBH.91200;Alcoholic beverages are considered blessed in the eyes of Lilith (may She be glorified and exalted). This has encouraged you to consume copious amounts of wine and get plastered on a regular basis.;;;;;;;;;;;;;x
+EVTOPTADWBH.91200;*hic*;;;;;;;;;;;;;x
+EVTDESCDWBH.91201;Your attraction to those of your same sex is frowned upon by some in society, but Lilith (may She be glorified and exalted) blesses you.;;;;;;;;;;;;;x
+EVTOPTADWBH.91201;Let them say what they want!;;;;;;;;;;;;;x
+EVTDESCDWBH.91202;Some visiting Handmaidens walk in on you as your servants are busily smearing your body with honey, covering you from top to bottom. For some reason they react in glee at this sight.;;;;;;;;;;;;;x
+EVTOPTADWBH.91202;Quite the sight, am I not?;;;;;;;;;;;;;x
+EVTDESCDWBH.91203;It is becoming increasingly known that your habit is impaling your enemies on wooden stakes and listening to their cries of despair. Others have begun to look upon you with fear and respect;;;;;;;;;;;;;x
+EVTOPTADWBH.91203;It is only appropriate.;;;;;;;;;;;;;x
+EVTDESCDWBH.91204;Why should you settle for one lover, or two, or a dozen? The carnal pleasures of the flesh beckon, and let no one say you are undeserving!;;;;;;;;;;;;;x
+EVTOPTADWBH.91204;Come here, my pretty...;;;;;;;;;;;;;x
+EVTDESCDWBH.91205;Your enormous appetite cannot be sated. As the poor of your realm starve, your servants bring delicacies from the most distant lands to your table. A 'light lunch' for you would be enough to feed a peasant family for a week or two.;;;;;;;;;;;;;x
+EVTOPTADWBH.91205;Let me just remove my belt...;;;;;;;;;;;;;x
+EVTDESCDWBH.91206;You have been doing your best to suck the people of [Root.Location.GetName] dry of what few possessions they have. No matter how much of their wealth is channeled your way, you always want more. The lifestyle you have grown accustomed to is an expensive one indeed.;;;;;;;;;;;;;x
+EVTOPTADWBH.91206;It is my right.;;;;;;;;;;;;;x
+EVTDESCDWBH.91207;The truly enlightened ruler must conserve all energy for the act of ruling itself. It is for this reason that you have expanded your staff of servants tenfold. Tedious activities such as walking, bringing food to your mouth or the wiping of your regal behind are a thing of the past for you.;;;;;;;;;;;;;x
+EVTOPTADWBH.91207;Ah, yes...;;;;;;;;;;;;;x
+EVTDESCDWBH.91208;More and more of your waking hours are being spent comparing your worldly possessions with those of other rulers. For someone of your same station to have a more lavish palace or prettier garments is simply unacceptable.;;;;;;;;;;;;;x
+EVTOPTADWBH.91208;I deserve only the very best.;;;;;;;;;;;;;x
+EVTDESCDWBH.91209;Your foul temper is frequently discussed in hushed voices among your palace staff. Furniture, silverware, mirrors - everything is fair game when your mood turns bad and you feel the need to break or throw something. If your palace was ever looted, would anyone be able to tell the difference?;;;;;;;;;;;;;x
+EVTOPTADWBH.91209;It can all be replaced.;;;;;;;;;;;;;x
+EVTDESCDWBH.91210;You order the construction of a massive bronze statue over the main entrance of [Root.Location.GetName] depicting yourself holding a raised sword, challenging the very heavens to strike you down if they dare. This generous gift to the people will help them remember your splendor and brilliance.;;;;;;;;;;;;;x
+EVTOPTADWBH.91210;They should be thankful I am their ruler.;;;;;;;;;;;;;x
+EVTDESCDWBH.91211;Your deceitfulness and guile sometimes serve you well, but it has also earned you a reputation among your subjects as someone who is not to be trusted. They simply do not see you as a man of honor.;;;;;;;;;;;;;x
+EVTOPTADWBH.91211;Honour is a weakness I cannot afford.;;;;;;;;;;;;;x
+EVTDESCDWBH.91212;While there are some rulers who take an active role in military affairs, the safety of the palace life is far more appealing to you. Why, if you ventured beyond the palace gates, something could hurt you!;;;;;;;;;;;;;x
+EVTOPTADWBH.91212;Guards, I don't like the way that child looked at me...;;;;;;;;;;;;;x
+EVTDESCDWBH.91213;While there are always those who moan and mutter about the need to continually better oneself and strive for improvement, you are quite content with the way things are now. The land is yours to rule, you have a beautiful palace and the sun still shines warmly.;;;;;;;;;;;;;x
+EVTOPTADWBH.91213;There is not a single thing I would change.;;;;;;;;;;;;;x
+EVTDESCDWBH.91214;Justice and the rule of law do not interest you, unless they happen to coincide with your own sense of how things should be. Many of your subjects are grumbling about how you seem to hold yourself above the laws they have to observe.;;;;;;;;;;;;;x
+EVTOPTADWBH.91214;I AM the law.;;;;;;;;;;;;;x
+EVTDESCDWBH.91215;Your cynical view of all religious matters has resulted in you only observing those elements of the Khadijan faith you find convenient and ignoring the rest. Some of your subjects are muttering about this lack of piousness on your part.;;;;;;;;;;;;;x
+EVTOPTADWBH.91215;Oh, let them mutter.;;;;;;;;;;;;;x
+EVTDESCDWBH.91216;You suspect everyone around you of treachery, to the point where your servants and staff are terrified of even breathing in your presence. The size and influence of your palace guard has increased tenfold as everything, good or bad, has to pass through them before reaching you.;;;;;;;;;;;;;x
+EVTOPTADWBH.91216;They will not catch me unawares.;;;;;;;;;;;;;x
+EVTDESCDWBH.91217;You take great pleasure in inflicting cruel punishments on your servants and subjects. If there is no reason to punish them, you find it easy enough to invent one.;;;;;;;;;;;;;x
+EVTOPTADWBH.91217;I will teach you not to blink so much in my presence...;;;;;;;;;;;;;x
+EVTDESCDWBH.91218;You always seem to be thinking several steps ahead of the people near you. There are few people alive who can match your mental prowess, and when your intellect is focused on a single problem, people know a solution will be found.;;;;;;;;;;;;;x
+EVTOPTADWBH.91218;Lilith (glorified and exalted be She) does not play dice.;;;;;;;;;;;;;x
+EVTDESCDWBH.91219;Your decision to put aside your carnal desires and lead a life of celibacy is viewed with great suspicion by the people, being truly abhorrent in Lilith's sight.;;;;;;;;;;;;;x
+EVTOPTADWBH.91219;Let them say what they want!;;;;;;;;;;;;;x
+EVTDESCDWBH.91220;As a dedicated scholar, you have gained many valuable insights from all the tomes you have studied, even though others grumble that you spend too much time in study, and not enough enjoying life's pleasures.;;;;;;;;;;;;;x
+EVTOPTADWBH.91220;There is so much to learn, and so little time!;;;;;;;;;;;;;x
+EVTDESCDWBH.91221;Your chaste and virtuous lifestyle is viewed as distasteful in the eyes of Lilith (may She be glorified and exalted), and others have taken notice that you often make excuses or refuse to indulge yourself.;;;;;;;;;;;;;x
+EVTOPTADWBH.91221;They are the distasteful ones!;;;;;;;;;;;;;x
+EVTDESCDWBH.91222;Where other rulers often abuse their positions and give in to excess, you have always valued moderation in all things, even if Lilith (may She be glorified and exalted) disapproves.;;;;;;;;;;;;;x
+EVTOPTADWBH.91222;Too much indulgence leads to weakness.;;;;;;;;;;;;;x
+EVTDESCDWBH.91223;You are always ready to give to those less fortunate than yourself, and when a rockslide destroyed the homes of several poor families in [Root.Location.GetName], you offered them temporary lodgings in your palace.;;;;;;;;;;;;;x
+EVTOPTADWBH.91223;Every day the sun rises, charity is due on every joint of a person.;;;;;;;;;;;;;x
+EVTDESCDWBH.91224;Your tireless and diligent work as their ruler has not gone unnoticed by your people. Some have dubbed you 'The One Who Appears Everywhere' and claim you possess supernatural powers to exist in more than one place at once.;;;;;;;;;;;;;x
+EVTOPTADWBH.91224;I have never been afraid of a little hard work.;;;;;;;;;;;;;x
+EVTDESCDWBH.91225;You have become renowned for your kind rule, and your people know it. There are those who would call you soft, but you cannot bring yourself to be harsh.;;;;;;;;;;;;;x
+EVTOPTADWBH.91225;The carrot, not the stick.;;;;;;;;;;;;;x
+EVTDESCDWBH.91226;Your ability to plan for the long-term and see the big picture has served you well as a ruler. Future generations will thank you for the work you do today!;;;;;;;;;;;;;x
+EVTOPTADWBH.91226;Great things come to those who wait.;;;;;;;;;;;;;x
+EVTDESCDWBH.91227;You always strive to be humble, never forgetting the roots of yourself and your ancestors. There are many lessons from the past that must still be heeded today.;;;;;;;;;;;;;x
+EVTOPTADWBH.91227;I will not forget.;;;;;;;;;;;;;x
+EVTDESCDWBH.91228;Your honest nature and tendency to speak what is on your mind has ruffled a few feathers in the past, but it has also earned you a reputation. People know that you cannot bring yourself to lie.;;;;;;;;;;;;;x
+EVTOPTADWBH.91228;The truth is the truth.;;;;;;;;;;;;;x
+EVTDESCDWBH.91229;Your enemies would accuse you of many things, but not even they would label you a coward. It is well known that you are fearless and always willing to share the dangers faced by your men.;;;;;;;;;;;;;x
+EVTOPTADWBH.91229;Never give in to fear.;;;;;;;;;;;;;x
+EVTDESCDWBH.91230;You are an ambitious person, always striving to improve and do better. The people know this, and though some of your decisions may be unpopular, they are usually at least seen as progressive.;;;;;;;;;;;;;x
+EVTOPTADWBH.91230;Why settle for mediocrity?;;;;;;;;;;;;;x
+EVTDESCDWBH.91231;Just and fair in all things, your people rest easy in the knowledge that no matter what, you can always be depended on to observe the rule of law.;;;;;;;;;;;;;x
+EVTOPTADWBH.91231;Law should govern.;;;;;;;;;;;;;x
+EVTDESCDWBH.91232;No one can question your devotion to Lilith and the teachings of her Handmaiden (peace be upon her). You can always be counted on to put your faith ahead of yourself.;;;;;;;;;;;;;x
+EVTOPTADWBH.91232;Laa ilaha illilith!;;;;;;;;;;;;;x
+EVTDESCDWBH.91233;You have proven your devotion to Lilith (may She be glorified and exalted) by making war against the enemies of Islam. As one of the mujahideen, you are acknowledged to have fought in a Jihad.;;;;;;;;;;;;;x
+EVTOPTADWBH.91233;The best jihad is the one in which your horse is slain and your blood is spilled.;;;;;;;;;;;;;x
+EVTDESCDWBH.91234;You have completely memorized the Quran, an accomplishment that not only shows your devotion to Lilith (glorified and exalted be She), but which has also won you great respect as a ruler.;;;;;;;;;;;;;;x
+EVTOPTADWBH.91234;It was not easy.;;;;;;;;;;;;;x
+EVTDESCDWBH.91235;It is a well known fact that you have completed the Hajj and thus shown your submission and devotion to Lilith (may She be glorified and exalted). Whatever else they may say about you, no one can take this away.;;;;;;;;;;;;;x
+EVTOPTADWBH.91235;It was my duty.;;;;;;;;;;;;;x

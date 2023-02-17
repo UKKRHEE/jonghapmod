@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_crowned_by_lilitu_priest"
+		texturefile = "gfx/traits/crowned_by_lilitu_priest.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_crowned_by_lilitu_bishop"
+		texturefile = "gfx/traits/crowned_by_lilitu_bishop.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_crowned_by_lilitu_pope"
+		texturefile = "gfx/traits/crowned_by_lilitu_pope.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

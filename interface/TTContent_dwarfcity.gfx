@@ -1,0 +1,163 @@
+###################################################################
+##### UNDERGROUND CITY IMAGES for the Dark World Content Pack #####
+###################################################################
+
+spriteTypes = {
+	spriteType = {
+		name = "dwarven_city_1"
+		texturefile = "gfx/event_pictures/dwarven_city_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_city_2"
+		texturefile = "gfx/event_pictures/dwarven_city_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_slavetrader_01"
+		texturefile = "gfx/event_pictures/dwarven_slavetrader_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_slavetrader_02"
+		texturefile = "gfx/event_pictures/dwarven_slavetrader_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_tavern_01"
+		texturefile = "gfx/event_pictures/dwarven_tavern_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_tavern_02"
+		texturefile = "gfx/event_pictures/dwarven_tavern_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_temple_01"
+		texturefile = "gfx/event_pictures/dwarven_temple_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_temple_02"
+		texturefile = "gfx/event_pictures/dwarven_temple_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_throneroom_01"
+		texturefile = "gfx/event_pictures/dwarven_throneroom_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_throneroom_02"
+		texturefile = "gfx/event_pictures/dwarven_throneroom_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_alchemist_01"
+		texturefile = "gfx/event_pictures/dwarven_alchemist_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_alchemist_02"
+		texturefile = "gfx/event_pictures/dwarven_alchemist_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_blacksmith_01"
+		texturefile = "gfx/event_pictures/dwarven_blacksmith_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "dwarven_blacksmith_02"
+		texturefile = "gfx/event_pictures/dwarven_blacksmith_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_carousing_01"
+		texturefile = "gfx/event_pictures/tt_carousing_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_carousing_02"
+		texturefile = "gfx/event_pictures/tt_carousing_02.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_carousing_03"
+		texturefile = "gfx/event_pictures/tt_carousing_03.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_carousing_04"
+		texturefile = "gfx/event_pictures/tt_carousing_04.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_carousing_05"
+		texturefile = "gfx/event_pictures/tt_carousing_05.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_carousing_06"
+		texturefile = "gfx/event_pictures/tt_carousing_06.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_cellar_01"
+		texturefile = "gfx/event_pictures/cellar_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "tt_fairy_drink"
+		texturefile = "gfx/event_pictures/fairy_drink.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
+
+
+

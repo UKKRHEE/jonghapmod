@@ -1,0 +1,598 @@
+	
+add_random_demon_portrait = {
+	random_list = {
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait1 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait2 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait3 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait4 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait5 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait6 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait7 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait8 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait9 
+		}
+
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = demon_portrait10 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait11 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait12 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait13 
+		}
+
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait14
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait15 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait16 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait17 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait18 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait19 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = demon_portrait20 
+		}
+	}
+}
+
+remove_demon_portrait = {
+	remove_trait = demon_portrait1
+	remove_trait = demon_portrait2
+	remove_trait = demon_portrait3
+	remove_trait = demon_portrait4
+	remove_trait = demon_portrait5
+	remove_trait = demon_portrait6
+	remove_trait = demon_portrait7
+	remove_trait = demon_portrait8
+	remove_trait = demon_portrait9
+	remove_trait = demon_portrait10
+	remove_trait = demon_portrait11
+	remove_trait = demon_portrait12
+	remove_trait = demon_portrait13
+	remove_trait = demon_portrait14
+	remove_trait = demon_portrait15
+	remove_trait = demon_portrait16
+	remove_trait = demon_portrait17
+	remove_trait = demon_portrait18
+	remove_trait = demon_portrait19
+	remove_trait = demon_portrait20
+	remove_trait = demon_portrait21
+	remove_trait = demon_portrait22
+	remove_trait = demon_portrait23
+	remove_trait = demon_portrait24
+	remove_trait = demon_portrait25
+	remove_trait = demon_portrait26
+}
+	
+add_random_angel_portrait = {
+	random_list = {
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait1 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait2 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait3 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait4 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait5 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait6 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait7 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait8 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait9 
+		}
+
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait10 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait11 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = angel_portrait12 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait13 
+		}
+
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait14
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait15 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait16 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait17 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait18 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait19 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait20 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait21 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait22 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait23 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = angel_portrait24 
+		}
+	}
+}
+
+remove_angel_portrait = {
+	remove_trait = angel_portrait1
+	remove_trait = angel_portrait2
+	remove_trait = angel_portrait3
+	remove_trait = angel_portrait4
+	remove_trait = angel_portrait5
+	remove_trait = angel_portrait6
+	remove_trait = angel_portrait7
+	remove_trait = angel_portrait8
+	remove_trait = angel_portrait9
+	remove_trait = angel_portrait10
+	remove_trait = angel_portrait11
+	remove_trait = angel_portrait12
+	remove_trait = angel_portrait13
+	remove_trait = angel_portrait14
+	remove_trait = angel_portrait15
+	remove_trait = angel_portrait16
+	remove_trait = angel_portrait17
+	remove_trait = angel_portrait18
+	remove_trait = angel_portrait19
+	remove_trait = angel_portrait20
+	remove_trait = angel_portrait21
+	remove_trait = angel_portrait22
+	remove_trait = angel_portrait23
+	remove_trait = angel_portrait24
+	remove_trait = angel_portrait25
+	remove_trait = angel_portrait26
+}
+	
+add_random_fairy_portrait = {
+	random_list = {
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait1 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait2 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait3 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait4 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait5 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait6 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait7 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait8 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait9 
+		}
+
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait10 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait11 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait12 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwtw_portrait13 
+		}
+
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait14
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait15 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait16 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait17 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait18 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait19 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait20 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait21 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait22 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait23 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait24 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait25 
+		}
+		7 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwtw_portrait26 
+		}
+	}
+}
+
+remove_fairy_portrait = {
+	remove_trait = dwtw_portrait1
+	remove_trait = dwtw_portrait2
+	remove_trait = dwtw_portrait3
+	remove_trait = dwtw_portrait4
+	remove_trait = dwtw_portrait5
+	remove_trait = dwtw_portrait6
+	remove_trait = dwtw_portrait7
+	remove_trait = dwtw_portrait8
+	remove_trait = dwtw_portrait9
+	remove_trait = dwtw_portrait10
+	remove_trait = dwtw_portrait11
+	remove_trait = dwtw_portrait12
+	remove_trait = dwtw_portrait13
+	remove_trait = dwtw_portrait14
+	remove_trait = dwtw_portrait15
+	remove_trait = dwtw_portrait16
+	remove_trait = dwtw_portrait17
+	remove_trait = dwtw_portrait18
+	remove_trait = dwtw_portrait19
+	remove_trait = dwtw_portrait20
+	remove_trait = dwtw_portrait21
+	remove_trait = dwtw_portrait22
+	remove_trait = dwtw_portrait23
+	remove_trait = dwtw_portrait24
+	remove_trait = dwtw_portrait25
+	remove_trait = dwtw_portrait26
+}

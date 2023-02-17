@@ -1,5 +1,0 @@
-﻿
-
-pullout_pregnancy_chance = 0.6
-
-full_pregnancy_chance = 3.0

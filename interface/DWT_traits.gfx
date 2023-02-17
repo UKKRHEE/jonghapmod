@@ -1,0 +1,36 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_maiden"
+		texturefile = "gfx/traits/maiden.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_deflowered"
+		texturefile = "gfx/traits/deflowered.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_event_nada3" #gangbang
+		texturefile = "gfx/event_pictures/nada3.tga"
+	}
+	spriteType = {
+		name = "GFX_dwt_gangbang_troops"
+		texturefile = "gfx/traits/decision_icon_gangbang_troops.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_lilith_plague"
+		texturefile = "gfx/traits//lilith_plague.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_death_trait_lilith_plague"
+		texturefile = "gfx/event_pictures/BloodTrio3.dds"
+		allwaystransparent = yes
+	}
+}

@@ -1,0 +1,45 @@
+chinese_group = {
+	
+	korean = {
+		graphical_cultures = { chinesegfx mongolgfx indiangfx muslimgfx jesusgfx }
+		secondary_event_pictures = bedouin_arabic
+		
+		dynasty_name_first = yes
+		
+		color = { 210 43 43 }
+
+		male_names = { 
+			Byung-ho Do-hyun Do-yun Dong-hyun Gun-woo Ha-joon Hyun-jun Hyun-woo Il-sung Ji-ho Ji-hoon Ji-hu Ji-hun Jin-ho Jong-soo Jong-yul Joo-won Joon-ho Joon-woo Joong-soo Ju-won Jun-seo Jun-young Jung-ho Jung-hoon Jung-nam Jung-soo Jung-woong Kun-woo Kwang-su Kyung-soo Min-ho Min-jun Min-kyu Min-soo Sang-hoon Seo-jun Seojun Seung-hyun Si-woo Sung-ho Sung-hoon Sung-hyun Sung-ki Sung-min Sung-soo Woo-jin Ye-jun Young-chul Young-gi Young-gil Young-ho Young-il Young-jin Young-sik Young-soo Young-su Yu-jun
+			}
+		female_names = {
+			Chae-won Chun-ja Chun-ja Da-eun Eun-ji Eun-ju Eun-jung Eun-kyung Eun-seo Eun-young Eunseo Ha-eun Ha-rin Ha-yoon Hwa-ja Hye-jin Hyun-joo Hyun-jung Hyun-sook In-sook Jeong-ja Ji-a Ji-eun Ji-hye Ji-hyun Ji-min Ji-woo Ji-yeon Ji-yoo Ji-yoon Ji-young Ji-young Jung-hee Jung-sook Jung-soon Kyung-hee Kyung-ja Kyung-ok Kyung-sook Mi-kyung Mi-sook Mi-young Min-ji Min-seo Myung-ja Myung-sook Ok-ja Seo-a Seo-hyeon Seo-yeon Seo-yun Seul-ki Soo-ah Soo-jin Sook-ja Soon-hee Soon-ja Su-bin Sun-young Ye-eun Young-hee Young-ja Young-mi Young-sook Yu-jin Yun-seo
+		}
+		
+		dynasty_title_names = no
+		
+		from_dynasty_prefix = ""
+		
+		modifier = default_culture_modifier
+	}
+	minhyee = {
+		graphical_cultures = { chinesegfx mongolgfx indiangfx muslimgfx jesusgfx }
+		secondary_event_pictures = bedouin_arabic
+		
+		dynasty_name_first = yes
+		
+		color = { 210 43 43 }
+
+		male_names = { 
+			Byung-ho Do-hyun Do-yun Dong-hyun Gun-woo Ha-joon Hyun-jun Hyun-woo Il-sung Ji-ho Ji-hoon Ji-hu Ji-hun Jin-ho Jong-soo Jong-yul Joo-won Joon-ho Joon-woo Joong-soo Ju-won Jun-seo Jun-young Jung-ho Jung-hoon Jung-nam Jung-soo Jung-woong Kun-woo Kwang-su Kyung-soo Min-ho Min-jun Min-kyu Min-soo Sang-hoon Seo-jun Seojun Seung-hyun Si-woo Sung-ho Sung-hoon Sung-hyun Sung-ki Sung-min Sung-soo Woo-jin Ye-jun Young-chul Young-gi Young-gil Young-ho Young-il Young-jin Young-sik Young-soo Young-su Yu-jun
+			}
+		female_names = {
+			Chae-won Chun-ja Chun-ja Da-eun Eun-ji Eun-ju Eun-jung Eun-kyung Eun-seo Eun-young Eunseo Ha-eun Ha-rin Ha-yoon Hwa-ja Hye-jin Hyun-joo Hyun-jung Hyun-sook In-sook Jeong-ja Ji-a Ji-eun Ji-hye Ji-hyun Ji-min Ji-woo Ji-yeon Ji-yoo Ji-yoon Ji-young Ji-young Jung-hee Jung-sook Jung-soon Kyung-hee Kyung-ja Kyung-ok Kyung-sook Mi-kyung Mi-sook Mi-young Min-ji Min-seo Myung-ja Myung-sook Ok-ja Seo-a Seo-hyeon Seo-yeon Seo-yun Seul-ki Soo-ah Soo-jin Sook-ja Soon-hee Soon-ja Su-bin Sun-young Ye-eun Young-hee Young-ja Young-mi Young-sook Yu-jin Yun-seo
+		}
+		
+		dynasty_title_names = yes
+		
+		from_dynasty_prefix = ""
+		
+		modifier = default_culture_modifier
+	}
+}

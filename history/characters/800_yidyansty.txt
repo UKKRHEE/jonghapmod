@@ -1,0 +1,926 @@
+95801 = {
+	name = "Seonggye"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	diplomacy = 11
+	martial = 21
+	intrigue = 8
+	stewardship = 8
+	learning = 6
+	trait = ancient
+	trait = brilliant_strategist
+	trait = strong
+	trait = brawny
+	trait = brave
+	trait = robust
+	trait = quick
+	trait = diligent
+	trait = winter_soldier
+	trait = gregarious
+	trait = honest
+	trait = cynical
+	trait = ambitious
+	trait = wroth
+	trait = falconer
+	trait = strategist
+	trait = hunter
+	trait = shrewd
+	trait = narrow_flank_leader
+	trait = flanker
+	trait = experimenter
+	trait = inspiring_leader
+	trait = organizer
+	trait = unyielding_leader
+	trait = siege_leader
+	trait = flat_terrain_leader
+	trait = rough_terrain_leader
+	father = 110004
+	1335.10.11 = {
+		birth = yes
+	}
+	1392.8.5 = {
+		#give_nickname = nick_taejo #아 나도 묘효 죽으면 주는거 안다, 근데 너무 귀찮잖아. 아니 솔직히 말하면 저기 death = yes 아래에 한줄만 달아도 될것같긴 한데
+		create_bloodline = {
+			type = yi_joseon
+			has_dlc = "Holy Fury"
+		}
+	}
+	1408.5.24 = {
+		death = yes
+	}
+}
+95802 = {
+	name = "Banggwa"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	diplomacy = 3
+	martial = 10
+	stewardship = 4
+	intrigue = 1
+	learning = 7
+	trait = ancient
+	trait = tough_soldier
+	trait = strong
+	trait = brave
+	trait = dull
+	trait = gamer
+	trait = falconer
+	trait = content
+	trait = humble
+	trait = stubborn
+	#give_nickname = nick_jeongjong
+	father = 95801
+	1357.7.18 = {
+		birth = yes
+	}
+	1419.10.15 = {
+		death = yes
+	}
+}
+95803 = {
+	name = "Bangwon"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	diplomacy = 10
+	martial = 8
+	stewardship = 9
+	intrigue = 11
+	learning = 8
+	trait = ancient
+	trait = quick
+	trait = shrewd
+	trait = temperate
+	trait = diligent
+	trait = patient
+	trait = envious
+	trait = elusive_shadow
+	trait = kinslayer
+	trait = cruel
+	trait = ambitious
+	trait = deceitful
+	trait = gregarious
+	trait = just
+	trait = paranoid
+	trait = trickster
+	trait = impaler
+	#give_nickname = nick_taejong
+	father = 95801
+	1367.6.13 = {
+		birth = yes
+	}
+	1422.6.11 = {
+		death = yes
+	}
+}
+95804 = {
+	name = "Do"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	dna = "afebjofabat"
+	properties = da0llf000000
+	diplomacy = 20
+	martial = 20
+	intrigue = 18
+	stewardship = 22
+	learning = 25
+	trait = ancient
+	trait = mastermind_theologian
+	trait = genius
+	trait = shrewd
+	trait = erudite
+	trait = diligent
+	trait = patient
+	trait = humble
+	trait = kind
+	trait = charitable
+	trait = poet
+	trait = just
+	trait = ambitious
+	trait = gluttonous
+	trait = scholar
+	trait = is_fat
+	#give_nickname = nick_sejong_the_great
+	father = 95803
+	1397.5.7 = {
+		birth = yes
+	}
+	create_bloodline = {
+			type = sejong_the_great
+			has_dlc = "Holy Fury"
+		}
+	1450.3.30 = { death = yes }
+}
+95805 = {
+	name = "Hyang"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	diplomacy = 6
+	martial = 5
+	stewardship = 8
+	intrigue = 4
+	learning = 11
+	trait = ancient
+	trait = mastermind_theologian
+	trait = quick
+	trait = feeble
+	trait = erudite
+	trait = trusting
+	trait = stressed
+	trait = master_of_flame
+	trait = sapper
+	trait = organizer
+	trait = kind
+	trait = humble
+	trait = diligent
+	trait = temperate
+	trait = gregarious
+	#give_nickname = nick_munjong
+	father = 95804
+	1414.11.15 = {
+		birth = yes
+	}
+	1452.6.1 = {
+		death = yes
+	}
+}
+95806 = {
+	name = "Hongwi" #단종
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = scholarly_theologian
+	#give_nickname = nick_danjong
+	father = 95805
+	1441.8.9 = {
+		birth = yes
+	}
+	1457.11.7 = {
+	death = { death_reason = death_execution killer = 95807 }
+	}
+}
+95807 = {
+	name = "Yu" #세조
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	diplomacy = 4
+	martial = 6
+	stewardship = 2
+	intrigue = 8
+	learning = 7
+	trait = ancient
+	trait = elusive_shadow
+	trait = deceitful
+	trait = paranoid
+	trait = shrewd
+	trait = sturdy
+	trait = impaler
+	trait = scholar
+	trait = gregarious
+	trait = falconer
+	trait = poet
+	trait = erudite
+	trait = greedy
+	trait = envious
+	trait = proud
+	trait = ambitious
+	trait = arbitrary
+	trait = cavalry_leader
+	trait = wroth
+	trait = cruel
+	trait = kinslayer
+	#give_nickname = nick_sejo
+	father = 95804
+	1417.11.2 = {
+		birth = yes
+	}
+	1468.9.23 = {
+		death = yes
+	}
+}
+95808 = {
+	name = "Hwang" #예종
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = scholarly_theologian
+	#give_nickname = nick_yejong
+	father = 95807
+	1450.1.14 = {
+		birth = yes
+	}
+	1469.12.31 = {
+		death = yes
+	}
+}
+95809 = {
+	name = "Hyeol"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = midas_touched
+	trait = just
+	trait = erudite
+	trait = patient
+	trait = temperate
+	trait = kind
+	#give_nickname = nick_seongjong
+	father = 95830
+	1457.8.19 = {
+		birth = yes
+	}
+	1495.1.20 = {
+		death = yes
+	}
+}
+95810 = {
+	name = "Yung"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = tough_soldier
+	trait = wroth
+	trait = lustful
+	trait = lunatic
+	trait = greedy
+	trait = slothful
+	trait = envious
+	trait = proud
+	trait = arbitrary
+	trait = cruel
+	trait = paranoid
+	#give_nickname = nick_yeonsangun
+	father = 95809
+	1476.11.23 = {
+		birth = yes
+	}
+	1506.11.20 = {
+		death = yes
+	}
+}
+95811 = {
+	name = "Yeok"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_jungjong
+	father = 95809
+	1488.4.16 = {
+		birth = yes
+	}
+	1544.11.29 = {
+		death = yes
+	}
+}
+95812 = {
+	name = "Ho"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_injong
+	father = 95811
+	1515.3.10 = {
+		birth = yes
+	}
+	1545.8.7 = {
+		death = yes
+	}
+}
+95813 = {
+	name = "Hwan"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_myeongjong
+	father = 95811
+	1534.7.3 = {
+		birth = yes
+	}
+	1567.8.2 = {
+		death = yes
+	}
+}
+95814 = {
+	name = "Yeon"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = grey_eminence
+	trait = shrewd
+	trait = schemer
+	trait = envious
+	trait = proud
+	trait = craven
+	trait = cynical
+	trait = deceitful
+	trait = paranoid
+	trait = organizer
+	trait = levy_coordinator
+	#give_nickname = nick_seonjo
+	father = 95849
+	1552.11.26 = {
+		birth = yes
+	}
+	1608.3.16 = {
+		death = yes
+	}
+}
+95815 = {
+	name = "Hon"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = charismatic_negotiator
+	trait = lunatic
+	trait = wroth
+	trait = stressed
+	trait = inspiring_leader
+	trait = organizer
+	trait = direct_leader
+	trait = unyielding_leader
+	trait = cruel
+	trait = paranoid
+	trait = brave
+	trait = envious
+	trait = diligent
+	trait = chaste
+	trait = kinslayer
+	trait = arbitrary
+	trait = groomed
+	#give_nickname = nick_gwanghaegun
+	father = 95814
+	1575.6.4 = {
+		birth = yes
+	}
+	1641.8.16 = {
+		death = yes
+	}
+}
+95816 = {
+	name = "Jong"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	martial = 0
+	diplomacy = 0
+	intrigue = 0
+	stewardship = 0
+	learning = 0
+	trait = ancient
+	trait = amateurich_plotter
+	trait = slow
+	trait = envious
+	trait = slothful
+	trait = craven
+	trait = arbitrary
+	trait = ambitious
+	trait = paranoid
+	trait = deceitful
+	trait = kinslayer
+	#give_nickname = nick_injo
+	father = 95829
+	1595.12.7 = {
+		birth = yes
+	}
+	1649.6.27 = {
+		death = yes
+	}
+}
+95817 = {
+	name = "Ho"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = skilled_tactician
+	#give_nickname = nick_hyojong
+	father = 95816
+	1619.7.3 = {
+		birth = yes
+	}
+	1659.6.23 = {
+		death = yes
+	}
+}
+95818 = {
+	name = "Yeon"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_hyeonjong
+	father = 95817
+	1641.3.14 = {
+		birth = yes
+	}
+	1674.9.17 = {
+		death = yes
+	}
+}
+95819 = {
+	name = "Sun"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_sukjong
+	father = 95818
+	1661.10.7 = {
+		birth = yes
+	}
+	1720.7.12 = {
+		death = yes
+	}
+}
+95820 = {
+	name = "Kyun"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_gyeongjong
+	father = 95819
+	1688.11.20 = {
+		birth = yes
+	}
+	1724.10.11 = {
+		death = yes
+	}
+}
+95821 = {
+	name = "Geum"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = mastermind_theologian
+	trait = quick
+	trait = stressed
+	trait = kinslayer
+	#give_nickname = nick_yeongjo
+	father = 95819
+	1694.10.31 = {
+		birth = yes
+	}
+	1776.4.22 = {
+		death = yes
+	}
+}
+95822 = {
+	name = "Seon"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_crown_prince_sado
+	father = 95821
+	1735.1.21 = {
+		birth = yes
+	}
+	1762.5.21 = {	
+	death = { death_reason = death_execution killer = 95821 }
+	}
+}
+95823 = {
+	name = "San"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = mastermind_theologian
+	trait = quick
+	#give_nickname = nick_jeongjo
+	father = 95822
+	1752.10.28 = {
+		birth = yes
+	}
+	1800.8.18 = {
+		death = yes
+	}
+}
+95824 = {
+	name = "Gong"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_sunjo
+	father = 95823
+	1790.7.29 = {
+		birth = yes
+	}
+	1834.12.13 = {
+		death = yes
+	}
+}
+95825 = {
+	name = "Hwan"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_heonjong
+	father = 95831
+	1827.9.8 = {
+		birth = yes
+	}
+	1877.5.16 = {
+		death = yes
+	}
+}
+95826 = {
+	name = "Byeon"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = detached_priest
+	trait = dull
+	trait = drunkard
+	#give_nickname = nick_cheoljong
+	father = 95832
+	1831.7.25 = {
+		birth = yes
+	}
+	1864.1.16 = {
+		death = yes
+	}
+}
+95827 = {
+	name = "Hyeong" #고종
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = naive_appeaser
+	trait = arbitrary
+	trait = feeble
+	trait = shy
+	trait = cynical
+	trait = craven
+	trait = envious
+	trait = slothful
+	trait = greedy
+	trait = lustful
+	#give_nickname = nick_gojong
+	father = 95834
+	1852.9.8 = {
+		birth = yes
+	}
+	1919.1.21 = {
+		death = yes
+	}
+}
+95828 = {
+	name = "Cheok" #순종
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = naive_appeaser
+	trait = imbecile
+	#give_nickname = nick_sunjong
+	father = 95827
+	1874.3.25 = {
+		birth = yes
+	}
+	1926.4.26 = {
+		death = yes
+	}
+}
+95829 = {
+	name = "Bu"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = drunkard
+	#give_nickname = nick_prince_jeongwon
+	father = 95814
+	1580.6.22 = {
+		birth = yes
+	}
+	1619.12.29 = {
+		death = yes
+	}
+}
+95830 = {
+	name = "Jang" #덕종
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_deokjong
+	father = 95807
+	1438.9.15 = {
+		birth = yes
+	}
+	1457.9.2 = {
+		death = yes
+	}
+}
+95831 = {
+	name = "Young"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_crown_prince_hyomyeong
+	father = 95824
+	1809.8.9 = {
+		birth = yes
+	}
+	1830.5.6 = {
+		death = yes
+	}
+}
+95832 = {
+	name = "Kwang"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_jeongye_daewongun
+	father = 95833
+	1785.4.29 = {
+		birth = yes
+	}
+	1841.12.14 = {
+		death = yes
+	}
+}
+95833 = {
+	name = "In"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_prince_euneon
+	father = 95822
+	1754.5.29 = {
+		birth = yes
+	}
+	1801.6.30 = {
+		death = yes
+	}
+}
+95834 = {
+	name = "Haeung" #흥선대원군
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_heungseon_daewongun
+	father = 95835
+	1820.12.21 = {
+		birth = yes
+	}
+	1898.2.22 = {
+		death = yes
+	}
+}
+95835 = {
+	name = "Chejung"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_prince_namyeon
+	father = 95836
+	1788.8.22 = {
+		birth = yes
+	}
+	1836.3.19 = {
+		death = yes
+	}
+}
+95836 = {
+	name = "Byungwon"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	father = 95837
+	1752.4.6 = {
+		birth = yes
+	}
+	1822.11.11 = {
+		death = yes
+	}
+}
+95837 = {
+	name = "Jinik"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	father = 95838
+	1728.9.25 = {
+		birth = yes
+	}
+	1796.4.26 = {
+		death = yes
+	}
+}
+95838 = {
+	name = "Suk"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_prince_anheung
+	father = 95839
+	1693.10.9 = {
+		birth = yes
+	}
+	1768.4.7 = {
+		death = yes
+	}
+}
+95839 = {
+	name = "Hyeok"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_prince_uiwon
+	father = 95840
+	1661.6.13 = {
+		birth = yes
+	}
+	1722.11.12 = {
+		death = yes
+	}
+}
+95840 = {
+	name = "Uk"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_prince_boknyeong
+	father = 95841
+	1639.1.1 = {
+		birth = yes
+	}
+	1670.10.15 = {
+		death = yes
+	}
+}
+95841 = {
+	name = "Yo"
+	dynasty = 20000001 # 전주이씨
+	culture = korean
+	religion = taoist
+	trait = ancient
+	#give_nickname = nick_crown_prince_inpyeong
+	father = 95816
+	1622.12.10 = {
+		birth = yes
+	}
+	1658.5.13 = {
+		death = yes
+	}
+}
+95842 = {
+	name = "Je" #양녕대군
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	trait = ancient
+	trait = lustful
+	trait = poet
+	trait = slothful
+	trait = hedonist
+	trait = drunkard
+	trait = greedy
+	trait = gregarious
+	trait = sturdy
+	disallow_random_traits = yes
+	#give_nickname = nick_yangnyeong_daegun
+	father = 95803
+	1394.1.1 = { birth = yes }
+	1462.9.7 = { death = yes }
+}
+95843 = {
+	name = "Kang" #의친왕 이강
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	father = 95827
+	1877.3.30 = { birth = yes }
+	1955.8.16 = { death = yes }
+}
+95844 = {
+	name = "Geon" #이건(모모야마 켄이이치)
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	father = 95843
+	1909.10.28 = { birth = yes }
+	1990.12.21 = { death = yes } #자연사
+}
+95845 = {
+	name = "Wu" #이우 공
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	father = 95843
+	1912.11.15 = { birth = yes }
+	1945.8.7 = { death = yes } #방사능 피폭으로 인한 사망
+}
+95846 = {
+	name = "Cheong" #이청 공
+	dynasty = 20000001
+	culture = south_korean
+	religion = taoist
+	father = 95845
+	1936.4.23 = { birth = yes }
+	2020.3.14 = { death = yes }
+}
+95847 = {
+	name = "Jin" #이청의 아들
+	dynasty = 20000001
+	culture = south_korean
+	religion = taoist
+	father = 95846
+	1975.4.23 = { birth = yes }
+	2020.3.14 = { death = yes }
+}
+95848 = {
+	name = "descendant of Joseon dynasty"
+	dynasty = 20000001
+	culture = south_korean
+	religion = taoist
+	father = 95847
+	occluded = yes
+	2001.4.23 = { birth = yes }
+	2400.1.1 = { death = yes }
+}
+95849 = {
+	name = "Cho" #덕흥대원군 이초 
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95811
+	#give_nickname = nick_deokheung_daewongun
+	1530.4.2 = { birth = yes }
+	1559.6.4 = { death = yes }
+}
+
+#########TLE

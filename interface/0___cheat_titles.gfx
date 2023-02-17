@@ -1,0 +1,100 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_cheat_title_chosen_one"
+		texturefile = "gfx/interface/_traiticon_obj_improve_learning.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}
+ 	spriteType = {
+		name = "GFX_cheat_title_cursed"
+		texturefile = "gfx/traits/bastard.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}	  
+	spriteType = {
+		name = "GFX_cheat_title_disinherited_blood"
+		texturefile = "gfx/traits/bastard.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}
+	spriteType = {
+		name = "GFX_cheat_title_enemy"
+		texturefile = "gfx/traits/bastard.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}	
+ 	spriteType = {
+		name = "GFX_cheat_title_excommunicated"
+		texturefile = "gfx/traits/bastard.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}	
+ 	spriteType = {
+		name = "GFX_cheat_title_forbidden_marriage"
+		texturefile = "gfx/traits/bastard.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}			
+	spriteType = {
+		name = "GFX_cheat_title_forsaken_blood"
+		texturefile = "gfx/traits/bastard.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}	 
+	spriteType = {
+		name = "GFX_cheat_title_friend"
+		texturefile = "gfx/traits/pilgrim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}
+ 	spriteType = {
+		name = "GFX_cheat_title_loyalist"
+		texturefile = "gfx/traits/pilgrim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		} 
+ 	spriteType = {
+		name = "GFX_cheat_title_ninja"
+		texturefile = "gfx/traits/pilgrim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		} 		
+	spriteType = {
+		name = "GFX_cheat_title_prophet_blooded"
+		texturefile = "gfx/traits/pilgrim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		}  
+ 	spriteType = {
+		name = "GFX_cheat_title_puppykicker"
+		texturefile = "gfx/traits/pilgrim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		} 		
+ 	spriteType = {
+		name = "GFX_cheat_title_treacherous"
+		texturefile = "gfx/traits/bastard.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		} 
+ 	spriteType = {
+		name = "GFX_cheat_title_warpriest"
+		texturefile = "gfx/traits/pilgrim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		} 		
+}

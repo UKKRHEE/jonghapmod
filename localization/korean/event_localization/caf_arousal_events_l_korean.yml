@@ -1,4 +1,0 @@
-﻿    l_korean:
-caf_arousal_threshold_cooldown_message:0 "[SCOPE.ScriptValue('caf_arousal_threshold_cooldown_duration_in_years')|V0]년 동안 여전히 [aroused|E]상태로 있다면 압도적인 욕망으로 다시 고통받을 수 있습니다."
-caf_arousal_threshold.0010.text:0 "당신은 [arousal|E] 에 압도당했습니다"
-caf_arousal_threshold.0400.toast:0 "[arousal|E]제한을 초과하여 [arousal_level|E] 3 으로 재설정되었습니다."

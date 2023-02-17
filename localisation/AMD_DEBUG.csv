@@ -1,0 +1,121 @@
+#		Crusader Kings 2 : Advanced Medieval Desires
+
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+
+
+#AMD_EV_DESC_LENGTH;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;	«È©¸ÌïŒ ®³Ý 1 line ¬¸²³Ì «µÉ 70byte
+
+
+#		#		Decisions	:	Debug
+AMD_DCS_debug_on_decision;AMD ¥È©·äŒ ¬³Éæ»Ý;;;;;;;;;;;;x;
+AMD_DCS_debug_on_decision_desc;«È èˆæŒçÆÐ ùÃÙ²³æŒ æÆÝ«¸ª· æ»ÌìŠäˆ ©³ÏëŒª¹Ü¢³ë‰? «·Ùçˆ¥·¡³ ©³çˆ ¬¸¬³É¬³«ÈÙ¢È¥³. «È èˆæŒùÇ ¬¸¬³É, ©´ðˆ, ª·Ð®È, «ÈëÀÝ«¸ ¥´²³Ì èˆæÆÌ ©·Ù¬·É ®´É«ÈØëÆÌ äŒ«¸¡¸ «ÈÜêÆÙ¢È¥³!;;;;;;;;;;;;x;
+AMD_DCS_debug_off_decision;AMD ¥È©·äŒ ²´¬¸;;;;;;;;;;;;x;
+AMD_DCS_debug_off_decision_desc;AMDæˆ «³¢Èäˆ ©·äŒçÆÐ ¬³Ù¬Èæˆ è»Û²³¨¹ ²´¬¸ô¿¬Èæˆ «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_DCS_debug_mp_test_decision;AMD MP TEST;;;;;;;;;;;;x;
+AMD_DCS_debug_mp_test_decision_desc;NO AMD, NO MULTIPLAYER, NO TEST.;;;;;;;;;;;;x;
+
+AMD_TD_debug_main;AMD ¥È©·äŒ ¡ÈåÆÝ;;;;;;;;;;;;x;
+AMD_TD_debug_main_desc;AMDæˆ «³¢Èäˆ ©·äŒçÆÐ ¬³Ù¬Èæˆ è»Û²³¨¹ ¬³Éæ»Ý²³¬Èæˆ «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_TD_debug_play_test;AMD 2P PLAY TEST;;;;;;;;;;;;x;
+AMD_TD_debug_play_test_desc;2p test...;;;;;;;;;;;;x;
+AMD_TD_debug_ln_test;AMD 2P LONG NIGHT PLAY TEST;;;;;;;;;;;;x;
+AMD_TD_debug_ln_test_desc;2p LN test...;;;;;;;;;;;;x;
+
+
+
+
+#		#		Event	:	Debug
+AMD_EV_DESC_DEBUG_100;AMD : Advanced Medieval Desires \n v2 Duron \n ¥È©·äŒ ¡ÈåÆÝëÆÐ ÿ¼Ðª·Ýÿ¼²³ªÈ¡¸ÜêÆÙ¢ÈŽ³?;;;;;;;;;;;;x;
+AMD_EV_OPT_YESYES;¢³åÆÌ äŒ¡·Û¨³ÌëÆÐ ùÄ²´ ì»Ì¬´²³Ù¢È¥³!;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_ON;¥È©·äŒ èˆæŒåÆÌ ¡¸«ÈØ éÁÌùÄ¡ÈçÆÐ ²´®ÈÐ êŠ «ÈÜëŒ¨¹, ¡ÈåÆÝëÆÐ ¢³ØëÀÝ²³¨¹Ì «ºª³Ý®È è»Û²³Ì èÁÌ¬¸¡³ ª´Ý¡ÈÐ êŠæˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_NONONO;¢³Ì «¹¡Èª· ¢³¡³«µ¡¸Ü«·!;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_101;DEBUG FUNCTION ONLINE.;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_DEBUG_10001;AMD : Advanced Medieval Desires \n DEBUG MENU 1;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_10002;AMD : Advanced Medieval Desires \n DEBUG MENU 2;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10001_1;TEST : ADJUST TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10001_2;TEST : SPECIAL OPINION;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10001_3;TEST : DRUG EFFECT;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10002_1;TEST : PLAY WITH YOU;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10002_2;TEST : PLAY WITH TESTER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10002_3;TEST : PLAY WITH YOU (LONG NIGHT);;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_11000;DEBUG : ADJUST AMD MOD TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_1;CHANGE SEX SKILL TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_2;CHANGE BODY SIZE TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_3;TURN TO VIRGIN;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_4;RESET SKILL AND SIZE;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_11100;DEBUG : CHANGE SEX SKILL TRAITS \n ANY SELECTION WILL END THE DEBUG EVENT;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_11200;DEBUG : CHANGE BODY SIZE TRAITS \n ANY SELECTION WILL END THE DEBUG EVENT;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_12000;DEBUG : TEST AMD SPECIAL OPINION;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_1;MAKE TARGET OBEY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_2;MAKE TARGET OBEY MORE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_3;OBEY TO TARGET;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_4;OBEY TO TARGET MORE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_5;CLEAR OBEDIENT OPINION;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_13000;DEBUG : TEST AMD DRUG EFFECT (CHARACTER MODIFIER);;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_1;APHRODISIAC;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_2;CONTRACEPTIVE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_3;FERTILIZER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_4;ENLARGER (TEST SIZE_UP_EFFECT);;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_5;TEST SIZE_UP_EFFECT;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_6;REMOVE ALL DRUG EFFECT;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_14000;DEBUG : TEST PLAY WITH YOU \n ©³ÉåŒ¢µ ©³É²ÈåŒ¢µ, äŒ¡·Û«È èÁÌ¬¸çˆ¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_14000_1;FRIENDLY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_14000_2;ATTACK;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_14000_3;DEFENSE;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15000;DEBUG : AMD ACTION \nª´ ¯´¦ÈÉ°·çÆÐ ª´Ýª·Ý²³«¹ ¥´ª³Ýò¼ ¬È¬·Ý²³Ì ²´ÝùÄçÆÐ ²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15000_1;2P;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15000_2;MULTIPLAYER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15000_3;HORSE RIDE;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15100;DEBUG : TEST PERSONAL ACTION \n¥´ª³Ýò¼ °¸êŒïŒ ðÆÐ¦¸«ÈçÆÐ ²³Ð «ÈÌèÁÐùÇ ª·Ý©¹ÐëÆÐ ª·Ì°´É.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15100_1;CREATE TESTER WOMAN;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15100_2;CREATE TESTER MAN;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15101;DEBUG : TEST PERSONAL ACTION \n°¸êŒïŒ ðÆÐ¦¸«È ì»Ýç‹çÆÐ ª·Ì°´É.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15101_1;FRIENDLY PLAY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15101_2;AGGRESIVE PLAY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15101_3;DEFENSIVE PLAY;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_CONS;[AMD_ET_TGT.GetTitledFirstName] will play game with new_character;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_RAPES;[AMD_ET_TGT.GetTitledFirstName] will rapes new_character;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_RAPED;[AMD_ET_TGT.GetTitledFirstName] will be raped by new_character;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15103;DEBUG : TEST RIDING ACTION \n¥´ª³Ýò¼ °¸êŒïŒ ðÆÐ¦¸«ÈçÆÐ ²³Ð ¨³ÐùÇ ª·Ý©¹ÐëÆÐ ª·Ì°´É. ÿ¼¡³ÌëŒçˆ ¡³ÌìŠ, ìÆÉªÈ ðÆÐ¦¸«È ªÈ¬³Éô¿Ø.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15103_1;HORSERIDE : NORMAL;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15103_2;HORSERIDE : HOMO;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_DEBUG_15199;DEBUG : TEST PERSONAL ACTION \nû¿ì»Ý ÿ¼É«ÈÌ.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15199_1;2p short;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15199_2;2p silent;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_DEBUG_15200;DEBUG : TEST PARTY ACTION \n¥´ª³Ýò¼ °¸êŒïŒ ðÆÐ¦¸«ÈçÆÐ ²³Ð «ÈÌèÁÐæÆÐùÇ ª·Ý©¹ÐëÆÐ ª·Ì°´É.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15200_1;MULTIPLAYER : NORMAL;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15200_2;MULTIPLAYER : HOMO;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15201;DEBUG : TEST PARTY ACTION \n°¸êŒïŒ ðÆÐ¦¸«È ì»Ýç‹çÆÐ ª·Ì°´É.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_1;MULTIPLAYER : HOSTILE DEFENSIVE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_2;MULTIPLAYER : FRIENDLY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_3;MULTIPLAYER : BUY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_4;MULTIPLAYER : SELL;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_CONS;[AMD_ET_TGT.GetTitledFirstName]åÆÌ ª³¦³Ý²³åÆÌ «¹Ì«ÈÌæÆÐò¼ ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´Ð ¡·Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_RAPED;[AMD_ET_TGT.GetTitledFirstName]åÆÌ ª³«³É²³Ì ¡³Ý¡³Ì¨³æÆÐò¼ ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´Ð ¡·Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_BUY;[AMD_ET_TGT.GetTitledFirstName]åÆÌ ª³¦³ÝùÇ ¬·ÌèÁÌ¡³æÆÐò¼ ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´Ð ¡·Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_SELL;[AMD_ET_TGT.GetTitledFirstName]åÆÌ êˆìÁÝ²³Ì äˆ¡´É¢ÈØæÆÐò¼ ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´Ð ¡·Ù¢È¥³.;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15250;DEBUG : TEST PARTY ACTION \nTO TEST MP_CONS_PARTY, NEED 3 OR MORE LOVERS.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_1;CREATE MALE LOVER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_2;CREATE FEMALE LOVER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_3;PARTY WITH GUYS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_4;PARTY WITH GIRLS;;;;;;;;;;;;x;
+
+
+
+

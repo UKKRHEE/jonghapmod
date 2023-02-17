@@ -1,6 +1,0 @@
-﻿# prostitution random events
-
-carnm_made_peasants_happy_modifier = {
-	icon = county_modifier_opinion_positive
-	county_opinion_add = 10
-}

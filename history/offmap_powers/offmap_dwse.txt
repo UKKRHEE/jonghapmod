@@ -1,0 +1,78 @@
+1.1.2 = {
+	holder = 1
+	name = "korea_china"
+	status = china_golden_age
+	policy = china_open
+}
+3.1.2 = {
+	holder = 23
+}
+32.1.2 = {
+	holder = 22
+}
+60.1.2 = {
+	holder = 10
+}
+120.1.2 = {
+	holder = 11
+}
+134.1.2 = {
+	holder = 12
+}
+154.1.2 = {
+	holder = 13
+}
+217.1.1 = {
+	holder = 14
+}
+251.1.1 = {
+	holder = 15
+}
+281.1.1 = {
+	holder = 95037
+}
+312.1.1 = {
+	holder = 17
+}
+331.1.1 = {
+	holder = 18
+}
+362.1.1 = {
+	holder = 73
+}
+394.1.1 = {
+	holder = 74
+}
+412.1.1 = {
+	holder = 75
+}
+413.1.1 = {
+	holder = 76
+}
+431.1.1 = {
+	holder = 77
+}
+445.1.1 = {
+	holder = 78
+}
+461.1.1 = {
+	holder = 79
+}
+475.1.1 = {
+	holder = 19
+}
+517.1.1 = {
+	holder = 21
+}
+566.1.1 = {
+	holder = 24
+}
+571.1.1 = {
+	holder = 95002
+}
+988.1.1 = {
+	holder = 95003
+}
+2001.1.4 = {
+	holder = 196066 # 
+}

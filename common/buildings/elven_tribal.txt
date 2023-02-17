@@ -1,0 +1,74 @@
+tribal = {
+	elven_port = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		port = yes
+		desc = elven_port_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		convert_to_city = elven_major_port_1
+		convert_to_castle = elven_major_port_1
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		galley = 10
+	}
+	elven_wild_forest_1 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_wild_forest_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		fort_level = 1.0
+	}
+	elven_wild_forest_2 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_wild_forest_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		convert_to_city = elven_mist_forest_1
+		convert_to_castle = elven_mist_forest_1
+		upgrades_from = elven_wild_forest_1
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		fort_level = 1.0
+	}
+}

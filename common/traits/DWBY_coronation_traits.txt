@@ -1,0 +1,42 @@
+crowned_by_lilitu_priest = {
+	opposites =  {
+		crowned_by_lilitu_bishop
+		crowned_by_lilitu_pope
+		crowned_by_myself
+	}
+	
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.1
+	
+	customizer = no
+	random = no
+}
+crowned_by_lilitu_bishop = {
+	opposites =  {
+		crowned_by_lilitu_priest
+		crowned_by_lilitu_pope
+		crowned_by_myself
+	}
+	church_opinion = 5
+	
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	
+	customizer = no
+	random = no
+}
+crowned_by_lilitu_pope = {
+	opposites =  {
+		crowned_by_lilitu_priest
+		crowned_by_lilitu_bishop
+		crowned_by_myself
+	}
+	church_opinion = 10
+	vassal_opinion = 5
+
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	
+	customizer = no
+	random = no
+}

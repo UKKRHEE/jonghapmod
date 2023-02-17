@@ -1,0 +1,744 @@
+spriteTypes = {
+	spriteType = {
+		name = "DWTHarleyLaszivOnBed"
+		texturefile = "gfx/event_pictures/DWTHarleyLaszivOnBed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyPalaceFace"
+		texturefile = "gfx/event_pictures/DWTHarleyPalaceFace.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMadCumOnFace"
+		texturefile = "gfx/event_pictures/DWTMadCumOnFace.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyStandingFuckBlackFigure"
+		texturefile = "gfx/event_pictures/DWTHarleyStandingFuckBlackFigure.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyPlusMaidSuckCock"
+		texturefile = "gfx/event_pictures/DWTHarleyPlusMaidSuckCock.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyStableFuck"
+		texturefile = "gfx/event_pictures/DWTHarleyStableFuck.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyRidingPussyFuck"
+		texturefile = "gfx/event_pictures/DWTHarleyRidingPussyFuck.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyRidingAssFuck"
+		texturefile = "gfx/event_pictures/DWTHarleyRidingAssFuck.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFuckedFromBehind4"
+		texturefile = "gfx/event_pictures/DWTHarleyFuckedFromBehind4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBoundGaggedOnBed"
+		texturefile = "gfx/event_pictures/DWTHarleyBoundGaggedOnBed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyPaleGrabedFucked"
+		texturefile = "gfx/event_pictures/DWTHarleyPaleGrabedFucked.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBedCumOnTits"
+		texturefile = "gfx/event_pictures/DWTHarleyBedCumOnTits.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFuckedSitting"
+		texturefile = "gfx/event_pictures/DWTHarleyFuckedSitting.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBJ2"
+		texturefile = "gfx/event_pictures/DWTHarleyBJ2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyMadFuckFromBehind"
+		texturefile = "gfx/event_pictures/DWTHarleyMadFuckFromBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBJ1"
+		texturefile = "gfx/event_pictures/DWTHarleyBJ1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyRiding2"
+		texturefile = "gfx/event_pictures/DWTHarleyRiding2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyRidingBJHJPrison"
+		texturefile = "gfx/event_pictures/DWTHarleyRidingBJHJPrison.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFuckedFromBehindGroupWatching"
+		texturefile = "gfx/event_pictures/DWTHarleyFuckedFromBehindGroupWatching.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFuckedFromBehind3"
+		texturefile = "gfx/event_pictures/DWTHarleyFuckedFromBehind3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBlowJob"
+		texturefile = "gfx/event_pictures/DWTHarleyBlowJob.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyRiding"
+		texturefile = "gfx/event_pictures/DWTHarleyRiding.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFuckedFromBehind2"
+		texturefile = "gfx/event_pictures/DWTHarleyFuckedFromBehind2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFuckedFromBehind"
+		texturefile = "gfx/event_pictures/DWTHarleyFuckedFromBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyComeGetSome1"
+		texturefile = "gfx/event_pictures/DWTHarleyComeGetSome1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleySmirkWhiteBG"
+		texturefile = "gfx/event_pictures/DWTHarleySmirkWhiteBG.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyReachingOut"
+		texturefile = "gfx/event_pictures/DWTHarleyReachingOut.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyTallBlackBG"
+		texturefile = "gfx/event_pictures/DWTHarleyTallBlackBG.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyPalaceFace"
+		texturefile = "gfx/event_pictures/DWTHarleyPalaceFace.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBored"
+		texturefile = "gfx/event_pictures/DWTHarleyBored.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTYoungFem1"
+		texturefile = "gfx/event_pictures/DWTYoungFem1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyAssClothed"
+		texturefile = "gfx/event_pictures/DWTHarleyAssClothed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyIndignated"
+		texturefile = "gfx/event_pictures/DWTHarleyIndignated.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyPlayful"
+		texturefile = "gfx/event_pictures/DWTHarleyPlayful.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyReadyToRumble"
+		texturefile = "gfx/event_pictures/DWTHarleyReadyToRumble.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyUglyFaceGeneric"
+		texturefile = "gfx/event_pictures/DWTHarleyUglyFaceGeneric.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyDarkHallwayGrin"
+		texturefile = "gfx/event_pictures/DWTHarleyDarkHallwayGrin.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyOnBedLegsOpening"
+		texturefile = "gfx/event_pictures/DWTHarleyOnBedLegsOpening.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyOnThrone"
+		texturefile = "gfx/event_pictures/DWTHarleyOnThrone.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyHandOnPussy"
+		texturefile = "gfx/event_pictures/DWTHarleyHandOnPussy.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyRidingAssBareBalls"
+		texturefile = "gfx/event_pictures/DWTHarleyRidingAssBareBalls.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyPenetratedFromBehind"
+		texturefile = "gfx/event_pictures/DWTHarleyPenetratedFromBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GenericCowboyBed"
+		texturefile = "gfx/event_pictures/GenericCowboyBed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GenericMissionaryArbitrary"
+		texturefile = "gfx/event_pictures/GenericMissionaryArbitrary.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GenericReverseCowboyPalace"
+		texturefile = "gfx/event_pictures/GenericReverseCowboyPalace.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyCatacombs"
+		texturefile = "gfx/event_pictures/DWTHarleyCatacombs.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyNakedPrisonerGeneric"
+		texturefile = "gfx/event_pictures/DWTHarleyNakedPrisonerGeneric.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyClothedPrisonerGeneric"
+		texturefile = "gfx/event_pictures/DWTHarleyClothedPrisonerGeneric.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyNakedPrisonerGeneric2"
+		texturefile = "gfx/event_pictures/DWTHarleyNakedPrisonerGeneric2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyNakedPrisonerGeneric3"
+		texturefile = "gfx/event_pictures/DWTHarleyNakedPrisonerGeneric3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyClothedPrisonerGeneric2"
+		texturefile = "gfx/event_pictures/DWTHarleyClothedPrisonerGeneric2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyNakedPrisonerGeneric4"
+		texturefile = "gfx/event_pictures/DWTHarleyNakedPrisonerGeneric4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyGirlFeet"
+		texturefile = "gfx/event_pictures/DWTHarleyGirlFeet.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleySickBed"
+		texturefile = "gfx/event_pictures/DWTHarleySickBed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyCutsFemThroat"
+		texturefile = "gfx/event_pictures/DWTHarleyCutsFemThroat.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFemScream"
+		texturefile = "gfx/event_pictures/DWTHarleyFemScream.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBloodTub1"
+		texturefile = "gfx/event_pictures/DWTHarleyBloodTub1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBloodTub2"
+		texturefile = "gfx/event_pictures/DWTHarleyBloodTub2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyBloodBatKill"
+		texturefile = "gfx/event_pictures/DWTHarleyBloodBatKill.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyFemTakesBloodBath"
+		texturefile = "gfx/event_pictures/DWTHarleyFemTakesBloodBath.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyBloodBatKill2"
+		texturefile = "gfx/event_pictures/DWTHarleyBloodBatKill2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyBloodFace"
+		texturefile = "gfx/event_pictures/DWTHarleyBloodFace.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyBloodyHarley"
+		texturefile = "gfx/event_pictures/DWTHarleyBloodyHarley.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyCoupleInExtasy"
+		texturefile = "gfx/event_pictures/DWTHarleyCoupleInExtasy.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTHarleyFuckInWoods"
+		texturefile = "gfx/event_pictures/DWTHarleyFuckInWoods.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+	spriteType = {
+		name = "DWTHarleyNakedMarchIntoWoods"
+		texturefile = "gfx/event_pictures/DWTHarleyNakedMarchIntoWoods.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+	spriteType = {
+		name = "DWTHarleyNakedFemWoodsMoon"
+		texturefile = "gfx/event_pictures/DWTHarleyNakedFemWoodsMoon.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyBloodyDamselinDistress"
+		texturefile = "gfx/event_pictures/DWTHarleyBloodyDamselinDistress.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyFemChokedBloody"
+		texturefile = "gfx/event_pictures/DWTHarleyFemChokedBloody.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTInternalCreampie"
+		texturefile = "gfx/event_pictures/DWTInternalCreampie.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMFFCreampie"
+		texturefile = "gfx/event_pictures/DWTMFFCreampie.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTCreampieFromBehind"
+		texturefile = "gfx/event_pictures/DWTCreampieFromBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTCreampieFromBehind2"
+		texturefile = "gfx/event_pictures/DWTCreampieFromBehind2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+	spriteType = {
+		name = "DWTBallsDeepMissionaryBed"
+		texturefile = "gfx/event_pictures/DWTBallsDeepMissionaryBed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTLesbianSex"
+		texturefile = "gfx/event_pictures/DWTLesbianSex.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTLesbiansSmoochingBed"
+		texturefile = "gfx/event_pictures/DWTLesbiansSmoochingBed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTLesbianScissors"
+		texturefile = "gfx/event_pictures/DWTLesbianScissors.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTBedMissionaryCreampie"
+		texturefile = "gfx/event_pictures/DWTBedMissionaryCreampie.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTLovingMissionary"
+		texturefile = "gfx/event_pictures/DWTLovingMissionary.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTCumGushingFromVag"
+		texturefile = "gfx/event_pictures/DWTCumGushingFromVag.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTManWomanSwordFight"
+		texturefile = "gfx/event_pictures/DWTManWomanSwordFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "RedSonjaKillsYou"
+		texturefile = "gfx/event_pictures/RedSonjaKillsYou.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTCunilingus"
+		texturefile = "gfx/event_pictures/DWTCunilingus.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTFemSadFace"
+		texturefile = "gfx/event_pictures/DWTFemSadFace.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTfmPenetration"
+		texturefile = "gfx/event_pictures/DWTfmPenetration.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTfmPenetration2"
+		texturefile = "gfx/event_pictures/DWTfmPenetration2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMaleGaysAssfuck"
+		texturefile = "gfx/event_pictures/DWTMaleGaysAssfuck.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMaleGaysClose"
+		texturefile = "gfx/event_pictures/DWTMaleGaysClose.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMaleGayEmbraceBehind"
+		texturefile = "gfx/event_pictures/DWTMaleGayEmbraceBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTPrisonerShirtlessHandsBound"
+		texturefile = "gfx/event_pictures/DWTPrisonerShirtlessHandsBound.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMaleArrowTarget"
+		texturefile = "gfx/event_pictures/DWTMaleArrowTarget.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTAssassinCourtyard"
+		texturefile = "gfx/event_pictures/DWTAssassinCourtyard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHorseFight"
+		texturefile = "gfx/event_pictures/DWTHorseFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTSwordThroughChest"
+		texturefile = "gfx/event_pictures/DWTSwordThroughChest.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTSmite"
+		texturefile = "gfx/event_pictures/DWTSmite.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTElfDeadHead"
+		texturefile = "gfx/event_pictures/DWTElfDeadHead.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMFFight"
+		texturefile = "gfx/event_pictures/DWTMFFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTFebSoldBattle"
+		texturefile = "gfx/event_pictures/DWTFebSoldBattle.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTLeonidas"
+		texturefile = "gfx/event_pictures/DWTLeonidas.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMFFight2"
+		texturefile = "gfx/event_pictures/DWTMFFight2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMFFight3"
+		texturefile = "gfx/event_pictures/DWTMFFight3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMFFight4"
+		texturefile = "gfx/event_pictures/DWTMFFight4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMFFight5"
+		texturefile = "gfx/event_pictures/DWTMFFight5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTWSackingOfRome"
+		texturefile = "gfx/event_pictures/DTWSackingOfRome.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTWBootySelection"
+		texturefile = "gfx/event_pictures/DTWBootySelection.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_asocial"
+		texturefile = "gfx/traits/asocial.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

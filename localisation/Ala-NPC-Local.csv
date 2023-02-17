@@ -1,0 +1,178 @@
+#CODE;;;;;;;;;;;;;;x
+ala_vnpc; ©³¢ÈÐ¦³NPC ¨¸å‹ ;;;;;;;;;;;;;x
+ala_vnpc_desc; ©³¢ÈÐ¦³ NPC ª´Ýª·ÝëÆÐ ùÄ²³Ì ¡Èé»Ì¨¸å‹ «¹Ð¡È ;;;;;;;;;;;;;x
+
+EVTDESCAlanpc.1; ª·Ý©¹Ð? ;;;;;
+EVTOPTAAlanpc.1; ¢³Øª·Ý ¡³èÁÌ ¨¸å‹ ;;;;;;;;;;;;;x
+EVTOPTBAlanpc.1; «¹ª·Ý ¡³èÁÌ ¨¸å‹ ;;;;;;;;;;;;;x
+EVTOPTCAlanpc.1; ì»Ýç‰ ;;;;;;;;;;;;;x
+
+EVTDESCAlanpc.8; ¢³Øª·Ý ¡³èÁÌ ¨¸å‹ ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.8; ¢³ùÇ ¡³èÁÌ ;;;;;;;;;;;;;x
+EVTOPTBAlanpc.8; ª´çˆëÁÌ ¡³èÁÌ ;;;;;;;;;;;;;x
+EVTOPTCAlanpc.8; ¡³èÁÌ «·ÚëÆØ(¡³ªÈÌ) ;;;;;;;;;;;;;x
+EVTOPTDAlanpc.8; ¨¸«ÈÌ¨¸å‹çˆ ô¿æ»Ð«³¡³¡È ;;;;;;;;;;;;;x
+
+EVTDESCAlanpc.9; ¢³Øª·Ý ë»Ùª¹Ì - ¢³ùÇ ¡³èÁÌ ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.9; «³Ùæˆ¬·É«ÈÌ ¢³Øª·Ý - ä‰ëÅÉª·Ì°´É ïÆÉª·ÝëÆÐ ¬ÈÉ¬·Ù ª·Ì°´É²³Ì¥³. ;;;;;;;;;;;;;x
+EVTOPTBAlanpc.9; ±¹Ý©·Ø²³Ì ¢³Øª·Ý -  ä‰ëÅÉª·Ì°´É«È èŠ¬³ÉùÄçˆ ª·Ì°´Éô¿Ì¥³. ;;;;;;;;;;;;;x
+EVTOPTCAlanpc.9; ¬·Ì®¸ ¦´Ì¥·Ø ¢³Øª·Ý ;;;;;;;;;;;;;x
+EVTOPTDAlanpc.9; ¨¸«ÈÌ¨¸å‹çˆ ô¿æ»Ð«³¡³¡È ;;;;;;;;;;;;;x
+
+EVTDESCAlanpc.10; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.10; ¯³¦ÈêŒ¨³ NPC (ù¿ä‰êÁÐ) ;;;;;;;;;;;;;x
+EVTOPTBAlanpc.10; ÿ¼¦¹²³Ì NPC (èŠ¦¹ÉêÁÐ) ;;;;;;;;;;;;;x
+EVTOPTCAlanpc.10; ¡·Øêˆ²³Ì NPC (ò¼Ì¦ÈêÁÐ) ;;;;;;;;;;;;;x
+EVTOPTDAlanpc.10; ¥³ëÆØ ;;;;;;;;;;;;;x
+EVTDESCAlanpc.11; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.11; åÁÌ«¸›Ç¬È «³ÎåÆÌNPC (ëÆØèˆêÁÐ) ;;;;;;;;;;;;;x
+EVTOPTBAlanpc.11; ²³ÉêÁÐ«È å»âëÆÌ NPC (²³ÉêÁÐ) ;;;;;;;;;;;;;x
+EVTOPTCAlanpc.11; ¢³Øª·Ý ¡³èÁÌ ¨¸å‹çˆ ô¿æ»Ð«³¡³¡È ;;;;;;;;;;;;;x
+
+EVTDESCAlanpc.12; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.12; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.12; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.12; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.12; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCalanpc.13; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.13; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.13; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.13; ¢³Øª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlanpc.19; ¢³Ø¬³ ë»Ùª¹Ì - ª´çˆëÁÌ ù¼Ýìˆ ;;; x
+EVTOPTAAlanpc.19; «³Ùæˆ ¢³Øª·Ý - ä‰ëÅÉ ª·Ì°´ÉëÆÐ ï»Ý²´ ïÆÉª·ÝëÆÐ ª·Ð¬·Ý²³ªÈÙªÈëˆ; x
+EVTOPTBAlanpc.19; ±¹ÝäÅÌ ¢³Øª·Ý - ä‰ëÅÉ ª·Ì°´É«È«ÈÜåÆÌ èŠ¬³ÉùÄ ²¹Ý¬ÈÐ ;;; x
+EVTOPTCAlanpc.19; ù¼Ì¬·Ì²È «ÈØùÇùÇ ¢³Ø¬³ ;;;;;;;;; x
+EVTOPTDAlanpc.19; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlanpc.20; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.20; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.20; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.20; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.20; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.21; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.21; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.21; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.21; ¢³Øª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlanpc.22; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.22; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.22; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.22; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.22; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.23; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.23; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.23; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.23; ¢³Øª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlanpc.29; ¢³Ø¬³ ë»Ùª¹Ì - ù¼Ýìˆ «·ÚëÆØ ;;;;;;;;; x
+EVTOPTAAlanpc.29; «³Ùæˆ ¢³Øª·Ý - ä‰ëÅÉ ª·Ì°´ÉëÆÐ ï»Ý²´ ïÆÉª·ÝëÆÐ ª·Ð¬·Ý²³ªÈÙªÈëˆ; x
+EVTOPTBAlanpc.29; ±¹ÝäÅÌ ¢³Øª·Ý - ä‰ëÅÉ ª·Ì°´É«È«ÈÜåÆÌ èŠ¬³ÉùÄ ²¹Ý¬ÈÐ ;;; x
+EVTOPTCAlanpc.29; ù¼Ì¬·Ì²È «ÈØùÇùÇ ¢³Ø¬³ ;;;;;;;;; x
+EVTOPTDAlanpc.29; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlanpc.30; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.30; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.30; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.30; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.30; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.31; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.31; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.31; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.31; ¢³Øª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlanpc.32; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.32; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.32; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.32; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.32; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.33; ä‰ëÅÉ? ;;;;;;;;;;;;;x
+EVTOPTAAlanpc.33; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.33; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.33; ¢³Øª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+
+##########################################################################
+
+EVTDESCalanpc.58; «¹ª·Ý ù¼ÝìˆùÇ ¨¸å‹;
+EVTOPTAAlanpc.58; ¢³ùÇ ù¼Ýìˆ ;;;;;;;;; x
+EVTOPTBAlanpc.58; ª´çˆëÁÌ ù¼Ýìˆ ;;; x
+EVTOPTCAlanpc.58; «³¢È ù¼Ýìˆ ;;;;;;;;; x
+EVTOPTDAlanpc.58; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlanpc.59; «¹ª·Ý ë»Ùª¹Ì - ¢³ùÇ ù¼Ýìˆ ;;;; x
+EVTOPTAAlanpc.59; «³Ùæˆ ô¿Ì «¹²³Éª´Ý - ä‰ëÅÉ ª·Ì°´ÉëÆÐ ï»Ý²´ ïÆÉª·ÝëÆÐ ª·Ð¬·Ý²³Ì¥³;
+EVTOPTBAlanpc.59; ±¹ÝäÅÌ «¹ª·Ý - ä‰ëÅÉ ª·Ì°´É«È«ÈÜåÆÌ èŠ¬³ÉùÄ ïÆÉª·Ý;
+EVTOPTCAlanpc.59; ù¼Ì¬·Ì²È èŠ¬³ÉùÄçˆ «¹ª·Ý ;;;;;;;; x
+EVTOPTDAlanpc.59; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlanpc.60; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.60; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.60; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.60; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.60; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.61; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.61; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.61; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.61; «¹ª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlanpc.62; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.62; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.62; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.62; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.62; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.63; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.63; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.63; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.63; «¹ª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlanpc.69; «¹ª·Ý ë»Ùª¹Ì - ª´çˆëÁÌ ù¼Ýìˆ ;; x
+EVTOPTAAlanpc.69; «³Ùæˆ ô¿Ì «¹²³Éª´Ý - ä‰ëÅÉ ª·Ì°´ÉëÆÐ ï»Ý²´ ïÆÉª·ÝëÆÐ ª·Ð¬·Ý²³Ì¥³;
+EVTOPTBAlanpc.69; ±¹ÝäÅÌ «¹ª·Ý - ä‰ëÅÉ ª·Ì°´É«È«ÈÜåÆÌ èŠ¬³ÉùÄ ïÆÉª·Ý;
+EVTOPTCAlanpc.69; ù¼Ì¬·Ì²È èŠ¬³ÉùÄçˆ «¹ª·Ý ;;;;;;;; x
+EVTOPTDAlanpc.69; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlanpc.70; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.70; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.70; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.70; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.70; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.71; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.71; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.71; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.71; «¹ª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlanpc.72; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.72; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.72; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.72; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.72; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.73; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.73; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.73; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.73; «¹ª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlanpc.79; «¹ª·Ý ë»Ùª¹Ì - «³¢È ù¼Ýìˆ ;;;;;; x
+EVTOPTAAlanpc.79; «³Ùæˆ ô¿Ì «¹²³Éª´Ý - ä‰ëÅÉ ª·Ì°´ÉëÆÐ ï»Ý²´ ïÆÉª·ÝëÆÐ ª·Ð¬·Ý²³Ì¥³;
+EVTOPTBAlanpc.79; ±¹ÝäÅÌ «¹ª·Ý - ä‰ëÅÉ ª·Ì°´É«È«ÈÜåÆÌ èŠ¬³ÉùÄ ïÆÉª·Ý;
+EVTOPTCAlanpc.79; ù¼Ì¬·Ì²È èŠ¬³ÉùÄçˆ «¹ª·Ý ;;;;;;;; x
+EVTOPTDAlanpc.79; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlanpc.80; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.80; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.80; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.80; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.80; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.81; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.81; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.81; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.81; «¹ª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlanpc.82; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.82; ¯³¦ÈêŒ¨³ ¢·Ø®ÈåÆÌ NPC (Diplomacy) ;; x
+EVTOPTBAlanpc.82; ÿ¼¦¹²³Ì NPC (Martial); x
+EVTOPTCAlanpc.82; ¡·Øêˆ²³Ì NPC (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlanpc.82; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlanpc.83; ä‰ëÅÉ? ;;;;;;;;;;;;;
+EVTOPTAAlanpc.83; «´®·çˆëÁÌ NPC (ëÆØèˆ); x
+EVTOPTBAlanpc.83; ²³ÉêÁÐ NPC (²³ÉêÆÙ); x
+EVTOPTCAlanpc.83; «¹ª·Ý ù¼Ýìˆ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x

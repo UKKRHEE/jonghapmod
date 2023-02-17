@@ -1,0 +1,73 @@
+spriteTypes = {
+	spriteType = {
+		name = "angel_spell_heal_self1"
+		texturefile = "gfx/event_pictures/angel_spell_heal_self1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "angel_spell_heal1"
+		texturefile = "gfx/event_pictures/angel_spell_heal1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_dwbh_angelic_smite"
+		texturefile = "gfx/event_pictures/GFX_dwbh_angelic_smite.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_angel_inspired_troops"
+		texturefile = "gfx/event_pictures/GFX_angel_inspired_troops.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_angelic_conception"
+		texturefile = "gfx/event_pictures/GFX_angelic_conception.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_AngelAtonement"
+		texturefile = "gfx/event_pictures/GFX_AngelAtonement.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_AngelAppearance"
+		texturefile = "gfx/event_pictures/GFX_AngelAppearance.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_AngelStrength"
+		texturefile = "gfx/event_pictures/GFX_AngelStrength.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_AngelKnowledge"
+		texturefile = "gfx/event_pictures/GFX_AngelKnowledge.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_AngelIntellect"
+		texturefile = "gfx/event_pictures/GFX_AngelIntellect.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+}

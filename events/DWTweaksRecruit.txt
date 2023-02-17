@@ -1,0 +1,853 @@
+namespace = DWTweaksRecruit
+
+#
+# Base choices
+#
+narrative_event = {
+	id = DWTweaksRecruit.1
+	desc = DWTweaksRecruit1
+	picture = caravan
+	title = dwtw_recruitment1
+	is_triggered_only = yes # Triggered by targetted decision
+	option = { # Heaven or Hell
+		name = DWTweaksRecruit1A
+		trigger = {
+			has_heaven_hell_content = yes
+		}
+		narrative_event = { id = DWTweaksRecruit.2 }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Far East
+		name = DWTweaksRecruit1B
+		trigger = {
+			has_far_east_content = yes
+		}
+		narrative_event = { id = DWTweaksRecruit.3 }
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Fae
+		name = DWTweaksRecruit1C
+		trigger = {
+			has_fae_content = yes
+		}
+		narrative_event = { id = DWTweaksRecruit.4 }
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Nevermind
+		name = DWTweaksRecruit1D
+		scaled_wealth = 1.0
+		ai_chance = {
+			factor = 0 # They've chosen to buy, so they are going to buy
+		}		
+	}
+}
+# Angels and Demons
+narrative_event = {
+	id = DWTweaksRecruit.2
+	desc = DWTweaksRecruit2
+	picture = incubus_spell_death_dream
+	title = dwtw_recruitment2
+	is_triggered_only = yes # Triggered by targetted decision
+	option = { # Angel for player
+		name = DWTweaksRecruit2A
+		trigger = {
+			NOT = {
+				ai = yes
+				OR = {
+					trait = lustful
+					trait = hedonist
+					trait = lilith
+					trait = incubus
+				}
+			}
+		}
+		
+		hidden_tooltip = {
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					culture = italian
+					religion = ROOT
+					female = yes
+					age = 16
+					
+					trait = angel
+					trait = small_tits
+					trait = just
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					culture = italian
+					religion = FROM
+					female = no
+					age = 16
+					
+					trait = angel
+					trait = small_dick
+					trait = just
+				}
+			}
+		}
+		new_character = {
+			set_immune_to_pruning = yes
+			set_character_flag = dw_boobs_checked
+			set_character_flag = dw_junk_checked
+			set_variable = { which = breast_size value = 2 }
+			set_variable = { which = dick_size value = 2 }
+			save_event_target_as = invited_character
+		}
+		character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Angel for AI
+		name = DWTweaksRecruit2A
+		trigger = {
+			NOT = {
+				ai = no
+				OR = {
+					trait = lustful
+					trait = hedonist
+					trait = lilith
+					trait = incubus
+				}
+			}
+		}
+		
+		hidden_tooltip = {
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					culture = italian
+					religion = ROOT
+					female = yes
+					age = 16
+					trait = angel
+					trait = small_tits
+					trait = just
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					culture = italian
+					religion = FROM
+					female = no
+					age = 16
+					trait = angel
+					trait = small_dick
+					trait = just
+				}
+			}
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			set_character_flag = dw_junk_checked
+			set_variable = { which = breast_size value = 2 }
+			set_variable = { which = dick_size value = 2 }
+			save_event_target_as = invited_character
+		}
+		character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Demon for AI
+		name = DWTweaksRecruit2B
+		trigger = {
+			NOT = {
+				ai = no
+				OR = {
+					trait = chaste
+					trait = celibate
+					trait = angel
+				}
+			}
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = assyrian
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = lilith
+						trait = huge_tits
+						trait = lustful
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = assyrian
+						religion = ROOT
+						female = no
+						age = 16
+						trait = incubus
+						trait = huge_dick
+						trait = lustful
+					}
+				}
+			}
+			new_character = {
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 5 }
+				set_variable = { which = dick_size value = 5 }
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}			
+	}
+	option = { # Demon for player
+		name = DWTweaksRecruit2B
+		trigger = {
+			NOT = {
+				ai = yes
+				OR = {
+					trait = chaste
+					trait = celibate
+					trait = angel
+				}
+			}
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = assyrian
+						religion = ROOT
+						female = yes
+						age = 16
+						
+						trait = lilith
+						trait = huge_tits
+						trait = lustful
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = assyrian
+						religion = ROOT
+						female = no
+						age = 16
+						
+						trait = incubus
+						trait = huge_dick
+						trait = lustful
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 5 }
+				set_variable = { which = dick_size value = 5 }
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}			
+	}
+	option = { # Go back
+		name = DWTweaksRecruitBack
+		narrative_event = { id = DWTweaksRecruit.1 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Kitsune and Nekos
+narrative_event = {
+	id = DWTweaksRecruit.3
+	desc = DWTweaksRecruit3
+	picture = kitsune_start1
+	title = dwtw_recruitment3
+	is_triggered_only = yes # Triggered by targetted decision
+	option = { # DW Kitsune for players
+		name = DWTweaksRecruit3A
+		trigger = {
+			NOT = {
+				ai = yes
+				trait = tentacle
+			}
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = kitsune_culture
+						religion = bon
+						female = yes
+						age = 16
+						
+						trait = kitsune
+						trait = big_tits
+						trait = erudite
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = kitsune_culture
+						religion = bon
+						female = no
+						age = 16
+						
+						trait = kitsune
+						trait = big_dick
+						trait = erudite
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 4 }
+				set_variable = { which = dick_size value = 4 }
+				save_event_target_as = invited_character
+				add_random_kitsune_portrait = yes
+			}
+		character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # DWR Neko for players
+		name = DWTweaksRecruit3B
+		trigger = {
+			NOT = {
+				ai = yes
+				OR = {
+					trait = werewolf
+					trait = werewolf_ancient
+					trait = werekin
+				}
+			}
+		}
+		
+		hidden_tooltip = {
+		random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = neko_culture
+						religion = pagan
+						female = yes
+						age = 16
+						
+						trait = neko
+						trait = regular_tits
+						trait = slothful # Because cats
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = neko_culture
+						religion = pagan
+						female = no
+						age = 16
+						
+						trait = neko
+						trait = regular_dick
+						trait = slothful
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 3 }
+				set_variable = { which = dick_size value = 3 }
+				save_event_target_as = invited_character
+				add_random_neko_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # DW Kitsune for AI
+		name = DWTweaksRecruit3A
+		trigger = {
+			NOT = {
+				ai = no
+				trait = tentacle
+			}
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = kitsune_culture
+						religion = bon
+						female = yes
+						age = 16
+						trait = kitsune
+						trait = big_tits
+						trait = erudite
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = kitsune_culture
+						religion = bon
+						female = no
+						age = 16
+						trait = kitsune
+						trait = big_dick
+						trait = erudite
+					}
+				}
+			}
+			new_character = {
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 4 }
+				set_variable = { which = dick_size value = 4 }
+				save_event_target_as = invited_character
+				add_random_kitsune_portrait = yes
+			}
+		character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # DWR Neko for AI
+		name = DWTweaksRecruit3B
+		trigger = {
+			NOT = {
+				ai = no
+				OR = {
+					trait = werewolf
+					trait = werewolf_ancient
+					trait = werekin
+				}
+			}
+		}
+		
+		hidden_tooltip = {
+		random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = neko_culture
+						religion = pagan
+						female = yes
+						age = 16
+						trait = neko
+						trait = regular_tits
+						trait = slothful # Because cats
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = neko_culture
+						religion = pagan
+						female = no
+						age = 16
+						trait = neko
+						trait = regular_dick
+						trait = slothful
+					}
+				}
+			}
+			new_character = {
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 3 }
+				set_variable = { which = dick_size value = 3 }
+				save_event_target_as = invited_character
+				add_random_neko_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Go back
+		name = DWTweaksRecruitBack
+		narrative_event = { id = DWTweaksRecruit.1 }
+		ai_chance = {
+			factor = 0
+		}		
+	}
+}
+
+# Elves, Orcs, and Fairies
+narrative_event = {
+	id = DWTweaksRecruit.4
+	desc = DWTweaksRecruit4
+	picture = elf_start2
+	title = dwtw_recruitment4
+	is_triggered_only = yes # Triggered by targetted decision
+
+	option = { # Elf for players
+		name = DWTweaksRecruit4A
+		trigger = {
+			NOT = {
+				ai = yes
+				trait = orc
+			}
+		}
+			
+			hidden_tooltip = {
+				random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = pagan
+						female = yes
+						age = 16
+						trait = elf
+						trait = small_tits
+						trait = proud
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = pagan
+						female = no
+						age = 16
+						trait = elf
+						trait = small_dick
+						trait = proud
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 2 }
+				set_variable = { which = dick_size value = 2 }
+				save_event_target_as = invited_character
+				add_random_elf_portrait = yes
+			}
+			character_event = { id = NE.1 }	
+			}
+	}
+	option = { # Orc for players
+		name = DWTweaksRecruit4B
+		trigger = {
+			NOT = {
+				ai = yes
+				trait = elf
+			}
+		}
+			
+			hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = orcish
+						religion = pagan
+						female = yes
+						age = 16
+						trait = orc
+						trait = huge_tits
+						trait = wroth
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = orcish
+						religion = pagan
+						female = no
+						age = 16
+						trait = orc
+						trait = huge_dick
+						trait = wroth
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 5 }
+				set_variable = { which = dick_size value = 5 }
+				save_event_target_as = invited_character
+				add_random_orc_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Fairy for players
+		name = DWTweaksRecruit4C
+		trigger = {
+			NOT = {
+				ai = yes
+			}
+		}
+			hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = fae
+						religion = pagan
+						female = yes
+						age = 16
+						trait = fairy
+						trait = small_tits
+						trait = shy
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = fae
+						religion = pagan
+						female = no
+						age = 16
+						trait = fairy
+						trait = small_dick
+						trait = shy
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 2 }
+				set_variable = { which = dick_size value = 2 }
+				save_event_target_as = invited_character
+				add_random_fairy_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}			
+	}
+
+	option = { # Elf for AI
+		name = DWTweaksRecruit4A
+		trigger = {
+			NOT = {
+				ai = no
+				trait = orc
+			}
+		}
+			
+			hidden_tooltip = {
+				random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = pagan
+						female = yes
+						age = 16
+						trait = elf
+						trait = small_tits
+						trait = proud
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = pagan
+						female = no
+						age = 16
+						trait = elf
+						trait = small_dick
+						trait = proud
+					}
+				}
+			}
+			new_character = {
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 2 }
+				set_variable = { which = dick_size value = 2 }
+				save_event_target_as = invited_character
+				add_random_elf_portrait = yes
+			}
+			character_event = { id = NE.1 }	
+			}
+	}
+	option = { # Orc for AI
+		name = DWTweaksRecruit4B
+		trigger = {
+			NOT = {
+				ai = no
+				trait = elf
+			}
+		}
+			
+			hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = orcish
+						religion = pagan
+						female = yes
+						age = 16
+						trait = orc
+						trait = huge_tits
+						trait = wroth
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = orcish
+						religion = pagan
+						female = no
+						age = 16
+						trait = orc
+						trait = huge_dick
+						trait = wroth
+					}
+				}
+			}
+			new_character = {
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 5 }
+				set_variable = { which = dick_size value = 5 }
+				save_event_target_as = invited_character
+				add_random_orc_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Fairy for AI
+		name = DWTweaksRecruit4C
+		trigger = {
+			NOT = {
+				ai = no
+			}
+		}
+			hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = fae
+						religion = pagan
+						female = yes
+						age = 16
+						trait = fairy
+						trait = small_tits
+						trait = shy
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = fae
+						religion = pagan
+						female = no
+						age = 16
+						trait = fairy
+						trait = small_dick
+						trait = shy
+					}
+				}
+			}
+			new_character = {
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 2 }
+				set_variable = { which = dick_size value = 2 }
+				save_event_target_as = invited_character
+				add_random_fairy_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}			
+	}
+	option = { # Go back
+		name = DWTweaksRecruitBack
+		narrative_event = { id = DWTweaksRecruit.1 }	
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

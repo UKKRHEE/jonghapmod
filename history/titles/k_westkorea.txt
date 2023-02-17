@@ -1,0 +1,17 @@
+1.1.1 = {
+	active = yes
+	holder = 1
+	de_jure_liege = e_westkorea
+}
+769.1.1 = {
+	holder = 1
+	law = vice_royalty_2
+	law = status_of_women_4
+	law = revoke_title_law_2
+	law = ze_administration_laws_2
+	law = centralization_4
+	law = vassal_wars_law_2
+	law = out_of_realm_inheritance_law_1
+	law = succ_primogeniture
+	law = dw_first_night_law_1
+}

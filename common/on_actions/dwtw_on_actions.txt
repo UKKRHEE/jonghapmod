@@ -1,0 +1,44 @@
+on_birth = {
+	events = { 
+		DWTweaksSP.1 # Serpent's Purge
+		DWChildren.1 # Assigns child portraits
+		DWElf.21 # Wynn's children
+		DWFGenetics.1 # Werewolf
+		DWFGenetics.2 # Vampire
+		DWFGenetics.3 # Demon
+	}
+}
+
+on_adulthood = {
+	events = {
+		DWTweaksFairy.1 # Fairy portrait
+		DWAngel.12 # Angelic portrait
+		DWChildren.2 # Removes child portraits
+	}
+}
+
+on_five_year_pulse = {
+	random_events = {
+		100 = DWNight.4800 # Vampirella
+	}
+}
+
+on_startup = {
+	events = {
+		DWSeeding.1 # DWR Seeding event
+		DWOptions.1000 # Sets the appropriate flags
+	}
+}
+
+on_yearly_childhood_pulse = {
+	random_events = {
+		50 = DWFChildren.8
+		100 = DWFChildren.7 # Masculine/Feminine routing event
+	}
+}
+
+on_death = {
+	events = {
+		DWFSpoopy.1 # Restless souls
+	}
+}

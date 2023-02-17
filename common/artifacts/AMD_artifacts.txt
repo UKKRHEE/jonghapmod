@@ -1,0 +1,64 @@
+### Artifacts
+
+#밤기술 상승을 위한 특수 서적
+
+
+AMD_chinese_book_erotic = {	#소녀경
+	quality = 4
+	active = {
+		learning = 9
+		is_adult = yes
+		NOT = {	trait = eunuch	}
+		NOT = {	trait = celibate	}
+	}
+	health = 0.10
+	fertility = 0.25
+	flags = {	AMD_ITEM	chinese	book	}
+	picture = "GFX_book_chinese_diary"
+	stacking = no
+}
+AMD_lusty_armenian_maid = {	#아르메니안 메이드
+	quality = 2
+	active = {
+		is_adult = yes
+		NOT = {	trait = eunuch	}
+		NOT = {	trait = celibate	}
+	}
+	fertility = 0.10
+	sex_appeal_opinion = 5
+	monthly_character_piety = -0.1
+	flags = {	AMD_ITEM	book	}
+	picture = "GFX_book_fifty_shade"
+	stacking = yes
+}
+
+
+#약품	5년에 한번, 소멸할 확률 있음.
+AMD_drug_aphrodisiac = {	#미약
+	quality = 2
+	monthly_character_wealth = -0.01	#관리비
+	flags = {	AMD_ITEM	AMD_DRUG	}
+	picture = "GFX_pouch_of_ingredients"
+	stacking = yes
+}
+AMD_drug_contraceptive = {	#피임
+	quality = 3
+	monthly_character_wealth = -0.01	#관리비
+	flags = {	AMD_ITEM	AMD_DRUG	}
+	picture = "GFX_pouch_of_ingredients"
+	stacking = yes
+}
+AMD_drug_fertilizer = {	#가임
+	quality = 3
+	monthly_character_wealth = -0.01	#관리비
+	flags = {	AMD_ITEM	AMD_DRUG	}
+	picture = "GFX_pouch_of_ingredients"
+	stacking = yes
+}
+AMD_drug_enlarger = {	#확대
+	quality = 2
+	monthly_character_wealth = -0.01	#관리비
+	flags = {	AMD_ITEM	AMD_DRUG	}
+	picture = "GFX_pouch_of_ingredients"
+	stacking = yes
+}

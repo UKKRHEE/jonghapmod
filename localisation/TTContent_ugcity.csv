@@ -1,0 +1,116 @@
+###########################################################
+#####  LOCALISATION for the Dark World Content Pack   #####
+###########################################################
+#####  Search ###Rewrite for incomplete localisation ######
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+#########################################################################
+#############              The Dwarf CITY              ##################
+#########################################################################
+
+#### Dwarf City Titles ####
+TTContentdwarfCity;The Dwarf City;;;;;;;;;;;;;x
+TTContentdwarfCity2;The Back Alleys;;;;;;;;;;;;;x
+
+#### Dwarf City Descriptions ####
+TTContentdwarf1000;The large underground city sprawls out before you. In the distance you can see the market district with a Blacksmith, and an Alchemist among the myriad of shops.  The Kings Palace sits up on the hill, an imposing structure to be sure.;;;;;;;;;;;;;x
+TTContentdwarf1001;You've stepped into the backalleys of the city, off of the beaten path. Seedy Taverns, an old disused temple, and what may be a slavers auction appear to be nearby...;;;;;;;;;;;;;x
+
+#### Dwarf City Options ####
+TTContentdwarf1000a;The Kings Palace;;;;;;;;;;;;;x
+TTContentdwarf1000b;The Blacksmith;;;;;;;;;;;;;x
+TTContentdwarf1000c;The Alchemist;;;;;;;;;;;;;x
+TTContentdwarf1000d;Back Alleys;;;;;;;;;;;;;x
+TTContentdwarf1001a;Old Temple;;;;;;;;;;;;;x
+TTContentdwarf1001b;Seedy Tavern;;;;;;;;;;;;;x
+TTContentdwarf1001c;Slave Trader;;;;;;;;;;;;;x
+TTContentdwarf1001d;Back to Town Center;;;;;;;;;;;;;x
+TTContentdwarfBACK;Back to Alley...;;;;;;;;;;;;;x
+TTContentdwarfHeadHome;Head home...;;;;;;;;;;;;;x
+
+##### The Dwarf King #####
+TTContentKing;The Throne Room;;;;;;;;;;;;;x
+TTContentdwarf1100;The Throne room is magnificent. The stonework throughout the city is breathtaking, but the King's Palace is even more so. The intricate detail in the patterns and the distinctly dwarven figures carved into the murals certainly speak to where you find yourself. Only a King could afford such a level of crafstmanship...;;;;;;;;;;;;;x
+TTContentdwarf1100a;Try to see the King.;;;;;;;;;;;;;x
+TTContentdwarf1101;Before taking more than a few steps towards the throne you are waved off by several armed guards. Apparently without an invitation you won't be able to see the king, no matter your station.;;;;;;;;;;;;;x
+TTContentdwarf1101a;Oh well...;;;;;;;;;;;;;x
+
+##### The Dwarf Blacksmith #####
+TTContentBlacksmith;The Blacksmith;;;;;;;;;;;;;x
+TTContentdwarf1200;The intricate stonework on the columns, the copper covered counter and the myriad of weapons hanging about the room leave no doubt about where you are.  The column in the center of the room is a work of art in itself on top of being an integral part of the structure. A dwarf face is carved into the top of it with some detailed intertwined lines woven beneath it in the stone. The lines are obviously significant of something. \n \n Shields, swords, axes, and hammers are organized neatly into racks. In this shop everything has a place and everything is in it's place. It is quite obviously a well cared for establishment.;;;;;;;;;;;;;x
+TTContentdwarf1200a;Greet the Smith.;;;;;;;;;;;;;x
+TTContentdwarf1200b;Greet Bruenor.;;;;;;;;;;;;;x
+TTContentdwarf1201;"I am Bruenor, Master of the forge and proprietor of what you see before you." \n \n Bruenor waves a massive hammer filled hand about the room as he gestures to his surroundings. His white hair and leathery skin quickly belay his age. The lack of a shirt clearly displays his uniquely dwarven & muscular frame. \n \n "What can I do for you today?" Bruenor asks.;;;;;;;;;;;;;x
+TTContentdwarf1201alt;"Well met [Root.GetFirstName].  I have the same selection as before and you are more than welcome to buy whatever you want." Bruenor says with a relaxed smile.;;;;;;;;;;;;;x
+TTContentdwarf1201a;Nothing for now, thank you.;;;;;;;;;;;;;x
+TTContentdwarf1201b;*Ask about the intricate carvings*.;;;;;;;;;;;;;x
+TTContentdwarf1201c;*Make a Purchase*;;;;;;;;;;;;;x
+TTContentdwarf1210;Bruenor laughs gently. \n \n "Everything in this city has decorative carvings, but I believe I see your attention was drawn to the column..." Bruenor takes a breath after that statement and his chest appears to be pushed out a bit further than before. \n \n "The face at the top is my ancestor, and my namesake. He was the greatest weaponsmith our people have ever seen and a fine warrior, and I sincerly doubt we shall see his likenes again. The pattern beneath it is the sigil of his house, my house, the House of Stormfire." As Bruenor finishes his last statement his chest sinks back in the way it was earlier. \n \n "And I am the last Stormfire. It is not something a dwarf would ask, but I forgive your indiscretion Outlander, and your curiosity." He smiles, obviously glad that you asked.;;;;;;;;;;;;;x
+TTContentdwarf1210a;Thank you.;;;;;;;;;;;;;x
+TTContentdwarf1220;"I have plenty for sale, I work primarily in two different styles. The style of the northman, their itricate runes strike a chord in me. And the traditioal Dwarven style weaponry.";;;;;;;;;;;;;x
+TTContentdwarf1220a;Nordic Weapons;;;;;;;;;;;;;x
+TTContentdwarf1220b;Dwarven Weapons;;;;;;;;;;;;;x
+TTContentdwarf1221;"Daggers, Axes, and Swords are what I have. Each more intricately carved that the last. The steel is smelted here in my forge, and I've hand forged each and every blade into a weapon of war.";;;;;;;;;;;;;x
+TTContentdwarf1221a;Buy a Fine Steel Dagger;;;;;;;;;;;;;x
+TTContentdwarf1221b;Buy a Fine Steel Axe;;;;;;;;;;;;;x
+TTContentdwarf1221c;Buy a Fine Steel Sword;;;;;;;;;;;;;x
+TTContentdwarf1222;"Axes, and Swords are what I have. Each more intricately carved that the last. The ore is smelted here in my forge, and I've hand forged each and every blade into a weapon of war using traditional dwarven forge methods.";;;;;;;;;;;;;x
+TTContentdwarf1222a;Buy a Dwarven Axe;;;;;;;;;;;;;x
+TTContentdwarf1222b;Buy a Dwarven Sword;;;;;;;;;;;;;x
+
+##### The Dwarf Alchemist #####
+TTContentAlchemist;The Alchemist;;;;;;;;;;;;;x
+TTContentdwarf1300;As you enter the building, the stench of potions brewing assaults your senses. The smell seems like a cross between sulfur and sweat. The room is filled with books, scrolls, and bottles of potions haphazardly placed around the room. There seems to be no organization to the mess and you can't be certain that you've haven't simply stepped into the home of an unorganized, smelly, Troll.;;;;;;;;;;;;;x
+TTContentdwarf1300a;Greet the Alchemist;;;;;;;;;;;;;x
+TTContentdwarf1301;A fat jolly man comes out of a back room, dressed in a white shirt with a brown vest. \n \n "GREETINGS!" he practically shouts. "I'm always ready for whatever you need, why today I have this vial of elixir that is garaunteed to do precisely what you're looking for, and it's only 10 gold coins. Err, wait...  What is it you were looking for?".;;;;;;;;;;;;;x
+TTContentdwarf1301a;*Make a Purchase*;;;;;;;;;;;;;x
+TTContentdwarf1302;"Oh yes, please just take a look around and I'm sure we can come to a price on whatever strikes your fancy!" he says quickly.
+TTContentdwarf1302a;Buy a Strange Statue;;;;;;;;;;;;;x
+
+##### The Dwarf Temple #####
+TTContentTemple;The Temple;;;;;;;;;;;;;x
+TTContentdwarf1400;A light blue yew permeates the grand structure. Large pillars give way to a grand ceiling with geometric designs covering the entirety of the upper arches. If a feather dropped to the floor it would be easy to pick it out it's location from the sound alone with how quiet the room is.  A light bit of dust on the floors hints at the buildings lack of use, but a clearly worn path through the center indicates that at least someone is frequenting the halls.;;;;;;;;;;;;;x
+TTContentdwarf1400a;Greet the Priest;;;;;;;;;;;;;x
+TTContentdwarf1400b;Greet Travok;;;;;;;;;;;;;x
+TTContentdwarf1401;The sole inhabitant of the Temple nods to you as he approaches, his light blue robes flowing around him. His beard is a deep red, with fashionable metal clasps hanging in in various places. \n \n "Well met, Outlander. I am Travok. To what do I owe the pleasure of your visit?" he says.;;;;;;;;;;;;;x
+TTContentdwarf1401alt;"Well met [Root.GetFirstName]. Company is always welcome after a day of solitude and contemplation. What can I do for you today?";;;;;;;;;;;;;x
+TTContentdwarf1401a;Just looking around.;;;;;;;;;;;;;x
+TTContentdwarf1401b;*Ask about lack of use*;;;;;;;;;;;;;x
+TTContentdwarf1410;"Yes, I can see how you would be curious. The dwarves were once a devout race, the temple would be filled at all hours in those days. That was centuries ago, before the loss of Bruenor Stormfire. Bruenor was of course the warrior that sealed the gates to Hades.  In those days the dwarves were constantly at war with Demons, from pits most foul. Though the priests gave sacrifice to the Gods, no answer came. Bruenor was not a believer in Gods, and believed more in the strength of his sword and his swordarm. He led many brave souls to their deaths, ultimately his own as well, but still managed to somehow seal the entrance. Most dwarves these days follow in Bruenor example and have little use for God's who do not answer their peoples prayers." \n \n The melancholy in his voice as he regailed you with his short story was clear. Travok appears to be staring off to a spot on a wall behind you, lost in thought.;;;;;;;;;;;;;x
+TTContentdwarf1410a;Thank you for your time.;;;;;;;;;;;;;x
+
+##### The Dwarf Tavern #####
+TTContentTavern;The Tavern;;;;;;;;;;;;;x
+TTContentdwarf1500;The sounds of a lively tavern resound about you. The barmaids bounce about the room with smiles on their faces and mugs of ale in their hands as they deliver them to the rowdy crowds. All sorts of individuals of many races occupy the tavern. Seedy individuals, warriors in fine armor, thieves & cutthroats sit alongside others in pristine clothing and fancy armor. The stonework of this building is significantly less ornate than the rest of the city. In fact it is rather plain, designed to be more functional than for any ascetic value.;;;;;;;;;;;;;x
+TTContentdwarf1500a;Wavedown a Barmaid;;;;;;;;;;;;;x
+TTContentdwarf1501;A shorter than normal dwarven maid grins from ear to ear as she approaches... "Hello sweetie, What can I do for you?";;;;;;;;;;;;;x
+TTContentdwarf1501a;Fetch me an ale!;;;;;;;;;;;;;x
+TTContentdwarf1510aa;The ale in your stomach has warmed your cheeks, but you hardly notice. A slender woman dances across your table with silken fabric flowing through the air and a bar fight is in full tilt behind her. You are hardly paying attention to any of it.  Relaxation is hard to come by, but somehow, here in this noisy, boisterous, maybe dangerous tavern, you have found it.;;;;;;;;;;;;;x
+TTContentdwarf1510bb;The crowds bustle around your table, slender ladies dance about in silken clothing but your eyes catch a brawl breaking out across the room. A fierce woman in scant armor wields a barstool like a battleaxe. She crashes it over the head of another patron who in an attempt to settle some unknown dispute. He seemse to shrug off the intial onslaught but before he regains his footing she is already smiling and slapping him on the back. \n \n Some friends they are...;;;;;;;;;;;;;x
+TTContentdwarf1510cc;Her calves as shapely as could be, her thighs lithe and firm, her skin soft and supple. You are entranced in the dance as her body moves to the rhythm of the tavern's minstrels. You can't recall her face at this point, the ale has taken it's effect, but her body is to be admired and you can most certainly do that.;;;;;;;;;;;;;x
+TTContentdwarf1510a;A good night indeed...;;;;;;;;;;;;;x
+TTContentdwarf1520aa;You spend the night sitting by a table of several dwarves. One of the their group is getting married and they are doing their level best to celebrate in a fashion becoming a true dwarf. By getting blackout drunk...;;;;;;;;;;;;;x
+TTContentdwarf1520bb;The night progresses and you find yourself being entertained by a rowdy group of dwarves. They appear to come to this tavern every night and drink till they pass out.  Today you are doing your best to keep up with them...;;;;;;;;;;;;;x
+TTContentdwarf1520a;Dwarves sure know how to drink...;;;;;;;;;;;;;x
+TTContentdwarf1530aa;Not far into your ale you find yourself and the rest of the tavern being regailed by Ariana "The Huntress" as she describes a recent troll hunt.  Ariana's story is dynamic and believable, but Troll's are notorious for attepting to rape female members of any other species and you can't help but wonder if things really went the way she states...;;;;;;;;;;;;;x 
+TTContentdwarf1530bb;Ariana the Elven Huntress is telling a story of her lastest hunt where she took down a Giant in the frozen north. She describes her nimble frame climbing the large beast while he took massive slow swats at her, and slitting his throat while hanging from behind his neck fifteen feet in the air.  \n \n The redheaded young lass to her side is obviously smitten with Ariana from he way she hangs onto her every word and gazes at her longingly. Still, a good story and a good ale is a fine way to end a night...;;;;;;;;;;;;;x
+TTContentdwarf1530a;A fine night...;;;;;;;;;;;;;x
+TTContentdwarf1540aa;You pass time with a group of adventurers eating and drinking into the night. The redheaded rogue has been detailing a sparring match between her and the bald Hun earlier in the day. The Hun for his part is more focused on the food than in hearing of his earlier loss. The story is marvelously told, the company is grand, and the ale flows freely...;;;;;;;;;;;;;x
+TTContentdwarf1540bb;You pass time with a group of adventurers eating and drinking into the night. A young red haired lad is telling a tall erotic tale from the far North about a Giant and a farmgirl. \n \n "The young lass was stricken with a disease, deadly in nature and horrifying in its outcome. She knew her time was short and she knew the giants were her only hope.  She arrived at their village and begged the giants to heal her, but much to her own dismay they informed her that she did not want their healing. For her part of course she pleaded that she did and it came as a shock when she learned that their "healing" was from the font of their cocks. Giants cum is well known to be a curative that even the best court physician cannot explain.  The young lass did not balk at the chore and proceeded, at the Giant's behest, to milk a cock as big as her arm till she could drink her cure from its source." \n \n "Her father came the next day to bring her home. So happy was he that she was cured of her ailment he didn't see her reticence to leave until she demanded he stop and listen.... SHE WOULDN'T GO!!";;;;;;;;;;;;;x
+TTContentdwarf1540cc;You pass time with a group of adventurers eating and drinking into the night. The bald headed hun, is talking about Trolls in depth in between mouthfuls. \n \n "They're creature of solitude, usually hiding in caves.  They're far smarter than a bear, using tools to start fires, and even sharpened sticks as spears, but they don't wear clothes.  They're smart beasts, but they're still only beasts. They usually don't travel far, unless they get horny.  Trolls will mate with anything female that they can get their damn claws on." \n \n "Don't be daft, you're just having us on!" protested the red headed rogue as she sharpened her knife. \n \n "Make no mistake young Miss, if you were to meet a Troll in the wild you had best make a hasty retreat. Should you fall in battle against the beast, you're fate may well be to spend your days kept in a troll cave, having your body used and abused to the beasts sick pleasures until such time as you can make an escape. If you can make an escape...;;;;;;;;;;;;;x 
+TTContentdwarf1540a;A fine tale...;;;;;;;;;;;;;x
+TTContentdwarf1550;You pass your time nursing an ale and watching the crowds. It's not long before a commotion starts and a large group forms as a table is cleared. Two men step forward and sit at the table glaring at one another. \n \n "What's happening?" you ask a patron. \n \n "The knight has challenged the large mercenary and the Merc chose to arm wrestle. Apparently the mercenary was boasting about his strength and knight didn't take it in stride. The knight doesn't realize though that Mercenary has giant's blood in his veins. With giant's blood in him, it's easy to belive he's at least twice as strong as any man, though maybe also a tad stupid as well." with that the fellow laughs heartily and slaps you on the back as you both watch the mercenary win easily.;;;;;;;;;;;;;x
+TTContentdwarf1550a;Interesting...;;;;;;;;;;;;;x
+
+##### The Dwarf Slave Trader #####
+TTContentSlaver;The Slave Trader;;;;;;;;;;;;;x
+TTContentdwarf1600;From the outside you couldn't have expected what you see before you. This is a dungeon, torture equipment is scattered about the room, chains and shackles hang about and the room is kept alight with candles that have obviously neared their end.  There are a variety of slaves chained up, and in cells of enmasse at the back with doors that likely lead to more. An individual who is no doubt the Slavemaster stands nearby.;;;;;;;;;;;;;x
+TTContentdwarf1600a;Greet the Slavemaster;;;;;;;;;;;;;x
+TTContentdwarf1600b;Greet Kathra;;;;;;;;;;;;;x
+TTContentdwarf1601;"Aahhh, a customer?!" She slings a sword over her shoulder and stands before you like she is ready to square off for a fight. \n \n "I was just about to train one of the broken slaves into something useful with a sword. I'm Kathra, and this is Kathra's Exotic Slave Emporium. I have what you need Outlander, I have dwarves under me that are constantly bringing in new and fresh stock. I can get you Elves, Orcs, and half-kin. I can get you pleasure slaves, skilled craftsmen, and even warriors or bodyguards. Whatever you need, Kathra can get it!";;;;;;;;;;;;;x
+TTContentdwarf1601alt;"[Root.GetBestName] back already?!" Kathra says with a smirk.  "Like I said last time, I can get you anything you want [Root.GetTitle]." \n \n Kathra steps aside and starts barking orders to the slaves, lining them up for display so that you can make your choice...;;;;;;;;;;;;;x
+TTContentdwarf1601a;Maybe later.;;;;;;;;;;;;;x
+
+
+ 
+

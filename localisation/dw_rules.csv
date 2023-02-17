@@ -1,0 +1,56 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+#Rules
+DW_RULE_MAJOR_CAMPAIGN;§PDark World Reborn§! ¯´Ø±¸«ÈÌ ª·Ì°´É;;;;;;;;;;;;;x
+DW_RULE_NO_CAMPAIGN;None;;;;;;;;;;;;;x
+DW_RULE_NO_CAMPAIGN_DESC;ïÆÉ©¹Ğ²³Ì ¥³îŒùÂĞæŒ ¯´Ø±¸«ÈÌ ë»Ùª¹ÌëŒçˆ ªÈ¬³É²³¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_LILITH_CAMPAIGN;(«³É¨³) ¦ÈĞ¦ÈêŒùÇ ¬³ªÈÉ;;;;;;;;;;;;;x
+DW_RULE_LILITH_CAMPAIGN_DESC;¥³İªÈÌëÆÌ ²³İª³İ «·æŠëÁÌ •ÁØæÆĞëÆĞ •ÁØ•Š«·Ü¥³. «È¬¸ ù¼İú¼«¸ ë»Ğ¦³ ¥·ëÁÉ¥· å»âëÆÌ ä»ÛëÆĞ ²µİ²´ ¥³İªÈÌùÇ •ÁØëÆĞ ¯ÈëÁĞ‘´«È¥³.;;;;;;;;;;;;;x
+DW_RULE_FUTA_CONTENT;§PDWR§! Gender Bender Content;;;;;;;;;;;;;x
+DW_RULE_NO_SPECIAL;No;;;;;;;;;;;;;x
+DW_RULE_NO_SPECIAL_DESC;You have chosen to NOT include this content in your game.;;;;;;;;;;;;;x
+DW_RULE_YES_FUTA;Yes;;;;;;;;;;;;;x
+DW_RULE_YES_FUTA_DESC;You have chosen to include content such as Futanari and Traps in your game.;;;;;;;;;;;;;x
+DW_RULE_HEAVEN_HELL_CONTENT;§PDWR§! Heaven and Hell Content;;;;;;;;;;;;;x
+DW_RULE_YES_LILITH;Yes;;;;;;;;;;;;;x
+DW_RULE_YES_LILITH_DESC;You have chosen to include adult content that has Succubi, Incubi, and Angels.;;;;;;;;;;;;;x
+DW_RULE_CLASSIC_MONSTER_CONTENT;§PDWR§! Classic Monster Content;;;;;;;;;;;;;x
+DW_RULE_YES_CLASSIC;Yes;;;;;;;;;;;;;x
+DW_RULE_YES_CLASSIC_DESC;You have chosen to include adult content that has Werebeasts and Vampires.;;;;;;;;;;;;;x
+DW_RULE_FAE_CONTENT;§PDWR§! Fae Content;;;;;;;;;;;;;x
+DW_RULE_YES_FAE;Yes;;;;;;;;;;;;;x
+DW_RULE_YES_FAE_DESC;You have chosen to include adult content that has Elves, Orcs, and Fairies.;;;;;;;;;;;;;x
+DW_RULE_FAR_EAST_CONTENT;§PDWR§! Far East Content;;;;;;;;;;;;;x
+DW_RULE_YES_FAR_EAST;Yes;;;;;;;;;;;;;x
+DW_RULE_YES_FAR_EAST_DESC;You have chosen to include adult content that has Neko and Kitsune.;;;;;;;;;;;;;x
+DW_BONUS_TRAIT;§PDWR§!éˆ¢·êŒ ïŒ¦¸«ÈÛ ¡³¬È¡È;;;;;;;;;;;;;x
+DW_RULE_NO_BONUS;No;;;;;;;;;;;;;x
+DW_RULE_NO_BONUS_DESC;«·‘·²³Ì éˆ¢·êŒ ïŒ¦¸«ÈÛæˆ ¡³¬È¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_YES_BONUS_FUTA;éˆ¢·êŒ ïŒ¦¸«ÈÛ;;;;;;;;;;;;;x
+DW_RULE_YES_BONUS_FUTA_DESC;«È¡·ÛëÆÌ ‡Š°³¢³¦È(«¹ª·İ) –ˆåÆÌ «¹¬³İ¢³Ø¬³ ïŒ¦¸«ÈÛëÆĞ ¡³¬Èäˆ ªÈ¬³É²³ĞêŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_FENRIS_PACK_CAMPAIGN;(åÆÉ¥´«ÈÌ¡³Ì) åÆÉ¥´ èŠ¦È;;;;;;;;;;;;;x
+DW_RULE_FENRIS_PACK_CAMPAIGN_DESC;äˆ¥´ åÆÉ¥´«ÈÌ¡³Ì(±¸Ì¦ÈêŒ)åÆÌ ª´çˆëÁÌ ªÈ¥´çÆĞ «¹Ğ‘´¦³äˆ ª´İ¡³É²³«¹ÜêÆÙ¢È¥³. ¥³İªÈÌëÆÌ äŒ¡·ÛëÆĞ æˆëÁĞ ²³¢³ùÇ ì»Ì¬´«ÈÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_WEREWOLF_BITCH_START;(Werewolf) Werewolf Toy;;;;;;;;;;;;;x
+DW_RULE_WEREWOLF_BITCH_START_DESC;A werewolf joined your court and has established dominance over you. (Werewolf Bitch or Omega Male);;;;;;;;;;;;;x
+DW_RULE_NEKO_START;(¢¸îˆ) ‡ˆ¡ÈªÈØ ¨³ÎëÆÌ äˆ«µİ«È;;;;;;;;;;;;;x 
+DW_RULE_NEKO_START_DESC;¥³İªÈÌùÇ ìÆİìˆ²³Ğ¨·¢È ±È¡³ ¥³İªÈÌ«³Ì«¸ª· ´«·¢³Ù¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_VAMPIRE_START;(©´Ø±³«È«·) èÁĞ¦ÈÌ¬³åÆÌ ª´çˆ°´«·¢³Ì¥³;;;;;;;;;;;;;x
+DW_RULE_VAMPIRE_START_DESC;¥³İªÈÌëÆÌ ìŠ«ÈÌ «·ÚåÆÌ ©´Ø±³«È«·çˆ °´«·¢³Ù¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_CHAOS_CONTENT;§PDWR§! Seeds of Chaos Content;;;;;;;;;;;;;x
+DW_RULE_YES_SEEDS_CHAOS;Yes;;;;;;;;;;;;;x
+DW_RULE_YES_SEEDS_CHAOS_DESC;You have chosen to include adult content that has tentacles and Tentacle-kin.;;;;;;;;;;;;;x
+DW_RULE_ORC_START;(ëˆîŒ) ‡ˆæŒçÆĞ ùÄ²³«¹!;;;;;;;;;;;;;x
+DW_RULE_ORC_START_DESC;¥³İªÈÌëÆÌ ¬³İ¨³ÉëÆĞ ²¸®Èäˆ ¬·İé»ÉëÆĞ ùÄ²³«¹ «ÈÌ¡³ÌùÇ ‘³İ«¸ èˆêÆÙëÆĞ æŒ¦·¢´Ì ëˆîŒ«ÈÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_ELF_START;(«¸ĞğŒ) ±¸«È¥Èİ ïŒù¼«ÈĞ¦³«ÈÛ;;;;;;;;;;;;;x
+DW_RULE_ELF_START_DESC;«¸ĞğŒùÇ ªÈ¥´åÆÌ ëˆ¦´Ûæ»İ«³Ì éˆ‡ˆô¿«·ù¼Ü¬È¨³Ì «³èŠæˆ ¥³İªÈÌ«È “³ëÁØëÆĞ ¡¹Ê¬È«³ÎëÆĞ¡·¦³äˆ ¨³Ğ²³¬ÈåÆÌ «³Î«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_KITSUNE_START;(ë‰‡ˆ) «¹ëŠù¼ ª³¢µİ¡´;;;;;;;;;;;;;x
+DW_RULE_KITSUNE_START_DESC;¥³İªÈÌëÆÌ «³Ğ¦¹¬È¬È «³ÎëÆÌ ¬ÈØêÆİ«ÈÙ¢È¥³. ë‰‡ˆåÆÌ ¡·ùÇ ¨¹Ğì»İùÄ¡È«ÈÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_ANGEL_START;(«¸Ì¬¸Ğ) ªÈÌª·İ²³Ì «¹İ¡³Ø;;;;;;;;;;;;;x
+DW_RULE_ANGEL_START_DESC;²³åÆĞ«¸ª· ë»Ì è»Éêˆ¦È¡³ ¥³İªÈÌ«¸¡¸ ¨³Ğ²³Ù¢È¥³. ¥³İªÈÌëÆÌ ª³¦³ØæÆĞùÇ –ÆÛëÆĞ «ÈçÁĞ äŠùÂÌùÇ æˆäŠ«ÈÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_TENTACLE_START;(í»ÉêŠ) ñ»Ìæ»ÌùÇ ¬·Ìª³;;;;;;;;;;;;;x
+DW_RULE_TENTACLE_START_DESC;¥³İªÈÌùÇ «·¨·¢ÈåÆÌ í»ÉêŠ¬ÈØêÆİ«¸¡¸ ¡³İ¡³Ì¥³İ²³«¹Üäˆ ¥³İªÈÌëÆÌ äŒ ¡¹Ğò¼èÁĞ«ÈÙ¢È¥³.;;;;;;;;;;;;;x
+DW_RULE_BESTIALITY_CONTENT;§PDWR§! Bestiality Content;;;;;;;;;;;;;x
+DW_RULE_YES_BESTIALITY;Yes;;;;;;;;;;;;;x
+DW_RULE_YES_BESTIALITY_DESC;You have chosen to include content that involves sex with animals.;;;;;;;;;;;;;x
+## Rule Group
+RULE_GROUP_DW;Dark World;;;;;;;;;;;;;x
+#### Rough text length for using narrative events ###############################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################

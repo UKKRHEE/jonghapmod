@@ -1,0 +1,825 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Custom Localisation Keys
+
+#AVIALABLE CUSTOM LOCALISATION KEYS
+#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
+# To not display anything, you can use 'localisation_key = ""'
+
+#현재 스코프는 THIS, 상대(?)는 ROOT.
+#The relationship This has to Root
+
+
+defined_text = {	name = AMD_virgin
+	text = {	localisation_key = AMD_String_Virgin_or_Cherry	trigger = {	NOT = {	is_female = yes	is_female = no	}	}	}
+	text = {	localisation_key = AMD_String_Virgin	trigger = {	is_female = yes	}	}
+	text = {	localisation_key = AMD_String_Cherry	trigger = {	is_female = no	}	}
+}
+defined_text = {	name = GetVirginCherry
+	text = {	localisation_key = AMD_String_Virgin_or_Cherry	trigger = {	NOT = {	is_female = yes	is_female = no	}	}	}
+	text = {	localisation_key = AMD_String_Virgin	trigger = {	is_female = yes	}	}
+	text = {	localisation_key = AMD_String_Cherry	trigger = {	is_female = no	}	}
+}
+
+defined_text = {	name = AMD_CLK_AMD
+	text = {	localisation_key = AMD_String_AMD	trigger = {	always = yes	}	}
+	text = {	localisation_key = ""	trigger = {	always = no	}	}
+}
+
+
+defined_text = {	name = AMD_CLK_GetLoversGift
+	text = {	localisation_key = AMD_String_LOVERS_GIFT_0	trigger = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_AMD_lovers_gift	value == 0	}	}	}	}
+	text = {	localisation_key = AMD_String_LOVERS_GIFT_1	trigger = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_AMD_lovers_gift	value == 1	}	}	}	}
+	text = {	localisation_key = AMD_String_LOVERS_GIFT_2	trigger = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_AMD_lovers_gift	value == 2	}	}	}	}
+	text = {	localisation_key = AMD_String_LOVERS_GIFT_3	trigger = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_AMD_lovers_gift	value == 3	}	}	}	}
+	text = {	localisation_key = AMD_String_LOVERS_GIFT_4	trigger = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_AMD_lovers_gift	value == 4	}	}	}	}
+	text = {	localisation_key = AMD_String_LOVERS_GIFT_5	trigger = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_AMD_lovers_gift	value == 5	}	}	}	}
+	text = {	localisation_key = AMD_String_LOVERS_GIFT_6	trigger = {	event_target:AMD_ET_POV = {	check_variable = {	which = local_AMD_lovers_gift	value == 6	}	}	}	}
+}
+
+defined_text = {	name = AMD_CLK_GetName
+	text = {	localisation_key = AMD_String_THE_YOU	trigger = {	character = event_target:AMD_ET_POV	random = 50	}	}
+	text = {	localisation_key = AMD_String_THE_NAME	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetHimHer
+	text = {	localisation_key = AMD_String_THE_YOU	trigger = {	character = event_target:AMD_ET_POV	}	}
+	text = {	localisation_key = AMD_String_THE_HIM	trigger = {	NOT = {	character = event_target:AMD_ET_POV	}	is_female = no	}	}
+	text = {	localisation_key = AMD_String_THE_HER	trigger = {	NOT = {	character = event_target:AMD_ET_POV	}	is_female = yes	}	}
+}
+
+
+
+
+defined_text = {	name = AMD_CLK_GetPenisAN	text = {	localisation_key = AMD_String_PenisAN	trigger = {	always = yes	}	}	}
+defined_text = {	name = AMD_CLK_GetPenisAdj
+	text = {	localisation_key = ""	trigger = {	AMD_T_SIZE_SMALL = yes	random = 50	}	}
+	text = {	localisation_key = AMD_String_PenisAdjSmall_1	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjSmall_2	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjSmall_3	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjSmall_4	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjSmall_5	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = ""	trigger = {	random = 50	}	}
+	text = {	localisation_key = AMD_String_PenisAdjAverage_1	trigger = {	trait = AMD_penis_3	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjAverage_2	trigger = {	trait = AMD_penis_3	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjAverage_3	trigger = {	trait = AMD_penis_3	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjAverage_4	trigger = {	trait = AMD_penis_3	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjAverage_5	trigger = {	trait = AMD_penis_3	random = 25	}	}
+	text = {	localisation_key = ""	trigger = {	AMD_T_SIZE_LARGE = yes	random = 50	}	}
+	text = {	localisation_key = AMD_String_PenisAdjLarge_1	trigger = {	AMD_T_SIZE_LARGE = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjLarge_2	trigger = {	AMD_T_SIZE_LARGE = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjLarge_3	trigger = {	AMD_T_SIZE_LARGE = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjLarge_4	trigger = {	trait = AMD_penis_5	random = 25	}	}
+	text = {	localisation_key = AMD_String_PenisAdjLarge_5	trigger = {	trait = AMD_penis_5	random = 25	}	}
+}
+defined_text = {	name = AMD_CLK_GetPenisNoun
+	text = {	localisation_key = AMD_String_Penis_0	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Penis_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Penis_2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Penis_3	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Penis_4	trigger = {	AMD_T_SIZE_SMALL = no	}	}
+	text = {	localisation_key = AMD_String_Penis_5	trigger = {	AMD_T_SIZE_SMALL = no	}	}
+	text = {	localisation_key = AMD_String_Penis_6	trigger = {	AMD_T_SIZE_5 = yes	}	}
+	text = {	localisation_key = AMD_String_Penis_7	trigger = {	AMD_T_SIZE_SMALL = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetBreastAN
+	text = {	localisation_key = AMD_String_BreastAN	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetBreastAdj
+	text = {	localisation_key = AMD_String_BreastAdjSmall_1	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjSmall_2	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjSmall_3	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjSmall_4	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjSmall_5	trigger = {	AMD_T_SIZE_SMALL = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjAverage_1	trigger = {	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjAverage_2	trigger = {	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjAverage_3	trigger = {	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjAverage_4	trigger = {	trait = AMD_Breast_3	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjAverage_5	trigger = {	trait = AMD_Breast_3	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjLarge_1	trigger = {	AMD_T_SIZE_LARGE = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjLarge_2	trigger = {	AMD_T_SIZE_LARGE = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjLarge_3	trigger = {	AMD_T_SIZE_LARGE = yes	random = 25	}	}
+	text = {	localisation_key = AMD_String_BreastAdjLarge_4	trigger = {	trait = AMD_Breast_5	random = 50	}	}
+	text = {	localisation_key = AMD_String_BreastAdjLarge_5	trigger = {	trait = AMD_Breast_5	random = 50	}	}
+}
+defined_text = {	name = AMD_CLK_GetBreastNoun
+	text = {	localisation_key = AMD_String_Breast_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Breast_2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Breast_3	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Breast_4	trigger = {	AMD_T_SIZE_SMALL = no	}	}
+	text = {	localisation_key = AMD_String_Breast_5	trigger = {	AMD_T_SIZE_SMALL = no	}	}
+	text = {	localisation_key = AMD_String_Breast_6	trigger = {	AMD_T_SIZE_SMALL = no	}	}
+}
+defined_text = {	name = AMD_CLK_GetPussyAN
+	text = {	localisation_key = AMD_String_PussyAN	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetPussyAdj
+	text = {	localisation_key = AMD_String_PussyAdjVirgin_1	trigger = {	AMD_T_IS_VIRGIN = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjVirgin_2	trigger = {	AMD_T_IS_VIRGIN = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjVirgin_3	trigger = {	AMD_T_IS_VIRGIN = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjBad_1	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjBad_2	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjBad_3	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjNorm_1	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_String_PussyAdjNorm_2	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_String_PussyAdjNorm_3	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_String_PussyAdjGood_1	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjGood_2	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_String_PussyAdjGood_3	trigger = {	AMD_T_IS_VIRGIN = no	AMD_T_2P_SCORE_GOOD = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetPussyNoun
+	text = {	localisation_key = AMD_String_Pussy_0	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_Pussy_1	trigger = {	always = yes	}	}
+	
+	#text = {	localisation_key = AMD_String_Pussy_2	trigger = {	always = yes	}	}
+	#text = {	localisation_key = AMD_String_Pussy_3	trigger = {	always = yes	}	}
+	#text = {	localisation_key = AMD_String_Pussy_4	trigger = {	always = yes	}	}
+	#text = {	localisation_key = AMD_String_Pussy_5	trigger = {	always = yes	}	}
+	#text = {	localisation_key = AMD_String_Pussy_6	trigger = {	always = yes	}	}
+}
+
+defined_text = {	name = AMD_CLK_GetPlayScore
+	text = {	localisation_key = AMD_String_SCORE_1	trigger = {	AMD_T_2P_SCORE_1 = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_2	trigger = {	AMD_T_2P_SCORE_2 = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_3	trigger = {	AMD_T_2P_SCORE_3 = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_4	trigger = {	AMD_T_2P_SCORE_4 = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_5	trigger = {	AMD_T_2P_SCORE_5 = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_6	trigger = {	AMD_T_2P_SCORE_6 = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_7	trigger = {	AMD_T_2P_SCORE_7 = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_BAD	trigger = {	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_COMMON	trigger = {	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_String_SCORE_GOOD	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+}
+
+defined_text = {	name = AMD_CLK_GetHadSexCons
+	text = {	localisation_key = AMD_String_CONS_SEX1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX3	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX4	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX5	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetHadSexRape
+	text = {	localisation_key = AMD_String_RAPE_SEX1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX3	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX4	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX5	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetTradeItem
+	text = {	localisation_key = AMD_String_TRADE_ITEM_0
+		trigger = {
+			NOT = {
+				has_character_flag = AMD_TRADE_ITEM_1_GOLD
+				has_character_flag = AMD_TRADE_ITEM_2_FAVOR
+				has_character_flag = AMD_TRADE_ITEM_3_ARMY
+				has_character_flag = AMD_TRADE_ITEM_4_TITLE
+				has_character_flag = AMD_TRADE_ITEM_5_PEACE
+			}
+		}
+	}
+	text = {	localisation_key = AMD_String_TRADE_ITEM_1	trigger = {	has_character_flag = AMD_TRADE_ITEM_1_GOLD	}	}
+	text = {	localisation_key = AMD_String_TRADE_ITEM_2	trigger = {	has_character_flag = AMD_TRADE_ITEM_2_FAVOR	}	}
+	text = {	localisation_key = AMD_String_TRADE_ITEM_3	trigger = {	has_character_flag = AMD_TRADE_ITEM_3_ARMY	}	}
+	text = {	localisation_key = AMD_String_TRADE_ITEM_4	trigger = {	has_character_flag = AMD_TRADE_ITEM_4_TITLE	}	}
+	text = {	localisation_key = AMD_String_TRADE_ITEM_5	trigger = {	has_character_flag = AMD_TRADE_ITEM_5_PEACE	}	}
+}
+
+defined_text = {	name = AMD_CLK_GetPrisonType
+	text = {	localisation_key = AMD_String_PrisonType_0	trigger = {	NOT = {	has_character_modifier = house_arrest	has_character_modifier = the_dungeon	has_character_modifier = the_oubliette	}	}	}
+	text = {	localisation_key = AMD_String_PrisonType_1	trigger = {	has_character_modifier = house_arrest	}	}
+	text = {	localisation_key = AMD_String_PrisonType_2	trigger = {	has_character_modifier = the_dungeon	}	}
+	text = {	localisation_key = AMD_String_PrisonType_3	trigger = {	has_character_modifier = the_oubliette	}	}
+}
+defined_text = {	name = AMD_CLK_GetPrisonerState
+	text = {	localisation_key = AMD_String_PrisonerState_Virgin	trigger = {	trait = AMD_virgin	}	}
+	text = {	localisation_key = AMD_String_PrisonerState_Brave	trigger = {	OR = {	trait = brave	trait = wroth	trait = berserker	}	}	}
+	text = {	localisation_key = AMD_String_PrisonerState_Broken	trigger = {	OR = {	trait = lunatic	trait = possessed	has_character_modifier = broken_spirit	}	}	}
+	text = {	localisation_key = AMD_String_PrisonerState_Lust	trigger = {	OR = {	AMD_T_HCM_DRUG_A = yes	trait = AMD_masochist	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 2	}	}	}	}
+}
+defined_text = {	name = AMD_CLK_GetPrisonerHate
+	text = {	localisation_key = AMD_String_PrisonerHate_0	trigger = {	NOT = {	has_character_modifier = AMD_CM_slave_hate	}	}	}
+	text = {	localisation_key = AMD_String_PrisonerHate_1
+		trigger = {
+			has_character_modifier = AMD_CM_slave_hate
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerHate_2
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 2	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerHate_3
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 3	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 4	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerHate_4
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 4	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 5	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerHate_5	trigger = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_hate	amount = 5	}	}	}
+}
+defined_text = {	name = AMD_CLK_GetPrisonerObey
+	text = {	localisation_key = AMD_String_PrisonerObey_0	trigger = {	NOT = {	has_character_modifier = AMD_CM_slave_obey	}	}	}
+	text = {	localisation_key = AMD_String_PrisonerObey_1
+		trigger = {
+			has_character_modifier = AMD_CM_slave_obey
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerObey_2
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 2	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerObey_3
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 3	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 4	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerObey_4
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 4	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 5	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerObey_5	trigger = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 5	}	}	}
+}
+defined_text = {	name = AMD_CLK_GetPrisonerFear
+	text = {	localisation_key = AMD_String_PrisonerFear_0	trigger = {	NOT = {	has_character_modifier = AMD_CM_slave_fear	}	}	}
+	text = {	localisation_key = AMD_String_PrisonerFear_1
+		trigger = {
+			has_character_modifier = AMD_CM_slave_fear
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerFear_2
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 2	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerFear_3
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 3	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 4	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerFear_4
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 4	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 5	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerFear_5	trigger = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_fear	amount = 5	}	}	}
+}
+defined_text = {	name = AMD_CLK_GetPrisonerLust
+	text = {	localisation_key = AMD_String_PrisonerLust_0	trigger = {	NOT = {	has_character_modifier = AMD_CM_slave_lust	}	}	}
+	text = {	localisation_key = AMD_String_PrisonerLust_1
+		trigger = {
+			has_character_modifier = AMD_CM_slave_lust
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerLust_2
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 2	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 3	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerLust_3
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 3	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 4	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerLust_4
+		trigger = {
+			has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 4	}
+			NOT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 5	}	}
+		}
+	}
+	text = {	localisation_key = AMD_String_PrisonerLust_5	trigger = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 5	}	}	}
+}
+
+
+#2P 롱타임 파트 1
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10100_ACT		#10100	범용애무 행동묘사
+	#화간 일반
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10100_1	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	#강간 또는 하드한 분위기
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10100_2	trigger = {	AMD_T_STF_IS_MFRP = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10100_3	trigger = {	AMD_T_STF_IS_FMRP = no	AMD_T_LN_MOOD_IS_HARD = yes	}	}
+	#역간 또는 흥분상태
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10100_3	trigger = {	AMD_T_STF_IS_FMRP = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10100_3	trigger = {	AMD_T_STF_IS_FMRP = no	AMD_T_LN_MOOD_IS_LUST = yes	}	}
+	#역간 제외, 처녀이거나 부정적인 분위기
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10100_4	trigger = {	AMD_T_STF_IS_FMRP = no	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10100_4	trigger = {	AMD_T_STF_IS_FMRP = no	AMD_T_LN_MOOD_IS_HATE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10000_SCORE		#10000	전희 파트 공통 결과묘사
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_B	trigger = {	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_C	trigger = {	AMD_T_2P_SCORE_BAD = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10200_ACT		#10200	키스 행동묘사
+	#화간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10200_1	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	#강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10200_2	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10200_SCORE		#10200	키스 결과묘사
+	#키스, 좋은 결과
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10200_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	#공통
+	
+	#text = {	localisation_key = AMD_EV_DESC_PLAY_10000_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_B	trigger = {	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_C	trigger = {	AMD_T_2P_SCORE_BAD = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10300_ACT		#10300	가슴애무 행동묘사
+	#화간, 강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10300_1	trigger = {	AMD_T_STF_IS_FMRP = no	}	}
+	#역간 또는 음란한 분위기
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10300_2	trigger = {	AMD_T_STF_IS_FMRP = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10300_2	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_LN_MOOD_IS_LUST = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10400_ACT		#10400	핸드잡 행동묘사
+	#화간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10400_1	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	#강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10400_2	trigger = {	AMD_T_STF_IS_MFRP = yes	}	}
+	#역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10400_3	trigger = {	AMD_T_STF_IS_FMRP = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10400_SCORE		#10400	핸드잡 결과묘사
+	#좋은 결과
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10400_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	#공통
+	
+	#text = {	localisation_key = AMD_EV_DESC_PLAY_10000_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_B	trigger = {	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_C	trigger = {	AMD_T_2P_SCORE_BAD = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10500_ACT		#10500	펠라 행동묘사
+	#화간, 역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10500_1	trigger = {	AMD_T_STF_IS_MFRP = no	}	}
+	#강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10500_2	trigger = {	AMD_T_STF_IS_MFRP = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10500_SCORE		#10500	펠라 결과묘사
+	#좋은 결과
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10500_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	#공통
+	
+	#text = {	localisation_key = AMD_EV_DESC_PLAY_10000_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_B	trigger = {	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_C	trigger = {	AMD_T_2P_SCORE_BAD = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10600_ACT		#10600	파이즈리 행동묘사
+	#화간, 역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10600_1	trigger = {	AMD_T_STF_IS_MFRP = no	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10600_2	trigger = {	AMD_T_STF_IS_MFRP = no	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10600_3	trigger = {	AMD_T_STF_IS_MFRP = no	event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}	}	}
+	#화간, 강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10600_4	trigger = {	AMD_T_STF_IS_FMRP = no	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10600_5	trigger = {	AMD_T_STF_IS_FMRP = no	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = no	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10600_SCORE		#10600	파이즈리 결과묘사
+	#좋은 결과
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10600_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	#공통
+	
+	#text = {	localisation_key = AMD_EV_DESC_PLAY_10000_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_B	trigger = {	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_C	trigger = {	AMD_T_2P_SCORE_BAD = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10700_ACT		#10700	풋잡 행동묘사
+	#화간, 강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10700_1	trigger = {	AMD_T_STF_IS_FMRP = no	}	}
+	#역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10700_2	trigger = {	AMD_T_STF_IS_FMRP = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_10700_SCORE		#10700	풋잡 결과묘사
+	#좋은 결과
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10700_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	#공통
+	
+	#text = {	localisation_key = AMD_EV_DESC_PLAY_10000_A	trigger = {	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_B	trigger = {	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_10000_C	trigger = {	AMD_T_2P_SCORE_BAD = yes	}	}
+}
+
+defined_text = {	name = AMD_CLK_EV_OPT_LN_SOFT		#	합체 선택지 SOFT
+	text = {	localisation_key = AMD_EV_OPT_LN_SOFT_1	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = no	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_SOFT_2	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = no	is_female = no	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_SOFT_3	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_SOFT_4	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_HARD		#	합체 선택지 HARD
+	text = {	localisation_key = AMD_EV_OPT_LN_HARD_1	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = no	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_HARD_2	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = no	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_HARD_3	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_HARD_4	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_OVER		#	합체 선택지 OVER
+	text = {	localisation_key = AMD_EV_OPT_LN_OVER_1	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = no	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_OVER_2	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = no	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_OVER_3	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_OVER_4	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_STOP		#	합체 선택지 STOP
+	text = {	localisation_key = AMD_EV_OPT_LN_STOP_BUY	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_STOP_SELL	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_SELLER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_STOP_STUDY	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_STOP_TRAIN	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_NEXT		#	합체 선택지 NEXT
+	text = {	localisation_key = AMD_EV_OPT_LN_NEXT_BUY	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_NEXT_SELL	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_SELLER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_NEXT_STUDY	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_NEXT_TRAIN	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}
+}
+
+	#	TODO : LN_PACE에 따라 다른 지문이 더 많이 발생하도록... 하지만 이것은 정말 쓰기 힘들다.
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_20100_ACT		#20100	정상위
+	#남성주도 : 역간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_1	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_2	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_3	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_4	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_5	trigger = {		AMD_T_STF_IS_FMRP = no	AMD_T_LN_PACE_IS_OVER = yes	}	}	#쑤셔박았습니다!
+	#여성주도 : 강간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_6	trigger = {		AMD_T_STF_IS_MFRP = no	event_target:AMD_ET_POV = {	is_female = no	}	AMD_T_LN_PACE_IS_RAND = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_20200_ACT		#20200	후배위
+	#남성주도 : 역간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_1	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_2	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_3	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_4	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_5	trigger = {		AMD_T_STF_IS_FMRP = no	AMD_T_LN_PACE_IS_OVER = yes	}	}	#쑤셔박았습니다!
+	#여성주도 : 강간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_6	trigger = {		AMD_T_STF_IS_MFRP = no	event_target:AMD_ET_POV = {	is_female = no	}	AMD_T_LN_PACE_IS_RAND = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_20300_ACT		#20300	기승위
+	#여성주도 : 강간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_1	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_2	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_3	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_4	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	#남성주도 : 역간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_5	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_6	trigger = {		AMD_T_STF_IS_FMRP = no	AMD_T_LN_PACE_IS_OVER = yes	event_target:AMD_ET_POV = {	is_female = no	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_29400_ACT		#29400	매춘(랜덤)
+	#정
+	
+	#남성주도 : 역간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_1	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_2	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_3	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_4	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_5	trigger = {		AMD_T_STF_IS_FMRP = no	AMD_T_LN_PACE_IS_OVER = yes	}	}	#쑤셔박았습니다!
+	#여성주도 : 강간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20100_6	trigger = {		AMD_T_STF_IS_MFRP = no	event_target:AMD_ET_POV = {	is_female = no	}	AMD_T_LN_PACE_IS_RAND = yes	}	}
+
+	#후
+	
+	#남성주도 : 역간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_1	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_2	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_3	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_4	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_5	trigger = {		AMD_T_STF_IS_FMRP = no	AMD_T_LN_PACE_IS_OVER = yes	}	}	#쑤셔박았습니다!
+	#여성주도 : 강간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20200_6	trigger = {		AMD_T_STF_IS_MFRP = no	event_target:AMD_ET_POV = {	is_female = no	}	AMD_T_LN_PACE_IS_RAND = yes	}	}
+
+	#기
+	
+	#여성주도 : 강간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_1	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_2	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_3	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_4	trigger = {		AMD_T_STF_IS_MFRP = no	}	}
+	#남성주도 : 역간 제외
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_5	trigger = {		AMD_T_STF_IS_FMRP = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20300_6	trigger = {		AMD_T_STF_IS_FMRP = no	AMD_T_LN_PACE_IS_OVER = yes	event_target:AMD_ET_POV = {	is_female = no	}	}	}
+}
+
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_20000_V		#20000	합체 개통묘사 공통
+	#화간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VC1	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VC2	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VC3	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VC4	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_7 = yes	}	}
+	#강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VR1	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VR2	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VR3	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VR4	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_7 = yes	}	}
+	#역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VF1	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VF2	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VF3	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_VF4	trigger = {	event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_7 = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_20000_SCORE		#20000	합체 결과묘사 공통
+	#화간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_C1	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_C2	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_C3	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_C4	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_7 = yes	}	}
+	#강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_R1	trigger = {	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_R2	trigger = {	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_R3	trigger = {	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_R4	trigger = {	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_7 = yes	}	}
+	#역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_F1	trigger = {	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_F2	trigger = {	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_F3	trigger = {	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_GOOD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_20000_F4	trigger = {	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_7 = yes	}	}
+}
+
+
+defined_text = {	name = AMD_CLK_EV_OPT_LN_IN		#	발사 선택지 인싸
+	#text = {	localisation_key = AMD_EV_OPT_LN_IN_10	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_11	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_IS_CONS = yes	}	}	}	#POV남성, 화간
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_12	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}	#POV남성, 구매자
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_13	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_SELLER = yes	}	}	}	#POV남성, 판매자
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_14	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}	#POV남성, 강간
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_15	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}	#POV남성, 피강간
+	
+	#text = {	localisation_key = AMD_EV_OPT_LN_IN_20	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_21	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_IS_CONS = yes	}	}	}	#POV여성, 화간
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_22	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}	#POV여성, 구매자
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_23	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_SELLER = yes	}	}	}	#POV여성, 판매자
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_24	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}	#POV여성, 강간
+	text = {	localisation_key = AMD_EV_OPT_LN_IN_25	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}	#POV여성, 피강간
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_OUT		#	발사 선택지 아싸
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_0	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_IS_NOT_RAPE = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_10	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_11	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_IS_CONS = yes	}	}	}	#POV남성, 화간
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_12	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}	#POV남성, 구매자
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_13	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_SELLER = yes	}	}	}	#POV남성, 판매자
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_14	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}	#POV남성, 강간
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_15	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_ATK	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}	#POV남성, 피강간
+	
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_20	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_21	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_IS_CONS = yes	}	}	}	#POV여성, 화간
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_22	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}	#POV여성, 구매자
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_23	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_SELLER = yes	}	}	}	#POV여성, 판매자
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_24	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_RAPER = yes	}	}	}	#POV여성, 강간
+	text = {	localisation_key = AMD_EV_OPT_LN_OUT_25	trigger = {		event_target:AMD_ET_POV = {	character = event_target:AMD_ET_DEF	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}	#POV여성, 피강간
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_DS		#	발사 선택지 더블
+	text = {	localisation_key = AMD_EV_OPT_LN_DS_0	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_DRAIN		#	발사 선택지 흡정
+	text = {	localisation_key = AMD_EV_OPT_LN_DRAIN_0	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_DRAIN_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_DRAIN_2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_DRAIN_3	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_DRAIN_4	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_LN_ANAL		#	발사 선택지 흡정
+	text = {	localisation_key = AMD_EV_OPT_LN_ANAL_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_ANAL_4	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	}	}
+}
+
+
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_30000_ACT		#30000	인싸 결과묘사 공통
+	#화간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_C0	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_LN_FLAG_WF = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_C1	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_GOOD = no	AMD_T_LN_FLAG_WF = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_C2	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_GOOD = yes	AMD_T_LN_FLAG_WF = no	}	}
+	#강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_R0	trigger = {	AMD_T_STF_IS_MFRP = yes	AMD_T_LN_FLAG_WF = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_R1	trigger = {	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_GOOD = no	AMD_T_LN_FLAG_WF = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_R2	trigger = {	AMD_T_STF_IS_MFRP = yes	AMD_T_2P_SCORE_GOOD = yes	AMD_T_LN_FLAG_WF = no	}	}
+	#역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_F0	trigger = {	AMD_T_STF_IS_FMRP = yes	AMD_T_LN_FLAG_WF = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_F1	trigger = {	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_GOOD = no	AMD_T_LN_FLAG_WF = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_F2	trigger = {	AMD_T_STF_IS_FMRP = yes	AMD_T_2P_SCORE_GOOD = yes	AMD_T_LN_FLAG_WF = no	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_30000_DS		#30000	더블샷 묘사 공통
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_DS_1	trigger = {	AMD_T_LN_FLAG_DS = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30000_DS_2	trigger = {	AMD_T_LN_FLAG_DS = yes	AMD_T_STF_IS_FMRP = no	}	}	#남성주도, 역간x
+}
+
+defined_text = {	name = AMD_CLK_EV_DESC_PLAY_30500_ACT		#30500	아싸 결과묘사 공통
+	#화간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30500_C1	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	#강간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30500_R1	trigger = {	AMD_T_STF_IS_MFRP = yes	}	}
+	#역간
+	text = {	localisation_key = AMD_EV_DESC_PLAY_30500_F1	trigger = {	AMD_T_STF_IS_FMRP = yes	}	}
+}
+
+defined_text = {	name = AMD_CLK_EV_OPT_LN_END		#	종료후 단일 선택지 내용
+	text = {	localisation_key = AMD_EV_OPT_LN_END_C1	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_C2	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_C3	trigger = {	AMD_T_STF_IS_CONS = yes	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_LN_END_R1	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_R2	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_R3	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPER = yes	}	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_LN_END_V1	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_V2	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_V3	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_LN_END_B1	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_BUYER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_B2	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_BUYER = yes	}	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_B3	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_BUYER = yes	}	AMD_T_2P_SCORE_GOOD = yes	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_LN_END_S1	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_S2	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_COMMON = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_LN_END_S3	trigger = {	event_target:AMD_ET_POV = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_GOOD = yes	}	}
+}
+
+
+
+#2p 숏타임 신판...? 안 쓰인 것 아닌가??
+defined_text = {	name = AMD_CLK_EV_DESC_2P_NORM		#화강역, 상중하, 개통차분으로 18개로 분기되는가...? 기존 문장도 수정 필요.
+	text = {	localisation_key = AMD_EV_DESC_2PN_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PN_MFRP	trigger = {	AMD_T_STF_IS_MFRP = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PN_FMRP	trigger = {	AMD_T_STF_IS_FMRP = yes	}	}
+	#text = {	localisation_key = AMD_EV_DESC_2PN_TRADE	trigger = {	AMD_T_STF_IS_TRADE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2PN_CONS
+	text = {	localisation_key = AMD_String_2PNM_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_2PNM_2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_2PNM_3	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2PN_MFRP
+	text = {	localisation_key = AMD_String_2PNB_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_2PNB_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_2PNB_1	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2PN_FMRP
+	text = {	localisation_key = AMD_String_2PNC_1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_2PNC_2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_2PNC_3	trigger = {	always = yes	}	}
+}
+
+defined_text = {	name = AMD_CLK_EV_DESC_2P_HORSE
+	text = {	localisation_key = AMD_EV_DESC_2HHM_1
+		trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	is_female = no	}	event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	is_female = no	}	}
+	}
+	text = {	localisation_key = AMD_EV_DESC_2HHM_2
+		trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	is_female = no	}	event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	is_female = no	}	}
+	}
+	text = {	localisation_key = AMD_EV_DESC_2H_ETC
+		trigger = {
+			NOT = {
+				event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	is_female = no	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	is_female = no	}
+			}
+		}
+	}
+	text = {	localisation_key = AMD_EV_DESC_2H_ETC	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2P_GAY
+	text = {	localisation_key = AMD_EV_DESC_2P_GAY_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_2P_GAY_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_2P_GAY_TRADE	trigger = {	AMD_T_STF_IS_TRADE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_2P_GAY
+	text = {	localisation_key = AMD_EV_OPT_2P_GAY_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_GAY_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_GAY_TRADE	trigger = {	AMD_T_STF_IS_TRADE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2P_LES
+	text = {	localisation_key = AMD_EV_DESC_2P_LES_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_2P_LES_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_2P_LES_TRADE	trigger = {	AMD_T_STF_IS_TRADE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_2P_LES
+	text = {	localisation_key = AMD_EV_OPT_2P_LES_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_LES_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_LES_TRADE	trigger = {	AMD_T_STF_IS_TRADE = yes	}	}
+}
+
+
+#2p 숏타임 구판
+defined_text = {	name = AMD_CLK_EV_DESC_2PN_CONS_OLD		#화 : 임시로 초기버전 설명문 배치
+	text = {	localisation_key = AMD_EV_DESC_2PNC_O1	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNC_O2	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNC_O3	trigger = {	AMD_T_2P_SCORE_GOOD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNC_O4	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNC_O5	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNC_O6	trigger = {	AMD_T_2P_SCORE_GOOD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2PN_RAPE_OLD		#강 : 임시로 초기버전 설명문 배치
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O1	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O2	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O3	trigger = {	AMD_T_2P_SCORE_GOOD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O4	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O5	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O6	trigger = {	AMD_T_2P_SCORE_GOOD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2PN_FMRP_OLD		#역 : 임시로 초기버전 설명문 배치
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O7	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O8	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_O9	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2PNR_OA	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_2HHF_OLD		#마간 : 임시로 초기버전 설명문 배치
+	text = {	localisation_key = AMD_EV_DESC_2HHF_O1	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2HHF_O2	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2HHF_O3	trigger = {	AMD_T_2P_SCORE_GOOD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2HHF_O4	trigger = {	AMD_T_2P_SCORE_BAD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2HHF_O5	trigger = {	AMD_T_2P_SCORE_BAD = no	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_2HHF_O6	trigger = {	AMD_T_2P_SCORE_GOOD = yes	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_2P_OLD		#옵션 명칭
+	#text = {	localisation_key = AMD_EV_OPT_2P_O0	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_O1	trigger = {	AMD_T_2P_SCORE_BAD = yes	AMD_T_STF_THIS_IS_RAPED = no	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_O2	trigger = {	AMD_T_2P_SCORE_BAD = no	AMD_T_STF_THIS_IS_RAPED = no	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_O3	trigger = {	AMD_T_2P_SCORE_GOOD = yes	AMD_T_STF_THIS_IS_RAPED = no	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_O4	trigger = {	AMD_T_2P_SCORE_BAD = yes	AMD_T_STF_THIS_IS_RAPED = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_O5	trigger = {	AMD_T_2P_SCORE_BAD = no	AMD_T_STF_THIS_IS_RAPED = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_2P_O6	trigger = {	AMD_T_2P_SCORE_GOOD = yes	AMD_T_STF_THIS_IS_RAPED = yes	}	}
+}
+
+#mp 구판
+defined_text = {	name = AMD_CLK_EV_DESC_MPMF_OLD		#	남*녀
+	text = {	localisation_key = AMD_EV_DESC_MPMF_RB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMF_RG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMF_CB_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMF_CG_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMF_SB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMF_SG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMF_BG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_MPMM_OLD		#	남*남
+	text = {	localisation_key = AMD_EV_DESC_MPMM_RB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMM_RG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMM_CB_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMM_CG_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMM_SB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMM_SG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPMM_BG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_MPFF_OLD		#	여*여
+	text = {	localisation_key = AMD_EV_DESC_MPFF_RB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFF_RG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFF_CB_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFF_CG_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFF_SB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFF_SG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFF_BG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_DESC_MPFM_OLD		#	여*남
+	text = {	localisation_key = AMD_EV_DESC_MPFM_RB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_RG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_RBV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_RGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	
+	text = {	localisation_key = AMD_EV_DESC_MPFM_CB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_CG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_CBV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_CGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = no	}	}
+	
+	text = {	localisation_key = AMD_EV_DESC_MPFM_SB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_SG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_SBV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_SGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	
+	text = {	localisation_key = AMD_EV_DESC_MPFM_BG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_DESC_MPFM_BGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+}
+defined_text = {	name = AMD_CLK_EV_OPT_MPFM_OLD		#	여*남 선택지
+	text = {	localisation_key = AMD_EV_OPT_MPFM_RB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_RG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_RBV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_RGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_RAPED = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_MPFM_CB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_CG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_CBV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_CGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	}	AMD_T_STF_IS_PURE = yes	AMD_T_2P_SCORE_BAD = no	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_MPFM_SB_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_SG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_SBV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = yes	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_SGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_SELLER = yes	}	AMD_T_2P_SCORE_BAD = no	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_MPFM_BG_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = no	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+	text = {	localisation_key = AMD_EV_OPT_MPFM_BGV_OLD	trigger = {	event_target:AMD_ET_OH = {	AMD_T_IS_VIRGIN = yes	AMD_T_STF_THIS_IS_BUYER = yes	}	}	}
+	
+	text = {	localisation_key = AMD_EV_OPT_ORGY_ETC	trigger = {	event_target:AMD_ET_OH = {	NOT = {	character = event_target:AMD_ET_POV	}	}	}	}
+}
+

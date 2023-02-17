@@ -1,6 +1,0 @@
-﻿l_korean:
-	regula_stress_loss_sex_event.0001.t:0 "컴페디테가 스트레스 해소."
-	regula_stress_loss_sex_event.0001.desc:0 "당신의 아내 [stressed.GetTitledFirstName]은(는) [stressed_partner.GetTitledFirstName]의 품에서 위안을 찾았습니다. 둘 다 훨씬 여유로워 보인다"
-
-	regula_stress_loss_sex_decision:0 "친구의 품에서 안도감을 찾으십시오."
-	regula_stress_loss_sex_decision_confirm:0 "다른 사람과 잔다"

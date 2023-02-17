@@ -1,3 +1,0 @@
-﻿l_korean:
-
- carnd_tooltip_elector_vote_not_futa:0 "[candidate.GetSheHe|U] 는 [GetTrait('futa').GetName( candidate.Self )]이 아닙니다 : $VALUE|=+0$"

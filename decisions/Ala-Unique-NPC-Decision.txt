@@ -1,0 +1,23 @@
+###############################
+###		 Unique NPCs		###
+###############################
+
+
+
+decisions = {
+
+	ala_dwr_unique_npcs = {
+		potential = {
+			ai = no
+		}
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = alaunpc.1 days = 0 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+	

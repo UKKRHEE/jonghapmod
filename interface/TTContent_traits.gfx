@@ -1,0 +1,92 @@
+###########################################################
+####### TRAIT ICONS for the Dark World Content Pack #######
+###########################################################
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_painslut"
+		texturefile = "gfx/traits/painslut.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_trait_cumslut"
+		texturefile = "gfx/traits/cumslut.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_halfgiant"
+		texturefile = "gfx/traits/halfgiant.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_giantblood"
+		texturefile = "gfx/traits/giantblood.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_halftroll"
+		texturefile = "gfx/traits/halftroll.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_trollblood"
+		texturefile = "gfx/traits/trollblood.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_chastity_belt"
+		texturefile = "gfx/traits/chastity_belt.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_redhandvet"
+		texturefile = "gfx/traits/redhandvet.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_futacumslut"
+		texturefile = "gfx/traits/futacumslut.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_redhandslut"
+		texturefile = "gfx/traits/redhandslut.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_slutpilgrim"
+		texturefile = "gfx/traits/slutpilgrim.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
+
+
+

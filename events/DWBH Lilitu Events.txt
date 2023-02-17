@@ -1,0 +1,840 @@
+###########################################
+#        DWBH Events                      #
+#                                         #
+#                                         #
+#    DWBH.100-DWBH.199                    #
+#                                         #
+###########################################
+
+
+namespace = DWBH
+
+#Culling Heresies pre-activation
+province_event = {
+	id = DWBH.50
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+				OR = {
+					AND = { #province is now lilith-christian, but it's not activated
+						NOT = { has_global_flag = dwbh_lilitu_unlock } 
+						religion = lilitu
+					}
+					AND = { #province is now lilith-islamic, but it's not activated
+						NOT = { has_global_flag = lilislam_active }
+						religion = lilislam
+					}
+					AND = { #province is now lilith-orthodox, but it's not activated
+						NOT = { has_global_flag = orthlili_active }
+						religion = orthlili
+					}				
+				}
+	}
+	
+	
+	immediate = {
+			#based on which religion group it is, we now pick a new randomly chosen heresy of that group and convert the province and any lilithist character in the province to it
+			if = {
+				limit = { religion = lilitu }
+	
+				random_list = {
+					10 = { 
+						religion = cathar 
+						any_province_character = {
+							if = {
+								limit = { religion = lilitu }
+									religion = cathar
+								}
+							}
+						}
+					10 = { 
+						religion = waldensian 
+						any_province_character = {
+							if = {
+								limit = { religion = lilitu }
+									religion = waldensian
+								}
+							}
+						}
+					10 = { 
+						religion = lollard 
+						any_province_character = {
+							if = {
+								limit = { religion = lilitu }
+									religion = lollard
+								}
+							}
+						}
+					10 = { 
+						religion = fraticelli
+						any_province_character = {
+							if = {
+								limit = { religion = lilitu }
+									religion = fraticelli
+								}
+							}
+						}
+					}
+				}
+
+			if = {
+				limit = { religion = lilislam }
+	
+				random_list = {
+					10 = { 
+						religion = shiite
+						any_province_character = {
+							if = {
+								limit = { religion = lilislam }
+									religion = shiite
+								}
+							}
+						}
+					10 = { 
+						religion = zikri
+						any_province_character = {
+							if = {
+								limit = { religion = lilislam }
+									religion = zikri
+								}
+							}
+						}
+					10 = { 
+						religion = ibadi
+						any_province_character = {
+							if = {
+								limit = { religion = lilislam }
+									religion = ibadi
+								}
+							}
+						}
+					10 = { 
+						religion = yazidi
+						any_province_character = {
+							if = {
+								limit = { religion = lilislam }
+									religion = yazidi	
+								}
+							}
+						}
+					10 = { 
+						religion = kharijite
+						any_province_character = {
+							if = {
+								limit = { religion = lilislam }
+									religion = kharijite
+								}
+							}
+						}
+					10 = { 
+						religion = druze
+						any_province_character = {
+							if = {
+								limit = { religion = lilislam }
+									religion = druze
+								}
+							}
+						}
+					10 = { 
+						religion = hurufi
+						any_province_character = {
+							if = {
+								limit = { religion = lilislam }
+									religion = hurufi
+								}
+							}
+						}
+					}
+				}
+			if = {
+				limit = { religion = orthlili }
+	
+				random_list = {
+					10 = { 
+						religion = paulician 
+						any_province_character = {
+							if = {
+								limit = { religion = orthlili }
+									religion = paulician
+								}
+							}
+						}
+					10 = { 
+						religion = bogomilist 
+						any_province_character = {
+							if = {
+								limit = { religion = orthlili }
+									religion = bogomilist
+								}
+							}
+						}
+					10 = { 
+						religion = monothelite
+						any_province_character = {
+							if = {
+								limit = { religion = orthlili }
+									religion = monothelite
+								}
+							}
+						}
+					10 = { 
+						religion = iconoclast
+						any_province_character = {
+							if = {
+								limit = { religion = orthlili }
+									religion = iconoclast
+								}
+							}
+						}
+					}
+				}
+
+
+
+				
+			}
+
+}
+
+
+# Dream of the Lost Cathedral
+narrative_event = {
+	id = DWBH.100
+	picture = dwbh_lilithdream
+	desc = EVTDESC_DWBH_100
+	title = EVTNAME_DWBH_100
+	ai = no	
+	only_playable = yes # only players get this
+	min_age =  16
+	capable_only = yes
+	prisoner = no
+ trigger = {
+		holy_order = no
+		is_theocracy = no
+ 		OR = 
+			{
+				has_focus = focus_theology
+				piety = 1000
+			        prestige = 1000
+			}
+		OR = {
+			trait = lilith
+			trait = incubus
+				trait = alu_fiend
+				trait = cambion
+		}
+		OR = {
+			religion = catholic
+			religion = fraticelli
+			religion = cathar
+			religion = waldensian
+			religion = lollard
+		}
+		NOT = { has_global_flag = dwbh_lilitu_unlock } #only happens once
+		NOT = { has_character_flag = dwbh_enddream }
+
+		NOT = { trait = zealous }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}	
+
+	
+	option = {
+		name = EVTOPTA_DWBH_100 # Yes, I will seek the lost Cathedral
+
+		piety = 20
+		hidden_tooltip = { narrative_event = { id = DWBH.101 days = 90  random = 90} }
+	}
+	option = {
+		name = EVTOPTB_DWBH_100  # I'm not worthy
+		trigger = {
+		NOT = { trait = excommunicated }
+		
+		}
+		piety = 25
+				random = {
+					chance = 25
+					add_trait = zealous
+				}	
+	}
+	option = {
+		name = EVTOPTC_DWBH_100
+		set_character_flag = dwbh_enddream
+		piety = 50
+				random = {
+					chance = 25
+					add_trait = zealous
+				}	
+
+	}
+}
+
+# Finding the Lost Cathedral
+narrative_event = {
+	id = DWBH.101
+	picture = dwbh_dreamcathedral
+	desc = EVTDESC_DWBH_101
+	title = EVTNAME_DWBH_101
+		
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBH_101 # Embrace the truth and bring it to the world!
+		trigger = {
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+			
+		}
+		piety = 50
+		add_character_modifier = {
+			name = ancient_wisdom
+			years = 3
+		}
+		set_global_flag = dwbh_lilitu_unlock
+		religion = lilitu
+		change_learning = 2
+	}
+	option = {
+		name = EVTOPTB_DWBH_101 # Forget you ever came here
+		trigger = {
+		NOT = { trait = excommunicated }
+		
+		}
+		piety = 20
+		add_character_modifier = {
+			name = ancient_wisdom
+			years = 3
+		}
+		random = {
+			chance = 50
+			add_trait = zealous
+			}
+		random = {
+			chance = 50
+			add_trait = chaste
+			}
+		set_character_flag = dwbh_enddream
+	
+	}
+}
+
+#NPC conversion event. Allows any succubi/incubi to convert now that the religion is formed.
+character_event = {
+	id = DWBH.102
+	hide_window = yes
+	ai = yes
+	min_age = 16
+	has_global_flag = dwbh_lilitu_unlock
+	trigger = {
+		AND = {
+			OR = {
+				religion = catholic
+				religion = fraticelli
+				religion = cathar
+				religion = waldensian
+				religion = lollard
+				}
+			OR = {
+				trait = lilith
+				trait = incubus
+				trait = alu_fiend
+				trait = cambion
+				}
+			}
+		}
+	mean_time_to_happen = {
+		months = 24
+		}
+	option = { # Not yet
+			ai_chance = {
+				factor = 10
+				modifier = { #my liege still isn't lilitu
+					factor = 400 
+					liege = { NOT = { religion = lilitu } } 
+					}
+				modifier = { #zealous is less likely to convert
+					factor = 150
+					trait = zealous
+					}
+								
+				}
+			piety = 10
+		}
+ 	option = { #convert immediately
+			ai_chance = {
+				factor = 30
+				modifier = { # my liege already converted
+					factor = 100
+					liege = { religion = lilitu }
+					}
+				}
+		}
+}
+
+
+# Study religious myths of Lilith as Islamic?
+character_event = {
+	id = DWBH.110
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	desc = EVTDESC_DWBH_100
+
+	only_playable = yes
+	min_age =  16
+	capable_only = yes
+	prisoner = no
+ trigger = {
+		NOT = { has_global_flag = lilislam_active }
+		holy_order = no
+		#is_theocracy = no
+ 		OR = 
+			{
+				has_focus = focus_theology
+				piety = 1000
+			        prestige = 1000
+			}
+		OR = {
+			trait = lilith
+			trait = incubus
+				trait = alu_fiend
+				trait = cambion
+		}
+			religion_group = muslim
+		NOT = { has_character_flag = dwbh_enddream }
+		NOT = { has_global_flag = lilislam_active }
+		NOT = { religion = lilislam }
+ }
+
+	mean_time_to_happen = {
+		months = 48
+	}	
+
+	
+	option = {
+		name = EVTOPTA_DWBH_100 # Yes, dive deeper into the ancient myths
+		trigger = {
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+			
+		}
+		piety = 20
+		hidden_tooltip = { narrative_event = { id = DWBH.111 days = 90 } }
+	}
+	option = {
+		name = EVTOPTB_DWBH_100  # Heretical thoughts should be left to lie
+		trigger = {
+		NOT = { trait = excommunicated }
+		
+		}
+		piety = 100
+				random = {
+					chance = 25
+					add_trait = zealous
+				}	
+	}
+		option = {
+		name = EVTOPTC_DWBH_100
+		set_character_flag = dwbh_enddream
+		piety = 150
+				random = {
+					chance = 25
+					add_trait = zealous
+				}	
+
+	}
+}
+
+# Results of studying myths of Lilith as Islamic
+narrative_event = {
+	id = DWBH.111
+	picture = lilith_avatar1
+	border = GFX_event_normal_frame_religion
+	desc = EVTDESC_DWBH_111
+		
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBH_111 # Embrace the truth and bring it to the world!
+		trigger = {
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		NOT = {has_landed_title = e_sunni}	
+		}
+		
+		piety = 50
+		add_character_modifier = {
+			name = ancient_wisdom
+			years = 3
+		}
+		set_global_flag = lilislam_active
+		religion = lilislam
+		primary_title = { add_law = enatic_cognatic_succession2 }
+		change_learning = 2
+		
+	}
+
+	option = {
+		name = EVTOPTA_DWBH_111 # Embrace the truth and bring it to the world!
+		trigger = {
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+		has_landed_title = e_sunni	
+		}
+		
+		piety = 50
+		add_character_modifier = {
+			name = ancient_wisdom
+			years = 3
+		}
+		set_global_flag = lilislam_active
+		destroy_landed_title = e_sunni
+		religion = lilislam
+		primary_title = { add_law = enatic_cognatic_succession2 }
+		change_learning = 2
+		
+	}
+
+	option = {
+		name = EVTOPTB_DWBH_101 # Burn these heretical lies
+		trigger = {
+		NOT = { trait = excommunicated }
+		
+		}
+		piety = 200
+		add_trait = zealous
+		add_trait = chaste
+		set_character_flag = dwbh_enddream
+	
+	}
+}
+
+# Study religious myths of Lilith as Orthodox?
+character_event = {
+	id = DWBH.120
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	desc = EVTDESC_DWBH_100
+
+	only_playable = yes
+	min_age =  16
+	capable_only = yes
+	prisoner = no
+ trigger = {
+		NOT = { has_global_flag = orthlili_active }
+		NOT = { has_character_flag = dwbh_enddream }
+		holy_order = no
+		is_theocracy = no
+ 		OR = 
+			{
+				has_focus = focus_theology
+				piety = 1000
+			        prestige = 1000
+			}
+		OR = {
+			trait = lilith
+			trait = incubus
+				trait = alu_fiend
+				trait = cambion
+		}
+		OR = {
+			religion = orthodox
+			religion = paulician
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+		}
+ }
+
+	mean_time_to_happen = {
+		months = 48
+	}	
+
+	
+	option = {
+		name = EVTOPTA_DWBH_100 # Yes, dive deeper into the ancient myths
+		trigger = {
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+			
+		}
+		piety = 20
+		hidden_tooltip = { character_event = { id = DWBH.121 days = 90 } }
+	}
+	option = {
+		name = EVTOPTB_DWBH_100  # Heretical thoughts should be left to lie
+		trigger = {
+		NOT = { trait = excommunicated }
+		
+		}
+		piety = 50
+				random = {
+					chance = 25
+					add_trait = zealous
+				}	
+	}
+	option = {
+		name = EVTOPTC_DWBH_100
+		set_character_flag = dwbh_enddream
+		piety = 75
+				random = {
+					chance = 25
+					add_trait = zealous
+				}	
+
+	}	
+}
+
+# Results of studying myths of Lilith 
+character_event = {
+	id = DWBH.121
+	picture = lilith_avatar1
+	border = GFX_event_normal_frame_religion
+	desc = EVTDESC_DWBH_101
+		
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBH_101 # Embrace the truth and bring it to the world!
+		trigger = {
+		NOT = { trait = monk }
+		NOT = { trait = nun }
+			
+		}
+		piety = 50
+		add_character_modifier = {
+			name = ancient_wisdom
+			years = 3
+		}
+		set_global_flag = orthlili_active
+		religion = orthlili
+		change_learning = 2
+	}
+	option = {
+		name = EVTOPTB_DWBH_101 # Burn these heretical lies
+		trigger = {
+		NOT = { trait = excommunicated }
+		
+		}
+		piety = 20
+		add_character_modifier = {
+			name = ancient_wisdom
+			years = 3
+		}
+		add_trait = zealous
+		add_trait = chaste
+		set_character_flag = dwbh_enddream
+	
+	}
+}
+
+# Replace Male Holder of Lilith Papacy (hidden)
+character_event = {
+	id = DWBH.300
+	hide_window = yes # Nothing to see here
+	ai = yes
+	trigger = {
+		AND = {
+			has_landed_title = d_lilitu
+			is_female = no
+			}
+
+		}	
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		random_independent_ruler = {
+			limit = {
+				ai = yes
+			}
+			location = {
+			
+				create_character = {
+					random_traits = no
+ 					random_traits = no
+ 					dynasty = none
+ 					female = yes
+ 					religion = lilitu
+ 					culture = ROOT
+ 					age = 30
+ 					attributes = {
+ 					martial = 6
+ 					diplomacy = 12
+ 					stewardship = 10
+ 					intrigue = 12
+ 					learning = 15
+ 					}
+ 					health = 6
+ 					fertility = 0.8
+ 					trait = lilith
+ 					trait = fair
+ 					trait = big_tits
+ 					trait = bombshell
+ 					trait = seductress
+ 					trait = lustful
+ 					trait = zealous
+ 					trait = hedonist					
+ 					trait = mastermind_theologian
+ 										
+				
+				}
+				new_character = {
+					character_event = { id = DWBH.301 } 
+				}
+			}
+		}
+	}
+}				
+
+# Trigger event
+character_event = {
+	id = DWBH.301
+	hide_window = yes # Nothing to see here
+	ai = yes
+	is_triggered_only = yes 
+	option = { 
+			d_lilitu = {
+						grant_title = PREV
+					}
+					wealth = 200
+					piety = 200
+					prestige = 300
+			}
+	
+}
+# Replace Male Orthodox Lilith (hidden
+character_event = {
+	id = DWBH.310
+	hide_window = yes # Nothing to see here
+	ai = yes
+	trigger = {
+		AND = {
+			has_landed_title = d_orthlili
+			is_female = no
+			}
+
+		}	
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		random_independent_ruler = {
+			limit = {
+				ai = yes
+			}
+			location = {
+			
+				create_character = {
+					random_traits = no
+ 					random_traits = no
+ 					dynasty = none
+ 					female = yes
+ 					religion = orthlili
+ 					culture = ROOT
+ 					age = 30
+ 					attributes = {
+ 					martial = 6
+ 					diplomacy = 12
+ 					stewardship = 10
+ 					intrigue = 12
+ 					learning = 15
+ 					}
+ 					health = 6
+ 					fertility = 0.8
+ 					trait = lilith
+ 					trait = fair
+ 					trait = big_tits
+ 					trait = bombshell
+ 					trait = seductress
+ 					trait = lustful
+ 					trait = zealous
+ 					trait = hedonist					
+ 					trait = mastermind_theologian
+ 										
+				
+				}
+				new_character = {
+					character_event = { id = DWBH.301 } 
+				}
+			}
+		}
+	}
+}				
+
+# Trigger event
+character_event = {
+	id = DWBH.311
+	hide_window = yes # Nothing to see here
+	ai = yes
+	is_triggered_only = yes 
+	option = { 
+			d_orthlili = {
+						grant_title = PREV
+					}
+					wealth = 200
+					piety = 200
+					prestige = 300
+			}
+	
+}
+
+# Making Lilith our Goddess as Pagan
+narrative_event = {
+	id = DWBH.400
+	picture = dwbh_lilithdream
+	desc = EVTDESC_DWBH_400
+	title = EVTNAME_DWBH_400
+		
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBH_400 # Embrace the truth and bring it to the world!
+
+		piety = 50
+		add_character_modifier = {
+			name = ancient_wisdom
+			years = 3
+		}
+		change_learning = 2
+	}
+
+}
+
+character_event = {
+	id = DWBH.1000
+	hide_window = yes
+	#min_age =  1
+	max_age =  10
+	capable_only = yes
+	trigger = {
+		has_character_flag = demon_child_non_pagan
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}	
+
+	
+	immediate = {
+			if = { 
+				limit = { is_female=no} 
+				add_trait = incubus
+			}
+			if = {
+				limit = { is_female=yes}
+				add_trait = lilith
+			}		
+		}
+
+
+}

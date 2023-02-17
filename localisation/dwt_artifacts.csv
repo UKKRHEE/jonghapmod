@@ -1,0 +1,53 @@
+# Localisation for the DWToska artifacts:
+
+# lilith_armor
+# lilith_bow
+# lilith_dagger
+# lilith_seducer
+# lilith_crown
+# lilith_scepter
+
+lilith_armor;Lilith's Armor;;;;;;;;;;;;;x
+lilith_armor_desc;Lilith's Armor has been skillfully crafted by the best armor smith our order could get laid. It provides excellent protection on the battlefields and also allows for silent movement. It is most pleasing to the eyes and enhances your chances with the other sex.;;;;;;;;;;;;;x
+
+lilith_bow;Lilith's Bow;;;;;;;;;;;;;x
+lilith_bow_desc;Lilith's Bow is pinnacle of archery. The bow accelerates arrows with higher than normal velocity while requiring less force to provide the proper tension. Due to it's compact size it is also an ideal cavalry bow.;;;;;;;;;;;;;x
+
+lilith_dagger;Lilith's Dagger;;;;;;;;;;;;;x
+lilith_dagger_desc;Lilith's Dagger is a small, but very deadly blade that comes with an easily concealable neck holster. It is ideal for both men and women, who engage socially and have the need for a concealed weapon.;;;;;;;;;;;;;x
+
+lilith_seducer;Lilith's Seducer;;;;;;;;;;;;;x
+lilith_seducer_desc;Lilith's Seducer is an ancient ceremonial weapon that dates back to the very roots of human civilization. Men (and sometimes women) have used it very successfully to increase their mating chances.;;;;;;;;;;;;;x
+
+lilith_crown;Lilith's Crown;;;;;;;;;;;;;x
+lilith_crown_desc;Lilith's Crown is a filigrane preciosity meant to express royal or divine power and that is known to dazzle and bewitch. You simply can't be mad with a ruler that wears this precious thing. Regadless of what cruelties and debaucheries said ruler performs.;;;;;;;;;;;;;x
+
+lilith_scepter;Lilith's Scepter;;;;;;;;;;;;;x
+lilith_scepter_desc;The untrained eye might see Lilith's Scepter as vulgar representation of a penis cast out of precious metals and ornated with rare gems. Few know that it was specifically made to not only please the eyes of the beholder and easily warms to the touch.;;;;;;;;;;;;;x
+
+dwe_clarent;Clarent, Sword of Royal Authority;;;;;;;;;;;;;x
+dwe_clarent_desc;Originally a blade owned by King Arthur, and used primarily in knighthood ceremonies, it was stolen by Mordred, and used by Mordred to kill Arthur during the Battle of Camlann.\n As such, it has been transformed from a blade of peace to a blade of war, though it retains much of its luster.;;;;;;;;;;;;;x
+
+dwe_gae_bolg;G?e Bolg, C? Chulainn's Spear of Death;;;;;;;;;;;;;x
+dwe_gae_bolg_desc;The fabled weapon of the Irish hero C? Chulainn, G?e Bolg was carved from the bones of a sea monster, and given to C? Chulainn by his teacher Scathach in the Land of Shadows.\n It is a particularly deadly weapon, with numerous barbs, leading to some to call it the Spear of Death.;;;;;;;;;;;;;x
+
+dwe_balmung;©³ÐèÁÝ, «³É¨³çÆÐ ¨¹Ð²³åÆÌ ²³åÆÐùÇ ¡·Ø;;;;;;;;;;;;;x
+dwe_balmung_desc;¯³Ðè»Ø«¸ ±³¦³Ì éˆª·É«È ©³É²ÈÌ ÿ¼ÝäÆØùÇ «µÝê»Ì ¥´¡·Ø.\n «È¡·ÛëÆÌ «¹ÝëÁÝ ¬ÈäŒðŒ¦ÈïŒ¡³ ëÀÝ ±³ðŒ¢ÈçŒçÆÐ ìÁÉ«È¡È ùÄ²´ ª³ëÀÝ²³Ì ¬·Ìª·Ð¬·É«ÈÌ ¯³Ð ©³ÐèÁÝ«È¥³. ¬·ìŠ©³ÏëÆÌ ¯³ÐëÆÐ ¬·Ýÿ¼ªÈ¯¹ ¨³ÌæÆÐ«·Ü¥³åÆÌ êˆèÁÌ«È«ÈÜ¥³. ;;;;;;;;;;;;;x
+
+dwe_rhongomyniad;Rhongomyniad, the Light of World's End;;;;;;;;;;;;;x
+dwe_rhongomyniad_desc;The Holy Lance that once belonged to King Arthur, Rhongomyniad is often regarded in a similarly to the Lance of Longinus, as it conceals power far beyond its physical form.\n This is the weapon that Arthur is said to have used to kill Mordred at the Battle of Camlann, and that no matter the toughness of Mordred's armor, it amounted to nothing against the lance.;;;;;;;;;;;;;x
+
+dwe_semiramis_talon;The Talons of Assyria;;;;;;;;;;;;;x
+dwe_semiramis_talon_desc;Twin spikes of metal almost three inches in length, these belonged to Semiramis, the Empress of Assyria.\n Designed to be worn with the base flat against the palm of the hand, they are secured in place by several thin straps attached to a pair of gloves, and are meant to be dipped in poison.;;;;;;;;;;;;;x
+
+dwe_helen_apple;The Golden Apple;;;;;;;;;;;;;x
+dwe_helen_apple_desc;An apple of solid gold, inscribed with the greek words "to the most beautiful." Fabled to have caused the Trojan War.\n It is unclear whether this is indeed the very same apple, or merely a replica, but it is of exquisite craftsmanship nonetheless - truly worthy of being considered a divine work.;;;;;;;;;;;;;x
+
+dwe_cleopatra_necklace;The Necklace of Cleopatra;;;;;;;;;;;;;x
+dwe_cleopatra_necklace_desc;An ornate necklace of ancient egyptian style and make, this once belonged to Cleopatra, Queen of Egypt.\n It is said to have been worn by her on her death by suicide, and was buried with her as a symbol of her beauty and authority.;;;;;;;;;;;;;x
+
+dwe_medb_tiara;The Tiara of Connacht;;;;;;;;;;;;;x
+dwe_medb_tiara_desc;A delicate silver tiara of exquisite craftsmanship, this once belonged to Medb, the fabled queen of Connacht.\n It served both as a symbol of her fabled beauty, and of her powerful authority.;;;;;;;;;;;;;x
+
+dwe_gilgamesh_scepter;The Scepter of Heroes;;;;;;;;;;;;;x
+dwe_gilgamesh_scepter_desc;A majestic scepter of very ancient make, this once belonged to Gilgamesh, the King of Heroes himself.\n Although entirely ceremonial in nature, it seems to radiate power and authority, bearing the regal majesty of the ancient Babylonian King himself.;;;;;;;;;;;;;x

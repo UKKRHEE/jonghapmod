@@ -1,0 +1,35 @@
+#character
+on_startup = {
+	events = {
+		DWE.3 # Checks for Startup items such as making sure any random culture characters like orcs have associated traits, this can later diverge  			
+	        DWE.8 # Test event for DW Options
+        }
+    }
+on_chronicle_start = {
+	events = {
+		DWE.1 # Checks for Startup items such as making sure any random culture characters like orcs have associated traits, this can later diverge
+		#DWE.6 # Event for setting Rape content rules
+		 }
+	     
+}
+
+#character
+on_yearly_pulse = {
+	events = {
+		#DWE.3 # Checks for Startup items such as making sure any random culture characters like orcs have associated traits, this can later diverge
+		#DWE.4 # turns off assignment of traits for Children globally
+	}
+}
+
+
+#character
+on_birth = {
+	events = { 
+		DWE.5 # Sanity check for race trait assignment
+	}
+}
+on_release_from_prison = {
+	events = {
+	dwe_prisoner.5 #remove flags for any sexual offers
+	}
+}

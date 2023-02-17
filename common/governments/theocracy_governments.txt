@@ -1,0 +1,5 @@
+theocracy_governments = {
+
+	#
+	
+}

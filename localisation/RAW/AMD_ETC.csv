@@ -1,0 +1,155 @@
+#		Crusader Kings 2 : Advanced Medieval Desires
+
+#AMD_EV_DESC_LENGTH;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;	이벤트 창 1 line 제한 약 70byte
+
+
+AMD_String_AMD;(AMD) ;;;;;;;;;;;;x;
+
+
+e_AMD_NEXUS;지구 관리단;;;;;;;;;;;;x;
+e_AMD_NEXUS_adj;시공의;;;;;;;;;;;;x;
+AMD_MANAGER;APU;;;;;;;;;;;;x;
+AMD_MANAGER_FOA;APU;;;;;;;;;;;;x;
+
+#디시전Decisions;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_DCS_mod_config;AMD 모드 설정;;;;;;;;;;;;x;
+AMD_DCS_mod_config_desc;Advanced Medieval Desires 모드의 설정을 변경합니다.;;;;;;;;;;;;x;
+
+#약물;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_DCS_find_alchemist;연금술사 탐색;;;;;;;;;;;;x;
+AMD_DCS_find_alchemist_desc;[AMD_CLK_AMD]가문 유지 활동에 도움을 줄 수 있는 존재를 찾습니다.;;;;;;;;;;;;x;
+
+AMD_DCS_work_alchemist;약물 생산;;;;;;;;;;;;x;
+AMD_DCS_work_alchemist_desc;[AMD_CLK_AMD]미약, 피임약 등의 특별한 약물을 생산합니다.;;;;;;;;;;;;x;
+AMD_TD_alchemy_drug;약물 사용;;;;;;;;;;;;x;
+AMD_TD_alchemy_drug_desc;[AMD_CLK_AMD]모드 이벤트로 얻은 특수한 약물을 사용합니다.;;;;;;;;;;;;x;
+AMD_TD_alchemy_magic;신비한 의식;;;;;;;;;;;;x;
+AMD_TD_alchemy_magic_desc;[AMD_CLK_AMD]최음, 피임 등의 특수 효과를 내는 의식을 행합니다.;;;;;;;;;;;;x;
+
+#학습;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_DCS_sex_study;밤기술 연마;;;;;;;;;;;;x;
+AMD_DCS_sex_study_desc;[AMD_CLK_AMD]성적 능력을 향상시킬 방법을 찾습니다.;;;;;;;;;;;;x;
+
+#거래;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_DCS_visit_brothel;창관 방문;;;;;;;;;;;;x;
+AMD_DCS_visit_brothel_desc;[AMD_CLK_AMD]세상에서 가장 오래된 직업에 종사하는 사람들을 만나러 갑니다.;;;;;;;;;;;;x;
+AMD_DCS_work_brothel;창관에서 일하기;;;;;;;;;;;;x;
+AMD_DCS_work_brothel_desc;[AMD_CLK_AMD]밤의 부업을 하러 갑니다.;;;;;;;;;;;;x;
+AMD_DCS_quit_brothel;창관 그만두기;;;;;;;;;;;;x;
+AMD_DCS_quit_brothel_desc;[AMD_CLK_AMD]밤거리에서 몸을 파는 것은 [Root.GetTitle]에게 어울리지 않는 일입니다...;;;;;;;;;;;;x;
+
+#친애;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_TD_visit_lover;사랑의 밀회;;;;;;;;;;;;x;
+AMD_TD_visit_lover_desc;[AMD_CLK_AMD]배우자, 첩, 또는 연인과 함께 시간을 보냅니다.;;;;;;;;;;;;x;
+AMD_DCS_party_play;파티 플레이;;;;;;;;;;;;x;
+AMD_DCS_party_play_desc;[AMD_CLK_AMD]연인들을 한데 불러모아 동시에 즐겨보면 어떨까.;;;;;;;;;;;;x;
+
+#죄수;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_TD_visit_prisoner;감옥 방문;;;;;;;;;;;;x;
+AMD_TD_visit_prisoner_desc;[AMD_CLK_AMD]특별한 용건을 가지고 죄수를 방문합니다.;;;;;;;;;;;;x;
+AMD_TD_dynasty_manage;가문 관리;;;;;;;;;;;;x;
+AMD_TD_dynasty_manage_desc;[AMD_CLK_AMD][Root.GetFirstName] 는 당신의 자식입니다. 당신 가문으로 들이거나 분가시킬 수 있습니다. (WIP);;;;;;;;;;;;x;
+
+#승마;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_DCS_buy_horse;종마 구매;;;;;;;;;;;;x;
+AMD_DCS_buy_horse_desc;[AMD_CLK_AMD]마법과 같은 우정을 나눌 네 발 달린 친구를 찾습니다.;;;;;;;;;;;;x;
+AMD_TD_visit_beast;동물 친구 방문;;;;;;;;;;;;x;
+AMD_TD_visit_beast_desc;[AMD_CLK_AMD]종족의 벽을 넘어서 우정을 나누러 갑니다.;;;;;;;;;;;;x;
+
+#String_Custom_Tooltip;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+AMD_String_T_NOT_IN_COOLDOWN;AMD 모드 이벤트 종료 후 일정 시간이 지나야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_T_NOT_IN_ACTION;AMD 모드 이벤트가 진행중이 아니어야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_T_NOT_BUSY;투옥, 성지순례, 전투, 은신 등의 행동불능 사유가 없어야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_SUCCESS;성공\n;;;;;;;;;;;;x;
+AMD_String_FAIL;실패\n;;;;;;;;;;;;x;
+AMD_String_THE_YOU;당신;;;;;;;;;;;;x;
+AMD_String_THE_NAME;[This.GetFirstName];;;;;;;;;;;;x;
+AMD_String_THE_HIM;그;;;;;;;;;;;;x;
+AMD_String_THE_HER;그녀;;;;;;;;;;;;x;
+AMD_TT_ACM_XP_SKILL;지식이 늘었다.;;;;;;;;;;;;x;
+AMD_TT_EUREKA;유레카!;;;;;;;;;;;;x;
+
+AMD_String_T_HGF_IN_ACTION;다른 AMD 모드 이벤트가 진행중이 아니어야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_T_IS_BUSY;투옥, 성지순례, 전투, 은신 등의 행동불능 사유가 있습니다.\n;;;;;;;;;;;;x;
+AMD_String_T_CAN_ACCESS_PREV;두 사람은 같은 위치에 있어야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_E_HP_DAMAGE;무리한 성행위는 건강에 악영향을 줄 수 있습니다.\n;;;;;;;;;;;;x;
+AMD_String_T_IS_DOABLE_AGE;성적 이벤트가 가능한 연령이어야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_T_IS_DOABLE_HUMAN;인간, 12세 이상, 50세 미만이거나 고령에도 불구하고 성행위가 가능한 몸이어야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_T_IS_DOABLE_HORSE;말, 6세 이상, 30세 미만이거나 고령에도 불구하고 성행위가 가능한 몸이어야 합니다.\n;;;;;;;;;;;;x;
+AMD_String_T_IS_CANNOT_PLAY_GAME;임신, 성불구자, 기타 성적인 행위가 불가능한 문제가 있어서는 안됩니다.\n;;;;;;;;;;;;x;
+
+AMD_String_E_ACM_PARTY;당신과 즐거운 시간을 보낼 것입니다.\n;;;;;;;;;;;;x;
+
+AMD_String_E_DEATH_HOTS;역사의 뒷면으로 사라져 사망자로 간주됩니다.\n;;;;;;;;;;;;x;
+
+AMD_String_T_HGF_BROTHEL_HOMO;성평등 고용\n;;;;;;;;;;;;x;
+AMD_String_T_HGF_BROTHEL_ORGY;작업장 확대\n;;;;;;;;;;;;x;
+AMD_String_T_HGF_BROTHEL_BEAST;다문화 시장\n;;;;;;;;;;;;x;
+
+#건물BUILDING;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_building_brothel_castle_1;마을 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_castle_2;마을 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_castle_3;마을 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_castle_4;마을 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_castle_desc;마을의 집창촌입니다.;;;;;;;;;;;;x;
+AMD_building_brothel_city_1;도시 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_city_2;도시 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_city_3;도시 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_city_4;도시 홍등가;;;;;;;;;;;;x;
+AMD_building_brothel_city_desc;도시의 집창촌입니다.;;;;;;;;;;;;x;
+AMD_building_brothel_temple;퇴폐적인 사원;;;;;;;;;;;;x;
+AMD_building_brothel_temple_desc;신전매춘 등 잊혀진 고대의 관습을 지키는 소수 종파의 사원입니다.;;;;;;;;;;;;x;
+AMD_building_brothel_tribal;부족 집창촌;;;;;;;;;;;;x;
+AMD_building_brothel_tribal_desc;부족의 집창촌입니다.;;;;;;;;;;;;x;
+AMD_building_brothel_nomad_1;이동 매춘업자;;;;;;;;;;;;x;
+AMD_building_brothel_nomad_2;이동 매춘업자;;;;;;;;;;;;x;
+AMD_building_brothel_nomad_3;이동 매춘업자;;;;;;;;;;;;x;
+AMD_building_brothel_nomad_4;이동 매춘업자;;;;;;;;;;;;x;
+AMD_building_brothel_nomad_desc;술과 여자. 초원의 남자들이 좋아하는 것입니다.;;;;;;;;;;;;x;
+AMD_building_brothel_tradepost;무역 창관;;;;;;;;;;;;x;
+AMD_building_brothel_tradepost_desc;무역상인들을 위한 성매매 시설입니다.;;;;;;;;;;;;x;
+AMD_building_brothel_fort;특수위안시설;;;;;;;;;;;;x;
+AMD_building_brothel_fort_desc;요새 주둔군을 위한 성매매 시설입니다. 이 시설은 창관 이벤트 실행 조건에 해당하지 않습니다.;;;;;;;;;;;;x;
+
+#아이템Artifacts;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_chinese_book_erotic;소녀경;;;;;;;;;;;;x;
+AMD_chinese_book_erotic_desc;도교의 이단인 방중술에 대해 다룬 책입니다.;;;;;;;;;;;;x;
+AMD_lusty_armenian_maid;음란한 아르메니안 메이드;;;;;;;;;;;;x;
+AMD_lusty_abyssinian_maid;음란한 아비시니안 메이드;;;;;;;;;;;;x;
+AMD_lusty_armenian_maid_desc;바실렙스의 창을 닦는 아르메니아인 하녀의 이야기를 실감나게 써낸 걸작입니다.;;;;;;;;;;;;x;
+AMD_lusty_abyssinian_maid_desc;솔로몬 왕의 창을 닦는 아비시니아인 하녀의 이야기를 현실적인 묘사로 표현한 걸작입니다. 표절 의혹이 있습니다.;;;;;;;;;;;;x;
+
+AMD_drug_aphrodisiac;미약;;;;;;;;;;;;x;
+AMD_drug_aphrodisiac_xeno;주라겔;;;;;;;;;;;;x;
+AMD_drug_aphrodisiac_desc;복용한 자를 강력한 성적 흥분상태로 만들어주는 약물입니다. 성행위시 좋은 결과를 얻을 확률을 높여주는 효과가 있으며, 성행위의 연령제한 상한선을 무시합니다.;;;;;;;;;;;;x;
+AMD_drug_contraceptive;피임약;;;;;;;;;;;;x;
+AMD_drug_contraceptive_xeno;사트라민 혼합물;;;;;;;;;;;;x;
+AMD_drug_contraceptive_desc;복용한 자를 불임상태로 만들어주는 약물입니다. 이미 임신하고 있는 자에게는 사용할 수 없습니다.;;;;;;;;;;;;x;
+AMD_drug_fertilizer;임신약;;;;;;;;;;;;x;
+AMD_drug_fertilizer_xeno;피타란 가루;;;;;;;;;;;;x;
+AMD_drug_fertilizer_desc;복용한 자를 가임상태로 만들어주는 약물입니다. 임신의 연령제한 상한선을 무시합니다.;;;;;;;;;;;;x;
+AMD_drug_enlarger;성장촉진제;;;;;;;;;;;;x;
+AMD_drug_enlarger_xeno;리건 스파이스;;;;;;;;;;;;x;
+AMD_drug_enlarger_desc;복용하면 특정 신체부위가 성장하는 약물입니다. 이미 충분히 거대한 몸에 사용할 경우 효과가 없습니다.;;;;;;;;;;;;x;
+
+
+#명예직MinorTitles;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+title_AMD_courtesan;비밀 친구;;;;;;;;;;;;x;
+title_AMD_courtesan_desc;[AMD_CLK_AMD]맛있는 것도 같이 먹고 남들이 못할 경험도 하는 친구입니다.;;;;;;;;;;;;x;
+
+
+#닉네임Nicknames;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+nick_AMD_horsefucker;말박이;;;;;;;;;;;;x;
+nick_AMD_bearfucker;곰박이;;;;;;;;;;;;x;
+nick_AMD_catfucker;고양이박이;;;;;;;;;;;;x;
+nick_AMD_xenofucker;이종박이;;;;;;;;;;;;x;
+nick_AMD_unicorn;유니콘;;;;;;;;;;;;x;
+nick_AMD_lolicon;소아성애자;;;;;;;;;;;;x;
+nick_AMD_rabbit;토끼;;;;;;;;;;;;x;
+nick_AMD_earthworm;지렁이;;;;;;;;;;;;x;
+nick_AMD_shortsword;숏소드;;;;;;;;;;;;x;
+nick_AMD_longsword;롱소드;;;;;;;;;;;;x;
+nick_AMD_centaur;켄타우로스;;;;;;;;;;;;x;
+nick_AMD_milkcow;젖소;;;;;;;;;;;;x;
+nick_AMD_cliff;절벽;;;;;;;;;;;;x;

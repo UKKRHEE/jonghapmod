@@ -1,0 +1,120 @@
+
+decisions = {
+	elven_faith = {
+		potential = {
+			ai = no # Only the player should ever see this
+			
+			NOT = { religion = elven_pagan }
+			NOT = { religion = elven_pagan_reformed }
+			trait = elf
+	
+		}
+		allow = {
+			prisoner = no # Hard to visit while in a jail cell
+			in_command = no # Hard to visit when leading troops to battle
+		}
+		effect = {
+			
+			religion = elven_pagan
+			character_event = { id = elfseasons.1 }
+			
+			
+		}
+		revoke_allowed = {
+			always = no # Generic setting
+		}
+		ai_will_do = {
+			factor = 0 # Zero chance the ai uses this
+		}
+	}
+	
+		recruit_elven_commander = {
+		ai_check_interval = 24 # AI wont recruit except every two years
+		potential = {
+			trait = elf
+		}
+		allow = {
+			is_ruler = yes
+			scaled_wealth = 1.00
+			prisoner = no
+			trait = elf
+			NOT = {
+				has_character_modifier = in_seclusion
+				
+			}
+		}
+		effect = {
+			scaled_wealth = -1.00
+			narrative_event = { id = elvenRecruit.1 }
+		}
+		ai_will_do = {
+			factor = 0.1 # Every two years there is a 10% chance they will take this decision
+		}
+	}	
+		recruit_elven_seer = {
+		ai_check_interval = 24 # AI wont recruit except every two years
+		potential = {
+			trait = elf
+		}
+		allow = {
+			is_ruler = yes
+			scaled_wealth = 1.00
+			prisoner = no
+			trait = elf
+			NOT = {
+				has_character_modifier = in_seclusion
+			}
+		}
+		effect = {
+			scaled_wealth = -1.00
+			scaled_piety = -1.00
+			narrative_event = { id = elvenRecruit.2 }
+		}
+		ai_will_do = {
+			factor = 0.1 # Every two years there is a 10% chance they will take this decision
+		}
+	}
+	
+	gain_bloodline = {
+		ai_check_interval = 24 # AI wont recruit except every two years
+		potential = {
+			trait = elf
+			ai = no
+			NOT = {
+				bloodline = orion_bloodline
+				bloodline = ellenastra_bloodline
+				bloodline = corellon_bloodline
+				bloodline = ravenspire_bloodline
+			}
+		}
+		allow = {
+			is_ruler = yes
+			prisoner = no
+			trait = elf
+			religion = elven_pagan_reformed
+			NOT = {
+				has_character_modifier = in_seclusion
+				bloodline = orion_bloodline
+				bloodline = ellenastra_bloodline
+				bloodline = corellon_bloodline
+				bloodline = ravenspire_bloodline
+			}
+		}
+		effect = {
+			narrative_event = { id = elfblood.2 }
+		}
+	}
+	
+	block_season_popup = {
+		ai_check_interval = 24 # AI wont recruit except every two years
+		potential = {
+			ai = no
+			NOT = {
+				has_global_flag = block_seasons_true
+			}
+		}
+		effect = {
+			set_global_flag = block_seasons_true
+		}
+	}
+}

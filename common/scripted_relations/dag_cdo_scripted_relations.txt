@@ -1,6 +1,0 @@
-﻿dag_cdo_court_slaver = {
-	#~Court physicain is hidden, but shows up in the minor titles section:
-	#~I do not really want to be fucking around with the UI, as apparently is annoying as fuck
-	#~So removed hidden flag until above issue is addressed.
-#	hidden = yes
-}

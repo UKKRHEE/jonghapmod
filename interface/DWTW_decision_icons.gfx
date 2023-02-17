@@ -1,0 +1,39 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_dwf_a_hide_unimportant_shit"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_a_show_unimportant_shit"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_a_claim_lilith_bloodline"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_a_claim_incubus_bloodline"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_a_claim_slaver_bloodline"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_a_dark_world_options"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_a_fairy_starting_trait"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_recruit_exotic"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_remove_parentage"
+		texturefile = "gfx\\interface\\dwf_decisions.dds"
+	}
+}	

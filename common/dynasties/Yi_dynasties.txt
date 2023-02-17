@@ -1,0 +1,225 @@
+
+1062562 = {
+	name = "Li" #이극용
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 1
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000000 = {
+	name = "Yi"
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000001 = {
+	name = "Yi"
+	religion="catholic"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 1
+		}
+		religion = catholic
+	}
+	used_for_random=no
+}
+
+20000002 = {
+	name = "Yi"
+	religion="catholic"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 1
+		}
+		religion = catholic
+	}
+	used_for_random=no
+}
+
+20000003 = {
+	name = "Wxiano-Nekianois-Yi"
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+}
+
+20000004 = {
+	name = "Rhee"
+	religion="catholic"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 1
+		}
+		religion = catholic
+	}
+	used_for_random=no
+}
+20000005 = {
+	name="Muhammad-Hashimid"
+	culture="bedouin_arabic"
+	religion="pagan"
+	coat_of_arms=
+	{
+		data=
+		{
+0 0 0 4 0 2 2 			}
+		religion="sunni"
+	}
+	forced_coa_religiongroup="muslim"
+}
+
+20000006 = {
+	name="Karolusburg"
+	religion="catholic"
+	coat_of_arms=
+	{
+		data=
+		{
+0 5 0 35 0 0 0 			}
+		religion="catholic"
+	}
+}
+
+20000007 = {
+	name="von Lutelsburg"
+	religion="catholic"
+}
+
+20000008 = {
+	name="von Branden-Lutelsburg"
+	religion="catholic"
+}
+20000009 = {
+	name="von Brandenburg"
+	religion="catholic"
+}
+20000010 = {
+	name="Petrograd"
+	religion="catholic"
+}
+20000011 = {
+	name="Penis"
+	religion="catholic"
+}
+
+20000012 = {
+	name = "Yi"
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000013 = {
+	name = "Yi"
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000014 = {
+	name = "Yi"
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000015 = {
+	name = "Yi"
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000016 = {
+	name = "Yi"
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000017 = {
+	name = "Yi"
+	culture = korean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 32
+		}
+		religion = catholic
+	}
+	used_for_random = no
+}
+20000018 = {
+	name = "Quisestprimus"
+	culture = roman
+	used_for_random = no
+}
+20000019 = {
+	name = "Lyu"
+	religion="catholic"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 1
+		}
+		religion = catholic
+	}
+	used_for_random=no
+}

@@ -1,0 +1,1147 @@
+namespace = DWFChildren
+
+# Gain Masculine
+character_event = {
+	id = DWFChildren.1
+	desc = DWFChildren1
+	picture = "GFX_evt_child_play"
+	only_women = yes
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+
+	trigger = {
+		NOT = { personality_traits = 5 }
+		NOT = { trait = masculine }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = dw_refused_masculine }
+	}
+		
+	option = {
+		name = DWFChildren1TT
+		add_trait = masculine
+		hidden_tooltip = {
+			educator = {
+				character_event = {
+					id = DWFChildren.2
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = DWFChildren.2
+	desc = DWFChildren2
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren2TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 4
+				trait = masculine
+			}
+			modifier = {
+				factor = 4
+				trait = feminine
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+
+		FROM = {
+			tooltip = {
+				add_trait = masculine
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_happy_with_guardian
+				years = 2
+			}
+		}
+	}
+	
+	option = {
+		name = DWFChildren2TTB # Birch Him!
+		trigger = {
+			NOT = { trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = cruel
+			}
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+			modifier = {
+				factor = 0
+				trait = masculine
+			}
+			modifier = {
+				factor = 0
+				trait = feminine
+			}
+		}
+		
+		pacifists_lose_piety_effect = yes
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			FROM = { 
+				remove_trait = masculine
+				hidden_tooltip = { 
+					character_event = { 
+						id = DWFChildren.3 
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = DWFChildren2TTC # Pray God will save her..
+		trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+			NOT = { trait = cynical }
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 150
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = masculine
+					trait = feminine
+				}
+			}
+		}
+		
+		piety = 5
+		random = {
+			chance = 20 
+			FROM = { 
+				remove_trait = masculine
+				hidden_tooltip = { 
+					character_event = {	
+						id = DWFChildren.3
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages masculine
+character_event = {
+	id = DWFChildren.3
+	desc = DWFChildren3
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = masculine
+		}
+	}
+	
+	option = {
+		name = DWFChildren3TT
+		remove_trait = masculine
+		set_character_flag = dw_refused_masculine
+	}
+}
+
+# Gain Feminine
+# On-action: on_yearly_childhood_pulse
+character_event = {
+	id = DWFChildren.4
+	desc = DWFChildren4
+	picture = "GFX_evt_child_play"
+	only_men = yes
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+
+	trigger = {
+		NOT = { personality_traits = 5 }
+		NOT = { trait = feminine }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = dw_refused_feminine }
+	}
+		
+	option = {
+		name = DWFChildren4TT
+		add_trait = feminine
+		hidden_tooltip = {
+			educator = {
+				character_event = {
+					id = DWFChildren.5
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = DWFChildren.5
+	desc = DWFChildren5
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren5TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 4
+				trait = masculine
+			}
+			modifier = {
+				factor = 4
+				trait = feminine
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+
+		FROM = {
+			tooltip = {
+				add_trait = feminine
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_happy_with_guardian
+				years = 2
+			}
+		}
+	}
+	
+	option = {
+		name = DWFChildren5TTB # Birch Him!
+		trigger = {
+			NOT = { trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = cruel
+			}
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+			modifier = {
+				factor = 0
+				trait = masculine
+			}
+			modifier = {
+				factor = 0
+				trait = feminine
+			}
+		}
+		
+		pacifists_lose_piety_effect = yes
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			FROM = { 
+				remove_trait = feminine
+				hidden_tooltip = { 
+					character_event = { 
+						id = DWFChildren.6
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = DWFChildren5TTC # Pray God will save her..
+		trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+			NOT = { trait = cynical }
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 150
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = masculine
+					trait = feminine
+				}
+			}
+		}
+		
+		piety = 5
+		random = {
+			chance = 20 
+			FROM = { 
+				remove_trait = feminine
+				hidden_tooltip = { 
+					character_event = {	
+						id = DWFChildren.6
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages feminine
+character_event = {
+	id = DWFChildren.6
+	desc = DWFChildren6
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = feminine
+		}
+	}
+	
+	option = {
+		name = DWFChildren6TT
+		remove_trait = feminine
+		set_character_flag = dw_refused_feminine
+	}
+}
+
+character_event = { # Masculine/feminine routing event
+	id = DWFChildren.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				is_female = yes
+			}
+			character_event = { id = DWFChildren.1 }
+		}
+		else = {
+			character_event = { id = DWFChildren.4 }
+		}
+	}
+}
+
+character_event = { # Big/Small Tits/Dick Lover routing event
+	id = DWFChildren.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_guardian = yes
+		age = 13
+		NOR = {
+			has_character_flag = dw_refused_tits_lover
+			has_character_flag = dw_refused_dick_lover
+		}
+		educator = {
+			practical_age < 50
+			OR = {
+				trait = huge_tits
+				trait = enormous_tits
+				trait = gigantic_tits
+				trait = tiny_tits
+				trait = small_tits
+				trait = regular_tits
+				trait = big_dick
+				trait = huge_dick
+				trait = enormous_dick
+				trait = gigantic_dick
+				trait = small_dick
+				trait = tiny_dick
+			}
+		}		
+	}
+	immediate = {
+		if = { # Big Tits Lover assignment
+			limit = {
+				educator = {
+					OR = {
+						trait = huge_tits
+						trait = enormous_tits
+						trait = gigantic_tits
+					}
+				}
+				OR = {
+					NOT = { is_female = yes }
+					AND = {
+						is_female = yes
+						trait = homosexual
+					}
+				}
+			}
+			educator = {
+				save_event_target_as = tits_haver
+			}
+			save_event_target_as = tits_lover
+			character_event = { id = DWFChildren.9 }
+			break = yes
+		}
+		else_if = { # Small Tits Lover assignment
+			limit = {
+				educator = {
+					OR = {
+						trait = tiny_tits
+						trait = small_tits
+						trait = regular_tits
+					}
+				}
+				OR = {
+					is_female = no
+					AND = {
+						is_female = yes
+						trait = homosexual
+					}
+				}
+			}
+			educator = {
+				save_event_target_as = tits_haver
+			}
+			save_event_target_as = tits_lover
+			character_event = { id = DWFChildren.10 }
+		}
+		
+		else_if = { # Big Dick Lover assignment
+			limit = {
+				educator = {
+					OR = {
+						trait = big_dick
+						trait = huge_dick
+						trait = enormous_dick
+						trait = gigantic_dick
+					}
+					NOT = { trait = futa }
+				}
+				OR = {
+					is_female = yes
+					AND = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+			}
+			educator = {
+				save_event_target_as = dick_haver
+			}
+			save_event_target_as = dick_lover
+			character_event = { id = DWFChildren.11 }
+		}
+		else_if = { # Small Dick Lover assignment
+			limit = {
+				educator = {
+					OR = {
+						trait = tiny_dick
+						trait = small_dick
+					}
+					NOT = { trait = futa }
+				}
+				OR = {
+					is_female = yes
+					AND = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+			}
+			educator = {
+				save_event_target_as = dick_haver
+			}
+			save_event_target_as = dick_lover
+			character_event = { id = DWFChildren.12 }
+		}
+	}
+}
+
+#Gain Big Tits Lover
+character_event = {
+	id = DWFChildren.9
+	desc = DWFChildren9
+	picture = "GFX_evt_child_play"
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { trait = big_tits_lover }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = dw_refused_tits_lover }
+	}
+		
+	option = {
+		name = DWFChildren9TT
+		add_trait = big_tits_lover
+		hidden_tooltip = {
+			event_target:tits_haver = {
+				character_event = {	id = DWFChildren.13	}
+			}
+		}
+	}
+}
+
+#Gain Small Tits Lover
+character_event = {
+	id = DWFChildren.10
+	desc = DWFChildren10
+	picture = "GFX_evt_child_play"
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { trait = small_tits_lover }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = dw_refused_tits_lover }
+	}
+		
+	option = {
+		name = DWFChildren10TT
+		add_trait = small_tits_lover
+		hidden_tooltip = {
+			event_target:tits_haver = {
+				character_event = {
+					id = DWFChildren.17
+				}
+			}
+		}
+	}
+}
+
+#Gain Big Dick Lover
+character_event = {
+	id = DWFChildren.11
+	desc = DWFChildren11
+	picture = "GFX_evt_child_play"
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { trait = big_dick_lover }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = dw_refused_dick_lover }
+	}
+		
+	option = {
+		name = DWFChildren11TT
+		add_trait = big_dick_lover
+		hidden_tooltip = {
+			event_target:dick_haver = {
+				character_event = {
+					id = DWFChildren.21
+				}
+			}
+		}
+	}
+}
+
+#Gain Small Dick Lover
+character_event = {
+	id = DWFChildren.12
+	desc = DWFChildren12
+	picture = "GFX_evt_child_play"
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { trait = small_dick_lover }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = dw_refused_dick_lover }
+	}
+		
+	option = {
+		name = DWFChildren12TT
+		add_trait = small_dick_lover
+		hidden_tooltip = {
+			event_target:dick_haver = {
+				character_event = {
+					id = DWFChildren.25
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Big breasted guardian finds out
+	id = DWFChildren.13
+	desc = DWFChildren13
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren13TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = lustful
+			}
+			modifier = {
+				factor = 5
+				trait = hedonist
+			}
+		}
+
+		event_target:tits_lover = {
+			hidden_tooltip = {
+				character_event = { id = DWFChildren.15	}
+			}
+		}
+		character_event = { id = DWFChildren.16 }
+	}
+	
+	option = {
+		name = DWFChildren13TTB # Birch Him!
+		trigger = {
+			NOT = { trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = lustful
+			}
+			modifier = {
+				factor = 0
+				trait = hedonist
+			}
+		}
+		
+		reverse_opinion = {
+			who = event_target:tits_lover
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			event_target:tits_lover = { 
+				remove_trait = big_tits_lover
+				hidden_tooltip = { 
+					character_event = { id = DWFChildren.14 }
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages child
+character_event = {
+	id = DWFChildren.14
+	desc = DWFChildren14
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = big_tits_lover
+		}
+	}
+	
+	option = {
+		name = DWFChildren14TT
+		remove_trait = big_tits_lover
+		set_character_flag = dw_refused_tits_lover
+	}
+}
+
+# Guardian "encourages" Big Tits Lover - Child viewpoint
+long_character_event = {
+	id = DWFChildren.15
+	desc = DWFChildren15
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren15TT
+		opinion = {
+			who = event_target:tits_haver
+			modifier = opinion_happy_with_guardian
+			years = 2
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}
+
+# Guardian "encourages" Big Tits Lover - Guardian viewpoint
+long_character_event = {
+	id = DWFChildren.16
+	desc = DWFChildren16
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = DWFChildren16TT
+		event_target:tits_lover = {
+			remove_trait = virgin
+		}
+		if = {
+			limit = {
+				trait = virgin
+			}
+			remove_trait = virgin
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}
+
+character_event = { # Small breasted guardian finds out
+	id = DWFChildren.17
+	desc = DWFChildren13
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren13TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = lustful
+			}
+			modifier = {
+				factor = 5
+				trait = hedonist
+			}
+		}
+
+		event_target:tits_lover = {
+			hidden_tooltip = {
+				character_event = { id = DWFChildren.19	}
+			}
+		}
+		character_event = { id = DWFChildren.20 }
+	}
+	
+	option = {
+		name = DWFChildren13TTB # Birch Him!
+		trigger = {
+			NOT = { trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = lustful
+			}
+			modifier = {
+				factor = 0
+				trait = hedonist
+			}
+		}
+		
+		reverse_opinion = {
+			who = event_target:tits_lover
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			event_target:tits_lover = { 
+				remove_trait = small_tits_lover
+				hidden_tooltip = { 
+					character_event = { id = DWFChildren.18 }
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages child
+character_event = {
+	id = DWFChildren.18
+	desc = DWFChildren14
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = small_tits_lover
+		}
+	}
+	
+	option = {
+		name = DWFChildren14TT
+		remove_trait = small_tits_lover
+		set_character_flag = dw_refused_tits_lover
+	}
+}
+
+# Guardian "encourages" Small Tits Lover - Child viewpoint
+long_character_event = {
+	id = DWFChildren.19
+	desc = DWFChildren15
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren15TT
+		opinion = {
+			who = event_target:tits_haver
+			modifier = opinion_happy_with_guardian
+			years = 2
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}
+
+# Guardian "encourages" Small Tits Lover - Guardian viewpoint
+long_character_event = {
+	id = DWFChildren.20
+	desc = DWFChildren16
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = DWFChildren16TT
+		event_target:tits_lover = {
+			remove_trait = virgin
+		}
+		if = {
+			limit = {
+				trait = virgin
+			}
+			remove_trait = virgin
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}
+
+character_event = { # Big dicked guardian finds out
+	id = DWFChildren.21
+	desc = DWFChildren21
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren21TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = lustful
+			}
+			modifier = {
+				factor = 5
+				trait = hedonist
+			}
+		}
+
+		event_target:dick_lover = {
+			hidden_tooltip = {
+				character_event = { id = DWFChildren.23	}
+			}
+		}
+		character_event = { id = DWFChildren.24 }
+	}
+	
+	option = {
+		name = DWFChildren21TTB # Birch Him!
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = lustful
+			}
+			modifier = {
+				factor = 0
+				trait = hedonist
+			}
+		}
+		
+		reverse_opinion = {
+			who = event_target:dick_lover
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			event_target:dick_lover = { 
+				remove_trait = big_dick_lover
+				hidden_tooltip = { 
+					character_event = { id = DWFChildren.22 }
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages child
+character_event = {
+	id = DWFChildren.22
+	desc = DWFChildren22
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = big_dick_lover
+		}
+	}
+	
+	option = {
+		name = DWFChildren22TT
+		remove_trait = big_dick_lover
+		set_character_flag = dw_refused_dick_lover
+	}
+}
+
+# Guardian "encourages" Big Dick Lover - Child viewpoint
+long_character_event = {
+	id = DWFChildren.23
+	desc = DWFChildren23
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren23TT
+		opinion = {
+			who = event_target:dick_haver
+			modifier = opinion_happy_with_guardian
+			years = 2
+		}
+		if = {
+			limit = {
+				trait = virgin
+			}
+			remove_trait = virgin
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}
+
+# Guardian "encourages" Big Dick Lover - Guardian viewpoint
+long_character_event = {
+	id = DWFChildren.24
+	desc = DWFChildren24
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = DWFChildren24TT
+		if = {
+			limit = {
+				trait = virgin
+			}
+			remove_trait = virgin
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}
+
+character_event = { # Small dicked guardian finds out
+	id = DWFChildren.25
+	desc = DWFChildren21
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren21TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = lustful
+			}
+			modifier = {
+				factor = 5
+				trait = hedonist
+			}
+		}
+
+		event_target:dick_lover = {
+			hidden_tooltip = {
+				character_event = { id = DWFChildren.27	}
+			}
+		}
+		character_event = { id = DWFChildren.28 }
+	}
+	
+	option = {
+		name = DWFChildren21TTB # Birch Him!
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = lustful
+			}
+			modifier = {
+				factor = 0
+				trait = hedonist
+			}
+		}
+		
+		reverse_opinion = {
+			who = event_target:dick_lover
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			event_target:dick_lover = { 
+				remove_trait = small_dick_lover
+				hidden_tooltip = { 
+					character_event = { id = DWFChildren.26 }
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages child
+character_event = {
+	id = DWFChildren.26
+	desc = DWFChildren22
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = small_dick_lover
+		}
+	}
+	
+	option = {
+		name = DWFChildren22TT
+		remove_trait = small_dick_lover
+		set_character_flag = dw_refused_dick_lover
+	}
+}
+
+# Guardian "encourages" Small Dick Lover - Child viewpoint
+long_character_event = {
+	id = DWFChildren.27
+	desc = DWFChildren23
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DWFChildren23TT
+		opinion = {
+			who = event_target:dick_haver
+			modifier = opinion_happy_with_guardian
+			years = 2
+		}
+		if = {
+			limit = {
+				trait = virgin
+			}
+			remove_trait = virgin
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}
+
+# Guardian "encourages" Small Dick Lover - Guardian viewpoint
+long_character_event = {
+	id = DWFChildren.28
+	desc = DWFChildren24
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = DWFChildren24TT
+		if = {
+			limit = {
+				trait = virgin
+			}
+			remove_trait = virgin
+		}
+		add_character_modifier = {
+			name = dw_good_sex
+			duration = 30
+		}		
+	}
+}

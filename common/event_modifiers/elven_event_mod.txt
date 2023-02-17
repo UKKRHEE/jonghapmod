@@ -1,0 +1,35 @@
+##seasonal
+spring = {
+            icon = 48
+	        fort_level = 0.5
+			land_morale = -0.1
+}
+
+summer = {
+            icon = 48
+			land_morale = 0.2
+			fort_level = -0.5
+}
+
+fall = {
+            icon = 48
+			land_morale = 0.1
+			fort_level = 0.5
+}
+
+winter = {
+            icon = 48
+	        land_morale = -0.2
+			fort_level = 1.0
+}
+
+#post victory
+breedingSlaves = {
+			icon = 1
+	        levy_reinforce_rate = 0.1
+}
+
+fightingSlaves = {
+			icon = 39
+	        land_morale = 0.1
+}

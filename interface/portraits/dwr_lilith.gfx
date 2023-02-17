@@ -1,0 +1,99 @@
+spriteTypes = {
+
+# Misc characters
+	spriteType = {
+		name = "GFX_portrait_dwr_lilith"
+		texturefile = "gfx/static_portraits/dwr_lilith.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+    portraitType = {
+        name = "PORTRAIT_dwr_lilith_static"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 100000
+                portrait_clothing = yes
+				OR = {
+					portrait_offmap = offmap_lilith
+				}
+	 		}
+        }
+
+        layer = {
+			"GFX_empty:p0"
+			"GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_dwr_lilith:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+				0  = { always = yes }
+            }
+            14 = {
+				0  = { always = yes }
+            }
+            15 = {
+				0  = { always = yes }
+            }
+            16 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_offmap = offmap_lilith }
+				2 = { always = no }
+				3 = { always = no }
+				4 = { always = no }
+				5 = { always = no }
+				6 = { always = no }
+				7 = { always = no }
+				8 = { always = no }
+				9 = { always = no }
+				10 = { always = no }
+				11 = { always = no }
+				12 = { always = no }
+				13 = { always = no }
+				14 = { always = no }
+				15 = { always = no }
+				16 = { always = no }
+				17 = { always = no }
+				18 = { always = no }
+				19 = { always = no }
+				20 = { always = no }
+				21 = { always = no }
+				22 = { always = no }
+				23 = { always = no }
+				24 = { always = no }
+				25 = { always = no }
+				26 = { always = no }
+			}
+		}
+	}
+}

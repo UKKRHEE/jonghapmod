@@ -1,0 +1,805 @@
+#숏타임 에코 : 성적대상이 된 PC에게도 동일한 이벤트를 보여줍니다. 기본선택지의 효과 제거, CG랜덤을 위한 난수설정 제거 (예정)
+character_event = {	id = AMD_PLAY.11109		#	2P	화간
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_2PNC_10
+	desc = AMD_EV_DESC_2PNC_OLD
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		AMD_E_SOUND_3 = yes	#Girl Sound
+		#	Local RNG for PICTURE
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}	}	#	소	1 2 3 4 5 6 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 12	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_3 = yes	}	}	#	중	1 2 6 7 8 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 8	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 12	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}	}	#	대	1 2 8 9 10 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 8	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 9	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				60 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+				60 = {	set_variable = {	which = local_evpn	value = 12	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+	}
+	desc = {	picture = GFX_AMD_2PNM_01	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 0	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_01	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_02	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_03	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_04	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_05	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 5	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_06	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 6	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_07	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 7	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_08	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 8	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_09	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 9	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_10	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 10	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_11	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 11	}	}	}
+	desc = {	picture = GFX_AMD_2PNM_12	text = AMD_EV_DESC_2PNC_OLD	trigger = {	check_variable = {	which = local_evpn	value == 12	}	}	}
+	
+	option = {	name = AMD_EV_OPT_2P_OLD
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11209		#	2P	강간
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_2PNC_10
+	desc = AMD_EV_DESC_2PNR_OLD
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		AMD_E_SOUND_3 = yes	#Girl Sound
+		#	Local RNG for PICTURE
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}	}	#	소	1 2 3 4 7 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 12	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_3 = yes	}	}	#	중	1 4 5 6 7 / 11
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}	}	#	대	1 4  7 8 9 10 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 8	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 9	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				60 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+	}
+	desc = {	picture = GFX_AMD_2PNB_01	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 0	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_01	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_02	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_03	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_04	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_05	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 5	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_06	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 6	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_07	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 7	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_08	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 8	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_09	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 9	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_10	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 10	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_11	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 11	}	}	}
+	desc = {	picture = GFX_AMD_2PNB_12	text = AMD_EV_DESC_2PNR_OLD	trigger = {	check_variable = {	which = local_evpn	value == 12	}	}	}
+	
+	option = {	name = AMD_EV_OPT_2P_OLD
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11309		#	2P	역간
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_2PNC_10
+	desc = AMD_EV_DESC_2PNF_OLD
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		AMD_E_SOUND_3 = yes	#Girl Sound
+		#	Local RNG for PICTURE
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}	}	#	소	1 2 3 10 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				40 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+				40 = {	set_variable = {	which = local_evpn	value = 12	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_3 = yes	}	}	#	중	3 4 5 10 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				40 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+				40 = {	set_variable = {	which = local_evpn	value = 12	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}	}	#	대	5 6 7 8 9 10 / 11 12
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 8	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 9	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 11	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+				50 = {	set_variable = {	which = local_evpn	value = 12	}	modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = no	}	}	}
+			}
+		}
+	}
+	desc = {	picture = GFX_AMD_2PNC_10	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 0	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_01	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_02	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_03	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_04	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_05	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 5	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_06	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 6	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_07	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 7	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_08	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 8	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_09	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 9	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_10	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 10	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_11	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 11	}	}	}
+	desc = {	picture = GFX_AMD_2PNC_12	text = AMD_EV_DESC_2PNF_OLD	trigger = {	check_variable = {	which = local_evpn	value == 12	}	}	}
+	
+	option = {	name = AMD_EV_OPT_2P_OLD
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11409		#	2P	레즈
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_TITLE
+	desc = AMD_EV_DESC_2P_LES
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		AMD_E_SOUND_3 = yes	#Girl Sound
+		#	Local RNG for PICTURE
+		if = {	#	ss
+			limit = {
+				event_target:AMD_ET_ATK = {	AMD_T_SIZE_SMALL = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}
+			}
+			random_list = {	#	Local RNG for PICTURE
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 14	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 18	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 19	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 22	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 23	}	}
+			}
+		}
+		if = {	#	sm
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_SIZE_SMALL = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}
+				}
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_SIZE_3 = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_SIZE_3 = yes	}
+				}
+			}
+			random_list = {	#	Local RNG for PICTURE
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 15	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 18	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 19	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 20	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 22	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 23	}	}
+			}
+		}
+		if = {	#	sl
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_SIZE_SMALL = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}
+				}
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_SIZE_LARGE = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}
+				}
+			}
+			random_list = {	#	Local RNG for PICTURE
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 8	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 9	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 16	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 17	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 19	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 22	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 23	}	}
+			}
+		}
+		if = {	#	mm
+			limit = {
+				event_target:AMD_ET_ATK = {	AMD_T_SIZE_3 = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_SIZE_3 = yes	}
+			}
+			random_list = {	#	Local RNG for PICTURE
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 12	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 13	}	}
+			}
+		}
+		if = {	#	ml
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_SIZE_3 = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_SIZE_3 = yes	}
+				}
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_SIZE_LARGE = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}
+				}
+			}
+			random_list = {	#	Local RNG for PICTURE
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 12	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 13	}	}
+			}
+		}
+		if = {	#	ll
+			limit = {
+				event_target:AMD_ET_ATK = {	AMD_T_SIZE_LARGE = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}
+			}
+			random_list = {	#	Local RNG for PICTURE
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 11	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 21	}	}
+			}
+		}
+	}
+	desc = {	picture = GFX_AMD_2PL_01	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 1	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_02	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 2	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_03	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 3	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_04	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 4	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_05	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 5	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_06	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 6	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_07	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 7	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_08	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 8	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_09	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 9	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_10	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 10	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_11	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 11	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_12	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 12	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_13	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 13	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_14	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 14	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_15	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 15	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_16	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 16	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_17	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 17	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_18	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 18	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_19	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 19	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_20	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 20	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_21	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 21	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_22	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 22	}	}
+	}
+	desc = {	picture = GFX_AMD_2PL_23	text = AMD_EV_DESC_2P_LES
+		trigger = {	check_variable = {	which = local_evpn	value == 23	}	}
+	}
+	
+	option = {	name = AMD_EV_OPT_2P_LES
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11509		#	2P	게이
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_TITLE
+	desc = AMD_EV_DESC_2P_GAY
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		AMD_E_SOUND_4 = yes	#Male Sound
+		if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#	강간 : male_violent_death_01
+			random_list = {
+				100 = {	sound_effect = male_violent_death_01	}
+				100 = {	sound_effect = male_violent_death_02	}
+				100 = {	sound_effect = male_violent_death_03	}
+				100 = {	sound_effect = male_violent_death_04	}
+				100 = {	sound_effect = male_violent_death_05	}
+			}
+		}
+		else = {	#강간 외 : male_peaceful_death_01 natural_death_male_01 
+			random_list = {
+				100 = {	sound_effect = male_peaceful_death_01	}
+				100 = {	sound_effect = natural_death_male_01	}
+				100 = {	sound_effect = natural_death_male_02	}
+				100 = {	sound_effect = natural_death_male_04	}
+			}
+		}
+		if = {		#	Local RNG for PICTURE
+			limit = {	event_target:AMD_ET_POV = {	is_alive = yes	}	}
+			event_target:AMD_ET_POV = {
+				random_list = {
+					50 = {	set_variable = {	which = local_evpn	value = 1	}	}
+					10 = {	set_variable = {	which = local_evpn	value = 2	}
+						modifier = {
+							factor = 10.0
+							event_target:AMD_ET_DEF = {	has_education_diplomacy_trigger = yes	}
+						}
+					}
+					10 = {	set_variable = {	which = local_evpn	value = 3	}
+						modifier = {
+							factor = 10.0
+							event_target:AMD_ET_DEF = {	has_education_martial_trigger = yes	}
+						}
+					}
+					10 = {	set_variable = {	which = local_evpn	value = 4	}
+						modifier = {
+							factor = 10.0
+							event_target:AMD_ET_DEF = {	has_education_stewardship_trigger = yes	}
+						}
+					}
+					10 = {	set_variable = {	which = local_evpn	value = 5	}
+						modifier = {
+							factor = 10.0
+							event_target:AMD_ET_DEF = {	has_education_intrigue_trigger = yes	}
+						}
+					}
+					10 = {	set_variable = {	which = local_evpn	value = 6	}
+						modifier = {
+							factor = 10.0
+							event_target:AMD_ET_DEF = {	has_education_learning_trigger = yes	}
+						}
+					}
+					10 = {	set_variable = {	which = local_evpn	value = 7	}
+						modifier = {
+							factor = 10.0
+							event_target:AMD_ET_DEF = {	has_benevolent_trait_trigger = yes	}
+						}
+					}
+					10 = {	set_variable = {	which = local_evpn	value = 8	}
+						modifier = {
+							factor = 10.0
+							event_target:AMD_ET_DEF = {	has_evil_trait_trigger = yes	}
+						}
+					}
+					50 = {	set_variable = {	which = local_evpn	value = 9	}	}
+				}
+			}
+		}
+	}
+	desc = {	picture = GFX_AMD_2PG_01	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2PG_02	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2PG_03	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	desc = {	picture = GFX_AMD_2PG_04	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	desc = {	picture = GFX_AMD_2PG_05	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 5	}	}	}
+	desc = {	picture = GFX_AMD_2PG_06	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 6	}	}	}
+	desc = {	picture = GFX_AMD_2PG_07	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 7	}	}	}
+	desc = {	picture = GFX_AMD_2PG_08	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 8	}	}	}
+	desc = {	picture = GFX_AMD_2PG_09	text = AMD_EV_DESC_2P_GAY	trigger = {	check_variable = {	which = local_evpn	value == 9	}	}	}
+	
+	option = {	name = AMD_EV_OPT_2P_GAY
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11609		#	2P	기본마간
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_TITLE
+	desc = AMD_EV_DESC_2P_CBR
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		AMD_E_SOUND_3 = yes	#Girl Sound
+		AMD_E_SOUND_5 = yes	#Horse Sound
+		#	def의 크기에 따라 분기
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}	}	#	소형	1-10
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 8	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 9	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 10	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_3 = yes	}	}	#	중형	21-30
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 21	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 22	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 23	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 24	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 25	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 26	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 27	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 28	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 29	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 30	}	}
+			}
+		}
+		if = {	limit = {	event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}	}	#	대형	41-50
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 41	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 42	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 43	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 44	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 45	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 46	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 47	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 48	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 49	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 50	}	}
+			}
+		}
+	}
+	
+	desc = {	picture = GFX_AMD_TITLE	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 0	}	}	}
+	
+	desc = {	picture = GFX_AMD_2HHF_01	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_02	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_03	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_04	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_05	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 5	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_06	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 6	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_07	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 7	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_08	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 8	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_09	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 9	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_10	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 10	}	}	}
+	
+	desc = {	picture = GFX_AMD_2HHF_21	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 21	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_22	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 22	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_23	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 23	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_24	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 24	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_25	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 25	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_26	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 26	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_27	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 27	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_28	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 28	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_29	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 29	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_30	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 30	}	}	}
+	
+	desc = {	picture = GFX_AMD_2HHF_41	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 41	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_42	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 42	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_43	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 43	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_44	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 44	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_45	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 45	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_46	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 46	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_47	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 47	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_48	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 48	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_49	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 49	}	}	}
+	desc = {	picture = GFX_AMD_2HHF_50	text = AMD_EV_DESC_2P_HF	trigger = {	check_variable = {	which = local_evpn	value == 50	}	}	}
+	
+	
+	option = {	name = AMD_OPT_2P_HORSE
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11709		#	2P	기타마간
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_TITLE
+	desc = AMD_EV_DESC_2P_HORSE
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		if = {		#인남+말 사운드 출력
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	is_female = no	AMD_T_IS_HUMAN = yes	}
+					event_target:AMD_ET_DEF = {	is_female = no	AMD_T_IS_HUMAN = yes	}
+				}
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				}
+			}
+			random_list = {
+				100 = {	sound_effect = trampling_horse_male_01	}
+				100 = {	sound_effect = trampling_horse_male_02	}
+				100 = {	sound_effect = trampling_horse_male_03	}
+			}
+		}
+		if = {		#인녀+말 사운드 출력
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	is_female = yes	AMD_T_IS_HUMAN = yes	}
+					event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_HUMAN = yes	}
+				}
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				}
+			}
+			random_list = {
+				100 = {	sound_effect = trampling_horse_female_01	}
+				100 = {	sound_effect = trampling_horse_female_02	}
+				100 = {	sound_effect = trampling_horse_female_03	}
+			}
+		}
+		#남x말	말x남	남x포니	녀x포니	포니x녀
+		if = {		#남x포니	1 2 3
+			limit = {
+				event_target:AMD_ET_ATK = {	is_female = no	AMD_T_IS_HUMAN = yes	}
+				event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_HORSE = yes	}
+			}
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+			}
+		}
+		if = {		#말x남	4 5 6 7 8
+			limit = {
+				event_target:AMD_ET_ATK = {	is_female = no	AMD_T_IS_HORSE = yes	}
+				event_target:AMD_ET_DEF = {	is_female = no	AMD_T_IS_HUMAN = yes	}
+			}
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 6	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 7	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 8	}	}
+			}
+		}
+		if = {		#여&말	9
+			limit = {
+				OR = {
+					AND = {
+						event_target:AMD_ET_ATK = {	is_female = yes	AMD_T_IS_HUMAN = yes	}
+						event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_HORSE = yes	}
+					}
+					AND = {
+						event_target:AMD_ET_ATK = {	is_female = yes	AMD_T_IS_HORSE = yes	}
+						event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_HUMAN = yes	}
+					}
+				}
+			}
+			set_variable = {	which = local_evpn	value = 9	}
+		}
+	}
+	
+	desc = {	picture = GFX_AMD_TITLE	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 0	}	}	}
+	#포간
+	desc = {	picture = GFX_AMD_2HMH_01	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2HMH_02	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2HMH_03	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	#마간(남)
+	desc = {	picture = GFX_AMD_2HHM_01	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	desc = {	picture = GFX_AMD_2HHM_02	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 5	}	}	}
+	desc = {	picture = GFX_AMD_2HHM_03	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 6	}	}	}
+	desc = {	picture = GFX_AMD_2HHM_04	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 7	}	}	}
+	desc = {	picture = GFX_AMD_2HHM_05	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 8	}	}	}
+	#포간(여)
+	desc = {	picture = GFX_AMD_2HFH	text = AMD_EV_DESC_2P_HORSE	trigger = {	check_variable = {	which = local_evpn	value == 9	}	}	}
+	
+	
+	option = {	name = AMD_EV_OPT_11700
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11809		#	2P	이종	ETC
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_TITLE
+	desc = AMD_EV_DESC_2P_CBR
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		if = {		#인남+곰 사운드 출력
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	is_female = no	AMD_T_IS_HUMAN = yes	}
+					event_target:AMD_ET_DEF = {	is_female = no	AMD_T_IS_HUMAN = yes	}
+				}
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+				}
+			}
+			random_list = {
+				100 = {	sound_effect = attacked_bear_male_01	}
+				100 = {	sound_effect = attacked_bear_male_02	}
+				100 = {	sound_effect = attacked_bear_male_03	}
+			}
+		}
+		if = {		#인녀+곰 사운드 출력
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	is_female = yes	AMD_T_IS_HUMAN = yes	}
+					event_target:AMD_ET_DEF = {	is_female = yes	AMD_T_IS_HUMAN = yes	}
+				}
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+				}
+			}
+			random_list = {
+				100 = {	sound_effect = attacked_bear_female_01	}
+				100 = {	sound_effect = attacked_bear_female_02	}
+				100 = {	sound_effect = attacked_bear_female_03	}
+			}
+		}
+		#	0타이틀	1	2곰x녀	3말x묘	4묘x말
+		if = {		#1	웅남x묘녀
+			limit = {
+				event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	is_female = no	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	is_female = yes	}
+			}
+			set_variable = {	which = local_evpn	value = 1	}
+		}
+		else_if = {	#2	곰x인간여성
+			limit = {
+				OR = {
+					AND = {
+						event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes}
+						event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	is_female = yes	}
+					}
+					AND = {
+						event_target:AMD_ET_ATK = {	AMD_T_IS_HUMAN = yes	is_female = yes	}
+						event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes}
+					}
+				}
+			}
+			set_variable = {	which = local_evpn	value = 2	}
+		}
+		else_if = {	#3	말x고양이
+			limit = {
+				event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes}
+			}
+			set_variable = {	which = local_evpn	value = 3	}
+		}
+		else_if = {	#4	고양이x말
+			limit = {
+				event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes}
+			}
+			set_variable = {	which = local_evpn	value = 4	}
+		}
+		else = {	set_variable = {	which = local_evpn	value = 0	}	}
+	}
+	
+	desc = {	picture = GFX_AMD_TITLE	text = AMD_EV_DESC_2P_CBR	trigger = {	check_variable = {	which = local_evpn	value == 0	}	}	}
+	desc = {	picture = GFX_AMD_2ZBC	text = AMD_EV_DESC_2P_CBR	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2ZBH	text = AMD_EV_DESC_2P_CBR	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2ZHC	text = AMD_EV_DESC_2P_CBR	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	desc = {	picture = GFX_AMD_2ZCH	text = AMD_EV_DESC_2P_CBR	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	
+	option = {	name = AMD_EV_OPT_11800
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+character_event = {	id = AMD_PLAY.11909		#	2P	동종	인외동종통합
+	#	#show_root = no		hide_from = yes
+	is_triggered_only = yes
+	sound = click_03	picture = GFX_AMD_TITLE
+	desc = AMD_EV_DESC_2P_ZOO
+	immediate = {
+		AMD_E_SOUND_1 = yes	#합체음
+		#	그림	0기본 1-5말 6곰남 7곰녀
+		if = {	limit = {	AMD_T_STF_NBR_HORSE = yes	}
+			random_list = {
+				10 = {	set_variable = {	which = local_evpn	value = 1	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 2	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 3	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 4	}	}
+				10 = {	set_variable = {	which = local_evpn	value = 5	}	}
+			}
+			AMD_E_SOUND_5 = yes	#Horse Sound
+		}
+		else_if = {	#곰남x곰남
+			limit = {
+				event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	is_female = no	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	is_female = no	}
+			}
+			set_variable = {	which = local_evpn	value = 6	}
+		}
+		else_if = {	#곰녀
+			limit = {
+				OR = {
+					event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	is_female = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	is_female = yes	}
+				}
+			}
+			set_variable = {	which = local_evpn	value = 7	}
+		}
+		else = {	set_variable = {	which = local_evpn	value = 0	}	}
+	}
+	desc = {	picture = GFX_AMD_TITLE	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 0	}	}	}
+	desc = {	picture = GFX_AMD_2ZHH_1	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 1	}	}	}
+	desc = {	picture = GFX_AMD_2ZHH_2	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 2	}	}	}
+	desc = {	picture = GFX_AMD_2ZHH_3	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 3	}	}	}
+	desc = {	picture = GFX_AMD_2ZHH_4	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 4	}	}	}
+	desc = {	picture = GFX_AMD_2ZHH_5	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 5	}	}	}
+	desc = {	picture = GFX_AMD_2ZBG	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 6	}	}	}
+	desc = {	picture = GFX_AMD_2ZBF	text = AMD_EV_DESC_2P_ZOO	trigger = {	check_variable = {	which = local_evpn	value == 7	}	}	}
+	
+	option = {	name = AMD_EV_OPT_11900
+		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99001	}	}
+	}
+}
+

@@ -1,0 +1,33 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	landless titles
+
+#	어째서 랜드리스 타이틀이 랜디드 타이틀 파일 안에 있어야 하는건지 영문을 모르겠다.
+
+
+e_AMD_NEXUS = {	#시공의 폭풍 : NPC를 임시로 배치할 궁정.
+	color={ 180 180 240 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = beargfx
+
+	capital = 1013 # Lori
+	
+	# Parent Religion 
+	religion = pagan
+	culture = bear
+	
+
+	title = "AMD_MANAGER"
+	foa = "AMD_MANAGER_FOA"
+
+	
+	landless = yes
+	independent = yes
+	primary = yes
+	dynasty_title_names = no
+	can_be_claimed = no
+	#can_be_usurped = no
+	
+	
+	#mercenary = yes	#strength_growth_per_century = 1.00		#mercenary_type = varangian_guard_composition
+}
+

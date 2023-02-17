@@ -1,0 +1,11 @@
+on_birth = {
+	events = { 
+		DWBHAngel.41 #activated by Angelic Conception power
+	}
+}
+
+on_county_religion_change = {
+	events = {
+		DWBH.50 #Make sure that we don't convert to Lilith before the religion is activated
+	}
+}

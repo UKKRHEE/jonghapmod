@@ -1,5 +1,0 @@
-﻿
-regula_dies_irae = {
-    music = "file:/music/dies_irae.ogg"
-    can_be_interrupted = yes
-}

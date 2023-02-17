@@ -1,0 +1,650 @@
+###################################################################################
+###             Contains events specific to the DW Content Mod                 ####
+###################################################################################
+###  SEARCH "FIXME" for things to continue working on.                         ####
+###    .1000 - begins Marshall Jobs                                            ####
+###    .2000 - begins Spymaster Jobs                                           ####
+###    .3000 - begins Steward Jobs                                             ####
+###    .4000 - PLACEHOLDER                                                     ####                                   ####
+###    .5000 - PLACEHOLDER                                                     ####                                   ####
+###    .6000 - PLACEHOLDER                                                     ####                                   ####
+###    .7000 - PLACEHOLDER                                                     ####                                   ####
+###    .8000 - PLACEHOLDER                                                     ####                                   ####
+###    .9000 - PLACEHOLDER                                                     ####                                   ####
+###################################################################################
+
+namespace = TTcontent_jobs
+
+#######################################
+#####  MARSHALL JOBS        ###########
+#######################################
+
+ #####  LEVY REINFORCEMENTS #####
+character_event = {
+	id = TTcontent_jobs.1000
+	desc = TTcontent_jobs1000
+	picture = GFX_evt_large_army
+	
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_job_action = action_train_troops
+		trait = redhandvet
+		NOT = { has_character_modifier = in_seclusion }
+		location = {
+			owner = {
+				job_marshal = {
+					character = ROOT
+				}
+			}
+			NOT = { has_province_modifier = levy_reinforcements }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+	
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			martial = 10
+		}
+		modifier = {
+			factor = 0.75
+			martial = 11
+		}
+		modifier = {
+			factor = 0.75
+			martial = 12
+		}
+		modifier = {
+			factor = 0.75
+			martial = 13
+		}
+	}
+	
+	option = {
+		name = "TTcontent_notify"
+		liege = { character_event = { id = TTcontent_jobs.1001 } }
+	}
+}
+
+  ### Liege gets notified of reinforcements
+character_event = {
+	id = TTcontent_jobs.1001
+	desc = TTcontent_jobs1001
+	picture = skimpyarmor_bodyshot
+	
+	is_triggered_only = yes
+	
+	notification = yes # Triggered from .1000
+	
+	immediate = {
+		FROM = {
+			location = {
+				add_province_modifier = {
+					name = levy_reinforcements
+					duration = 465
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = increase_prosperity_custom_tooltip
+				hidden_tooltip = {
+					FROM = {
+						location = {
+							change_variable = { which = prosperity_value value = 6 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "TTcontent_wonderful"
+	}
+}
+
+####### REDHAND MARSHALL RAISES RAIDERS ######
+character_event = {
+	id = TTcontent_jobs.1002
+	desc = TTcontent_jobs1002
+	picture = skimpyarmor_bodyshot
+
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_job_action = action_organize_raid
+		trait = redhandvet
+		NOT = { has_character_modifier = in_seclusion }
+		liege = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			OR = {
+				NOT = { has_character_flag = tribal_organize_raid_troops }
+				had_character_flag = { flag = tribal_organize_raid_troops days = 3650 }
+			}
+			war = no
+		}
+		location = {
+			county = {
+				is_occupied = no
+			}
+			ROOT = {
+				liege = {
+					is_capital = PREVPREV
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+		
+		modifier = {
+			factor = 3.0
+			liege = {
+				tier = count
+			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			martial = 9
+		}
+		modifier = {
+			factor = 0.75
+			martial = 10
+		}
+		modifier = {
+			factor = 0.75
+			martial= 11
+		}
+		modifier = {
+			factor = 0.75
+			martial = 12
+		}
+		modifier = {
+			factor = 0.75
+			martial = 13
+		}
+	}
+	
+	option = {
+		name = TTcontent_notify
+		
+		prestige = 50
+		hidden_tooltip  = {
+			liege = { character_event = { id = TTcontent_jobs.1002 } }
+		}
+	}
+}
+
+# 20222: The liege is informed
+character_event = {
+	id = TTcontent_jobs.1003
+	desc = TTcontent_jobs1003
+	picture = skimpyarmor_bodyshot
+
+	is_triggered_only = yes # Triggered from .1002
+	
+	immediate = {
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					#leader = none
+					match_character = THIS
+					match_mult = 0.025
+					match_min = 100
+					match_max = 3000
+					attrition = 1.0
+					cannot_inherit = yes
+					earmark = tribal_organize_raid
+					is_looter = yes
+					can_toggle_looting = no
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					#leader = none
+					match_character = THIS
+					match_mult = 0.025
+					match_min = 100
+					match_max = 3000
+					attrition = 1.0
+					cannot_inherit = yes
+					earmark = tribal_organize_raid
+					is_looter = yes
+					can_toggle_looting = no
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					#leader = none
+					match_character = THIS
+					match_mult = 0.025
+					match_min = 100
+					match_max = 3000
+					attrition = 1.0
+					cannot_inherit = yes
+					earmark = tribal_organize_raid
+					is_looter = yes
+					can_toggle_looting = no
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					#leader = none
+					match_character = THIS
+					match_mult = 0.025
+					match_min = 100
+					match_max = 3000
+					attrition = 1.0
+					cannot_inherit = yes
+					earmark = tribal_organize_raid
+					is_looter = yes
+					can_toggle_looting = no
+				}
+			}
+		}
+		
+		clr_character_flag = tribal_organize_raid_troops
+		set_character_flag = tribal_organize_raid_troops
+		
+		character_event = { id = 20223 days = 30 }
+	}
+	
+	option = {
+		name = TTcontent_wonderful
+		opinion = {
+			who = FROM
+			modifier = opinion_grateful
+			months = 60
+		}
+	}
+}
+
+#######################################
+#####        SPYMASTER JOB        #####
+#######################################
+
+character_event = {
+	id = TTcontent_jobs.2000
+	desc = "TTcontent_jobs2000"
+	picture = lady_ranger_1
+	
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_job_action = action_study_technology
+		trait = redhandvet
+		NOT = { has_character_modifier = in_seclusion }
+		location = { has_higher_tech_than = ROOT }
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_focus = focus_scholarship
+				liege = { has_focus = focus_scholarship }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { intrigue = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { intrigue = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { intrigue = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { intrigue = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			intrigue = 10
+		}
+		modifier = {
+			factor = 0.75
+			intrigue = 11
+		}
+		modifier = {
+			factor = 0.75
+			intrigue = 12
+		}
+		modifier = {
+			factor = 0.75
+			intrigue = 13
+		}
+	}
+
+	option = {
+		name = "TTcontent_notify"
+		liege = { character_event = { id = TTcontent_jobs.2001 } }
+	}
+}
+
+# The Spymaster informs her liege of the military technology
+character_event = {
+	id = TTcontent_jobs.2001
+	desc = "TTcontent_jobs2001"
+	picture = lady_ranger_1
+	
+	is_triggered_only = yes # Triggered from .2000
+	
+	option = {
+		name = "TTcontent_wonderful"
+		military_techpoints = 60
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = capital_prospers_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						change_variable = { which = prosperity_value value = 6 }
+					}
+				}
+			}
+		}
+	}
+}
+
+#######################################
+#####         STEWARD JOB         #####
+#######################################
+
+### RedHand Vet Steward "Squeeze the peasants for cash"
+character_event = {
+	id = TTcontent_jobs.3000
+	desc = "TTcontent_jobs3000"
+	picture = redhand_steward
+
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_job_action = action_squeeze_peasants
+		trait = redhandvet
+		NOT = { has_character_modifier = in_seclusion }
+		location = {
+			county = {
+				is_occupied = no
+			}
+			owner = {
+				job_treasurer = {
+					character = ROOT
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+		
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 10
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 11
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 12
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 13
+		}
+	}
+	
+	option = {
+		name = "TTcontent_notify"
+		liege = { character_event = { id = TTcontent_jobs.3001 tooltip = "EVTTOOLTIP20200" } }
+	}
+}
+
+### The liege is informed
+character_event = {
+	id = TTcontent_jobs.3001
+	desc = "TTcontent_jobs3001"
+	picture = redhand_steward
+	
+	is_triggered_only = yes # Triggered from .3000
+	
+	option = {
+		name = TTcontent_wonderful
+		scaled_wealth = 0.6
+	}
+}
+
+####### The Steward has settled the tribe
+character_event = {
+	id = TTcontent_jobs.3002
+	desc = TTcontent_jobs3002
+	picture = redhand_steward
+
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_job_action = action_settle_tribe
+		trait = redhandvet
+		NOT = { has_character_modifier = in_seclusion }
+		location = {
+			county = {
+				is_occupied = no
+			}
+			owner = {
+				job_treasurer = {
+					character = ROOT
+				}
+				NOT = { culture = PREV }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+		
+		modifier = {
+			factor = 3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = slower_normal
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 3.0
+			liege = {
+				tier = count
+			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { stewardship = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 9
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 10
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 11
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 12
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 13
+		}
+	}
+	
+	option = {
+		name = TTcontent_notify
+		
+		prestige = 50
+		hidden_tooltip  = {
+			liege = { character_event = { id = TTcontent_jobs.3003 } }
+		}
+	}
+}
+
+### The liege is informed
+character_event = {
+	id = TTcontent_jobs.3003
+	desc = TTcontent_jobs3003
+	picture = redhand_steward
+	
+	is_triggered_only = yes # Triggered from .3002
+	
+	option = {
+		name = TTcontent_wonderful
+		FROM = {
+			location = {
+				culture = ROOT
+				if = {
+					limit = {
+						has_province_modifier = nomad_agitation
+					}
+					remove_province_modifier = nomad_agitation
+				}
+			}
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_grateful
+			months = 60
+		}
+	}
+}
+
+#######################################
+#####       PlaceHolder JOB       #####
+#######################################
+
+
+
+
+#######################################
+#####       PlaceHolder JOB       #####
+#######################################
+
+
+
+
+#######################################
+#####       PlaceHolder JOB       #####
+#######################################
+
+
+
+#######################################
+#####        SPYMASTER JOB        #####
+#######################################
+
+

@@ -1,0 +1,263 @@
+#		Crusader Kings 2 : Advanced Medieval Desires
+
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+
+#		ㅇㅇ;ㅇㅇ;;;;;;;;;;;;x;
+
+
+#		#		Character Modifiers
+AMD_CMF_first_blood;퍼스트 블러드;;;;;;;;;;;;x;
+AMD_CMF_first_blood_desc;오늘 어른의 계단을 올랐습니다.;;;;;;;;;;;;x;
+AMD_CMF_party_invited;파티 초대장;;;;;;;;;;;;x;
+AMD_CMF_party_invited_desc;시공의 폭풍으로 초대받았습니다.;;;;;;;;;;;;x;
+
+AMD_CM_cooldown;현자의 시간;;;;;;;;;;;;x;
+AMD_CM_cooldown_desc;특별한 활동 뒤에는 잠시 휴식이 필요합니다.;;;;;;;;;;;;x;
+AMD_CM_sex_study;야학;;;;;;;;;;;;x;
+AMD_CM_sex_study_desc;사랑의 더 높은 경지에 도달하기 위해 밤낮없이 수련에 매진하고 있습니다.;;;;;;;;;;;;x;
+AMD_CM_xp_skill;야학 : 경험누적;;;;;;;;;;;;x;
+AMD_CM_xp_skill_desc;밤기술을 연마하며 경험을 쌓았습니다. 더 높은 경지에 올라가는 데 도움이 될 것입니다...;;;;;;;;;;;;x;
+
+
+AMD_CM_drug_aphrodisiac;최음;;;;;;;;;;;;x;
+AMD_CM_drug_aphrodisiac_desc;성감과 쾌락이 상승한 성적 흥분상태입니다.;;;;;;;;;;;;x;
+AMD_CM_drug_contraceptive;피임;;;;;;;;;;;;x;
+AMD_CM_drug_contraceptive_desc;임신 가능성이 크게 감소합니다.;;;;;;;;;;;;x;
+AMD_CM_drug_fertilizer;임신촉진;;;;;;;;;;;;x;
+AMD_CM_drug_fertilizer_desc;임신 가능성이 상승합니다.;;;;;;;;;;;;x;
+AMD_CM_drug_enlarger;성장촉진;;;;;;;;;;;;x;
+AMD_CM_drug_enlarger_desc;중요 신체부위가 성장하고 있습니다.;;;;;;;;;;;;x;
+
+AMD_CM_first_happy;인절손;;;;;;;;;;;;x;
+AMD_CM_first_happy_desc;이렇게 기분좋은 걸 몰랐다니, 인생의 절반 손해봤어요!;;;;;;;;;;;;x;
+AMD_CM_first_common;통과의례;;;;;;;;;;;;x;
+AMD_CM_first_common_desc;가문을 이어가려는 귀족이라면 누구나 하는 경험을 했습니다.;;;;;;;;;;;;x;
+AMD_CM_first_bad;실망;;;;;;;;;;;;x;
+AMD_CM_first_bad_desc;처음 경험한 밤놀이는 별로 즐겁지 않았습니다.;;;;;;;;;;;;x;
+AMD_CM_first_raped;짓밟힌 꽃;;;;;;;;;;;;x;
+AMD_CM_first_raped_desc;강제로 [Root.GetVirginCherry]를(을) 빼앗겼습니다. 이 충격은 시간만이 치유해 줄 수 있을 겁니다...;;;;;;;;;;;;x;
+
+AMD_CM_after_good_norm;연인의 위안;;;;;;;;;;;;x;
+AMD_CM_after_good_norm_desc;충실하고 즐거운 시간을 보낸 덕분에 심신의 평화를 얻었습니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_gay;석양의 검투사;;;;;;;;;;;;x;
+AMD_CM_after_good_gay_desc;사나이답게 검을 겨루는 뜨거운 시간을 보냈습니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_les;백합의 향기;;;;;;;;;;;;x;
+AMD_CM_after_good_les_desc;당신은 멀리서 민달팽이가 분노로 울부짖는 소리를 들었습니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_raper;약탈자의 전리품;;;;;;;;;;;;x;
+AMD_CM_after_good_raper_desc;강간은 범죄입니다. 현실에서 시도할 경우 법의 처벌을 받습니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_raped;인정할 수 없는 쾌락;;;;;;;;;;;;x;
+AMD_CM_after_good_raped_desc;분하다... 하지만... 느껴버려...;;;;;;;;;;;;x;
+AMD_CM_after_good_trade;공정거래;;;;;;;;;;;;x;
+AMD_CM_after_good_trade_desc;좋은 거래를 하면 기분도 좋아집니다.;;;;;;;;;;;;x;
+
+AMD_CM_after_good_human;인류애;;;;;;;;;;;;x;
+AMD_CM_after_good_human_desc;인류의 사랑을 받는 존재입니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_horse;러브 라이드;;;;;;;;;;;;x;
+AMD_CM_after_good_horse_desc;우정은 마법입니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_bear;베어 허그;;;;;;;;;;;;x;
+AMD_CM_after_good_bear_desc;맨몸으로 곰과 맞서는 자입니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_cat;캣 홀릭;;;;;;;;;;;;x;
+AMD_CM_after_good_cat_desc;고양이를 좋아합니다.;;;;;;;;;;;;x;
+
+AMD_CM_after_bad_human;동물학대;;;;;;;;;;;;x;
+AMD_CM_after_bad_human_desc;인간... 용서하지 않겠다...;;;;;;;;;;;;x;
+AMD_CM_after_bad_horse;포확찢;;;;;;;;;;;;x;
+AMD_CM_after_bad_horse_desc;말은 위험한 생물입니다. 당신은 죽을 수도 있습니다.;;;;;;;;;;;;x;
+AMD_CM_after_bad_bear;쮸쀼쮸쀼;;;;;;;;;;;;x;
+AMD_CM_after_bad_bear_desc;곰은 위험한 생물입니다. 당신은 죽을 수도 있습니다.;;;;;;;;;;;;x;
+AMD_CM_after_bad_cat;떼껄룩;;;;;;;;;;;;x;
+AMD_CM_after_bad_cat_desc;고양이를 카펫으로 만들어버리고 싶어합니다.;;;;;;;;;;;;x;
+
+AMD_CM_after_good_mp_guys;고추밭의 파수꾼;;;;;;;;;;;;x;
+AMD_CM_after_good_mp_guys_desc;맛있는 고추를 배터지게 먹었습니다.;;;;;;;;;;;;x;
+AMD_CM_after_good_mp_gals;하렘 셰이크 (Harem Sheike);;;;;;;;;;;;x;
+AMD_CM_after_good_mp_gals_desc;많은 여자들에게 둘러싸여 즐거운 시간을 보냈습니다.;;;;;;;;;;;;x;
+
+
+AMD_CM_after_raped;강간 트라우마;;;;;;;;;;;;x;
+AMD_CM_after_raped_desc;강간을 당해 심신이 피폐해졌습니다.;;;;;;;;;;;;x;
+AMD_CM_after_tired;피로;;;;;;;;;;;;x;
+AMD_CM_after_tired_desc;격렬한 밤의 활동으로 인한 피로와 고통이 몸과 마음을 둔하게 합니다.;;;;;;;;;;;;x;
+AMD_CM_after_angry;분노;;;;;;;;;;;;x;
+AMD_CM_after_angry_desc;화가 날 정도로 불쾌한 경험을 하여 기분이 좋지 않습니다.;;;;;;;;;;;;x;
+AMD_CM_after_unsat;욕구불만;;;;;;;;;;;;x;
+AMD_CM_after_unsat_desc;다 채우지 못한 욕망의 잔불이 몸을 괴롭힙니다.;;;;;;;;;;;;x;
+
+
+AMD_CM_after_bad;실망스러운 밤;;;;;;;;;;;;x;
+AMD_CM_after_bad_desc;충족되지 못한 욕망과 불쾌한 경험으로 인해 기분이 좋지 않습니다.;;;;;;;;;;;;x;
+
+
+
+
+
+
+AMD_CM_lovers_gift_1;연인의 선물 : 옷;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_1_desc;연인에게서 옷을 선물받았습니다.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_2;연인의 선물 : 장신구;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_2_desc;연인에게서 장신구를 선물받았습니다.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_3;연인의 선물 : 무기;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_3_desc;연인에게서 무기를 선물받았습니다.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_4;연인의 선물 : 그림;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_4_desc;연인에게서 그림을 선물받았습니다.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_5;연인의 선물 : 조각상;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_5_desc;연인에게서 조각상을 선물받았습니다.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_6;연인의 선물 : 서적;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_6_desc;연인에게서 서적을 선물받았습니다.;;;;;;;;;;;;x;
+
+
+
+
+AMD_CM_alchemy_search;연금술사 탐색;;;;;;;;;;;;x;
+AMD_CM_alchemy_search_desc;신비한 약을 만드는 사람을 찾기 위해 예산을 낭비하고 있습니다...;;;;;;;;;;;;x;
+AMD_CM_alchemy_xeno;마라 상사 회원권;;;;;;;;;;;;x;
+AMD_CM_alchemy_xeno_desc;외계인과 계약하여 약물을 공급받습니다.;;;;;;;;;;;;x;
+AMD_CM_alchemy_synth;지구 관리단;;;;;;;;;;;;x;
+AMD_CM_alchemy_synth_desc;최우선보호대상유기생명체의 개체수유지활동지원 프로토콜에 대한 한정적 접근권한 승인.;;;;;;;;;;;;x;
+AMD_CM_alchemy_meruru;과금술사의 아뜰리에;;;;;;;;;;;;x;
+AMD_CM_alchemy_meruru_desc;돈만 주면 뭐든지 하는 사악한 마녀에게 특수한 약물을 공급받습니다.;;;;;;;;;;;;x;
+AMD_CM_alchemy_hermetic;헤르메스 연금술;;;;;;;;;;;;x;
+AMD_CM_alchemy_hermetic_desc;헤르메스 학회의 연금술로 특수한 약물을 제작합니다.;;;;;;;;;;;;x;
+AMD_CM_alchemy_darkness;검은 염소의 손길;;;;;;;;;;;;x;
+AMD_CM_alchemy_darkness_desc;흑마법으로 특수한 약물을 제작합니다.;;;;;;;;;;;;x;
+AMD_CM_alchemy_medical;의약겸업;;;;;;;;;;;;x;
+AMD_CM_alchemy_medical_desc;의학적 지식을 동원해 특수한 약물을 제작합니다.;;;;;;;;;;;;x;
+AMD_CM_alchemy_shaman;풍요의 주술;;;;;;;;;;;;x;
+AMD_CM_alchemy_shaman_desc;주술적 지식을 동원해 특수한 약물을 제작합니다.;;;;;;;;;;;;x;
+
+AMD_CM_alchemy_xeno_work;적극적인 관측 활동;;;;;;;;;;;;x;
+AMD_CM_alchemy_xeno_work_desc;가축과 민간인이 실종되거나, 형언할 수 없는 이계의 존재가 목격되는 등 소름끼치는 현상이 일어나고 있습니다. 지역민들은 공포에 떨고 있습니다.;;;;;;;;;;;;x;
+AMD_CM_alchemy_cooldown;연금술 쿨다운;;;;;;;;;;;;x;
+AMD_CM_alchemy_cooldown_desc;약물 제작이나 투약에 반드시 재사용 대기시간이 필요한 것인가? 일단 AMD 통합 쿨다운으로 처리하는 게 낫지 않을까...;;;;;;;;;;;;x;
+
+
+
+AMD_CM_slave_lust;죄수의 욕망;;;;;;;;;;;;x;
+AMD_CM_slave_lust_desc;죄수의 욕망;;;;;;;;;;;;x;
+AMD_CM_slave_fear;죄수의 공포;;;;;;;;;;;;x;
+AMD_CM_slave_fear_desc;죄수의 공포;;;;;;;;;;;;x;
+AMD_CM_slave_obey;죄수의 굴복;;;;;;;;;;;;x;
+AMD_CM_slave_obey_desc;죄수의 굴복;;;;;;;;;;;;x;
+AMD_CM_slave_hate;죄수의 반발;;;;;;;;;;;;x;
+AMD_CM_slave_hate_desc;죄수의 반발;;;;;;;;;;;;x;
+
+AMD_CM_prostitute_suspicious;의심받음;;;;;;;;;;;;x;
+AMD_CM_prostitute_suspicious_desc;불건전한 업소에 출입한다는 소문이 있습니다.;;;;;;;;;;;;x;
+AMD_CM_prostitute_unknown;비밀 창부;;;;;;;;;;;;x;
+AMD_CM_prostitute_unknown_desc;이 인물과 매우 닮은 자가 불건전한 업소에서 몸을 팔고 있다는 소문이 있습니다.;;;;;;;;;;;;x;
+AMD_CM_prostitute_known;알려진 창부;;;;;;;;;;;;x;
+AMD_CM_prostitute_known_desc;이 인물은 불명예스러운 장사를 하고 있으며, 주위 사람들도 모두 그 사실을 알고 있습니다.;;;;;;;;;;;;x;
+AMD_CM_prostitute_renown;유명한 창부;;;;;;;;;;;;x;
+AMD_CM_prostitute_renown_desc;이 인물은 밤의 서비스업을 하는 것으로 널리 알려져 있습니다. 그야말로 업계의 전설이라 할 만 하지만, 이는 귀족으로서 결코 명예로운 일이 아닙니다...;;;;;;;;;;;;x;
+AMD_CM_prostitute_retired;은퇴한 창부;;;;;;;;;;;;x;
+AMD_CM_prostitute_retired_desc;이 인물은 한때 불미스러운 직업에 종사하였으나, 지금은 그만두었습니다. 그러나 그 불명예는 사라지지 않을 것입니다...;;;;;;;;;;;;x;
+
+
+
+
+
+
+
+
+
+#		#		Character Modifiers (Hidden)
+AMD_CMF_v_roll;AMD Flag - Virgin Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_b_roll;AMD Flag - Body Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_v_roll_desc;AMD Flag - Virgin Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_b_roll_desc;AMD Flag - Body Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_vip;성 관련 정보;;;;;;;;;;;;x;
+AMD_CMF_vip_desc;[Root.GetName]의 성행위 관련 변수 일람;;;;;;;;;;;;x;
+
+AMD_CMF_cuckoo_child;탄생의 비밀;;;;;;;;;;;;x;
+AMD_CMF_cuckoo_child_desc;이 사람의 탄생에는 비밀이 있습니다...;;;;;;;;;;;;x;
+
+AMD_CM_pregnant;타이머 : 임신;;;;;;;;;;;;x;
+AMD_CM_pregnant_desc;이 모디파이어가 있는 동안, AMD 모드로는 임신하지 않는다.;;;;;;;;;;;;x;
+
+
+
+
+AMD_CMF_FC_UNKNOWN;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPER;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPED;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BUY;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_SELL;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HETERO;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HOMO;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_ORGY;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HUMAN;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HORSE;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BEAR;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_CAT;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_UNKNOWN_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPER_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPED_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BUY_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_SELL_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HETERO_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HOMO_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_ORGY_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HUMAN_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HORSE_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BEAR_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_CAT_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+
+
+#		#		Character Modifiers (Unused)
+AMD_CM_lifemaker;생명창조;;;;;;;;;;;;x;
+AMD_CM_lifemaker_desc;성별 또는 종족의 제한을 받지 않고 임신하거나 임신시킬 수 있는 특별한 존재입니다.;;;;;;;;;;;;x;
+AMD_CM_nymphomaniac;색정광;;;;;;;;;;;;x;
+AMD_CM_nymphomaniac_desc;성적 욕망에 사로잡혀 일상생활이 불편한 변태입니다.;;;;;;;;;;;;x;
+AMD_CM_lustful_wasted;음란마귀;;;;;;;;;;;;x;
+AMD_CM_lustful_wasted_desc;음란마귀의 노예가 되어 일상생활을 할 수 없는 인간 쓰레기입니다.;;;;;;;;;;;;x;
+
+
+#		#		Character Modifiers (Hidden)
+AMD_CM_xp_foreplay;경험 - 비삽입행위;;;;;;;;;;;;x;
+AMD_CM_xp_foreplay_desc;직접적인 성기의 결합이 없는 성적행위의 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_realplay;경험 - 전방행위;;;;;;;;;;;;x;
+AMD_CM_xp_realplay_desc;직접적인 성기의 결합을 동반하는 성적행위의 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_analplay;경험 - 후방행위;;;;;;;;;;;;x;
+AMD_CM_xp_analplay_desc;항문과 성기의 결합에 의한 성적행위의 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_raper;경험 - 강간행위;;;;;;;;;;;;x;
+AMD_CM_xp_raper_desc;강제적인 성적행위를 상대에게 강요한 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_raped;경험 - 강간피해;;;;;;;;;;;;x;
+AMD_CM_xp_raped_desc;강제적인 성적행위를 강요당한 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_human;경험 - 인간;;;;;;;;;;;;x;
+AMD_CM_xp_human_desc;호모 사피엔스종과 성적행위를 한 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_horse;경험 - 마간;;;;;;;;;;;;x;
+AMD_CM_xp_horse_desc;말과 성적행위를 한 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_bear;경험 - 웅간;;;;;;;;;;;;x;
+AMD_CM_xp_bear_desc;곰과 성적행위를 한 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_cat;경험 - 묘간;;;;;;;;;;;;x;
+AMD_CM_xp_cat_desc;고양이과 생물과 성적행위를 한 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+AMD_CM_xp_unknown;경험 - 불명;;;;;;;;;;;;x;
+AMD_CM_xp_unknown_desc;상세불명의 상대와 성적행위를 한 것으로 간주되는 경험. 이 모디파이어는 변수를 대신하는 것이며, 유저에게 보이지 않는다.;;;;;;;;;;;;x;
+
+
+
+
+
+
+
+
+
+#		#		Opinion Modifiers
+
+AMD_opinion_had_sex;성관계;;;;;;;;;;;;x;
+AMD_opinion_raped_me;나를 강간함;;;;;;;;;;;;x;
+AMD_opinion_raped_close_kin;가까운 친족을 강간함;;;;;;;;;;;;x;
+AMD_opinion_raped_family;가문원을 강간함;;;;;;;;;;;;x;
+AMD_opinion_had_first_sex;첫 상대;;;;;;;;;;;;x;
+
+AMD_opinion_yielded;순종;;;;;;;;;;;;x;
+AMD_opinion_obedient;복종;;;;;;;;;;;;x;
+AMD_opinion_to_slave;총애;;;;;;;;;;;;x;
+
+#		#		Opinion Modifiers (Unused)
+AMD_opinion_masochism;피학성 만족;;;;;;;;;;;;x;
+AMD_opinion_sadism;가학성 만족;;;;;;;;;;;;x;
+AMD_opinion_first_good;첫 상대;;;;;;;;;;;;x;
+AMD_opinion_first_bad;[GetVirginCherry] 강탈;;;;;;;;;;;;x;
+
+

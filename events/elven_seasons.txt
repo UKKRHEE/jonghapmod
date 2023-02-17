@@ -1,0 +1,312 @@
+namespace = elfseasons
+
+character_event = { 
+	id = elfseasons.99 
+	character_event = { id = elfseasons.1 days = 7}
+	hide_window = yes
+	is_triggered_only = yes # triggered from on_startup
+	}
+
+character_event = {
+	id = elfseasons.1
+	hide_window = yes
+	is_triggered_only = yes # triggered from elfseasons.99 
+	immediate = {
+		any_province = {
+			limit = {
+				culture = elven
+			}
+			if = {
+				limit = {
+					month = 2 # March
+					NOT = { month = 5 } # June
+				}
+				add_province_modifier = {
+					name = spring
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = {
+					month = 5 # June
+					NOT = { month = 8 } # September
+				}
+				add_province_modifier = {
+					name = summer
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = {
+					month = 8 # September
+					NOT = { month = 11 } # December
+				}
+				add_province_modifier = {
+					name = fall
+					duration = 3650
+				}
+			}	
+			else_if = {
+				limit = {
+					OR = {
+						month = 11 # December
+						AND = {
+							month = 0 # January
+							NOT = { month = 2 } # March
+						}
+					}
+				}
+				add_province_modifier = {
+					name = winter
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+province_event = { # Springtime
+	id = elfseasons.2
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			culture = elven
+			has_province_modifier = winter
+		}
+		month = 2
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_independent_ruler = {
+					ai = no
+					capital_scope = {
+						culture = elven
+					}	
+				}
+			}
+			character_event = { id = elfseasons.7 } # Notify the player
+		}
+		ROOT = {
+			limit = {
+				has_province_modifier = winter
+			}
+			remove_province_modifier = winter
+			add_province_modifier = {
+				name = spring
+				duration = 3650
+			}
+		}
+	}
+}
+
+province_event = { # Summertime
+	id = elfseasons.3
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			culture = elven
+			has_province_modifier = spring
+		}
+		month = 5
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_independent_ruler = {
+					ai = no
+					capital_scope = {
+						culture = elven
+					}	
+				}
+			}
+			character_event = { id = elfseasons.8 } # Notify the player
+		}
+		ROOT = {
+			limit = {
+				has_province_modifier = spring
+			}
+			remove_province_modifier = spring
+			add_province_modifier = {
+				name = summer
+				duration = 3650
+			}
+		}
+	}
+}
+province_event = { # Autumntime
+	id = elfseasons.4
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			culture = elven
+			has_province_modifier = summer
+		}
+		month = 8
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_independent_ruler = {
+					ai = no
+					capital_scope = {
+						culture = elven
+					}	
+				}
+			}
+			character_event = { id = elfseasons.9 } # Notify the player
+		}
+		ROOT = {
+			limit = {
+				has_province_modifier = summer
+			}
+			remove_province_modifier = summer
+			add_province_modifier = {
+				name = fall
+				duration = 3650
+			}
+		}
+	}
+}
+
+province_event = { # Wintertime
+	id = elfseasons.5
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			culture = elven
+			has_province_modifier = fall
+		}
+		month = 11
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		ROOT = {
+			if = {
+			limit = {
+				any_independent_ruler = {
+					ai = no
+					capital_scope = {
+						culture = elven
+					}	
+				}
+			}
+			character_event = { id = elfseasons.10 } # Notify the player
+		}
+			limit = {
+				has_province_modifier = fall
+			}
+			remove_province_modifier = fall
+			add_province_modifier = {
+				name = winter
+				duration = 3650
+			}
+		}
+	}
+}
+
+province_event = { # Removes seasonal buffs if culture is not elven
+	id = elfseasons.6
+	hide_window = yes
+	trigger = {
+		ROOT = {
+			OR = {
+				has_province_modifier = fall
+				has_province_modifier = winter
+				has_province_modifier = summer
+				has_province_modifier = spring
+			}
+			NOT = { culture = elven }
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+	immediate = {
+		ROOT = {
+			clr_province_modifier = fall
+			clr_province_modifier = winter
+			clr_province_modifier = summer
+			clr_province_modifier = spring
+		}
+	}
+}
+
+# spring
+narrative_event = {
+	id = elfseasons.7
+	desc = elvenseason1_desc
+	picture = pic_elven_season
+	
+	is_triggered_only = yes		# called by elvfseason.2
+	trigger = { 
+			NOT = {
+					has_global_flag = block_seasons_true
+				}
+			}
+	option = {
+		name =  elvenseason1_but
+	}
+}
+
+# spring
+narrative_event = {
+	id = elfseasons.8
+	desc = elvenseason2_desc
+	picture = pic_elven_season
+	
+	is_triggered_only = yes		# called by elvfseason.3
+	trigger = { 
+			NOT = {
+					has_global_flag = block_seasons_true
+				}
+			}
+	option = {
+		name =  elvenseason2_but
+	}
+}
+
+# spring
+narrative_event = {
+	id = elfseasons.9
+	desc = elvenseason3_desc
+	picture = pic_elven_season
+	
+	is_triggered_only = yes		# called by elvfseason.4
+	trigger = { 
+			NOT = {
+					has_global_flag = block_seasons_true
+				}
+			}
+	option = {
+		name =  elvenseason3_but
+	}
+}
+
+# spring
+narrative_event = {
+	id = elfseasons.10
+	desc = elvenseason4_desc
+	picture = pic_elven_season
+	
+	is_triggered_only = yes		# called by elvfseason.5
+	trigger = { 
+			NOT = {
+					has_global_flag = block_seasons_true
+				}
+			}
+	option = {
+		name =  elvenseason4_but
+	}
+}

@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_birthctrl"
+		texturefile = "gfx/traits/dwt_birthctrl.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_lilith_curse"
+		texturefile = "gfx/traits/decision_icon_lilith_curse.dds"
+	}
+	spriteType = {
+		name = "GFX_lilith_blessing"
+		texturefile = "gfx/interface/decision_icon_lilith_blessing.dds"
+	}
+}
+

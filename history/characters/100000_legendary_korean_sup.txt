@@ -1,0 +1,2154 @@
+##전주이씨400095801##
+110001 = {
+	name = "An-sa" #목조 이안사 이성계 고조부
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	father = 95154
+	disallow_random_traits = yes
+	1200.1.1 = { birth = yes }
+	1274.1.1 = { death = yes }
+	##give_nickname = nick_mokjo
+}
+110002 = {
+	name = "Haeng-ri" #익조 이행리 이성계 증조부
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110001
+	1233.1.1 = { birth = yes }
+	1293.1.1 = { death = yes }
+	##give_nickname = nick_ikjo
+}
+110003 = {
+	name = "Chun" #도조 이춘 이성계 조부
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1263.1.1 = { birth = yes }
+	1342.7.24 = { death = yes }
+	##give_nickname = nick_dojo
+}
+110004 = {
+	name = "Ja-chun" #환조 이자춘 이성계 부
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	1315.1.20 = { birth = yes }
+	1361.6.3 = { death = yes }
+	##give_nickname = nick_hwanjo
+}
+## 목조 자손 ##
+110005 = {
+	name = "Eo-seon" #안천대군 이어선
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110001
+	1230.1.1 = { birth = yes }
+	1274.1.1 = { death = yes }
+	##give_nickname = nick_ancheon_daegun
+}
+110006 = {
+	name = "Jin" #안원대군 이진
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110001
+	1231.1.1 = { birth = yes }
+	1291.1.1 = { death = yes }
+	##give_nickname = nick_anwon_daegun
+}
+110007 = {
+	name = "Jeong" #안풍대군 이정
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110001
+	1232.1.1 = { birth = yes }
+	1292.1.1 = { death = yes }
+	##give_nickname = nick_anpung_daegun
+}
+110008 = {
+	name = "Mae-bul" #안창대군 이매불
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110001
+	1234.1.1 = { birth = yes }
+	1294.1.1 = { death = yes }
+	##give_nickname = nick_anchang_daegun
+}
+110009 = {
+	name = "Gu-su" #안흥대군 이구수
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110001
+	1235.1.1 = { birth = yes }
+	1295.1.1 = { death = yes }
+	##give_nickname = nick_anheung_daegun
+}
+## 익조 자손 ##
+110010 = {
+	name = "An" #함녕대군 이안
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+	##give_nickname = nick_hamneong_daegun
+}
+110011 = {
+	name = "Jang" #함창대군 이장
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1261.1.1 = { birth = yes }
+	1321.1.1 = { death = yes }
+	##give_nickname = nick_hamchang_daegun
+}
+110012 = {
+	name = "Song" #함원대군 이송
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1262.1.1 = { birth = yes }
+	1322.1.1 = { death = yes }
+	##give_nickname = nick_hamwon_daegun
+}
+110013 = {
+	name = "Won" #함천대군 이원
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1264.1.1 = { birth = yes }
+	1324.1.1 = { death = yes }
+	##give_nickname = nick_hamcheon_daegun
+}
+110014 = {
+	name = "Go-tae" #함릉대군 이고태
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1265.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+	##give_nickname = nick_hamreung_daegun
+}
+110015 = {
+	name = "Geon" #함양대군 이전
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1266.1.1 = { birth = yes }
+	1326.1.1 = { death = yes }
+	##give_nickname = nick_hamyang_daegun
+}
+110016 = {
+	name = "Eung-geo" #함성대군 이응거
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	1267.1.1 = { birth = yes }
+	1327.1.1 = { death = yes }
+	##give_nickname = nick_hamseong_daegun
+}
+110017 = {
+	name = "Princess An-ui" #안의공주 
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110002
+	female = yes
+	1268.1.1 = { birth = yes }
+	1328.1.1 = { death = yes }
+}
+## 목조 자손 ##
+110018 = {
+	name = "Ja-hong" #완창대군 이자흥
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	1305.1.1 = { birth = yes }
+	1365.1.1 = { death = yes }
+	##give_nickname = nick_wanchang_daegun
+}
+110019 = {
+	name = "Ja-seon" #완원대군 이자선
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	1331.1.1 = { birth = yes }
+	1356.1.1 = { death = yes }
+	##give_nickname = nick_wanwon_daegun
+}
+110020 = {
+	name = "Pyong" #완천대군 이평
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	1320.1.1 = { birth = yes }
+	1365.1.1 = { death = yes }
+	##give_nickname = nick_wancheon_daegun
+}
+110021 = {
+	name = "Jong" #완성대군 이종
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	1322.1.1 = { birth = yes }
+	1385.1.1 = { death = yes }
+	##give_nickname = nick_wanseong_daegun
+}
+110022 = {
+	name = "Princess Mun-hye" #문혜공주
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	female = yes
+	1323.1.1 = { birth = yes }
+	1385.1.1 = { death = yes }
+}
+110023 = {
+	name = "Princess Mun-suk" #문숙공주
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	female = yes
+	1324.1.1 = { birth = yes }
+	1385.1.1 = { death = yes }
+}
+110024 = {
+	name = "Princess Mun-ui" #문의공주
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110003
+	female = yes
+	1325.1.1 = { birth = yes }
+	1385.1.1 = { death = yes }
+}
+#환조 자손
+110025 = {
+	name = "Won-gye" #완풍대군 이원계
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110004
+	1330.1.1 = { birth = yes }
+	1388.10.23 = { death = yes }
+	##give_nickname = nick_wanpung_daegun
+}
+110026 = {
+	name = "Cheon-gye" #영성대군 이천계
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110004
+	1333.1.1 = { birth = yes }
+	1392.8.5 = { death = yes }
+	##give_nickname = nick_yeongseong_daegun
+}
+110027 = {
+	name = "Princess Jeong-hwa" #정화공주
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110004
+	female = yes
+	1334.1.1 = { birth = yes }
+	1404.1.1 = { death = yes }
+}
+110028 = {
+	name = "Hwa" #의안대군 이화
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 110004
+	1348.1.1 = { birth = yes }
+	1408.10.6 = { death = yes }
+	##give_nickname = nick_uian_daegun
+}
+#태조 자손#
+110029 = {
+	name = "Bang-u" #진안대군 이방우
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95801
+	1354.1.1 = { birth = yes }
+	1394.1.15 = { death = yes }
+	##give_nickname = nick_jinan_daegun
+}
+110030 = {
+	name = "Bang-ui" #익안대군 이방의
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95801
+	1360.1.1 = { birth = yes }
+	1404.9.26 = { death = yes }
+	##give_nickname = nick_ikan_daegun
+}
+110031 = {
+	name = "Bang-gan" #회안대군 이방간
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95801
+	1364.7.2 = { birth = yes }
+	1421.4.10 = { death = yes }
+	##give_nickname = nick_hoean_daegun
+}
+110032 = {
+	name = "Bang-yeon" #덕안대군 이방연
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95801
+	1370.1.1 = { birth = yes }
+	1387.1.1 = { death = yes }
+	##give_nickname = nick_deokan_daegun
+}
+110033 = {
+	name = "Bang-beon" #무안대군 이방번
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95801
+	1381.1.1 = { birth = yes }
+	1398.10.6 = {
+		death = {
+			death_reason = death_murder_arrow
+			killer = 95803
+		}
+	}
+	##give_nickname = nick_muan_daegun
+}
+110034 = {
+	name = "Bang-seok" #의안대군 이방석
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95801
+	1382.1.1 = { birth = yes }
+	1398.10.6 = {
+		death = {
+			death_reason = death_murder_arrow
+			killer = 95803
+		}
+	}
+	##give_nickname = nick_uian_daegun
+}
+#태종 자손#양녕대군#842은 95800yidynasty
+110035 = {
+	name = "Bo" #효령대군 이보
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95803
+	##give_nickname = nick_hyoryeong_daegun
+	1396.1.6 = { birth = yes }
+	1486.6.12 = { death = yes }
+}
+110036 = {
+	name = "Jong" #성녕대군 이종
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95803
+	##give_nickname = nick_seongnyeong_daegun
+	1405.8.3 = { birth = yes }
+	1418.3.11 = { death = yes }
+}
+#세종95804 자손#
+110037 = {
+	name = "Yong" #안평대군 이용
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95804
+	##give_nickname = nick_anpyeong_daegun
+	1418.10.18 = { birth = yes }
+	1453.11.18 = {
+	death = { death_reason = death_execution killer = 95807 }
+	}
+}
+110038 = {
+	name = "Gu" #임영대군 이구
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95804
+	##give_nickname = nick_imyeong_daegun
+	1420.1.6 = { birth = yes }
+	1469.1.21 = { death = yes }
+}
+110039 = {
+	name = "Yeo" #광평대군 이여
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95804
+	##give_nickname = nick_gwangpyeong_daegun
+	1425.5.2 = { birth = yes }
+	1444.12.7 = { death = yes }
+}
+110040 = {
+	name = "Yu" #금성대군 이유
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95804
+	##give_nickname = nick_geumseong_daegun
+	1426.5.5 = { birth = yes }	
+	1457.11.7 = {
+	death = { death_reason = death_execution killer = 95807 }
+	}
+}
+110041 = {
+	name = "Im" #평원대군 이임
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95804
+	##give_nickname = nick_pyeongwon_daegun
+	1427.11.18 = { birth = yes }
+	1445.1.16 = { death = yes }
+}
+110042 = {
+	name = "Yeom" #영응대군 이염
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95804
+	##give_nickname = nick_yeongeung_daegun
+	1434.5.23 = { birth = yes }
+	1467.2.2 = { death = yes }
+}
+#덕종 자손#
+110043 = {
+	name = "Jeong" #월산대군 이정
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95830
+	##give_nickname = nick_weolsan_daegun
+	1455.1.5 = { birth = yes }
+	1489.1.22 = { death = yes }
+}
+#예종 자손#
+110044 = {
+	name = "Hyeon" #제안대군 이현
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95808
+	##give_nickname = nick_jean_daegun
+	1466.2.27 = { birth = yes }
+	1525.12.27 = { death = yes }
+}
+110045 = {
+	name = "Bon" #인성대군 이본
+	dynasty = 20000001
+	culture = korean
+	religion = taoist
+	disallow_random_traits = yes
+	father = 95808
+	##give_nickname = nick_inseong_daegun
+	1461.12.31 = { birth = yes }
+	1463.12.4 = { death = yes }
+}
+##
+110046 = {
+	name = "Descendants of Hyoryeong Daegun" #
+	dynasty = 40004002
+	father = 110035
+	culture = korean
+	religion = taoist
+	occluded = yes
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	disallow_random_traits = yes
+	1420.1.1 = { birth = yes }
+	1920.1.1 = { death = yes }
+}
+
+196053 = {
+	name = "Dang" 
+	dynasty = 20000001
+	father = 95833
+	culture = korean
+	religion = taoist
+	1783.2.1 = { birth = yes }
+	1826.5.8 = { death = yes }
+}
+196054 = {
+	name = "Hee" 
+	dynasty = 20000001
+	father = 196053
+	culture = korean
+	religion = taoist
+	1824.10.16 = { birth = yes }
+	1863.9.18 = { death = yes }
+}
+196055 = {
+	name = "Jaesung" 
+	dynasty = 20000001
+	father = 196054
+	culture = korean
+	religion = taoist
+	1860.11.10 = { birth = yes }
+	1877.5.16 = { name = "Cheon" }
+	1910.8.29 = { death = yes }
+}
+196056 = {
+	name = "Chunyong" 
+	dynasty = 20000001
+	father = 196055
+	culture = korean
+	religion = taoist
+	1881.1.12 = { birth = yes }
+	1910.8.29 = { name = "Taek" }
+	1922.2.2 = { death = yes }
+}
+196057 = {
+	name = "Wuyong" #이우용,여기까지 실존인물
+	dynasty = 20000001
+	father = 196055
+	culture = korean
+	religion = taoist
+	1899.1.1 = { birth = yes }
+	1922.2.2 = { name = "Jin" }
+	1967.1.4 = { death = yes }
+}
+196058 = {
+	name = "Hyul" #광종
+	dynasty = 20000001
+	father = 196057
+	culture = korean
+	religion = taoist
+	1922.8.7 = { birth = yes }
+	1999.1.28 = { death = yes }
+}
+196059 = {
+	name = "Heon" #헌종
+	dynasty = 20000001
+	father = 196058
+	culture = korean
+	religion = taoist
+	1964.5.17 = { birth = yes }
+	1998.4.16 = { death = yes }
+}
+196060 = {
+	name = "Gon" #장종
+	dynasty = 20000001
+	father = 196059
+	culture = korean
+	religion = taoist
+	1995.1.4 = { birth = yes }
+	2076.9.21 = { death = yes }
+}
+196061 = {
+	name = "Hyeon" #완친왕
+	dynasty = 20000001
+	father = 196059
+	culture = korean
+	religion = taoist
+	1996.10.21 = { birth = yes }
+	2068.2.17 = { death = yes }
+}
+196062 = {
+	name = "Min" #한성군
+	dynasty = 20000001
+	father = 196061
+	culture = korean
+	religion = taoist
+	2015.3.19 = { birth = yes }
+	2103.6.16 = { death = yes }
+}
+
+196063 = {
+	name = "Yul" #의친왕
+	dynasty = 20000001
+	father = 196057
+	culture = korean
+	religion = taoist
+	1934.7.28 = { birth = yes }
+	1996.8.19 = { death = yes }
+}
+196064 = {
+	name = "Hyungju" #
+	dynasty = 20000001
+	father = 196063
+	culture = korean
+	religion = taoist
+	1956.7.28 = { birth = yes }
+	2026.6.11 = { death = yes }
+}
+196065 = {
+	name = "Wuhyuk" #
+	dynasty = 20000001
+	father = 196064
+	culture = korean
+	religion = taoist
+	1977.3.7 = { birth = yes }
+	2001.5.19 = { death = yes }
+}
+196066 = {
+	name = "Hyunsoo" #유현수
+	dynasty = 20000019
+	father = 196065
+	culture = korean
+	religion = lilitu
+	martial=99 diplomacy=99 stewardship=99 intrigue=99 learning=99
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5 add_trait=gigantic_dick add_trait=angel add_trait=lf_neko
+	add_trait=minhyee add_trait=yiminhyee add_trait=crowned_by_pope add_trait=lustful add_trait=seducer
+	wealth = 100000
+	prestige = 100000
+	piety = 100000
+	2001.1.4 = { 
+		birth = yes 
+		effect = {
+			add_offmap_currency = {
+				offmap = offmap_china
+				value = 1000000
+			}
+			add_offmap_currency = {
+				offmap = offmap_dwse
+				value = 1000000
+			}
+		}
+		17.1.1 = {
+			add_trait = immortal
+				set_immortal_age = 17
+		}	
+		employer = 1
+	}
+}
+196067 = {
+	name = "Yeju" #
+	dynasty = 20000001
+	father = 196063
+	culture = korean
+	religion = taoist
+	1959.1.1 = { birth = yes }
+	2008.1.1 = { death = yes }
+}
+196068 = {
+	name = "Wuseon" #
+	dynasty = 20000001
+	father = 196067
+	culture = korean
+	religion = taoist
+	1981.1.1 = { birth = yes }
+	2056.1.1 = { death = yes }
+}
+196069 = {
+	name = "Hyeonki" #
+	dynasty = 20000001
+	father = 196068
+	culture = korean
+	religion = taoist
+	2003.1.1 = { birth = yes }
+	2081.1.1 = { death = yes }
+}
+196070 = {
+	name = "Hanki" #
+	dynasty = 20000001
+	father = 196068
+	culture = korean
+	religion = taoist
+	2009.1.1 = { birth = yes }
+	2042.1.1 = { death = yes }
+}
+196071 = {
+	name = "Wuyeong" #
+	dynasty = 20000001
+	father = 196067
+	culture = korean
+	religion = taoist
+	1984.1.1 = { birth = yes }
+	2037.1.1 = { death = yes }
+}
+
+####################
+########
+####################
+######## 다시 역사적 가문
+####################
+####의민태자 가문
+196072 = {
+	name = "Un"
+	dynasty = 20000001
+	father = 95827
+	culture = korean
+	religion = taoist
+	1897.10.20 = { birth = yes }
+	1970.5.1 = { death = yes }
+}
+196073 = {
+	name = "Ku"
+	dynasty = 20000001
+	father = 196072
+	culture = korean
+	religion = taoist
+	1931.12.29 = { birth = yes }
+	2005.7.16 = { death = yes }
+}
+####의친왕가
+196074 = {
+	name = "Bang"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1914.1.1 = { birth = yes }
+	1951.1.1 = { death = yes }
+}
+196075 = {
+	name = "Chang"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1915.1.1 = { birth = yes }
+	1945.8.15 = { death = yes }
+}
+196076 = {
+	name = "Ju"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1917.2.13 = { birth = yes }
+	1982.12.10 = { death = yes }
+}
+196077 = {
+	name = "Gon"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1919.1.3 = { birth = yes }
+	1984.3.23 = { death = yes }
+}
+196078 = {
+	name = "Guang"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1920.1.1 = { birth = yes }
+	1952.8.15 = { death = yes }
+}
+196079 = {
+	name = "Hyun"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1922.12.3 = { birth = yes }
+	1996.2.17 = { death = yes }
+}
+196079 = {
+	name = "Gap"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1938.2.6 = { birth = yes }
+	2014.12.13 = { death = yes }
+}
+196080 = {
+	name = "Seok"
+	dynasty = 20000001
+	father = 95843
+	culture = korean
+	religion = taoist
+	1941.8.30 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+####이갑 일가
+196081 = {
+	name = "Sanghyop" #의친왕 손자
+	dynasty = 20000001
+	father = 196079
+	culture = korean
+	religion = taoist
+	1962.9.23 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+196082 = {
+	name = "Kwun"
+	dynasty = 20000001
+	father = 196081
+	culture = korean
+	religion = taoist
+	1998.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+196083 = {
+	name = "Yung"
+	dynasty = 20000001
+	father = 196081
+	culture = korean
+	religion = taoist
+	1999.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+196084 = {
+	name = "Sangwu" #의친왕 손자
+	dynasty = 20000001
+	father = 196079
+	culture = korean
+	religion = taoist
+	1963.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+###이곤 일가
+196085 = {
+	name = "Jun"
+	dynasty = 20000001
+	father = 196077
+	culture = korean
+	religion = taoist
+	1961.10.10 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+196086 = {
+	name = "SangJun"
+	dynasty = 20000001
+	father = 196085
+	culture = korean
+	religion = taoist
+	1984.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+###이주 일가
+196087 = {
+	name = "Hanju"
+	dynasty = 20000001
+	father = 196077
+	culture = korean
+	religion = taoist
+	1943.12.18 = { birth = yes }
+	2011.5.25 = { death = yes }
+}
+196088 = {
+	name = "Deok"
+	dynasty = 20000001
+	father = 196077
+	culture = korean
+	religion = taoist
+	1970.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+###이석 일가
+196089 = {
+	name = "Jonghun"
+	dynasty = 20000001
+	father = 196080
+	culture = korean
+	religion = taoist
+	1974.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+###이건 일가
+196090 = {
+	name = "Choung"#이충#실은 뻐꾸기 아이임.
+	dynasty = 20000001
+	father = 95844
+	culture = kyushuan
+	religion = taoist
+	1932.8.14 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+196091 = {
+	name = "Goya" #모모야마 고야#나 일본인이오
+	dynasty = 1000004
+	father = 95844
+	culture = kyushuan
+	religion = taoist
+	1952.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+196092 = {
+	name = "Ki" #이기
+	dynasty = 20000001
+	father = 95844
+	culture = kyushuan
+	religion = taoist
+	1935.3.14 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+###이우 일가
+196093 = {
+	name = "Jong" #이종#요절함
+	dynasty = 20000001
+	father = 95845
+	culture = korean
+	religion = taoist
+	1940.11.9 = { birth = yes }
+	1966.12.25 = { death = yes }
+}
+#황손 이수
+196094 = {
+	name = "Su"
+	dynasty = 20000001
+	father = 196077
+	culture = korean
+	religion = taoist
+	1960.1.1 = { birth = yes }
+	2020.3.15 = { death = yes }
+}
+#고종 후예
+196095 = {
+	name = "Seon"
+	dynasty = 20000001
+	father = 95827
+	culture = korean
+	religion = taoist
+	1868.5.31 = { birth = yes }
+	1880.1.12 = { death = yes }
+}
+196096 = {
+	name = "Yuk"
+	dynasty = 20000001
+	father = 95827
+	culture = korean
+	religion = taoist
+	1914.7.3 = { birth = yes }
+	1916.1.22 = { death = yes }
+}
+196097 = {
+	name = "Wu"
+	dynasty = 20000001
+	father = 95827
+	culture = korean
+	religion = taoist
+	1915.8.20 = { birth = yes }
+	1916.7.25 = { death = yes }
+}
+196098 = {
+	name = "Prince" #대군
+	dynasty = 20000001
+	father = 95827
+	culture = korean
+	religion = taoist
+	1871.11.4 = { birth = yes }
+	1871.11.8 = { death = yes }
+}
+196099 = {
+	name = "Prince" #대군
+	dynasty = 20000001
+	father = 95827
+	culture = korean
+	religion = taoist
+	1875.4.5 = { birth = yes }
+	1875.4.18 = { death = yes }
+}
+196100 = {
+	name = "Princess" #옹주
+	dynasty = 20000001
+	father = 95827
+	female = yes
+	culture = korean
+	religion = taoist
+	1871.1.1 = { birth = yes }
+	1872.1.1 = { death = yes }
+}
+196101 = {
+	name = "Princess"
+	dynasty = 20000001
+	father = 95827
+	female = yes
+	culture = korean
+	religion = taoist
+	1873.2.3 = { birth = yes }
+	1873.9.28 = { death = yes }
+}
+196102 = {
+	name = "Princess"
+	dynasty = 20000001
+	father = 95827
+	female = yes
+	culture = korean
+	religion = taoist
+	1874.1.1 = { birth = yes }
+	1874.3.1 = { death = yes }
+}
+196103 = {
+	name = "Deokhye"
+	dynasty = 20000001
+	father = 95827
+    female = yes
+	culture = korean
+	religion = taoist
+	1912.5.25 = { birth = yes }
+	1989.4.21 = { death = yes }
+}
+#사도세자 후손
+196104 = {
+	name = "Jung" #의소세자
+	dynasty = 20000001
+	father = 95822
+	culture = korean
+	religion = taoist
+	1750.9.27 = { birth = yes }
+	1752.4.17 = { death = yes }
+}
+196105 = {
+	name = "Jin" #은신군
+	dynasty = 20000001
+	father = 95822
+	culture = korean
+	religion = taoist
+	1755.1.11 = { birth = yes }
+	1771.3.29 = { death = yes }
+}
+196106 = {
+	name = "Chan" #은전군
+	dynasty = 20000001
+	father = 95822
+	culture = korean
+	religion = taoist
+	1759.8.14 = { birth = yes }
+	1778.8.26 = { death = yes }
+}
+#은언군 후손
+196107 = {
+	name = "Dam" 
+	dynasty = 20000001
+	father = 95833
+	culture = korean
+	religion = taoist
+	1769.1.21 = { birth = yes }
+	1786.11.20 = { death = yes }
+}
+196108 = {
+	name = "Seongdek" 
+	dynasty = 20000001
+	father = 95833
+	culture = korean
+	religion = taoist
+	1775.1.1 = { birth = yes }
+	1817.11.27 = { death = yes }
+}
+196109 = {
+	name = "Cheoldek" 
+	dynasty = 20000001
+	father = 95833
+	culture = korean
+	religion = taoist
+	1780.1.1 = { birth = yes }
+	1818.1.1 = { death = yes }
+}
+#전계대원군 후손
+196110 = {
+	name = "Myung" 
+	dynasty = 20000001
+	father = 95832
+	culture = korean
+	religion = taoist
+	1827.9.11 = { birth = yes }
+	1840.9.6 = { death = yes }
+}
+196111 = {
+	name = "Gyongeng" 
+	dynasty = 20000001
+	father = 95832
+	culture = korean
+	religion = taoist
+	1828.7.20 = { birth = yes }
+	1902.2.1 = { death = yes }
+}
+#인조 아들들
+196112 = {
+	name = "Wang" 
+	dynasty = 20000001
+	father = 95816
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_sohyeonseja
+	1612.2.5 = { birth = yes }
+	1645.5.21 = { death = yes }
+}
+196113 = {
+	name = "Gon" #용성대군
+	dynasty = 20000001
+	father = 95816
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yongsung_daegun
+	1624.10.24 = { birth = yes }
+	1629.12.22 = { death = yes }
+}
+196114 = {
+	name = "Jang" #숭선군
+	dynasty = 20000001
+	father = 95816
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_sungseon_gun
+	1639.10.17 = { birth = yes }
+	1690.1.6 = { death = yes }
+}
+196115 = {
+	name = "Suk" #낙선군
+	dynasty = 20000001
+	father = 95816
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_nakseon_gun
+	1641.12.9 = { birth = yes }
+	1695.4.26 = { death = yes }
+}
+196116 = {
+	name = "Hyomyong" #효명옹주.이름은 불명
+	dynasty = 20000001
+	father = 95816
+	culture = korean
+	religion = taoist
+	female = yes
+	1637.1.1 = { birth = yes }
+	1700.1.1 = { death = yes }
+}
+#광해군 자식
+196117 = {
+	name = "Jil" #폐세자
+	dynasty = 20000001
+	father = 95815
+	culture = korean
+	religion = taoist
+	1598.12.31 = { birth = yes }
+	1623.7.22 = { death = yes }
+}
+196118 = {
+	name = "Ongju"
+	dynasty = 20000001
+	father = 95815
+	female = yes
+	culture = korean
+	religion = taoist
+	1619.1.1 = { birth = yes }
+	1664.1.1 = { death = yes }
+}
+#선조 자식
+196119 = {
+	name = "Jin" #임해군
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_imhae_gun
+	1572.1.15 = { birth = yes }
+	1609.6.3 = { death = { death_reason = death_execution killer = 95815 } }
+}
+196120 = {
+	name = "Sung" #의안군
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yuian_gun
+	1577.1.1 = { birth = yes }
+	1588.2.24 = { death = yes }
+}
+196121 = {
+	name = "Hu" #신성군
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_shinsung_gun
+	1578.1.6 = { birth = yes }
+	1592.12.8 = { death = yes }
+}
+196122 = {
+	name = "Bo" #순화군
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_sunhwa_gun
+	1580.10.10 = { birth = yes }
+	1607.3.18 = { death = yes }
+}
+196123 = {
+	name = "Gong" #인성군
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_insung_gun
+	1588.10.29 = { birth = yes }
+	1628.5.20 = { death = { death_reason = death_execution killer = 814 } }
+}
+196124 = {
+	name = "Gwang"
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yuichang_gun
+	1589.1.1 = { birth = yes }
+	1645.1.1 = { death = yes }
+}
+196125 = {
+	name = "Ju"
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_gyungchang_gun
+	1596.9.23 = { birth = yes }
+	1644.1.16 = { death = yes }
+}
+196126 = {
+	name = "Je"
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_hengahn_gun
+	1598.4.1 = { birth = yes }
+	1644.4.1 = { death = { death_reason = death_execution killer = 95816 } }
+}
+196127 = {
+	name = "nek"
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_inheng_gun
+	1604.3.1 = { birth = yes }
+	1651.3.1 = { death = yes }
+}
+196128 = {
+	name = "Ui"
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yongchang_daegun
+	1606.4.12 = { birth = yes }
+	1614.3.19 = { death = { death_reason = death_execution killer = 95815 } }
+}
+196129 = {
+	name = "Gyea"
+	dynasty = 20000001
+	father = 95814
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yongseong_gun
+	1606.1.21 = { birth = yes }
+	1649.10.24 = { death = yes }
+}
+#덕흥대원군 자식
+196130 = {
+	name = "Jung"
+	dynasty = 20000001
+	father = 95849
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_hawon_gun
+	1545.1.23 = { birth = yes }
+	1597.10.31 = { death = yes }
+}
+196131 = {
+	name = "In"
+	dynasty = 20000001
+	father = 95849
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_haleng_gun
+	1545.5.9 = { birth = yes }
+	1592.6.17 = { death = yes }
+}
+#정원군 자식
+196132 = {
+	name = "Meong"
+	dynasty = 20000001
+	father = 95829
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_nengpung_gun
+	1596.5.9 = { birth = yes }
+	1604.6.17 = { death = yes }
+}
+196133 = {
+	name = "Bo"
+	dynasty = 20000001
+	father = 95829
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_nengwon_daegun
+	1598.5.15 = { birth = yes }
+	1656.1.26 = { death = yes }
+}
+196134 = {
+	name = "Jeon"
+	dynasty = 20000001
+	father = 95829
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_nengyang_daegun
+	1599.7.16 = { birth = yes }
+	1615.11.17 = { death = { death_reason = death_execution killer = 95815 } }
+}
+#중종 자식
+196135 = {
+	name = "Mi"
+	dynasty = 20000001
+	father = 95811
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_boksung_gun
+	1509.9.28 = { birth = yes }
+	1533.6.28 = { death = yes }
+}
+196136 = {
+	name = "Hui"
+	dynasty = 20000001
+	father = 95811
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_haeahn_gun
+	1511.6.15 = { birth = yes }
+	1573.8.4 = { death = yes }
+}
+196137 = {
+	name = "Young"
+	dynasty = 20000001
+	father = 95811
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_geomwon_gun
+	1513.6.9 = { birth = yes }
+	1562.4.7 = { death = yes }
+}
+196138 = {
+	name = "Geo"
+	dynasty = 20000001
+	father = 95811
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yongyang_gun
+	1521.4.24 = { birth = yes }
+	1561.7.27 = { death = yes }
+}
+196139 = {
+	name = "Gi"
+	dynasty = 20000001
+	father = 95811
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_deokyang_gun
+	1524.9.25 = { birth = yes }
+	1581.6.22 = { death = yes }
+}
+196140 = {
+	name = "Wan"
+	dynasty = 20000001
+	father = 95811
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_bongsung_gun
+	1528.2.1 = { birth = yes }
+	1547.10.3 = { death = yes }
+}
+#명종 자식
+196141 = {
+	name = "Bu"
+	dynasty = 20000001
+	father = 95813
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_sunhue_seja
+	1551.7.1 = { birth = yes }
+	1563.10.6 = { death = yes }
+}
+#연산군 자식
+196142 = {
+	name = "Hwang"
+	dynasty = 20000001
+	father = 95810
+	culture = korean
+	religion = taoist
+	1497.1.10 = { birth = yes }
+	1506.10.10 = { death = { death_reason = death_execution killer = 95811 } }
+}
+196143 = {
+	name = "Ihn"
+	dynasty = 20000001
+	father = 95810
+	culture = korean
+	religion = taoist
+	1498.1.1 = { birth = yes }
+	1506.10.10 = { death = { death_reason = death_execution killer = 95811 } }
+}
+196144 = {
+	name = "Shung"
+	dynasty = 20000001
+	father = 95810
+	culture = korean
+	religion = taoist
+	1500.6.18 = { birth = yes }
+	1506.10.10 = { death = { death_reason = death_execution killer = 95811 } }
+}
+#소현세자 자식
+196145 = {
+	name = "Baek"
+	dynasty = 20000001
+	father = 196112
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_gyeongseon_gun
+	1636.3.25 = { birth = yes }
+	1648.9.18 = { death = { death_reason = death_execution killer = 95816 } }
+}
+196146 = {
+	name = "Seokrin"
+	dynasty = 20000001
+	father = 196112
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_gyeongwan_gun
+	1640.3.25 = { birth = yes }
+	1648.9.18 = { death = { death_reason = death_execution killer = 95816 } }
+}
+196147 = {
+	name = "Hui"
+	dynasty = 20000001
+	father = 196112
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_gyeongan_gun
+	1644.10.5 = { birth = yes }
+	1665.9.22 = { death = yes }
+}
+#성종 자식
+196148 = {
+	name = "Sun"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_gyeseong_gun
+	1478.3.14 = { birth = yes }
+	1504.9.2 = { death = yes }
+}
+196149 = {
+	name = "Hang"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_anyang_gun
+	1480.2.1 = { birth = yes }
+	1505.4.2 = { death = { death_reason = death_execution killer = 95810 } }
+}
+196150 = {
+	name = "Bong"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_bongan_gun
+	1482.5.11 = { birth = yes }
+	1505.4.2 = { death = { death_reason = death_execution killer = 95810 } }
+}
+196151 = {
+	name = "Shu"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_wanwon_gun
+	1480.5.26 = { birth = yes }
+	1509.2.22 = { death = yes }
+}
+196152 = {
+	name = "Yeom"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_huishan_gun
+	1481.1.8 = { birth = yes }
+	1512.4.7 = { death = yes }
+}
+196153 = {
+	name = "Don"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_gyeonsung_gun
+	1482.1.8 = { birth = yes }
+	1507.10.16 = { death = { death_reason = death_execution killer = 95811 } }
+}
+196154 = {
+	name = "Hui"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_ikyang_gun
+	1488.7.1 = { birth = yes }
+	1552.1.21 = { death = yes }
+}
+196155 = {
+	name = "Guan"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yisung_gun
+	1489.2.11 = { birth = yes }
+	1526.6.3 = { death = yes }
+}
+196156 = {
+	name = "Chim"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_gyeongmyong_gun
+	1489.4.19 = { birth = yes }
+	1526.2.23 = { death = yes }
+}
+196157 = {
+	name = "Byeon"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_jeonsung_gun
+	1490.5.4 = { birth = yes }
+	1505.12.1 = { death = yes }
+}
+196158 = {
+	name = "Jong"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_musan_gun
+	1490.7.8 = { birth = yes }
+	1525.6.24 = { death = yes }
+}
+196159 = {
+	name = "Jeon"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_youngsan_gun
+	1490.10.8 = { birth = yes }
+	1538.6.11 = { death = yes }
+}
+196160 = {
+	name = "In"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_uncheon_gun
+	1490.11.18 = { birth = yes }
+	1524.4.23 = { death = yes }
+}
+196161 = {
+	name = "Hee"
+	dynasty = 20000001
+	father = 95809
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_yangwon_gun
+	1492.1.25 = { birth = yes }
+	1551.12.24 = { death = yes }
+}
+#세조 자식
+196162 = {
+	name = "Seo"
+	dynasty = 20000001
+	father = 95807
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_deokwon_gun
+	1449.3.6 = { birth = yes }
+	1498.7.22 = { death = yes }
+}
+196163 = {
+	name = "Seong"
+	dynasty = 20000001
+	father = 95807
+	culture = korean
+	religion = taoist
+	#give_nickname = nick_changwon_gun
+	1458.6.17 = { birth = yes }
+	1484.2.13 = { death = yes }
+}
+#Historical
+196201 = {
+	name = "Won" #
+	dynasty = 20000001
+	father = 196055
+	culture = korean
+	religion = taoist
+	1902.1.1 = { birth = yes }
+	1978.1.1 = { death = yes }
+}
+196202 = {
+	name = "Haeyeon" #
+	dynasty = 20000001
+	father = 196201
+	culture = korean
+	religion = taoist
+	1923.1.1 = { birth = yes }
+	1989.1.1 = { death = yes }
+}
+196203 = {
+	name = "Haeyeon" #
+	dynasty = 20000001
+	father = 196202
+	culture = korean
+	religion = taoist
+	1945.1.1 = { birth = yes }
+	2010.1.1 = { death = yes }
+}
+196204 = {
+	name = "Haeyoon" #
+	dynasty = 20000001
+	father = 196201
+	culture = korean
+	religion = taoist
+	1929.1.1 = { birth = yes }
+	1993.1.1 = { death = yes }
+}
+196205 = {
+	name = "Seokju" #
+	dynasty = 20000001
+	father = 196204
+	culture = korean
+	religion = taoist
+	1953.1.1 = { birth = yes }
+	2005.1.1 = { death = yes }
+}
+196206 = {
+	name = "Wukyun" #
+	dynasty = 20000001
+	father = 196205
+	culture = korean
+	religion = taoist
+	1976.1.1 = { birth = yes }
+	2047.1.1 = { death = yes }
+}
+196207 = {
+	name = "Seungki" #
+	dynasty = 20000001
+	father = 196206
+	culture = korean
+	religion = taoist
+	1998.1.1 = { birth = yes }
+	2077.1.1 = { death = yes }
+}
+196208 = {
+	name = "Wugeon" #
+	dynasty = 20000001
+	father = 196205
+	culture = korean
+	religion = taoist
+	1978.1.1 = { birth = yes }
+	2031.1.1 = { death = yes }
+}
+196209 = {
+	name = "Wuhyung" #
+	dynasty = 20000001
+	father = 196205
+	culture = korean
+	religion = taoist
+	1982.1.1 = { birth = yes }
+	2057.1.1 = { death = yes }
+}
+####
+196211 = {
+	name = "Jaehyu" #
+	dynasty = 20000001
+	father = 95826
+	culture = korean
+	religion = taoist
+	1859.1.1 = { birth = yes }
+	1924.1.1 = { death = yes }
+}
+196212 = {
+	name = "Jaehyeok" #
+	dynasty = 20000001
+	father = 95826
+	culture = korean
+	religion = taoist
+	1858.1.1 = { birth = yes }
+	1902.1.1 = { death = yes }
+}
+196213 = {
+	name = "Jaecheol" #
+	dynasty = 20000001
+	father = 95826
+	culture = korean
+	religion = taoist
+	1854.1.1 = { birth = yes }
+	1920.1.1 = { death = yes }
+}
+196214 = {
+	name = "Minyong" #
+	dynasty = 20000001
+	father = 196211
+	culture = korean
+	religion = taoist
+	1898.1.1 = { birth = yes }
+	1949.1.1 = { death = yes }
+}
+196215 = {
+	name = "Haegeum" #
+	dynasty = 20000001
+	father = 196214
+	culture = korean
+	religion = taoist
+	1927.1.1 = { birth = yes }
+	2017.1.1 = { death = yes }
+}
+196216 = {
+	name = "Yoonju" #
+	dynasty = 20000001
+	father = 196215
+	culture = korean
+	religion = taoist
+	1949.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196217 = {
+	name = "Wuseong" #
+	dynasty = 20000001
+	father = 196216
+	culture = korean
+	religion = taoist
+	1973.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196218 = {
+	name = "Yunki" #
+	dynasty = 20000001
+	father = 196217
+	culture = korean
+	religion = taoist
+	1996.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196219 = {
+	name = "Ui-Hyun" #
+	dynasty = 20000001
+	father = 196217
+	culture = korean
+	religion = taoist
+	2016.1.1 = { birth = yes }
+	2080.1.1 = { death = yes }
+}
+196220 = {
+	name = "Jeongju" #
+	dynasty = 20000001
+	father = 196215
+	culture = korean
+	religion = taoist
+	1955.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196221 = {
+	name = "Wuseung" #
+	dynasty = 20000001
+	father = 196220
+	culture = korean
+	religion = taoist
+	1986.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196222 = {
+	name = "Mongju" #
+	dynasty = 20000001
+	father = 196215
+	culture = korean
+	religion = taoist
+	1963.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196223 = {
+	name = "Haejeon" #
+	dynasty = 20000001
+	father = 196214
+	culture = korean
+	religion = taoist
+	1928.1.1 = { birth = yes }
+	1952.1.1 = { death = yes }
+}
+196223 = {
+	name = "Haewoon" #
+	dynasty = 20000001
+	father = 196214
+	culture = korean
+	religion = taoist
+	1932.1.1 = { birth = yes }
+	2014.1.1 = { death = yes }
+}
+196224 = {
+	name = "Haeseong" #
+	dynasty = 20000001
+	father = 196214
+	culture = korean
+	religion = taoist
+	1932.1.1 = { birth = yes }
+	2014.1.1 = { death = yes }
+}
+196225 = {
+	name = "Hyukju" #
+	dynasty = 20000001
+	father = 196224
+	culture = korean
+	religion = taoist
+	1957.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196226 = {
+	name = "Taekju" #
+	dynasty = 20000001
+	father = 196224
+	culture = korean
+	religion = taoist
+	1959.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196227 = {
+	name = "Seokju" #
+	dynasty = 20000001
+	father = 196224
+	culture = korean
+	religion = taoist
+	1965.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196228 = {
+	name = "Hyeonju" #
+	dynasty = 20000001
+	father = 196224
+	culture = korean
+	religion = taoist
+	1984.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196229 = {
+	name = "Wuhwi" #
+	dynasty = 20000001
+	father = 196226
+	culture = korean
+	religion = taoist
+	1983.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196230 = {
+	name = "Wuyeon" #
+	dynasty = 20000001
+	father = 196228
+	culture = korean
+	religion = taoist
+	2009.1.1 = { birth = yes }
+	2070.1.1 = { death = yes }
+}
+196231 = {
+	name = "Wujae" #
+	dynasty = 20000001
+	father = 196228
+	culture = korean
+	religion = taoist
+	2012.1.1 = { birth = yes }
+	2080.1.1 = { death = yes }
+}
+196232 = {
+	name = "Myeongki" #
+	dynasty = 20000001
+	father = 196229
+	culture = korean
+	religion = taoist
+	2008.1.1 = { birth = yes }
+	2080.1.1 = { death = yes }
+}
+#
+196233 = {
+	name = "Seongyong" #
+	dynasty = 20000001
+	father = 196211
+	culture = korean
+	religion = taoist
+	1909.1.1 = { birth = yes }
+	1939.1.1 = { death = yes }
+}
+196234 = {
+	name = "Haemin" #
+	dynasty = 20000001
+	father = 196233
+	culture = korean
+	religion = taoist
+	1927.1.1 = { birth = yes }
+	1985.1.1 = { death = yes }
+}
+196235 = {
+	name = "Woongju" #
+	dynasty = 20000001
+	father = 196234
+	culture = korean
+	religion = taoist
+	1961.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196236 = {
+	name = "Cheolju" #
+	dynasty = 20000001
+	father = 196234
+	culture = korean
+	religion = taoist
+	1963.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196237 = {
+	name = "Hyeolju" #
+	dynasty = 20000001
+	father = 196234
+	culture = korean
+	religion = taoist
+	1965.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196238 = {
+	name = "Wushin" #
+	dynasty = 20000001
+	father = 196237
+	culture = korean
+	religion = taoist
+	1992.1.1 = { birth = yes }
+	2050.1.1 = { death = yes }
+}
+196239 = {
+	name = "Minki" #
+	dynasty = 20000001
+	father = 196238
+	culture = korean
+	religion = taoist
+	2016.1.1 = { birth = yes }
+	2080.1.1 = { death = yes }
+}
+196240 = {
+	name = "Wujeon" #
+	dynasty = 20000001
+	father = 196237
+	culture = korean
+	religion = taoist
+	2016.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196241 = {
+	name = "Wuhyeok" #
+	dynasty = 20000001
+	father = 196237
+	culture = korean
+	religion = taoist
+	1994.1.1 = { birth = yes }
+	2017.3.15 = { death = yes }
+}
+#
+196242 = {
+	name = "Wuhoe" #
+	dynasty = 20000001
+	father = 196222
+	culture = korean
+	religion = taoist
+	1991.1.1 = { birth = yes }
+	2030.1.1 = { death = yes }
+}
+196243 = {
+	name = "Kiljun" #
+	dynasty = 20000001
+	father = 196242
+	culture = korean
+	religion = taoist
+	2017.1.1 = { birth = yes }
+	2041.1.1 = { death = yes }
+}
+#######
+198001 = {
+	name = "Karl" #
+	dna = fabmmzztpmr
+	dynasty=101556
+	martial=16
+	diplomacy=17
+	intrigue=18
+	stewardship=18
+	religion="catholic"
+	culture="italian"
+	trait="lustful"
+	trait="brave"
+	trait="reincarnation"
+	trait="humble"
+	father=1
+	mother=7757
+	1061.1.1 = {
+		birth=yes
+	}
+	1133.1.1 = {
+		death=yes
+	}
+}
+198002 = {
+	name = "Beneto" #
+	dna = fabmmzztpmr
+	dynasty=101556
+	martial=12
+	diplomacy=11
+	intrigue=14
+	stewardship=17
+	religion="catholic"
+	culture="italian"
+	trait="lustful"
+	father=1
+	mother=7757
+	1062.3.7 = {
+		birth=yes
+	}
+	1138.1.1 = {
+		death=yes
+	}
+}
+198003 = {
+	name = "Alfred" #
+	dna = fabmmzztpmr
+	dynasty=101556
+	martial=10
+	diplomacy=6
+	intrigue=7
+	stewardship=8
+	religion="catholic"
+	culture="italian"
+	trait="lustful"
+	father=1
+	mother=7757
+	1064.8.15 = {
+		birth=yes
+	}
+	1118.1.1 = {
+		death=yes
+	}
+}
+198004 = {
+	name = "Beatrice" #
+	dna = fabmmzztpmr
+	female = yes
+	dynasty=101556
+	martial=16
+	diplomacy=26
+	intrigue=28
+	stewardship=22
+	religion="catholic"
+	culture="italian"
+	trait="chaste"
+	father=1
+	mother=7757
+	1065.9.12 = {
+		birth=yes
+	}
+	1099.7.16 = {
+		death=yes
+	}
+}
+198005 = {
+	name = "Lumine" #
+	dna = fabmmzztpmr
+	dynasty=101556
+	martial=16
+	diplomacy=26
+	intrigue=28
+	stewardship=22
+	religion="catholic"
+	culture="italian"
+	trait="bastard"
+	trait="immortal"
+	father=1
+	mother=198004
+	1099.7.12 = {
+		birth=yes
+	}
+	1241.1.1 = {
+		death=yes
+	}
+}

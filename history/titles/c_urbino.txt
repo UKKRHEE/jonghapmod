@@ -1,0 +1,26 @@
+1.1.1 = {
+	holder = 1
+	de_jure_liege = e_westkorea
+}
+42.1.1={
+ holder = 145292
+} # Peter's first visit to Rome
+43.1.1 = {
+	holder = 1
+	law = vice_royalty_2
+	law = status_of_women_4
+	law = revoke_title_law_2
+	law = ze_administration_laws_2
+	law = centralization_4
+	law = vassal_wars_law_2
+	law = out_of_realm_inheritance_law_1
+	law = succ_primogeniture
+	law = dw_first_night_law_1
+}
+89.1.1 = {
+	holder = 2
+	liege = e_westkorea
+}
+128.1.1 = {
+	holder = 4
+}

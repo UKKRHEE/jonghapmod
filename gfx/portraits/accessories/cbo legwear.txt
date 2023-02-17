@@ -1,9 +1,0 @@
-﻿
-female_secular_modern_underwear_common_01 = {
-	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_secular_modern_underwear_common_01_entity }
-}
-
-
-female_legwear_secular_mena_shorts_01 = {
-	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_legwear_secular_mena_shorts_01_entity }
-}

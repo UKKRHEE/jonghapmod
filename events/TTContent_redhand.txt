@@ -1,0 +1,2770 @@
+#############################################################################################
+###             Contains events specific to the RED HAND mercenary company                ###
+#############################################################################################
+###  SEARCH "FIXME" for things to continue working on.                                   ####
+###                                                                                      ####
+### .1000 series is for Red Hand Maintenance (Keeping the band with the right courtiers.)####
+###                                                                                      ####
+### .2000 series is for RED HAND PILGRIMMAGE EVENTS                                      ####
+#############################################################################################
+
+namespace = redhand
+
+#### Creating a new commander on the Old Commanders death. ####
+character_event = {
+	id = redhand.1011
+	hide_window = yes
+	is_triggered_only = yes # Triggered from On_action On_death
+	trigger = {
+		has_landed_title = c_red_hand
+            }
+
+	immediate = {
+		random_list = {
+			25 = { ### Portrait226 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 7
+					 diplomacy = 6
+					 stewardship = 4
+					 intrigue = 6
+					 learning = 6
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = berserker
+					trait = genius
+					trait = adventurer
+					trait = proud
+					trait = portrait226
+					trait = wroth
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}		
+				
+			25 = { ### Portrait232 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 7
+					 diplomacy = 6
+					 stewardship = 4
+					 intrigue = 6
+					 learning = 6
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = berserker
+					trait = genius
+					trait = adventurer
+					trait = proud
+					trait = portrait232
+					trait = wroth
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+				
+			25 = { ### Portrait218 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 4
+					 diplomacy = 5
+					 stewardship = 4
+					 intrigue = 5
+					 learning = 5
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = viking
+					trait = quick
+					trait = hunter
+					trait = proud
+					trait = portrait218
+					trait = gregarious
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+				
+			25 = { ### Portrait233 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 4
+					 diplomacy = 5
+					 stewardship = 4
+					 intrigue = 5
+					 learning = 5
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = viking
+					trait = quick
+					trait = hunter
+					trait = proud
+					trait = portrait233
+					trait = gregarious
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+				
+			25 = { ### Portrait225 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 4
+					 diplomacy = 5
+					 stewardship = 4
+					 intrigue = 5
+					 learning = 5
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = viking
+					trait = quick
+					trait = hunter
+					trait = proud
+					trait = portrait225
+					trait = gregarious
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+				
+			25 = { ### Portrait 220 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 4
+					 diplomacy = 5
+					 stewardship = 4
+					 intrigue = 5
+					 learning = 5
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = viking
+					trait = quick
+					trait = hunter
+					trait = proud
+					trait = portrait220
+					trait = gregarious
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+				
+			25 = { ### Portrait234 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 7
+					 diplomacy = 6
+					 stewardship = 4
+					 intrigue = 6
+					 learning = 6
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = berserker
+					trait = genius
+					trait = adventurer
+					trait = proud
+					trait = portrait234
+					trait = wroth
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+
+			25 = { ### Portrait219 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = 0ad0d0icbb0
+					female = yes
+					culture = pictish
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 8
+					 diplomacy = 6
+					 stewardship = 6
+					 intrigue = 16
+					 learning = 6
+		  			 }
+					health = 9
+			  		fertility = 0.90
+					trait = robust
+					trait = redhandvet
+					trait = proud
+					trait = lustful
+					trait = portrait219
+					trait = hedonist
+					trait = content
+					trait = brave
+					trait = elusive_shadow
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = organizer
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Gwen }
+						25 = { set_name = Boudica }
+						25 = { set_name = Bethany }
+						25 = { set_name = Leliana }
+						25 = { set_name = Lorelai }
+						25 = { set_name = Aribeth }
+						}
+				}
+				}
+				
+			25 = { ### Portrait227 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = 0ad0d0icbb0
+					female = yes
+					culture = pictish
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 8
+					 diplomacy = 6
+					 stewardship = 6
+					 intrigue = 16
+					 learning = 6
+		  			 }
+					health = 9
+			  		fertility = 0.90
+					trait = robust
+					trait = redhandvet
+					trait = proud
+					trait = lustful
+					trait = portrait227
+					trait = hedonist
+					trait = content
+					trait = brave
+					trait = elusive_shadow
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = organizer
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Gwen }
+						25 = { set_name = Boudica }
+						25 = { set_name = Bethany }
+						25 = { set_name = Leliana }
+						25 = { set_name = Lorelai }
+						25 = { set_name = Aribeth }
+						}
+				}
+				}
+				
+			25 = { ### Portrait221 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = 0ad0d0icbb0
+					female = yes
+					culture = pictish
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 8
+					 diplomacy = 6
+					 stewardship = 6
+					 intrigue = 16
+					 learning = 6
+		  			 }
+					health = 9
+			  		fertility = 0.90
+					trait = robust
+					trait = redhandvet
+					trait = proud
+					trait = lustful
+					trait = portrait221
+					trait = hedonist
+					trait = content
+					trait = brave
+					trait = elusive_shadow
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = organizer
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Gwen }
+						25 = { set_name = Boudica }
+						25 = { set_name = Bethany }
+						25 = { set_name = Leliana }
+						25 = { set_name = Lorelai }
+						25 = { set_name = Aribeth }
+						}
+				}
+				}
+				
+				25 = { ### Portrait229 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = 0ad0d0icbb0
+					female = yes
+					culture = pictish
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 6
+					 diplomacy = 5
+					 stewardship = 6
+					 intrigue = 13
+					 learning = 6
+		  			 }
+					health = 9
+			  		fertility = 0.90
+					trait = shrewd
+					trait = redhandvet
+					trait = proud
+					trait = lustful
+					trait = portrait229
+					trait = hedonist
+					trait = content
+					trait = brave
+					trait = elusive_shadow
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = organizer
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Bethany }
+						25 = { set_name = Leliana }
+						25 = { set_name = Lorelai }
+						25 = { set_name = Aribeth }
+						}
+				}
+				}
+
+
+			25 = { ### Portrait231 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = umgdcetuorv
+					female = yes
+					culture = nubian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 11
+					 diplomacy = 6
+					 stewardship = 12
+					 intrigue = 9
+					 learning = 6
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = fair
+					trait = pilgrim
+					trait = zealous
+					trait = portrait231
+					trait = theologian
+					trait = brave
+					trait = lustful
+					trait = viking
+					trait = brilliant_strategist
+					trait = dick_horse
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+					trait = holy_warrior
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Calypso }
+						25 = { set_name = Kyra }
+						25 = { set_name = Opal }
+						25 = { set_name = Cleo }
+						25 = { set_name = Octavia }
+						25 = { set_name = Rori }
+						25 = { set_name = Violet }
+						25 = { set_name = Titania }
+						}
+				}
+				}
+
+			25 = { ### Portrait224 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = qhodltwxyti
+					female = yes
+					culture = kannada
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 10
+					 diplomacy = 6
+					 stewardship = 6
+					 intrigue = 11
+					 learning = 11
+		  			 }
+					health = 15
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = proud
+					trait = architect
+					trait = brave
+					trait = portrait224
+					trait = lustful
+					trait = brilliant_strategist
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+		  			trait = heavy_infantry_leader
+					trait = flat_terrain_leader
+					trait = rough_terrain_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Shakti }
+						25 = { set_name = Kali }
+						25 = { set_name = Shiva }
+						25 = { set_name = Krishna }
+						25 = { set_name = Vishnu }
+						25 = { set_name = Sita }
+						25 = { set_name = Maya }
+						25 = { set_name = Chandra }
+						}
+				}
+				}
+
+			25 = { ### Portrait230 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = dnqqdzosjyz
+					female = yes
+					culture = persian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 16
+					 diplomacy = 5
+					 stewardship = 7
+					 intrigue = 8
+					 learning = 12
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = patient 
+					trait = diligent
+					trait = proud
+					trait = greedy
+					trait = cruel
+					trait = portrait230
+					trait = gregarious
+					trait = lustful
+					trait = brilliant_strategist
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Ariana }
+						25 = { set_name = Concordia }
+						25 = { set_name = Nadia }
+						25 = { set_name = Mira }
+						25 = { set_name = Tunare }
+						25 = { set_name = Dibella }
+						25 = { set_name = Mara }
+						}
+					}
+				}
+				
+			25 = { ### Portrait222 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 4
+					 diplomacy = 5
+					 stewardship = 4
+					 intrigue = 5
+					 learning = 5
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = viking
+					trait = quick
+					trait = hunter
+					trait = proud
+					trait = portrait222
+					trait = gregarious
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+				
+				
+			25 = { ### Portrait223 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = afdge0ice00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 4
+					 diplomacy = 5
+					 stewardship = 4
+					 intrigue = 5
+					 learning = 5
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = quick
+					trait = hunter
+					trait = proud
+					trait = portrait223
+					trait = gregarious
+					trait = lustful
+					trait = brave
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+					trait = brilliant_strategist
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+					trait = winter_soldier
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+						}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Aphrodite }
+						25 = { set_name = Pandora }
+						25 = { set_name = Opal }
+						25 = { set_name = Helena }
+						25 = { set_name = Hera }
+						25 = { set_name = Rainis }
+						25 = { set_name = Persephone }
+						25 = { set_name = Luet }
+						}
+				}
+				}
+				
+			25 = { ### Portrait228 WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = dnqqdzosjyz
+					female = yes
+					culture = persian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 16
+					 diplomacy = 5
+					 stewardship = 7
+					 intrigue = 8
+					 learning = 12
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = patient 
+					trait = diligent
+					trait = proud
+					trait = greedy
+					trait = cruel
+					trait = portrait228
+					trait = gregarious
+					trait = lustful
+					trait = brilliant_strategist
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					inherit = root
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Ariana }
+						25 = { set_name = Concordia }
+						25 = { set_name = Nadia }
+						25 = { set_name = Mira }
+						25 = { set_name = Tunare }
+						25 = { set_name = Dibella }
+						25 = { set_name = Mara }
+						}
+					}
+				}
+			}
+		}
+	}
+
+####  CREATE Freja ###
+character_event = {
+	id = redhand.1012
+	is_triggered_only = yes # Triggered RedHand Formation.
+	hide_window = yes #Hides event from view
+		immediate = {
+			narrative_event = { id = redhand.1013 days = 1 } #Create Kanika
+			### Freja is HERE!! 
+				create_character = {
+					random_traits = no
+					name = "Freja"
+					dynasty = none
+		  			dna = acce0aaa00
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 9
+					 diplomacy = 8
+					 stewardship = 8
+					 intrigue = 11
+					 learning = 4
+		  			 }
+					health = 14
+			  		fertility = 0.90
+					trait = strong
+					trait = fair
+					trait = portrait210
+					trait = redhandvet
+					trait = proud
+					trait = brave
+					trait = impaler
+					trait = lustful
+					trait = hedonist
+					trait = viking
+					trait = elusive_shadow
+					trait = dick_horse
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = redhand_npc_freja
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+				}
+			}
+		}
+	
+####  CREATE Kanika ###
+narrative_event = {
+	id = redhand.1013
+	desc = redhand1013
+	title = redhand1013title
+	picture = 1capt_face1
+	is_triggered_only = yes # Triggered RedHand Formation.
+	
+		option = {
+			name = "redhand1013a"
+			narrative_event = { id = mercom.999 days = 48 }  
+			### Kanika is HERE!! ###
+			create_character = {
+					random_traits = no
+					name = "Kanika"
+					dynasty = none
+		  			dna = umgdcetuorv
+					female = yes
+					culture = nubian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 12
+					 diplomacy = 10
+					 stewardship = 8
+					 intrigue = 6
+					 learning = 4
+		  			 }
+					health = 14
+			  		fertility = 0.90
+					trait = strong
+					trait = fair
+					trait = portrait211
+					trait = redhandvet
+					trait = proud
+					trait = brave
+					trait = lustful
+					trait = hedonist
+					trait = viking
+					trait = brilliant_strategist
+					trait = dick_horse
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = redhand_npc_kanika
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+				}
+			}
+		}
+
+# Populating the RedHand with appropriate warriors.
+character_event = {
+	id = redhand.1000
+	hide_window = yes #Hides event from view
+		trigger = {
+                       has_landed_title = c_red_hand
+                       NOT = { 		
+						any_courtier = { 
+								count = 9
+								trait = futa
+							}
+						}
+                       is_ruler = yes
+            }
+            mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		random_list = {
+
+			25 = { ### PRUSSIAN WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = dbeacsjdfay
+					female = yes
+					culture = prussian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 7
+					 diplomacy = 2
+					 stewardship = 9
+					 intrigue = 2
+					 learning = 1
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = diligent
+					trait = proud
+					trait = architect
+					trait = lustful
+					trait = indulgent_wastrel
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Lucia }
+						25 = { set_name = Arianna }
+						25 = { set_name = Kyla }
+						25 = { set_name = Miriam }
+						25 = { set_name = Pyra }
+						25 = { set_name = Valla }
+						25 = { set_name = Ria }
+						25 = { set_name = Malla }
+						25 = { set_name = Nessa }
+						25 = { set_name = Korelia }
+						}
+					}
+				}
+
+			25 = { ### PICTISH WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = yqhpsoziros
+					female = yes
+					culture = pictish
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 5
+					 diplomacy = 3
+					 stewardship = 2
+					 intrigue = 7
+					 learning = 1
+		  			 }
+					health = 9
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = patient 
+					trait = proud
+					trait = lustful
+					trait = hedonist
+					trait = content
+					trait = brave
+					trait = flamboyant_schemer
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = organizer
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Larra }
+						25 = { set_name = Morinth }
+						25 = { set_name = Bethany }
+						25 = { set_name = Shania }
+						25 = { set_name = Tyria }
+						25 = { set_name = Eola }
+						25 = { set_name = Aribeth }
+						25 = { set_name = Francesca }
+						25 = { set_name = Ivanna }
+						}
+					}
+				}
+
+			25 = { ### AVAR WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = hceufmgxmxs
+					female = yes
+					culture = avar
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 5
+					 diplomacy = 3
+					 stewardship = 5
+					 intrigue = 3
+					 learning = 7
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = redhandvet
+					trait = diligent
+					trait = lustful
+					trait = brave
+					trait = mystic
+					trait = martial_cleric
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+		  			trait = desert_terrain_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Nymphe }
+						25 = { set_name = Giana }
+						25 = { set_name = Othena }
+						25 = { set_name = Tybia }
+						25 = { set_name = Zuna }
+						25 = { set_name = Semira }
+						25 = { set_name = Vici }
+						25 = { set_name = Rora }
+						25 = { set_name = Velena }
+						}
+					}
+				}
+
+			25 = { ### NUBIAN WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = umgdcetuorv
+					female = yes
+					culture = nubian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 11
+					 diplomacy = 2
+					 stewardship = 3
+					 intrigue = 4
+					 learning = 6
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = proud
+					trait = brave
+					trait = lustful
+					trait = hedonist
+					trait = viking
+					trait = skilled_tactician
+					trait = dick_horse
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Calypso }
+						25 = { set_name = Brusca }
+						25 = { set_name = Alina }
+						25 = { set_name = Kera }
+						25 = { set_name = Leona }
+						25 = { set_name = Lanna }
+						25 = { set_name = Pyrella }
+						25 = { set_name = Nemesa }
+						25 = { set_name = Primera }
+						25 = { set_name = Kyalla }
+						25 = { set_name = Gabriela }
+						}
+					}
+				}
+
+			25 = { ### KANNADA WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = qhodltwxyti
+					female = yes
+					culture = kannada
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 5
+					 diplomacy = 3
+					 stewardship = 3
+					 intrigue = 2
+					 learning = 4
+		  			 }
+					health = 15
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = proud
+					trait = greedy
+					trait = scarred
+					trait = one_eyed
+					trait = brave
+					trait = lustful
+					trait = brilliant_strategist
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+		  			trait = heavy_infantry_leader
+					trait = flat_terrain_leader
+					trait = rough_terrain_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Dominica }
+						25 = { set_name = Delissa }
+						25 = { set_name = Nokra }
+						25 = { set_name = Theresa }
+						25 = { set_name = Liara }
+						25 = { set_name = Laera }
+						25 = { set_name = Gilianne }
+						25 = { set_name = Nora }
+						25 = { set_name = Shadra }
+						25 = { set_name = Shankra }
+						25 = { set_name = Lola }
+						}
+					}
+				}
+
+			25 = { ### PERSIAN WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = dnqqdzosjyz
+					female = yes
+					culture = persian
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 5
+					 diplomacy = 5
+					 stewardship = 4
+					 intrigue = 4
+					 learning = 7
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = patient 
+					trait = diligent
+					trait = proud
+					trait = just
+					trait = temperate
+					trait = gregarious
+					trait = lustful
+					trait = skilled_tactician
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = small_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Ariana }
+						25 = { set_name = Aurora }
+						25 = { set_name = Cora }
+						25 = { set_name = Bianca }
+						25 = { set_name = Mira }
+						25 = { set_name = Margot }
+						25 = { set_name = Pyrethia }
+						25 = { set_name = Raven }
+						25 = { set_name = Rose }
+						25 = { set_name = Kylie }
+						25 = { set_name = Kora }
+						}
+					}
+				}
+
+			25 = { ### ETHIOPIAN WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = fjyrtzbkaaq
+					female = yes
+					culture = ethiopian
+					age = 17
+					religion = root
+					attributes = {
+					 martial = 4
+					 diplomacy = 9
+					 stewardship = 3
+					 intrigue = 6
+					 learning = 4
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = redhandvet
+					trait = kind
+					trait = lustful
+					trait = hedonist
+					trait = brave
+					trait = gregarious
+					trait = underhanded_rogue
+					trait = dick_horse
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = siege_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = experimenter
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Leila }
+						25 = { set_name = Paela }
+						25 = { set_name = Jaesa }
+						25 = { set_name = Ashara }
+						25 = { set_name = Tyria }
+						25 = { set_name = Elara }
+						25 = { set_name = Ahsoka }
+						25 = { set_name = Cora }
+						25 = { set_name = Bella }
+						}
+					}
+				}
+			
+			25 = { ### VISIGOTHIC WARRIOR ###
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = zxvhxulsdjb
+					female = yes
+					culture = visigothic
+					age = 19
+					religion = root
+					attributes = {
+					 martial = 5
+					 diplomacy = 3
+					 stewardship = 6
+					 intrigue = 4
+					 learning = 4
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = shieldmaiden
+					trait = mystic
+					trait = scarred
+					trait = redhandvet
+					trait = lustful
+					trait = hedonist
+					trait = brave
+					trait = gregarious
+					trait = skilled_tactician
+					trait = dick_average
+					trait = futa
+		  			trait = regular_tits
+		  			trait = organizer
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Herra }
+						25 = { set_name = Gila }
+						25 = { set_name = Karra }
+						25 = { set_name = Esira }
+						25 = { set_name = Ceila }
+						25 = { set_name = Cynthia }
+						25 = { set_name = Alleria }
+						}
+					}
+				}
+
+			25 = { ### A German Warrior ### 
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = qnujcocelza
+					female = yes
+					culture = german
+					age = 17
+					religion = root
+					attributes = {
+					 martial = 5
+					 diplomacy = 2
+					 stewardship = 3
+					 intrigue = 7
+					 learning = 3
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = proud
+					trait = envious
+					trait = deceitful
+					trait = impaler
+					trait = redhandvet
+					trait = lustful
+					trait = flamboyant_schemer
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					random_list = {
+						25 = { set_name = Valentine }
+						25 = { set_name = Jenna }
+						25 = { set_name = Ruth }
+						25 = { set_name = Magda }
+						25 = { set_name = Kenna }
+						25 = { set_name = Morgana }
+						25 = { set_name = Dalia }
+						25 = { set_name = Diella }
+						25 = { set_name = Zaira }
+						25 = { set_name = Willow }
+						}
+					}
+				}
+			}
+		}
+	}
+
+# The RedHand need some CumSluts!
+character_event = {
+	id = redhand.1009
+	hide_window = yes
+		is_triggered_only = yes
+		trigger = {
+                       has_landed_title = c_red_hand
+                       NOT = { 		
+			any_courtier = { 
+					count = 2
+					trait = redhandslut
+				}
+			}
+                       is_ruler = yes
+                       ai = yes
+            }
+
+	immediate = {
+			random_list = {
+			25 = { 
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = ujlpsfpkwky
+					female = yes
+					culture = saxon
+					age = 17
+					religion = root
+					attributes = {
+					 martial = 1
+					 diplomacy = 1
+					 stewardship = 1
+					 intrigue = 1
+					 learning = 1
+		  			 }
+					health = 8
+			  		fertility = 0.90
+					trait = lustful
+					trait = futacumslut
+					trait = small_tits
+					trait = redhandslut
+					trait = hedonist
+				}
+				new_character = {
+					set_character_flag = dw_boobs_checked
+					culture = norse
+					random_list = {
+						25 = { set_name = Girltoy }
+						25 = { set_name = Slutgirl }
+						25 = { set_name = Cockwhore }
+						25 = { set_name = Cumdump }
+						25 = { set_name = Slutbag }
+						25 = { set_name = Slut }
+						25 = { set_name = Cocksleeve }
+						25 = { set_name = Cockhole }
+						}
+				}
+				}
+			
+			25 = { 
+				create_character = {
+					random_traits = no
+					dynasty = none
+		  			dna = pcingyxiwsd
+					female = yes
+					culture = greek
+					age = 22
+					religion = root
+					attributes = {
+					 martial = 1
+					 diplomacy = 1
+					 stewardship = 1
+					 intrigue = 1
+					 learning = 1
+		  			 }
+					health = 8
+			  		fertility = 0.90
+					trait = lustful
+					trait = futacumslut
+					trait = big_tits
+					trait = redhandslut
+					trait = hedonist
+				}
+				new_character = {
+					set_character_flag = dw_boobs_checked
+					culture = norse
+					random_list = {
+						25 = { set_name = Cockhole }
+						25 = { set_name = Cocksleeve }
+						25 = { set_name = Cockwhore }
+						25 = { set_name = Cumdump }
+						25 = { set_name = Slutbag }
+						25 = { set_name = Slut }
+						25 = { set_name = Slutgirl }
+						25 = { set_name = Girltoy }
+						}
+				}
+				}
+			
+			25 = { 
+				create_character = {
+					random_traits = no
+					name = Cumslut
+					dynasty = none
+		  			dna = ucedirmbnfy
+					female = yes
+					culture = frankish
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 1
+					 diplomacy = 1
+					 stewardship = 1
+					 intrigue = 1
+					 learning = 1
+		  			 }
+					health = 8
+			  		fertility = 0.90
+					trait = lustful
+					trait = futacumslut
+					trait = regular_tits
+					trait = redhandslut
+					trait = hedonist
+				}
+				new_character = {
+					set_character_flag = dw_boobs_checked
+					culture = norse
+					random_list = {
+						25 = { set_name = Cockhole }
+						25 = { set_name = Slutgirl }
+						25 = { set_name = Cockwhore }
+						25 = { set_name = Cumdump }
+						25 = { set_name = Slutbag }
+						25 = { set_name = Slut }
+						25 = { set_name = Cocksleeve }
+						25 = { set_name = Girltoy }
+						}
+				}
+				}
+			}
+		}
+	}
+
+
+# Enatic succession because the ladies are in charge on this one
+character_event = {  
+            id = redhand.1001
+			hide_window = yes
+            trigger = {
+                       has_landed_title = c_red_hand
+                       NOT = { has_law = enatic_succession }
+                       is_ruler = yes
+                       ai = yes
+            }
+			mean_time_to_happen = { days = 1 }
+            option = {
+                        any_demesne_title = { 
+							add_law = enatic_succession
+							gender_succ = enatic 
+							}
+            }
+	}
+
+####  Banish the unwanted!! #### 
+character_event = {
+	id = redhand.1002
+	hide_window = yes
+	prisoner = no
+	
+	trigger = {
+		has_landed_title = c_red_hand
+		any_courtier = {
+		age = 16
+		NOT = { trait = futa 
+				trait = futacumslut
+				trait = redhandslut
+				trait = redhandvet
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+			any_courtier = {
+				limit = {
+					NOT = { trait = futa 
+							trait = futacumslut
+							trait = redhandslut
+							trait = redhandvet
+					}
+					prisoner = no
+				}
+				banish = yes 
+			}
+		}
+	}
+
+character_event = { ## Retire the older veterans
+	id = redhand.1201
+	hide_window = yes
+	is_triggered_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_landed_title = c_red_hand
+		any_courtier = { age = 40 }
+	}
+	
+	immediate = {
+			any_courtier = {
+				limit = {
+					trait = redhandvet
+					prisoner = no
+					age = 40
+				}
+				death = { death_reason = death_vanished }			
+			}
+		}
+	}
+
+	character_event = { ## Retire the older Cumsluts
+	id = redhand.1202
+	hide_window = yes
+	is_triggered_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_landed_title = c_red_hand
+		any_courtier = { age = 30 }
+	}
+	
+	immediate = {
+			any_courtier = {
+				limit = {
+					NOT = { has_character_flag = slutpilgrim3 }
+					trait = redhandslut
+					prisoner = no
+					age = 30
+				}
+				death = { death_reason = death_vanished }			
+			}
+		}
+	}
+
+
+# Daughter wants to join the Red Hand (Daughter)
+character_event = {
+	id = redhand.1003
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	ai = yes
+	min_age = 16
+	max_age = 25
+	only_women = yes
+	capable_only = yes
+	prisoner = no
+	has_global_flag = mercom_recruited
+	
+	trigger = {
+		is_landed = no
+		trait = futa
+		in_command = no
+		NOR = { 
+			trait = redhandvet
+			has_character_flag = wants_redhand
+			has_character_flag = denied_redhand
+		}
+		father = {
+			is_alive = yes
+			is_ruler = yes
+			is_liege_of = ROOT
+			prisoner = no
+			NOT = { trait = incapable }
+			ROOT = { host = { character = PREVPREV } }
+		}
+		is_inaccessible_trigger = no
+	}
+	
+	weight_multiplier = {
+		days = 1
+		
+		modifier = {
+			factor = 1.5
+			trait = brave
+		}
+		modifier = {
+			factor = 1.5
+			trait = dick_large
+		}
+		modifier = {
+			factor = 1.75
+			trait = dick_horse
+		}
+		modifier = {
+			factor = 1.75
+			trait = lustful
+		}
+		modifier = {
+			factor = 1.75
+			trait = hedonist
+		}
+		modifier = {
+			factor = 0.5
+			trait = chaste
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 1.5
+			is_primary_heir = yes
+		}
+		modifier = {
+			factor = 0.25
+			trait = celibate
+		}
+	}
+	
+	immediate = {
+		father = { character_event = { id = redhand.1004 } }
+		set_character_flag = wants_redhand
+	}
+}
+
+# Daughter wants to join the Red Hand (Father)
+character_event = {
+	id = redhand.1004 
+	desc = redhandrecruit_desc
+	picture = inn_2
+	border = GFX_event_normal_frame_war 
+	
+	is_triggered_only = yes
+	
+	option = { # Deny
+		name = redhandrecruit_no 
+		FROM = {
+			opinion = {
+				modifier = opinion_very_disappointed
+				years = 1
+				who = ROOT
+			}
+			clr_character_flag = wants_redhand
+			set_character_flag = denied_redhand
+		}
+		prestige = -100
+	}
+	option = { # Allow
+		name = redhandrecruit_yes 
+		c_red_hand = {
+			holder_scope = {
+				FROM = {
+					move_character = PREV
+				}
+			}
+		}
+		hidden_tooltip = {
+			FROM = { 
+				character_event = { id = redhand.1005 days = 700 }
+			}
+		}
+		prestige = 100
+	}
+}
+
+# Daughter has served a few years (Daughter)
+character_event = {
+	id = redhand.1005
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = wants_redhand
+	}
+	
+	immediate = {
+		set_character_flag = serving_redhand
+		clr_character_flag = wants_redhand
+		add_trait = redhandvet
+		add_trait = shieldmaiden
+		set_character_flag = special_marshal
+		set_character_flag = special_treasurer
+		set_character_flag = special_spymaster
+		set_character_flag = special_spiritual 
+		set_character_flag = special_chancellor
+	}
+}
+
+# Daughter returns scarred but lustful (Daughter)
+character_event = {
+	id = redhand.1006
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	ai = yes
+	min_age = 16
+	only_women = yes
+	capable_only = yes
+	prisoner = no
+	has_character_flag = serving_redhand
+	
+	trigger = {
+		had_character_flag = { flag = serving_redhand months = 5 }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		
+		modifier = {
+			factor = 1.75
+			trait = brave
+		}
+	}
+	
+	immediate = {
+		father = { character_event = { id = redhand.1007 } }
+		clr_character_flag = serving_redhand
+	}
+}
+
+# Daughter returns scarred and lustful
+character_event = {
+	id = redhand.1007
+	desc = redhandreturn_desc 
+	picture = inn_2
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = redhandhomecoming
+		FROM = {
+			move_character = ROOT
+			add_trait = scarred
+			add_trait = lustful
+			add_trait = hedonist
+			add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+			change_martial = 4
+		}
+	}
+}
+
+# Father dies, Player Daughter is heir
+character_event = {
+	id = redhand.1008
+	desc = redhandsadreturn
+	picture = castle_1
+	border = GFX_event_normal_frame_war
+	
+	ai = no
+	
+	trigger = {
+		OR = {
+			has_character_flag = wants_redhand
+			has_character_flag = serving_redhand
+		}
+		father_even_if_dead = { is_alive = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_character_flag = wants_redhand
+		clr_character_flag = serving_redhand
+	}
+	
+	option = {
+		name = redhandworktodo
+		add_trait = redhandvet
+		add_trait = lustful
+		prestige = 200
+		wealth = 200
+	}
+}
+
+### RedHandVets are alpha futanari's.  Any daughter of an alpha should be a Futa as well.
+character_event = {
+	id = redhand.1010
+	hide_window = yes
+	is_triggered_only = yes # triggered from on_action - on_birth 
+	ai = yes
+	only_women = yes
+	trigger = {
+		OR = {
+			father = { trait = futa }
+			mother = { trait = futa }
+			}
+		}
+		option = {
+		add_trait = futa
+		}
+	}
+
+# Recalculate Succession periodically.
+character_event = {  
+            id = redhand.1599
+			hide_window = yes
+			is_triggered_only = yes # Triggered from on_action
+            trigger = {
+                       has_landed_title = c_red_hand
+                       is_ruler = yes
+                       ai = yes
+            }
+            option = {
+				recalc_succession = yes
+            }
+	}
+
+###################################
+### RED HAND PILGRIMMAGE EVENTS ###   
+###################################
+
+narrative_event = {
+	id = redhand.2000
+	desc = "redhand2000" ## Arrival at the Inn
+	picture = mercom_drunkenhuntsman
+	title = redhand2000_title
+	immediate = {
+		any_character = {
+			limit = {
+				has_character_flag = mercom_alpha # Unique to commander
+			}
+			save_event_target_as = mercom_athena
+		}
+	}
+	
+	is_triggered_only = yes # Triggered from decision
+	option = {
+		name = "redhand2000a" #LETS GET THIS FUTA PARTY STARTED
+			narrative_event = { id = redhand.2001 days = 7 }
+			add_trait = slutpilgrim
+			event_target:mercom_athena = {
+				opinion = {
+					modifier = opinion_reasonable
+					who = ROOT
+					years = 2
+					}
+				}
+			}
+			
+	option = {
+		name = "redhand2000b" #THIS WAS A MISTAKE, TAKE ME HOME
+			remove_trait = slutpilgrim
+			event_target:mercom_athena = {
+				opinion = {
+					modifier = opinion_unreasonable
+					who = ROOT
+					years = 2
+					}
+				}
+			}
+		}
+		
+narrative_event = {  
+	id = redhand.2001
+	desc = "redhand2001" ## Freya is your guide
+	picture = vikinggirl_face
+	title = redhand2001_title
+	
+	is_triggered_only = yes # From redhand.2000
+	option = {
+		name = "redhand2001a"
+		narrative_event = { id = redhand.2002 }
+		}
+}
+
+narrative_event = {  
+	id = redhand.2002
+	desc = "redhand2002" 
+	picture = mercom_pilgrim2
+	title = redhand2002_title
+	
+	is_triggered_only = yes # From redhand.2001
+	option = {
+		name = "redhand2002a"
+		narrative_event = { id = redhand.2003 days = 7 }
+		}
+}
+
+narrative_event = {  
+	id = redhand.2003
+	desc = "redhand2003" 
+	picture = mercom_pilgrim3
+	title = redhand2003_title
+	
+	is_triggered_only = yes # From redhand.2002
+	option = {
+		name = "redhand2003a"
+		narrative_event = { id = redhand.2004 days = 4 }
+		}
+}
+
+narrative_event = {  
+	id = redhand.2004
+	desc = "redhand2004" 
+	picture = mercom_pilgrim5
+	title = redhand2004_title
+	
+	is_triggered_only = yes # From redhand.2003
+	option = {
+		name = "redhand2004a"
+		narrative_event = { id = redhand.2005 days = 3 }
+		}
+}
+
+narrative_event = { 
+	id = redhand.2005
+	desc = "redhand2005" 
+	picture = mercom_pilgrim1
+	title = redhand2005_title
+	
+	is_triggered_only = yes # From redhand.2004
+	option = {
+		name = "redhand2005a"
+		add_trait = futacumslut
+		narrative_event = { id = redhand.2006 days = 7 }
+		}
+}
+
+narrative_event = {  
+	id = redhand.2006
+	desc = "redhand2006" 
+	picture = mercom_pilgrim6
+	title = redhand2006_title
+	
+	is_triggered_only = yes # From redhand.2005
+	option = {
+		name = "redhand2006a"
+		narrative_event = { id = redhand.2007 days = 3 }
+		}
+}
+
+narrative_event = {  
+	id = redhand.2007
+	desc = "redhand2007" 
+	picture = mercom_pilgrim7
+	title = redhand2007_title
+	
+	is_triggered_only = yes # From redhand.2006
+	option = {
+		name = "redhand2007a"
+		narrative_event = { id = redhand.2008 days = 8 }
+		}
+}
+
+narrative_event = {  ## End of the SlutPilgrim Line
+	id = redhand.2008
+	desc = "redhand2008" 
+	picture = mercom_interior_bedroom2
+	title = redhand2008_title
+	
+	is_triggered_only = yes # From redhand.2007
+	option = {
+		name = "redhand2008a"
+		remove_trait = slutpilgrim
+		clr_character_flag = do_not_disturb
+		set_character_flag = slutpilgrim1
+		}
+}
+
+############ 2nd time through SlutPilgrim #############
+
+narrative_event = {  
+	id = redhand.2100
+	desc = "redhand2100" 
+	picture = redhand_veterans
+	title = redhand2100_title
+	
+	is_triggered_only = yes # From decision
+	option = {
+		name = "redhand2100a"
+		random_list = {
+				50 = { narrative_event = { id = redhand.2101 }}
+				50 = { narrative_event = { id = redhand.2102 }}
+		}
+	}
+}
+
+narrative_event = {  
+	id = redhand.2101
+	desc = "redhand2101" 
+	picture = mercom_pilgrim8
+	title = redhand2101_title
+	
+	is_triggered_only = yes 
+	option = {
+		name = "redhand2101a"
+		random_list = {
+				50 = { narrative_event = { id = redhand.2103 days = 8 }}
+				50 = { narrative_event = { id = redhand.2104 days = 8 }}
+		}
+	}
+}
+
+narrative_event = {  
+	id = redhand.2102
+	desc = "redhand2102" 
+	picture = mercom_pilgrim9
+	title = redhand2102_title
+	
+	is_triggered_only = yes 
+	option = {
+		name = "redhand2102a"
+		random_list = {
+				50 = { narrative_event = { id = redhand.2103 days = 8 }}
+				50 = { narrative_event = { id = redhand.2104 days = 8 }}
+		}
+	}
+}
+
+narrative_event = {  
+	id = redhand.2103
+	desc = "redhand2103" 
+	picture = mercom_pilgrim10
+	title = redhand2103_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2103a"
+		random_list = {
+				50 = { narrative_event = { id = redhand.2105 days = 4 }}
+				50 = { narrative_event = { id = redhand.2106 days = 4 }}
+		}
+	}
+}
+
+narrative_event = {  
+	id = redhand.2104
+	desc = "redhand2104" 
+	picture = mercom_pilgrim11
+	title = redhand2104_title
+	
+	is_triggered_only = yes 
+	option = {
+		name = "redhand2104a"
+		random_list = {
+				50 = { narrative_event = { id = redhand.2105 days = 4 }}
+				50 = { narrative_event = { id = redhand.2106 days = 4 }}
+		}
+	}
+}
+
+narrative_event = {  
+	id = redhand.2105
+	desc = "redhand2105" 
+	picture = mercom_pilgrim12
+	title = redhand2105_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2105a"
+		random_list = {
+				50 = { narrative_event = { id = redhand.2107 days = 5 }}
+				50 = { narrative_event = { id = redhand.2108 days = 5 }}
+		}
+	}
+}
+
+narrative_event = {  
+	id = redhand.2106
+	desc = "redhand2106" 
+	picture = mercom_pilgrim13
+	title = redhand2106_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2106a"
+		random_list = {
+				50 = { narrative_event = { id = redhand.2107 days = 5 }}
+				50 = { narrative_event = { id = redhand.2108 days = 5 }}
+		}
+	}
+}
+
+narrative_event = {  
+	id = redhand.2107
+	desc = "redhand2107" 
+	picture = mercom_pilgrim1
+	title = redhand2107_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2107a"
+			if = { limit = { is_female = yes } }
+					narrative_event = { id = redhand.2109 days = 8 }
+			if = { limit = { is_female = no } } 
+					narrative_event = { id = redhand.2110 days = 8 }
+		}
+	}
+
+narrative_event = {  
+	id = redhand.2108
+	desc = "redhand2108" 
+	picture = mercom_pilgrim3
+	title = redhand2108_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2108a"
+			if = { limit = { is_female = yes } }
+					narrative_event = { id = redhand.2109 days = 8 }
+			if = { limit = { is_female = no } } 
+					narrative_event = { id = redhand.2110 days = 8 }
+		}
+	}
+
+
+narrative_event = {  
+	id = redhand.2109
+	desc = "redhand2109" 
+	picture = mercom_pilgrim15
+	title = redhand2109_title
+	immediate = {
+		any_character = { 
+				if = { 
+					limit = { 
+						not = { has_character_flag = redhand_queen_stud }
+						trait = redhandvet 
+						}
+					save_event_target_as = redhand_visit_target
+					character_event = { id = redhand.2198 days = 180 }
+				}
+			}
+		}
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2109a"
+				narrative_event = { id = redhand.2199 days = 4 }
+				hidden_tooltip = { event_target:redhand_visit_target = {
+									set_character_flag = redhand_queen_stud
+									character_event = { id = DWCore.9005 }}} # Pregnancy check for player
+		}
+	}
+	
+narrative_event = {  
+	id = redhand.2110
+	desc = "redhand2110" 
+	picture = mercom_pilgrim14
+	title = redhand2110_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2110a"
+				narrative_event = { id = redhand.2199 days = 4 }
+		}
+	option = {
+		name = "redhand2110b"
+				narrative_event = { id = redhand.2199 days = 4 }
+		}
+	}
+
+
+### FLAG CLEARING ###
+character_event = {
+	id = redhand.2198
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_character_flag = redhand_queen_stud }
+	immediate = { clr_character_flag = redhand_queen_stud }}
+
+##End of the Pilgrim Line##
+
+narrative_event = {  
+	id = redhand.2199
+	desc = "redhand2199" 
+	picture = mercom_interior_bedroom2
+	title = redhand2199_title
+	
+	is_triggered_only = yes 
+	option = {
+		name = "redhand2199a"
+		remove_trait = slutpilgrim
+		clr_character_flag = do_not_disturb
+		if = { limit = { has_character_flag = slutpilgrim2 }
+					set_character_flag = slutpilgrim3
+			}
+		if = { limit = { NOT = { has_character_flag = slutpilgrim2 } }
+					set_character_flag = slutpilgrim2
+			}
+		}
+	option = {
+		name = "redhand2199b"
+		trigger = { has_character_flag = slutpilgrim3 }
+		remove_trait = slutpilgrim
+		clr_character_flag = do_not_disturb
+		narrative_event = { id = redhand.2200 }
+		}
+	}
+	
+### Abdicate Throne and join the RedHand as a Slut ###
+
+narrative_event = {  
+	id = redhand.2200
+	desc = "redhand2200" 
+	picture = mercom_interior_bedroom2
+	title = redhand2200_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2200b"	
+		}
+	option = {
+		name = "redhand2200a"
+			save_event_target_as = redhand_abdicate
+			current_heir = { narrative_event = { id = redhand.2202 days = 5 } }
+			character_event = { id = redhand.2201 days = 1 }
+			abdicate = yes
+		}
+	}
+	
+character_event = {  ## Handles moving the former ruler.
+	id = redhand.2201
+	hide_window = yes
+	is_triggered_only = yes 
+		option = {
+			add_trait = redhandslut
+			add_trait = futacumslut
+			c_red_hand = {
+				holder_scope = {
+					FROM = {
+						move_character = PREV
+					}
+				}
+			}
+		}
+	}
+	
+narrative_event = {  
+	id = redhand.2202
+	desc = "redhand2202" 
+	picture = redhand_veterans
+	title = redhand2202_title
+	
+	is_triggered_only = yes
+	option = {
+		name = "redhand2202a"	
+		}
+	option = {
+		name = "redhand2202b"
+		}
+	}
+	
+ #### Redhand Futa Children Utility Flag ####
+ 
+character_event = {
+	id = redhand.99999
+	hide_window = yes
+	is_triggered_only = yes # triggered from on_action - on_birth 
+	ai = yes
+	only_women = yes
+	trigger = {
+		OR = {
+			father = { trait = redhandvet }
+			mother = { trait = redhandvet }
+			}
+		}
+		option = {
+		set_character_flag = alphafuta
+		}
+	}
+
+character_event = {
+	id = redhand.99998
+	hide_window = yes
+	is_triggered_only = yes # triggered from on_action - on_birth 
+	ai = yes
+	only_women = yes
+	trigger = {
+		OR = {
+			father = { has_character_flag = alphafuta }
+			mother = { has_character_flag = alphafuta }
+			}
+		}
+		option = {
+		set_character_flag = alphafuta
+		}
+	}
+ 
+ 

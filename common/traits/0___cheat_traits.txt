@@ -1,0 +1,253 @@
+cheat_trait_babyface = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	opposites =  {
+		puppykicker
+		treacherous
+	}		
+	general_opinion = 500.0
+	ai_greed = -20
+	ai_honor = 20
+	ai_ambition = -20
+}
+
+cheat_trait_babymaker = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	customizer = no
+	opposites =  {
+		infertile
+		eunuch
+	}
+	fertility = 1.0
+}
+
+cheat_trait_builder = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	build_time_modifier = -1.0
+	build_cost_modifier = -1.0
+
+}
+
+cheat_trait_chosen_one = {
+	agnatic = yes # Always inherited from fathers
+	monthly_character_piety = 100.0
+	monthly_character_prestige = 100.0
+	monthly_character_wealth = 100.0
+}
+
+cheat_trait_cursed = {
+	random = no
+	customizer = no
+	is_health = yes
+	agnatic = yes # Always inherited from fathers
+
+	health = -4.5
+	diplomacy = -10
+	intrigue = -10
+	stewardship = -10
+	martial = -10
+	learning = -10
+	general_opinion = -200	
+	
+	ai_greed = 100
+	ai_zeal = 100
+	ai_honor = -100
+	ai_ambition = 100
+	ai_rationality = -100
+}
+
+cheat_trait_disinherited_blood = {
+	random = no	
+	customizer = no	
+	cannot_inherit = yes
+	revoke_reason = yes
+	banish_reason = yes
+	agnatic = yes # Always inherited from fathers
+	ai_honor = -100
+	ai_ambition = -100
+}
+
+cheat_trait_forbidden_marriage = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	customizer = no
+	cannot_marry = yes
+}
+
+cheat_trait_forsaken_blood = {
+	agnatic = yes # Always inherited from fathers
+	random = no	
+	customizer = no	
+	cannot_inherit = yes
+	cannot_marry = yes
+	agnatic = yes # Always inherited from fathers
+	general_opinion = -50
+	plot_power_modifier = -0.8
+	ai_greed = 100
+	ai_honor = -100
+}
+
+cheat_trait_immortal = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+   	immortal = yes
+	fertility = 10
+}
+
+
+cheat_trait_loyalist = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	opposites =  {
+		treacherous
+		puppykicker
+	}
+	liege_opinion = 300
+	ai_greed = -50
+	ai_ambition = -50
+}
+
+cheat_trait_money_hands = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	stewardship = 5
+	global_tax_modifier = 10.0
+	ai_greed = 20
+}
+
+cheat_trait_ninja = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0		
+	intrigue = 15.0
+	plot_power_modifier = 1.5
+	arrest_chance_modifier = 1.5
+	assassinate_chance_modifier = 1.5
+	potential = {
+		prisoner = no
+	}
+}
+
+cheat_trait_prophet_blooded = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	prevent_decadence = yes 
+	same_opinion = -25
+	muslim_opinion = 30
+	ai_zeal = 30
+}
+
+cheat_trait_puppykicker = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	customizer = no
+	opposites =  {
+		babyface
+		loyalist
+		just
+		kind
+		gregarious
+		brave
+	}
+	customizer = no		
+	general_opinion = -300.0
+	monthly_character_prestige = -2.5
+	monthly_character_piety = -2.5
+	ai_greed = 50
+	ai_honor = -80
+	ai_ambition = 50
+	ai_rationality = -80
+}
+
+cheat_trait_terrain_master = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	command_modifier = {
+		speed = 1.5 # Moves fast.
+		terrain = jungle
+		terrain = desert
+		terrain = mountain
+		terrain = forest
+		terrain = hills
+		terrain = plains
+		terrain = farmlands
+		terrain = steppe
+		}
+	opposites =  {
+		flat_terrain_leader
+		rough_terrain_leader
+		mountain_terrain_leader
+		desert_terrain_leader
+		jungle_terrain_leader
+
+	}
+	combat_rating = 2
+}
+cheat_trait_terror = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	command_modifier = {
+		defence = 0.5 #Defensive focus.
+		damage = 0.5 # Hits hard.
+		morale_defence = 0.3 # More morale defence than normal.
+		morale_offence = 0.3 # More morale damage than normal.
+		pursue = 1.5 # Mobile pursuit.
+		retreat = 0.3
+		speed = 3.5 # Moves fast.
+		siege = 1.5 # Masters of siege.
+		siege_speed = 1.5 # Masters of siege.
+		winter_supply = 2
+		winter_combat = 0.2
+	}
+	opposites =  {
+	craven
+	}
+	combat_rating = 5
+}
+
+cheat_trait_treacherous = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	opposites =  {
+		babyface
+		loyalist
+	}
+	liege_opinion = -300
+	general_opinion = -20
+	ai_greed = 50
+	ai_ambition = 50
+}
+
+cheat_trait_warpriest = {
+	agnatic = yes # Always inherited from fathers
+	random = no
+	ruler_designer_cost = 0
+	command_modifier = {
+		light_cavalry = 0.8
+		knights = 0.8
+		archers = 0.8
+		horse_archers = 0.8
+		pikemen = 0.8
+		light_infantry = 0.8
+		heavy_infantry = 0.8
+		religious_enemy = 0.8
+		flank = 0.8
+		center = 0.8
+		narrow_flank = 0.8
+	}
+	opposites = {
+	craven
+	}
+	combat_rating = 1
+}

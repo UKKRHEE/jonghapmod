@@ -1,0 +1,106 @@
+####가톨릭 고대 신의 후예####
+
+100000 = {	
+	name="Waxihokuicdstin'xw" #드래곤 황제의 흥미로 낳은 아들
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=1
+	mother=95002
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5 add_trait=gigantic_dick add_trait=angel add_trait=lf_neko
+	add_trait=minhyee add_trait=crowned_by_pope add_trait=lustful add_trait=legit_bastard add_trait=holyorder_of_minhyee
+	120.1.1={
+		birth=yes
+	}
+}
+100001 = {	
+	name="Akhila" #드래곤 황제의 손자
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=100000 add_trait=immortal
+	672.1.1={
+		birth=yes
+	}
+}
+100002= {	
+	name="Korena" 
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=100001 add_trait=immortal
+	713.1.1={
+		birth=yes
+	}
+}
+100003= {	
+	name="Texonik'ant" 
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=100002 add_trait=immortal
+	757.1.1={
+		birth=yes
+	}
+}
+100004= {	
+	name="Erhich" 
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=100003
+    add_trait=immortal
+	female=yes
+	800.1.1={
+		birth=yes
+	}
+}
+100005= {	
+	name="Erwein" 
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=100003
+    add_trait=immortal
+	801.1.1={
+		birth=yes
+	}
+}
+100006= {	
+	name="Gunter" 
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=100003
+    add_trait=immortal
+	802.1.1={
+		birth=yes
+	}
+}
+100007= {	
+	name="Barchard" 
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=100003
+    add_trait=immortal
+	803.1.1={
+		birth=yes
+	}
+}
+100008= {	
+	name="Rommel" 
+	dynasty=20000003
+	religion="catholic"
+	culture="neko_culture"
+	father=1
+	mother=100004
+    add_trait=bastard add_trait=immortal
+	821.1.1={
+		birth=yes
+	}
+}

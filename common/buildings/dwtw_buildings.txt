@@ -1,0 +1,287 @@
+tribal = {
+	dwtw_elven_fletcher = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = elf
+			}
+		}
+		desc = dwtw_elven_fletcher_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = dwtw_castle_elven_fletcher
+		#modifiers provided by the building:
+		archers = 75
+		archers_offensive = 0.15
+	}
+	dwtw_axe_smithy = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = orc
+			}
+		}
+		desc = dwtw_axe_smithy_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = dwtw_castle_axe_smithy
+		#modifiers provided by the building:
+		heavy_infantry = 50
+		heavy_infantry_offensive = 0.15
+	}
+	dwtw_fairy_garden = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = fairy
+			}
+		}
+		desc = dwtw_fairy_garden_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = dwtw_castle_fairy_garden
+		#modifiers provided by the building:
+		economy_techpoints = 0.02
+		military_techpoints = 0.02
+		culture_techpoints = 0.02
+		tech_growth_modifier = 0.1
+	}
+	dwtw_cattle_ranch = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				OR = {
+					trait = vampire
+					trait = vampire_ancient
+				}
+			}
+		}
+		desc = dwtw_cattle_ranch_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = dwtw_castle_cattle_ranch
+		#modifiers provided by the building:
+		liege_piety = -0.25
+		vassal_opinion = 5 # Everyone is content their liege is feeding on cattle and not them
+	}
+	dwtw_neko_playroom = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = neko
+			}
+		}
+		desc = dwtw_neko_playroom_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = dwtw_castle_neko_playroom
+		#modifiers provided by the building:
+		sex_appeal_opinion = 10 # It smells faintly of sex
+		fertility = 0.1 
+	}
+	dwtw_kitsune_shrine = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = kitsune
+			}
+		}
+		desc = dwtw_kitsune_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = dwtw_castle_kitsune_shrine
+		#modifiers provided by the building:
+		liege_piety = 0.25
+		fertility = 0.1 # Hidden alcoves
+	}	
+}	
+
+castle = {
+	dwtw_castle_elven_fletcher = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = elf
+			}
+		}
+		desc = dwtw_castle_elven_fletcher_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		archers = 75
+		archers_offensive = 0.15
+	}
+	dwtw_castle_axe_smithy = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = orc
+			}
+		}
+		desc = dwtw_castle_axe_smithy_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		heavy_infantry = 50
+		heavy_infantry_offensive = 0.15
+	}
+	dwtw_castle_fairy_garden = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = fairy
+			}
+		}
+		desc = dwtw_castle_fairy_garden_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		economy_techpoints = 0.02
+		military_techpoints = 0.02
+		culture_techpoints = 0.02
+		tech_growth_modifier = 0.1
+	}
+	dwtw_castle_cattle_ranch = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				OR = {
+					trait = vampire
+					trait = vampire_ancient
+				}
+			}
+		}
+		desc = dwtw_castle_cattle_ranch_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		liege_piety = -0.25
+		vassal_opinion = 5 # Everyone is content their liege is feeding on cattle and not them
+	}
+	dwtw_castle_neko_playroom = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = neko
+			}
+		}
+		desc = dwtw_castle_neko_playroom_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		sex_appeal_opinion = 10 # It smells faintly of sex
+		fertility = 0.1 
+	}
+	dwtw_castle_kitsune_shrine = {
+		potential = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}			
+				trait = kitsune
+			}
+		}
+		desc = dwtw_castle_kitsune_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		liege_piety = 0.25
+		fertility = 0.1 # Hidden alcoves
+	}	
+}
+
+	

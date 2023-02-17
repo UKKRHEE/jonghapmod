@@ -1,0 +1,247 @@
+###########################################################
+#####  LOCALISATION for the Dark World Content Pack   #####
+###########################################################
+#####  Search ###Rewrite for incomplete localisation ######
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+#### Decisions ####
+tt_grantflags;Give Special Dispensation;;;;;;;;;;;;;x
+tt_grantflags_desc;Give this woman special dispensation to hold council positions and even command your armies. Though she will now be able to do these things, you will still need to assign her a specific role.;;;;;;;;;;;;;x
+lockherup;Force into a Chastity Belt;;;;;;;;;;;;;x
+lockherup_desc;Why trust that she'll be chaste on her own when you can guarantee her sanctity?;;;;;;;;;;;;;x
+unlockherup;Remove Chastity Belt;;;;;;;;;;;;;x
+unlockherup_desc;Is it time to remove her chastity belt and leave her subject to her own desires?;;;;;;;;;;;;;x
+convert_guild;Visit the Thieves Guild;;;;;;;;;;;;;x
+convert_guild_desc;Visit the Thieves Guild and see if you can find a way to win their loyalty...;;;;;;;;;;;;;x
+become_painslut;Get Trained as a Painslut;;;;;;;;;;;;;x
+become_painslut_desc;Meet with the Master you have in charge of the local Slave training and have him help you hide your identity so that you can go through the Painslut training yourself as a slave.;;;;;;;;;;;;;x
+sexual_torture;Sexual Torture;;;;;;;;;;;;;x
+sexual_torture_desc;Put [Root.GetHerHim] on the racks, whip them, rape them, or even put them in the stocks to be used by the public.;;;;;;;;;;;;;x
+sexual_torturel2love;Sexual Torture;;;;;;;;;;;;;x
+sexual_torturel2love_desc;Put [Root.GetHerHim] on the racks, whip them, rape them, or even put them in the stocks to be used by the public. A painslut such as this will likely enjoy it...;;;;;;;;;;;;;x
+send_to_redhand_custom_tooltip;Has not already served in the Red Hand...;;;;;;;;;;;;;x
+send_to_redhand;Send to the Red Hand;;;;;;;;;;;;;x
+send_to_redhand_desc;Send [Root.GetTitledFirstName] to the Red Hand, where she'll learn the ways of the mysterious band of mercenries and sharpen her skills in combat.;;;;;;;;;;;;;x
+
+
+#########################################################################
+#############            Giant/Troll Seeding           ##################
+#########################################################################
+#### Province Events <<Should never be seen!!!>> ####
+TTcProvince2000_desc;Trolls have arrived in the province.;;;;;;;;;;;;;x
+TTcProvince2000a;Oh darn!;;;;;;;;;;;;;x
+TTcProvince2001_desc;Giants have arrived in the province.;;;;;;;;;;;;;x
+TTcProvince2001a;Oh darn!;;;;;;;;;;;;;x
+
+#########################################################################
+#############            The Great Troll Hunt          ##################
+#########################################################################
+
+#### Troll Hunt Titles ####
+TTPreparations;Troll Rumors;;;;;;;;;;;;;x
+TTGreatTrollHunt;The Troll Hunt;;;;;;;;;;;;;x
+
+#### Troll Hunt Descriptions ####
+TTContentWOL300;You have learned of a forest troll living in a nearby woodland. You've just arrived at a local Inn to seek information about the Trolls whereabouts and a Hunter offers his insights. \n \n "I caution you [Root.GetTitle]. These creatures are dangerous and lascivious. A troll will kill you hump a rock if he can find a hole in it, he's liable to kill you and fuck your corpse." the Hunter says. "Their skulls are half again as large as a mans, and their claws are as sharp as talons. The adult males are said to have pheromones that drive female trolls into heat. I've never seen it in action, but i caution you to be careful if you intend to seek this beast out.";;;;;;;;;;;;;x
+TTContentWOL301;The Hunter has lead you deep into the wilderness, tracing tracks and following deer trails finally coming to a stop at a stream. \n \n "This is as far as I go. I have no doubt about my own ability, I wouldn't survive an encounter with this beast. I wish you the best of luck [Root.GetTitle]. You'll need it." \n \n Just as soon as the Hunter finished speaking he turned and started walking away. You watch until he's out of sight, but you're already committed to this path. There's no turning back now.;;;;;;;;;;;;;x
+TTContentWOL302;You've found the Troll not a far distance from where your guide had directed you. It ambles through the forest leaning forward on its knuckles like some great ape. The Troll's three eyes are sharp and it catches sight of you. \n \n Without preamble you draw an arrow and fire.  The arrow strikes true into the beasts chest, but he shakes it off and charges you...;;;;;;;;;;;;;x
+TTContentWOL303;The Troll is upon you, rage showing across his monstrous face.  Your knee's start to buckle... That smell?!  What is that smell? \n \n Before you can shake off the monster's pheromones he has you in his grasp and tosses aside your weapon... ;;;;;;;;;;;;;x
+TTContentWOL304;The air is knocked out of you and your head is spinning, you are vaguely aware that your armor is being ripped or stripped away. \n \n "No, no..." you mutter as you start to gather your wits about you...;;;;;;;;;;;;;x
+TTContentWOL305;You struggle to fight the beast off but his grip is strong and your weapon is nowhere nearby. He turns you around and before you realize what is about to happen he slams his monstrous cock into you. His huge meat pressing into your body sliding deeper into your womb... You scream... \n \n That one action has brought you fully to your senses, your mind no longer clouded by pheromones. He slams into you again starting to develop a rhythm but you are pinned down beneath him. The Trolls putrid breath on the back of your neck you can hear him straining to get himself even deeper inside you. \n \n You want him deeper too. Something in you wants him deeper inside you. You lift your hips slightly pushing back only a little... ;;;;;;;;;;;;;x
+TTContentWOL306;The Troll sensed your movements and immediately picks you up into the air facing him and proceeds to continue thrusting his cock into you. \n \n "He was waiting for me to want it!?" you think to yourself.  \n \n It hardly matters, because you do want it. Every thrust fills you with lust for this monstrous cock. His grotesquely shaped face inches from yours as he grips your legs and uses you as a human fucktoy. His breath, animalistic in it's scent and rhythm. You become lost in a world of animal lust...  The troll cums deep inside of you...;;;;;;;;;;;;;x
+TTContentWOL307;The troll, exhausted, leans back resting on it's back. It's cock still hard but the animal is seemingly oblivious to the fact that you are still here. \n \n "I'm not finished yet you brute!" you say, knowing full well he won't understand. \n \n You stradle the beast, his massive cock glistening with your juices and his own. You start to rub your pussy against it, playing with your nipples. The beast lets out a slow moan.;;;;;;;;;;;;;x
+TTContentWOL308;You work your way down, the monstrous cock sliding into you. Your pussy twitches with pleasure as you realize just how debased this act is. Impaling yourself on the cock of a monstrous three eyed beast. You work your hips as you grind into the creature. Your pleasure builds and you feel the familiar twitcing in your thighs as an orgasm rocks over you and the beast cums within you a second time...;;;;;;;;;;;;;x
+TTContentWOL309;As you orgasm clarity finally comes to you. You realize fully what a dangerous situation your in and what this beast has done to you. With your newfound clarity of thought you pull the dagger from your boot spin around and drive it up under the beasts chin and into his skull. The blood gushes forth like a current and he slumps back lifelessly. ;;;;;;;;;;;;;x
+TTContentWOL310;You stand over the beast, partially naked, covered in blood and a dagger in your hand. Anger at the situation washes over you, but also a sense of satisfaction.  At least no one else was around, you can keep his skull as a trophy and tell no one of how you really slayed this beast. You can come up with a better story about this as you make your way back home...;;;;;;;;;;;;;x
+TTContentWOL340;You've found the Troll not a far distance from where your guide had directed you. It ambles through the forest leaning forward on its knuckles like some great ape. The Troll's three eyes are sharp and it catches sight of you.;;;;;;;;;;;;;x
+TTContentWOL341;Before the troll can react you charge. Suprise is apparent on the beasts face as it lifts of its knuckles onto it's hind legs. You swing your sword for all your worth and cleave the beast through the chest burying your sword deep inside the creature. \n \n The beast lets out a cry the sound of which will haunt your nightmares as it stumbles back grasping at the sword in it's chest and falls onto it's back dead. \n \n You survey the creature, and take a seat on a pile of bones nearby. A sense of relief and accomplishment wash over you as you try to determine which part of this beast you will use as a trophy...;;;;;;;;;;;;;x
+TTContentWOL342;The troll has spotted you with one of its three monstrous eyes and it charges you. Drawing your sword quickly you deftly avoid it's claws and slash upward at the beast missing but the blade fails to cut through the thick hide of the Trolls side.;;;;;;;;;;;;;x
+TTContentWOL343;The beast slash you with his claw in a flash, and blood gushes from the wound. The sides may be tougher but the belly looks soft. You maintain your momentum with the blade and swing it around plunging it into the stomach of the beast. The creature lets out a blood curdling scream as you slice into his abdomen burying your sword to the hilt. The creature stumbles backwards and falls onto it's back, it's breating coming in short gasps as it strains in vain to hold onto life. You sit down on a pile of bones nearby and watch the creature die, thinking to yourself about what part to take for a trophy.;;;;;;;;;;;;;x
+TTContentWOL344;The beast slash you with his claw in a flash, and blood gushes from the wound. You quickly realize you are no match for this beast. Your sword did nothing against his tough hide and you can think of no other solution. Without much else to do, you turn heel and run.  You run for all that you're worth. Behind you a blood curdling scream of nightmares comes out of the beast as he begins to chase, but his ambling gait is no match for your feverish and panicked run.;;;;;;;;;;;;;x
+TTContentWOL360;;You come upon the troll ready for a fight, but he spots you first... and seems calm. Not violent, not anything.  He seems to recognize something in you.;;;;;;;;;;;;;x
+TTContentWOL361;You and the troll spend a time just taking each other in. He motions toward you and then motions towards his own chest. Apparently he thinks you and he are similar. \n \n This situation could prove advantageous yet...;;;;;;;;;;;;;x
+TTContentWOL362;As the troll stands patiently in front of you, you realize you have several choices apparent. You could try to take him as a pet, kill the vile beast, or simply walk away...;;;;;;;;;;;;;x
+
+#### Troll Hunt Options ####
+TTContentWOL300A;Let us prepare!;;;;;;;;;;;;;x 
+TTContentWOL300B;I have no time for this.;;;;;;;;;;;;;x 
+TTContentWOL301A;Let's do this!;;;;;;;;;;;;;x 
+TTContentWOL301B;Let's do this!;;;;;;;;;;;;;x 
+TTContentWOL301D;Let's do this!;;;;;;;;;;;;;x 
+TTContentWOL301E;I have no time for this.;;;;;;;;;;;;;x 
+TTContentWOL302A;What's that smell?;;;;;;;;;;;;;x
+TTContentWOL303A;**Knocked to the ground**;;;;;;;;;;;;;x
+TTContentWOL304A;This can't be happening?!;;;;;;;;;;;;;x
+TTContentWOL305A;What am I doing?!;;;;;;;;;;;;;x
+TTContentWOL306A;I want more...;;;;;;;;;;;;;x
+TTContentWOL307A;I need it...;;;;;;;;;;;;;x
+TTContentWOL308A;The fog clears.;;;;;;;;;;;;;x
+TTContentWOL309A;Victory!;;;;;;;;;;;;;x
+TTContentWOL310A;Head home.;;;;;;;;;;;;;x
+TTContentWOL340A;Suprise the beast!;;;;;;;;;;;;;x
+TTContentWOL340B;Ready yourself for the fight...;;;;;;;;;;;;;x
+TTContentWOL341A;VICTORY!!;;;;;;;;;;;;;x
+TTContentWOL342A;CHARGE!!;;;;;;;;;;;;;x
+TTContentWOL343A;VICTORY!!;;;;;;;;;;;;;x
+TTContentWOL344A;Flee!!;;;;;;;;;;;;;x
+TTContentWOL360A;He seems so calm...;;;;;;;;;;;;;x
+TTContentWOL361A;Reach out to touch him.;;;;;;;;;;;;;x
+TTContentWOL362A;Take him home with you.;;;;;;;;;;;;;x
+TTContentWOL362B;DIE!!;;;;;;;;;;;;;x
+TTContentWOL362C;Live in peace.<Walk away>;;;;;;;;;;;;;x
+
+#########################################################################
+##################    Converting the Thieves Guild     ##################
+#########################################################################
+
+#### Converting the Thieves Guild Title ####
+TTCThievesGuild_title;Gaining Loyalty...;;;;;;;;;;;;;x
+
+#### Converting the Thieves Guild Descriptions ####
+TTcProvince1000_desc;Your spies put ou feelers in every tavern and seedy establishment that they could think to, and it finally paid off. The Thieve's Guild leaders have met you at the designated place. They appear quite aware that they have the upper hand in this meeting.  The centermost member of the group openly jeers you. \n \n "Well met, [Root.GetTitle]. \n \n They're all men, and you know men. It should be quite easy to win their loyalty should you decide to debase yourself...;;;;;;;;;;;;;x
+TTcProvince1001_desc;The shock on their faces is evident as you tell them the deal. \n \n "You work for me now, and in exchange..." you say as you disrobe. \n \n As your clothes fall to the stone floor only one of the fools manages to smile and nod. The rest are too busy trying to undo their pants. \n \n You kneel in front of the first lucky thief and begin to massage his manhood.  Taking his cock firmly in hand you look up to him and say "You're mine now, yes?"  Without reservation they all agree and before the last man murmurs his assent the first cock is in your mouth. You have your work cut out for you...;;;;;;;;;;;;;x
+TTcProvince1002_desc;You take his cock deeply into your mouth, rolling your tongue along the underside of his shaft. The silence in the room is almost audible as the amazed thieves watch you at work. Only the lucky first manages to moan in delight at your ministrations. ;;;;;;;;;;;;;x
+TTcProvince1003_desc;The shock that the thieves find themselves in doesn't take long to where off. Soon the hesitant are left to wait as the boldest takes position behind you. \n \n "I've never fucked a [Root.GetTitle] before." Says the young man. \n \n "Today is your lucky day then, mine as well if you actually know how to use that thing." you say with a snarky smile. \n \n The jest got a good laugh from the group and the young man seems more determined.;;;;;;;;;;;;;x 
+TTcProvince1004_desc;The thieves line up, taking you two at a time and it's clear that the pace isn't going to slow down.  There may only be one of you, but the members of this thieves guild are numerous.  Some are likely taking more than one turn, but who could blame them?;;;;;;;;;;;;;x
+TTcProvince1005_desc;As you mount yet another lucky cock men line up around you stroking themselves. With a grin you motion them forward and begin to stroke two of them off at once.;;;;;;;;;;;;;x
+TTcProvince1006_desc;You feel you're body twitching as you approach an orgasm. The especially randy fellow beneath you increases his thrusting upwards. \n \n "I'm fucking [Root.GetTitledFirstName], I can't believe I have my cock in a [Root.GetTitle]." he says hurriedly... \n \n You continue to bounce on his commoner cock, his thick manflesh slipping past your vaginal lips over and over...;;;;;;;;;;;;;x
+TTcProvince1007_desc;As he finishes another man turns you over onto your belly and begins to take you from behind. Without any preamble a cock is in front of your face and like a slut you just start sucking. So many cocks surround you, and each is hard because of you, because of the site of you and how debased you are. Some of them are even remarking at how much of a slut you are, and it only encourages you further.;;;;;;;;;;;;;x
+TTcProvince1008_desc;Time keeps passing and still there are more. Another one is pounding away behind you.  Dried cum covers your face, tits, backside and belly. How much more is inside you, you aren't really sure, but you're sure you don't care.  \n \n The man fucking your cunt reaches forward and grabs your face. He slips a finger into your mouth and uses it as leverage to pound you even harder. \n \n "Take it deep [Root.GetTitle] Slut!" he says...;;;;;;;;;;;;;x
+TTcProvince1009_desc;The last thief finishes inside of you.  You lay back onto his chest, panting from exhaustion with his cock still pulsing inside of you. Other men in the room gaze at you with a silly smile on their faces. This is obviously a night they won't soon forget.;;;;;;;;;;;;;x
+TTcProvince1010_desc;After all is said and done, the loyalty of the Thieves Guild is now yours. They may require reminding from time to time, but you're quite certain that your problems with them are at an end. If only your councillors could be as thorough as you are in securing deals.;;;;;;;;;;;;;x
+
+#### Converting the Thieves Guild Options ####
+TTcProvince1000a;Could be fun!;;;;;;;;;;;;;x
+TTcProvince1000b;Not gonna happen...;;;;;;;;;;;;;x
+TTcProvince1001a;Mmmm...;;;;;;;;;;;;;x
+TTcProvince1002a;Continue...;;;;;;;;;;;;;x
+TTcProvince1003a;Continue...;;;;;;;;;;;;;x
+TTcProvince1004a;Not I!;;;;;;;;;;;;;x
+TTcProvince1005a;Continue...;;;;;;;;;;;;;x
+TTcProvince1006a;Soooo good...;;;;;;;;;;;;;x
+TTcProvince1007a;Continue...;;;;;;;;;;;;;x
+TTcProvince1008a;[Root.GetTitle] Slut?;;;;;;;;;;;;;x
+TTcProvince1009a;Nor will I.;;;;;;;;;;;;;x
+TTcProvince1010a;Success!;;;;;;;;;;;;;x
+
+#########################################################################
+#############      The Rainy Day Hunter Encounter        ################
+#########################################################################
+
+##### Rainy Day Hunter Encounter Title #####
+RainyDayhunter;Hunting the Hunter.;;;;;;;;;;;;;x
+RainyDayhunter2;Hunting the Hunteress.;;;;;;;;;;;;;x
+
+##### Rainy Day Hunter Encounter Descriptions #####
+TTContentWOL200;You have ranged far from home on this hunting trip. The rain streams down your face making it difficult to see. You pull your hood up over your head and look around.  There is an Inn nearby, and this hunting trip is quite obviously going to have to wait. A dry bed, and a warm meal are the most important things at this moment.;;;;;;;;;;;;;x
+TTContentWOL201;As you burst through the doors and into the firelight the warmth of the hearth washes over you. \n \n "Long way from home indeed." you mutter under your breath. \n \n You motion to the Inn keeper and he quickly brings you what you ask for and gives you a room for the night. He doesn't know who you are, but he knows you have coin and that appears to be all he needs to know.;;;;;;;;;;;;;x
+TTContentWOL202;The only other tenant of the Inn tonight is another hunter. He sits across the room looking tired, and... handsome.  He has no right to be that good looking when you are this tired.;;;;;;;;;;;;;x
+TTContentWOL203;Your persuasive charms won out. You flirted, smiled, and talked to the lonely hunter. He seemed taken aback that you showed interest. Handsome as he is, it's obvious he doesn't get out much. \n \n In your room you he sheds his clothing so fast one might think he was in a race. But you know the tricks to slow a man down. You know how to make this a night to remember.;;;;;;;;;;;;;x
+TTContentWOL204;You roll onto your back and he eagerly positions himself between your thighs. \n \n "Have you ever fucked a [Root.GetTitle] before?" you ask. \n \n He laughs and smiles. "Never have, and never will." he says as he pushes his cock into you.;;;;;;;;;;;;;x
+TTContentWOL205;He sinks into you deeply, and your eyes lock. You were so needing this after such a long Hunting Trip. Now to have bagged this hunk? Thats a successful hunt. \n \n You have no time to finish though thoughts as the Hunter leans in and kisses your neck.;;;;;;;;;;;;;x
+TTContentWOL206;The bite gives him a bit of a shock, just enough time for you to take the initiative and roll yourself over on top of him. You grind your hips down into him, a state of lust washes over you. The feeling of his cock filling you is all that occupies your thoughts.;;;;;;;;;;;;;x
+TTContentWOL207;Passions escalate as you both give yourselves over to them. One body moves in tandem with the other. A sensual dance of pleasure as both partners strive toward nirvana.;;;;;;;;;;;;;x
+TTContentWOL208;The Hunter gives in to his passions, he's taking you from behind now.  Rough and wild... Sensual and dirty... Not every [Root.GetTitle] can let herself go like this, but oh if only they would. \n \n Your back arches as you brace yourself, pleasure washing over you. The Hunter moans.;;;;;;;;;;;;;x
+TTContentWOL220;You have ranged far from home on this hunting trip. The rain streams down your face making it difficult to see. You pull your hood up over your head and look around.  There is an Inn nearby, and this hunting trip is quite obviously going to have to wait. A dry bed, and a warm meal are the most important things at this moment.;;;;;;;;;;;;;x
+TTContentWOL221;As you burst through the doors and into the firelight the warmth of the hearth washes over you. \n \n "Long way from home indeed." you mutter under your breath. \n \n You motion to the Inn keeper and he quickly brings you what you ask for and gives you a room for the night. He doesn't know who you are, but he knows you have coin and that appears to be all he needs to know.;;;;;;;;;;;;;x
+TTContentWOL222;The only other tenant of the Inn tonight is another hunter. She sits across the room casting glances at you periodically. She has no right to be that pretty when you are this tired.;;;;;;;;;;;;;x
+TTContentWOL223;You make your move, and it doesn't take long before you realize you have become the prey. She wants company just as much as you.  Before long you are stretched out on the bed next to her slender body.;;;;;;;;;;;;;x
+TTContentWOL224;You roll her onto her back and position yourself between her legs. Her skin is soft, and its apparent that she is ready for you. \n \n "Have you ever fucked a [Root.GetTitle] before?" you ask. \n \n She laughs at you shaking her head. She doesn't need to believe you though.;;;;;;;;;;;;;x
+TTContentWOL225;Without effort your cock slides in to the base. The Huntress moans beneath you. She slides her hand down to her pussy, rubbing it as you push your cock in and out. Biting her bottom lip she keeps her legs in the air before you.  They make good leverage as you take ahold of them an proceed to show her what you're made of.;;;;;;;;;;;;;x
+TTContentWOL226;In a flash she hooks a leg on your shoulder and uses the leverage to roll you onto your back with her on top. Her nimbleness suprises you, but she isn't waiting for that shock to wear off. She grinds herself down onto you. Your cock buried deep within her she bites her bottom lip and runs her hands through her hair. The site of such a beautiful creature pleasuring herself on your cock is almost too much.;;;;;;;;;;;;;x
+TTContentWOL227;Passions escalate as you both give yourselves over to them. One body moves in tandem with the other. A sensual dance of pleasure as both partners strive forward toward completion.;;;;;;;;;;;;;x
+TTContentWOL228;You don't hesitate to take the lead, you take her ass in your hands and take her from behind. Every thrust brings a moan from the nimble body beneath you and before long she is quivering and panting. You feel the pressure building... ;;;;;;;;;;;;;x
+
+##### Rainy Day Hunter Encounter Options #####
+TTContentWOL200A;I should seek shelter...;;;;;;;;;;;;;x
+TTContentWOL201A;Warm food!;;;;;;;;;;;;;x
+TTContentWOL202A;Seduce the handsome hunter.;;;;;;;;;;;;;x
+TTContentWOL202B;Go to bed alone and lock the door behind you.;;;;;;;;;;;;;x
+TTContentWOL203A;Time for some fun.;;;;;;;;;;;;;x
+TTContentWOL204A;Oh YES!;;;;;;;;;;;;;x
+TTContentWOL205A;Bite his ear.;;;;;;;;;;;;;x
+TTContentWOL205B;Bite his neck..;;;;;;;;;;;;;x
+TTContentWOL206A;Grind into him harder.;;;;;;;;;;;;;x
+TTContentWOL207A;Countinue...;;;;;;;;;;;;;x
+TTContentWOL208A;Have him pull out!;;;;;;;;;;;;;x
+TTContentWOL208B;Let him cum deep inside you.;;;;;;;;;;;;;x
+TTContentWOL220A;I should seek shelter...;;;;;;;;;;;;;x 
+TTContentWOL221A;Warm food!;;;;;;;;;;;;;x
+TTContentWOL222A;Seduce the beautiful hunter.;;;;;;;;;;;;;x
+TTContentWOL222B;Go to bed alone and lock the door behind you.;;;;;;;;;;;;;x
+TTContentWOL223A;Just what a tired man needs.;;;;;;;;;;;;;x
+TTContentWOL224A;Push your cock inside.;;;;;;;;;;;;;x
+TTContentWOL225A;Continue...;;;;;;;;;;;;;x
+TTContentWOL226A;Must hold on!;;;;;;;;;;;;;x
+TTContentWOL227A;I should take the lead.;;;;;;;;;;;;;x 
+TTContentWOL228A;You unload your seed deep inside her.;;;;;;;;;;;;;x
+TTContentWOL228B;Pull out and cum on her back.;;;;;;;;;;;;;x
+
+#########################################################################
+#############    The Drunken Beggar Event Encounter      ################
+#########################################################################
+
+##### The Drunken Beggar Event Title #####
+TTDrunkenBeggar;Placeholder;;;;;;;;;;;;;x ###REWRITE
+
+##### The Drunken Beggar Event Descriptions #####
+TTContentWOL500;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL501;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL502;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL503;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL504;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL505;Placeholder;;;;;;;;;;;;;x ###REWRITE
+
+##### The Drunken Beggar Event Options #####
+TTContentWOL500A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL501A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL502A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL503A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL504A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentWOL505A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+
+#########################################################################
+#############             Become a Painslut!           ##################
+#########################################################################
+
+#### Become a Painslut TITLES ####
+paintrainingmeeting;The Meeting;;;;;;;;;;;;;x
+paintraining;Training as a Painslut...;;;;;;;;;;;;;x
+
+
+#### Become a Painslut DESCRIPTIONS ####
+TTContentSlavery1000;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1001;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1002;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1003;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1004;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1005;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1006;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1007;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1008;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1009;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1010;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1011;Placeholder;;;;;;;;;;;;;x ###REWRITE
+
+#### Become a Painslut OPTIONS ####
+TTContentSlavery1000A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1000B;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1001A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1002A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1003A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1004A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1005A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1006A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1007A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1008A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1009A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1010A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+TTContentSlavery1011A;Placeholder;;;;;;;;;;;;;x ###REWRITE
+
+##############################################################################################
+
+
+#### Rough text length for using narrative events ###############################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################,,,
+
+
+

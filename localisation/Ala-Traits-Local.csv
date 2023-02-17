@@ -1,0 +1,67 @@
+#CODE;;;;;;;;;;;;;;x
+ala_race_traits_on; DWR «ÈÌì»İ ïÆÉª·İëÆĞ éˆ«ÈÌ¥³;
+ala_race_traits_on_desc; ù¿ä‰ ¨¸å‹«¸ª· DWR ¦¸«ÈêŒ ë»Ùª¹ÌëÆĞ ¬³ØäÆØ ²´¬¸²³Ù¢È¥³.
+ala_race_traits_off; DWR «ÈÌì»İ ïÆÉª·İëÆĞ êÁØ¡ÈÌ¥³
+ala_race_traits_off_desc; ù¿ä‰ ¨¸å‹«¸ª· DWR ¦¸«ÈêŒ ë»Ùª¹ÌëÆĞ êÁØ¡ÈÙ¢È¥³;
+ala_traits_1; ®·ÌäÁÉ / ¬Èë»É / ñ»Ìæ»Ì
+ala_traits_1_desc; ª·î‹©·êŒ / «ÈÌî‹©·êŒ «¸Ì¬¸Ğ í»ÉêŠ; x
+ala_traits_2;  ñÆÙ²¹ĞòÄ ª·Ì°´É? x;
+ala_traits_2_desc; ñÆÙ²¹ĞòÄ ª·Ì°´É;
+ala_traits_3;  ùÃ«·ëÁĞğŒ ë»Ùª¹Ì
+ala_traits_3_desc; åÆÉ¥´ «ÈÌ¡³Ì ª·Ì°´ÉòÂÌ ;;; x
+ala_traits_4;  ±¸«È ë»Ùª¹Ì
+ala_traits_4_desc; ëˆîŒ ë‰¬·İ ë‰¬·İ;
+ala_traits_5;  æ»İ©³İ ë»Ùª¹Ì
+ala_traits_5_desc; ë‰‡ˆ ¢¸îˆ ¬È¢È ;;; x
+ala_traits_6;  ¬¸Ì¥·©¸Ì¥· x;
+ala_traits_6_desc; ‡Š°³ù¼ ²³Ø¬·İ; x ;;;;;;; x
+
+EVTDESCAlatraits.1; [From.GetOnlyDynastyName]ùÇ [From.GetFullName]ëŒçˆ èŠ«·ÛëÆĞ ²³ªÈ¡¸ÜêÆÙ¢È³ ?;;;; x
+EVTOPTAAlatraits.1; ª·î‹©·êŒ ;;;;;;;;;; x
+EVTOPTAAAlatraits.1; «ÈÌî‹©·êŒ ;;;;;;;;; x
+EVTOPTAAAAlatraits.1; äŒ¢¹ùÇ —ÁĞò¼ •ˆ¦ÈçÆĞ ¬³çÆÌ¥³. ;;;;;;;;;;;;;
+EVTOPTAAAAAlatraits.1; äŒùÇ —ÁĞò¼ •ˆ¦ÈçÆĞ ¬³çÆÌ¥³. ;;;;;;;;;;;;;
+EVTOPTBAlatraits.1; «¸Ì¬¸Ğ ;;;;;;;;; x
+EVTOPTBBAlatraits.1; ªÈÌëÆÌ ¥³İªÈÌëÆĞ ©·¦¹Ü¥³! ;;;;;;;;;;;;;
+EVTOPTCAlatraits.1; í»ÉêŠ ;;;;;;;;;; x
+EVTOPTCCAlatraits.1; í»ÉêŠçÆĞ ¬³Ğ¦³©·¦ÈÌ¥³. ;;;;;;;;;;;;;
+EVTOPTDAlatraits.1; ¢³¡³¡È ;;;;;;;;;;; x
+EVTDESCAlatraits.2; [From.GetOnlyDynastyName]ùÇ [From.GetFullName]ëŒçˆ èŠ«·ÛëÆĞ ²³ªÈ¡¸ÜêÆÙ¢È³ ?;;;; x
+EVTOPTAAlatraits.2; ñÆÙ²¹ĞòÄ ;;;;;;;;;; x
+EVTOPTAAAlatraits.2; ®Èç‰©·ÙëÆĞ ®³ŞëŒ¨¹ ¡Èæˆ²³Ì¥³. ;;;;;;;;;;;;;
+EVTOPTBAlatraits.2; äˆ¥´ éÁĞ¨¹ĞùÇ ñÆÙ²¹ĞòÄ ;;;; x
+EVTOPTBBAlatraits.2; ®Èç‰©·ÙëÆĞ ®³ŞëŒ¨¹ ¡Èæˆ²³Ì¥³. ;;;;;;;;;;;;;
+EVTOPTCAlatraits.2; æŒ¦È¨È«· ;;;;;;;;; x
+EVTOPTCCAlatraits.2; ®Èç‰©·ÙëÆĞ ®³ŞëŒ¨¹ ¡Èæˆ²³Ì¥³. ;;; x
+EVTOPTDAlatraits.2; ¢³¡³¡È ;;;;;;;;;;; x
+EVTDESCAlatraits.3; [From.GetOnlyDynastyName]ùÇ [From.GetFullName]ëŒçˆ èŠ«·ÛëÆĞ ²³ªÈ¡¸ÜêÆÙ¢È³ ?;;;; x
+EVTOPTAAlatraits.3; åÆÉ¥´ «ÈÌ¡³Ì ;;;; x
+EVTOPTAAAlatraits.3; «¹ÌäÆØêÁĞçˆ ®Èç‰«µÉëÆĞ ¨³ÌæÆÌ¥³. ;;;;;;;;;;;;;
+EVTOPTBAlatraits.3; äˆ¥´ùÇ éÁĞ¨¹ĞùÇ åÆÉ¥´ «ÈÌ¡³Ì. ;;;; x
+EVTOPTBBAlatraits.3; «¹ÌäÆØêÁĞçˆ ®Èç‰«µÉëÆĞ ¨³ÌæÆÌ¥³.;
+EVTOPTCAlatraits.3; ¡·áëÆÌ «ÈÌ¡³Ì«ÈÌ åÆÉ¥´«ÈÌ¡³Ì ;;;; x
+EVTOPTCCAlatraits.3; «¹ÌäÆØêÁĞçˆ ®Èç‰«µÉëÆĞ ¨³ÌæÆÌ¥³. ;;;;;;;;;;;;;
+EVTOPTDAlatraits.3; ¢³¡³¡È ;;;;;;;;;;; x
+EVTDESCAlatraits.4; [From.GetOnlyDynastyName]ùÇ [From.GetFullName]ëŒçˆ èŠ«·ÛëÆĞ ²³ªÈ¡¸ÜêÆÙ¢È³ ?;;;; x
+EVTOPTAAlatraits.4; ëˆîŒ ²¹Ğ«´É ;;;;;;;; x
+EVTOPTAAAlatraits.4; äŒæÆĞùÇ «·äÆØ¢ÈçÆĞ éŠ¦·ïŒ¦ÈÌ¥³. ;;;;;;;;;;;;;
+EVTOPTBAlatraits.4; «¸ĞğŒ éÆĞ¦·æŒ ;;;; x
+EVTOPTBBAlatraits.4; äŒæÆĞùÇ òÄçÆĞ ¬³Ğ¦³©·¦ÈÌ¥³. ;;;;;;;;;;;;;
+EVTOPTCAlatraits.4; ±¸«·¦È éÆĞ¦·æŒ ;;;; x
+EVTOPTCCAlatraits.4; ¢³Ğ¡´çÆĞ ¬³çŒäˆ, êÁâùÇ ë‰¬·İæÆĞò¼ ¥´ÿ¼²³¬È «³ÎåÆÌ¥³. ;;;;;;;;;;;;;
+EVTOPTDAlatraits.4; ¢³¡³¡È ;;;;;;;;;;; x
+EVTDESCAlatraits.5; [From.GetOnlyDynastyName]ùÇ [From.GetFullName]ëŒçˆ èŠ«·ÛëÆĞ ²³ªÈ¡¸ÜêÆÙ¢È³ ?;;;; x
+EVTOPTAAlatraits.5; ë‰‡ˆ ²¹Ğ«´É ;;;;;;;; x
+EVTOPTAAAlatraits.5; ë‰‡ˆçÆĞ êÁØ¡ÈåÆÌ ¨³©·Ù! ;;;;;;;;;;;;;
+EVTOPTBAlatraits.5; ¢¸îˆ éÆĞ¦·æŒ ;;; x
+EVTOPTBBAlatraits.5; ¨¹Ìæˆ²³äˆ •ˆ¦ÈçÆĞ ¬³Ğ¦³©·¦ÈÌ¥³! ;;;;;;;;;;;;;
+EVTOPTCAlatraits.5; ¬È¢È éÆĞ¦·æŒ ;;;;;;;; x
+EVTOPTCCAlatraits.5; ¬È¢È¡³ «ÈÌ¡³Ì«Èô¿¡ÈçÆĞ ©³¦³Ù¢È¥³. ;;;;;;;;;;;;;
+EVTOPTDAlatraits.5; ¢³¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlatraits.6; [From.GetOnlyDynastyName]ùÇ [From.GetFullName]ëŒçˆ èŠ«·ÛëÆĞ ²³ªÈ¡¸ÜêÆÙ¢È³ ?;;;; x
+EVTOPTAAlatraits.6; Futa ;;;;;;;; x
+EVTOPTAAAlatraits.6; ²³Ø¬·İ ;;;;;;;;;;; x
+EVTOPTAAAAlatraits.6; ¬· «´æÆĞëÆĞ ¬³Ğ¦³¢´ ¦³? ... ¬¸Ì¬³İ ...  éÁĞ¦µİ©´ ...? x ;;;;;;;; x
+EVTOPTAAAAAlatraits.6; äŒçÆĞ ¬³Ğ¦³ ©·¦¹? ... ¬¸Ì¬³İ ...   ...? x ;;;;;;;; x
+EVTOPTBAlatraits.6; ¢³¡³¡È ;;;;;;;;;;; x

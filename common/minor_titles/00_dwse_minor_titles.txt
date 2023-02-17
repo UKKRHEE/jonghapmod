@@ -1,0 +1,109 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allowed_to_hold: conditions for the character to hold the title
+#	allowed_to_grant: conditions for a ruler to grant the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+#######################################
+# HARD: AUTO-GRANTED - DO NOT REMOVE!
+#######################################
+
+#######################################
+# SOFT: GRANTABLE - FULLY MODDABLE
+#######################################
+
+dwse_title_favored = {
+	dignity = 0.15
+	grant_limit = 5
+	opinion_effect = 10
+	
+	monthly_salary = 0.02
+	monthly_prestige = 0.25
+	
+	allowed_to_hold = {
+		OR = {
+			primary_title = { temporary = no }
+			NOT = {
+				primary_title = {
+					always = yes
+				}
+			}
+		}
+		is_adult = yes
+	}
+	
+	allowed_to_grant = {
+		ai = no
+		primary_title = {
+			OR = {
+				tier = count
+				tier = duke
+				tier = king
+				tier = emperor
+			}
+		}
+		capital_scope = {
+			fort_has_building = dwse_dragon_roost
+			OR = {
+				has_building = dw_slave_dungeon_1 # Castle
+				has_building = dw_slave_dungeon_2
+				has_building = dw_slave_dungeon_3
+				has_building = dw_slave_wagon_1 # Nomad
+				has_building = dw_slave_wagon_2
+				has_building = dw_slave_wagon_3
+				has_building = dw_slave_wagon_4
+				has_building = dw_slave_wagon_5
+				has_building = dw_slave_pen_1 # Tribal
+				has_building = dw_slave_pen_2
+				has_building = dw_slave_pen_3
+			}
+		}
+	}	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_dwse_emperor = {			# this title is not granted by a character to another, it is automatically obtained
+								# when one character becomes emperor of china. It is used solely to identify them as such
+	is_offmap_holder = yes
+	offmap_power = offmap_dwse
+	show_as_title = yes
+	dignity = 1000 				# this should always be higher than 0, or it won't be applied in all cases
+}
+dwse_weyrleader = {
+	dignity = 0.15
+	grant_limit = 5
+	opinion_effect = 50
+	show_as_title = yes
+	monthly_salary = 0.5
+	monthly_prestige = 0.25
+	
+	allowed_to_hold = {
+		is_adult = yes
+		is_female = yes
+		NOT = { practical_age = 45 }
+	}
+	
+	allowed_to_grant = {
+		capital_scope = {
+			fort_has_building = dwse_dragon_weyr
+		}
+	}	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}

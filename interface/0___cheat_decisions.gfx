@@ -1,0 +1,191 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_show_cheats"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_hide_cheats"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
+
+### Employment
+	spriteType = {
+		name = "GFX_cheat_employ_great_commander"
+		texturefile = "gfx\\ambitions\\obj_become_marshal.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_employ_elusive_shadow"
+		texturefile = "gfx\\ambitions\\obj_become_spymaster.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_employ_grey_eminence"
+		texturefile = "gfx\\ambitions\\obj_become_chancellor.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_employ_midas_touched"
+		texturefile = "gfx\\ambitions\\obj_become_treasurer.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_employ_mastermind_theologian"
+		texturefile = "gfx\\ambitions\\obj_become_spiritual.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_employ_female"
+		texturefile = "gfx\\interface\\_traiticon_obj_get_married.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_employ_male_child"
+		texturefile = "gfx\\interface\\_traiticon_obj_have_a_son.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_employ_female_child"
+		texturefile = "gfx\\interface\\_traiticon_obj_have_a_daughter.dds"
+	}		
+	
+### Traits	
+	spriteType = {
+		name = "GFX_cheat_add_babyface"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_babyface"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_add_babymaker"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_babymaker"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_add_builder"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_builder"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_add_chosen_one"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_chosen_one"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_add_immortal"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_immortal"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_add_infertile"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_infertile"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}		
+	spriteType = {
+		name = "GFX_cheat_add_loyalist"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_loyalist"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_add_money_hands"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_money_hands"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_add_ninja"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_ninja"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_add_prophet_blooded"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_prophet_blooded"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_add_terrain_master"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_terrain_master"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_add_terror"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_terror"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_cheat_add_warpriest"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_warpriest"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_add_doomstack"
+		texturefile = "gfx\\interface\\_traiticon_warscore.dds"
+	}	
+	spriteType = {
+		name = "GFX_cheat_add_doomstack_navy"
+		texturefile = "gfx\\interface\\_traiticon_warscore.dds"
+	}		
+	spriteType = {
+		name = "GFX_cheat_remove_crappy_traits"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}
+	spriteType = {
+		name = "GFX_cheat_remove_crap_from_dynasty_kids"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}			
+	spriteType = {
+		name = "GFX_add_awesome_to_dynasty_kids"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}		
+	spriteType = {
+		name = "GFX_happy_vassals"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}			
+	spriteType = {
+		name = "GFX_cheat_gold"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}		
+	spriteType = {
+		name = "GFX_cheat_prestige"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}		
+	spriteType = {
+		name = "GFX_cheat_piety"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}		
+	spriteType = {
+		name = "GFX_cheat_techpoints"
+		texturefile = "gfx\\interface\\_traiticon_cupbearer.dds"
+	}			
+}

@@ -1,0 +1,15 @@
+on_startup = {
+	events = {
+		BOJ.1
+	}
+	#effect = {
+	#	if = {
+	#		limit = {
+	#			trait = yiminhyee
+	#		}
+	#	}
+	#	any_title = {
+	#		add_claim = ROOT
+	#	}
+	#}
+}

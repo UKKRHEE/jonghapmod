@@ -1,6 +1,0 @@
-﻿carn_prostitution_random_events_pulse = {
-	random_events = {
-		50 = carnm_prostitution_random_events.0001 # Woman of the People
-		100 = carnm_prostitution_random_events.0002 # Learned a secret
-	}
-}

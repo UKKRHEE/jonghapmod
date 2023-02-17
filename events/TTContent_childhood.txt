@@ -1,0 +1,347 @@
+################################################################################
+### Contains events that are intended for use in the Dark World Content Pack ###
+################################################################################
+###  SEARCH ###FIXME FOR WORK TO DO
+
+namespace = TTcontent_kids
+
+# Gain Bravery
+character_event = {
+	id = TTcontent_kids.1500
+	desc = "TTcontent_kids1500"
+	picture = "Child_sword_training"
+	
+	is_triggered_only = yes # On-action: on_yearly_childhood_pulse
+	
+	min_age = 6
+	max_age = 16
+
+	trigger = {
+		trait = futa
+		has_character_flag = alphafuta
+		prisoner = no
+		has_guardian = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			trait = fair
+			factor = 0.95
+		}
+		modifier = {
+			trait = ugly
+			factor = 1.10
+		}
+		modifier = {
+			trait = dwarf
+			factor = 1.2
+		}		
+		modifier = {
+			trait = genius
+			factor = 0.85
+		}
+		modifier = {
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+			factor = 0.95
+		}	
+		modifier = {
+			OR = {
+				trait = slow
+				trait = dull
+			}
+			factor = 1.2
+		}
+		modifier = {
+			trait = imbecile
+			factor = 1.5
+		}
+		modifier = {
+			trait = inbred
+			factor = 1.5
+		}
+		modifier = {
+			is_strong_trigger = yes
+			factor = 0.05
+		}
+		modifier = {
+			is_weak_trigger = yes
+			factor = 5.0
+		}
+	}
+		
+	option = {
+		name = "TTcontent_kids1500a"
+		add_trait = brave
+		hidden_tooltip = {
+			guardian = {
+				character_event = {
+					id = TTcontent_kids.2000
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+# Guardian discourages Bravery
+character_event = {
+	id = TTcontent_kids.1501
+	desc = "TTcontent_kids1501"
+	picture = "Child_sword_training"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = brave
+		}
+	}
+	
+	option = {
+		name = "TTcontent_kids1501a"
+		remove_trait = brave
+	}
+}
+
+#Fosterling gains trait bravery
+character_event = {
+	id = TTcontent_kids.2000
+	desc = TTcontent_kids2000
+	picture = "Child_sword_training"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TTcontent_kids2000a # Encourage bravery
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 4
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				trait = diligent
+			}
+			modifier = {
+				factor = 2
+				trait = wroth
+			}
+			modifier = {
+				factor = 5
+				trait = redhandvet
+			}
+		}
+		
+		if = {
+			limit = {
+				trait = craven
+			}
+			prestige = -5
+		}
+		if = {
+			limit = {
+				trait = brave
+			}
+			prestige = 10
+		}
+		FROM = {
+			tooltip = {
+				add_trait = brave
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_happy_with_guardian
+				years = 12
+			}
+		}
+	}
+	
+	option = {
+		name = TTcontent_kids2000b # Birch Him!
+		trigger = {
+			NOT = { trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = cruel
+			}
+			modifier = {
+				factor = 5
+				trait = lunatic
+			}
+		}
+		
+		if = {
+			limit = { religion = jain }
+			piety = -20
+			custom_tooltip = { text = jain_ahimsa_tooltip }
+		}
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			FROM = { 
+				remove_trait = brave
+				hidden_tooltip = { 
+					character_event = { 
+						id = TTcontent_kids.1501
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = TTcontent_kids2000c # Talk to child about cowardice.
+		trigger = {
+			NOT = { trait = brave }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				trait = craven
+			}
+			modifier = {
+				factor = 10
+				trait = slothful
+			}
+		}
+		
+		random_list = {
+			50 = { 
+				FROM = { 
+					add_trait = craven
+				}
+			}
+			50 = { 
+				FROM = { 
+					remove_trait = brave
+					hidden_tooltip = {
+						character_event = {	
+							id = TTcontent_kids.1501
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+######################################
+####      PLACEHOLDER             ####
+######################################
+
+character_event = { ####FIXME
+	id = TTcontent_kids.3000
+	desc = "TTcontent_kids3000"
+	picture = "futa_adolescent"
+	
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+
+	trigger = {
+		has_character_flag = alphafuta
+		prisoner = no
+		has_guardian = yes
+		any_sibling = {
+			is_female = no
+			age = 10
+			NOT = { age = 18 )
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			trait = fair
+			factor = 0.05
+		}
+		modifier = {
+			trait = ugly
+			factor = 3.0
+		}
+		modifier = {
+			trait = dwarf
+			factor = 1.2
+		}		
+		modifier = {
+			trait = genius
+			factor = 0.85
+		}
+		modifier = {
+			trait = strong
+			factor = 0.5
+		}
+		modifier = {
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+			factor = 0.95
+		}	
+		modifier = {
+			OR = {
+				trait = slow
+				trait = dull
+			}
+			factor = 1.8
+		}
+		modifier = {
+			trait = imbecile
+			factor = 1.5
+		}
+		modifier = {
+			trait = inbred
+			factor = 1.5
+		}
+		modifier = {
+			is_strong_trigger = yes
+			factor = 0.05
+		}
+		modifier = {
+			is_weak_trigger = yes
+			factor = 5.0
+		}
+	}
+		
+	option = {
+		name = "TTcontent_kids1500a"
+		add_trait = brave
+		hidden_tooltip = {  ###FIXME This event needs to be fleshed out and finished. Don't forget localisation.
+			guardian = {
+				character_event = {
+					id = TTcontent_kids.2000
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+######################################
+####      PLACEHOLDER             ####
+######################################
+
+
+
+######################################
+####      PLACEHOLDER             ####
+######################################
+
+
+
+
+

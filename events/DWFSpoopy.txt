@@ -1,0 +1,259 @@
+namespace = DWFSpoopy
+
+character_event = {
+	id = DWFSpoopy.1
+	desc = DWFSpoopy1
+	picture = GFX_evt_died_old_age
+	is_triggered_only = yes
+	trigger = {
+		has_ghosts_content = yes
+		NOR = { 
+			trait = dwf_ghost
+			trait = vampire
+			trait = vampire_ancient
+		}
+		is_landed = yes
+		random <= 5 # 5% chance this event happens
+	}
+	option = {
+		name = "No! My life cannot end now!"
+		trigger = {
+			is_female = yes
+		}
+		custom_tooltip = {
+			text = DWFSpoopy1TTA
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = no
+				female = yes
+				attributes = {
+					martial = 6
+					intrigue = 6
+					diplomacy = 6
+					learning = 6
+					stewardship = 6
+				}
+				name = "Restless Shade"
+				age = 16
+				fertility = 0
+				culture = ROOT
+				religion = ROOT
+				dynasty = ROOT
+				race = ROOT
+				trait = dwf_ghost
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							trait = futa
+						}
+					}
+					add_trait = futa
+					add_cock = yes
+					set_character_flag = dw_junk_checked
+				}
+				add_tits = yes
+				set_character_flag = dw_boobs_checked
+				copy_name = ROOT
+				ROOT = {
+					any_artifact = {
+						transfer_artifact = {
+							from = ROOT
+							to = new_character
+						}
+					}
+					father_even_if_dead = {
+						new_character = {
+							set_father = PREV
+						}
+					}
+					mother_even_if_dead = {
+						new_character = {
+							set_mother = PREV
+						}
+					}
+					any_owned_bloodline = {
+						new_character = {
+							add_to_bloodline = PREV
+						}
+					}
+					abdicate_to = new_character
+					set_player_character = new_character
+					any_spouse = {
+						if = {
+							limit = {
+								is_married_matrilineally = yes
+							}
+							remove_spouse = PREV
+							add_spouse_matrilineal = new_character
+						}
+						else = {
+							remove_spouse = PREV
+							add_spouse = new_character
+						}
+					}
+					any_lover = {
+						remove_lover = PREV
+						add_lover = new_character
+					}
+					any_friend = {
+						remove_friend = PREV
+						add_friend = new_character
+					}
+					any_rival = {
+						remove_rival = PREV
+						add_rival = new_character
+					}
+					any_consort = {
+						remove_consort = PREV
+						add_consort = new_character
+					}
+					any_child_even_if_dead = {
+						set_mother = new_character
+					}
+				}
+				add_trait = ghost_female
+				recalc_succession = yes
+			}
+		}
+		character_event = { id = DWFSpoopy.2 days = 9125 random = 18250 }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = content
+			}
+		}
+	}
+	option = {
+		name = "No! My life cannot end now!"
+		trigger = {
+			is_female = no
+		}
+		custom_tooltip = {
+			text = DWFSpoopy1TTA
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = no
+				female = no
+				attributes = {
+					martial = 6
+					intrigue = 6
+					diplomacy = 6
+					learning = 6
+					stewardship = 6
+				}
+				name = "Restless Shade"
+				age = 16
+				fertility = 0
+				culture = ROOT
+				religion = ROOT
+				dynasty = ROOT
+				race = ROOT
+				trait = dwf_ghost
+			}
+			new_character = {
+				add_cock = yes
+				set_character_flag = dw_junk_checked
+				copy_name = ROOT
+				ROOT = {
+					any_artifact = {
+						transfer_artifact = {
+							from = ROOT
+							to = new_character
+						}
+					}
+					father_even_if_dead = {
+						new_character = {
+							set_father = PREV
+						}
+					}
+					mother_even_if_dead = {
+						new_character = {
+							set_mother = PREV
+						}
+					}
+					any_owned_bloodline = {
+						new_character = {
+							add_to_bloodline = PREV
+						}
+					}
+					abdicate_to = new_character
+					set_player_character = new_character
+					any_spouse = {
+						if = {
+							limit = {
+								is_married_matrilineally = yes
+							}
+							remove_spouse = PREV
+							add_spouse_matrilineal = new_character
+						}
+						else = {
+							remove_spouse = PREV
+							add_spouse = new_character
+						}
+					}
+					any_lover = {
+						remove_lover = PREV
+						add_lover = new_character
+					}
+					any_friend = {
+						remove_friend = PREV
+						add_friend = new_character
+					}
+					any_rival = {
+						remove_rival = PREV
+						add_rival = new_character
+					}
+					any_consort = {
+						remove_consort = PREV
+						add_consort = new_character
+					}
+					any_child_even_if_dead = {
+						set_mother = new_character
+					}
+				}
+				add_trait = ghost_male
+				recalc_succession = yes
+			}
+		}
+		character_event = { id = DWFSpoopy.2 days = 9125 random = 18250 }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = content
+			}
+		}
+	}	
+	option = {
+		name = "I have lived well."
+		custom_tooltip = {
+			text = DWFSpoopy1TTB
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = ambitious
+			}
+		}
+	}
+}
+
+character_event = {
+	id = DWFSpoopy.2
+	desc = DWFSpoopy2
+	picture = GFX_evt_died_old_age
+	is_triggered_only = yes
+	option = {
+		name = "I can finally rest..."
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+	

@@ -1,0 +1,31 @@
+decisions = {
+
+Revert_Theocracy = {
+  potential = {
+    ai = no
+    #Conditions for the decision to appear
+  }
+  allow = {
+    prisoner = no
+    #Conditions for the decision to be enabled
+  }
+  effect = {
+  set_government_type = playable_theocracy_government
+      #Commands executed when taking the decision
+  }
+}
+Revert_Republic = {
+  potential = {
+    ai = no
+    #Conditions for the decision to appear
+  }
+  allow = {
+    prisoner = no
+    #Conditions for the decision to be enabled
+  }
+  effect = {
+  set_government_type =  playable_republic_government
+     #Commands executed when taking the decision
+  }
+}
+}

@@ -1,0 +1,23 @@
+###########################################################
+##### DECISION ICONS for the Dark World Content Pack  #####
+###########################################################
+
+spriteTypes = {
+	spriteType = {   ## Thieves Guild conversion
+		name = "GFX_convert_guild"
+		texturefile = "gfx/interface/GFX_theguild.dds"
+	}
+	spriteType = {  
+		name = "GFX_become_painslut"
+		texturefile = "gfx/interface/GFX_painslut.dds"
+	}
+	spriteType = {  ## Recruit icon for MERCOM
+		name = "GFX_mercom_recruit"
+		texturefile = "gfx/interface/GFX_mercom_recruit.dds"
+	}
+
+	spriteType = {  ## Slut Pilgrim Icon
+		name = "GFX_mercom_pilgrimage"
+		texturefile = "gfx/interface/GFX_mercom_pilgrimage.dds"
+	}
+}

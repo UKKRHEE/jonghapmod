@@ -1,5 +1,0 @@
-﻿carnd_house_song = {
-	name = "dynn_Song"
-	dynasty = carnd_dynasty_song
-	motto = carnd_dynn_Song_motto
-}

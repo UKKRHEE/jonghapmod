@@ -1,0 +1,925 @@
+spriteTypes = {
+	#		#		#		이벤트 (일반)
+	
+	spriteType = {	name = "GFX_AMD_TITLE"	texturefile = "gfx\\GFX_AMD_TITLE.dds"	}
+	spriteType = {	name = "GFX_AMD_TITLE0"	texturefile = "gfx\\GFX_AMD_TITLE0.DDS"	}
+	spriteType = {	name = "GFX_AMD_ALCHEMY0"	texturefile = "gfx\\event\\GFX_AMD_ALCHEMY0.tga"	}
+	spriteType = {	name = "GFX_AMD_BEAR1"	texturefile = "gfx\\event\\GFX_AMD_BEAR1.tga"	}
+	spriteType = {	name = "GFX_AMD_BEAR2"	texturefile = "gfx\\event\\GFX_AMD_BEAR2.tga"	}
+	spriteType = {	name = "GFX_AMD_BEDROOM1"	texturefile = "gfx\\event\\GFX_AMD_BEDROOM1.tga"	}
+	spriteType = {	name = "GFX_AMD_TAVERN"	texturefile = "gfx\\event\\GFX_AMD_TAVERN.tga"	}
+	spriteType = {	name = "GFX_AMD_YOGA0"	texturefile = "gfx\\event\\GFX_AMD_YOGA0.tga"	}
+	spriteType = {	name = "GFX_AMD_YOGA1"	texturefile = "gfx\\event\\GFX_AMD_YOGA1.tga"	}
+	spriteType = {	name = "GFX_AMD_YOGA2"	texturefile = "gfx\\event\\GFX_AMD_YOGA2.tga"	}
+	spriteType = {	name = "GFX_AMD_VVR1"	texturefile = "gfx\\event\\GFX_AMD_VVR1.tga"	}	#Velvet Room
+	spriteType = {	name = "GFX_AMD_VVR2"	texturefile = "gfx\\event\\GFX_AMD_VVR2.tga"	}
+	spriteType = {	name = "GFX_AMD_DEBUG0"	texturefile = "gfx\\event\\GFX_AMD_DEBUG0.DDS"	}	#갓겜 스텔라리스 하쉴?
+	spriteType = {	name = "GFX_AMD_DEBUG1"	texturefile = "gfx\\event\\GFX_AMD_DEBUG1.DDS"	}
+	spriteType = {	name = "GFX_AMD_DEBUG2"	texturefile = "gfx\\event\\GFX_AMD_DEBUG2.DDS"	}
+	spriteType = {	name = "GFX_AMD_XENO0"	texturefile = "gfx\\event\\GFX_AMD_XENO0.DDS"	}
+	spriteType = {	name = "GFX_AMD_SYNTH0"	texturefile = "gfx\\event\\GFX_AMD_SYNTH0.DDS"	}
+	spriteType = {	name = "GFX_AMD_MERURU0"	texturefile = "gfx\\event\\GFX_AMD_MERURU0.tga"	}	#아! 핫산! 메루루! 고갤 아시는구나! 진.짜.겁.나.더.럽.습.니.다.
+	spriteType = {	name = "GFX_AMD_MERURU1"	texturefile = "gfx\\event\\GFX_AMD_MERURU1.tga"	}
+	
+	
+	#		#		#		이벤트 (플레이)
+	
+	#		#		#		#		인간 일대일 노멀
+	spriteType = {	name = "GFX_AMD_2PNB_01"	texturefile = "gfx\\play\\GFX_AMD_2PNB_01.DDS"	}	#	후배위 질사
+	spriteType = {	name = "GFX_AMD_2PNB_02"	texturefile = "gfx\\play\\GFX_AMD_2PNB_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_03"	texturefile = "gfx\\play\\GFX_AMD_2PNB_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_04"	texturefile = "gfx\\play\\GFX_AMD_2PNB_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_05"	texturefile = "gfx\\play\\GFX_AMD_2PNB_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_06"	texturefile = "gfx\\play\\GFX_AMD_2PNB_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_07"	texturefile = "gfx\\play\\GFX_AMD_2PNB_07.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_08"	texturefile = "gfx\\play\\GFX_AMD_2PNB_08.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_09"	texturefile = "gfx\\play\\GFX_AMD_2PNB_09.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_10"	texturefile = "gfx\\play\\GFX_AMD_2PNB_10.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNB_11"	texturefile = "gfx\\play\\GFX_AMD_2PNB_11.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PNB_12"	texturefile = "gfx\\play\\GFX_AMD_2PNB_12.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_01"	texturefile = "gfx\\play\\GFX_AMD_2PNC_01.DDS"	}	#	기승위 질사
+	spriteType = {	name = "GFX_AMD_2PNC_02"	texturefile = "gfx\\play\\GFX_AMD_2PNC_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_03"	texturefile = "gfx\\play\\GFX_AMD_2PNC_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_04"	texturefile = "gfx\\play\\GFX_AMD_2PNC_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_05"	texturefile = "gfx\\play\\GFX_AMD_2PNC_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_06"	texturefile = "gfx\\play\\GFX_AMD_2PNC_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_07"	texturefile = "gfx\\play\\GFX_AMD_2PNC_07.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_08"	texturefile = "gfx\\play\\GFX_AMD_2PNC_08.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_09"	texturefile = "gfx\\play\\GFX_AMD_2PNC_09.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_10"	texturefile = "gfx\\play\\GFX_AMD_2PNC_10.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNC_11"	texturefile = "gfx\\play\\GFX_AMD_2PNC_11.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PNC_12"	texturefile = "gfx\\play\\GFX_AMD_2PNC_12.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_01"	texturefile = "gfx\\play\\GFX_AMD_2PNM_01.DDS"	}	#	정상위 질사
+	spriteType = {	name = "GFX_AMD_2PNM_02"	texturefile = "gfx\\play\\GFX_AMD_2PNM_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_03"	texturefile = "gfx\\play\\GFX_AMD_2PNM_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_04"	texturefile = "gfx\\play\\GFX_AMD_2PNM_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_05"	texturefile = "gfx\\play\\GFX_AMD_2PNM_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_06"	texturefile = "gfx\\play\\GFX_AMD_2PNM_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_07"	texturefile = "gfx\\play\\GFX_AMD_2PNM_07.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_08"	texturefile = "gfx\\play\\GFX_AMD_2PNM_08.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_09"	texturefile = "gfx\\play\\GFX_AMD_2PNM_09.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_10"	texturefile = "gfx\\play\\GFX_AMD_2PNM_10.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PNM_11"	texturefile = "gfx\\play\\GFX_AMD_2PNM_11.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PNM_12"	texturefile = "gfx\\play\\GFX_AMD_2PNM_12.DDS"	}
+	
+	#		#		#		#		인간 2P 게이
+	spriteType = {	name = "GFX_AMD_2PG_01"	texturefile = "gfx\\play\\GFX_AMD_2PG_01.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_02"	texturefile = "gfx\\play\\GFX_AMD_2PG_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_03"	texturefile = "gfx\\play\\GFX_AMD_2PG_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_04"	texturefile = "gfx\\play\\GFX_AMD_2PG_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_05"	texturefile = "gfx\\play\\GFX_AMD_2PG_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_06"	texturefile = "gfx\\play\\GFX_AMD_2PG_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_07"	texturefile = "gfx\\play\\GFX_AMD_2PG_07.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_08"	texturefile = "gfx\\play\\GFX_AMD_2PG_08.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PG_09"	texturefile = "gfx\\play\\GFX_AMD_2PG_09.DDS"	}
+	
+	#		#		#		#		인간 2P 레즈
+	spriteType = {	name = "GFX_AMD_2PL_01"	texturefile = "gfx\\play\\GFX_AMD_2PL_01.DDS"	}		#kiss
+	spriteType = {	name = "GFX_AMD_2PL_02"	texturefile = "gfx\\play\\GFX_AMD_2PL_02.DDS"	}		#5 1
+	spriteType = {	name = "GFX_AMD_2PL_03"	texturefile = "gfx\\play\\GFX_AMD_2PL_03.DDS"	}		#3 3
+	spriteType = {	name = "GFX_AMD_2PL_04"	texturefile = "gfx\\play\\GFX_AMD_2PL_04.DDS"	}		#5 4
+	spriteType = {	name = "GFX_AMD_2PL_05"	texturefile = "gfx\\play\\GFX_AMD_2PL_05.DDS"	}		#5 5
+	spriteType = {	name = "GFX_AMD_2PL_06"	texturefile = "gfx\\play\\GFX_AMD_2PL_06.DDS"	}		#3 3
+	spriteType = {	name = "GFX_AMD_2PL_07"	texturefile = "gfx\\play\\GFX_AMD_2PL_07.DDS"	}		#4 2
+	spriteType = {	name = "GFX_AMD_2PL_08"	texturefile = "gfx\\play\\GFX_AMD_2PL_08.DDS"	}		#4 2
+	spriteType = {	name = "GFX_AMD_2PL_09"	texturefile = "gfx\\play\\GFX_AMD_2PL_09.DDS"	}		#5 2
+	spriteType = {	name = "GFX_AMD_2PL_10"	texturefile = "gfx\\play\\GFX_AMD_2PL_10.DDS"	}		#2 ?
+	spriteType = {	name = "GFX_AMD_2PL_11"	texturefile = "gfx\\play\\GFX_AMD_2PL_11.DDS"	}		#5 4
+	spriteType = {	name = "GFX_AMD_2PL_12"	texturefile = "gfx\\play\\GFX_AMD_2PL_12.DDS"	}		#4 3
+	spriteType = {	name = "GFX_AMD_2PL_13"	texturefile = "gfx\\play\\GFX_AMD_2PL_13.DDS"	}		#3 3
+	spriteType = {	name = "GFX_AMD_2PL_14"	texturefile = "gfx\\play\\GFX_AMD_2PL_14.DDS"	}		#2 2
+	spriteType = {	name = "GFX_AMD_2PL_15"	texturefile = "gfx\\play\\GFX_AMD_2PL_15.DDS"	}		#3 1
+	spriteType = {	name = "GFX_AMD_2PL_16"	texturefile = "gfx\\play\\GFX_AMD_2PL_16.DDS"	}		#5 1
+	spriteType = {	name = "GFX_AMD_2PL_17"	texturefile = "gfx\\play\\GFX_AMD_2PL_17.DDS"	}		#4 1
+	spriteType = {	name = "GFX_AMD_2PL_18"	texturefile = "gfx\\play\\GFX_AMD_2PL_18.DDS"	}		#1 1
+	spriteType = {	name = "GFX_AMD_2PL_19"	texturefile = "gfx\\play\\GFX_AMD_2PL_19.DDS"	}		#2 ?
+	spriteType = {	name = "GFX_AMD_2PL_20"	texturefile = "gfx\\play\\GFX_AMD_2PL_20.DDS"	}		#2 ?
+	spriteType = {	name = "GFX_AMD_2PL_21"	texturefile = "gfx\\play\\GFX_AMD_2PL_21.DDS"	}		#5 5
+	spriteType = {	name = "GFX_AMD_2PL_22"	texturefile = "gfx\\play\\GFX_AMD_2PL_22.DDS"	}		#2 ?
+	spriteType = {	name = "GFX_AMD_2PL_23"	texturefile = "gfx\\play\\GFX_AMD_2PL_23.DDS"	}		#1 ?
+	
+	#		#		#		#		기타종족 동종간
+	spriteType = {	name = "GFX_AMD_2ZBF"	texturefile = "gfx\\play\\GFX_AMD_2ZBF.DDS"	}	#	곰 여성 단독
+	spriteType = {	name = "GFX_AMD_2ZBG"	texturefile = "gfx\\play\\GFX_AMD_2ZBG.DDS"	}	#	곰 게이
+	spriteType = {	name = "GFX_AMD_2ZHH_1"	texturefile = "gfx\\play\\GFX_AMD_2ZHH_1.DDS"	}#	말 두마리
+	spriteType = {	name = "GFX_AMD_2ZHH_2"	texturefile = "gfx\\play\\GFX_AMD_2ZHH_2.DDS"	}
+	spriteType = {	name = "GFX_AMD_2ZHH_3"	texturefile = "gfx\\play\\GFX_AMD_2ZHH_3.DDS"	}
+	spriteType = {	name = "GFX_AMD_2ZHH_4"	texturefile = "gfx\\play\\GFX_AMD_2ZHH_4.DDS"	}
+	spriteType = {	name = "GFX_AMD_2ZHH_5"	texturefile = "gfx\\play\\GFX_AMD_2ZHH_5.DDS"	}
+	#		#		#		#		#		이종간
+	spriteType = {	name = "GFX_AMD_2ZBH"	texturefile = "gfx\\play\\GFX_AMD_2ZBH.DDS"	}	#	곰x인여
+	spriteType = {	name = "GFX_AMD_2ZBC"	texturefile = "gfx\\play\\GFX_AMD_2ZBC.DDS"	}	#	웅남x묘녀
+	spriteType = {	name = "GFX_AMD_2ZHC"	texturefile = "gfx\\play\\GFX_AMD_2ZHC.DDS"	}	#	말x냥
+	spriteType = {	name = "GFX_AMD_2ZCH"	texturefile = "gfx\\play\\GFX_AMD_2ZCH.DDS"	}	#	냥x말
+	
+	#		#		#		#		#		마간
+	spriteType = {	name = "GFX_AMD_2HHM_01"	texturefile = "gfx\\play\\GFX_AMD_2HHM_01.DDS"	}	#	말x남
+	spriteType = {	name = "GFX_AMD_2HHM_02"	texturefile = "gfx\\play\\GFX_AMD_2HHM_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHM_03"	texturefile = "gfx\\play\\GFX_AMD_2HHM_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHM_04"	texturefile = "gfx\\play\\GFX_AMD_2HHM_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHM_05"	texturefile = "gfx\\play\\GFX_AMD_2HHM_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HMH_01"	texturefile = "gfx\\play\\GFX_AMD_2HMH_01.DDS"	}	#	남x말
+	spriteType = {	name = "GFX_AMD_2HMH_02"	texturefile = "gfx\\play\\GFX_AMD_2HMH_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HMH_03"	texturefile = "gfx\\play\\GFX_AMD_2HMH_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HFH"	texturefile = "gfx\\play\\GFX_AMD_2HFH.DDS"	}	#	녀&말
+	
+	#	말>녀
+	spriteType = {	name = "GFX_AMD_2HHF_01"	texturefile = "gfx\\play\\GFX_AMD_2HHF_01.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_02"	texturefile = "gfx\\play\\GFX_AMD_2HHF_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_03"	texturefile = "gfx\\play\\GFX_AMD_2HHF_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_04"	texturefile = "gfx\\play\\GFX_AMD_2HHF_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_05"	texturefile = "gfx\\play\\GFX_AMD_2HHF_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_06"	texturefile = "gfx\\play\\GFX_AMD_2HHF_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_07"	texturefile = "gfx\\play\\GFX_AMD_2HHF_07.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_08"	texturefile = "gfx\\play\\GFX_AMD_2HHF_08.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_09"	texturefile = "gfx\\play\\GFX_AMD_2HHF_09.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_10"	texturefile = "gfx\\play\\GFX_AMD_2HHF_10.DDS"	}
+	
+	spriteType = {	name = "GFX_AMD_2HHF_21"	texturefile = "gfx\\play\\GFX_AMD_2HHF_21.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_22"	texturefile = "gfx\\play\\GFX_AMD_2HHF_22.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_23"	texturefile = "gfx\\play\\GFX_AMD_2HHF_23.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_24"	texturefile = "gfx\\play\\GFX_AMD_2HHF_24.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_25"	texturefile = "gfx\\play\\GFX_AMD_2HHF_25.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_26"	texturefile = "gfx\\play\\GFX_AMD_2HHF_26.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_27"	texturefile = "gfx\\play\\GFX_AMD_2HHF_27.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_28"	texturefile = "gfx\\play\\GFX_AMD_2HHF_28.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_29"	texturefile = "gfx\\play\\GFX_AMD_2HHF_29.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_30"	texturefile = "gfx\\play\\GFX_AMD_2HHF_30.DDS"	}
+	
+	spriteType = {	name = "GFX_AMD_2HHF_41"	texturefile = "gfx\\play\\GFX_AMD_2HHF_41.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_42"	texturefile = "gfx\\play\\GFX_AMD_2HHF_42.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_43"	texturefile = "gfx\\play\\GFX_AMD_2HHF_43.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_44"	texturefile = "gfx\\play\\GFX_AMD_2HHF_44.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_45"	texturefile = "gfx\\play\\GFX_AMD_2HHF_45.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_46"	texturefile = "gfx\\play\\GFX_AMD_2HHF_46.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_47"	texturefile = "gfx\\play\\GFX_AMD_2HHF_47.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_48"	texturefile = "gfx\\play\\GFX_AMD_2HHF_48.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_49"	texturefile = "gfx\\play\\GFX_AMD_2HHF_49.DDS"	}
+	spriteType = {	name = "GFX_AMD_2HHF_50"	texturefile = "gfx\\play\\GFX_AMD_2HHF_50.DDS"	}
+	
+	
+	
+	#		#		#		#		멀티플레이
+	
+	#	여주*남성
+	spriteType = {	name = "GFX_AMD_MPFM_01"	texturefile = "gfx\\play\\GFX_AMD_MPFM_01.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_02"	texturefile = "gfx\\play\\GFX_AMD_MPFM_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_03"	texturefile = "gfx\\play\\GFX_AMD_MPFM_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_04"	texturefile = "gfx\\play\\GFX_AMD_MPFM_04.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_MPFM_05"	texturefile = "gfx\\play\\GFX_AMD_MPFM_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_06"	texturefile = "gfx\\play\\GFX_AMD_MPFM_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_07"	texturefile = "gfx\\play\\GFX_AMD_MPFM_07.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_08"	texturefile = "gfx\\play\\GFX_AMD_MPFM_08.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_09"	texturefile = "gfx\\play\\GFX_AMD_MPFM_09.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_10"	texturefile = "gfx\\play\\GFX_AMD_MPFM_10.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_11"	texturefile = "gfx\\play\\GFX_AMD_MPFM_11.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_12"	texturefile = "gfx\\play\\GFX_AMD_MPFM_12.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_13"	texturefile = "gfx\\play\\GFX_AMD_MPFM_13.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_14"	texturefile = "gfx\\play\\GFX_AMD_MPFM_14.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_15"	texturefile = "gfx\\play\\GFX_AMD_MPFM_15.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_16"	texturefile = "gfx\\play\\GFX_AMD_MPFM_16.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_17"	texturefile = "gfx\\play\\GFX_AMD_MPFM_17.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_MPFM_18"	texturefile = "gfx\\play\\GFX_AMD_MPFM_18.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_19"	texturefile = "gfx\\play\\GFX_AMD_MPFM_19.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_20"	texturefile = "gfx\\play\\GFX_AMD_MPFM_20.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_21"	texturefile = "gfx\\play\\GFX_AMD_MPFM_21.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_22"	texturefile = "gfx\\play\\GFX_AMD_MPFM_22.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_23"	texturefile = "gfx\\play\\GFX_AMD_MPFM_23.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_24"	texturefile = "gfx\\play\\GFX_AMD_MPFM_24.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_25"	texturefile = "gfx\\play\\GFX_AMD_MPFM_25.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_26"	texturefile = "gfx\\play\\GFX_AMD_MPFM_26.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_27"	texturefile = "gfx\\play\\GFX_AMD_MPFM_27.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_MPFM_28"	texturefile = "gfx\\play\\GFX_AMD_MPFM_28.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_29"	texturefile = "gfx\\play\\GFX_AMD_MPFM_29.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_30"	texturefile = "gfx\\play\\GFX_AMD_MPFM_30.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_31"	texturefile = "gfx\\play\\GFX_AMD_MPFM_31.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_32"	texturefile = "gfx\\play\\GFX_AMD_MPFM_32.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_33"	texturefile = "gfx\\play\\GFX_AMD_MPFM_33.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_34"	texturefile = "gfx\\play\\GFX_AMD_MPFM_34.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_35"	texturefile = "gfx\\play\\GFX_AMD_MPFM_35.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_36"	texturefile = "gfx\\play\\GFX_AMD_MPFM_36.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_37"	texturefile = "gfx\\play\\GFX_AMD_MPFM_37.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_38"	texturefile = "gfx\\play\\GFX_AMD_MPFM_38.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_39"	texturefile = "gfx\\play\\GFX_AMD_MPFM_39.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_40"	texturefile = "gfx\\play\\GFX_AMD_MPFM_40.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_41"	texturefile = "gfx\\play\\GFX_AMD_MPFM_41.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFM_42"	texturefile = "gfx\\play\\GFX_AMD_MPFM_42.DDS"	}
+	#	남주*여성
+	spriteType = {	name = "GFX_AMD_MPMF_01"	texturefile = "gfx\\play\\GFX_AMD_MPMF_01.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_02"	texturefile = "gfx\\play\\GFX_AMD_MPMF_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_03"	texturefile = "gfx\\play\\GFX_AMD_MPMF_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_04"	texturefile = "gfx\\play\\GFX_AMD_MPMF_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_05"	texturefile = "gfx\\play\\GFX_AMD_MPMF_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_06"	texturefile = "gfx\\play\\GFX_AMD_MPMF_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_07"	texturefile = "gfx\\play\\GFX_AMD_MPMF_07.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_08"	texturefile = "gfx\\play\\GFX_AMD_MPMF_08.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_09"	texturefile = "gfx\\play\\GFX_AMD_MPMF_09.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_10"	texturefile = "gfx\\play\\GFX_AMD_MPMF_10.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_11"	texturefile = "gfx\\play\\GFX_AMD_MPMF_11.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_12"	texturefile = "gfx\\play\\GFX_AMD_MPMF_12.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_13"	texturefile = "gfx\\play\\GFX_AMD_MPMF_13.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_14"	texturefile = "gfx\\play\\GFX_AMD_MPMF_14.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_15"	texturefile = "gfx\\play\\GFX_AMD_MPMF_15.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_16"	texturefile = "gfx\\play\\GFX_AMD_MPMF_16.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_17"	texturefile = "gfx\\play\\GFX_AMD_MPMF_17.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_18"	texturefile = "gfx\\play\\GFX_AMD_MPMF_18.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_19"	texturefile = "gfx\\play\\GFX_AMD_MPMF_19.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_20"	texturefile = "gfx\\play\\GFX_AMD_MPMF_20.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMF_21"	texturefile = "gfx\\play\\GFX_AMD_MPMF_21.DDS"	}
+	
+	#	여주*여성
+	spriteType = {	name = "GFX_AMD_MPFF_01"	texturefile = "gfx\\play\\GFX_AMD_MPFF_01.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFF_02"	texturefile = "gfx\\play\\GFX_AMD_MPFF_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFF_03"	texturefile = "gfx\\play\\GFX_AMD_MPFF_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFF_04"	texturefile = "gfx\\play\\GFX_AMD_MPFF_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFF_05"	texturefile = "gfx\\play\\GFX_AMD_MPFF_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPFF_06"	texturefile = "gfx\\play\\GFX_AMD_MPFF_06.DDS"	}
+	
+	#	남주*남성
+	spriteType = {	name = "GFX_AMD_MPMM_01"	texturefile = "gfx\\play\\GFX_AMD_MPMM_01.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMM_02"	texturefile = "gfx\\play\\GFX_AMD_MPMM_02.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMM_03"	texturefile = "gfx\\play\\GFX_AMD_MPMM_03.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMM_04"	texturefile = "gfx\\play\\GFX_AMD_MPMM_04.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMM_05"	texturefile = "gfx\\play\\GFX_AMD_MPMM_05.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMM_06"	texturefile = "gfx\\play\\GFX_AMD_MPMM_06.DDS"	}
+	spriteType = {	name = "GFX_AMD_MPMM_07"	texturefile = "gfx\\play\\GFX_AMD_MPMM_07.DDS"	}
+	
+	
+	
+	#		#		#		#		2P ERA
+	
+	#		#		#		101 ~ 199	전희
+	
+	#		#		#		101	대기/유혹
+	spriteType = {	name = "GFX_AMD_2PN101_001"	texturefile = "gfx\\era\\GFX_AMD_2PN101_001.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PN101_002"	texturefile = "gfx\\era\\GFX_AMD_2PN101_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_003"	texturefile = "gfx\\era\\GFX_AMD_2PN101_003.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_004"	texturefile = "gfx\\era\\GFX_AMD_2PN101_004.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_005"	texturefile = "gfx\\era\\GFX_AMD_2PN101_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_006"	texturefile = "gfx\\era\\GFX_AMD_2PN101_006.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_007"	texturefile = "gfx\\era\\GFX_AMD_2PN101_007.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_008"	texturefile = "gfx\\era\\GFX_AMD_2PN101_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_009"	texturefile = "gfx\\era\\GFX_AMD_2PN101_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_010"	texturefile = "gfx\\era\\GFX_AMD_2PN101_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_011"	texturefile = "gfx\\era\\GFX_AMD_2PN101_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_012"	texturefile = "gfx\\era\\GFX_AMD_2PN101_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_013"	texturefile = "gfx\\era\\GFX_AMD_2PN101_013.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PN101_014"	texturefile = "gfx\\era\\GFX_AMD_2PN101_014.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_015"	texturefile = "gfx\\era\\GFX_AMD_2PN101_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_016"	texturefile = "gfx\\era\\GFX_AMD_2PN101_016.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_017"	texturefile = "gfx\\era\\GFX_AMD_2PN101_017.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_018"	texturefile = "gfx\\era\\GFX_AMD_2PN101_018.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_019"	texturefile = "gfx\\era\\GFX_AMD_2PN101_019.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN101_020"	texturefile = "gfx\\era\\GFX_AMD_2PN101_020.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_021"	texturefile = "gfx\\era\\GFX_AMD_2PN101_021.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_022"	texturefile = "gfx\\era\\GFX_AMD_2PN101_022.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_023"	texturefile = "gfx\\era\\GFX_AMD_2PN101_023.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_024"	texturefile = "gfx\\era\\GFX_AMD_2PN101_024.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PN101_025"	texturefile = "gfx\\era\\GFX_AMD_2PN101_025.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_026"	texturefile = "gfx\\era\\GFX_AMD_2PN101_026.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_027"	texturefile = "gfx\\era\\GFX_AMD_2PN101_027.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_028"	texturefile = "gfx\\era\\GFX_AMD_2PN101_028.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_029"	texturefile = "gfx\\era\\GFX_AMD_2PN101_029.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_030"	texturefile = "gfx\\era\\GFX_AMD_2PN101_030.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_031"	texturefile = "gfx\\era\\GFX_AMD_2PN101_031.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_032"	texturefile = "gfx\\era\\GFX_AMD_2PN101_032.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN101_033"	texturefile = "gfx\\era\\GFX_AMD_2PN101_033.DDS"	}		
+	
+	#		#		#		102	키스
+	spriteType = {	name = "GFX_AMD_2PN102_001"	texturefile = "gfx\\era\\GFX_AMD_2PN102_001.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_002"	texturefile = "gfx\\era\\GFX_AMD_2PN102_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_003"	texturefile = "gfx\\era\\GFX_AMD_2PN102_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_004"	texturefile = "gfx\\era\\GFX_AMD_2PN102_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_005"	texturefile = "gfx\\era\\GFX_AMD_2PN102_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_006"	texturefile = "gfx\\era\\GFX_AMD_2PN102_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_007"	texturefile = "gfx\\era\\GFX_AMD_2PN102_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_008"	texturefile = "gfx\\era\\GFX_AMD_2PN102_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_009"	texturefile = "gfx\\era\\GFX_AMD_2PN102_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_010"	texturefile = "gfx\\era\\GFX_AMD_2PN102_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_011"	texturefile = "gfx\\era\\GFX_AMD_2PN102_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_012"	texturefile = "gfx\\era\\GFX_AMD_2PN102_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN102_013"	texturefile = "gfx\\era\\GFX_AMD_2PN102_013.DDS"	}
+		
+	#		#		#		103	가슴애무
+	spriteType = {	name = "GFX_AMD_2PN103_001"	texturefile = "gfx\\era\\GFX_AMD_2PN103_001.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PN103_002"	texturefile = "gfx\\era\\GFX_AMD_2PN103_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_003"	texturefile = "gfx\\era\\GFX_AMD_2PN103_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_004"	texturefile = "gfx\\era\\GFX_AMD_2PN103_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_005"	texturefile = "gfx\\era\\GFX_AMD_2PN103_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_006"	texturefile = "gfx\\era\\GFX_AMD_2PN103_006.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PN103_007"	texturefile = "gfx\\era\\GFX_AMD_2PN103_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_008"	texturefile = "gfx\\era\\GFX_AMD_2PN103_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_009"	texturefile = "gfx\\era\\GFX_AMD_2PN103_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_010"	texturefile = "gfx\\era\\GFX_AMD_2PN103_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_011"	texturefile = "gfx\\era\\GFX_AMD_2PN103_011.DDS"	}	#
+	spriteType = {	name = "GFX_AMD_2PN103_012"	texturefile = "gfx\\era\\GFX_AMD_2PN103_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_013"	texturefile = "gfx\\era\\GFX_AMD_2PN103_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_014"	texturefile = "gfx\\era\\GFX_AMD_2PN103_014.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_015"	texturefile = "gfx\\era\\GFX_AMD_2PN103_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_016"	texturefile = "gfx\\era\\GFX_AMD_2PN103_016.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_017"	texturefile = "gfx\\era\\GFX_AMD_2PN103_017.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN103_018"	texturefile = "gfx\\era\\GFX_AMD_2PN103_018.DDS"	}	#4
+	spriteType = {	name = "GFX_AMD_2PN103_019"	texturefile = "gfx\\era\\GFX_AMD_2PN103_019.DDS"	}	#4
+	spriteType = {	name = "GFX_AMD_2PN103_020"	texturefile = "gfx\\era\\GFX_AMD_2PN103_020.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN103_021"	texturefile = "gfx\\era\\GFX_AMD_2PN103_021.DDS"	}	#3
+		
+	#		#		#		104	handjob
+	spriteType = {	name = "GFX_AMD_2PN104_001"	texturefile = "gfx\\era\\GFX_AMD_2PN104_001.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN104_002"	texturefile = "gfx\\era\\GFX_AMD_2PN104_002.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN104_003"	texturefile = "gfx\\era\\GFX_AMD_2PN104_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_004"	texturefile = "gfx\\era\\GFX_AMD_2PN104_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_005"	texturefile = "gfx\\era\\GFX_AMD_2PN104_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_006"	texturefile = "gfx\\era\\GFX_AMD_2PN104_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_007"	texturefile = "gfx\\era\\GFX_AMD_2PN104_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_008"	texturefile = "gfx\\era\\GFX_AMD_2PN104_008.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN104_009"	texturefile = "gfx\\era\\GFX_AMD_2PN104_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_010"	texturefile = "gfx\\era\\GFX_AMD_2PN104_010.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN104_011"	texturefile = "gfx\\era\\GFX_AMD_2PN104_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_012"	texturefile = "gfx\\era\\GFX_AMD_2PN104_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN104_013"	texturefile = "gfx\\era\\GFX_AMD_2PN104_013.DDS"	}	#s
+	spriteType = {	name = "GFX_AMD_2PN104_014"	texturefile = "gfx\\era\\GFX_AMD_2PN104_014.DDS"	}	#l
+	spriteType = {	name = "GFX_AMD_2PN104_015"	texturefile = "gfx\\era\\GFX_AMD_2PN104_015.DDS"	}
+	
+	#		#		#		105	blowjob
+	spriteType = {	name = "GFX_AMD_2PN105_001"	texturefile = "gfx\\era\\GFX_AMD_2PN105_001.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_002"	texturefile = "gfx\\era\\GFX_AMD_2PN105_002.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_003"	texturefile = "gfx\\era\\GFX_AMD_2PN105_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_004"	texturefile = "gfx\\era\\GFX_AMD_2PN105_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_005"	texturefile = "gfx\\era\\GFX_AMD_2PN105_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_006"	texturefile = "gfx\\era\\GFX_AMD_2PN105_006.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_007"	texturefile = "gfx\\era\\GFX_AMD_2PN105_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_008"	texturefile = "gfx\\era\\GFX_AMD_2PN105_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_009"	texturefile = "gfx\\era\\GFX_AMD_2PN105_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_010"	texturefile = "gfx\\era\\GFX_AMD_2PN105_010.DDS"	}	#S
+	spriteType = {	name = "GFX_AMD_2PN105_011"	texturefile = "gfx\\era\\GFX_AMD_2PN105_011.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_012"	texturefile = "gfx\\era\\GFX_AMD_2PN105_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_013"	texturefile = "gfx\\era\\GFX_AMD_2PN105_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_014"	texturefile = "gfx\\era\\GFX_AMD_2PN105_014.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_015"	texturefile = "gfx\\era\\GFX_AMD_2PN105_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_016"	texturefile = "gfx\\era\\GFX_AMD_2PN105_016.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_017"	texturefile = "gfx\\era\\GFX_AMD_2PN105_017.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_018"	texturefile = "gfx\\era\\GFX_AMD_2PN105_018.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_019"	texturefile = "gfx\\era\\GFX_AMD_2PN105_019.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_020"	texturefile = "gfx\\era\\GFX_AMD_2PN105_020.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_021"	texturefile = "gfx\\era\\GFX_AMD_2PN105_021.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_022"	texturefile = "gfx\\era\\GFX_AMD_2PN105_022.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_023"	texturefile = "gfx\\era\\GFX_AMD_2PN105_023.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN105_024"	texturefile = "gfx\\era\\GFX_AMD_2PN105_024.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_025"	texturefile = "gfx\\era\\GFX_AMD_2PN105_025.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_026"	texturefile = "gfx\\era\\GFX_AMD_2PN105_026.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_027"	texturefile = "gfx\\era\\GFX_AMD_2PN105_027.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_028"	texturefile = "gfx\\era\\GFX_AMD_2PN105_028.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN105_029"	texturefile = "gfx\\era\\GFX_AMD_2PN105_029.DDS"	}	#R
+	spriteType = {	name = "GFX_AMD_2PN105_030"	texturefile = "gfx\\era\\GFX_AMD_2PN105_030.DDS"	}	#R
+	spriteType = {	name = "GFX_AMD_2PN105_031"	texturefile = "gfx\\era\\GFX_AMD_2PN105_031.DDS"	}	#C
+	spriteType = {	name = "GFX_AMD_2PN105_032"	texturefile = "gfx\\era\\GFX_AMD_2PN105_032.DDS"	}	
+	
+	#		#		#		106	paizuri
+	spriteType = {	name = "GFX_AMD_2PN106_001"	texturefile = "gfx\\era\\GFX_AMD_2PN106_001.DDS"	}	#S
+	spriteType = {	name = "GFX_AMD_2PN106_002"	texturefile = "gfx\\era\\GFX_AMD_2PN106_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_003"	texturefile = "gfx\\era\\GFX_AMD_2PN106_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_004"	texturefile = "gfx\\era\\GFX_AMD_2PN106_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_005"	texturefile = "gfx\\era\\GFX_AMD_2PN106_005.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN106_006"	texturefile = "gfx\\era\\GFX_AMD_2PN106_006.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_007"	texturefile = "gfx\\era\\GFX_AMD_2PN106_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_008"	texturefile = "gfx\\era\\GFX_AMD_2PN106_008.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_009"	texturefile = "gfx\\era\\GFX_AMD_2PN106_009.DDS"	}	#4
+	spriteType = {	name = "GFX_AMD_2PN106_010"	texturefile = "gfx\\era\\GFX_AMD_2PN106_010.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_011"	texturefile = "gfx\\era\\GFX_AMD_2PN106_011.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_012"	texturefile = "gfx\\era\\GFX_AMD_2PN106_012.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN106_013"	texturefile = "gfx\\era\\GFX_AMD_2PN106_013.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_014"	texturefile = "gfx\\era\\GFX_AMD_2PN106_014.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_015"	texturefile = "gfx\\era\\GFX_AMD_2PN106_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_016"	texturefile = "gfx\\era\\GFX_AMD_2PN106_016.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_017"	texturefile = "gfx\\era\\GFX_AMD_2PN106_017.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_018"	texturefile = "gfx\\era\\GFX_AMD_2PN106_018.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_019"	texturefile = "gfx\\era\\GFX_AMD_2PN106_019.DDS"	}	
+	spriteType = {	name = "GFX_AMD_2PN106_020"	texturefile = "gfx\\era\\GFX_AMD_2PN106_020.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_021"	texturefile = "gfx\\era\\GFX_AMD_2PN106_021.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN106_022"	texturefile = "gfx\\era\\GFX_AMD_2PN106_022.DDS"	}
+	
+	#		#		#		107	footjob
+	spriteType = {	name = "GFX_AMD_2PN107_001"	texturefile = "gfx\\era\\GFX_AMD_2PN107_001.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN107_002"	texturefile = "gfx\\era\\GFX_AMD_2PN107_002.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN107_003"	texturefile = "gfx\\era\\GFX_AMD_2PN107_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN107_004"	texturefile = "gfx\\era\\GFX_AMD_2PN107_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN107_005"	texturefile = "gfx\\era\\GFX_AMD_2PN107_005.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN107_006"	texturefile = "gfx\\era\\GFX_AMD_2PN107_006.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN107_007"	texturefile = "gfx\\era\\GFX_AMD_2PN107_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN107_008"	texturefile = "gfx\\era\\GFX_AMD_2PN107_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN107_009"	texturefile = "gfx\\era\\GFX_AMD_2PN107_009.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN107_010"	texturefile = "gfx\\era\\GFX_AMD_2PN107_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN107_011"	texturefile = "gfx\\era\\GFX_AMD_2PN107_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN107_012"	texturefile = "gfx\\era\\GFX_AMD_2PN107_012.DDS"	}		
+	spriteType = {	name = "GFX_AMD_2PN107_013"	texturefile = "gfx\\era\\GFX_AMD_2PN107_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN107_014"	texturefile = "gfx\\era\\GFX_AMD_2PN107_014.DDS"	}		
+	
+	
+	#		#		#		200	fb
+	spriteType = {	name = "GFX_AMD_2PN200_001"	texturefile = "gfx\\era\\GFX_AMD_2PN200_001.DDS"	}	#miss
+	spriteType = {	name = "GFX_AMD_2PN200_002"	texturefile = "gfx\\era\\GFX_AMD_2PN200_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN200_003"	texturefile = "gfx\\era\\GFX_AMD_2PN200_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN200_004"	texturefile = "gfx\\era\\GFX_AMD_2PN200_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN200_005"	texturefile = "gfx\\era\\GFX_AMD_2PN200_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN200_006"	texturefile = "gfx\\era\\GFX_AMD_2PN200_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN200_007"	texturefile = "gfx\\era\\GFX_AMD_2PN200_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN200_008"	texturefile = "gfx\\era\\GFX_AMD_2PN200_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN200_009"	texturefile = "gfx\\era\\GFX_AMD_2PN200_009.DDS"	}
+	
+	#		#		#		201	missionary
+	spriteType = {	name = "GFX_AMD_2PN201_001"	texturefile = "gfx\\era\\GFX_AMD_2PN201_001.DDS"	}	#1
+	spriteType = {	name = "GFX_AMD_2PN201_002"	texturefile = "gfx\\era\\GFX_AMD_2PN201_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_003"	texturefile = "gfx\\era\\GFX_AMD_2PN201_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_004"	texturefile = "gfx\\era\\GFX_AMD_2PN201_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_005"	texturefile = "gfx\\era\\GFX_AMD_2PN201_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_006"	texturefile = "gfx\\era\\GFX_AMD_2PN201_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_007"	texturefile = "gfx\\era\\GFX_AMD_2PN201_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_008"	texturefile = "gfx\\era\\GFX_AMD_2PN201_008.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN201_009"	texturefile = "gfx\\era\\GFX_AMD_2PN201_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_010"	texturefile = "gfx\\era\\GFX_AMD_2PN201_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_011"	texturefile = "gfx\\era\\GFX_AMD_2PN201_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_012"	texturefile = "gfx\\era\\GFX_AMD_2PN201_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_013"	texturefile = "gfx\\era\\GFX_AMD_2PN201_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_014"	texturefile = "gfx\\era\\GFX_AMD_2PN201_014.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_015"	texturefile = "gfx\\era\\GFX_AMD_2PN201_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_016"	texturefile = "gfx\\era\\GFX_AMD_2PN201_016.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_017"	texturefile = "gfx\\era\\GFX_AMD_2PN201_017.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN201_018"	texturefile = "gfx\\era\\GFX_AMD_2PN201_018.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_019"	texturefile = "gfx\\era\\GFX_AMD_2PN201_019.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_020"	texturefile = "gfx\\era\\GFX_AMD_2PN201_020.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_021"	texturefile = "gfx\\era\\GFX_AMD_2PN201_021.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_022"	texturefile = "gfx\\era\\GFX_AMD_2PN201_022.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN201_023"	texturefile = "gfx\\era\\GFX_AMD_2PN201_023.DDS"	}
+	
+	#		#		#		202	backattack
+	spriteType = {	name = "GFX_AMD_2PN202_001"	texturefile = "gfx\\era\\GFX_AMD_2PN202_001.DDS"	}	#0
+	spriteType = {	name = "GFX_AMD_2PN202_002"	texturefile = "gfx\\era\\GFX_AMD_2PN202_002.DDS"	}	#1
+	spriteType = {	name = "GFX_AMD_2PN202_003"	texturefile = "gfx\\era\\GFX_AMD_2PN202_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_004"	texturefile = "gfx\\era\\GFX_AMD_2PN202_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_005"	texturefile = "gfx\\era\\GFX_AMD_2PN202_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_006"	texturefile = "gfx\\era\\GFX_AMD_2PN202_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_007"	texturefile = "gfx\\era\\GFX_AMD_2PN202_007.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN202_008"	texturefile = "gfx\\era\\GFX_AMD_2PN202_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_009"	texturefile = "gfx\\era\\GFX_AMD_2PN202_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_010"	texturefile = "gfx\\era\\GFX_AMD_2PN202_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_011"	texturefile = "gfx\\era\\GFX_AMD_2PN202_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_012"	texturefile = "gfx\\era\\GFX_AMD_2PN202_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_013"	texturefile = "gfx\\era\\GFX_AMD_2PN202_013.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN202_014"	texturefile = "gfx\\era\\GFX_AMD_2PN202_014.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_015"	texturefile = "gfx\\era\\GFX_AMD_2PN202_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_016"	texturefile = "gfx\\era\\GFX_AMD_2PN202_016.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_017"	texturefile = "gfx\\era\\GFX_AMD_2PN202_017.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN202_018"	texturefile = "gfx\\era\\GFX_AMD_2PN202_018.DDS"	}
+	
+	#		#		#		203	cowgirl position
+	spriteType = {	name = "GFX_AMD_2PN203_001"	texturefile = "gfx\\era\\GFX_AMD_2PN203_001.DDS"	}	#0
+	spriteType = {	name = "GFX_AMD_2PN203_002"	texturefile = "gfx\\era\\GFX_AMD_2PN203_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_003"	texturefile = "gfx\\era\\GFX_AMD_2PN203_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_004"	texturefile = "gfx\\era\\GFX_AMD_2PN203_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_005"	texturefile = "gfx\\era\\GFX_AMD_2PN203_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_006"	texturefile = "gfx\\era\\GFX_AMD_2PN203_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_007"	texturefile = "gfx\\era\\GFX_AMD_2PN203_007.DDS"	}	#1
+	spriteType = {	name = "GFX_AMD_2PN203_008"	texturefile = "gfx\\era\\GFX_AMD_2PN203_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_009"	texturefile = "gfx\\era\\GFX_AMD_2PN203_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_010"	texturefile = "gfx\\era\\GFX_AMD_2PN203_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_011"	texturefile = "gfx\\era\\GFX_AMD_2PN203_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_012"	texturefile = "gfx\\era\\GFX_AMD_2PN203_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_013"	texturefile = "gfx\\era\\GFX_AMD_2PN203_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_014"	texturefile = "gfx\\era\\GFX_AMD_2PN203_014.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN203_015"	texturefile = "gfx\\era\\GFX_AMD_2PN203_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_016"	texturefile = "gfx\\era\\GFX_AMD_2PN203_016.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_017"	texturefile = "gfx\\era\\GFX_AMD_2PN203_017.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_018"	texturefile = "gfx\\era\\GFX_AMD_2PN203_018.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_019"	texturefile = "gfx\\era\\GFX_AMD_2PN203_019.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN203_020"	texturefile = "gfx\\era\\GFX_AMD_2PN203_020.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_021"	texturefile = "gfx\\era\\GFX_AMD_2PN203_021.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_022"	texturefile = "gfx\\era\\GFX_AMD_2PN203_022.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN203_023"	texturefile = "gfx\\era\\GFX_AMD_2PN203_023.DDS"	}
+	
+	
+	
+	#		#		#		300	cherrypie
+	spriteType = {	name = "GFX_AMD_2PN300_001"	texturefile = "gfx\\era\\GFX_AMD_2PN300_001.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN300_002"	texturefile = "gfx\\era\\GFX_AMD_2PN300_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN300_003"	texturefile = "gfx\\era\\GFX_AMD_2PN300_003.DDS"	}	#b
+	spriteType = {	name = "GFX_AMD_2PN300_004"	texturefile = "gfx\\era\\GFX_AMD_2PN300_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN300_005"	texturefile = "gfx\\era\\GFX_AMD_2PN300_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN300_006"	texturefile = "gfx\\era\\GFX_AMD_2PN300_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN300_007"	texturefile = "gfx\\era\\GFX_AMD_2PN300_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN300_008"	texturefile = "gfx\\era\\GFX_AMD_2PN300_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN300_009"	texturefile = "gfx\\era\\GFX_AMD_2PN300_009.DDS"	}	#c/s
+	spriteType = {	name = "GFX_AMD_2PN300_010"	texturefile = "gfx\\era\\GFX_AMD_2PN300_010.DDS"	}	#b/s
+	spriteType = {	name = "GFX_AMD_2PN300_011"	texturefile = "gfx\\era\\GFX_AMD_2PN300_011.DDS"	}	#c/l
+	spriteType = {	name = "GFX_AMD_2PN300_012"	texturefile = "gfx\\era\\GFX_AMD_2PN300_012.DDS"	}	#c/l
+	
+	
+	#		#		#		301	cp/miss
+	spriteType = {	name = "GFX_AMD_2PN301_001"	texturefile = "gfx\\era\\GFX_AMD_2PN301_001.DDS"	}	#common
+	spriteType = {	name = "GFX_AMD_2PN301_002"	texturefile = "gfx\\era\\GFX_AMD_2PN301_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_003"	texturefile = "gfx\\era\\GFX_AMD_2PN301_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_004"	texturefile = "gfx\\era\\GFX_AMD_2PN301_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_005"	texturefile = "gfx\\era\\GFX_AMD_2PN301_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_006"	texturefile = "gfx\\era\\GFX_AMD_2PN301_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_007"	texturefile = "gfx\\era\\GFX_AMD_2PN301_007.DDS"	}	#df
+	spriteType = {	name = "GFX_AMD_2PN301_008"	texturefile = "gfx\\era\\GFX_AMD_2PN301_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_009"	texturefile = "gfx\\era\\GFX_AMD_2PN301_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_011"	texturefile = "gfx\\era\\GFX_AMD_2PN301_011.DDS"	}	#ds
+	spriteType = {	name = "GFX_AMD_2PN301_012"	texturefile = "gfx\\era\\GFX_AMD_2PN301_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_013"	texturefile = "gfx\\era\\GFX_AMD_2PN301_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_014"	texturefile = "gfx\\era\\GFX_AMD_2PN301_014.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_015"	texturefile = "gfx\\era\\GFX_AMD_2PN301_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_016"	texturefile = "gfx\\era\\GFX_AMD_2PN301_016.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_017"	texturefile = "gfx\\era\\GFX_AMD_2PN301_017.DDS"	}		#2
+	spriteType = {	name = "GFX_AMD_2PN301_018"	texturefile = "gfx\\era\\GFX_AMD_2PN301_018.DDS"	}		#cons5
+	spriteType = {	name = "GFX_AMD_2PN301_019"	texturefile = "gfx\\era\\GFX_AMD_2PN301_019.DDS"	}		#v5
+	spriteType = {	name = "GFX_AMD_2PN301_021"	texturefile = "gfx\\era\\GFX_AMD_2PN301_021.DDS"	}	#1
+	spriteType = {	name = "GFX_AMD_2PN301_022"	texturefile = "gfx\\era\\GFX_AMD_2PN301_022.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_023"	texturefile = "gfx\\era\\GFX_AMD_2PN301_023.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_024"	texturefile = "gfx\\era\\GFX_AMD_2PN301_024.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_025"	texturefile = "gfx\\era\\GFX_AMD_2PN301_025.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN301_026"	texturefile = "gfx\\era\\GFX_AMD_2PN301_026.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_027"	texturefile = "gfx\\era\\GFX_AMD_2PN301_027.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_028"	texturefile = "gfx\\era\\GFX_AMD_2PN301_028.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_029"	texturefile = "gfx\\era\\GFX_AMD_2PN301_029.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_030"	texturefile = "gfx\\era\\GFX_AMD_2PN301_030.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN301_031"	texturefile = "gfx\\era\\GFX_AMD_2PN301_031.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_032"	texturefile = "gfx\\era\\GFX_AMD_2PN301_032.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN301_033"	texturefile = "gfx\\era\\GFX_AMD_2PN301_033.DDS"	}
+
+	
+	
+	#		#		#		302	cp/back
+	spriteType = {	name = "GFX_AMD_2PN302_001"	texturefile = "gfx\\era\\GFX_AMD_2PN302_001.DDS"	}	#common
+	spriteType = {	name = "GFX_AMD_2PN302_002"	texturefile = "gfx\\era\\GFX_AMD_2PN302_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN302_003"	texturefile = "gfx\\era\\GFX_AMD_2PN302_003.DDS"	}	#DS
+	spriteType = {	name = "GFX_AMD_2PN302_004"	texturefile = "gfx\\era\\GFX_AMD_2PN302_004.DDS"	}		#3
+	spriteType = {	name = "GFX_AMD_2PN302_005"	texturefile = "gfx\\era\\GFX_AMD_2PN302_005.DDS"	}		#3
+	spriteType = {	name = "GFX_AMD_2PN302_006"	texturefile = "gfx\\era\\GFX_AMD_2PN302_006.DDS"	}		#5
+	spriteType = {	name = "GFX_AMD_2PN302_007"	texturefile = "gfx\\era\\GFX_AMD_2PN302_007.DDS"	}	#FB	1
+	spriteType = {	name = "GFX_AMD_2PN302_008"	texturefile = "gfx\\era\\GFX_AMD_2PN302_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN302_011"	texturefile = "gfx\\era\\GFX_AMD_2PN302_011.DDS"	}	#1
+	spriteType = {	name = "GFX_AMD_2PN302_012"	texturefile = "gfx\\era\\GFX_AMD_2PN302_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN302_013"	texturefile = "gfx\\era\\GFX_AMD_2PN302_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN302_014"	texturefile = "gfx\\era\\GFX_AMD_2PN302_014.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN302_015"	texturefile = "gfx\\era\\GFX_AMD_2PN302_015.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN302_016"	texturefile = "gfx\\era\\GFX_AMD_2PN302_016.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN302_017"	texturefile = "gfx\\era\\GFX_AMD_2PN302_017.DDS"	}
+	
+	
+	#		#		#		303	cp/cowgirl
+	spriteType = {	name = "GFX_AMD_2PN303_001"	texturefile = "gfx\\era\\GFX_AMD_2PN303_001.DDS"	}	#common
+	spriteType = {	name = "GFX_AMD_2PN303_002"	texturefile = "gfx\\era\\GFX_AMD_2PN303_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_003"	texturefile = "gfx\\era\\GFX_AMD_2PN303_003.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_004"	texturefile = "gfx\\era\\GFX_AMD_2PN303_004.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_005"	texturefile = "gfx\\era\\GFX_AMD_2PN303_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_006"	texturefile = "gfx\\era\\GFX_AMD_2PN303_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_007"	texturefile = "gfx\\era\\GFX_AMD_2PN303_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_008"	texturefile = "gfx\\era\\GFX_AMD_2PN303_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_009"	texturefile = "gfx\\era\\GFX_AMD_2PN303_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_010"	texturefile = "gfx\\era\\GFX_AMD_2PN303_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_011"	texturefile = "gfx\\era\\GFX_AMD_2PN303_011.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_012"	texturefile = "gfx\\era\\GFX_AMD_2PN303_012.DDS"	}	#ds
+	spriteType = {	name = "GFX_AMD_2PN303_013"	texturefile = "gfx\\era\\GFX_AMD_2PN303_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_014"	texturefile = "gfx\\era\\GFX_AMD_2PN303_014.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_021"	texturefile = "gfx\\era\\GFX_AMD_2PN303_021.DDS"	}	#1
+	spriteType = {	name = "GFX_AMD_2PN303_022"	texturefile = "gfx\\era\\GFX_AMD_2PN303_022.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_023"	texturefile = "gfx\\era\\GFX_AMD_2PN303_023.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_024"	texturefile = "gfx\\era\\GFX_AMD_2PN303_024.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_025"	texturefile = "gfx\\era\\GFX_AMD_2PN303_025.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN303_026"	texturefile = "gfx\\era\\GFX_AMD_2PN303_026.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_027"	texturefile = "gfx\\era\\GFX_AMD_2PN303_027.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN303_028"	texturefile = "gfx\\era\\GFX_AMD_2PN303_028.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_029"	texturefile = "gfx\\era\\GFX_AMD_2PN303_029.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_030"	texturefile = "gfx\\era\\GFX_AMD_2PN303_030.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_031"	texturefile = "gfx\\era\\GFX_AMD_2PN303_031.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_032"	texturefile = "gfx\\era\\GFX_AMD_2PN303_032.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_033"	texturefile = "gfx\\era\\GFX_AMD_2PN303_033.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_034"	texturefile = "gfx\\era\\GFX_AMD_2PN303_034.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_035"	texturefile = "gfx\\era\\GFX_AMD_2PN303_035.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_036"	texturefile = "gfx\\era\\GFX_AMD_2PN303_036.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN303_037"	texturefile = "gfx\\era\\GFX_AMD_2PN303_037.DDS"	}
+	
+	
+	
+	#		#		#		305	outside bet
+	spriteType = {	name = "GFX_AMD_2PN305_001"	texturefile = "gfx\\era\\GFX_AMD_2PN305_001.DDS"	}	#0
+	spriteType = {	name = "GFX_AMD_2PN305_002"	texturefile = "gfx\\era\\GFX_AMD_2PN305_002.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_003"	texturefile = "gfx\\era\\GFX_AMD_2PN305_003.DDS"	}	#1
+	spriteType = {	name = "GFX_AMD_2PN305_004"	texturefile = "gfx\\era\\GFX_AMD_2PN305_004.DDS"	}	#b/1
+	spriteType = {	name = "GFX_AMD_2PN305_005"	texturefile = "gfx\\era\\GFX_AMD_2PN305_005.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_006"	texturefile = "gfx\\era\\GFX_AMD_2PN305_006.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_007"	texturefile = "gfx\\era\\GFX_AMD_2PN305_007.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_008"	texturefile = "gfx\\era\\GFX_AMD_2PN305_008.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_009"	texturefile = "gfx\\era\\GFX_AMD_2PN305_009.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_010"	texturefile = "gfx\\era\\GFX_AMD_2PN305_010.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_011"	texturefile = "gfx\\era\\GFX_AMD_2PN305_011.DDS"	}	#3
+	spriteType = {	name = "GFX_AMD_2PN305_012"	texturefile = "gfx\\era\\GFX_AMD_2PN305_012.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_013"	texturefile = "gfx\\era\\GFX_AMD_2PN305_013.DDS"	}
+	spriteType = {	name = "GFX_AMD_2PN305_014"	texturefile = "gfx\\era\\GFX_AMD_2PN305_014.DDS"	}	#5
+	spriteType = {	name = "GFX_AMD_2PN305_015"	texturefile = "gfx\\era\\GFX_AMD_2PN305_015.DDS"	}
+	
+	
+	#		#		#		트레잇
+	spriteType = {		name = "GFX_trait_AMD_virgin"
+		texturefile = "gfx/traits/GFX_trait_AMD_virgin.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_virgin_girl"
+		texturefile = "gfx/traits/GFX_trait_AMD_virgin_girl.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_virgin_boy"
+		texturefile = "gfx/traits/GFX_trait_AMD_virgin_boy.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	#사이즈 유전자
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_1"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_2"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_3"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_4"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_5"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	#신체사이즈
+	spriteType = {		name = "GFX_trait_AMD_penis_1"
+		texturefile = "gfx/traits/GFX_trait_AMD_penis_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_2"
+		texturefile = "gfx/traits/GFX_trait_AMD_penis_2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_3"
+		texturefile = "gfx/traits/GFX_trait_AMD_penis_3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_4"
+		texturefile = "gfx/traits/GFX_trait_AMD_penis_4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_5"
+		texturefile = "gfx/traits/GFX_trait_AMD_penis_5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_1"
+		texturefile = "gfx/traits/GFX_trait_AMD_breast_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_2"
+		texturefile = "gfx/traits/GFX_trait_AMD_breast_2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_3"
+		texturefile = "gfx/traits/GFX_trait_AMD_breast_3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_4"
+		texturefile = "gfx/traits/GFX_trait_AMD_breast_4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_5"
+		texturefile = "gfx/traits/GFX_trait_AMD_breast_5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	#성기술
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_1"
+		texturefile = "gfx/traits/GFX_trait_AMD_sex_skill_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_2"
+		texturefile = "gfx/traits/GFX_trait_AMD_sex_skill_2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_3"
+		texturefile = "gfx/traits/GFX_trait_AMD_sex_skill_3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_4"
+		texturefile = "gfx/traits/GFX_trait_AMD_sex_skill_4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_5"
+		texturefile = "gfx/traits/GFX_trait_AMD_sex_skill_5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {		name = "GFX_trait_AMD_sadist"
+		texturefile = "gfx/traits/GFX_trait_AMD_sadist.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_masochist"
+		texturefile = "gfx/traits/GFX_trait_AMD_masochist.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {		name = "GFX_trait_AMD_x_horsefucker"
+		texturefile = "gfx/traits/GFX_trait_AMD_x_horsefucker.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_x_bearfucker"
+		texturefile = "gfx/traits/GFX_trait_AMD_x_bearfucker.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_x_catfucker"
+		texturefile = "gfx/traits/GFX_trait_AMD_x_catfucker.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_xenophile"
+		texturefile = "gfx/traits/GFX_trait_AMD_xenophile.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {		name = "GFX_trait_AMD_lolicon"
+		texturefile = "gfx/traits/GFX_trait_AMD_lolicon.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {		name = "GFX_trait_AMD_rapidfire"
+		texturefile = "gfx/traits/GFX_trait_AMD_rapidfire.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_impotence"
+		texturefile = "gfx/traits/GFX_trait_AMD_impotence.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	
+	#사용하지 않는 트레잇들
+	
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_6"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_7"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_8"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_bodysize_gene_9"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_6"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_7"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_8"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_sex_skill_9"
+		texturefile = "gfx/traits/GFX_trait_unused.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_6"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_6.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_7"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_7.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_8"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_8.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_penis_9"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_9.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_6"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_6.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_7"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_7.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_8"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_8.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {		name = "GFX_trait_AMD_breast_9"
+		texturefile = "gfx/traits/GFX_trait_AMD_bodysize_gene_9.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+}

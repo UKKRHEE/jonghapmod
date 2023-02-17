@@ -1,0 +1,96 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+dwse_badthings;Something bad happens...;;;;;;;;;;;;;;x
+dwse_goodthings;Something good happens...;;;;;;;;;;;;;;x
+dwse_no_empire;No Empire;;;;;;;;;;;;;;x
+dwse_no_empire_desc;Dragons do not exist in this world. The Elder Forest is a thing of myth.;;;;;;;;;;;;;;x
+dwse_no_ai_slaving;Player Only Slaving;;;;;;;;;;;;;;x
+dwse_no_ai_slaving_desc;All dragon content enabled. The AI will never sell prisoners or branded slaves to the Elder Forest.;;;;;;;;;;;;;;x
+dwse_war;Slaving Contract;;;;;;;;;;;;;;x
+dwse_offer_slave;åˆ«º ±³Ğ¡È;;;;;;;;;;;;;;x
+dwse_futa_slave;‡Š°³¢³¦È åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse__slavef;«¹¬³ åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x 
+dwse__slavefe;«ÈäÁÉ¬·É«ÈÌ «¹¬³åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse__slavem;¢³Ø¬³ åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse__slaveme;«ÈäÁÉ¬·É«ÈÌ ¢³Ø¬³åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse_slave_war;åˆ«º¡º«µÉª· äŠ«ÈÙ;;;;;;;;;;;;;;x
+e_offmap_dwse_voice;Elder Forest;;;;;;;;;;;;;;x
+DWSE_VOICE_TITLE_FEMALE;Weyrguard;;;;;;;;;;;;;;x
+DWSE_VOICE_TITLE_MALE;Weyrguard;;;;;;;;;;;;;;x
+dwseom;Elder Forest;;;;;;;;;;;;;;x
+title_dwse_emperor;Sovereign;;;;;;;;;;;;;;x
+dwse_offer_slave_desc;åˆ«º ±³Ğ¡È;;;;;;;;;;;;;;x
+dwse_futa_slave_desc;‡Š°³¢³¦È åˆ«ºäŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse__slavef_desc;«¹¬³ åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x 
+dwse__slavefe_desc;«ÈäÁÉ¬·É«ÈÌ «¹¬³åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse__slavem_desc;¢³Ø¬³åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse__slaveme_desc;«ÈäÁÉ¬·É«ÈÌ ¢³Ø¬³åˆ«º äŠ«ÈÙ;;;;;;;;;;;;;;x
+dwse_slave_war_desc;åˆ«º ¡º«µÉª·çÆĞ äŠ«ÈÙ²³«¹ åˆ«ºêÆÙ¡¹É ª·Ì«·ÌëÆĞ ²³Ğ êŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;;x
+EVTDESC_DWSEOM_200;[Root.GetGovernorLetterGreeting]. [Root.GetChineseLetterBlessing].\n\nThe heavenly [From.Offmap.Ruler.GetLongChineseEmperorName], has generously decided to send you a slave from [From.Offmap.Ruler.GetHerHis] court. May they serve you well.;[Root.GetGovernorLetterGreeting]. [Root.GetChineseLetterBlessing].;;;;;;;;;;;;;;x
+EVTOPTA_DWSEOM_200;Send my most sincere gratitude to the [From.Offmap.Ruler.GetTitle].;;;;;;;;;;;;;;x
+EVTOPTA_DWSEOM_200_TT;Your slave arrives at your court;;;;;;;;;;;;;;x
+dwsefavor;Favor;;;;;;;;;;;;;;x
+will_leave_for_forest_tt;§Y[This.GetTitledName]§! will leave [This.GetHerHis] current life behind and travel to the Elder Forest.;;;;;;;;;;;;;;x
+DEATH_WENT_TO_FOREST_NO_KILLER;left their old life behind to travel into the Elder Forest;;;;;;;;;;;;;;x
+DEATH_WENT_TO_FOREST;left their old life behind to travel into the Elder Forest, on the order of $KILLER$;;;;;;;;;;;;;;x
+will_leave_for_forest_tt;;§Y[This.GetTitledName]§! will leave [This.GetHerHis] current life behind and make a new one for [This.GetHerselfHimself] in the Elder Forest.;;;;;;;;;;;;;;x
+dwse_hatch_dragon;æŒ¦´ä»Ì «³Ğ éŠÿ¼;;;;;;;;;;;;;;x
+dwse_hatch_dragon_desc;æŒ¦´ä»Ì «³Ğ éŠÿ¼;;;;;;;;;;;;;;x
+return_dragon_egg;æŒ¦´ä»Ì «³ĞëÆĞ ª·ÌèÁĞ²³¥³;;;;;;;;;;;;;;x
+return_dragon_egg_desc;æŒ¦´ä»Ì «³ĞëÆĞ ¬¸äÁÉ«¸ ª·ÌèÁĞ²³Ù¢È¥³. «·¦ÈÌ ëÀİëÆÌ ¬³©³Ğ¬·ÉëŒçˆ ª·İ¬³İ²³Ğ¡·Ù¢È¥³.;;;;;;;;;;;;;;x
+dragon_festival;æŒ¦´ä»Ì íÁÉ¬¸«¸ ®³Ø«¹²³Ì¥³;;;;;;;;;;;;;;x
+dragon_festival_desc;æŒ¦´äˆ íÁÉ¬¸«¸ ®³Ø«¹²³«¹ ª´çˆëÁÌ ª³ÒëÆĞ åŒ¹éˆªÈÙªÈëˆ.;;;;;;;;;;;;;;x
+dragon_festival_modifier;æŒ¦´ä»Ì íÁÉ¬¸«¸ ®³Ø«¹²³«¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;;x
+dragon_festival_modifier_desc;æŒ¦´ä»Ì íÁÉ¬¸«¸ ®³Ø«¹²³«¹Üäˆ ª´çˆëÁÌ ª³ÒëÆĞ åŒ¹éˆ«³Ü¥³.;;;;;;;;;;;;;;x
+dwseom500;íÁÉ¬¸¬³İ«¸ ¥³¡³¡³¬³ ²³åÆĞò¼ ¢³èŠæÆĞ ª³«ÈçÆĞ ¡³çˆ¬ÈçŒ¨¹ íÁØëÆĞ†ŠåÆÌ æÆÛ²³Ì æŒ¦´ä»ÌæÆĞùÇ èˆêÆÙëÆĞ é»Ğ êŠ «ÈÜ«·Ü¥³. \n ¥³İªÈÌ«È ¬·ÙäÆÌ²³¬³ åÁÌ«¸ éˆ«ÈÌ ¡·ÛëÆÌ «ÈÌ¡³Ì®·¦·Ø éˆ«ÈåÆÌ ¬³ÉëÆÌ ëÀİì»İì»ÉæÆĞ«È æŒ¦´ä»ÌæÆĞò¼ ª¸ÉêŒçÆĞ ²³äˆ «ÈÜåÆÌ ¡·Û«È«¹Ü¥³. «·‘·ã¡¸ ¬·¦·ã¡¸¢³ ¬³ÉëÆÌ ª´İèÁĞæÆĞò¼ ª¸ÉêŒçÆĞ ²³Ğ êŠ «ÈÜåÆÌ ¡·Ì¬È ¢·èŠ¢³ äÁİäÆØ²³ÌæÆÛ ®¹¥³éˆ«³Ü¥³. \n ¥³İªÈÌ«È íÁÉ¬¸¬³İ«¸ ¥·ëÁÉ ¡³³«È ¥³¡³¡³ĞêŠç»É ¥³İªÈÌëÆÌ ¥·ëÁÉ¥· ©È®³Ø²³Ì ²´İùÄæÆĞëÆĞ éˆ«³Ü¥³. îˆçÆĞ ”ÈçŒåÆÌæÆÛ²³Ì ²µİ«È ä»İ¡ÈçÆĞ ®´ëŠäˆ «ÈÜ«·Ü¥³. \n ¬³ØªÈ ‡Š ¥³İªÈÌëÆÌ «È ¬´¨È«ÈÜåÆÌ ²¹Ì¬³İ«¸ æ»İ®³Ø²³¡ÈçÆĞ ùÂÌ²´Üäˆ ìŠùÄùÇ æŒ¦´ä»ÌæÆĞëÆĞ ¬È¯¹éˆ«³Ü¥³. \n ²³Ì æŒ¦´ä»Ì«È ¥³İªÈÌ«¸¡¸ ¬·ÙäÆÌ²³«¹Üäˆ äŒåÆÌ ñ»Ì¬³«ÈÌ¡·Û®·¦·Ø éˆ«¹Ü¥³. äŒ¡³ ¡³³«È ¥³¡³ëˆ¬³ ¥³İªÈÌëÆÌ äŒùÇ ¥³Ì¥³Ì²³Ì ¬³¬ÈçÆĞ éˆ«³Ü¥³. äŒåÆÌ äÁÒìŠ¦ÈÌæÆÛ ¥³İªÈÌëÆĞ ®¹¥³éˆ«³Ü¥³.;;;;;;;;;;;;;;x
+dwseom500A;ë»ÛëÆĞ ©·Ûäˆ äŒù¼ ª¸ÉêŒ²³Ì¥³.;;;;;;;;;;;;;;x
+dwseom500B;‡Šÿ¿²³¡È¬·Ì«¸ «¹¡Èª· ¥³İ¬³İ ©·Û«·¢³¬³.;;;;;;;;;;;;;;x
+dwseom501;¥³İªÈÌëÆÌ ®ÈØ¥´«¸ åŠëÁÌ®´ «·¦ÈæÁİ¬·Ğ²´ «ÈÜ«·Ü¥³. «·‘·ã¡¸ ¥³İªÈÌ«È «¹¡È åŠùÂ«ÈÜåÆÌ¬È ¡È«·É²³¬È è»Û²´Ü¥³. ¨³¬È¨³ÉëŒçˆ ¡È«·É²³äˆ «ÈÜ¥·Ì ¡·ÛëÆÌ íÁÉ¬¸«¸ª· «ÈÜ«·Ü¥·Ì ò¼İ¦³ÌùÇ ª¸ÉêŒ—ÁÌ«È«¹Ü¥³. \n ¡³Ù¬³¡È éÁĞ«È ÿ¼Ğÿ¼Ğ °³åÆÌ¡·Û¨³Ì ¡³á«³Ü¥³. éÁĞ«È«µ! éÁĞ«È«µ! ¥³İªÈÌëÆÌ äˆï»İêŒ¦·ëÁØ«¸ ª´İ¡³Éìˆ®³ ²³Ğ êŠ «·Ú«·Ü¥³. " ¨·ØûÂúÂ åŠ¡³ì»Ø." \n °´«µİ«È ¥³İªÈÌùÇ «³â«¸ «ÈÜåÆÌ¡·Û¨³¢µİ ¢·èŠ¢³ äˆï»İêŒ¦·Ùäˆ –Œ¡·ùÂÜ¥³. ¥³İªÈÌëÆÌ äŒ¡·ÛëÆĞ «ÈÜåÆÌ ²ÈØ·Û ¨ÈĞ«·¢´¦¹ ²´Ü¥³. \n ¬³ØªÈ ‡Š, ¥³İªÈÌëÆÌ ®ÈØ¥´«¸ ¬È®ÈÌ ª³İ°´çˆ «ÈÜ«·Üäˆ, ®ÈØ¥´«¸åÆÌ «³Ğ«È ²³¢³ ©³Ğ¡¹Ìô¿«·Ü¥³.;;;;;;;;;;;;;;x
+dwseom501A;"¢·åÆÌ ¢´ «³«ÈäŠ¢³, ¢´¡³ ¢·çÆĞ æ»Ğ÷¼ìÁĞ¡¸." ‘³–ÆÛ²³Ì «³Ğ«¸¡¸ ê»Éª³É«ÈÌ¥³.;;;;;;;;;;;;;;x
+dwseom700;Before you sits a dragon, old and wise. He has come to collect your egg and take it deep into the Elder Forest so it may hatch and grow among its own kind.\n The drake states that ultimately it is your choice, but it would be best for him to take the egg. He states that any dragon raised on this side would lack the might and prowess of its kin from the Forest. No more than an intelligent beast he states. Strong compared to beasts of this world but quiet lacking to what it could be.\n A Dragon of the forest however would have the greatest mind, mighty wings in which to fly the in the skies of the world and strength to shatter even the tallest mountains. Something it would shorely lack here.;;;;;;;;;;;;;;x
+dwseom700A;Give him the egg and allow your child to grow up in the forest.;;;;;;;;;;;;;;x
+dwseom700B;Keep the egg, you are its mother. Your child will grow up here with you.;;;;;;;;;;;;;;x 
+dwseom800;¥³İªÈÌùÇ ê»Ì«¸ å»ã«ÈÌ «³ĞëÆĞ éˆ¨¹Ì «·‘·Ì ì»İç‹ùÇ ª´İèÁĞ«È ¢³ë»Ğ¬È äÁİäÆØ²³¡È ªÈ¬³É²´Ü¥³. ¢·åÆÌ ®³É²³¢È? ¬³Ì«ÈÌ²³¢È? ¡³İ²³¢È? –»Éæ»É²³¢È? «³¢È¨¹Ì æÁĞ¥³¢È? \n ª¸ª³İ«È ò¼«¹Ì ©³Ï«³æÆĞ«ÈĞ³? ¢·åÆÌ ª¸ª³İ«¸ ¢³ë»Ğ ìÁÌ©È¡³ ô¿«·Ü¢È? ¬ÈĞèÁÌ«¸ ¬ÈĞèÁÌëÆĞ ²³¨¹ ¥³İªÈÌëÆÌ ¨³ëÆØëÆĞ ¡¸ê»É²´ª· ¬·Ì¥³Ğ²´Ü¥³. ¥³İªÈÌùÇ ¬ÈĞèÁÌæÆĞ«È ²³¢³“ÈÉ “³ã«È¨¹Ìª· «³Ğ«È ëÁØ¬ÈÉ«¹Ü¥³. \n «³Ğ«È éŠÿ¼²³Ğ‘´«ÈÌ¡³? äŒæÆĞ«¸¡¸ ²³åÆĞëÆĞ ¢³åŒ ëÀİëÆĞ éˆ«¹ìÁĞ‘´«ÈÌ¡³?;;;;;;;;;;;;;;x
+dwseom800A;¬ÈäÆØ«È ©³çˆ äŒ‘´«È¥³.;;;;;;;;;;;;;;x
+dwseom800B;ª¸ª³İëÆÌ «³¬ÈÉ ìÁÌ©Èô¿¬È è»Û²´Ü«·.;;;;;;;;;;;;;;x
+dwseom801;Seasons have passed since you decided to bring your little one into the world. You placed your egg carefully in the fireplace months ago and the maids have tended it around the clock. Not once have the flames gone out. But still the egg has not moved. You wish to see your child's shining eyes but know you must wait.\n A shout Echos the hall, a maid rushes up to you. She tells you how the egg has begun to rock and crack.\n A moment is all it takes for the words to register in your mind, before you rush off to your bedroom and look into the fireplace. Indeed the egg is rocking and shows a few cracks.\n A moment passes before a scaley head pokes out of the shell and looks at you in wonder.\n You pick up the young drake as you climbs from the fireplace.;;;;;;;;;;;;;;x
+dwseom801A;"It has been so long, you were well worth the wait little one.";;;;;;;;;;;;;;x
+dwse_dragons_on;Dragons On;;;;;;;;;;;;;;x
+dwse_dragons_off;Dragons Off;;;;;;;;;;;;;;x
+dwse_dragons_localisation_disabled_desc;Dragons only exist in the empire and will not spread through the regular known world.;;;;;;;;;;;;;;x
+dwse_dragons_localisation_enabled_desc;Events are in place that may cause dragons to spread in your game;;;;;;;;;;;;;;x
+dwse_dragons_localisation_enabled_label;Dragons On;;;;;;;;;;;;;;x
+dwse_dragons_localisation_disabled_label;Dragons Off;;;;;;;;;;;;;;x
+dwse_dragons_localisation_label;§RDWSE§! Dragon Controls;;;;;;;;;;;;;;x
+dwse_crown_expansion;ù¼İùÄ ÿ¼É¬³İ;;;;;;;;;;;;;;x
+dwse_crown_expansion_desc;«¹İ«¹ÉùÇ ÿ¼É¬³İëÆĞ é»İ¡·Ì òÄì»ÉæÆĞ«È ²³Ğ êŠ «ÈÜ¡¸ ²³Ğ¬È ¨³Ğ¬ÈçÆĞ ¡¹Ğ¬·İ²³Ù¢È¥³.;;;;;;;;;;;;;;x
+dwse_crown_expansion_0_desc;¡³ªÈÌæÆĞëÆÌ ¬·Ì¬´İëÆĞ ï»İ²´ «¹İ«¹ÉëÆĞ ÿ¼É¬³İ²³Ğ êŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;;x
+dwse_crown_expansion_0;¡³ªÈÌ;;;;;;;;;;;;;;x
+dwse_crown_expansion_1_desc;ëˆ¬ÈÉ ù¼İ¨³Ì«È ¬·Ì¬´İëÆĞ ª·Ìğˆ²³äˆ «¹İ«¹ÉëÆĞ ÿ¼É¬³İ²³Ğ òÂÌ¦È¡³ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;;x
+dwse_crown_expansion_1;ù¼İ;;;;;;;;;;;;;;x
+awaken_beast;Transmogrify Animal;;;;;;;;;;;;;;x
+awaken_beast_desc;Permanently turn someone into an animal.;;;;;;;;;;;;;;x
+dwse_dragon_roost;Dragon Roost;;;;;;;;;;;;;;x
+dwse_dragon_roost_desc;A resting place for dragons. Allows for trade with the Forest. Only buildable in open areas.;;;;;;;;;;;;;;x 
+dwse_gifts_desc;If the [offmap_dwse.GetName] is amenable to foreign relations, and you have not yet intruded upon the busy Chinese court with your gifts in the past year, you can send an envoy to provide the Emperor with a token of your subservience.;;;;;;;;;;;;;;x 
+dwseom_boons_desc;If the §Y[offmap_dwse.GetName]§! is amenable to foreign relations, and you have not yet had your appeals heard in the past year, you can send an envoy to request any one of a variety of blessings the Emperor might deem you worthy of.;;;;;;;;;;;;;;x
+dwse_sell_prisoner;ú¿êŠ ±³Ğ¡È;;;;;;;;;;;;;;x
+dwse_sell_prisoner_desc;ú¿êŠçÆĞ ±³Ì¥³. ñÁÌ¦¹Ì©³Ï¬È «³ÎëÆÌ ú¿êŠ«È¡È ‘´èÁÌ«¸ åˆ«ºéˆ¥³ ¬·ÉëÆÌ ¡³Ú«¸ ±³Ğ¦ÈÌ¥³.;;;;;;;;;;;;;;x
+dragon_ambassador;Dragon Ambassador;;;;;;;;;;;;;;x
+dragon_ambassador_desc;This diplomat has been sent to the Forest Empire to try and gain favor for you.;;;;;;;;;;;;;;x
+dwseom_dragon_ambassador;The Ambassador;;;;;;;;;;;;;;x
+dwseom3000;You have choosen one of your daughters to act in your stead. They will travel to the Forest Empire to gain Favor with the Emporer. \n\nThis is a dangerous task that you have sent them on. Many who venture to the Elder Forest do not return.;;;;;;;;;;;;;;x
+dwseom3000A;I pray for their safe return.;;;;;;;;;;;;;;x
+dwseom_dragon_ambassador_return; The Amabassador Returns;;;;;;;;;;;;;;x
+dwseom3001;], Your ambassador [event_target:dragon_ambassador.GetFirstName], has returned from the Forest Empire.\n\n She greets you with a smile, claiming her trip to The Forest has gone well.;;;;;;;;;;;;;;x
+dwseom3001A; Welcome home [event_target:dragon_ambassador.GetFirstName].;;;;;;;;;;;;;;x
+dwseom_dragon_ambassador_egg;The gift of Family;;;;;;;;;;;;;;x
+dwseom3002; Your Daughter, [event_target:dragon_ambassador.GetFirstName], leads you to her room. In the center of her bed, wrapped amoung the blankets, is a rather large egg.\n\n"This is my child." She claims as she rubs the egg. The emperor would only allow me to bring one of them home.\n\n She frowns, "Would like you to raise him?" she asks, looking at you with pleading eyes, "Would you raise my child?";;;;;;;;;;;;;;x
+dwseom3002A;It would be an Honor.;;;;;;;;;;;;;;x 
+dwseom_dragon_ambassador_stay;Broodmother;;;;;;;;;;;;;;x
+dwseom3003;Your Daughter [event_target:dragon_ambassador.GetFirstName] has decided to stay in the Forest Empire and become a Broodmother for the next generation of Dragons.\n\nShe has forgotten her home and now only thirst for the company of dragons and pleasure of laying their eggs.;;;;;;;;;;;;;;x
+dwseom3003A;THAT HARLOT!;;;;;;;;;;;;;;x
+dwse_send_ambassador;ª³¬·ĞëÆĞ ±³¡¹Ì²³Ì¥³;;;;;;;;;;;;;;x
+dwse_send_ambassador_desc; ¥³İªÈÌùÇ ‘³ĞæÆĞ ìÁİ ²³Ì¨¹İëÆĞ ¬¸äÁÉùÇ ¥´ª³çˆ ±³¡¹Ì²³Ù¢È¥³. \n§YæŒ¦´ä»ÌæÆĞëÆÌ äŒ¢¹çÆĞ ë‹¦ÈÌ²³Ğ ¡³åÆİª·İ«È ¨´ëŠ å»âêÆÙ¢È¥³.§!\n§R¨³ÎëÆÌ ì»İì»ÉæÆĞ«È ¡³íÁÉåˆ«ºçˆ ª·Ì°´Éô¿«·ù¼ÜêÆÙ¢È¥³.§!;;;;;;;;;;;;;;x
+dwseom4002T;Dragon Egg Dies;;;;;;;;;;;;;;x
+dwseom4002;¬·É¬·Ğ²³Ì ©´«µİëÆĞ ²³¬È «³Î¡¸ô¿«· ¥³İªÈÌ«È ¡³¬Èäˆ «ÈÜ¥·Ì æŒ¦´ä»Ì «³Ğ«È ìÁÉ«·©·¦¹ÜêÆÙ¢È¥³. ëÀİùÇ ¬¸äÁÉëÆÌ «È¡·Û«¸ ¥´²´ ì»ã¬È «³Î¡¸ ª´İ¡³É²³Ğ¡·Ù¢È¥³.;;;;;;;;;;;;;;x
+dwseom4002TT;ëˆ «È¦·Ì, ëˆèÆĞ¦¸Û«È ô¿«·©·¦¹ÜåÆÌ¡·Ğ?;;;;;;;;;;;;;;x

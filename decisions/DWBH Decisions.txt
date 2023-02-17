@@ -1,0 +1,679 @@
+decisions = {
+	introduce_pagan_lilith = {
+		
+		is_high_prio = yes
+	
+		potential = {
+			ai = no
+			has_religion_feature = religion_lilithian
+			NOT = { has_global_flag = lilith_is_goddess }
+			OR = {
+				has_lilith_start = yes	
+				trait = lilith
+				trait = incubus
+				trait = alu_fiend
+				trait = cambion
+			     }
+		}
+		allow = {
+			piety = 1000		
+			}
+		effect = {
+		#add_god_name = GOD_LILITH 
+		#add_god_name = GOD_THE_MOTHER_GODDESS
+		#commented this out until Paradox fixes the bug where adding new god names breaks the others on save
+		set_high_god_name = GOD_LILITH
+		set_global_flag = lilith_is_goddess
+	        narrative_event = { id = DWBH.400 }
+		}
+
+
+
+}
+	create_lilitu_papacy = {
+		only_playable = yes
+		
+		is_high_prio = yes
+	
+		potential = {
+			is_playable = yes
+			religion = lilitu
+			NOT = { is_title_active = d_lilitu }
+			has_dlc = "Sons of Abraham"
+		}
+		
+		allow = {
+			piety = 1000
+			OR = {
+				owns = 333 # Rome
+				any_realm_lord = {
+					owns = 333
+				}
+			}
+		}
+		
+		effect = {
+			activate_title = { title = d_lilitu status = yes }
+			hidden_tooltip = {
+				create_character = {
+ 					name = "Astarte"
+ 					random_traits = no
+ 					dynasty = none
+ 					female = yes
+ 					religion = lilitu
+ 					culture = ROOT
+ 					age = 30
+ 					attributes = {
+ 					martial = 6
+ 					diplomacy = 12
+ 					stewardship = 10
+ 					intrigue = 12
+ 					learning = 15
+ 					}
+ 					health = 6
+ 					fertility = 0.8
+ 					trait = lilith
+ 					trait = fair
+ 					trait = big_tits
+ 					trait = bombshell
+ 					trait = seductress
+ 					trait = lustful
+ 					trait = zealous
+ 					trait = hedonist					
+ 					trait = mastermind_theologian
+ 										
+ 				}
+
+				new_character = {
+					d_lilitu = {
+						grant_title = PREV
+					}
+					wealth = 500
+					
+					opinion = {
+						who = ROOT
+						modifier = opinion_creator_of_rel_heal
+					}
+				}
+				d_lilitu = { add_law = enatic_succession }
+				religion_authority = {
+					modifier = papacy_instituted
+					years = 20
+				}
+			}
+			piety = 1000
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	
+	create_orthlili_patriarchy = {
+		only_playable = yes
+		
+		is_high_prio = yes
+	
+		potential = {
+			is_playable = yes
+			religion = orthlili
+			NOT = { is_title_active = d_orthlili }
+			has_dlc = "Sons of Abraham"
+		}
+		
+		allow = {
+			piety = 1000
+			OR = {
+				owns = 496 # Constantinople
+				any_realm_lord = {
+					owns = 496
+				}
+			}
+		}
+		
+		effect = {
+			activate_title = { title = d_orthlili status = yes }
+			hidden_tooltip = {
+				create_character = {
+ 					name = "Sophitia"
+ 					random_traits = no
+ 					dynasty = none
+ 					female = yes
+ 					religion = orthlili
+ 					culture = ROOT
+ 					age = 30
+ 					attributes = {
+ 					martial = 6
+ 					diplomacy = 12
+ 					stewardship = 10
+ 					intrigue = 12
+ 					learning = 15
+ 					}
+ 					health = 6
+ 					fertility = 0.8
+ 					trait = lilith
+ 					trait = fair
+ 					trait = big_tits
+ 					trait = bombshell
+ 					trait = seductress
+ 					trait = lustful
+ 					trait = zealous
+ 					trait = hedonist					
+ 					trait = mastermind_theologian
+ 										
+ 				}
+
+				new_character = {
+					d_orthlili = {
+						grant_title = PREV
+					}
+					wealth = 500
+					
+					opinion = {
+						who = ROOT
+						modifier = opinion_creator_of_rel_heal
+					}
+				}
+				d_orthlili = { add_law = enatic_succession }
+				religion_authority = {
+					modifier = patriarchy_instituted
+					years = 20
+				}
+			}
+			piety = 1000
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+
+dwbh_birth_divine_heir = {
+		
+
+		potential = {
+			ai = no
+			NOT = { trait = tentacle }
+			trait = angel
+			has_heaven_hell_content = yes
+			is_pregnant = no
+			is_female = yes
+			NOT = { practical_age = 50 }
+			NOR = {
+				trait = pregnant
+				trait = pregnancy_finishing
+				trait = hard_pregnancy
+				trait = troubled_pregnancy
+				trait = incapable
+			}
+		}
+		allow = {
+			piety = 500
+			NOR = { #need to be free of deadly sins
+				trait = cynical # need to believe for this to work
+				trait = proud
+				trait = slothful
+				trait = wroth
+				trait = lustful
+				trait = envious
+				trait = greedy
+				trait = gluttonous
+				trait = lovers_pox #since we see this as a divine punishment for sleeping around
+				
+				}
+				NOT = { has_character_flag = dwbhangel_blessing_request }
+				NOT = { has_character_flag = dwbhangel_atonement_made }			
+			}
+		effect = {
+			piety = -500
+	        narrative_event = { id = DWBHAngel.40 }
+		}
+
+
+
+	}
+
+}
+
+
+targetted_decisions = {
+
+	# Lilislamic ruler tries to convince a dynasty member to lose the 'Decadent' Trait
+	convince_to_loosen_up = {
+		only_playable = yes
+		filter = dynasty
+		ai_target_filter = dynasty
+	
+		hide_in_decisions_list = yes # This decision is shown in the Religion View for each decadent character
+		
+		from_potential = {
+			is_playable = yes
+			religion = lilislam
+			father_even_if_dead = {
+				OR = {
+					is_alive = no
+					is_playable = no
+				}
+			}
+		}
+		
+		potential = {
+			prisoner = no
+			trait = decadent
+			has_regent = no
+			lower_tier_than = FROM
+		}
+		
+		allow = {
+			FROM = {
+				piety = 100
+				prisoner = no
+				NOT = { trait = decadent }
+			}
+			custom_tooltip = {
+				text = "NOT_ALREADY_NEGOTIATED"
+				NOT = { has_character_flag = negotiated_to_drop_decadence }
+			}
+		}
+		effect = {
+			set_character_flag = negotiated_to_drop_decadence
+			character_event = {
+				id = DWBH.91350
+			}
+			
+			FROM = { piety = -100 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_dynasty_member = {
+					ai = no
+					higher_tier_than = ROOT
+					same_realm = ROOT
+				}
+			}
+		}
+	}
+	
+	dwbh_angel_minor_heal = {
+		filter = court_including_me
+		ai_target_filter = court_including_me
+		ai_check_interval = 36
+		from_potential = {
+			NOT = { trait = tentacle }
+			trait = angel
+			is_adult = yes
+			has_heaven_hell_content = yes
+		}
+		potential = {		
+			OR = {
+				trait = wounded
+				trait = ill
+				trait = flu
+				trait = dysentery
+				trait = gout
+				trait = cough
+				trait = fever
+				trait = diarrhea
+				trait = vomiting
+				trait = chest_pain
+				trait = cramps
+				trait = rash
+				trait = headache
+				trait = abdominal_pain
+				trait = fatigue
+				trait = malaise
+				trait = infection
+				trait = scarred
+			}
+		}
+		allow = {
+				piety = 25
+		}
+		effect = {
+
+			narrative_event = {	id = DWBHAngel.200 } #Self target
+		}
+		ai_will_do = {
+			factor = 1 # 100%
+			modifier = {
+				factor = 0
+				OR = {				
+					AND = {
+						NOT = {
+							trait = immortal # Immortals don't care about age
+						}
+						practical_age = 100 # If they've lived long enough in the mortal realm, they're opting to not heal themselves - since being incapable will then lead to them also removing their immortality
+					}
+					NOT = { ai_ambition = -40 } # If they're content with what they've done and have no motivation to heal ( ai_ambition less than -40 )
+				}
+			}
+		}		
+	}	
+	dwbh_angel_moderate_heal = {
+		filter = court_including_me
+		ai_target_filter = court_including_me
+		ai_check_interval = 36
+		from_potential = {
+			NOT = { trait = tentacle }
+			trait = angel
+			is_adult = yes
+			has_heaven_hell_content = yes
+		}
+		potential = {
+			OR = {
+				trait = maimed
+				trait = pneumonic
+				trait = syphilitic
+				trait = has_tuberculosis
+				trait = has_typhoid_fever
+				trait = has_typhus
+				trait = has_measles
+				trait = food_poisoning
+				trait = scurvy
+				trait = disfigured
+				trait = mangled
+				trait = severely_injured
+				trait = clubfooted
+				trait = harelip
+				trait = hunchback
+				trait = lisp
+				}
+			}
+		allow = {
+			piety = 75
+
+		}
+		effect = {
+			narrative_event = {	id = DWBHAngel.210 } #Self target
+		}
+		ai_will_do = {
+			factor = 1 # 100%
+			modifier = {
+				factor = 0
+				OR = {				
+					age = 100 # If they've lived long enough in the mortal realm, they're opting to not heal themselves
+					NOT = { ai_ambition = -40 } # If they're content with what they've done and have no motivation to heal ( ai_ambition less than -40 )
+				}
+			}
+		}		
+	}	
+	
+	dwbh_angel_major_heal = {
+		filter = court_including_me
+		ai_target_filter = court_including_me
+		ai_check_interval = 36
+		from_potential = {
+			NOT = { trait = tentacle }
+			trait = angel
+			is_adult = yes
+			has_heaven_hell_content = yes
+		}
+		potential = {
+			OR = {
+				trait = leper
+				trait = has_bubonic_plague
+				trait = has_small_pox
+				trait = has_aztec_disease
+				trait = rabies
+				trait = cancer
+				trait = dancing_plague
+				trait = infirm
+				trait = incapable
+				trait = one_eyed
+				trait = one_handed
+				trait = one_legged
+				trait = possessed
+				trait = sexcrazed
+			}
+		}
+		allow = {
+			piety = 150
+		}
+		effect = {
+			narrative_event = {	id = DWBHAngel.120 } #Self target
+		}
+		ai_will_do = {
+			factor = 1 # 100%
+			modifier = {
+				factor = 0
+				OR = {				
+					age = 100 # If they've lived long enough in the mortal realm, they're opting to not heal themselves - since being incapable will then lead to them also removing their immortality
+					NOT = { ai_ambition = -40 } # If they're content with what they've done and have no motivation to heal ( ai_ambition less than -40 )
+				}
+			}
+		}		
+	}
+	dwbhangel_smite_wicked = {
+		filter = all
+		ai_target_filter = realm
+		from_potential = {
+			has_heaven_hell_content = yes
+			trait = angel
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = tentacle }
+			NOT = { trait = incapable }			
+		}
+		potential = {
+			OR = {
+				FROM = { ai = no }
+				AND = {
+					is_foe = FROM			
+					trait = zealous
+					}
+			}
+			is_within_diplo_range = FROM
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }				
+		}
+		allow = {
+			FROM = { piety = 125 }
+			OR = {
+				trait = rapist
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud								
+				trait = seducer
+				trait = seductress
+				trait = impaler
+				trait = cruel
+				trait = deceitful
+				trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = tribal_kinslayer
+				trait = cannibal_trait
+				NOT = { piety = -500 }
+				trait = lilith
+				trait = incubus			
+				trait = tentacle
+			}
+			
+			
+		}
+		effect = {
+			FROM = { 
+				narrative_event = { id = DWBHAngel.130 }
+			}
+		}
+		ai_will_do = {
+			factor = 0.1 # will only target if zealous and is_foe
+			modifier = {
+				factor = 0
+				OR = {
+					is_lover = FROM # We don't hurt the ones we love, at least not this way
+					is_friend = FROM # Friends don't Smite Friends
+					FROM = { personal_opinion = { who = ROOT value = 1}} # If the ai has a positive opinion of the target, they'll opt not to target them					
+				}
+			}
+		}		
+	}	
+	
+    dwbhangel_inspire = {
+		filter = self
+		ai_target_filter = self
+        potential = {
+			is_adult = yes
+            trait = angel
+ 			NOT = { trait = tentacle }
+       }
+
+        allow = {
+            in_command = yes
+			piety = 50
+			NOT = { 
+				trait = incapable 
+			}
+				NOT = { has_character_flag = dwbhangel_inspired_troops }
+        }
+        effect = {
+            set_character_flag = dwbhangel_inspired_troops
+            character_event = { id = DWBHAngel.91 days = 180 } # clear flag
+            narrative_event = { id = DWBHAngel.90 }
+			piety = -50
+        }
+        ai_will_do = {
+            factor = 0.02  # Not very often by default
+
+	    modifier = {
+				factor = 2
+				trait = zealous
+		}           
+	    modifier = {
+                factor = 2				
+				trait = inspiring_leader
+            }
+ 
+        }
+    }	
+
+    dwbhangel_blessing = {
+		filter = self
+		ai_target_filter = self
+        potential = {
+			is_adult = yes
+            trait = angel
+ 			NOT = { trait = tentacle }
+			NOR = { 
+				trait = incapable 
+				trait = excommunicated
+				trait = cynical # need to believe for this to work
+				trait = proud
+				trait = slothful
+				trait = wroth
+				trait = lustful
+				trait = envious
+				trait = greedy
+				trait = gluttonous
+				trait = lovers_pox #since we see this as a divine punishment for sleeping around
+				
+			}
+
+
+			
+			
+       }
+
+        allow = {
+ 
+			OR = {
+				AND = { 
+					NOT = { trait = bombshell }
+					is_female = yes 
+					}
+				AND = {
+					is_female = no
+					trait = feminine
+					NOT = { trait = bombshell }
+					
+					}
+				
+				NAND = { #if they already have all the bonuses, no need for this			
+					trait = genius
+					trait = strong
+					trait = fair	
+					}
+				NOR = {
+						trait = grey_eminence
+						trait = brilliant_strategist
+						trait = midas_touched
+						trait = elusive_shadow
+						trait = mastermind_theologian
+					}
+				
+			}
+				piety = 100
+				NOT = { has_character_flag = dwbhangel_blessing_request }
+				NOT = { has_character_flag = dwbhangel_atonement_made }
+        }
+        effect = {
+            character_event = { id = DWBHAngel.10 }
+            set_character_flag = dwbhangel_blessing_request
+            character_event = { id = DWBHAngel.11 days = 180 } # clear flag
+        }
+        ai_will_do = {
+            factor = 0.02  # Not very often by default
+
+
+        }
+    }
+    dwbhangel_atonement = {
+		filter = self
+		ai_target_filter = self
+        potential = {
+			is_adult = yes
+            trait = angel
+ 			NOT = { trait = tentacle }
+			OR = { #need something to atone for
+				trait = proud
+				trait = slothful
+				trait = wroth
+				trait = lustful
+				trait = envious
+				trait = greedy
+				trait = gluttonous
+				trait = lovers_pox #since we see this as a divine punishment for sleeping around
+			}	
+       }
+
+        allow = {
+ 			piety = 200
+			NOR = { 
+				trait = incapable 
+				trait = excommunicated
+				trait = cynical # need to believe for this to work
+			}
+				NOT = { has_character_flag = dwbhangel_atonement_made }
+        }
+        effect = {
+            set_character_flag = dwbhangel_atonement_made
+            character_event = { id = DWBHAngel.21 days = 180 } # clear flag
+            character_event = { id = DWBHAngel.20 }
+        }
+        ai_will_do = {
+            factor = 0.02  # Not very often by default
+			modifier = {
+				factor = 0.5
+				trait = stubborn
+			}
+
+        }
+    }	
+}

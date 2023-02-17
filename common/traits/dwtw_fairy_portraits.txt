@@ -1,0 +1,832 @@
+dwtw_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait5 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait6 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait7 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait8 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait9 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait10 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait15 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait16 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait21 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait22 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait23 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait24
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait24 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait25
+		dwtw_portrait26
+	}
+}
+dwtw_portrait25 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait26
+	}
+}
+dwtw_portrait26 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposites = {
+		dwtw_portrait1
+		dwtw_portrait2
+		dwtw_portrait3
+		dwtw_portrait4
+		dwtw_portrait5
+		dwtw_portrait6
+		dwtw_portrait7
+		dwtw_portrait8
+		dwtw_portrait9
+		dwtw_portrait10
+		dwtw_portrait11
+		dwtw_portrait12
+		dwtw_portrait13
+		dwtw_portrait14
+		dwtw_portrait15
+		dwtw_portrait16
+		dwtw_portrait17
+		dwtw_portrait18
+		dwtw_portrait19
+		dwtw_portrait20
+		dwtw_portrait21
+		dwtw_portrait22
+		dwtw_portrait23
+		dwtw_portrait24
+		dwtw_portrait25
+	}
+}

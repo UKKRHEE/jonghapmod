@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = "wizard_fireball"
+		texturefile = "gfx/event_pictures/wizard_fireball.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_dwtw_wizards_buy_spellbook"
+		texturefile = "gfx/interface/decision_icon_write_a_book.dds"
+	}
+	spriteType = {
+		name = "GFX_dwtw_wizards_acquire_ingredients_decision"
+		texturefile = "gfx/interface/decision_icon_aquire_ingredients.dds"
+	}
+	
+}

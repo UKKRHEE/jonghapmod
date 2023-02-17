@@ -1,0 +1,501 @@
+####지구의 신,이민희의 아랍쪽 후손####
+
+120000 = {
+	name="mahomet-Ali" #무함마드의 아들(서자)
+	dynasty=7296
+	religion=shiite
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	add_trait=bastard
+	add_trait=sayyid
+	father=33922
+	602.1.3={
+		birth=yes
+	}
+	679.1.19={
+		death=yes
+	}
+}
+
+120001 = {
+	name="Muhammad Al-Shia"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120000
+	mother=120002
+	643.1.3={
+		birth=yes
+	}
+	703.1.19={
+		death=yes
+	}
+}
+
+120002 = {
+	name="Matilda de boltina"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=33922
+	female=yes
+	626.1.3={
+		birth=yes
+	}
+	679.1.20={
+		death=yes
+	}
+}
+
+120003 = {
+	name="Muhammad Ivan Abdul"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120001
+	672.1.3={
+		birth=yes
+	}
+	734.1.20={
+		death=yes
+	}
+}
+
+120004 = {
+	name=Muhammadino
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120003
+	703.1.3={
+		birth=yes
+	}
+	784.1.20={
+		death=yes
+	}
+}
+
+120005 = {
+	name=Ventanio
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120004
+	732.1.3={
+		birth=yes
+	}
+	800.1.20={
+		death=yes
+	}
+}
+
+120006 = {
+	name="Abdula ibn Al-Kamil"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120005
+	782.1.3={
+		birth=yes
+	}
+	835.1.20={
+		death=yes
+	}
+}
+
+120007 = {
+	name="Al-Kamil sonot"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120006
+	805.1.3={
+		birth=yes
+	}
+	879.1.20={
+		death=yes
+	}
+}
+
+120008 = {
+	name="Ckolo-sonot"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120007
+	839.1.3={
+		birth=yes
+	}
+	862.1.20={
+		death=yes
+	}
+}
+
+
+120009 = {
+	name="Mahomey"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120008
+	861.1.3={
+		birth=yes
+	}
+	910.1.20={
+		death=yes
+	}
+}
+
+
+120010 = {
+	name="Mahomey Abbula ibn Harl"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120009
+	883.1.3={
+		birth=yes
+	}
+	938.1.20={
+		death=yes
+	}
+}
+
+120011 = {
+	name="Deni"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120010
+	902.1.3={
+		birth=yes
+	}
+	968.1.20={
+		death=yes
+	}
+}
+
+120012 = {
+	name="Hoenikal"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120011
+	952.1.3={
+		birth=yes
+	}
+	1017.1.20={
+		death=yes
+	}
+}
+
+120013 = {
+	name="Lothringen"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120012
+	987.1.3={
+		birth=yes
+	}
+	1053.1.20={
+		death=yes
+	}
+}
+
+120014 = {
+	name="Anthenous"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120013
+	1021.1.3={
+		birth=yes
+	}
+	1078.1.20={
+		death=yes
+	}
+}
+
+120015 = {
+	name="Charlo"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120014
+	1042.1.3={
+		birth=yes
+	}
+	1111.1.20={
+		death=yes
+	}
+}
+
+120016 = {
+	name="Othono"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120015
+	1098.1.3={
+		birth=yes
+	}
+	1154.1.20={
+		death=yes
+	}
+}
+
+120017 = {
+	name="Anthoe"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120016
+	1121.1.3={
+		birth=yes
+	}
+	1179.1.20={
+		death=yes
+	}
+}
+
+120018 = {
+	name="Muhammaf"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120017
+	1163.1.3={
+		birth=yes
+	}
+	1214.1.20={
+		death=yes
+	}
+}
+
+120019 = {
+	name="Memorioys"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120018
+	1194.1.3={
+		birth=yes
+	}
+	1264.1.20={
+		death=yes
+	}
+}
+
+120020 = {
+	name="Ottoman"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	add_trait=sayyid
+	stewardship = 1
+	father=120019
+	1244.1.3={
+		birth=yes
+	}
+	1310.1.20={
+		death=yes
+	}
+}
+
+120021 = {
+	name="Al-Aikhu Shiadn"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=sayyid
+	father=120020
+	1287.1.3={
+		birth=yes
+	}
+	1370.1.20={
+		death=yes
+	}
+}
+
+120022 = {
+	name="Shiadni-ibn Al-Ottoman"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=immortal
+	father=120021
+	1335.1.3={
+		birth=yes
+	}
+	1399.1.20={
+		death=yes
+	}
+}
+
+120023 = {
+	name="Muhammad Al-Ali Atomehu"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=immortal
+	add_trait=sayyid
+	father=120021
+	1359.1.3={
+		birth=yes
+	}
+}
+
+120024 = {
+	name="Muhuras"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=immortal
+	add_trait=sayyid
+	father=120021
+	1332.1.3={
+		birth=yes
+	}
+}
+120025 = {
+	name="Al-kamil"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=immortal
+	add_trait=sayyid
+	father=120021
+	1330.1.3={
+		birth=yes
+	}
+}
+
+120026 = {
+	name="Al-Rasid"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=immortal
+	add_trait=sayyid
+	father=120021
+	1330.1.3={
+		birth=yes
+	}
+}
+
+120027 = {
+	name="Al-Harun de Rsanu"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 1
+	stewardship = 1
+	add_trait=immortal
+	add_trait=sayyid
+	father=120021
+	1330.1.3={
+		birth=yes
+	}
+}
+
+120028 = {
+	name="Al-Harun ibn Harule de Muhammad"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 4
+	stewardship = 5
+	add_trait=immortal
+	add_trait=sayyid
+	father=120027
+	1340.1.3={
+		birth=yes
+	}
+}
+
+120029 = {
+	name="Al-Kapil ibn Shian"
+	dynasty=7296
+	religion=shiite
+	culture=bedouin_arabic
+	diplomacy = 7
+	stewardship = 4
+	add_trait=immortal
+	add_trait=sayyid
+	father=120021
+	1336.1.3={
+		birth=yes
+	}
+}

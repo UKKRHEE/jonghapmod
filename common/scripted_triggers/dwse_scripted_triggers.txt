@@ -1,0 +1,31 @@
+has_dwse_start = {
+	has_game_rule = { name = dw_major_campaign value = dwse_lizard_campaign }
+}
+
+has_dwse_started = { 
+	has_global_flag = dwse_started
+}
+
+has_dwse_player_only_slaving = {
+	has_global_flag = DWTWDWSEDragonPlayerOnly
+}
+
+has_dwse_no_empire = {
+	has_global_flag = DWTWDWSEDragonOff
+}
+
+has_dwse_lizards_yes = {
+	has_global_flag = DWTWDWSELizardOn
+}
+
+has_dwse_dragon_on = {
+	has_global_flag = DWTWDWSEDragonOn
+}
+
+has_dwse_lizards_marriage = {
+	has_global_flag = DWTWDWSELizardMarriage
+}
+
+has_dwse_lizards_off = {
+	has_global_flag = DWTWDWSELizardOff
+}

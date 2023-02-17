@@ -1,0 +1,41 @@
+has_nosferatu_enabled = {
+	has_global_flag = DWTWVampireAttacksOn
+}
+has_fairy_start = {
+	has_game_rule = { name = dw_major_campaign value = dwtw_fairy_campaign }
+}
+
+has_dwtw_fairy_started = { 
+	has_global_flag = dwtw_fairy_started
+}
+
+has_fairy_portrait = {
+	OR = {
+		trait = dwtw_portrait1
+		trait = dwtw_portrait2
+		trait = dwtw_portrait3
+		trait = dwtw_portrait4
+		trait = dwtw_portrait5
+		trait = dwtw_portrait6
+		trait = dwtw_portrait7
+		trait = dwtw_portrait8
+		trait = dwtw_portrait9
+		trait = dwtw_portrait10
+		trait = dwtw_portrait11
+		trait = dwtw_portrait12
+		trait = dwtw_portrait13
+		trait = dwtw_portrait14
+		trait = dwtw_portrait15
+		trait = dwtw_portrait16
+		trait = dwtw_portrait17
+		trait = dwtw_portrait18
+		trait = dwtw_portrait19
+		trait = dwtw_portrait20
+		trait = dwtw_portrait21
+		trait = dwtw_portrait22
+		trait = dwtw_portrait23
+		trait = dwtw_portrait24
+		trait = dwtw_portrait25
+		trait = dwtw_portrait26
+	}
+}

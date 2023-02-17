@@ -1,0 +1,3670 @@
+# DWTRandom Event groupings:
+# 1 - 100: Masturbation
+# 200 - 299: Cock / Breast Milking
+# 300 - 399: Education of young adult courtiers by liege
+## .500 - .599: Forced taking of a prisoner
+## .600 - .699: Bad dog
+
+namespace = DWTRandom
+# Daughter masturbating (daughter)
+narrative_event = {
+	id = DWTRandom.1
+	desc = "DWTRandom1"
+	picture = "GFX_evt_DWRandom_FemaleMasturbation"
+	
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_female = yes		
+		NOT = {
+			trait = chaste
+		}
+		NOT = {
+			trait = celibate
+		}
+	}
+	
+	option = { # The father discovers daughter masturbating
+		name = "DWTRandom1A"
+		trigger = {
+			father = { is_alive = yes }
+		}
+		father = {
+			narrative_event = {
+				id = DWTRandom.15
+				days = 3
+			}
+		}
+	}
+	option = { # The father not alive to discover daughter masturbating
+		name = "DWTRandom1B"
+		trigger = {
+			father = { is_alive = no }
+		}
+	}
+}
+# Father decides what to do with daughter (Father)
+narrative_event = {
+	id = DWTRandom.15
+	desc = "DWTRandom15"
+	picture = "GFX_evt_DWRandom_FemaleMasturbation"
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "DWTRandom15A" #Put an end to this!
+		narrative_event = {
+			id = DWTRandom.2
+		}
+	}
+	
+	option = {
+		name = "DWTRandom15B" #It's only natural discovery
+		trigger = {
+			NOT = { 
+				trait = zealous 
+			}
+		}
+		random = {
+			chance = 10
+			FROM = { add_trait = lustful }
+		}
+		FROM = { change_learning = 1 impregnate = PREV }
+	}
+	
+	option = {
+		name = "DWTRandom15C" #I should teach her
+		trigger = {
+			OR = {
+				trait = incubus
+				trait = lustful
+				trait = hedonist
+				has_focus = focus_seduction
+				religion = zoroastrian
+				religion = messalian
+			}
+		}
+		random = {
+			chance = 100
+			add_trait = lustful
+			FROM = { change_learning = 1 impregnate = PREV }
+		}
+		narrative_event = {
+			id = DWTRandom.3
+			days = 1
+		}
+	}
+}
+#Stop daughter masturbating (father)
+narrative_event = {
+	id = DWTRandom.2
+	desc = "DWTRandom2"
+	picture = "GFX_evt_DWContentKing"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "DWTRandom2A"
+		piety = 50
+	}
+}
+#Educate daughter (father)
+narrative_event = {
+	id = DWTRandom.3
+	desc = "DWTRandom3"
+	picture = "GFX_evt_DWRandom_Fuck1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom3A"
+		random = {
+			chance = 25
+			FROMFROM = { add_trait = lustful }
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = messalian
+					religion = zoroastrian
+				}
+			}
+			piety = 25
+		}
+		
+		# Chance of impregnation
+				
+		if = {
+			limit = {
+				fertility = 0.1
+				FROMFROM = { fertility = 0.1 } #FROMFROM because our daughter is 2 away
+				FROMFROM = { is_female = yes }#daughter
+				is_female = no #father
+				NOT = { age = 50 }
+			}
+			random_list = {
+				75 = {
+					if = { 
+						limit = {
+							is_female = yes 
+							is_married = no
+							is_consort = no
+						}
+						impregnate = FROMFROM #Daughter
+						#ROOT impregnates FROMFROM
+						break = yes
+					}
+					impregnate_cuckoo = FROMFROM
+					#ROOT cuckoo impregnates FROMFROM
+				}
+				25 = { }
+			}
+		}
+	}
+}
+# Son masturbating (Son)
+narrative_event = {
+	id = DWTRandom.4
+	desc = "DWTRandom1"
+	picture = "GFX_evt_DWRandom_MaleMasturbation"
+	
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_female = no		
+		NOT = {
+			trait = chaste
+		}
+		NOT = {
+			trait = celibate
+		}
+	}
+	
+	option = { # The mother discovers son masturbating
+		name = "DWTRandom1C"
+		trigger = {
+			mother = { is_alive = yes }
+		}
+		mother = {
+			narrative_event = {
+				id = DWTRandom.45
+				days = 3
+			}
+		}
+	}
+	option = { # The mother not alive to discover son masturbating
+		name = "DWTRandom1B"
+		trigger = {
+			mother = { is_alive = no }
+		}
+	}
+}
+# Mother catches son masturbating (Mother)
+narrative_event = {
+	id = DWTRandom.45
+	desc = "DWTRandom45"
+	picture = "GFX_evt_DWRandom_MaleMasturbation"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom45A" #Put an end to this!
+		narrative_event = {
+			id = DWTRandom.5
+		}
+	}
+	
+	option = {
+		name = "DWTRandom45B" #It's only natural discovery
+		trigger = {
+			NOT = { 
+				trait = zealous 
+			}
+		}
+		random = {
+			chance = 10
+			FROM = { add_trait = lustful }
+		}
+		FROM = { change_learning = 1 }
+	}
+	
+	option = {
+		name = "DWTRandom45C" #I should teach him
+		trigger = {
+			OR = {
+				trait = lilith
+				trait = lustful
+				trait = hedonist
+				has_focus = focus_seduction
+				religion = zoroastrian
+				religion = messalian
+			}
+		}
+		random = {
+			chance = 50
+			add_trait = lustful
+		}
+		narrative_event = {
+			id = DWTRandom.6
+			days = 1
+		}
+	}
+}
+#Stop son masturbating (Mother)
+narrative_event = {
+	id = DWTRandom.5
+	desc = "DWTRandom5"
+	picture = "GFX_evt_DWContentQueen"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "DWTRandom5A"
+		piety = 50
+	}
+}
+#Educate son (Mother)
+narrative_event = {
+	id = DWTRandom.6
+	desc = "DWTRandom6"
+	picture = "GFX_evt_DWRandom_Fuck2"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom6A"
+		random = {
+			chance = 25
+			FROMFROM = { add_trait = lustful }
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = messalian
+					religion = zoroastrian
+				}
+			}
+			piety = 25
+		}
+		# Chance of impregnation		
+				
+		if = {
+			limit = {
+				fertility = 0.25 #mother
+				FROMFROM = { fertility = 0.25 } #son
+				is_female = yes
+				FROMFROM = { is_female = no }
+				NOT = { age = 45 }
+				is_pregnant = no
+			}
+			if = {
+				limit = {
+					fertility = 0.1
+					FROMFROM = { fertility = 0.1 }
+				}
+				random_list = {
+					75 = {
+						if = { 
+							limit = {
+								is_female = yes 
+								is_married = no
+								is_consort = no
+							}
+							impregnate = FROMFROM
+							#FROMFROM impregnates ROOT
+							break = yes
+						}
+						impregnate_cuckoo = FROMFROM
+						#FROMFROM cuckoo impregnates ROOT
+					}
+					25 = { }
+				}
+				break = yes
+			}
+			
+			random_list = {
+				50 = {
+					if = { 
+						limit = {
+							is_female = yes 
+							is_married = no
+							is_consort = no
+						}
+						impregnate = FROMFROM
+						#FROMFROM impregnates ROOT
+						break = yes
+					}
+					impregnate_cuckoo = FROMFROM
+					#FROMFROM cuckoo impregnates ROOT
+				}
+				50 = { }
+			}
+		}
+	}
+}
+#The Semen-wine trend
+narrative_event = {
+	id = DWTRandom.200
+	desc = "DWTRandom200"
+	picture = "GFX_evt_DWCourt_Steward"
+	
+	ai = no
+	prisoner = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom200A" #No thanks
+	}
+	option = {
+		name = "DWTRandom200B" #Drink and be part of the in crowd
+		add_character_modifier = { name = dw_trendsetter duration = 365 }
+		if = {
+			limit = {
+				is_adult = no
+			}
+			narrative_event = { id = DWTRandom.219 days = 1} #For those who opt to have a child drink semen, they learn a tragic lesson
+		}
+	}
+	option = {
+		name = "DWTRandom200C" #Use this current trend for your own gain
+		narrative_event = {
+			id = DWTRandom.210
+			days = 3
+		}
+	}
+}
+#Let's make some money off of semen-wine
+narrative_event = {
+	id = DWTRandom.210
+	desc = "DWTRandom210"
+	picture = "GFX_evt_DWCourt_Steward"
+	
+	is_triggered_only = yes
+	
+	option = { #I'll milk them personally
+		trigger = {
+			is_female = yes
+			is_adult = yes
+			OR = {
+				trait = lustful
+				trait = hedonist
+				trait = midas_touched
+				trait = lilith
+			}
+		}
+		name = "DWTRandom210A"
+		narrative_event = {
+			id = DWTRandom.211
+			days = 3
+		}
+	}
+	option = { #Leverage the local brothels
+		trigger = {
+			location = {
+				OR = {
+					has_building = dw_brothel
+					has_building = dw_redlight_district
+				}
+			}			
+		}
+		name = "DWTRandom210B"
+		add_character_modifier = { name = dw_trend_opportunist_major duration = 365 }
+	}
+	option = { #I've a decree for the male household staff
+		name = "DWTRandom210C"
+		add_character_modifier = { name = dw_trend_opportunist duration = 365 }
+	}
+}
+#Handling the semen collection as a female ruler Part 1
+narrative_event = {
+	id = DWTRandom.211
+	desc = "DWTRandom211"
+	picture = "GFX_evt_DW_CockMilkMales1"
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "DWTRandom211A"
+		narrative_event = {
+			id = DWTRandom.212
+		}
+	}
+}
+#Handling the semen collection as a female ruler Part 2
+narrative_event = {
+	id = DWTRandom.212
+	desc = "DWTRandom212"
+	picture = "GFX_evt_DW_CockMilkMales2"
+	
+	is_triggered_only = yes
+	
+	option = { 
+		trigger = {
+			NOT = { stewardship = 10 }
+		}
+		name = "DWTRandom212A"
+		add_character_modifier = { name = dw_trend_opportunist duration = 365 }		
+	}
+	option = { 
+		trigger = {
+			stewardship = 10
+		}
+		tooltip_info = stewardship
+		name = "DWTRandom212B"
+		add_character_modifier = { name = dw_trend_opportunist_mogul duration = 365 }	
+	}
+}
+# .219 Child drinks the semen wine, thinking they'd be cool (player)
+narrative_event = {
+	id = DWTRandom.219
+	desc = "DWTRandom219"
+	picture = DWCourt_AssassinPoisonSuccess
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom219A"
+		death = {
+			death_reason = death_murder_unknown
+		}
+	}
+}
+###
+# .300 Education of a young woman (if male liege) of young man (if female liege)
+narrative_event = {
+	id = DWTRandom.300
+	
+	prisoner = no
+	capable_only = yes
+
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		NOT = { trait = futa }
+		is_pregnant = no
+		liege = {
+			ai = no
+			prisoner = no
+			in_command = no
+			is_adult = yes
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					liege = {
+						ai = yes #If the ai somehow triggered this, we simply kill the event
+					}
+					ROOT = { is_liege_of = ROOT } #This will hopefully keep us from training ourselves
+				}
+			}
+			break = yes
+		}
+
+		if = {
+			limit = {
+				liege = {
+					is_female = yes
+				}
+				ROOT = {
+					is_female = no
+				}
+			}
+			liege = {
+				narrative_event = { id = DWTRandom.310 days = 1} #liege is a female, courtier is male
+			}
+			break = yes
+		}
+
+		if = {
+			limit = {
+				liege = {
+					is_female = no
+				}
+				ROOT = {
+					is_female = yes
+				}
+			}
+			liege = {
+				narrative_event = { id = DWTRandom.360 days = 1} #liege is a male, courtier is female
+			}
+			break = yes
+		}
+	}
+}
+
+# .310 Female liege (Player) has the option to further educate a young man in their court
+narrative_event = {
+	id = DWTRandom.310
+	desc = "DWTRandom310FM"
+	picture = "GFX_evt_DWLilith_Lust"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "DWTRandom840a" #Vaginal
+		narrative_event = { id = DWT.841 }
+		ROOT = { 
+			if = {
+				limit = {
+					trait = virgin
+				}
+				remove_trait = virgin 
+			}
+		}
+		FROM = {
+		random = {
+			chance = 5
+			 add_trait = proud
+		}
+		random = {
+			chance = 10
+			 add_trait = lustful 
+		}
+
+			opinion = {
+				who = ROOT
+				modifier = opinion_seduced_lustful_worship
+			}
+			remove_trait = virgin
+		}
+		random = {
+				chance = 25
+				if = {
+					limit = {
+						ROOT = {
+								is_female = yes
+								is_pregnant = no
+								fertility = 0.1
+								NOT = {
+									age = 40
+								}
+							}
+						is_female = no
+					}
+					FROM = { 
+						impregnate = ROOT 
+						opinion = {
+							who = ROOT
+							modifier = opinion_seduced_lustful_worship
+							months  = 60
+						}
+					}
+				}
+			}
+	}
+	option = {
+		name = "DWTRandom840b" #Anal
+		narrative_event = { id = DWT.850 }
+		FROM = {
+		random = {
+			chance = 5
+			add_trait = proud 
+		}
+		random = {
+			chance = 10
+			 add_trait = lustful 
+		}
+		opinion = {
+				who = ROOT
+				modifier = opinion_dominated
+				months  = 60
+			}
+		}
+		
+	}
+	option = {
+		name = "DWTRandom840c" #Oral
+		narrative_event = { id = DWT.860 }
+		FROM = { 
+		random = {
+			chance = 10
+			add_trait = lustful 
+		}
+		random = {
+			chance = 5
+			add_trait = proud 
+		}
+			opinion = {
+				who = ROOT
+				modifier = opinion_seduced_attracted
+				months  = 60
+			}
+		}
+	}	
+	
+	option = { # Let's not
+		name = "DWTRandom310D"
+
+		random = {
+			chance = 10
+			FROM = { 
+				opinion = {
+					who = ROOT
+					modifier = opinion_seduced_yearning
+					months  = 36
+				}
+			}
+		}
+	}
+}
+
+# .311 New Female adult bounce
+narrative_event = {
+	id = DWTRandom.311
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		FROM = { 
+			narrative_event = { 
+				id = DWTRandom.320 days = 1
+				}
+			}
+	}
+}
+# .320 Female liege determines education approach. (Player)
+narrative_event = {
+	id = DWTRandom.320
+	desc = "DWTRandom320"
+	picture = "GFX_evt_DW_EducateFemale1"
+	
+	is_triggered_only = yes
+	
+	option = { # Flirting
+		name = "DWTRandom320A"
+	}
+	option = { # Let's not
+		name = "DWTRandom310B"
+
+	}
+}
+# .360 Male liege (Player) has the option to further educate a young woman in their court 
+narrative_event = {
+	id = DWTRandom.360
+	desc = "DWTRandom360"
+	picture = "GFX_evt_DW_EducateFemale1"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "DWTRandom800a" #Vaginal
+		narrative_event = { id = DWT.801 }
+		ROOT = { 
+			if = {
+				limit = {
+					trait = virgin
+				}
+				remove_trait = virgin 
+			}
+		}
+		FROM = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_seduced_lustful_worship
+			}
+			remove_trait = virgin
+		}
+		random = {
+				chance = 100
+				if = {
+					limit = {
+						FROM = {
+								is_female = yes
+								is_pregnant = no
+								fertility = 0.1
+								NOT = {
+									age = 40
+								}
+							}
+						is_female = no
+					}
+					FROM = { 
+						opinion = {
+							who = ROOT
+							modifier = opinion_seduced_lustful_worship
+							months  = 60
+						}
+						add_trait = lustful
+						impregnate = PREV 
+					}
+				}
+			}
+
+	}
+	option = {
+		name = "DWTRandom800b" #Anal
+		narrative_event = { id = DWT.820 }
+		FROM = {
+		random = {
+			chance = 10
+			FROM = { add_trait = lustful }
+		}
+			opinion = {
+				who = ROOT
+				modifier = opinion_dominated
+				months  = 60
+			}
+		}
+	}
+	option = {
+		name = "DWTRandom800c" #Oral
+		narrative_event = { id = DWT.830 }
+		FROM = { 
+		random = {
+			chance = 10
+			FROM = { add_trait = lustful }
+		}
+			opinion = {
+				who = ROOT
+				modifier = opinion_seduced_attracted
+				months  = 60
+			}
+		}
+	}	
+	
+	option = { # Let's not
+		name = "DWTRandom310B"
+
+		random = {
+			chance = 10
+			FROM = { 
+				opinion = {
+					who = ROOT
+					modifier = opinion_seduced_yearning
+					months  = 36
+				}
+			}
+		}
+	}
+}
+# .361 New Female adult bounce
+narrative_event = {
+	id = DWTRandom.361
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		FROM = { narrative_event = { id = DWTRandom.370 days = 1}}
+	}
+}
+# .370 Male liege determines education approach. (Player)
+narrative_event = {
+	id = DWTRandom.370
+	desc = "DWTRandom370"
+	picture = "GFX_evt_DW_EducateFemale1"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "DWTRandom800a" #Vaginal
+		narrative_event = { id = DWT.801 }
+		FROM = {
+			opinion = {
+				who = ROOT
+				modifier = dw_good_fuck
+			}
+		}
+		random = {
+				chance = 25
+				if = {
+					limit = {
+						FROM = {
+								is_female = yes
+								is_pregnant = no
+							}
+						is_female = no
+					}
+					FROM = { impregnate = PREV }
+				}
+			}
+			random = {
+				chance = 100
+				if = {
+					limit = {
+						is_female = yes
+						NOT = {
+							is_pregnant = yes
+							FROM = {
+								is_female = yes
+							}
+						}
+					}
+					impregnate = FROM
+			}
+		}
+	}
+	option = {
+		name = "DWTRandom800b" #Anal
+		narrative_event = { id = DWT.820 }
+		FROM = {
+			opinion = {
+				who = ROOT
+				modifier = dw_good_fuck
+			}
+		}
+	}
+	option = {
+		name = "DWTRandom800c" #Oral
+		narrative_event = { id = DWT.830 }
+		FROM = { 
+			opinion = {
+				who = ROOT
+				modifier = dw_good_fuck
+			}
+		}
+	}
+	
+	option = { # Let's not
+		name = "DWTRandom310B"
+
+	}
+}
+
+####
+
+## .500 - .599: Forced taking of a prisoner
+#.500 Female adult prisoner draws the attention of her male captor (prisoner)
+narrative_event = {
+	id = DWTRandom.500
+	desc = "DWTRandom500"
+	picture = GFX_evt_into_the_dungeon
+	
+	min_age = 14
+	max_age = 30
+	prisoner = yes
+	only_women = yes
+	capable_only = yes
+	
+	trigger = { 
+			
+		is_female = yes
+		is_adult = yes
+		host = { 
+			is_female = no
+			is_adult = yes
+			prisoner = no
+			capable_only = yes
+			in_command = no
+			NOR = {
+				trait = homosexual
+				trait = incapable
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+		modifier = {
+			factor = 0.5
+			OR = {
+				trait = fair
+				trait = bombshell
+			}			
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				trait = huge_tits
+				trait = big_tits
+			}
+		}
+		modifier = {
+			factor = 2
+			trait = small_tits
+		}
+		modifier = {
+			factor = 2
+			age = 40
+		}
+		modifier = {
+			factor = 3
+			age = 45
+		}
+		modifier = {
+			factor = 5
+			trait = victim #Once raped, it'll be a bit before the rapist regains interest.
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				trait = ugly #Physical deformities take some time to get over.
+				trait = hunchback
+				trait = harelip
+				trait = clubfooted
+				trait = dwarf
+			}
+		}
+		modifier = {
+			factor = 0.5
+			host = { trait = tiny_dick } #Has compensation issues and frustration to let out.
+		}
+		modifier = {
+			factor = 0.75
+			host = { trait = micro_dick } #Has worse compensation issues and frustration to let out.
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { #If it's the ai, and they're honorable, then we kill the decision.
+				ai = yes
+				ai_honor = 10
+			}
+			break = yes
+		}
+	}
+	
+	option = {
+		name = "DWTRandom500A"
+		host = {
+			narrative_event = { id = DWTRandom.503 days = 1 } #Decision time.
+		}
+	}
+}
+#.503 Decision by the one who imprisoned the prisoner (captor)
+narrative_event = {
+	id = DWTRandom.503
+	desc = "DWTRandom503"
+	picture = GFX_evt_into_the_dungeon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom503A"
+		FROM = { narrative_event = { id = DWTRandom.505 }} #Rape (prisoner perspective)
+	}
+	option = {
+		name = "DWTRandom503B" #No rape
+		piety = 20
+	}
+}
+#.505 Prisoner is raped (prisoner)
+narrative_event = {
+	id = DWTRandom.505
+	desc = "DWTRandom505"
+	picture = DWRandom_PrisonerMaleRapeFemale
+	title = dw_violation_of_self
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom505A"
+		FROM = { narrative_event = { id = DWTRandom.507 }} #Rape (captor perspective)
+		if = {
+			limit = {
+				NOT = { has_character_modifier = dw_rape_trauma }
+			}
+			add_character_modifier = { name = dw_rape_trauma duration = 120 } #duration is in days
+		}
+		if = {
+			limit = {
+				NOT = { trait = victim }
+			}
+			add_trait = victim
+		}
+	}
+}
+#.507 Prisoner is raped (captor)
+narrative_event = {
+	id = DWTRandom.507
+	desc = "DWTRandom507"
+	picture = DWRandom_PrisonerMaleRapeFemale
+	title = dw_violation_of_from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom507A"
+		hidden_tooltip = {
+			FROM = { narrative_event = { id = DWCore.9000 }} #Pregnancy check
+		}
+		if = {
+			limit = {
+				NOT = { trait = cruel }
+			}
+			add_trait = cruel
+		}
+	}
+}
+# .600 Bad dog rapes woman - selecting the woman (hunter with bad_dog flag bounce)
+narrative_event = {
+	id = DWTRandom.600
+
+	min_age = 14
+	max_age = 50
+	prisoner = yes
+	only_women = yes
+	capable_only = yes
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+			has_rape_content = yes
+			has_bestiality_content = yes				
+			
+		liege = {	
+			has_character_modifier = dw_pet_guard_dog			# Only ever fire this if the liege has bought a guard dog
+			any_courtier = {
+				is_female = yes
+				age = 14
+				NOT = { 
+					trait = incapable 
+					age = 40									# Don't go after hags
+				}
+				prisoner = no
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 8												# Cooldown, influenced by size of court.
+		
+		modifier = {
+			factor = 1.1
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 1.3
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 1.4
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 1.5
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 3
+			liege = { num_of_vassals = 100 }
+		}
+	}	
+	
+	immediate = {
+		location = {
+			random_courtier = {
+				limit = {
+					is_female = yes
+					age = 14
+					NOT = { trait = incapable }
+					prisoner = no
+				}
+				narrative_event = { id = DWTRandom.603 } #female courtier event
+			}
+		}
+	}
+}
+# .603 Bad dog rapes woman (woman)
+narrative_event = {
+	id = DWTRandom.603
+	desc = "DWTRandom603"
+	picture = DWRandom_BadDog
+	title = dw_bad_dog_from
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "DWTRandom603" #No, no, get off!
+		if = {
+			limit = {
+				NOT = { trait = victim }
+			}
+			add_trait = victim
+		}
+		if = {
+			limit = { 
+				trait = virgin 
+			}
+			remove_trait = virgin
+		}
+		opinion = {
+			modifier = opinion_bad_dog_raper_owner
+			who = FROM
+		}
+		FROM = { narrative_event = { id = DWTRandom.605 }} #Dog owner notice
+	}
+}
+# .605 Bad dog rapes woman (dog owner)
+narrative_event = {
+	id = DWTRandom.605
+	desc = "DWTRandom605"
+	picture = DWRandom_BadDog
+	title = dw_bad_dog_root
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTRandom605A" #Bad dog!
+	}
+}
+
+#
+### Sex crazed person rapes someone
+#
+# .610 Sex crazed person rapes someone (and you find out)
+narrative_event = {
+	id = DWTRandom.610
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = { 
+					save_event_target_as = sexcrazed_rapist
+					set_character_flag = sc_rapist
+				}
+		
+		if = { # Grab Victim if available:
+			limit = {
+				location = {
+					any_province_character = {
+						ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+				        ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+					save_event_target_as = sexcrazed_victim
+				}
+			}
+		}
+	}
+
+	option = { # Independent Ruler:
+		trigger = {
+			event_target:sexcrazed_rapist = { character = yes }
+			event_target:sexcrazed_victim = { character = yes }
+			AND = {
+				event_target:sexcrazed_rapist = { character = ROOT }
+				is_independent = yes
+				}
+		}
+		narrative_event = { id = DWTRandom.615 }
+	}	
+	option = { # Otherwise scope to the Liege:
+		trigger = {
+			event_target:sexcrazed_rapist = { character = yes }
+			event_target:sexcrazed_victim = { character = yes }
+			AND = {
+				event_target:sexcrazed_rapist = { character = ROOT }
+				is_independent = no
+				}
+		}
+		liege = { narrative_event = { id = DWTRandom.611 } }
+	}		
+}
+
+# .611 Show result:
+narrative_event = {
+	id = DWTRandom.611
+	picture = FemPainFuckBW
+	desc = "DWTRandom611.desc"
+	title = "DWTRandom.611.tit"
+	
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:sexcrazed_rapist = { character = yes }
+		event_target:sexcrazed_victim = { character = yes }			
+	}
+	
+	immediate = {
+
+		if = { # Grab Victim if available:
+			limit = {
+				location = {
+					any_province_character = {
+						ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+				        ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+					save_event_target_as = sexcrazed_victim
+				}
+			}
+		}
+		if = {
+			limit = { event_target:sexcrazed_rapist = { ai = no } }
+			event_target:sexcrazed_rapist = { set_character_flag = sc_rapist_caught }
+			event_target:sexcrazed_rapist = { narrative_event = { id = DWTRandom.616 } }
+		}
+
+
+
+	}
+
+	option = { # Perpetrator is available:
+		trigger = {
+			event_target:sexcrazed_rapist = { character = yes }
+			event_target:sexcrazed_victim = { character = yes }
+		}
+		name = "DWTRandom.611.optionA"
+		event_target:sexcrazed_victim = {
+			add_trait = raped
+			opinion = {
+				modifier = dw_opinion_asshole
+				who = event_target:sexcrazed_rapist
+			}
+			add_character_modifier = { name = dwt_rape_trauma duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_rapist
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_rapist
+				}
+			}
+			opinion = {		# Will hate rapist
+				modifier = opinion_raped_me
+				who = event_target:sexcrazed_rapist
+			}
+		}
+		event_target:sexcrazed_rapist = {
+			clr_character_flag = sc_rapist
+			add_trait = rapist
+			opinion = {
+				modifier = dw_opinion_good_fuck
+				who = event_target:sexcrazed_victim
+			}
+			add_character_modifier = { name = dw_good_fuck duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_victim
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_victim
+				}
+			}
+		}
+	}
+	option = { 
+		name = "DWTRandom.611.optionB"
+		event_target:sexcrazed_victim = {
+			add_trait = raped
+			opinion = {
+				modifier = dw_opinion_asshole
+				who = event_target:sexcrazed_rapist
+			}
+			add_character_modifier = { name = dwt_rape_trauma duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_rapist
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_rapist
+				}
+			}
+			opinion = {		# Will hate rapist
+				modifier = opinion_raped_me
+				who = event_target:sexcrazed_rapist
+			}
+		}
+		event_target:sexcrazed_rapist = {
+			clr_character_flag = sc_rapist
+			add_trait = rapist
+			opinion = {
+				modifier = dw_opinion_good_fuck
+				who = event_target:sexcrazed_victim
+			}
+			add_character_modifier = { name = dw_good_fuck duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_victim
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_victim
+				}
+			}
+			imprison = yes
+		}
+	}
+	option = { 
+		name = "DWTRandom.611.optionC"
+		event_target:sexcrazed_victim = {
+			add_trait = raped
+			opinion = {
+				modifier = dw_opinion_asshole
+				who = event_target:sexcrazed_rapist
+			}
+			add_character_modifier = { name = dwt_rape_trauma duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_rapist
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_rapist
+				}
+			}
+			opinion = {		# Will hate rapist
+				modifier = opinion_raped_me
+				who = event_target:sexcrazed_rapist
+			}
+		}
+		event_target:sexcrazed_rapist = {
+			clr_character_flag = sc_rapist
+			add_trait = rapist
+			opinion = {
+				modifier = dw_opinion_good_fuck
+				who = event_target:sexcrazed_victim
+			}
+			add_character_modifier = { name = dw_good_fuck duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_victim
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_victim
+				}
+			}
+			banish = yes
+			opinion = {								# He will hate you for a looooong time.
+				modifier = immortal_hate
+				who = ROOT
+			}
+			opinion = {								# He will hate the victim for a looooong time.
+				modifier = immortal_hate
+				who = event_target:sexcrazed_victim
+			}
+		}
+	}
+}
+
+# .612 Sex crazed person rapes someone (and you don't find out!)
+narrative_event = {
+	id = DWTRandom.612
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = { 
+					save_event_target_as = sexcrazed_rapist
+					set_character_flag = sc_rapist
+				}
+
+		if = { # Grab Victim if available:
+			limit = {
+				location = {
+					any_province_character = {
+						ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+				        ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+					save_event_target_as = sexcrazed_victim
+				}
+			}
+		}
+	}
+
+
+
+	option = { # Perpetrator is available:
+		trigger = {
+			event_target:sexcrazed_rapist = { character = yes }
+			event_target:sexcrazed_victim = { character = yes }
+			
+		}
+		narrative_event = { id = DWTRandom.613 }
+	}
+}
+
+# .613 Show result:
+narrative_event = {
+	id = DWTRandom.613
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:sexcrazed_rapist = { character = yes }
+		event_target:sexcrazed_victim = { character = yes }
+			
+	}
+	
+	immediate = {
+
+		if = { # Grab Victim if available:
+			limit = {
+				location = {
+					any_province_character = {
+						ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+				        ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+					save_event_target_as = sexcrazed_victim
+				}
+			}
+		}
+	}
+
+	option = { # Perpetrator is available:
+		trigger = {
+			event_target:sexcrazed_rapist = { character = yes }
+			event_target:sexcrazed_victim = { character = yes }
+		}
+		name = "DWTRandom.611.optionA"
+		event_target:sexcrazed_victim = {
+			add_trait = raped
+			opinion = {
+				modifier = dw_opinion_asshole
+				who = event_target:sexcrazed_rapist
+			}
+			add_character_modifier = { name = dwt_rape_trauma duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_rapist
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_rapist
+				}
+			}
+			opinion = {		# Will hate rapist
+				modifier = opinion_raped_me
+				who = event_target:sexcrazed_rapist
+			}
+		}
+		event_target:sexcrazed_rapist = {
+			clr_character_flag = sc_rapist
+			add_trait = rapist
+			opinion = {
+				modifier = dw_opinion_good_fuck
+				who = event_target:sexcrazed_victim
+			}
+			add_character_modifier = { name = dw_good_fuck duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_victim
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_victim
+				}
+			}
+		}
+		if = {
+			limit = { event_target:sexcrazed_rapist = { ai = no }}
+			event_target:sexcrazed_rapist = { narrative_event = { id = DWTRandom.616 } }
+		}
+
+		
+	}
+}
+
+# .615 Show result:
+narrative_event = {
+	id = DWTRandom.615
+	picture = FemPainFuckBW
+	desc = "DWTRandom615.desc"
+	title = "DWTRandom.615.tit"
+	
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:sexcrazed_rapist = { character = yes }
+		event_target:sexcrazed_victim = { character = yes }
+			
+	}
+	
+	immediate = {
+		if = { # Grab Sex Crazed Person if available
+			limit = {
+				location = {
+					any_province_character = {
+						trait = sexcrazed
+						ai = yes
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+						trait = sexcrazed
+						ai = yes
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+					}
+					save_event_target_as = sexcrazed_rapist
+				}
+			}
+		}
+		if = { # Grab Victim if available:
+			limit = {
+				location = {
+					any_province_character = {
+						ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+				        ai = yes
+						age = 14
+						is_opposite_sex = event_target:sexcrazed_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = sexcrazed 
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+					save_event_target_as = sexcrazed_victim
+				}
+			}
+		}
+	}
+
+
+	option = { 
+		name = "DWTRandom.615.optionA"
+		event_target:sexcrazed_victim = {
+			add_trait = raped
+			opinion = {
+				modifier = dw_opinion_asshole
+				who = event_target:sexcrazed_rapist
+			}
+			add_character_modifier = { name = dwt_rape_trauma duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_rapist
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_rapist
+				}
+			}
+			opinion = {		# Will hate rapist
+				modifier = opinion_raped_me
+				who = event_target:sexcrazed_rapist
+			}
+		}
+		event_target:sexcrazed_rapist = {
+			clr_character_flag = sc_rapist
+			add_trait = rapist
+			opinion = {
+				modifier = dw_opinion_good_fuck
+				who = event_target:sexcrazed_victim
+			}
+			add_character_modifier = { name = dw_good_fuck duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:sexcrazed_victim
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:sexcrazed_victim
+				}
+			}
+		any_vassal = {
+			if = {
+				limit = { 
+					NOT = { trait = rapist } 
+					NOT = { trait = cruel }					
+					}
+			opinion = {
+					modifier = dwt_tyrant_rapist
+					who = event_target:sexcrazed_rapist		
+					}
+				}
+			}
+		any_courtier = {
+			if = {
+				limit = { 
+					NOT = { liege = { character = event_target:sexcrazed_rapist	} }
+					NOT = { trait = rapist }
+					NOT = { trait = cruel }
+				}
+				opinion = {
+					modifier = dwt_tyrant_rapist
+					who = event_target:sexcrazed_rapist		
+					}
+				}
+			}
+
+
+		}
+	}
+
+}
+
+narrative_event = { #ping back to the player if appropriate
+	id = DWTRandom.616
+	is_triggered_only = yes
+		title = DWTRandom616title
+		picture = RudeAwakening
+	desc ={
+		trigger = {
+			has_character_flag = sc_rapist_caught
+		}
+		text = DWTRandom616caughtdesc
+	}
+	desc ={
+		trigger = {
+			NOT = { has_character_flag = sc_rapist_caught }
+		}
+		text = DWTRandom616desc
+	}
+	immediate = {
+		
+		event_target:sexcrazed_victim = {
+			add_trait = raped
+		}	
+	}
+	
+	option = {
+		trigger = { has_character_flag = sc_rapist_caught }
+		name = DWTRandom616OptA
+	}
+	option = {
+		trigger = {
+				NOT = { has_character_flag = sc_rapist_caught }
+				has_character_flag = sc_serial_rapist
+				}
+		name = DWTRandom616OptB
+	
+	}	
+	option = {
+		trigger = {
+				NOT = { has_character_flag = sc_rapist_caught }
+				has_character_flag = sc_spouse_help
+				}
+		name = DWTRandom616OptC
+	
+	
+	}
+	option = {
+		trigger = {
+				NOT = { has_character_flag = sc_rapist_caught }
+				OR = {
+					has_character_flag = sc_whoremonger
+					has_character_flag = sc_complete_whore
+					}
+				}
+		name = DWTRandom616OptD
+	
+	
+	}
+	option = {
+		trigger = {
+				NOT = { has_character_flag = sc_rapist_caught }
+				has_character_flag = sc_no_help
+				}
+		name = DWTRandom616OptE
+	
+	
+	}	
+	
+}
+
+##################################################################
+
+#
+### Lilith demon child keeps it in the family - your family:
+#
+
+# .620 Demon Child has fun with your family members (happens in secret)
+narrative_event = {
+	id = DWTRandom.620
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { # Grab Sex Crazed Person if available
+			limit = {
+				location = {
+					any_province_character = {
+						has_character_flag = lilith_child
+						ai = yes
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+						has_character_flag = lilith_child
+						ai = yes
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+					}
+					save_event_target_as = demon_child_rapist
+					set_character_flag = dc_rapist
+				}
+			}
+		}
+		if = { # Grab Victim if available:
+			limit = {
+				liege = {
+					any_close_relative = {
+						ai = yes
+						age = 14
+						is_opposite_sex = event_target:demon_child_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = raped 
+							age = 40									# No hags
+						}
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			liege = {
+				random_close_relative = {
+					limit = {
+				        ai = yes
+						age = 14
+						is_opposite_sex = event_target:demon_child_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = raped
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+					save_event_target_as = demon_child_victim
+				}
+			}
+		}
+	}
+
+
+	option = { # Perpetrator is available:
+		trigger = {
+			event_target:demon_child_rapist = { character = yes }
+			event_target:demon_child_victim = { character = yes }
+			
+		}
+		narrative_event = { id = DWTRandom.621 }
+	}
+}
+
+# .621 Demon Child has fun with your family members - result:
+narrative_event = {
+	id = DWTRandom.621
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:demon_child_rapist = { character = yes }
+		event_target:demon_child_victim = { character = yes }
+			
+	}
+	
+	immediate = {
+		if = { # Grab Sex Crazed Person if available
+			limit = {
+				location = {
+					any_province_character = {
+						has_character_flag = lilith_child
+						ai = yes
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			location = {
+				random_province_character = {
+					limit = {
+						has_character_flag = lilith_child
+						ai = yes
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+					}
+					save_event_target_as = demon_child_rapist
+					set_character_flag = dc_rapist
+				}
+			}
+		}
+		if = { # Grab Victim if available:
+			limit = {
+				liege = {
+					any_close_relative = {
+						ai = yes
+						age = 14
+						is_opposite_sex = event_target:demon_child_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = raped 
+							age = 40									# No hags
+						}
+					}
+				}
+			}
+			#If there is, we then grab one for the event
+			liege = {
+				random_close_relative = {
+					limit = {
+				        ai = yes
+						age = 14
+						is_opposite_sex = event_target:demon_child_rapist
+						prisoner = no
+						in_command = no
+						#is_inaccessible_trigger = no
+						NOT = { 
+							trait = incapable
+							trait = raped
+							age = 40									# No hags
+						}
+						prisoner = no
+					}
+					save_event_target_as = demon_child_victim
+				}
+			}
+		}
+	}
+
+	option = { # Perpetrator is available:
+		trigger = {
+			event_target:demon_child_rapist = { character = yes }
+			event_target:demon_child_victim = { character = yes }
+		}
+		name = "DWTRandom.611.optionA"
+		event_target:demon_child_victim = {
+			add_trait = raped
+			opinion = {
+				modifier = dw_opinion_asshole
+				who = event_target:demon_child_rapist
+			}
+			add_character_modifier = { name = dwt_rape_trauma duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:demon_child_rapist
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:demon_child_rapist
+				}
+			}
+			opinion = {		# Will hate rapist
+				modifier = opinion_raped_me
+				who = event_target:demon_child_rapist
+			}
+		}
+		event_target:demon_child_rapist = {
+			clr_character_flag = dc_rapist
+			add_trait = rapist
+			opinion = {
+				modifier = dw_opinion_good_fuck
+				who = event_target:demon_child_victim
+			}
+			add_character_modifier = { name = dw_good_fuck duration = 30 }
+			if = {
+				limit = {
+					trait = virgin 
+				}
+				remove_trait = virgin
+			}
+			if = { 
+				limit = {
+					NOT = { age = 40 }
+					is_female = yes
+					is_pregnant = no
+					fertility = 0.5
+					is_opposite_sex = event_target:demon_child_victim
+				}
+				random = { 
+					chance = 25
+					impregnate = event_target:demon_child_victim
+				}
+			}
+		}
+	}
+}
+
+
+####################################################################
+
+
+# Decisions for players afflicted with sexcrazed
+narrative_event = {
+	id = DWTRandom.700
+	is_triggered_only = yes
+	title = "DWTRandom700title"	
+	picture = a_placeholder
+	desc = {
+		trigger = { is_female = yes }
+		picture = ContemptousFem
+		text = "DWTRandom700desc" 
+		}
+	desc = {
+		trigger = { is_female = no }
+		picture = ContemptousMale
+		text = "DWTRandom700desc" 
+		}	
+
+	option = { #ask lone spouse for help
+		trigger = {
+			
+				is_married = yes
+				NOT = { num_of_consorts = 1 }
+				num_of_spouses == 1
+
+				spouse = {
+					NOR = { 
+						trait = celibate  
+						trait = infirm 
+						trait = incapable 
+					}
+				}
+		}
+		name = "DWTRandom700optA"
+
+		spouse = { narrative_event = { id = DWTRandom.702 } }
+
+	}
+	option = { #ask spouses for help
+		trigger = {
+			NOT = { has_character_flag = sc_spouse_refused }
+			OR = {
+				is_married = yes
+				NOT = { num_of_spouses == 1 }			
+				}
+			any_spouse = {
+					NOR = { 
+						trait = celibate  
+						trait = infirm 
+						trait = incapable 
+					}
+				}
+
+		}
+		name = "DWTRandom700optA2"
+		spouse = { narrative_event = { id = DWTRandom.702 } }
+			
+	}
+	option = { #ask spouse and consorts for help
+		trigger = {
+			is_married = yes
+			num_of_consorts = 1			
+			NOT = { has_character_flag = sc_spouse_refused }
+			
+			OR = {
+				any_spouse = {
+					NOR = { 
+						trait = celibate  
+						trait = infirm 
+						trait = incapable 
+					}
+				}
+				any_consort = {
+					NOR = { 
+						trait = celibate  
+						trait = infirm 
+						trait = incapable 
+					}
+				}
+			}
+		}
+		name = "DWTRandom700optA3"
+				spouse = { narrative_event = { id = DWTRandom.702 } }
+
+	}
+	option = { #ask spouse and consorts for help
+		trigger = {
+			is_married = no
+			num_of_consorts = 1			
+			NOT = { has_character_flag = sc_spouse_refused }
+
+				any_consort = {
+					NOR = { 
+						trait = celibate  
+						trait = infirm 
+						trait = incapable 
+					}
+				}
+		}
+		name = "DWTRandom700optA4"
+			 narrative_event = { id = DWTRandom.703 } #if it's just concubines they don't get a choice
+
+	}	
+	
+	
+	option = { #turn to whores
+		trigger = {
+			has_valid_brothel = yes
+
+		}
+		name = "DWTRandom700optB"
+		narrative_event = { id = DWTRandom.710 }
+	}
+	option = { #try to remain disciplined (hah)
+		name = "DWTRandom700optC"
+		set_character_flag = sc_no_help
+	}
+	option = { #hide yo kids, hide yo wife, they rapin' errybody up in here
+		name = "DWTRandom700optD"
+		set_character_flag = sc_serial_rapist
+	}
+
+}
+
+
+
+
+
+character_event = {
+	id = DWTRandom.701
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		remove_trait = sexcrazed
+		remove_trait = chaste
+		add_trait = lustful #faded, but not gone completely yet
+		
+		#remove any event flags
+		clr_character_flag = sc_complete_whore
+		clr_character_flag = sc_no_help
+		clr_character_flag = sc_serial_rapist
+		clr_character_flag = sc_spouse_help
+		clr_character_flag = sc_whoremonger
+	}
+	
+}
+
+narrative_event = { #spouse reacts
+	id = DWTRandom.702 
+	is_triggered_only = yes
+	picture = MFembrace
+	title = "DWTRandom702title"	
+	desc = { 
+		trigger = {
+			num_of_spouses == 1
+			NOT = { num_of_consorts = 1 }
+		}
+	text = "DWTRandom702desc" 
+	}
+	desc = { 
+		trigger = {
+				num_of_spouses = 2			
+		}
+	text = "DWTRandom702desc2" 
+	}
+	desc = { 
+		trigger = {
+			num_of_spouses == 1
+			num_of_consorts = 1
+
+		}
+	text = "DWTRandom702desc3" 
+	}	
+
+	option = { #agree
+		name = "DWTRandom702optA"
+		ai_will_do = {
+					factor = 0.4
+					modifier = {
+						factor = 1.5 #more likely to agree if not the only one doing the work
+						{
+							FROM = { 
+								num_of_spouses = 3 
+								}					
+						}
+						}	
+					modifier = {
+						factor = 2 #more likely to agree if not the only one doing the work
+						{
+							FROM = { NOT = { num_of_spouses = 1 } }					
+						}
+						}	
+					modifier = {
+						factor = 6 #much more likely to agree if consorts will be doing the work
+						{
+							FROM = { NOT = { num_of_consorts ==	0 } }					
+						}
+						}	
+					modifier = {
+						factor = 4
+						{
+							opinion = { who = FROM value = 80 }						
+						}
+						}	
+					modifier = {
+						factor = 2
+						{
+							NOT = opinion { who = FROM value = 70 }
+							opinion = { who = FROM value = 30 }						
+						}						
+						}	
+					modifier = {
+						factor = 0.5
+						{
+							NOT = opinion { who = FROM value = 0 }
+							opinion = { who = FROM value = -30 }						
+						}						
+						}	
+					modifier = {
+						factor = 0.1
+						{
+							NOT = { opinion = { who = FROM value = -30 } }
+						}						
+						}	
+					modifier = {
+						factor = 1.1
+						{	
+							trait = kind
+						}
+						}	
+					modifier = {
+						factor = 3
+						{
+						 is_lover = FROM
+						}
+						}	
+					modifier = {
+						factor = 2
+						{	
+							trait = lustful
+						}
+						}	
+					modifier = {
+						factor = 0.5
+						{	
+							trait = chaste
+						}
+						}	
+					modifier = {
+						factor = 0.8
+						{	
+							trait = zealous
+						}
+						}
+					}
+				
+			FROM = 	{	narrative_event = { id = DWTRandom.703 } }
+
+	}
+	option = { #refuse
+		name = "DWTRandom702optB"
+		ai_will_do = {
+					factor = 0.4
+					modifier = {
+						factor = 2
+						{
+							NOT = { opinion = { who = FROM value = 0 } }
+						}						
+						}	
+					modifier = {
+						factor = 0.9
+						{	
+							trait = kind
+						}
+						}	
+					modifier = {
+						factor = 0.5
+						{
+						 is_lover = FROM
+						}
+						}	
+					modifier = {
+						factor = 0.5
+						{	
+							trait = lustful
+						}
+						}	
+					modifier = {
+						factor = 3
+						{	
+							trait = chaste
+						}
+						}	
+					modifier = {
+						factor = 1.1
+						{	
+							trait = zealous
+						}
+					}	
+			}	
+			FROM = 	{	narrative_event = { id = DWTRandom.704 } }
+			
+	}
+	option = { #accuse of infidelity
+		name = "DWTRandom702optC"
+		ai_will_do = {
+					factor = 0.1
+					modifier = {
+						factor = 2
+						{
+							NOT = { opinion = { who = FROM value = 0 } }
+						}						
+						}	
+					modifier = {
+						factor = 0
+						{	
+							trait = trusting
+						}
+						}	
+					modifier = {
+						factor = 0.1
+						{
+						 is_lover = FROM
+						}
+						}	
+					modifier = {
+						factor = 0.5
+						{	
+							trait = lustful
+						}
+						}	
+					modifier = {
+						factor = 20
+						{	
+							trait = paranoid
+						}
+						}	
+					modifier = {
+						factor = 1.1
+						{	
+							trait = zealous
+						}
+						}	
+					modifier = {
+						factor = 0.4
+						{	
+							FROM = { trait = honest }
+						}					
+						}	
+					modifier = {
+						factor = 4
+						{	
+							FROM = { trait = deceitful }
+						}					
+					}
+	
+			}	
+			FROM = 	{	narrative_event = { id = DWTRandom.705 } }
+
+
+	
+	}
+	option = { #declare celibacy
+		name = "DWTRandom702optD"
+		ai_will_do = {
+					factor = 0.1
+					modifier = {
+						factor = 2
+						{
+							NOT = { opinion = { who = FROM value = 0 } }
+						}	
+					modifier = {
+						factor = 6
+						{	
+							trait = chaste
+						}
+						}	
+					modifier = {
+						factor = 0
+						{
+						 is_lover = FROM
+						}
+						}	
+					modifier = {
+						factor = 0
+						{	
+							trait = lustful
+						}
+						}	
+					modifier = {
+						factor = 4
+						{	
+							trait = zealous
+						}
+						}	
+					modifier = {
+						factor = 0
+						{	
+							OR = {
+								trait = lilith
+								trait = incubus
+								}
+						}	
+						}	
+					modifier = {
+						factor = 0.1
+						{	
+							OR = {
+								trait = alu_fiend
+								trait = cambion
+								}
+						}						
+				
+					}
+				}
+			}	
+			add_trait = celibate
+			FROM = 	{	narrative_event = { id = DWTRandom.706 } }
+	
+	}	
+}
+
+
+
+narrative_event = { #spouse reacts
+	id = DWTRandom.704 
+	is_triggered_only = yes
+	picture = a_placeholder
+		title = "DWTRandom704title"	
+	desc = { 
+		trigger = { is_female = yes }
+		picture = ContemptousMale
+		text = "DWTRandom704desc" 
+		
+	}
+	desc = { 
+		trigger = { is_female = no }
+		picture = ContemptousFem
+		text = "DWTRandom704desc" 
+		
+	}
+
+	option = { #crap!
+		name = "DWTRandom704optA"
+		set_character_flag = sc_spouse_refused
+		narrative_event = { id = DWTRandom.700 }	
+	}
+
+}
+
+narrative_event = { #spouse reacts
+	id = DWTRandom.705 
+	is_triggered_only = yes
+	picture = a_placeholder
+		title = "DWTRandom705title"	
+	desc = { 
+		trigger = { is_female = yes }
+		picture = ContemptousMale
+		text = "DWTRandom705desc" 
+		
+	}
+	desc = { 
+		trigger = { is_female = no }
+		picture = ContemptousFem
+		text = "DWTRandom705desc" 
+		
+	}
+
+	option = { #uh, nani the fuck?
+		name = "DWTRandom705optA"
+		set_character_flag = sc_spouse_refused
+		narrative_event = { id = DWTRandom.700 }	
+	
+	}
+
+}
+
+narrative_event = { #spouse reacts
+	id = DWTRandom.706 
+	is_triggered_only = yes
+	picture = a_placeholder
+		title = "DWTRandom706title"	
+	desc = { 
+		trigger = { is_female = yes }
+		picture = ContemptousMale
+		text = "DWTRandom706desc" 
+		
+	}
+	desc = { 
+		trigger = { is_female = no }
+		picture = ContemptousFem
+		text = "DWTRandom706desc" 
+		
+	}
+	immediate = {
+	
+	}
+	option = { #that will really help, except not
+		name = "DWTRandom706optA"
+		set_character_flag = sc_spouse_refused
+		narrative_event = { id = DWTRandom.700 }	
+	
+	}
+
+}
+
+narrative_event = { #spouse reacts
+	id = DWTRandom.703 
+	is_triggered_only = yes
+		picture = MFembrace
+		title = "DWTRandom703title"	
+	desc = { 
+		trigger = { 
+			is_married = yes
+			}
+		text = "DWTRandom703desc" 
+		
+	}
+	desc = { 
+		trigger = { 
+			is_married = no
+			num_of_consorts = 1
+			}
+		text = "DWTRandom703desc2" 
+		
+	}
+
+
+	option = { #okay
+		name = "DWTRandom703optA"
+		set_character_flag = sc_spouse_help	
+	}
+
+}
+
+
+narrative_event = { #spouse or consort injured
+	id = DWTRandom.707 
+	picture = BloodCowGirlBed
+	title = "DWTRandom707title"	
+	desc = { text = "DWTRandom707desc" }
+
+	trigger = {
+		trait = sexcrazed
+		OR = {
+			is_married = yes
+			has_consort = yes
+			}
+		has_character_flag = sc_spouse_help
+	}
+	mean_time_to_happen = {
+		days = 300
+		modifier = {
+			factor = 1.5
+			OR = {
+				trait = tiny_dick
+				trait = small_dick
+				}
+		}	
+		modifier = {
+			factor = 0.9
+			OR = {
+				trait = big_dick
+				}
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				trait = huge_dick
+				}
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				trait = enormous_dick
+				}
+		}		
+		modifier = {
+			factor = 0.5
+			OR = {
+				trait = gigantic_dick
+				}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+			any_consort = { trait = strong }
+			any_spouse = { trait = strong }
+			}
+		}	
+		modifier = {
+			factor = 1.5
+			OR = {
+			any_consort = { trait = robust }
+			any_spouse = { trait = robust }
+			}
+		}	
+		modifier = {
+			factor = 1.2
+			OR = {
+			any_consort = { trait = sturdy }			
+			any_spouse = { trait = sturdy }
+			}
+		}	
+		modifier = {
+			factor = 0.5
+			OR = {
+			any_consort = { trait = feeble }
+			any_spouse = { trait = feeble }
+			}
+		}			
+		modifier = {
+			factor = 0.75			
+			OR = {
+			any_consort = { trait = is_malnourished }
+			any_spouse = { trait = is_malnourished }
+			}
+		}			
+		modifier = {
+			factor = 0.9
+			OR = {
+			any_consort = { trait = pregnant }
+			any_spouse = { trait = pregnant }
+			}
+		}			
+		modifier = {
+			factor = 0.75
+			OR = {
+			any_consort = { trait = hard_pregnancy }
+			any_spouse = { trait = hard_pregnancy }
+			}
+		}			
+		modifier = {
+			factor = 0.5
+			OR = {
+			any_consort = { trait = troubled_pregnancy }			
+			any_spouse = { trait = troubled_pregnancy }
+			}
+		}			
+		modifier = {
+			factor = 0.5
+			OR = {
+			any_consort = { trait = weak }			
+			any_spouse = { trait = weak }
+			}
+		}			
+		
+		
+	}
+		
+
+	immediate = {
+		random_list = {
+			80 = { #consorts get the brunt of it, if there are any
+				modifier = {
+					factor = 0					 
+					NOT = { num_of_consorts = 1 }
+				}
+				random_consort = {
+					save_event_target_as = sc_spouse_injury_target
+					}
+				}
+			20 = {
+				random_spouse = {
+					save_event_target_as = sc_spouse_injury_target
+					}
+				}
+			}
+		}
+	option = { #oops
+		name = "DWTRandom707optA"
+		
+		random_list = {
+		80 =  { #injured
+					modifier = {
+						factor = 0
+						sc_spouse_injury_target = { trait = wounded }									
+					}
+					modifier = {
+						factor = 0
+						sc_spouse_injury_target = { trait = severely_injured }									
+					}
+					modifier = {
+						factor = 0
+						sc_spouse_injury_target = { trait = infirm }									
+					}
+				sc_spouse_injury_target = { add_trait = wounded }
+		
+			}
+		10 = { #severe injury
+					modifier = {
+						factor = 10
+						sc_spouse_injury_target = { trait = wounded }									
+					}
+					modifier = {
+						factor = 0
+						sc_spouse_injury_target = { trait = severely_injured }									
+					}
+					modifier = {
+						factor = 0
+						sc_spouse_injury_target = { trait = infirm }									
+					}
+				sc_spouse_injury_target = { add_trait = severely_injured }			
+			}
+		10 = { #infirm
+					modifier = {
+						factor = 0
+						NOT = { sc_spouse_injury_target = { trait = wounded } }								 
+					}
+					modifier = {
+						factor = 10
+						sc_spouse_injury_target = { trait = severely_injured }									
+					}
+					modifier = {
+						factor = 0
+						sc_spouse_injury_target = { trait = infirm }									
+					}
+				sc_spouse_injury_target = { add_trait = infirm }			
+		
+			}
+		1 = { #death
+					modifier = {
+						factor = 0
+						NOT = {
+							sc_spouse_injury_target = { 
+									OR = {
+										trait = severely_injured
+										trait = infirm 
+										}
+								}
+							}
+					}
+					modifier = {
+						factor = 10
+						sc_spouse_injury_target = { trait = infirm }									 
+					}
+				sc_spouse_injury_target = { death = { death_reason = dwt_fucked_to_death killer = ROOT } }			
+		
+			}
+		
+		
+		}
+	}
+
+}
+narrative_event = { #player injured from too much sex
+	id = DWTRandom.708 
+	picture = BloodCowGirlBed
+	title = "DWTRandom708title"	
+	desc = { text = "DWTRandom708desc" }
+
+	trigger = {
+		trait = sexcrazed
+		OR = {
+			has_character_flag = sc_spouse_help
+			has_character_flag = sc_whoremonger
+			has_character_flag = sc_complete_whore
+		}
+	
+	}
+
+	mean_time_to_happen = {
+		days = 300
+		modifier = {
+			factor = 1.5
+			trait = strong 
+		}	
+		modifier = {
+			factor = 1.5
+			trait = robust 
+		}	
+		modifier = {
+			factor = 1.2
+			trait = sturdy 
+		}	
+		modifier = {
+			factor = 0.5
+			trait = feeble
+		}			
+		modifier = {
+			factor = 0.75
+			trait = is_malnourished
+		}			
+		modifier = {
+			factor = 0.9
+			trait = pregnant
+		}			
+		modifier = {
+			factor = 0.75
+			trait = hard_pregnancy
+		}			
+		modifier = {
+			factor = 0.5
+			trait = troubled_pregnancy 
+		}			
+		modifier = {
+			factor = 0.5
+			trait = weak
+		}			
+		
+		
+	}
+
+
+	option = { #crap!
+		name = "DWTRandom708optA"
+		random_list = {
+		80 =  { #injured
+					modifier = {
+						factor = 0
+						trait = wounded 									
+					}
+					modifier = {
+						factor = 0
+						trait = severely_injured 									
+					}
+					modifier = {
+						factor = 0
+						spouse = { trait = infirm }									
+					}
+				add_trait = wounded 
+		
+			}
+		10 = { #severe injury
+					modifier = {
+						factor = 10
+						trait = wounded								
+					}
+					modifier = {
+						factor = 0
+						trait = severely_injured 									
+					}
+					modifier = {
+						factor = 0
+						trait = infirm 									
+					}
+				add_trait = wounded			
+			}
+		10 = { #infirm
+					modifier = {
+						factor = 0
+						NOT = {  trait = wounded } 								 
+					}
+					modifier = {
+						factor = 10
+						 trait = severely_injured 								
+					}
+					modifier = {
+						factor = 0
+						trait = infirm 									
+					}
+				 add_trait = infirm 			
+		
+			}
+		1 = { #death
+					modifier = {
+						factor = 0
+						NOR = {
+										trait = severely_injured
+										trait = infirm 
+										}
+								
+					}
+					modifier = {
+						factor = 10
+						 trait = infirm 									 
+					}
+				death = { death_reason = dwt_fucked_to_death killer = ROOT } # yes, you fucked yourself to death			
+		
+			}
+		
+		
+		}	
+	}
+
+}
+
+character_event = { #checking in case spouse dies
+	id = DWTRandom.709
+	hide_window = yes
+	trigger = {
+		trait = sexcrazed
+		is_married = no
+		NOT = { num_of_consorts = 1 }
+		has_character_flag = sc_spouse_help
+	
+	}
+	mean_time_to_happen = {
+		days = 30
+	
+	}
+
+	immediate = {
+		narrative_event = { id = DWTRandom.700 }
+		clr_character_flag = sc_spouse_help
+	}
+
+}
+
+
+narrative_event = { #whoredom options
+	id = DWTRandom.710 
+	is_triggered_only = yes
+	picture = brothel
+	title = "DWTRandom710title"	
+	desc = { text = "DWTRandom710desc" }
+	
+#	immediate = {
+#	
+#	}
+	option = { #make it rain at the brothel
+		trigger = {
+					location = {
+			any_province_character = {
+				OR = {
+					trait = cheap_whore
+					trait = experienced_whore
+					trait = exclusive_whore				
+					}
+				}
+			
+			}
+		}
+		name = "DWTRandom710optA"
+		
+		set_character_flag = sc_whoremonger
+	
+	}
+	option = { #become a whore yourself
+		name = "DWTRandom710optB"
+		if = {
+			limit = {
+				NOR = {
+					trait = cheap_whore
+					trait = experienced_whore
+					trait = exclusive_whore				
+					}				
+			
+				}
+				add_trait = cheap_whore
+			}
+		set_character_flag = sc_complete_whore
+	}
+	
+}
+
+
+narrative_event = { #whore knocked up from too much sex
+	id = DWTRandom.711 
+	is_triggered_only = yes
+	picture = DWTCreampie
+	title = "DWTRandom711title"	
+	desc = { text = "DWTRandom711desc" }
+
+	immediate = {
+		wealth = 50
+		impregnate_cuckoo = FROM
+		
+	}
+	option = { #crap!
+		name = "DWTRandom711optA"
+	}
+	option = { #decide to retire from whoring
+		name = "DWTRandom711optB"
+		remove_trait = cheap_whore
+		remove_trait = experienced_whore
+		remove_trait = exclusive_whore
+		add_trait = retired_whore
+	}	
+
+}
+
+
+narrative_event = { #pay up, or maybe run out of whores
+	id = DWTRandom.712
+	picture = brothel
+	title = "DWTRandom712title"	
+	desc = { 
+		trigger = {
+		any_province_character = {
+						NOT = { character = ROOT }
+						is_adult = yes
+						OR = {
+							trait = cheap_whore
+							trait = experienced_whore
+							trait = exclusive_whore				
+						}				
+						prisoner = no
+					}
+		}	
+	text = "DWTRandom712desc" 
+	}
+	desc = { 
+		trigger = {
+		NOT = { 
+		any_province_character = {
+						NOT = { character = ROOT }
+						is_adult = yes
+						OR = {
+							trait = cheap_whore
+							trait = experienced_whore
+							trait = exclusive_whore				
+						}				
+						prisoner = no
+					}
+			}
+		}	
+	text = "DWTRandom712desc2" 
+	}	
+	trigger = {
+		trait = sexcrazed
+		has_character_flag = sc_whoremonger
+		
+		}
+	
+	mean_time_to_happen = {
+		days = 120
+	
+	}
+	immediate = {
+		if = {
+		limit = { 	
+			OR = {
+				is_female = no 
+				trait = futa
+				}
+			}
+		random = { #chance to randomly knock up a female whore
+			chance = 20
+			location = {
+				random_province_character = {
+					limit = {
+							NOT = { character = ROOT }
+							is_female = yes
+							is_adult = yes
+							OR = {
+								trait = cheap_whore
+								trait = experienced_whore
+								trait = exclusive_whore				
+							}				
+							prisoner = no
+						}
+						narrative_event = { id = DWTRandom.711 days = 14 random = 14} #bounce to the whore
+						}
+					}		
+				}
+			
+		}
+		random = { #chance to randomly injure a whore
+			chance = 5
+			location = {
+				random_province_character = {
+					limit = {
+						NOT = { character = ROOT }
+						is_adult = yes
+						OR = {
+							trait = cheap_whore
+							trait = experienced_whore
+							trait = exclusive_whore				
+						}				
+						prisoner = no
+					}
+					narrative_event = { id = DWTRandom.713 days = 14 random = 14} #bounce to the whore
+					}
+				}		
+			}		
+		any_province_character = {
+			limit = {
+						NOT = { character = ROOT }
+						is_adult = yes
+						OR = {
+							trait = cheap_whore
+							trait = experienced_whore
+							trait = exclusive_whore				
+						}				
+						prisoner = no
+					}
+				scaled_wealth = 0.2  #this may not add up correctly, but we'll go with it
+		}
+	}
+	option = { # pay up
+		trigger = {
+			location = {
+			any_province_character = {
+				OR = {
+					trait = cheap_whore
+					trait = experienced_whore
+					trait = exclusive_whore				
+					}
+				}
+			
+			}		
+			#no check for if they have the money, they'd gladly go into debt
+		}
+		name = "DWTRandom712optA"
+			scaled_wealth = -1.50
+	}
+
+
+
+	option = {
+		name = "DWTRandom712optB"
+		narrative_event = { id = DWTRandom.700 }
+		clr_character_flag = sc_whoremonger
+	}
+
+}
+
+
+narrative_event = { #random whore injured
+	id = DWTRandom.713 
+	is_triggered_only = yes
+		
+	picture = BloodCowGirlBed
+	title = "DWTRandom713title"	
+	desc = { text = "DWTRandom713desc" }
+
+	option = { #crap!
+		name = "DWTRandom713optA"
+		random_list = {
+		80 =  { #injured
+					modifier = {
+						factor = 0
+						trait = wounded 									
+					}
+					modifier = {
+						factor = 0
+						trait = severely_injured 									
+					}
+					modifier = {
+						factor = 0
+						spouse = { trait = infirm }									
+					}
+				add_trait = wounded 
+		
+			}
+		10 = { #severe injury
+					modifier = {
+						factor = 10
+						trait = wounded								
+					}
+					modifier = {
+						factor = 0
+						trait = severely_injured 									
+					}
+					modifier = {
+						factor = 0
+						trait = infirm 									
+					}
+				add_trait = wounded			
+			}
+		10 = { #infirm
+					modifier = {
+						factor = 0
+						NOT = {  trait = wounded } 								 
+					}
+					modifier = {
+						factor = 10
+						 trait = severely_injured 								
+					}
+					modifier = {
+						factor = 0
+						trait = infirm 									
+					}
+				 add_trait = infirm 			
+		
+			}
+		1 = { #death
+					modifier = {
+						factor = 0
+						NOR = {
+										trait = severely_injured
+										trait = infirm 
+										}
+								
+					}
+					modifier = {
+						factor = 10
+						 trait = infirm 									 
+					}
+				death = { death_reason = dwt_fucked_to_death killer = FROM }			
+		
+			}
+		
+		
+		}	
+	}
+	option = { #decide to retire from whoring
+		name = "DWTRandom713optB"
+		random_list = {
+		80 =  { #injured
+					modifier = {
+						factor = 0
+						trait = wounded 									
+					}
+					modifier = {
+						factor = 0
+						trait = severely_injured 									
+					}
+					modifier = {
+						factor = 0
+						spouse = { trait = infirm }									
+					}
+				add_trait = wounded 
+		
+			}
+		10 = { #severe injury
+					modifier = {
+						factor = 10
+						trait = wounded								
+					}
+					modifier = {
+						factor = 0
+						trait = severely_injured 									
+					}
+					modifier = {
+						factor = 0
+						trait = infirm 									
+					}
+				add_trait = wounded			
+			}
+		10 = { #infirm
+					modifier = {
+						factor = 0
+						NOT = {  trait = wounded } 								 
+					}
+					modifier = {
+						factor = 10
+						 trait = severely_injured 								
+					}
+					modifier = {
+						factor = 0
+						trait = infirm 									
+					}
+				 add_trait = infirm 			
+		
+			}
+		1 = { #death
+					modifier = {
+						factor = 0
+						NOR = {
+										trait = severely_injured
+										trait = infirm 
+										}
+								
+					}
+					modifier = {
+						factor = 10
+						 trait = infirm 									 
+					}
+				death = { death_reason = dwt_fucked_to_death killer = FROM }			
+		
+			}
+		
+		
+		}
+		remove_trait = cheap_whore
+		remove_trait = experienced_whore
+		remove_trait = exclusive_whore
+		add_trait = retired_whore
+	}	
+}
+
+
+
+
+
+character_event = { #rape chances
+	id = DWTRandom.716
+	hide_window = yes
+	trigger = {
+		trait = sexcrazed
+		NOR = { 
+			trait = incapable
+			trait = eunuch
+			}
+			
+	}
+	mean_time_to_happen = {
+		days = 120
+		modifier = {
+			factor = 1.5
+			trait = celibate
+			}
+		modifier = {
+			factor = 1.1
+			trait = chaste
+			}
+		modifier = {
+			factor = 15
+			has_character_flag = sc_spouse_help
+			}
+		modifier = {
+			factor = 15
+			AND = {
+				has_character_flag = sc_whoremonger
+				wealth = 10 #if we can't pay whores, this plan won't help us
+				}
+			}
+		modifier = {
+			factor = 15
+			has_character_flag = sc_complete_whore
+			}
+		modifier = {
+			factor = 1.1
+			trait = temperate
+			}
+		modifier = {
+			factor = 0.8
+			trait = gluttonous
+			}
+		modifier = {
+			factor = 0.75
+			trait = lustful
+			}
+		modifier = {
+			factor = 0.35
+			has_character_flag = sc_serial_rapist
+			}			
+			
+	}
+	
+	immediate = {
+		random_list = {
+			25 = {
+					modifier = {
+						factor = 0.9
+						trait = deceitful
+					
+					}
+					modifier = {
+						factor = 0.9
+						trait = patient
+					
+					}
+					modifier = {
+						factor = 0.9
+						trait = diligent
+					
+					}
+					modifier = {
+						factor = 1.1
+						trait = slothful
+					
+					}
+					modifier = {
+						factor = 0.8
+						trait = shrewd
+					
+					}
+					modifier = {
+						factor = 1.2
+						trait = dull
+					
+					}					
+					modifier = {
+						factor = 1.2
+						NOT = { intrigue = 10 }
+					
+					}
+					modifier = {
+						factor = 1.2
+						AND = { 
+								intrigue = 10 
+								NOT = { intrigue = 20 }
+								}
+					
+					}		
+					narrative_event = { id = DWTRandom.610 }
+					if ={
+						limit = { uses_decadence = yes }
+							decadence = 1
+
+					}
+				}
+			25 = {
+					modifier = {
+						factor = 1.1
+						trait = deceitful
+					
+					}
+					modifier = {
+						factor = 1.1
+						trait = patient
+					
+					}
+					modifier = {
+						factor = 1.1
+						trait = diligent
+					
+					}			
+					modifier = {
+						factor = 0.9
+						trait = slothful
+					
+					}
+					modifier = {
+						factor = 1.2
+						trait = shrewd
+					
+					}
+					modifier = {
+						factor = 0.8
+						trait = dull
+					
+					}
+					modifier = {
+						factor = 1.2
+						intrigue = 10
+					
+					}			
+					modifier = {
+						factor = 1.2
+						intrigue = 20 
+										
+					}			
+			
+				narrative_event = { id = DWTRandom.612 }
+			}
+		
+		
+		
+		}
+	
+	
+	
+	}
+
+}
+
+
+character_event = {
+	id = DWTRandom.715
+	desc = EVTDESC91204
+	picture = GFX_evt_sultan
+	
+	ai = no
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	only_rulers = yes
+	religion_group = muslim
+	
+	trigger = {
+		uses_decadence = yes
+		trait = sexcrazed
+		NOT = { has_character_flag = decadence_hedonist }
+		NOT = { religion = lilislam }
+	}
+	
+	mean_time_to_happen = { 
+		months = 1200
+		modifier = {
+			factor = 0.5 
+			has_character_flag = sc_no_help
+		}
+		modifier = {
+			factor = 0.01
+			has_character_flag = sc_serial_rapist
+		}
+		modifier = {
+			factor = 0.2
+			has_character_flag = sc_whoremonger
+		}
+		modifier = {
+			factor = 0.1
+			has_character_flag = sc_complete_whore
+		}		
+	}
+	
+	option = {
+		name = EVTOPTA91202
+		decadence = 2
+		set_character_flag = decadence_hedonist
+	}
+}

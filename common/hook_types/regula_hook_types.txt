@@ -1,3 +1,0 @@
-﻿regula_sigillum_hook = {
-    strong = yes
-}

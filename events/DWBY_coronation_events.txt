@@ -1,0 +1,2471 @@
+
+namespace=DWBY_coronation
+# Explain coronation preparation, ask whom to ask to be crowned by.
+character_event = {
+	id = DWBY_coronation.20200
+	title = EVTTITLE20200
+	desc = EVTDESCHF20200
+
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+	
+	option = { #Ask to be crowned by the Pope
+		name = EVTOPTAHORNY20200
+		trigger = { 
+			NOT = { trait = excommunicated }
+			rightful_religious_head_scope = { 
+				is_alive = yes 
+				NOT = { block_general_event_trigger = yes } 
+				has_landed_title = d_lilitu
+			} 
+		}
+		religion_head = { show_portrait = THIS }
+		custom_tooltip = { text = EVTTOOLTIPHF20201 }
+		hidden_tooltip = { religion_head = { letter_event = { id = DWBY_coronation.20201 days = 30 random = 5 } } }
+	}
+	option = { #Invested by random priest
+		name = EVTOPTCHORNY20200
+		trigger = { 
+			OR = { 
+				lower_tier_than = EMPEROR
+				primary_title = { has_law = investiture_law_1 }
+			} 
+			NOT = { tier = EMPEROR }
+			job_spiritual = {
+				religion = ROOT
+				NOT = { block_general_event_trigger = yes }
+			}
+		}
+		custom_tooltip = { text = EVTTOOLTIPCHF20200 }
+		if = { #Emperors not crowned by Pope or Antipope receive an additional penalty
+			limit = { tier = EMPEROR }
+			prestige = -300
+			piety = -75
+		}
+		if = { #If Pope is available but he's snubbed by an Emperor, he'll get mad.
+			limit = { 
+				tier = EMPEROR
+				religion_head = { 
+					is_alive = yes 
+					OR = { 
+						has_landed_title = d_lilitu
+					} 
+				}
+			}
+			custom_tooltip = { text = scorned_the_pope }
+			hidden_tooltip = { 
+				religion_head = { 		
+					show_scope_change = no	
+					opinion = {
+						modifier = opinion_offended
+						years = 30
+						who = ROOT
+					} 
+				} 
+			}
+		}
+		job_spiritual = { 
+			add_character_flag = "lilitu_coronation_chaplain"
+			hidden_tooltip = { letter_event = { id = DWBY_coronation.20201 days = 30 random = 5 } } 
+			break = yes
+		}
+	}
+	option = { #Changed your mind, not yet.
+		name = EVTOPTDHF20200
+		custom_tooltip = { text = coronation_canceled }
+		##clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
+		hidden_tooltip = { remove_character_modifier = coronation_request_cooldown }
+		ai_chance = { factor = 0 }	
+	}
+}
+
+#Scary giant letter event determining what is the priest going to ask to the King/Emperor in exchange for the Coronation.
+letter_event = {
+	id = DWBY_coronation.20201
+	desc = EVTDESCHFA20201
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+	trigger = {
+		FROM = { 
+			religion = lilitu
+		}
+	}
+	
+	option = { #For random priest
+		name = EVTOPTAHF20201
+		trigger = { 
+			has_character_flag = "lilitu_coronation_chaplain"
+		}
+		random_list = { 
+			50 = {
+				modifier = {
+					factor = 0
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -100 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.5
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -80 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.6
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -60 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.7
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -40 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.8
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -20 
+						} 
+					}
+				}
+				modifier = {
+					factor = 1.25
+					opinion = { 
+						who = FROM
+						value = 20 
+					} 
+				}
+				modifier = {
+					factor = 1.5
+					opinion = { 
+						who = FROM
+						value = 40 
+					} 
+				}
+				modifier = {
+					factor = 1.5
+					opinion = { 
+						who = FROM
+						value = 60 
+					} 
+				}
+				modifier = {
+					factor = 1.75
+					opinion = { 
+						who = FROM
+						value = 80 
+					} 
+				}
+				modifier = {
+					factor = 2
+					opinion = { 
+						who = FROM
+						value = 100 
+					} 
+				}
+				FROM = { letter_event = { id = DWBY_coronation.20202 } } #Priest asks for nothing, proceed with coronation.
+			} 
+		
+			50 = {  
+				modifier = {
+					factor = 1.5
+					trait = greedy
+				}
+				modifier = {
+					factor = 1.25
+					trait = slothful
+				}
+				modifier = {
+					factor = 1.25
+					trait = envious
+				}
+				FROM = { letter_event = { id = DWBY_coronation.20203 } } #Priest asks for small donation.
+			}
+		}
+	}
+	option = { #For the Pope
+		name = EVTOPTCHF20201
+		trigger = { 
+			 
+			has_landed_title = d_lilitu
+
+		}
+		random_list = { 
+			80 = {
+				modifier = {
+					factor = 0
+					NOT = { vassal_of = FROM }
+				}
+				modifier = {
+					factor = 2
+					has_opinion_modifier = { #Opinion modifier keeps track of the Pope's previous decision, should the player deny his first request and then attempt to ask again immediately after for a different result.
+						who = FROM 
+						modifier = opinion_requested_independence 
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -100 
+						} 
+					}
+				}
+				modifier = {
+					factor = 1.75
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -80 
+						} 
+					}
+				}
+				modifier = {
+					factor = 1.75
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -60 
+						} 
+					}
+				}
+				modifier = {
+					factor = 1.75
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -40 
+						} 
+					}
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -20 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.9
+					opinion = { 
+						who = FROM
+						value = 20 
+					} 
+				}
+				modifier = {
+					factor = 0.8
+					opinion = { 
+						who = FROM
+						value = 40 
+					} 
+				}
+				modifier = {
+					factor = 0.6
+					opinion = { 
+						who = FROM
+						value = 60 
+					} 
+				}
+				modifier = {
+					factor = 0.4
+					opinion = { 
+						who = FROM
+						value = 80 
+					} 
+				}
+				modifier = {
+					factor = 0
+					opinion = { 
+						who = FROM
+						value = 100 
+					} 
+				}
+				FROM = { letter_event = { id = DWBY_coronation.20211 } } #I want to be independent.
+			}
+			20 = {
+				modifier = {
+					factor = 0.5
+					vassal_of = FROM
+				} 
+				modifier = { 	#Supported Pope more likely to ask for little
+					factor = 1.5
+					has_opinion_modifier = { 
+						who = FROM 
+						modifier = opinion_supported_pope 
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -100 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.2
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -80 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.3
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -60 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.4
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -40 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.5
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = -20 
+						} 
+					}
+				}
+				modifier = {
+					factor = 0.6
+					NOT = { 
+						opinion = { 
+							who = FROM
+							value = 0 
+						} 
+					}
+				}
+				modifier = {
+					factor = 1.25
+					opinion = { 
+						who = FROM
+						value = 20 
+					}
+				}
+				modifier = {
+					factor = 1.75
+					opinion = { 
+						who = FROM
+						value = 40 
+					}
+				}
+				modifier = {
+					factor = 2
+					opinion = { 
+						who = FROM
+						value = 60 
+					}
+				}
+				modifier = {
+					factor = 2.5
+					opinion = { 
+						who = FROM
+						value = 80 
+					}
+				}
+				modifier = {
+					factor = 3
+					opinion = { 
+						who = FROM
+						value = 100 
+					}
+				}
+				modifier = {
+					factor = 1.5
+					trait = greedy
+				}
+				modifier = {
+					factor = 0.5
+					trait = zealous
+				}
+				FROM = { letter_event = { id = DWBY_coronation.20212 } } #I want gold.
+			}
+			
+			50 = { 
+				trigger = {
+					FROM = { war = no } #Wartime coronation.
+				}
+				modifier = {
+					factor = 0
+					NOR = {
+						 trait = hedonist
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						 trait = celibate
+						 trait = temperate
+					}
+				}
+				modifier = {
+					factor = 1.5
+					trait = gluttonous
+				}
+				modifier = {
+					factor = 1.5
+					trait = drunkard
+				}
+				modifier = {
+					factor = 1.5
+					trait = greedy
+				}
+				modifier = {
+					factor = 1.25
+					trait = cynical
+				}
+				modifier = {
+					factor = 0.5
+					trait = zealous
+				}
+				FROM = { letter_event = { id = DWBY_coronation.20235 } } #Wishes to have orgy.
+			}
+		}
+	}
+}
+
+#King: Random Priest doesn't ask for anything, proceed with the coronation immediately.
+letter_event = {
+	id = DWBY_coronation.20202
+	desc = EVTDESCHFA20202
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAHF20202
+		set_character_flag = flag_crowned_by_priest
+		FROM = { 
+			save_event_target_as = coronation_priest 
+			show_scope_change = no	
+			opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+			reverse_opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+		}
+		hidden_tooltip = { character_event = { id = DWBY_coronation.20300 } } #Go to budget event
+		ai_chance = { factor = 100 }
+	}
+	option = {	#End of the line
+		name = EVTOPTBHF20202
+		custom_tooltip = { text = coronation_canceled }
+		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
+		ai_chance = { factor = 0 }
+	}
+}
+
+#King: Random Priest asks for small donation.
+letter_event = {
+	id = DWBY_coronation.20203
+	desc = EVTDESCHFA20203
+	border = GFX_event_letter_frame_religion
+
+	trigger = {
+		religion = lilitu
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAHF20203
+		set_character_flag = flag_crowned_by_priest
+		FROM = { 
+			save_event_target_as = coronation_priest 
+			show_scope_change = no	
+			opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+			reverse_opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+		}
+		wealth = -50
+		hidden_tooltip = { FROM = { wealth = 50 } }
+		hidden_tooltip = { character_event = { id = DWBY_coronation.20300 } } #Go to budget event
+		ai_chance = { factor = 100 }
+	}
+	option = {	#End of the line
+		name = EVTOPTBHF20203
+		custom_tooltip = { text = coronation_canceled }
+		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+#King: Pope wants gold.
+letter_event = {
+	id = DWBY_coronation.20212
+	desc = EVTDESCHFA20212
+	border = GFX_event_letter_frame_religion
+
+	trigger = {
+		religion = lilitu
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAHF20212
+		hidden_tooltip = {
+			FROM = {
+				opinion = {
+					modifier = opinion_coronation_money_refund
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+		set_character_flag = flag_crowned_by_pope
+		FROM = { save_event_target_as = coronation_priest 
+				show_scope_change = no	
+			opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+			reverse_opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+		}
+		#Transfer scaled wealth based on Pope's opinion of you and your piety. - King tier
+		if = { 
+			limit = { real_tier = KING }
+			if = { 
+				limit = {  
+					NOT = { 
+						piety = 350
+					} 
+					FROM = { 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -75
+							} 
+						}
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 2.5 min = 750 max = 1500 } 
+			}
+			if = { 
+				limit = {
+					piety = 350
+					FROM = { 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -75
+							} 
+						}
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 2 min = 600 max = 1200 } 
+			}
+			if = { 
+				limit = {  
+					NOT = { 
+						piety = 350
+					} 
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -75
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -25
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 1.35 min = 500 max = 900 } 
+			}
+			if = { 
+				limit = {  
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -75
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -25
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 1.25 min = 400 max = 750 } 
+			}
+			if = { 
+				limit = {  
+					NOT = { 
+						piety = 350
+					} 
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -25
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 0
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 1.0 min = 350 max = 600 } 
+			}
+			if = { 
+				limit = { 
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -25
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 0
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.95 min = 300 max = 500 } 
+			}
+			if = { 
+				limit = { 
+					NOT = { 
+						piety = 350
+					}  
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 0
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 50
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.85 min = 250 max = 400 } 
+			}
+			if = { 
+				limit = { 
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 0
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 50
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.75 min = 200 max = 350 } 
+			}
+			if = { 
+				limit = { 
+					NOT = { 
+						piety = 350
+					}   
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 50
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.65 min = 175 max = 300 } 
+			}
+			if = { 
+				limit = { 
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 50
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.5 min = 150 max = 250 } 
+			}
+		}
+		#Transfer scaled wealth based on Pope's opinion of you and your piety. - Emperor tier
+		if = { 
+			limit = { real_tier = EMPEROR }
+			if = { 
+				limit = {  
+					NOT = { 
+						piety = 350
+					} 
+					FROM = { 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -75
+							} 
+						}
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 3 min = 950 max = 1750 } 
+			}
+			if = { 
+				limit = {
+					piety = 350
+					FROM = { 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -75
+							} 
+						}
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 2.5 min = 750 max = 1500 } 
+			}
+			if = { 
+				limit = {  
+					NOT = { 
+						piety = 350
+					} 
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -75
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -25
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 2.0 min = 600 max = 1000 } 
+			}
+			if = { 
+				limit = {  
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -75
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = -25
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 1.75 min = 500 max = 850 } 
+			}
+			if = { 
+				limit = {  
+					NOT = { 
+						piety = 350
+					} 
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -25
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 0
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 1.5 min = 450 max = 700 } 
+			}
+			if = { 
+				limit = { 
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = -25
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 0
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 1.35 min = 400 max = 600 } 
+			}
+			if = { 
+				limit = { 
+					NOT = { 
+						piety = 350
+					}  
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 0
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 50
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 1.25 min = 350 max = 500 } 
+			}
+			if = { 
+				limit = { 
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 0
+						} 
+						NOT = { 
+							opinion = { 
+								who = ROOT 
+								value = 50
+							} 
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.95 min = 300 max = 450 } 
+			}
+			if = { 
+				limit = { 
+					NOT = { 
+						piety = 350
+					}   
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 50
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.85 min = 275 max = 400 } 
+			}
+			if = { 
+				limit = { 
+					piety = 350
+					FROM = { 
+						opinion = { 
+							who = ROOT 
+							value = 50
+						} 
+					} 
+				} 
+				transfer_scaled_wealth = { to = FROM value = 0.75 min = 250 max = 350 } 
+			}
+		}
+		hidden_tooltip = { character_event = { id = DWBY_coronation.20300 } } #Go to budget event
+		ai_chance = { factor = 100 }
+	}
+	option = {	#End of the line
+		name = EVTOPTBHF20212
+		custom_tooltip = { text = coronation_canceled }
+		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
+		ai_chance = { factor = 0 }
+	}
+}
+
+#King: Pope wants an orgy.
+letter_event = {
+	id = DWBY_coronation.20235
+	desc = EVTDESCHFA20235
+	border = GFX_event_letter_frame_religion
+
+	trigger = {
+		religion = lilitu
+	}
+	is_triggered_only = yes
+	
+	#Fund AND join the Orgy
+	option = {
+		name = EVTOPTZHF20235
+		custom_tooltip = { text = join_pope_orgy }
+		set_character_flag = flag_crowned_by_pope
+		FROM = { save_event_target_as = coronation_priest
+				show_scope_change = no	
+			opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 2
+				who = ROOT
+			}
+			reverse_opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 2
+				who = ROOT
+			}
+		}
+		transfer_scaled_wealth = { to = FROM value = 0.75 min = 150 max = 400 } 
+		tiered_piety_negative_effect = yes
+		hidden_tooltip = { 
+			FROM = { 
+				tiered_piety_negative_effect = yes
+			} 
+		}
+		hidden_tooltip = { character_event = { id = DWBY_coronation.20236 } } #Small event chain.
+		#hidden_tooltip = { character_event = { id = DWBY_coronation.20300 } } #Go to budget event
+		ai_chance = { factor = 10 }
+	}
+	#Only Fund
+	option = {
+		name = EVTOPTAHF20235
+		trigger = { NOT = { trait = hedonist } }
+		set_character_flag = flag_crowned_by_bishop
+		FROM = { save_event_target_as = coronation_priest
+				show_scope_change = no	
+			opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 2
+				who = ROOT
+			}
+			reverse_opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 2
+				who = ROOT
+			}
+		}
+		transfer_scaled_wealth = { to = FROM value = 0.75 min = 150 max = 400 } 
+		piety = -50
+		hidden_tooltip = { 
+			FROM = { 
+				tiered_piety_negative_effect = yes
+			} 
+		}
+		hidden_tooltip = { character_event = { id = DWBY_coronation.20300 } } #Go to budget event
+		ai_chance = { factor = 100 }
+	}
+	option = {	#End of the line
+		name = EVTOPTBHF20235
+		custom_tooltip = { text = coronation_canceled }
+		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
+		ai_chance = { factor = 0 }
+	}
+}
+
+#On_death of the coronation_priest. Set hidden opinion to ping back to the coronation_ruler.
+character_event = {
+	id = DWBY_coronation.20231
+	hide_window = yes
+	is_triggered_only = yes
+
+	only_rulers = yes
+	min_age = 16
+
+	trigger = {
+		has_any_opinion_modifier = opinion_supposed_to_crown
+	}
+
+	immediate = {
+		any_playable_ruler = { 
+			limit = { 
+				has_opinion_modifier = { 
+					who = ROOT 
+					modifier = opinion_supposed_to_crown 
+				}
+			}
+			character_event = { id = DWBY_coronation.20232 }
+		}
+	}
+}
+
+#King to be crowned: your coronation_priest has died. The ceremony is cancelled.
+character_event = {
+	id = DWBY_coronation.20232
+	desc = EVTDESCHFA20232
+
+	picture = GFX_evt_pope
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAHF20232
+		hidden_tooltip = { remove_trait = travelling }
+		hidden_tooltip = { remove_character_modifier = out_traveling }
+		hidden_tooltip = { set_variable = { which = coronation_count value = 0 } }
+		clr_character_flag = flag_preparing_coronation #Still used when after waging wars
+		clr_character_flag = flag_antipope_for_coronation 
+		clr_character_flag = flag_excommunicated_for_coronation 
+		clr_character_flag = flag_pepin_for_coronation 
+		clr_character_flag = flag_extravagant_coronation
+		clr_character_flag = flag_regular_coronation
+		clr_character_flag = flag_secluded_coronation
+		clr_character_flag = flag_crowned_by_priest
+		clr_character_flag = flag_crowned_by_bishop
+		clr_character_flag = flag_crowned_by_pope
+
+		clr_character_flag = flag_coronation_foreign_friendship
+		clr_character_flag = flag_coronation_vassal_friendship
+		clr_character_flag = flag_coronation_diplomacy_boost
+		clr_character_flag = flag_coronation_learning_boost
+		clr_character_flag = flag_coronation_guest_opinions
+		clr_character_flag = flag_coronation_gain_diligent 
+		clr_character_flag = flag_coronation_gain_ambitious 
+		clr_character_flag = flag_coronation_haughty_child 
+		clr_character_flag = flag_coronation_priest_approves 
+		clr_character_flag = flag_coronation_hre_talk 
+		clr_character_flag = flag_coronation_pope_talk 
+		clr_character_flag = flag_coronation_foreign_teacher 
+		clr_character_flag = flag_coronation_priest_disapproves 
+		clr_character_flag = flag_coronation_diplomatic_incident 
+		clr_character_flag = flag_coronation_cynic_taunts 
+		clr_character_flag = flag_coronation_wandering_knight 
+		clr_character_flag = flag_coronation_wandering_priest
+		clr_character_flag = flag_coronation_random_rivalry 
+		clr_character_flag = flag_coronation_secluded_embarassed 
+		clr_character_flag = flag_coronation_secluded_vassals 
+		clr_character_flag = flag_coronation_secluded_priest 
+		clr_character_flag = flag_coronation_secluded_ambitious 
+		clr_character_flag = flag_coronation_secluded_proud 
+		clr_character_flag = flag_coronation_secluded_steward 
+
+
+		hidden_tooltip = { 
+			any_playable_ruler = { 
+				limit = { 
+					has_opinion_modifier = { 
+						who = ROOT
+						modifier = opinion_coronation_guest 
+					}
+				}
+				remove_trait = travelling
+				remove_opinion = { 
+					who = ROOT
+					modifier = opinion_coronation_guest 
+				}
+				character_event = { id = DWBY_coronation.20233 }
+			} 
+			any_courtier_or_vassal = { 
+				limit = { 
+					has_opinion_modifier = { 
+						who = ROOT
+						modifier = opinion_coronation_guest 
+					}
+				}
+				remove_trait = travelling
+				remove_opinion = { 
+					who = ROOT
+					modifier = opinion_coronation_guest 
+				}
+				character_event = { id = DWBY_coronation.20233 }
+			}
+		}
+	}
+}
+
+#Guest: King to be crowned lost coronation_priest. Coronation has been cancelled.
+character_event = {
+	id = DWBY_coronation.20233
+	desc = EVTDESCHFA20233
+
+	picture = GFX_evt_pope
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAHF20233
+	}
+}
+
+#orgy event
+narrative_event = {
+	id = DWBY_coronation.20236
+	is_triggered_only = yes
+	title = DWBY_coronation.20236.title
+	desc = DWBY_coronation.20236.desc
+	picture = GFX_bwhy_orgy_coronation
+
+
+	option = {
+		name = DWBY_coronation.20236.a
+		hidden_tooltip = { character_event = { id = DWBY_coronation.20300 } } #Go to budget event
+	}
+}
+
+
+########################################################################################################################################
+
+####Coronation sponsor found, now decide how much money to invest in it. (REVISED WITH SCALED WEALTH)
+character_event = {
+	id = DWBY_coronation.20300
+	desc = {
+		trigger = {
+			OR = { 
+				has_character_flag = flag_crowned_by_bishop
+				has_character_flag = flag_crowned_by_pope 
+			}
+			war = no
+		}
+		text = EVTDESCHFA20300
+	}
+	desc = {
+		trigger = {
+			has_character_flag = flag_crowned_by_priest
+			war = no
+		}
+		text = EVTDESCHFB20300
+	}
+	desc = {
+		trigger = {
+			war = yes
+		}
+		text = EVTDESCHFC20300
+		picture = GFX_evt_mounted_combat_day_hf
+	}
+
+	picture = GFX_evt_diplomatic_greeting
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		religion = lilitu
+	}
+	is_triggered_only = yes
+	
+	immediate = {
+		save_event_target_as = coronation_ruler
+		add_character_modifier = {
+			name = out_traveling
+			duration = 66
+			hidden = yes #Make the character inaccessible, the ruler himself is not actually out, he's still at court.
+		}
+	}
+
+	option = {
+		name = EVTOPTAHF20300
+		trigger = { war = no }
+		set_character_flag = flag_extravagant_coronation
+		custom_tooltip = { text = send_extracoronation_invitations }
+		if = { 
+			limit = { ai = no } #Cheaty AI...
+			scaled_wealth = { value = -1 min = -250 max = -1000 }
+		}
+		hidden_tooltip = {
+			character_event = { id = DWBY_coronation.20305 days = 11 } #Ceremony actually starts
+			any_vassal = {
+				limit =  {
+					prisoner = no
+					NOT = { has_character_flag = do_not_disturb }
+					NOT = { has_character_modifier = holding_large_feast }
+					is_adult = yes
+					NOT = { trait = incapable }
+					NOT = { is_inaccessible_trigger = yes }
+					NOT = { has_any_opinion_modifier = opinion_coronation_guest }
+				}
+				character_event = { id = DWBY_coronation.20301 } #Send Invitations
+			}
+			any_independent_ruler = {
+				limit = { 
+					war = no
+					prisoner = no
+					is_theocracy = no
+					NOT = { has_character_flag = do_not_disturb }
+					NOT = { has_character_modifier = holding_large_feast }
+					is_adult = yes
+					NOT = { trait = incapable }
+					NOT = { is_inaccessible_trigger = yes }
+					NOT = { has_any_opinion_modifier = opinion_coronation_guest }
+					religion = ROOT 	
+					is_within_diplo_range = ROOT
+					higher_real_tier_than = DUKE
+					NOT = { distance_from_realm = { who = ROOT value = 120 } }
+				}
+				character_event = { id = DWBY_coronation.20302 } #Send Invitations to other Catholic neighbors
+			}
+		}
+		ai_chance = { 
+			factor = 30 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 1 } 
+			} 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 0.5 } 
+			} 
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 0 } 
+			} 
+			modifier = { 
+				factor = 0
+				NOT = { wealth = -100 } 
+			} 
+			modifier = { 
+				factor = 3
+				tier = EMPEROR
+			} 
+			modifier = { 
+				factor = 0.75
+				trait = greedy
+			} 
+		}
+	}
+	option = {
+		name = EVTOPTBHF20300
+		trigger = { war = no }
+		set_character_flag = flag_regular_coronation
+		custom_tooltip = { text = send_coronation_invitations }
+		hidden_tooltip = {
+			character_event = { id = DWBY_coronation.20305 days = 11 } #Ceremony actually starts
+			any_vassal = {
+				limit =  {
+					prisoner = no
+					NOT = { has_character_flag = do_not_disturb }
+					NOT = { has_character_modifier = holding_large_feast }
+					is_adult = yes
+					NOT = { trait = incapable }
+					NOT = { is_inaccessible_trigger = yes }
+					NOT = { has_any_opinion_modifier = opinion_coronation_guest }
+				}
+				character_event = { id = DWBY_coronation.20301 } #Send Invitations
+			}
+		}
+		if = { 
+			limit = { ai = no } #Cheaty AI...
+			scaled_wealth = { value = -0.5 min = -100 max = -500 }
+		}
+		ai_chance = { 
+			factor = 40 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 0.5 } 
+			} 
+			modifier = { 
+				factor = 0.5
+				NOT = { scaled_wealth = 0.25 } 
+			} 
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 0 } 
+			} 
+			modifier = { 
+				factor = 0
+				NOT = { wealth = -100 } 
+			} 
+			modifier = { 
+				factor = 0.5
+				tier = EMPEROR
+			} 
+			modifier = { 
+				factor = 0.75
+				trait = greedy
+			} 
+		}
+	}
+	option = {
+		name = {
+			text = EVTOPTCHF20300
+			trigger = {
+				war = no
+			}
+		}
+		name = {
+			text = EVTOPTCHF20300_B
+			trigger = {
+				war = yes
+			}
+		}
+		set_character_flag = flag_secluded_coronation
+		custom_tooltip = { text = send_seclcoronation_invitations }
+		if = { 
+			limit = { ai = no } #Cheaty AI...
+			scaled_wealth = { value = -0.05 min = -10 max = -150 }
+		}
+		hidden_tooltip = {
+			character_event = { id = DWBY_coronation.20305 days = 11 } #Ceremony actually starts
+			any_courtier = {
+				limit = { 
+					is_councillor = yes 
+					prisoner = no
+					NOT = { has_character_flag = do_not_disturb }
+					NOT = { has_character_modifier = holding_large_feast }
+					is_adult = yes
+					NOT = { trait = incapable }
+					NOT = { is_inaccessible_trigger = yes }
+					NOT = { has_any_opinion_modifier = opinion_coronation_guest }
+				}
+				character_event = { id = DWBY_coronation.20301 } #Send Invitations
+			}
+		}
+		ai_chance = { 
+			factor = 30 
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 0 } 
+			} 
+			modifier = { 
+				factor = 3
+				NOT = { wealth = -100 } 
+			} 
+			modifier = { 
+				factor = 0.1
+				tier = EMPEROR
+			} 
+			modifier = { 
+				factor = 1.5
+				trait = greedy
+			}
+		}
+	}
+}
+
+#Vassal: King is inviting you to his coronation.
+letter_event = {
+	id = DWBY_coronation.20301
+	desc = EVTDESCHFA20301
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+	trigger = {
+		FROM = {
+			OR = {
+				has_character_flag = flag_crowned_by_priest
+				has_character_flag = flag_crowned_by_bishop
+				has_character_flag = flag_crowned_by_pope
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTAHF20301
+		hidden_tooltip = { FROM = { character_event = { id = DWBY_coronation.20303 days = 3 random = 5 } } } #Notification.
+		opinion = {
+			modifier = opinion_coronation_guest
+			months = 4
+			who = FROM
+		}
+		add_character_modifier = {
+			name = out_traveling #Vassal travel is short, so no regent needed.
+			duration = 45
+		}
+		ai_chance = { 
+			factor = 70 
+		}
+	}
+	option = {	#End of the line
+		name = EVTOPTBHF20301
+		hidden_tooltip = { FROM = { character_event = { id = DWBY_coronation.20304 days = 3 random = 5 } } } #Notification.
+		FROM = { 
+				show_scope_change = no	
+			opinion = {
+				modifier = opinion_dislike
+				years = 10
+				who = ROOT
+			}
+		}
+		ai_chance = { 
+			factor = 30 
+			modifier = {		#Of course he will be present.
+				factor = 0
+				event_target:coronation_priest = { character = ROOT }
+			} 
+			modifier = {
+				factor = 0.3
+				opinion = { who = from value = 100 }
+			}
+			modifier = {
+				factor = 0.4
+				opinion = { who = from value = 80 }
+			}
+			modifier = {
+				factor = 0.5
+				opinion = { who = from value = 60 }
+			}
+			modifier = {
+				factor = 0.65
+				opinion = { who = from value = 40 }
+			}
+			modifier = {
+				factor = 0.75
+				opinion = { who = from value = 20 }
+			}
+			modifier = {
+				factor = 0.85
+				opinion = { who = from value = 0 }
+			}
+			modifier = {
+				factor = 1.15
+				NOT = { opinion = { who = from value = 0 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = from value = -20 } }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { opinion = { who = from value = -40 } }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { opinion = { who = from value = -60 } }
+			}
+			modifier = {
+				factor = 1.75
+				NOT = { opinion = { who = from value = -80 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { opinion = { who = from value = -100 } }
+			}
+		}
+	}
+}
+#Foreign King: King is inviting you to his coronation.
+letter_event = {
+	id = DWBY_coronation.20302
+	desc = EVTDESCHFA20302
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+	trigger = {
+		FROM = {
+			OR = {
+				has_character_flag = flag_crowned_by_priest
+				has_character_flag = flag_crowned_by_bishop
+				has_character_flag = flag_crowned_by_pope
+			}
+		}
+	}
+	
+	
+	option = {
+		name = EVTOPTAHF20302
+		hidden_tooltip = { FROM = { character_event = { id = DWBY_coronation.20303 days = 5 random = 5 } } } #Notification.
+		FROM = { 
+			prestige = 75	# Prestigious guests bring prestige.
+		}
+		opinion = {
+			modifier = opinion_coronation_guest
+			months = 4
+			who = FROM
+		}
+		add_trait = travelling #Foreign King's travel is longer, it needs a regent, as if it were a pilgrimage.
+		#add_character_modifier = {
+		#	name = out_traveling
+		#	duration = 45
+		#}
+		ai_chance = { 
+			factor = 70 
+		}
+	}
+	option = {	#End of the line
+		name = EVTOPTBHF20302
+		hidden_tooltip = { FROM = { character_event = { id = DWBY_coronation.20304 days = 5 random = 5 } } } #Notification.
+		FROM = { 
+				show_scope_change = no	
+			opinion = {
+				modifier = opinion_dislike
+				years = 10
+				who = ROOT
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {		#Of course he will be present.
+				factor = 0
+				event_target:coronation_priest = { character = ROOT }
+			} 
+			modifier = {
+				factor = 0.3
+				opinion = { who = from value = 100 }
+			}
+			modifier = {
+				factor = 0.4
+				opinion = { who = from value = 80 }
+			}
+			modifier = {
+				factor = 0.5
+				opinion = { who = from value = 60 }
+			}
+			modifier = {
+				factor = 0.65
+				opinion = { who = from value = 40 }
+			}
+			modifier = {
+				factor = 0.75
+				opinion = { who = from value = 20 }
+			}
+			modifier = {
+				factor = 0.85
+				opinion = { who = from value = 0 }
+			}
+			modifier = {
+				factor = 1.15
+				NOT = { opinion = { who = from value = 0 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = from value = -20 } }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { opinion = { who = from value = -40 } }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { opinion = { who = from value = -60 } }
+			}
+			modifier = {
+				factor = 1.75
+				NOT = { opinion = { who = from value = -80 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { opinion = { who = from value = -100 } }
+			}
+		}
+	}
+}
+#King Notification: Vassal will come to the Coronation Ceremony
+letter_event = {
+	id = DWBY_coronation.20303
+	desc = EVTDESCHF20303
+
+	trigger = {
+		religion = lilitu
+		OR = {
+			has_character_flag = flag_crowned_by_priest
+			has_character_flag = flag_crowned_by_bishop
+			has_character_flag = flag_crowned_by_pope
+		}
+	}
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAHF20303
+	}
+}
+#King Notification: Vassal will not come to the Coronation Ceremony
+letter_event = {
+	id = DWBY_coronation.20304
+	desc = EVTDESCHF20304
+
+	trigger = {
+		religion = lilitu
+		OR = {
+			has_character_flag = flag_crowned_by_priest
+			has_character_flag = flag_crowned_by_bishop
+			has_character_flag = flag_crowned_by_pope
+		}
+	}
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAHF20304
+	}
+}
+
+#King: Day 11 from budget, ceremony starts.
+character_event = {
+	id = DWBY_coronation.20305
+	desc = {
+		trigger = {
+			has_character_flag = flag_extravagant_coronation 
+			war = no
+		}
+		text = EVTDESCHFA20305
+	}
+	desc = {
+		trigger = {
+			has_character_flag = flag_regular_coronation
+			war = no
+		}
+		text = EVTDESCHFB20305
+	}
+	desc = {
+		trigger = {
+			has_character_flag = flag_secluded_coronation
+			war = no
+		}
+		text = EVTDESCHFC20305
+	}
+
+	desc = {
+		trigger = {
+			war = yes
+		}
+		text = EVTDESDHFD20305
+		picture = GFX_evt_mounted_combat_day_hf
+	}
+
+	picture = GFX_evt_magnificent_castle
+	border = GFX_event_normal_frame_religion
+
+	trigger = { 
+		religion = lilitu
+		OR = {
+			has_character_flag = flag_crowned_by_priest
+			has_character_flag = flag_crowned_by_bishop
+			has_character_flag = flag_crowned_by_pope
+		}
+		event_target:coronation_priest = { is_alive = yes } #Check if the priest supposed to be crowning you is still alive.
+	}
+
+	is_triggered_only = yes
+	
+	option = { #Here we will trigger some random events eventually once I get around creating them
+		name = EVTOPTAHF20305
+		hidden_tooltip = { character_event = { id = DWBY_coronation.20366 days = 32 } } #THE CORONATION ITSELF 
+		
+	}
+}
+
+
+
+
+############################################################################
+
+#CORONATION EVENT
+narrative_event = {
+	id = DWBY_coronation.20366
+	title = EVTTITLE20366
+	
+	desc = {
+		trigger = {
+			ROOT = { 
+				is_female = yes
+			}
+		}
+		text = DWBY_coronation.20366.desc.female		# female
+		picture = GFX_DWBY_coronation_female
+	}
+
+	desc = {
+		trigger = {
+			ROOT = { 
+				NOT = { is_female = yes }
+			}
+		}
+		text = DWBY_coronation.20366.desc.male		# male
+		picture = GFX_DWBY_coronation_male
+	}
+
+
+	picture = GFX_evt_found_hre
+	border = GFX_event_normal_frame_religion
+	hide_new = yes
+
+	trigger = { 
+		NOT = { has_character_flag = flag_being_coronated }
+		event_target:coronation_ruler = { 
+			religion = lilitu
+			OR = {
+				has_character_flag = flag_crowned_by_priest
+				has_character_flag = flag_crowned_by_bishop
+				has_character_flag = flag_crowned_by_pope
+			}
+		}
+		event_target:coronation_priest = { is_alive = yes } #Check if the priest supposed to be crowning you is still alive.
+		event_target:coronation_ruler = { is_alive = yes } #Check if the ruler supposed to be crowned is still alive. (check for guests)
+		event_target:coronation_ruler = { character = ROOT }
+	}
+
+	is_triggered_only = yes
+
+	immediate = { 
+		ROOT = {
+			remove_character_modifiers = { modifier = uncrowned_modifier amount = 30 } 
+			set_variable = { which = uncrowned_count value = 0 }
+			set_character_flag = flag_being_coronated #Safety check to avoid double event.
+		}
+		ROOT = { save_persistent_event_target = { name = coronation_priest_per scope = event_target:coronation_priest } } #Needed to localize the trait properly.
+	} 
+	option = { # Napoleon option
+		name = EVTOPTZDWBY20366
+		trigger = { 
+			tier = EMPEROR
+			age = 16 # Has to be strong enough to grab the crown from the Pope's clutches.
+			event_target:coronation_priest = { has_landed_title = k_papal_state }
+			has_character_flag = flag_extravagant_coronation				#Only allowed to screw everything up if you have spent the most money in it already.
+			OR = { 
+				trait = lunatic
+				trait = possessed
+				AND = { 
+					trait = ambitious
+					primary_title = { has_law = imperial_administration } 
+				}
+			}
+		}
+		add_trait = crowned_by_myself
+		add_character_modifier = {
+			name = extravagant_coronation
+			days = 7300 #20 years
+		}
+		#Notify all guests, then conclude the ceremony.
+		hidden_tooltip = {  
+			character_event = { id = DWBY_coronation.20371 } #Self-Coronation scandal.
+			character_event = { id = DWBY_coronation.20369 days = 3 random = 3 } #wrap up, clear all flags.
+			any_vassal = { 
+				limit = { 
+					has_opinion_modifier = { 
+						who = ROOT 
+						modifier = opinion_coronation_guest 
+					}
+				}
+				character_event = { id = DWBY_coronation.20371 } #Self-Coronation event for guests.
+				character_event = { id = DWBY_coronation.20370 days = 3 random = 3 } #wrap up, clear all flags.
+			}
+			any_vassal = { 
+				limit = { 
+					NOT = { 
+						has_opinion_modifier = { 
+							who = ROOT 
+							modifier = opinion_coronation_guest 
+						}
+					}
+				}
+				character_event = { id = DWBY_coronation.20371 } #Self-Coronation event for vassals who did not attend to the ceremony.
+			}
+			any_independent_ruler = { 
+				limit = { 
+					has_opinion_modifier = { 
+						who = ROOT 
+						modifier = opinion_coronation_guest 
+					}
+				}
+				character_event = { id = DWBY_coronation.20371 } #Coronation event for guests.
+				character_event = { id = DWBY_coronation.20370 days = 3 random = 3 } #wrap up, clear all flags.
+			} 
+			if = {
+				limit = {
+					ai = no
+				}
+				set_character_flag = achievement_leglise_cest_moi
+			}
+		}
+
+		ai_chance = { 	
+			factor = 5		
+		} 
+	} 
+	
+	option = {
+		name = EVTOPTAHF20366
+		#Assign proper trait.
+		if = { 
+			limit = { 
+				has_character_flag = flag_crowned_by_pope 
+			} 
+			custom_tooltip = { text = tooltip_gain_crowned_by_pope }
+			hidden_tooltip = { add_trait = crowned_by_lilitu_pope }
+		}
+		if = { 
+			limit = { 
+				has_character_flag = flag_crowned_by_bishop 
+			} 
+			custom_tooltip = { text = tooltip_gain_crowned_by_bishop }
+			hidden_tooltip = { add_trait = crowned_by_lilitu_bishop }
+		}
+		if = { 
+			limit = { 
+				has_character_flag = flag_crowned_by_priest
+			} 
+			custom_tooltip = { text = tooltip_gain_crowned_by_priest }
+			hidden_tooltip = { add_trait = crowned_by_lilitu_priest }
+		}
+
+		#Assign possible modifier.
+		if = { 
+			limit = { 
+				war = no
+				has_character_flag = flag_secluded_coronation 
+				NOT = { has_character_flag = flag_crowned_by_pope } 
+			} 
+			add_character_modifier = {
+				name = crowned_in_barn
+				days = -1
+			}
+		}
+		if = { 
+			limit = { 
+				war = yes
+				has_character_flag = flag_secluded_coronation 
+			} 
+			add_character_modifier = {
+				name = crowned_in_war
+				days = -1
+			}
+		}
+		if = { 
+			limit = { 
+				has_character_flag = flag_extravagant_coronation 
+				NOT = { has_character_flag = flag_crowned_by_priest } 
+			} 
+			add_character_modifier = {
+				name = extravagant_coronation
+				days = 7300
+			}
+		}
+		#Notify all guests, then conclude the ceremony.
+		hidden_tooltip = {  
+			character_event = { id = DWBY_coronation.20369 days = 3 random = 3 } #wrap up, clear all flags.
+			any_vassal = { 
+				limit = { 
+					has_opinion_modifier = { 
+						who = ROOT 
+						modifier = opinion_coronation_guest 
+					}
+				}
+				character_event = { id = DWBY_coronation.20367 } #Coronation event for guests.
+				character_event = { id = DWBY_coronation.20370 days = 3 random = 3 } #wrap up, clear all flags.
+			}
+			any_vassal = { 
+				limit = { 
+					NOT = { 
+						has_opinion_modifier = { 
+							who = ROOT 
+							modifier = opinion_coronation_guest 
+						}
+					}
+				}
+				character_event = { id = DWBY_coronation.20368 } #Smaller notification for vassals who did not attend to the ceremony.
+			}
+			any_independent_ruler = { 
+				limit = { 
+					has_opinion_modifier = { 
+						who = ROOT 
+						modifier = opinion_coronation_guest 
+					}
+				}
+				character_event = { id = DWBY_coronation.20367 } #Coronation event for guests.
+				character_event = { id = DWBY_coronation.20370 days = 3 random = 3 } #wrap up, clear all flags.
+			} 
+		} 
+		ai_chance = { 	
+			factor = 95		
+		}
+	}
+	after= { 	
+		hidden_tooltip = { remove_character_modifier = coronation_request_cooldown }
+		clr_character_flag = flag_being_coronated
+	}
+}
+
+#CORONATION EVENT (for guests)
+character_event = {
+	id = DWBY_coronation.20367
+	title = EVTTITLE20366
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				OR = { 
+					has_landed_title = e_hre 
+					has_landed_title = e_france
+				}
+				NOT = { has_character_flag = flag_secluded_coronation }
+				has_character_flag = flag_crowned_by_pope
+			}
+		}
+		text = EVTDESCHFA20367		# Top localization for an Holy Roman Emperor crowned by the Pope (not in a barn).
+		picture = GFX_evt_found_hre
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				tier = EMPEROR
+				NOR = { 
+					has_landed_title = e_hre 
+					has_landed_title = e_france
+				}
+				NOT = { has_character_flag = flag_secluded_coronation }
+				has_character_flag = flag_crowned_by_pope
+				age = 16
+			}
+		}
+		text = EVTDESCHFB20367		# Localization for any adult Emperor crowned by the Pope (not in a barn).
+		picture = GFX_evt_found_hre
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				tier = EMPEROR
+				NOR = { 
+					has_landed_title = e_hre 
+					has_landed_title = e_france
+				}
+				NOT = { has_character_flag = flag_secluded_coronation }
+				has_character_flag = flag_crowned_by_pope
+				NOT = { age = 16 }
+			}
+		}
+		text = EVTDESCHFC20367		# Localization for any child Emperor crowned by the Pope (not in a barn).
+		picture = GFX_evt_found_hre
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				tier = KING
+				NOT = { has_character_flag = flag_secluded_coronation }
+				has_character_flag = flag_crowned_by_pope
+				age = 16
+			}
+		}
+		text = EVTDESCHFD20367		# Localization for any adult King crowned by the Pope (not in a barn).
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				tier = KING
+				NOT = { has_character_flag = flag_secluded_coronation }
+				has_character_flag = flag_crowned_by_pope
+				NOT = { age = 16 }
+			}
+		}
+		text = EVTDESCHFE20367		# Localization for any child King crowned by the Pope (not in a barn).
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				NOT = { has_character_flag = flag_secluded_coronation }
+				NOT = { has_character_flag = flag_crowned_by_pope }
+				age = 16
+			}
+		}
+		text = EVTDESCHFF20367		# Localization for any adult ruler crowned by a Bishop or Priest (not in a barn).
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				NOT = { has_character_flag = flag_secluded_coronation }
+				NOT = { has_character_flag = flag_crowned_by_pope }
+				NOT = { age = 16 }
+			}
+		}
+		text = EVTDESCHFG20367		# Localization for any child ruler crowned by a Bishop or Priest (not in a barn).
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				has_character_flag = flag_secluded_coronation
+				has_character_flag = flag_crowned_by_pope
+				age = 16
+			}
+		}
+		text = EVTDESCHFH20367		# Localization for any adult ruler crowned by the Pope in a barn.
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				has_character_flag = flag_secluded_coronation
+				has_character_flag = flag_crowned_by_pope
+				NOT = { age = 16 }
+			}
+		}
+		text = EVTDESCHFI20367		# Localization for any child ruler crowned by the Pope in a barn.
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+				has_character_flag = flag_secluded_coronation
+				NOT = { has_character_flag = flag_crowned_by_pope }
+			}
+		}
+		text = EVTDESCHFL20367		# Localization for any ruler crowned by a Bishop or Priest in a barn.
+		picture = GFX_evt_a_crowning_ceremony
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = yes
+				NOT = { has_character_flag = flag_crowned_by_pope }
+			}
+		}
+		text = EVTDESCHFM20367		# War Coronation description.
+		picture = GFX_evt_mounted_combat_day_hf
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = yes
+				has_character_flag = flag_crowned_by_pope
+			}
+		}
+		text = EVTDESCHFN20367		# War Coronation description.
+		picture = GFX_evt_mounted_combat_day_hf
+	}
+
+	picture = GFX_evt_a_crowning_ceremony
+	border = GFX_event_normal_frame_religion
+
+	trigger = { 
+		event_target:coronation_priest = { is_alive = yes } #Check if the priest supposed to be crowning you is still alive.
+		event_target:coronation_ruler = { is_alive = yes } #Check if the ruler supposed to be crowned is still alive. (check for guests)
+		has_opinion_modifier = { 
+			who = event_target:coronation_ruler 
+			modifier = opinion_coronation_guest 
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				FROM = { war = no has_character_modifier = crowned_in_barn }
+			}
+			sound_effect = coronation_barn
+		}
+		else_if = {
+			limit = {
+				FROM = { has_character_modifier = extravagant_coronation }
+			}
+			sound_effect = coronation_extravagant
+		}
+		else = {
+			sound_effect = coronation_normal
+		}
+	}
+
+	option = {
+		name = EVTOPTAHF20367
+
+		#Assign scaled piety.
+		if = { 
+			limit = { 
+				FROM = { has_character_flag = flag_crowned_by_pope } 
+			} 
+			piety = 10
+		}
+		if = { 
+			limit = { 
+				FROM = { has_character_flag = flag_crowned_by_bishop } 
+			} 
+			piety = 20
+		}
+		if = { 
+			limit = { 
+				FROM = { has_character_flag = flag_crowned_by_priest } 
+			} 
+			piety = 30
+		}
+
+		#Assign scaled prestige.
+		if = { 
+			limit = { 
+				FROM = { 
+					has_character_flag = flag_secluded_coronation 
+					NOT = { has_character_flag = flag_crowned_by_pope } 
+				}  
+			} 
+			prestige = -25
+		}
+		if = { 
+			limit = { 
+				FROM = { has_character_flag = flag_regular_coronation }  
+			} 
+			prestige = 50
+		}
+		if = { 
+			limit = { 
+				FROM = { 
+					has_character_flag = flag_extravagant_coronation 
+					NOT = { has_character_flag = flag_crowned_by_pope } 
+				} 
+			} 
+			prestige = 75
+		}
+		if = { 
+			limit = { 
+				FROM = { 
+					has_character_flag = flag_extravagant_coronation 
+					has_character_flag = flag_crowned_by_pope 
+				}
+			} 
+			prestige = 100
+		}
+		ai_chance = { 	
+			factor = 100		
+		}
+	}
+}
+
+#Notifications for vassals who did not attend.
+character_event = {
+	id = DWBY_coronation.20368
+	title = EVTTITLE20366
+	desc = {
+		trigger = {
+			ROOT = { 
+				war = no
+			}
+		}
+		text = EVTDESCHFA20368
+	}
+	desc = {
+		trigger = {
+			ROOT = { 
+				war = yes
+			}
+		}
+		text = EVTDESCHFA20368
+		picture = GFX_evt_mounted_combat_day_hf
+	}
+
+	picture = GFX_evt_a_crowning_ceremony
+	border = GFX_event_normal_frame_religion
+
+	trigger = { 
+		event_target:coronation_priest = { is_alive = yes } #Check if the priest supposed to be crowning you is still alive.
+		event_target:coronation_ruler = { is_alive = yes } #Check if the ruler supposed to be crowned is still alive. (check for guests)
+		vassal_of = FROM
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				FROM = { has_character_modifier = crowned_in_barn war = no }
+			}
+			sound_effect = coronation_barn
+		}
+		else_if = {
+			limit = {
+				FROM = { has_character_modifier = extravagant_coronation }
+			}
+			sound_effect = coronation_extravagant
+		}
+		else = {
+			sound_effect = coronation_normal
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAHF20368
+		ai_chance = { 	
+			factor = 100		
+		}
+	}
+}
+
+#Crowned King: the Coronation ceremony has concluded. END OF THE LINE. HIDDEN FOR REDUNDANCY.
+character_event = {
+	id = DWBY_coronation.20369
+	desc = EVTDESCHFA20369
+	hide_window = yes
+
+	picture = GFX_evt_pope
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	#option = {
+	#	name = EVTOPTAHF20369
+	immediate = {
+		hidden_tooltip = { #Post-ceremony flavor.
+			if = { 
+				limit = { has_character_modifier = crowned_in_barn } 
+				random = { 
+					chance = 30 
+					character_event = { id = DWBY_coronation.20388 days = 100 random = 100 } #Emperor humbled by Crowning in a barn.
+				}
+			}
+			random = { 
+				chance = 30 
+			} 
+			if = { 
+				limit = { has_character_flag = flag_extravagant_coronation } 
+				random = { 
+					chance = 30 
+					character_event = { id = DWBY_coronation.20389 days = 50 random = 50 } #Peasants are still celebrating after the coronation. What do you do?
+				}
+			}
+			if = { 
+				limit = { has_character_flag = flag_extravagant_coronation } 
+				random = { 
+					chance = 30 
+					character_event = { id = DWBY_coronation.20390 days = 50 random = 50 } #Word of great coronation spreads, giving additional prestige.
+				}
+			}
+			if = { 
+				limit = { has_character_flag = flag_extravagant_coronation } 
+				random = { 
+					chance = 30 
+					character_event = { id = DWBY_coronation.20391 days = 150 random = 150 } #Capital economy increased because of coronation.
+				}
+			}
+		}
+		hidden_tooltip = { remove_character_modifier = out_traveling }
+		hidden_tooltip = { remove_trait = travelling }
+		hidden_tooltip = { set_variable = { which = coronation_count value = 0 } }
+
+		clr_character_flag = flag_preparing_coronation 
+		clr_character_flag = flag_antipope_for_coronation 
+		clr_character_flag = flag_excommunicated_for_coronation 
+		clr_character_flag = flag_pepin_for_coronation 
+		clr_character_flag = flag_extravagant_coronation
+		clr_character_flag = flag_regular_coronation
+		clr_character_flag = flag_secluded_coronation
+
+		clr_character_flag = flag_crowned_by_priest
+		clr_character_flag = flag_crowned_by_bishop
+		clr_character_flag = flag_crowned_by_pope
+
+		clr_character_flag = flag_coronation_foreign_friendship
+		clr_character_flag = flag_coronation_vassal_friendship
+		clr_character_flag = flag_coronation_diplomacy_boost
+		clr_character_flag = flag_coronation_learning_boost
+		clr_character_flag = flag_coronation_guest_opinions
+		clr_character_flag = flag_coronation_gain_diligent 
+		clr_character_flag = flag_coronation_gain_ambitious 
+		clr_character_flag = flag_coronation_haughty_child 
+		clr_character_flag = flag_coronation_priest_approves 
+		clr_character_flag = flag_coronation_hre_talk 
+		clr_character_flag = flag_coronation_pope_talk 
+		clr_character_flag = flag_coronation_foreign_teacher 
+		clr_character_flag = flag_coronation_priest_disapproves 
+		clr_character_flag = flag_coronation_diplomatic_incident 
+		clr_character_flag = flag_coronation_cynic_taunts 
+		clr_character_flag = flag_coronation_wandering_knight 
+		clr_character_flag = flag_coronation_wandering_priest
+		clr_character_flag = flag_coronation_random_rivalry 
+		clr_character_flag = flag_coronation_secluded_embarassed 
+		clr_character_flag = flag_coronation_secluded_vassals 
+		clr_character_flag = flag_coronation_secluded_priest 
+		clr_character_flag = flag_coronation_secluded_ambitious 
+		clr_character_flag = flag_coronation_secluded_proud 
+		clr_character_flag = flag_coronation_secluded_steward 
+	}
+}
+
+#Coronation Guest: the Coronation ceremony has concluded. END OF THE LINE.
+character_event = {
+	id = DWBY_coronation.20370
+	desc = {
+		trigger = {
+			FROM = { 
+				war = no
+			}
+		}
+		text = EVTDESCHFB20370
+	}
+	desc = {
+		trigger = {
+			FROM = { 
+				war = yes
+			}
+		}
+		text = EVTDESCHFC20370		# War Coronation description.
+		picture = GFX_evt_mounted_combat_day_hf
+	}
+
+	picture = GFX_evt_pope
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAHF20370
+		if = { 
+			limit = { trait = travelling }
+			remove_trait = travelling
+		}
+		if = { 
+			limit = { has_character_modifier = out_traveling }
+			remove_character_modifier = out_traveling
+		}
+		hidden_tooltip = {
+			remove_opinion = {
+				modifier = opinion_coronation_guest
+				who = FROM
+			}
+		}
+		if = { 
+			limit = { 
+				FROM = { has_character_modifier = extravagant_coronation }
+				independent = yes
+				higher_real_tier_than = DUKE
+				OR = { 
+					has_character_modifier = crowned_in_barn
+					NOR = { 
+						trait = crowned_by_priest
+						trait = crowned_by_bishop
+						trait = crowned_by_pope
+						trait = crowned_by_myself
+					}
+				}
+			}
+			hidden_tooltip = { character_event = { id = DWBY_coronation.20392 days = 50 random = 50 } } #Envious ruler who isn't crowned or is crowned in barn is upset that his host had a good coronation.
+		}
+
+	}
+}
+
+#Crazy Napoleon ruler snatched the crown from the Pope's hands and crowned himself Emperor.
+character_event = {
+	id = DWBY_coronation.20371
+	title = EVTTITLE20371
+	desc = {
+		trigger = {
+			ROOT = { character = FROM } #Desc for Ruler.
+		}
+		text = EVTDESCHFA20371
+	}
+	desc = {
+		trigger = {
+			ROOT = { 
+				has_opinion_modifier = { #Desc for Guests
+					who = event_target:coronation_ruler 
+					modifier = opinion_coronation_guest 
+				}
+			}
+		}
+		text = EVTDESCHFB20371		
+	}
+
+	desc = {
+		trigger = {
+			ROOT = { 
+				vassal_of = FROM
+				NOT = { 
+					has_opinion_modifier = { #Desc for Vassals who did not attend.
+						who = event_target:coronation_ruler 
+						modifier = opinion_coronation_guest 
+					}
+				}
+			}
+		}
+		text = EVTDESCHFC20371		
+	}
+	picture = GFX_evt_a_crowning_ceremony
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { 
+			character = FROM #King
+			has_opinion_modifier = { #Guests
+				who = event_target:coronation_ruler 
+				modifier = opinion_coronation_guest 
+			}
+			vassal_of = FROM #Vassals
+		}
+
+	}
+
+	option = {
+		name = EVTOPTAHF20371
+		trigger = {
+			ROOT = { character = FROM }
+		}
+		add_trait = excommunicated
+		prestige = 400
+		piety = -250
+	}
+	option = {
+		name = EVTOPTBHF20371
+		trigger = {
+			ROOT = { NOT = { character = FROM } }
+			ROOT = { 
+				has_opinion_modifier = { 
+					who = event_target:coronation_ruler 
+					modifier = opinion_coronation_guest 
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCHF20371
+		trigger = {
+			ROOT = { NOT = { character = FROM } }
+			ROOT = { 
+				vassal_of = FROM
+				NOT = { 
+					has_opinion_modifier = { #Desc for Vassals who did not attend.
+						who = event_target:coronation_ruler 
+						modifier = opinion_coronation_guest 
+					}
+				}
+			}
+		}
+	}
+}
+
+###################################################################################################################

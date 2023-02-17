@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "pic_elven_season"
+		texturefile = "gfx/event_pictures/pic_elven_season.dds"
+	}
+	
+	spriteType = {
+		name = "elfblood"
+		texturefile = "gfx/event_pictures/elfblood.dds"
+	}
+	
+}

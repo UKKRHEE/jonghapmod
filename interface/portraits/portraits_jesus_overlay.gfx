@@ -1,0 +1,491 @@
+# hair, mouth, chin, nose, eyes, cheek, ear, neck
+spriteTypes = {
+
+		spriteType = {
+		name = "GFX_jesus_base"
+		texturefile = "gfx\\characters\\shared\\jesus_portrait.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	spriteType = {
+		name = "GFX_neko_child_male"
+		texturefile = "gfx/static_portraits/neko_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_neko_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = neko_child2
+			}
+		}
+		
+		layer = { 
+			"GFX_neko_child_male:p0"
+		}
+	}
+########################################	
+
+	spriteType = {
+		name = "GFX_wife_of_minhyee"
+		texturefile = "gfx/static_portraits/3.png"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_wife_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = { 
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = jesus_of_god #아내, 예수 그리스도
+			}
+		}
+		
+		layer = { 
+			"GFX_wife_of_minhyee:p0"
+		}
+	}
+	
+########################################	
+	spriteType = {
+		name = "GFX_dougther_of_minhyee"
+		texturefile = "gfx/static_portraits/2.png"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_dougther_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dougther_of_minhyee #딸 1
+			}
+		}
+		
+		layer = { 
+			"GFX_dougther_of_minhyee:p0"
+		}
+	}
+########################################	
+	spriteType = {
+		name = "GFX_dougther_of_minhyee_2"
+		texturefile = "gfx/static_portraits/1.png"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_dougther_of_minhyee_2"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dougther_of_minhyee_2 #딸 2
+			}
+		}
+		
+		layer = { 
+			"GFX_dougther_of_minhyee_2:p0"
+		}
+	}
+########################################	
+	spriteType = {
+		name = "GFX_dougther_of_minhyee_3"
+		texturefile = "gfx/static_portraits/6.png"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_dougther_of_minhyee_3"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dougther_of_minhyee_3 #딸 3
+			}
+		}
+		
+		layer = { 
+			"GFX_dougther_of_minhyee_3:p0"
+		}
+	}
+########################################	
+	spriteType = {
+		name = "GFX_sister_of_minhyee_4"
+		texturefile = "gfx/static_portraits/sister_of_minhyee.png" 
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_sister_of_minhyee_4"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = sister_of_minhyee_2 #누나
+			}
+		}
+		
+		layer = { 
+			"GFX_sister_of_minhyee_4:p0"
+		}
+	}
+########################################	
+	spriteType = {
+		name = "GFX_mother_of_minhyee"
+		texturefile = "gfx/static_portraits/mother_of_minhyee.png"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_mother_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dougther_of_minhyee_4 #엄마
+			}
+		}
+		
+		layer = { 
+			"GFX_mother_of_minhyee:p0"
+		}
+	}
+########################################	
+	
+	spriteType = {
+		name = "GFX_minhyee_the_god"
+		texturefile = "gfx/static_portraits/minhyee.png"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_minhyee_the_god"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = yiminhyee #본인
+			}
+		}
+		
+		layer = { 
+			"GFX_minhyee_the_god:p0"
+		}
+	}
+########################################	
+	
+	spriteType = {
+		name = "GFX_son_of_minhyee"
+		texturefile = "gfx/static_portraits/son.png"
+		noOfFrames = 1static_portraits
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_son_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = son_of_minhyee #아들
+			}
+		}
+		
+		layer = { 
+			"GFX_son_of_minhyee:p0"
+		}
+	}
+	
+	spriteType = {
+		name = "GFX_first_son_of_minhyee"
+		texturefile = "gfx/static_portraits/first_son.png"
+		noOfFrames = 1static_portraits
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_first_son_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = first_son_of_minhyee #아들
+			}
+		}
+		
+		layer = { 
+			"GFX_first_son_of_minhyee:p0"
+		}
+	}
+
+
+###########################	
+	spriteType = {
+		name = "GFX_pussy_of_all"
+		texturefile = "gfx/static_portraits/pussy_of_all.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_pussy_of_all"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dougther_of_minhyee_5
+			}
+		}
+		
+		layer = { 
+			"GFX_pussy_of_all:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_frankish_sister_of_minhyee"
+		texturefile = "gfx/static_portraits/frankish_sister_of_minhyee.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_frankish_sister_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = frankish_sister_of_minhyee
+			}
+		}
+		
+		layer = { 
+			"GFX_frankish_sister_of_minhyee:p0"
+		}
+	}
+	
+	spriteType = {
+		name = "GFX_grandma_of_minhyee"
+		texturefile = "gfx/static_portraits/grandma_of_minhyee.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_grandma_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dougther_of_minhyee_6
+			}
+		}
+		
+		layer = { 
+			"GFX_grandma_of_minhyee:p0"
+		}
+	}
+	
+	spriteType = {
+		name = "GFX_grandma_of_minhyee_2"
+		texturefile = "gfx/static_portraits/grandma_of_minhyee_2.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_grandma_of_minhyee_2"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = grandma_of_minhyee_2
+			}
+		}
+		
+		layer = { 
+			"GFX_grandma_of_minhyee_2:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_sexy_dougther_of_minhyee"
+		texturefile = "gfx/static_portraits/sexy_dougther_of_minhyee.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_sexy_dougther_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = sister_of_minhyee
+			}
+		}
+		
+		layer = { 
+			"GFX_sexy_dougther_of_minhyee:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_chinese_empress"
+		texturefile = "gfx/static_portraits/chinese_empress.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_chinese_empress"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = chinese_empress
+			}
+		}
+		
+		layer = { 
+			"GFX_chinese_empress:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_meoneulyee_of_minhyee"
+		texturefile = "gfx/static_portraits/meoneulyee_of_minhyee.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_meoneulyee_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = meoneulyee_of_minhyee
+			}
+		}
+		
+		layer = { 
+			"GFX_meoneulyee_of_minhyee:p0"
+		}
+	}
+	
+	spriteType = {
+		name = "GFX_grandson_of_minhyee_2"
+		texturefile = "gfx/static_portraits/grandson_of_minhyee.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_grandson_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = grandson_of_minhyee
+			}
+		}
+		
+		layer = { 
+			"GFX_grandson_of_minhyee_2:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_holyorder_of_minhyee"
+		texturefile = "gfx/static_portraits/neko_child_male.dds" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_holyorder_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = holyorder_of_minhyee
+			}
+		}
+		
+		layer = { 
+			"GFX_holyorder_of_minhyee:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_holyorder_grandson_of_minhyee"
+		texturefile = "gfx/static_portraits/holyorder_grandson_of_minhyee.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_holyorder_grandson_of_minhyee"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = holyorder_grandson_of_minhyee
+			}
+		}
+		
+		layer = { 
+			"GFX_holyorder_grandson_of_minhyee:p0"
+		}
+	}
+}

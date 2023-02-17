@@ -1,0 +1,213 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Custom Localisation Keys
+
+#AVIALABLE CUSTOM LOCALISATION KEYS
+#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
+# To not display anything, you can use 'localisation_key = ""'
+
+#현재 스코프는 THIS, 상대(?)는 ROOT.
+#The relationship This has to Root
+
+
+
+
+defined_text = {	name = AMD_CLK_PLACEHOLDER0		#완전 범용. 사용 자제.
+	text = {	localisation_key = AMD_EVTDESC_ERROR
+		trigger = {
+			event_target:AMD_ET_POV = {
+				OR = {
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_DOABLE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_DOABLE
+				}
+			}
+		}
+	}
+	text = {	localisation_key = AMD_EVTDESC_2P
+		trigger = {
+			event_target:AMD_ET_POV = {
+				NOT = {
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_DOABLE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_DOABLE
+				}
+			}
+			AMD_T_STF_IS_2P = yes
+			AMD_T_STF_IS_ERA = no
+		}
+	}
+	text = {	localisation_key = AMD_EVTDESC_ORGY
+		trigger = {
+			event_target:AMD_ET_POV = {
+				NOT = {
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_DOABLE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_DOABLE
+				}
+			}
+			AMD_T_STF_IS_2P = no
+			AMD_T_STF_IS_ORGY = yes
+		}
+	}
+	text = {	localisation_key = AMD_EVTDESC_ERA
+		trigger = {
+			event_target:AMD_ET_POV = {
+				NOT = {
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_ALIVE
+					has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_DOABLE
+					has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_DOABLE
+				}
+			}
+			AMD_T_STF_IS_ERA = yes
+		}
+	}
+}
+
+defined_text = {	name = AMD_CLK_ERROR101		#에러101: ATK부재
+	text = {	localisation_key = AMD_String_Error101
+		trigger = {
+			event_target:AMD_ET_POV = {
+				has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_ALIVE
+			}
+		}
+	}
+}
+defined_text = {	name = AMD_CLK_ERROR102		#에러102: DEF부재
+	text = {	localisation_key = AMD_String_Error102
+		trigger = {
+			event_target:AMD_ET_POV = {
+				has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_ALIVE
+			}
+		}
+	}
+}
+defined_text = {	name = AMD_CLK_ERROR103		#에러103: ATK불능
+	text = {	localisation_key = AMD_String_Error103
+		trigger = {
+			event_target:AMD_ET_POV = {
+				has_character_flag = AMD_CF_ERROR_ATK_IS_NOT_DOABLE
+			}
+		}
+	}
+}
+defined_text = {	name = AMD_CLK_ERROR104		#에러104: DEF불능
+	text = {	localisation_key = AMD_String_Error104
+		trigger = {
+			event_target:AMD_ET_POV = {
+				has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_DOABLE
+			}
+		}
+	}
+}
+defined_text = {	name = AMD_CLK_ERROR104		#에러104: DEF불능
+	text = {	localisation_key = AMD_String_Error104
+		trigger = {
+			event_target:AMD_ET_POV = {
+				has_character_flag = AMD_CF_ERROR_DEF_IS_NOT_DOABLE
+			}
+		}
+	}
+}
+
+
+defined_text = {	name = AMD_CLK_EVTDESC_2P_GAY
+	text = {	localisation_key = AMD_EVTDESC_2P_GAY_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EVTDESC_2P_GAY_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EVTOPT_2P_GAY
+	text = {	localisation_key = AMD_EVTOPT_2P_GAY_CONS	trigger = {	AMD_T_STF_IS_PURE = yes	}	}
+	text = {	localisation_key = AMD_EVTOPT_2P_GAY_TRADE	trigger = {	AMD_T_STF_IS_TRADE = yes	}	}
+	text = {	localisation_key = AMD_EVTOPT_2P_GAY_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EVTDESC_2P_LES
+	text = {	localisation_key = AMD_EVTDESC_2P_LES_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EVTDESC_2P_LES_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+}
+defined_text = {	name = AMD_CLK_EVTOPT_2P_LES
+	text = {	localisation_key = AMD_EVTOPT_2P_LES_CONS	trigger = {	AMD_T_STF_IS_CONS = yes	}	}
+	text = {	localisation_key = AMD_EVTOPT_2P_LES_RAPE	trigger = {	AMD_T_STF_IS_RAPE = yes	}	}
+}
+
+
+
+
+defined_text = {	name = GetSexSkill
+	text = {	localisation_key = AMD_String_Skill_1	trigger = {	trait = AMD_sex_skill_1	}	}
+	text = {	localisation_key = AMD_String_Skill_2	trigger = {	trait = AMD_sex_skill_2	}	}
+	text = {	localisation_key = AMD_String_Skill_3	trigger = {	trait = AMD_sex_skill_3	}	}
+	text = {	localisation_key = AMD_String_Skill_4	trigger = {	trait = AMD_sex_skill_4	}	}
+	text = {	localisation_key = AMD_String_Skill_5	trigger = {	trait = AMD_sex_skill_5	}	}
+	text = {	localisation_key = AMD_String_Skill_0
+		trigger = {
+			NOT = {
+				trait = AMD_sex_skill_1
+				trait = AMD_sex_skill_2
+				trait = AMD_sex_skill_3
+				trait = AMD_sex_skill_4
+				trait = AMD_sex_skill_5
+			}
+		}
+	}
+}
+defined_text = {	name = GetBodySize
+	text = {	localisation_key = AMD_String_Penis_1	trigger = {	trait = AMD_penis_1	}	}
+	text = {	localisation_key = AMD_String_Penis_2	trigger = {	trait = AMD_penis_2	}	}
+	text = {	localisation_key = AMD_String_Penis_3	trigger = {	trait = AMD_penis_3	}	}
+	text = {	localisation_key = AMD_String_Penis_4	trigger = {	trait = AMD_penis_4	}	}
+	text = {	localisation_key = AMD_String_Penis_5	trigger = {	trait = AMD_penis_5	}	}
+	text = {	localisation_key = AMD_String_Penis_0
+		trigger = {
+			NOT = {
+				trait = AMD_penis_1
+				trait = AMD_penis_2
+				trait = AMD_penis_3
+				trait = AMD_penis_4
+				trait = AMD_penis_5
+			}
+		}
+	}
+	text = {	localisation_key = AMD_String_Breast_1	trigger = {	trait = AMD_breast_1	}	}
+	text = {	localisation_key = AMD_String_Breast_2	trigger = {	trait = AMD_breast_2	}	}
+	text = {	localisation_key = AMD_String_Breast_3	trigger = {	trait = AMD_breast_3	}	}
+	text = {	localisation_key = AMD_String_Breast_4	trigger = {	trait = AMD_breast_4	}	}
+	text = {	localisation_key = AMD_String_Breast_5	trigger = {	trait = AMD_breast_5	}	}
+	text = {	localisation_key = AMD_String_Breast_0
+		trigger = {
+			NOT = {
+				trait = AMD_breast_1
+				trait = AMD_breast_2
+				trait = AMD_breast_3
+				trait = AMD_breast_4
+				trait = AMD_breast_5
+			}
+		}
+	}
+	
+}
+
+
+
+defined_text = {	name = AMD_CLK_GetHadSexCons
+	text = {	localisation_key = AMD_String_CONS_SEX1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX3	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX4	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_CONS_SEX5	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetHadSexRape
+	text = {	localisation_key = AMD_String_RAPE_SEX1	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX2	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX3	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX4	trigger = {	always = yes	}	}
+	text = {	localisation_key = AMD_String_RAPE_SEX5	trigger = {	always = yes	}	}
+}
+defined_text = {	name = AMD_CLK_GetTradeItem
+	text = {	localisation_key = AMD_String_TRADE_ITEM_1
+		trigger = {	always = yes	}
+	}
+}
+
+

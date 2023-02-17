@@ -1,0 +1,412 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Buildings
+
+#	트리거는 해당 건물이 들어갈 프로빈스 스코프. FROM 스코프는 해당 홀딩의 소유자(캐릭터) 스코프.
+# start trigger is in title scope.
+# Building format
+		#potential
+		#desc
+		#add_number_to_name
+		#replaces	#특정 문화권이나 조건하에서, 지정한 건물을 대체함.
+		#trigger
+		#port		#이 프로빈스가 항구여야 함
+		#prerequisites = { tb_market_town_1 }	#선행 필요 건물
+		#upgrades_from = dw_slave_pen_1	#특정 건물로부터 업그레이드됨
+		#convert_to_city = ㅁㅁㅁ	홀딩 종류가 변경될시 지정한 건물로 변환됨
+		#convert_to_castle = 
+		#convert_to_temple = 
+		#convert_to_tribal = 
+		#not_if_x_exists
+		#upgrades_from
+		#gold_cost
+		#prestige_cost
+		#build_time
+		#ai_creation_factor
+		#ai_feudal_modifier
+		#ai_republic_modifier
+		#extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#scouting - No idea what this is for
+		#modifiers provided by the building
+ 
+ #	desc = description used in the tooltip of the building
+ #	trigger = used for tech requirement of the building, set to 0 if no requirement so it can be build automatically on new games
+ #	gold_cost = cost to build the building
+ #	build_time = time to build, in days
+ #	
+ #	ai_creation_factor = weight that the AI uses to determine what building to build
+ #	extra_tech_building_start = when starting a new game this building will be pre-built if the province has higher tech than the requirement + this + random 0-1
+ #}
+ 
+ # Building specific modifiers are:
+# tax_income 	Taxes from holding in demesne 	Flat
+# levy_size 	Maximum levies. Does not influence fleet size. 	Percent
+# land_morale 	Morale of realm army 	Percent
+# garrison_size 	Size of holding garrison 	Percent
+# fort_level 	Holding fort level 	Flat
+# tech_growth_modifier 	Growth rate of all technology types. 	Percent
+# <tech_type>_techpoints 	Generation of technology points in province 	Percent
+# tradevalue 	Trade zone value 	Flat
+# trade_route_wealth
+# trade_route_value
+# max_population_mult 		Percent
+# diplomacy 	Diplomacy skill of a character 	Flat
+# stewardship 	Stewardship skill of a character 	Flat
+# martial 	Martial skill of a character 	Flat
+# intrigue 	Intrigue skill of a character 	Flat
+# learning 	Learning skill of a character 	Flat
+# fertility 	Fertility of a character. 	Percent
+# demesne_size 	Maximum demesne size 	Flat
+# liege_prestige 	Gives prestige to building owner and his/her liege	Flat
+# church_opinion 	Gives piety to building owner and his/her liege	Flat
+# moved_capital_months_mult 	Modifies the delay for how often one can change capital, if their government allows for more frequent switching than once per lifetime. Scripted on capital buildings.
+# nomad_tax_modifier
+# ai_feudal_modifier 	Influences the AI's building creation weight if the ai is feudal, or if tribal but strive to become feudal 	Flat
+# ai_republic_modifier 	Influences the AI's building creation weight if the ai is a republic, or if tribal but strive to become a republic 	Flat
+# vassal_opinion 	Changes a vassal's opinion of you 	Flat
+# sex_appeal_opinion 	Changes the other sex's opinion of you (or same sex if Homosexual), until age 45 for women and 65 for men 	Flat
+# church_opinion 	Changes the clergy's opinion of you 	Flat
+# clan_sentiment
+# levy_reinforce_rate 	Time for levies to regenerate 	Percent
+# <unit>_offensive 		Percent
+# <unit>_defensive 		Percent
+# <unit>_morale 		Percent
+# global_winter_supply 	Applicable on the capital.
+# global_movement_speed 		Percent
+# retinuesize 	Number of retinues 	Flat
+# retinuesize_perc 	Number of retinues 	Percent
+# horde_maintenence_cost 	Applicable on characters, family palaces and the capital.
+# commander_limit 	Increases the number of commanders a ruler can have. Scripted in buildings for capital settlements. 	Flat
+# max_tradeposts 	Maximum number of trade posts 	Flat
+# global_trade_route_wealth 	Applicable on the capital of holders of a trade post.
+# global_trade_route_value 	Applicable on the capital of holders of a trade post.
+# global_tradevalue 	Applicable on the capital of holders of a trade post.
+# max_population 		Flat 
+
+
+#성, 도시, 유목민, 가문저택만 업그레이드 가능.
+castle = {
+	AMD_building_brothel_castle_1 = {
+		desc = AMD_building_brothel_castle_desc
+		add_number_to_name = no
+		trigger = {	TECH_TRADE_PRACTICES = 0	}	#필요 테크 없음
+		prerequisites = { ca_town_1 }	#선행 필요 건물 - 마을
+		
+		gold_cost = 150
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 1.0
+		levy_reinforce_rate = 0.01
+		church_opinion = -1
+		disease_defence = -0.01
+		
+	}
+	AMD_building_brothel_castle_2 = {
+		desc = AMD_building_brothel_castle_desc
+		add_number_to_name = yes
+		trigger = {	TECH_TRADE_PRACTICES = 1	}
+		potential = {	AMD_T_HGF_BROTHEL_HOMO = yes	}
+		prerequisites = { ca_town_2 }	#선행 필요 건물 - 마을
+		upgrades_from = AMD_building_brothel_castle_1
+		gold_cost = 25
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 2.0
+		levy_reinforce_rate = 0.02
+		church_opinion = -2
+		disease_defence = -0.02
+	}
+	AMD_building_brothel_castle_3 = {
+		desc = AMD_building_brothel_castle_desc
+		add_number_to_name = yes
+		trigger = {	TECH_TRADE_PRACTICES = 2	}
+		potential = {	AMD_T_HGF_BROTHEL_ORGY = yes	}
+		prerequisites = { ca_town_3 }	#선행 필요 건물 - 마을
+		upgrades_from = AMD_building_brothel_castle_2
+		gold_cost = 35
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 3.0
+		levy_reinforce_rate = 0.03
+		church_opinion = -3
+		disease_defence = -0.03
+	}
+	AMD_building_brothel_castle_4 = {
+		desc = AMD_building_brothel_castle_desc
+		add_number_to_name = yes
+		trigger = {	TECH_TRADE_PRACTICES = 3	}
+		potential = {	AMD_T_HGF_BROTHEL_BEAST = yes	}
+		prerequisites = { ca_town_4 }	#선행 필요 건물 - 마을
+		upgrades_from = AMD_building_brothel_castle_3
+		gold_cost = 50
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 5.0
+		levy_reinforce_rate = 0.05
+		church_opinion = -5
+		disease_defence = -0.05
+	}
+}
+city = {
+	AMD_building_brothel_city_1 = {
+		desc = AMD_building_brothel_city_desc
+		add_number_to_name = no
+		trigger = {	TECH_TRADE_PRACTICES = 0	}	#필요 테크 없음
+		prerequisites = { ct_marketplace_1 }	#선행 필요 건물 - 시장
+		
+		gold_cost = 200
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 2.0
+		church_opinion = -1
+		disease_defence = -0.01
+		
+	}
+	AMD_building_brothel_city_2 = {
+		desc = AMD_building_brothel_city_desc
+		add_number_to_name = yes
+		trigger = {	TECH_TRADE_PRACTICES = 1	}	#필요 테크 없음
+		prerequisites = { ct_marketplace_2 }	#선행 필요 건물 - 시장
+		potential = {	AMD_T_HGF_BROTHEL_HOMO = yes	}
+		upgrades_from  = AMD_building_brothel_city_1
+		
+		gold_cost = 30
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 4.0
+		church_opinion = -2
+		disease_defence = -0.02
+	}
+	AMD_building_brothel_city_3 = {
+		desc = AMD_building_brothel_city_desc
+		add_number_to_name = yes
+		trigger = {	TECH_TRADE_PRACTICES = 2	}	#필요 테크 없음
+		prerequisites = { ct_marketplace_3 }	#선행 필요 건물 - 시장
+		potential = {	AMD_T_HGF_BROTHEL_ORGY = yes	}
+		upgrades_from  = AMD_building_brothel_city_2
+		
+		gold_cost = 40
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 5.0
+		church_opinion = -3
+		disease_defence = -0.03
+	}
+	AMD_building_brothel_city_4 = {
+		desc = AMD_building_brothel_city_desc
+		add_number_to_name = yes
+		trigger = {	TECH_TRADE_PRACTICES = 2	}	#필요 테크 없음
+		prerequisites = { ct_marketplace_3 }	#선행 필요 건물 - 시장
+		potential = {	AMD_T_HGF_BROTHEL_BEAST = yes	}
+		upgrades_from  = AMD_building_brothel_city_2
+		
+		gold_cost = 60
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 7.0
+		church_opinion = -5
+		disease_defence = -0.05
+	}
+}
+#family_palace = {}	#가문 저택에도 추가 예정.
+trade_post = {
+	AMD_building_brothel_tradepost = {
+		desc = AMD_building_brothel_tradepost_desc
+		add_number_to_name = no
+		trigger = {	TECH_TRADE_PRACTICES = 0	}	#필요 테크 없음
+		
+		gold_cost = 150
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tradevalue = 5
+		church_opinion = -1
+		disease_defence = -0.03
+	}
+}
+temple = {
+	AMD_building_brothel_temple = {
+		desc = AMD_building_brothel_temple_desc
+		add_number_to_name = no
+		potential = {
+			religion_group = pagan_group
+		}
+		prerequisites = { tp_town_1 }	#선행 필요 건물 - 마을
+		trigger = {	TECH_TRADE_PRACTICES = 0	}	#필요 테크 없음
+		
+		gold_cost = 250
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		tax_income = 4.0
+		church_opinion = -5
+		culture_techpoints = 0.05
+		disease_defence = 0.01
+		
+	}
+}
+tribal = {
+	AMD_building_brothel_tribal = {
+		desc = AMD_building_brothel_tribal_desc
+		add_number_to_name = no
+		trigger = {	TECH_TRADE_PRACTICES = 0	}	#필요 테크 없음
+		prerequisites = { tb_market_town_1 }	#선행 필요 건물 - 시장
+		
+		gold_cost = 50
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		convert_to_castle = AMD_building_brothel_castle_1
+		convert_to_city = AMD_building_brothel_city_1
+		
+		tax_income = 2.0
+		local_revolt_risk = -0.01
+		disease_defence = -0.03
+		
+	}
+}
+nomad = {
+	#유목민의 경우 기술 조건 체크를 FROM = { TECH_TRADE_PRACTICES = 0 } 즉 홀딩 주인의 기술레벨로 설정해야 한다고 함.
+	AMD_building_brothel_nomad_1 = {
+		desc = AMD_building_brothel_nomad_desc
+		add_number_to_name = no
+		trigger = {	FROM = { TECH_TRADE_PRACTICES = 0 }	}	#필요 테크 없음
+		prerequisites = { no_airag_producer_1 }	#선행 필요 건물 - 술집
+		
+		gold_cost = 150
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		convert_to_castle = AMD_building_brothel_castle_1
+		convert_to_city = AMD_building_brothel_city_1
+		convert_to_tribal = AMD_building_brothel_tribal
+		
+		nomad_tax_modifier = 0.02
+		land_morale = 0.01
+		population_growth = 0.01
+		disease_defence = -0.01
+		
+	}
+	AMD_building_brothel_nomad_2 = {
+		desc = AMD_building_brothel_nomad_desc
+		add_number_to_name = no
+		trigger = {	FROM = { TECH_TRADE_PRACTICES = 1 }	}	#필요 테크 없음
+		prerequisites = { no_airag_producer_2 }	#선행 필요 건물 - 술집
+		potential = {	AMD_T_HGF_BROTHEL_HOMO = yes	}
+		upgrades_from = AMD_building_brothel_nomad_1
+		
+		gold_cost = 25
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		convert_to_castle = AMD_building_brothel_castle_2
+		convert_to_city = AMD_building_brothel_city_2
+		convert_to_tribal = AMD_building_brothel_tribal
+		
+		nomad_tax_modifier = 0.04
+		land_morale = 0.02
+		population_growth = 0.01
+		disease_defence = -0.02
+	}
+	AMD_building_brothel_nomad_3 = {
+		desc = AMD_building_brothel_nomad_desc
+		add_number_to_name = no
+		trigger = {	FROM = { TECH_TRADE_PRACTICES = 2 }	}	#필요 테크 없음
+		prerequisites = { no_airag_producer_3 }	#선행 필요 건물 - 술집
+		potential = {	AMD_T_HGF_BROTHEL_ORGY = yes	}
+		upgrades_from = AMD_building_brothel_nomad_2
+		
+		gold_cost = 35
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		convert_to_castle = AMD_building_brothel_castle_2
+		convert_to_city = AMD_building_brothel_city_2
+		convert_to_tribal = AMD_building_brothel_tribal
+		
+		nomad_tax_modifier = 0.06
+		land_morale = 0.02
+		population_growth = 0.02
+		disease_defence = -0.03
+	}
+	AMD_building_brothel_nomad_4 = {
+		desc = AMD_building_brothel_nomad_desc
+		add_number_to_name = no
+		trigger = {	FROM = { TECH_TRADE_PRACTICES = 3 }	}	#필요 테크 없음
+		prerequisites = { no_airag_producer_4 }	#선행 필요 건물 - 술집
+		potential = {	AMD_T_HGF_BROTHEL_BEAST = yes	}
+		upgrades_from = AMD_building_brothel_nomad_3
+		
+		gold_cost = 50
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		convert_to_castle = AMD_building_brothel_castle_2
+		convert_to_city = AMD_building_brothel_city_2
+		convert_to_tribal = AMD_building_brothel_tribal
+		
+		nomad_tax_modifier = 0.10
+		land_morale = 0.03
+		population_growth = 0.03
+		disease_defence = -0.04
+	}
+}
+fort = {
+	AMD_building_brothel_fort = {
+		desc = AMD_building_brothel_fort_desc
+		add_number_to_name = no
+		trigger = {	TECH_TRADE_PRACTICES = 0	}	#필요 테크 없음
+		
+		gold_cost = 150
+		build_time = 365
+		
+		ai_creation_factor = 0	#AI의 건설 가능성은 최소한으로.
+		extra_tech_building_start = 10.0
+		
+		#tax_income = 0.1
+		garrison_size = 0.01
+		disease_defence = -0.01
+		land_morale = 0.01
+	}
+}
+#hospital = {}
+
+ # For nomad capitals, remember than the tech requirement trigger should be applied to the nomad
+ # (which means it uses the character's primary tech status, i.e. the nomad capital status
+ # for nomads, capital province tech status otherwise). I.e. use the FROM scope for nomad capital buildings.

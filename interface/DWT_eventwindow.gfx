@@ -1,0 +1,1017 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_evt_DWTr001"
+		texturefile = "gfx\\event_pictures\\DWTr001.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr002"
+		texturefile = "gfx\\event_pictures\\DWTr002.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr003"
+		texturefile = "gfx\\event_pictures\\DWTr003.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr004"
+		texturefile = "gfx\\event_pictures\\DWTr004.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr005"
+		texturefile = "gfx\\event_pictures\\DWTr005.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr006"
+		texturefile = "gfx\\event_pictures\\DWTr006.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr007"
+		texturefile = "gfx\\event_pictures\\DWTr007.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr008"
+		texturefile = "gfx\\event_pictures\\DWTr008.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr009"
+		texturefile = "gfx\\event_pictures\\DWTr009.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr010"
+		texturefile = "gfx\\event_pictures\\DWTr010.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr011"
+		texturefile = "gfx\\event_pictures\\DWTr011.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr012"
+		texturefile = "gfx\\event_pictures\\DWTr012.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_carriage2"
+		texturefile = "gfx\\event_pictures\\Carriage_escorted_by_guards_muslim.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr013"
+		texturefile = "gfx\\event_pictures\\DWTr013.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr014"
+		texturefile = "gfx\\event_pictures\\DWTr014.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr015"
+		texturefile = "gfx\\event_pictures\\DWTr015.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr016"
+		texturefile = "gfx\\event_pictures\\DWTr016.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr017"
+		texturefile = "gfx\\event_pictures\\DWTr017.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr018"
+		texturefile = "gfx\\event_pictures\\DWTr018.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr019"
+		texturefile = "gfx\\event_pictures\\DWTr019.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr020"
+		texturefile = "gfx\\event_pictures\\DWTr020.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr021"
+		texturefile = "gfx\\event_pictures\\DWTr021.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr022"
+		texturefile = "gfx\\event_pictures\\DWTr022.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr023"
+		texturefile = "gfx\\event_pictures\\DWTr023.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr024"
+		texturefile = "gfx\\event_pictures\\DWTr024.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr025"
+		texturefile = "gfx\\event_pictures\\DWTr025.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr026"
+		texturefile = "gfx\\event_pictures\\DWTr026.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr027"
+		texturefile = "gfx\\event_pictures\\DWTr027.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr028"
+		texturefile = "gfx\\event_pictures\\DWTr028.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr029"
+		texturefile = "gfx\\event_pictures\\DWTr029.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr030"
+		texturefile = "gfx\\event_pictures\\DWTr030.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_DWTr031"
+		texturefile = "gfx\\event_pictures\\DWTr031.tga"
+		allwaystransparent = yes
+	}
+	# Start: Rape events male ruler -------------------------------------------------------------
+	spriteType = {
+		name = "GFX_evt_DWT.captured" 
+		texturefile = "gfx\\event_pictures\\DWT.Captured.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapeoral1" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeOral1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapeoral2" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeOral2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapeoral3" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeOral3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapevag1" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeVag1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapevag2" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeVag2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapevag3" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeVag3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.branding" 
+		texturefile = "gfx\\event_pictures\\DWT.Branding.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.broken" 
+		texturefile = "gfx\\event_pictures\\DWT.Broken.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWTRapeBadEnd" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeBadEnd.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapeanal1" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeAnal1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapeanal2" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeAnal2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapeanal3"
+		texturefile = "gfx\\event_pictures\\DWT.RapeAnal3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexanal1" 
+		texturefile = "gfx\\event_pictures\\DWT.SexAnal1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexanal2" 
+		texturefile = "gfx\\event_pictures\\DWT.SexAnal2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexanal3"
+		texturefile = "gfx\\event_pictures\\DWT.SexAnal3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexvag1" 
+		texturefile = "gfx\\event_pictures\\DWT.SexVag1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexvag2" 
+		texturefile = "gfx\\event_pictures\\DWT.SexVag2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexvag3" 
+		texturefile = "gfx\\event_pictures\\DWT.SexVag3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexoral1" 
+		texturefile = "gfx\\event_pictures\\DWT.SexOral1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexoral2" 
+		texturefile = "gfx\\event_pictures\\DWT.SexOral2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexoral3" 
+		texturefile = "gfx\\event_pictures\\DWT.SexOral3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sold" 
+		texturefile = "gfx\\event_pictures\\DWT.Sold.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainfertility" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainFertility.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainobediance1" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainObediance1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainobediance2" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainObediance2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainobediance3" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainObediance3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainseduction1" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainSeduction1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainseduction2" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainSeduction2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainsex1" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainSex1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainsex2" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainSex2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.trainsex3" 
+		texturefile = "gfx\\event_pictures\\DWT.TrainSex3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.usebreeder" 
+		texturefile = "gfx\\event_pictures\\DWT.UseBreeder.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.usecow" 
+		texturefile = "gfx\\event_pictures\\DWT.UseCow.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.usetoilet" 
+		texturefile = "gfx\\event_pictures\\DWT.UseToilet.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.sexoptions" 
+		texturefile = "gfx\\event_pictures\\DWT.SexOptions.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_evt_DWT.rapeoptions" 
+		texturefile = "gfx\\event_pictures\\DWT.RapeOptions.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	# End: Rape events male ruler -------------------------------------------------------------	
+	spriteType = {
+		name = "GFX_trait_tentacle"
+		texturefile = "gfx/traits/tentacle.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTCumInside"
+		texturefile = "gfx/event_pictures/DWCourt_RightFirstNightCumInside.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	# Troop Events:
+	spriteType = {
+		name = "TroopMaleLiegeAmbush1"
+		texturefile = "gfx/event_pictures/TroopMaleLiegeAmbush1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopMaleLiegeAmbush2"
+		texturefile = "gfx/event_pictures/TroopMaleLiegeAmbush2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopMaleLiegeAmbush3"
+		texturefile = "gfx/event_pictures/TroopMaleLiegeAmbush3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopMaleLiegeAmbush4"
+		texturefile = "gfx/event_pictures/TroopMaleLiegeAmbush4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopFemaleLiegeAmbush1"
+		texturefile = "gfx/event_pictures/TroopFemaleLiegeAmbush7.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopFemaleLiegeAmbush2"
+		texturefile = "gfx/event_pictures/TroopFemaleLiegeAmbush2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopFemaleLiegeAmbush3"
+		texturefile = "gfx/event_pictures/TroopFemaleLiegeAmbush3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopFemaleLiegeAmbush4"
+		texturefile = "gfx/event_pictures/TroopFemaleLiegeAmbush5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "TroopFemaleLiegeAmbushFight"
+		texturefile = "gfx/event_pictures/TroopFemaleLiegeAmbush1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "RudeAwakening"
+		texturefile = "gfx/event_pictures/RudeAwakening.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "RudeAwakening2"
+		texturefile = "gfx/event_pictures/RudeAwakening2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "RudeAwakening3"
+		texturefile = "gfx/event_pictures/RudeAwakening3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "RudeAwakening4"
+		texturefile = "gfx/event_pictures/RudeAwakening4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "RudeAwakening5"
+		texturefile = "gfx/event_pictures/RudeAwakening5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMasturbation"
+		texturefile = "gfx/event_pictures/DWTMasturbating.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTMasturbation2"
+		texturefile = "gfx/event_pictures/DWTMasturbating2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTCreampie"
+		texturefile = "gfx/event_pictures/DWTCreampie.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTCreampieF"
+		texturefile = "gfx/event_pictures/DWTCreampieF.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTContemplation"
+		texturefile = "gfx/event_pictures/DWTContemplation.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTInvestigation"
+		texturefile = "gfx/event_pictures/DWTInvestigation.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTArrest"
+		texturefile = "gfx/event_pictures/DWTArrest.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FL_GuardSurprise1"
+		texturefile = "gfx/event_pictures/DWRandom_FemaleMasturbate.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FL_GuardSurprise2"
+		texturefile = "gfx/event_pictures/DWTDoubleBlowJob.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FL_GuardSurprise3"
+		texturefile = "gfx/event_pictures/DoublePenetration.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FL_GuardSurprise4"
+		texturefile = "gfx/event_pictures/DWTDoubleBlowJob2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_Fem_Horse1"
+		texturefile = "gfx/event_pictures/FemaleOnHorseMaleOnFoot.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_Fem_Horse2"
+		texturefile = "gfx/event_pictures/DWTHorse1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_Fem_Horse3"
+		texturefile = "gfx/event_pictures/DWTHorse2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DTW_Fem_Horse4"
+		texturefile = "gfx/event_pictures/DWTHorse3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DTW_Male_Horse1"
+		texturefile = "gfx/event_pictures/RedHead.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_Male_Horse2"
+		texturefile = "gfx/event_pictures/DWHunter_BloodrayneFeedsHorse.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_Male_Horse3"
+		texturefile = "gfx/event_pictures/DWHunter_BloodrayneMaleSemenFeeding.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DTW_Male_Horse4"
+		texturefile = "gfx/event_pictures/TroopMaleLiegeAmbush3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_StrayDog1"
+		texturefile = "gfx/event_pictures/DWTStrayDog1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_StrayDog2"
+		texturefile = "gfx/event_pictures/DWTLustfulDog2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_StrayDog3"
+		texturefile = "gfx/event_pictures/DWTLustfulDogCP.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DTW_FM_StrayDog4"
+		texturefile = "gfx/event_pictures/DWTLustfulDog.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_Bath1"
+		texturefile = "gfx/event_pictures/DWTBathingFem.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_Bath2"
+		texturefile = "gfx/event_pictures/DWTBathingFem2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_Bath3"
+		texturefile = "gfx/event_pictures/DTW_FM_Bath3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DTW_FM_Bath4"
+		texturefile = "gfx/event_pictures/DTW_FM_Bath4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+
+	spriteType = {
+		name = "DTW_FM_Sparring1"
+		texturefile = "gfx/event_pictures/DWT_CrossingSwordsMF.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_Sparring2"
+		texturefile = "gfx/event_pictures/DWTVixenVisit1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DTW_FM_Sparring3"
+		texturefile = "gfx/event_pictures/DWTVixenVisit2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DTW_FM_Sparring4"
+		texturefile = "gfx/event_pictures/DWTVixenVisit3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTForrestVixen"
+		texturefile = "gfx/event_pictures/DWTForrestVixen.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTForrestVixen2"
+		texturefile = "gfx/event_pictures/DWTForrestVixen2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "DWTForrestVixen3"
+		texturefile = "gfx/event_pictures/DWTForrestVixen3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "NudeFemWithKnife"
+		texturefile = "gfx/event_pictures/NudeFemWithKnife.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+	spriteType = {
+		name = "RedSonjaWithKnife"
+		texturefile = "gfx/event_pictures/RedSonjaWithKnife.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}			
+	spriteType = {
+		name = "RedSonjaKillsGuards"
+		texturefile = "gfx/event_pictures/RedSonjaKillsGuards.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "BleachAngryPussyOpen"
+		texturefile = "gfx/event_pictures/BleachAngryPussyOpen.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCPfromBehindSuperimposed"
+		texturefile = "gfx/event_pictures/BleachCPfromBehindSuperimposed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachLesbianPussyLick"
+		texturefile = "gfx/event_pictures/BleachLesbianPussyLick.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachAssFuckFromBehind"
+		texturefile = "gfx/event_pictures/BleachAssFuckFromBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachMountingFromBehindLasziv"
+		texturefile = "gfx/event_pictures/BleachMountingFromBehindLasziv.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachAssFuckSideways"
+		texturefile = "gfx/event_pictures/BleachAssFuckSideways.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachBJFacialFinish"
+		texturefile = "gfx/event_pictures/BleachBJFacialFinish.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachTrippleFacial"
+		texturefile = "gfx/event_pictures/BleachTrippleFacial.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachVagPenFromBelow"
+		texturefile = "gfx/event_pictures/BleachVagPenFromBelow.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachBlowJob2"
+		texturefile = "gfx/event_pictures/BleachBlowJob2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCowGirlRiding3"
+		texturefile = "gfx/event_pictures/BleachCowGirlRiding3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachPussyFuckBehind2"
+		texturefile = "gfx/event_pictures/BleachPussyFuckBehind2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachShowAssWithCP"
+		texturefile = "gfx/event_pictures/BleachShowAssWithCP.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachPoolCowboyRide"
+		texturefile = "gfx/event_pictures/BleachPoolCowboyRide.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCumOnFace"
+		texturefile = "gfx/event_pictures/BleachCumOnFace.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachPussyFuckBehind"
+		texturefile = "gfx/event_pictures/BleachPussyFuckBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachTeasingCock"
+		texturefile = "gfx/event_pictures/BleachTeasingCock.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCowGirlRiding2"
+		texturefile = "gfx/event_pictures/BleachCowGirlRiding2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCrotchView"
+		texturefile = "gfx/event_pictures/BleachCrotchView.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachVagPenfromBehind"
+		texturefile = "gfx/event_pictures/BleachVagPenfromBehind.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCunilingus"
+		texturefile = "gfx/event_pictures/BleachCunilingus.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCumOnTits"
+		texturefile = "gfx/event_pictures/BleachCumOnTits.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCowGirlCreampie"
+		texturefile = "gfx/event_pictures/BleachCowGirlCreampie.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCowGirlRiding"
+		texturefile = "gfx/event_pictures/BleachCowGirlRiding.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "BleachBedLasziv"
+		texturefile = "gfx/event_pictures/BleachBedLasziv.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachDrippingCP"
+		texturefile = "gfx/event_pictures/BleachDrippingCP.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachDickLicking"
+		texturefile = "gfx/event_pictures/BleachDickLicking.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCowGirlInsertion"
+		texturefile = "gfx/event_pictures/BleachCowGirlInsertion.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "BleachCP1"
+		texturefile = "gfx/event_pictures/BleachCP1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTFemHorseFucksMaleMan"
+		texturefile = "gfx/event_pictures/DWTFemHorseFucksMaleMan.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTFemFurryHorse"
+		texturefile = "gfx/event_pictures/DWTFemFurryHorse.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}
+

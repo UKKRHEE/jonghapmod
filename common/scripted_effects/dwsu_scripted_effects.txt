@@ -1,0 +1,109 @@
+###TRAIT ADDING EFFECTS###
+
+# Portrait Trait Assignments
+add_random_demon_portrait = {
+	random_list = {
+		## Male images 9 - 11
+		20 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = portrait9
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = portrait10
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = portrait11
+		}
+		
+		## Female images 12-16, 20
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait12
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait13
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait14
+		}
+		10 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait15 
+		}
+		10 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait16
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait20
+		}
+
+	}
+}
+add_random_angel_portrait = {
+	random_list = {
+		## Male images None for now
+		## Female images 313 - 316
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait313
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait314
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait315
+		}
+		20 = { 
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = portrait316
+		}
+
+	}
+}

@@ -1,0 +1,7 @@
+#CODE;ENGLISH;;;;;;;;;;;;x;
+TITLE_MR_CANNOT_MERCHANT_REP_PRIMARY;ª³Ý«·Ù ä»Ýÿ¼¬·ÝùÇ ¡Èé»Ì ¬³ÉùÄåÆÌ ¡³Ý°³Ð²³Ð êŠ «·ÚêÆÙ¢È¥³;;;;;;;;;;;;x;
+DECLARE_WAR_INTERACTION_6;§R¬ÈäÆØ ëŠ¦È¡³ æ»É¦ÈÙ²³Ì¥³¨¹Ì ëŠ¦ÈåÆÌ êˆ²¹Ý ä»Ýÿ¼äÁÉ«È ô¿Ð ¡·Û«È¨¹ ¡¸«ÈØëÆÌ ì»Ýç‰ô¿Ù¢È¥³!§!;;;;;;;;;;;;x;
+INTERACTION_HOLY_ORDERS_CANNOT_MARRY;¡Èª³¥³Ì«È¢³ ëÀÝ©¹Ý éŠ¥´ùÇ ¬Èæˆ¬³ù¼åÆÌ ñ»Ì«ÈÌ²³Ð êŠ «·ÚëÆØ!;;;;;;;;;;;;x;
+INTERACTION_CANNOT_JOIN_WAR_AGAINST_PRISON_HOST;§Y[Actor.GetTitledFirstName]§!«È(¡³) ¬·ÉùÇ ðˆçˆ¡³ «³¢ÈØ;;;;;;;;;;;;x;
+CONTESTED_TRADEPOST_DESC;$PERC$: §Y$PERSON$§!«È(¡³) §Y$TITLE$§!ùÇ èˆæÆÌ èŠ«¹É ¡È¬ÈçÆÐ ¬È©´²³Ù¢È¥³;;;;;;;;;;;;x;
+AIREASON_IS_VASSAL_MERCHANT_REP;§Y[GetTitledName]§!ëÆÌ(åÆÌ) ¢´ é»ÝªÈÌ«ÈØ;;;;;;;;;;;;x;

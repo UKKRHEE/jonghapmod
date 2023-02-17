@@ -1,0 +1,28 @@
+###########################################################
+#####  LOCALISATION for the Dark World Content Pack   #####
+###########################################################
+#####  Search ###Rewrite for incomplete localisation ######
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+###### TT Content War / Siege Events ######
+redhand_hero;Hero of the Battle;;;;;;;;;;;;;x
+TTcontent_war1002;[redhand_hero.GetFirstName] has distinguished herself in battle. She was a whirlwind of beauty, death and destruction.  This siege victory has brought out the best in many of your troops, but many in the battle today were impressed by [redhand_hero.GetFirstName]. \n \n The very fact that you are her liege adds prestige to your name as well...;;;;;;;;;;;;;x
+TTcontent_war1002a;It's good to be the [ROOT.GetTitle];;;;;;;;;;;;;x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

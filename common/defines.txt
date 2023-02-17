@@ -1,0 +1,15 @@
+start_date = 3.1.1
+last_start_date = 2017.12.31
+end_date = 99999.12.31
+
+character = {
+}
+
+diplomacy = {
+}
+
+economy = {
+}
+
+military = {
+}

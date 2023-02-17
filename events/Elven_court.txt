@@ -1,0 +1,214 @@
+namespace = elfcourt
+# Bored ruler, controll event
+narrative_event = {	
+	id = elfcourt.1
+	desc = elfcourt_desc.1
+	picture = elfcourt_1
+
+	min_age = 16			# you, as ruler
+	capable_only = yes
+	prisoner = no
+	ai = no
+	
+	trigger = {			# are you able and willing, not in war?
+		in_command = no
+		war = no
+		NOT = {
+			trait = shy
+			trait = chaste
+			trait = celibate
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240		# chance for the event to fire
+		modifier = {		# more chance to fire, if you're lustful
+			factor = 0.4
+			trait = lustful
+		 }
+		modifier = {		# more chance to fire, if you're hedonist
+			factor = 0.6
+			trait = hedonist
+		 }
+	}
+
+	option = {			# one of the four options to choose
+		name = elfcourt.1a
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = elfcourt.2 }
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = elfcourt.1b
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = elfcourt.3 }
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = elfcourt.1c
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = elfcourt.4 }
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = elfcourt.1d
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = elfcourt.5 }
+			}
+		}
+	}
+}
+
+
+# First option - Succubi song party
+narrative_event = {
+	id = elfcourt.2
+	desc = elfcourt_desc.2
+	picture = elfcourt_2
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = courtgenricender
+		prestige = 10		# prestige gain
+		wealth = -10 		# money loss
+	}
+}
+
+# Second option - Underwear Day
+narrative_event = {
+	id = elfcourt.3
+	desc = elfcourt_desc.3
+	picture = elfcourt_3
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = courtgenricender
+		prestige= 10		# prestige gain
+		wealth = -10 		# money loss
+	}
+}
+
+# Third option - bath party
+narrative_event = {
+	id = elfcourt.4
+	desc = elfcourt_desc.4		
+	picture = elfcourt_4
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = courtgenricender
+		prestige= 10		# prestige gain
+		wealth = -10 		# money loss
+	}
+}
+
+# Fourt option - orgy
+narrative_event = {
+	id = elfcourt.5
+	desc = elfcourt_desc.5		
+	picture = elfcourt_5
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = courtgenricender
+		prestige= 10		# prestige gain
+		wealth = -10 		# money loss
+	}
+}
+
+###
+
+narrative_event = {	
+	id = elfcourt.10
+	hide_window = yes
+
+	min_age = 16			# you, as ruler
+	capable_only = yes
+	prisoner = no
+	ai = no
+	
+	trigger = {			# are you able and willing, not in war?
+		in_command = no
+		war = no
+		NOT = {
+			trait = shy
+			trait = chaste
+			trait = celibate
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240		# chance for the event to fire
+		modifier = {		# more chance to fire, if you're lustful
+			factor = 0.4
+			trait = lustful
+		 }
+		modifier = {		# more chance to fire, if you're hedonist
+			factor = 0.6
+			trait = hedonist
+		 }
+	}
+	random_list = {
+		25 = { narrative_event = { id = elfcourt.11 } }
+		75 = { } # Nothing happens
+		}
+	}
+	
+narrative_event = {
+	id = elfcourt.11
+	desc = elfcourt_desc.11		
+	picture = elf_bath
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = courtnude
+		narrative_event = { id = elfcourt.12 }
+	}
+	
+	option = {
+		name = courtunderwear
+		narrative_event = { id = elfcourt.13 }
+	}
+}
+
+narrative_event = {
+	id = elfcourt.12
+	desc = elfcourt_desc.12		
+	picture = elf_nude
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = courtgenricender
+		prestige= 10		# prestige gain
+		wealth = -10 		# money loss
+	}
+
+}
+
+narrative_event = {
+	id = elfcourt.13
+	desc = elfcourt_desc.13	
+	picture = elf_underwear
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = courtgenricender
+		prestige= 10		# prestige gain
+		wealth = -10 		# money loss
+	}
+
+}

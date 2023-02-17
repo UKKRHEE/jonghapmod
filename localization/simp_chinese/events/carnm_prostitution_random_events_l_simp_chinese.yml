@@ -1,8 +1,0 @@
-﻿l_simp_chinese:
- carnm_prostitution_random_events.0001.t: "卖淫：一位属于大众的[ROOT.Char.GetWomanMan|U]"
- carnm_prostitution_random_events.0001.desc: "当我衣着暴露地穿过城镇广场时，所有人的目光都注视着我。 我的观众们知道，只要花足够的钱，他们中的任何人都可以和他们的[ROOT.Char.GetTitleAsNameNoTooltip]度过一夜的激情。 或许如此？\n\n事实是，对于大多数[ROOT.Char.Custom('AttractionWomanManMultiple')]，我都是无法企及的。 不论是我的社会阶层还是我收取的高额费用，都限制了我的客户——主要来自贵族门庭和富裕的家庭。\n\n成为这种高不可攀的妓女有其优势，但是如果我向所有人都敞开大门，平民百姓肯定会喜欢这个决定。"
- carnm_prostitution_random_events.0001.a: "一位[ROOT.Char.GetTitleAsNameNoTooltip]的职责就是服务[ROOT.Char.GetHerHis]#EMP 所有的#!子民。"
- carnm_prostitution_random_events.0001.b: "让他们尽管去幻想自己无法拥有的东西吧。"
- carnm_prostitution_random_events.0003.t: "卖淫：关门之后"
- carnm_prostitution_random_events.0003.desc: "在温暖的烛光下，我的许多顾客向我倾诉他们的麻烦。 毕竟，交际花就是人民心目中的好伴侣和好情人。\n\n仔细倾听着在我卧室中进进出出的[ROOT.Char.Custom('AttractionWomanManMultiple')]，我让他们的身心得到放松，同时也获得了一些关于[discovered_secret_owner.Custom2('MyCharacterIntroductionNoComma', ROOT.Char)]的有趣消息..."
- carnm_prostitution_random_events.0003.a: "这些信息将会很有用。"

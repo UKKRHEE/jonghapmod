@@ -1,0 +1,108 @@
+namespace = elfblood
+
+character_event = { 
+	id = elfblood.1 
+	narrative_event = { id = elfblood.2 days = 7}
+	hide_window = yes
+	is_triggered_only = yes # triggered from on_startup
+	}
+	
+	narrative_event = {	
+	id = elfblood.2
+	desc = elfblood_desc.2
+	picture = elfblood
+	is_triggered_only = yes # triggered from on_startup
+
+	option = {			# one of the four options to choose
+		name = elfblood.1a
+		hidden_tooltip = {
+			ROOT = {
+				immediate = {
+					if = { 
+						limit = { is_female = yes }
+						create_bloodline = {
+							type = ravenspire_bloodline
+						}
+					}
+					if = { 
+						limit = { is_female = no }
+						create_bloodline = {
+							type = ravenspire_bloodline
+							inheritance = patrilineal
+						}		
+					}
+	
+				}
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = elfblood.1b
+		hidden_tooltip = {
+			ROOT = {
+				immediate = {
+					if = { 
+						limit = { is_female = yes }
+						create_bloodline = {
+							type = orion_bloodline
+						}
+					}
+					if = { 
+						limit = { is_female = no }
+						create_bloodline = {
+							type = orion_bloodline
+							inheritance = patrilineal
+						}		
+					}
+	
+				}
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = elfblood.1c
+		hidden_tooltip = {
+			ROOT = {
+				immediate = {
+					if = { 
+						limit = { is_female = yes }
+						create_bloodline = {
+							type = ellenastra_bloodline
+						}
+					}
+					if = { 
+						limit = { is_female = no }
+						create_bloodline = {
+							type = ellenastra_bloodline
+							inheritance = patrilineal
+						}		
+					}
+	
+				}
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = elfblood.1d
+		hidden_tooltip = {
+			ROOT = {
+				immediate = {
+					if = { 
+						limit = { is_female = yes }
+						create_bloodline = {
+							type = corellon_bloodline
+						}
+					}
+					if = { 
+						limit = { is_female = no }
+						create_bloodline = {
+							type = corellon_bloodline
+							inheritance = patrilineal
+						}		
+					}
+	
+				}
+			}
+		}
+	}
+}

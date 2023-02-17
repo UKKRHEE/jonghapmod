@@ -1,0 +1,338 @@
+spriteTypes = {
+
+#
+# Orc female child
+#
+
+	spriteType = {
+		name = "GFX_orc_child_female"
+		texturefile = "gfx/static_portraits/orc_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_orc_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = orc_child1
+			}
+		}
+		
+		layer = { 
+			"GFX_orc_child_female:p0"
+		}
+	}
+
+#
+# Orc male child
+#
+
+	spriteType = {
+		name = "GFX_orc_child_male"
+		texturefile = "gfx/static_portraits/orc_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_orc_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = orc_child2
+			}
+		}
+		
+		layer = { 
+			"GFX_orc_child_male:p0"
+		}
+	}
+	
+#
+# Elf female child
+#
+
+	spriteType = {
+		name = "GFX_elf_child_female"
+		texturefile = "gfx/static_portraits/elf_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_elf_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = elf_child1
+			}
+		}
+		
+		layer = { 
+			"GFX_elf_child_female:p0"
+		}
+	}
+
+#
+# Elf male child
+#
+
+	spriteType = {
+		name = "GFX_elf_child_male"
+		texturefile = "gfx/static_portraits/elf_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_elf_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = elf_child2
+			}
+		}
+		
+		layer = { 
+			"GFX_elf_child_male:p0"
+		}
+	}
+
+#
+# Kitsune female child
+#
+
+	spriteType = {
+		name = "GFX_kitsune_child_female"
+		texturefile = "gfx/static_portraits/kitsune_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_kitsune_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = kitsune_child1
+			}
+		}
+		
+		layer = { 
+			"GFX_kitsune_child_female:p0"
+		}
+	}
+
+#
+# Kitune male child
+#
+
+	spriteType = {
+		name = "GFX_kitsune_child_male"
+		texturefile = "gfx/static_portraits/kitsune_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_kitsune_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = kitsune_child2
+			}
+		}
+		
+		layer = { 
+			"GFX_kitsune_child_male:p0"
+		}
+	}
+
+#
+# Neko female child
+#
+
+	spriteType = {
+		name = "GFX_neko_child_female"
+		texturefile = "gfx/static_portraits/neko_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_neko_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = neko_child1
+			}
+		}
+		
+		layer = { 
+			"GFX_neko_child_female:p0"
+		}
+	}
+
+#
+# Neko male child
+#
+
+	spriteType = {
+		name = "GFX_neko_child_male"
+		texturefile = "gfx/static_portraits/neko_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_neko_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = neko_child2
+			}
+		}
+		
+		layer = { 
+			"GFX_neko_child_male:p0"
+		}
+	}
+
+#
+# Fairy female child
+#
+
+	spriteType = {
+		name = "GFX_fairy_child_female"
+		texturefile = "gfx/static_portraits/fairy_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_fairy_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = fairy_child1
+			}
+		}
+		
+		layer = { 
+			"GFX_fairy_child_female:p0"
+		}
+	}
+
+#
+# Fairy male child
+#
+
+	spriteType = {
+		name = "GFX_fairy_child_male"
+		texturefile = "gfx/static_portraits/fairy_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_fairy_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = fairy_child2
+			}
+		}
+		
+		layer = { 
+			"GFX_fairy_child_male:p0"
+		}
+	}
+#
+# DWSE Reptillian female child
+#
+
+	spriteType = {
+		name = "GFX_dwse_lizard_child_female"
+		texturefile = "gfx/static_portraits/aura_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_dwse_lizard_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dwse_lizard_child1
+			}
+		}
+		
+		layer = { 
+			"GFX_dwse_lizard_child_female:p0"
+		}
+	}
+
+#
+# DWSE Reptillian male child
+#
+
+	spriteType = {
+		name = "GFX_dwse_lizard_child_male"
+		texturefile = "gfx/static_portraits/aura_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_dwse_lizard_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = dwse_lizard_child2
+			}
+		}
+		
+		layer = { 
+			"GFX_dwse_lizard_child_male:p0"
+		}
+	}
+	
+}	

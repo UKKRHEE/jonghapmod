@@ -1,0 +1,303 @@
+#
+# Motivate priest
+#
+
+namespace = DWTweaksPriest
+
+character_event = {
+	id = DWTweaksPriest.4000
+	hide_window = yes # Nothing to see
+	is_triggered_only = yes # Triggered by targeted decision
+	immediate = {
+		FROM = { save_event_target_as = dwtw_priest } # We go ahead and save the event target for processing stuff later
+		if = {
+			limit = {
+				FROM = {
+					is_female = no # Our Chancellor is a man
+				}
+			}
+			narrative_event = { id = DWTweaksPriest.4001 }
+			break = yes # We exit the immediate block
+		}
+		# If we get here, our Chancellor is a woman
+		narrative_event = { id = DWTweaksPriest.4003 }
+	}
+}
+# .3001 Motivate Male Chancellor in the Fabrication of Claims (player)
+narrative_event = {
+	id = DWTweaksPriest.4001
+	desc = "DWTweaks4001"
+	picture = priest_default
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3000
+	option = { #Some extra coin for bribes
+		trigger = {
+			treasury = 250 # Is there enough coin to handle some bribes?
+		}
+		name = "DWTweaks4001A"	
+		treasury = -250
+		if = {
+			limit = {
+				event_target:dwtw_priest = {
+					intrigue = 10 #If our diplomat has at least an intrigue of 10, they're successful in their bribe attempts
+				}
+			}
+			event_target:dwtw_priest = { character_event = { id = DWTweaksPriest.4005 days = 14 }} # Leads to the claim being successfully fabricated
+			break = yes # Removes us from this option block
+		}
+		# This processes if our chancellor has a intrigue below 10
+		random_list = {
+			50 = { narrative_event = { id = DWTweaksPriest.4009 days = 21 }} # Liege notified that the bribe failed
+			50 = { event_target:dwtw_priest = { character_event = { id = DWTweaksPriest.4005 days = 21 }} } # Leads to the claim being successfully fabricated
+		}
+	}
+	option = { #A lovers caress can inspire
+		trigger = {
+			is_adult = yes # only adult players should see this
+			NOR = {  # And the player shouldn't be chaste
+				trait = chaste
+				trait = celibate
+				trait = eunuch
+				trait = dwf_ghost
+			}
+			NOT = { event_target:dwtw_priest = { trait = chaste } } # And nor should our target
+		}
+		name = "DWTweaks4001B"
+		character_event = {	id = DWTweaksPriest.4010 }		
+	}
+
+	option = { #Provide the Chancellor some dirt to blackmail people.
+		name = "DWTweaks4001E"
+		trigger = { learning = 18 }
+		tooltip_info = learning
+		event_target:dwtw_priest = { character_event = { id = DWTweaksPriest.4005 days = 14 }}
+	}
+
+	option = {
+		name = "DWTweaks4001F" #Player opts to let the Chancellor do their thing
+	}	
+}
+# .3003 Motivate Female Chancellor in the Fabrication of Claims (player)
+narrative_event = {
+	id = DWTweaksPriest.4003
+	desc = "DWTweaks4001"
+	picture = priest__female_default
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3000
+	option = { #Some extra coin for bribes
+		trigger = {
+			treasury = 250 # Is there enough coin to handle some bribes?
+		}
+		name = "DWTweaks4001A"	
+		treasury = -250
+		if = {
+			limit = {
+				event_target:dwtw_priest = {
+					intrigue = 10 #If our diplomat has at least an intrigue of 10, they're successful in their bribe attempts
+				}
+			}
+			event_target:dwtw_priest = { character_event = { id = DWTweaksPriest.4005 days = 14 }} # Leads to the claim being successfully fabricated
+			break = yes # Removes us from this option block
+		}
+		# This processes if our chancellor has a intrigue below 10
+		random_list = {
+			50 = { narrative_event = { id = DWTweaksPriest.4009 days = 21 }} # Liege notified that the bribe failed
+			50 = { event_target:dwtw_priest = { character_event = { id = DWTweaksPriest.4005 days = 21 }} } # Leads to the claim being successfully fabricated
+		}
+	}
+	option = { #A lovers caress can inspire
+		trigger = {
+			is_adult = yes # only adult players should see this
+			NOR = {  # And the player shouldn't be chaste
+				trait = chaste
+				trait = celibate
+				trait = eunuch
+				trait = dwf_ghost
+			}
+			NOT = { event_target:dwtw_priest = { trait = chaste } } # And nor should our target
+		}
+		name = "DWTweaks4001B"
+		character_event = {	id = DWTweaksPriest.4010 }		
+	}
+	
+	option = { #Provide the Chancellor some dirt to blackmail people.
+		name = "DWTweaks4001E"
+		trigger = { learning = 18 }
+		tooltip_info = learning
+		event_target:dwtw_priest = { character_event = { id = DWTweaksPriest.4005 days = 14 }}
+	}
+
+	option = {
+		name = "DWTweaks4001F" #Player opts to let the Chancellor do their thing
+	}	
+}
+# .3005 Chancellor check to ensure has_job_action = action_inquisition is still valid before triggering the Successful Fabrication event (hidden, chancellor)
+character_event = {
+	id = DWTweaksPriest.4005
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # Triggered by .3001/.3003
+	trigger = { 
+		has_job_action = action_inquisition # If this is not true, then the immediate action below shouldn't run
+	}
+	immediate = {
+		character_event = { id = 900}
+	}
+}
+# .3009 Liege notified by Chancellor that the bribe failed (liege)
+narrative_event = {
+	id = DWTweaksPriest.4009
+	desc = "DWTweaks4009"
+	picture = priest_default
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3001/.3003
+	trigger = { 
+		has_job_action = action_inquisition # If this is not true, then the immediate action below shouldn't run
+	}
+	option = { # Bah, incompetence
+		name = "DWTweaks4009A"
+	}
+}
+
+# .3010 Liege motivates Chancellor with sex - routing check (liege - hidden)
+character_event = {
+	id = DWTweaksPriest.4010
+	hide_window = yes # Nothing to see
+	is_triggered_only = yes # Triggered from .3001/.3003
+	immediate = {
+		if = {
+			limit = { # Both liege and chancellor are women
+				is_female = yes
+				event_target:dwtw_priest = {
+					is_female = yes
+					OR = {
+						event_target:dwtw_priest = {
+							trait = homosexual
+						}
+						is_lover = event_target:dwtw_priest
+					}				
+				}
+			}
+			narrative_event = { id = DWTweaksPriest.4011 } # Lesbian event
+		}
+		else_if = {
+			limit = { # Liege is woman and chancellor is a man
+				is_female = yes
+				event_target:dwtw_priest = {
+					is_female = no
+				}
+			}
+			# No sex denied events at this time, some may be added in the future as a TODO
+			narrative_event = { id = DWTweaksPriest.4013 } # Sex event
+		}
+		else_if = {
+			limit = { # Both liege and chancellor are men
+				is_female = no
+				event_target:dwtw_priest = {
+					is_female = no
+					OR = {
+						event_target:dwtw_priest = {
+							trait = homosexual
+						}
+						is_lover = event_target:dwtw_priest
+					}					
+				}
+			}
+			narrative_event = { id = DWTweaksPriest.4012 } # Gay event	
+		}
+		else_if = {
+			limit = { # Liege is man and chancellor is a woman
+				is_female = no
+				event_target:dwtw_priest = {
+					is_female = yes
+				}
+			}
+			# No sex denied events at this time, some may be added in the future as a TODO
+			narrative_event = { id = DWTweaksPriest.4014 } # Sex Event
+		}
+		# If we reach this point, then the liege and chancellor are not a match and the chancellor will refuse the offer
+		else_if = {
+			limit = {
+				event_target:dw_chancellor = {
+					OR = {
+						trait = chaste
+						trait = celibate
+						trait = eunuch
+					}
+				}
+				narrative_event = { id = DWCourt.3019 } # Liege DENIED
+			}
+		}
+		else = {
+			narrative_event = { id = DWTweaksPriest.4019 } # Liege DENIED
+		}
+	}
+}
+# .3011 Liege and Chancellor Lesbian scene (liege)
+narrative_event = {
+	id = DWTweaksPriest.4011
+	desc = "DWTweaks4011"
+	picture = chancellor_female_female_1
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3010
+	option = { # Well worth the motivation
+		name = "DWTweaks4011A"
+		event_target:dwtw_priest = {
+			character_event = { id = DWTweaksPriest.4005 days = 14 }
+		}
+	}
+}
+# .3012 Liege and Chancellor Lesbian scene (liege)
+narrative_event = {
+	id = DWTweaksPriest.4012
+	desc = "DWTweaks4012"
+	picture = chancellor_male_male_1
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3010
+	option = { # Well worth the motivation
+		name = "DWTweaks4012A"
+		event_target:dwtw_priest = {
+			character_event = { id = DWTweaksPriest.4005 days = 14 }
+		}
+	}
+}
+# .3013 Female Liege and Male Chancellor sex scene (liege)
+narrative_event = {
+	id = DWTweaksPriest.4013
+	desc = "DWTweaks4013"
+	picture = chancellor_male_female_1
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3010
+	option = { # Well worth the motivation
+		name = "DWTweaks4013A"
+		event_target:dwtw_priest = {
+			character_event = { id = DWTweaksPriest.4005 days = 14 }
+			character_event = { id = DWCore.9005 } # Pregnancy check
+		}
+	}
+}
+# .3014 Female Liege and Male Chancellor sex scene (liege)
+narrative_event = {
+	id = DWTweaksPriest.4014
+	desc = "DWTweaks4014"
+	picture = chancellor_male_female_1
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3010
+	option = { # Well worth the motivation
+		name = "DWTweaks4014A"
+		event_target:dwtw_priest = {
+			character_event = { id = DWTweaksPriest.4005 days = 14 }
+			character_event = { id = DWCore.9000 } # Pregnancy check
+		}
+	}
+}
+# .3019 Liege advance denied by Chancellor (liege)
+narrative_event = {
+	id = DWTweaksPriest.4019
+	desc = "DWTweaks4019"
+	picture = denied
+	title = dwtw_priest_claim_motivation
+	is_triggered_only = yes # Triggered by .3010
+	option = { # Bah, they don't know what they're missing
+		name = "DWTweaks4019A"
+	}
+}

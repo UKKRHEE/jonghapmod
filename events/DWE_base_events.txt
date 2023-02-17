@@ -1,0 +1,3772 @@
+###########################################
+#        DW Extra Events    #
+#                                         #
+#                                         #
+#    					  #
+#    DWE.1 = Random World Fantasy Culture #
+#                                         #
+###########################################
+
+# DWE 1-99 = Various support events
+# DWE 100-199 = Bloodline search events
+
+namespace = DWE
+
+
+# .1 Check for culture without race trait (hidden event)
+character_event = {
+	id = DWE.1
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # nothing to see here
+	trigger = {
+		is_alternate_start = yes
+		NOT = { has_character_flag = dwe_racetraitchecked }	
+	}
+	immediate = {
+		character_event = { id = DWE.2 } # race trait assignment
+	}
+}
+
+character_event = {
+    id = DWE.2
+    is_triggered_only = yes # triggered via on_action
+    hide_window = yes # hidden from the player
+    trigger = {
+		any_character = {
+			NOT = { has_character_flag = dwe_racetraitchecked }
+			OR = {
+				culture = orcish 
+				culture = elven
+				culture = drow
+				culture = fae
+			}
+		}
+    }
+    immediate = {
+        # We check by culture and assign the appropriate trait and portrait
+        if = {
+            limit = {
+                culture = orcish
+				is_adult = yes
+            }
+            add_trait = orc
+            add_random_orc_portrait = yes
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }
+        else_if = {
+            limit = {
+                culture = orcish
+				is_adult = no
+            }
+            add_trait = orc
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }
+        else_if = {
+            limit = {
+                culture = elven
+				is_adult = yes
+            }
+            add_trait = elf
+            add_random_elf_portrait = yes
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }
+        else_if = {
+            limit = {
+                culture = elven
+				is_adult = no
+            }
+            add_trait = elf
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }
+        else_if = {
+            limit = {
+                culture = fae
+				is_adult = yes
+            }
+            add_trait = fairy
+            add_random_fairy_portrait = yes
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }
+        else_if = {
+            limit = {
+                culture = fae
+				is_adult = no
+            }
+            add_trait = fairy
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }		
+        else_if = {
+            limit = {
+                culture = drow
+				is_adult = yes
+            }
+            add_trait = houseirae_drow
+            add_random_drow_portrait = yes
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }
+        else_if = {
+            limit = {
+                culture = drow
+				is_adult = no
+            }
+            add_trait = houseirae_drow
+			add_trait = houseirae_drow_child			
+            set_character_flag = dwe_racetraitchecked
+			break = yes
+        }
+    }
+}
+
+# .3 Check for culture without race trait (hidden event)
+
+character_event = {
+	id = DWE.3
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # nothing to see here
+	trigger = {
+		is_alternate_start = yes
+        OR = { # We only check kids the first year of the game
+            AND = {
+				is_adult = yes
+				NOT = {has_character_flag = dwe_racetraitchecked }
+			}
+			AND = {
+				is_adult = no
+				NOT = { has_global_flag = dwe_kidsracecheck }
+			}
+        }
+    }
+	immediate = {
+		character_event = { id = DWE.2 } # race trait assignment
+	}
+}
+
+#.4 Sets the global flag a year in so we know to stop checking children for the missing traits, they should get them at birth
+
+character_event = {
+	id = DWE.4
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # nothing to see here
+	trigger = {
+		NOT = { has_global_flag = dwe_kidsracecheck }
+	}
+	immediate = {
+		set_global_flag = dwe_kidsracecheck
+	}
+}
+
+#.5 Sets the appropriate flag on birth for everyone. Anyone born after game start should get their culture and traits via other mechanisms
+
+character_event = {
+	id = DWE.5
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # nothing to see here
+	trigger = {
+		NOT = { has_character_flag = dwe_racetraitchecked }
+	}
+	immediate = {
+		set_character_flag = dwe_racetraitchecked
+	}
+}
+character_event = {
+    id = DWE.6
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = rape_content_yes
+    }
+}
+
+narrative_event = {
+    id = DWE.7
+	desc = DWE7desc
+	picture = DWTContemplation
+    is_triggered_only = yes
+
+    immediate = {
+        clr_global_flag = rape_content_set
+		if = {
+		limit = {
+			has_global_flag = rape_content_yes
+			}
+			clr_global_flag = rape_content_yes
+		}
+        else_if = {
+		limit = {
+			has_global_flag = rape_content_no
+			}
+			clr_global_flag = rape_content_no
+		}
+
+
+    }
+	
+	option = { # Yes
+	name = DWE7optA 
+	set_global_flag = rape_content_yes
+	set_global_flag = rape_content_set
+	
+	}
+	option = { # No
+	name = DWE7optB
+	set_global_flag = rape_content_no
+	set_global_flag = rape_content_set
+	
+	}
+	
+}
+
+
+character_event = {
+    id = DWE.8
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = dark_world_extras_started
+    }
+}
+
+character_event = {
+	id = DWE.10
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = semiramis_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = semiramis_bloodline
+				inheritance = patrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.11
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = mordred_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = mordred_bloodline
+				inheritance = patrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.12
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = cleopatra_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = cleopatra_bloodline
+				inheritance = patrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.13
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = scathach_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = scathach_bloodline
+				inheritance = patrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.14
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = helentroy_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = helentroy_bloodline
+				inheritance = patrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.15
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = medb_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = medb_bloodline
+				inheritance = patrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.16
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = gilgamesh_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = gilgamesh_bloodline
+				inheritance = matrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.17
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = cuchulainn_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = cuchulainn_bloodline
+				inheritance = matrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.18
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = siegfried_bloodline
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = siegfried_bloodline
+				inheritance = matrilineal
+			}		
+		}
+	
+	}
+
+
+}
+
+character_event = {
+	id = DWE.19
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_clarent
+		}
+}
+
+character_event = {
+	id = DWE.20
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_gae_bolg
+		}
+}
+
+character_event = {
+	id = DWE.21
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_balmung
+		}
+}
+character_event = {
+	id = DWE.22
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_rhongomyniad
+		}
+}
+character_event = {
+	id = DWE.23
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_semiramis_talon
+		}
+}
+character_event = {
+	id = DWE.24
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_helen_apple
+		}
+}
+character_event = {
+	id = DWE.25
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_cleopatra_necklace
+		}
+}
+character_event = {
+	id = DWE.26
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_medb_tiara
+		}
+}
+character_event = {
+	id = DWE.27
+	is_triggered_only = yes # triggered via console only for testing
+	hide_window = yes # nothing to see here
+	immediate = {
+		add_artifact = dwe_gilgamesh_scepter
+		}
+}
+
+
+narrative_event = {
+	id = DWE.100
+	is_triggered_only = yes # comes from dwe_bloodlinesearch decision
+	desc = "DWE100desc"
+	title = "DWE100name"
+	picture = DWTInvestigation
+	
+	option = {
+		name = DWE100optA #Spare no expense
+		trigger = {
+				wealth = 1000
+			}
+		wealth = -1000
+		set_character_flag = dwe_blood_max
+		character_event = { id = DWE.101 days = 135 random = 270 }
+	}
+	option = {
+		name = DWE100optB #High effort
+		trigger = {
+				wealth = 500
+			}
+		wealth = -500
+		set_character_flag = dwe_blood_high
+		character_event = { id = DWE.101 days = 120 random = 240 }
+	}
+	option = {
+		name = DWE100optC #Moderate effort
+		trigger = {
+				wealth = 150
+			}
+		wealth = -150
+		set_character_flag = dwe_blood_med
+		character_event = { id = DWE.101 days = 90 random = 180 }
+	}
+	option = {
+		name = DWE100optD #Minimum effort
+		trigger = {
+				#wealth = 50
+			}
+		wealth = -50
+		set_character_flag = dwe_blood_min
+		character_event = { id = DWE.101 days = 50 random = 100 }
+	}
+
+
+}
+
+character_event = {
+	id = DWE.101
+	is_triggered_only = yes
+	hide_window = yes 
+	immediate = {
+		random_list = {
+			1 = { #Success
+					modifier = {
+						factor = 10
+						has_character_flag = dwe_blood_greatprogress									
+					}
+					modifier = {
+						factor = 10
+						has_character_flag = dwe_blood_max
+					}
+					modifier = {
+						factor = 4
+						has_character_flag = dwe_blood_high
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = dwe_blood_med
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = dwe_blood_min
+					}
+					modifier = {
+						factor = 1.5
+						learning = 15
+					}
+					modifier = {
+						factor = 2
+						learning = 20
+					}
+				character_event = { id = DWE.103 days = 3 }	
+				clr_character_flag = dwe_blood_greatprogress
+				clr_character_flag = dwe_blood_goodprogress
+				clr_character_flag = dwe_blood_minprogress
+					
+					
+			}
+			9 = { # Great Progress
+					modifier = {
+						factor = 5
+						has_character_flag = dwe_blood_greatprogress									
+					}
+					modifier = {
+						factor = 10
+						has_character_flag = dwe_blood_max
+					}
+					modifier = {
+						factor = 4
+						has_character_flag = dwe_blood_high
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = dwe_blood_med
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = dwe_blood_min
+					}
+					modifier = {
+						factor = 1.5
+						learning = 15
+					}
+					modifier = {
+						factor = 2
+						learning = 20
+					}
+				clr_character_flag = dwe_blood_greatprogress
+				clr_character_flag = dwe_blood_goodprogress
+				clr_character_flag = dwe_blood_minprogress
+				set_character_flag = dwe_blood_greatprogress
+				narrative_event = { id = DWE.102 days = 2 }		
+			
+			}
+			25 = { # Moderate Progress
+					modifier = {
+						factor = 0.9
+						has_character_flag = dwe_blood_greatprogress									
+					}
+					modifier = {
+						factor = 2
+						has_character_flag = dwe_blood_goodprogress									
+					}
+					modifier = {
+						factor = 2
+						has_character_flag = dwe_blood_max
+					}
+					modifier = {
+						factor = 2
+						has_character_flag = dwe_blood_high
+					}
+					modifier = {
+						factor = 0.9
+						has_character_flag = dwe_blood_med
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = dwe_blood_min
+					}
+				clr_character_flag = dwe_blood_greatprogress
+				clr_character_flag = dwe_blood_goodprogress
+				clr_character_flag = dwe_blood_minprogress
+				set_character_flag = dwe_blood_goodprogress
+				narrative_event = { id = DWE.102 days = 2 }		
+			}
+			50 = { # Minimal Progress
+					modifier = {
+						factor = 0.5
+						has_character_flag = dwe_blood_greatprogress									
+					}
+					modifier = {
+						factor = 0.9
+						has_character_flag = dwe_blood_goodprogress									
+					}
+					modifier = {
+						factor = 0.5
+						has_character_flag = dwe_blood_max
+					}
+					modifier = {
+						factor = 0.9
+						has_character_flag = dwe_blood_high
+					}
+					modifier = {
+						factor = 1.25
+						has_character_flag = dwe_blood_med
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = dwe_blood_min
+					}
+				clr_character_flag = dwe_blood_greatprogress
+				clr_character_flag = dwe_blood_goodprogress
+				clr_character_flag = dwe_blood_minprogress
+				set_character_flag = dwe_blood_minprogress
+				narrative_event = { id = DWE.102 days = 2 }		
+			}
+			15 = { # No Progress
+					modifier = {
+						factor = 0.5
+						has_character_flag = dwe_blood_greatprogress									
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = dwe_blood_goodprogress									
+					}
+					modifier = {
+						factor = 0.9
+						has_character_flag = dwe_blood_minprogress									
+					}
+					modifier = {
+						factor = 0.5
+						has_character_flag = dwe_blood_max
+					}
+					modifier = {
+						factor = 0.9
+						has_character_flag = dwe_blood_high
+					}
+					modifier = {
+						factor = 2
+						has_character_flag = dwe_blood_med
+					}
+					modifier = {
+						factor = 4
+						has_character_flag = dwe_blood_min
+					}
+				clr_character_flag = dwe_blood_greatprogress
+				clr_character_flag = dwe_blood_goodprogress
+				clr_character_flag = dwe_blood_minprogress
+				set_character_flag = dwe_blood_greatprogress
+				narrative_event = { id = DWE.102 days = 1 }		
+
+			}		
+		}
+										
+	}
+	
+}
+
+
+narrative_event = {
+	id = DWE.102
+		picture = DWTInvestigation
+	is_triggered_only = yes # 
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_greatprogress
+		}
+		text = "DWE_102great_desc"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_goodprogress
+		}
+		text = "DWE_102good_desc"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_minprogress
+		}
+		text = "DWE_102min_desc"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_noprogress
+		}
+		text = "DWE_102no_desc"
+	}
+	
+	option = {
+		name = DWE102optA #Continue the search
+		trigger = {
+			OR = {
+					AND = { 
+							has_character_flag = dwe_blood_max
+							wealth = 200
+							}
+					AND = { 
+							has_character_flag = dwe_blood_high
+							wealth = 100
+							}
+					AND = { 
+							has_character_flag = dwe_blood_med
+							wealth = 30
+							}
+					AND = { 
+							has_character_flag = dwe_blood_min
+							wealth = 10
+							}
+							
+				  }
+			}
+		if = {
+			limit = {
+				has_character_flag = dwe_blood_max
+				}
+				wealth = -200
+			character_event = { id = DWE.101 days = 135 random = 270 }
+			}
+		else_if = {
+			limit = {
+				has_character_flag = dwe_blood_high
+				}
+				wealth = -100
+		character_event = { id = DWE.101 days = 120 random = 240 }
+		}
+		else_if = {
+			limit = {
+				has_character_flag = dwe_blood_med
+				}
+				wealth = -30
+		character_event = { id = DWE.101 days = 90 random = 180 }
+		}
+		else_if = {
+			limit = {
+				has_character_flag = dwe_blood_min
+				}
+				wealth = -10
+		character_event = { id = DWE.101 days = 50 random = 100 }
+		}
+	}
+	option = {
+		name = DWE102optB #Abandon the effort
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+	}
+
+
+}
+
+character_event = {
+	id = DWE.103
+	is_triggered_only = yes
+	hide_window = yes 
+	immediate = {
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		clr_character_flag = dwe_blood_cleopatra
+		clr_character_flag = dwe_blood_cuchulainn
+		clr_character_flag = dwe_blood_gilgamesh
+		clr_character_flag = dwe_blood_scathach
+		clr_character_flag = dwe_blood_semiramis
+		clr_character_flag = dwe_blood_mordred
+		clr_character_flag = dwe_blood_siegfried
+		clr_character_flag = dwe_blood_helenoftroy
+		clr_character_flag = dwe_blood_medb
+		random_list = { # they succeeded, so now we determine who their ancestor is
+		
+			10 = { # Semiramis
+					modifier = {
+						factor = 25
+						culture = assyrian
+					}
+					modifier = {
+						factor = 10
+						culture_group = byzantine
+					}
+					modifier = {
+						factor = 0.2
+						NOR = {
+						culture_group = byzantine
+						culture_group = altaic
+						culture_group = arabic	
+						culture_group = iranian
+						culture = hungarian
+						}
+					}
+					set_character_flag = dwe_blood_semiramis
+					narrative_event = { id = DWE.104 }
+			
+			}
+			10 = { # Mordred
+					modifier = {
+						factor = 25
+						OR = {
+						culture = welsh
+						culture = english
+						culture = saxon
+						}
+					}
+					modifier = {
+						factor = 10
+						culture_group = celtic
+					}
+					modifier = {
+						factor = 0.5
+						culture_group = celtic
+						NOT = { culture = welsh }
+					}
+					
+					modifier = {
+						factor = 10
+						culture_group = west_germanic
+					}
+					modifier = {
+						factor = 0.5
+						culture_group = west_germanic
+						NOR = { 
+								culture = saxon
+								culture = english
+								}
+					}
+					modifier = {
+						factor = 1.1
+						NOR = {
+						culture_group = celtic
+						culture_group = west_germanic
+						}
+					}
+					modifier = { # since norman has potential celtic roots
+						factor = 2
+								culture = norman
+							
+					}		
+					modifier = {
+						factor = 0.5
+						culture_group = latin
+						NOT = { 
+								culture = norman
+								}
+					}		
+					modifier = {
+						factor = 0.2
+						OR = { 
+							culture_group = north_germanic
+							culture_group = iberian
+							culture_group = byzantine						
+							}
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+						culture_group = celtic
+						culture_group = west_germanic
+						culture_group = north_germanic
+						culture_group = latin
+						culture_group = iberian
+						}
+					}
+					set_character_flag = dwe_blood_mordred
+					narrative_event = { id = DWE.104 }
+			
+			}
+			
+			
+			
+			10 = { # Cleopatra
+					modifier = {
+						factor = 25
+						OR = {
+						culture = egyptian_arabic
+						culture = greek
+						}
+					}
+					modifier = {
+						factor = 10
+						OR = {
+							culture_group = byzantine
+							culture_group = arabic
+							}
+					}
+					modifier = {
+						factor = 0.5
+						OR = {
+							culture_group = byzantine
+							culture_group = arabic
+							}
+						NOR = { 
+							culture = greek
+							culture = egyptian_arabic
+							}
+					}
+					modifier = { # hers is more recent, so hasn't likely traveled as far
+						factor = 0
+						NOR = {
+						culture_group = byzantine
+						culture_group = arabic	
+						culture_group = latin
+						culture = old_frankish
+						culture = lombard
+						}
+					}
+					set_character_flag = dwe_blood_cleopatra
+					narrative_event = { id = DWE.104 }
+			
+			
+			}
+			10 = { # Scathach
+					modifier = {
+						factor = 25
+						OR = {
+						culture = scottish
+						culture = pictish
+						}
+					}
+					modifier = {
+						factor = 10
+						culture_group = celtic
+					}
+					modifier = {
+						factor = 0.5
+						culture_group = celtic
+						NOR = { 
+						culture = scottish
+						culture = pictish
+								}
+					}				
+					modifier = {
+						factor = 1.1
+						NOR = {
+						culture_group = celtic
+						culture_group = west_germanic
+						}
+						}
+					modifier = { # since norman has potential celtic roots
+						factor = 1.5
+								culture = norman
+							
+					}		
+					modifier = {
+						factor = 0.5
+						culture_group = latin
+						NOT = { 
+								culture = norman
+								}
+					}		
+					modifier = {
+						factor = 0.5
+						culture_group = west_germanic
+						NOR = { 
+								culture = saxon
+								culture = english
+								}
+					}
+					modifier = {
+						factor = 0.2
+						OR = { 
+							culture_group = north_germanic
+							culture_group = iberian
+							culture_group = byzantine						
+							}
+					}
+					
+					modifier = {
+						factor = 0
+						NOR = { 
+						culture_group = celtic
+						culture_group = west_germanic
+						culture_group = north_germanic
+						culture_group = latin
+						culture_group = iberian
+						culture_group = byzantine						
+						}
+					}
+					set_character_flag = dwe_blood_scathach
+					narrative_event = { id = DWE.104 }
+		
+			
+			}
+			10 = { # Helen of Troy
+					modifier = {
+						factor = 25
+						culture = greek
+					}
+					modifier = {
+						factor = 10
+						culture_group = byzantine
+					}
+					modifier = {
+						factor = 0.1
+						NOR = {
+						culture_group = byzantine
+						culture_group = west_germanic
+						culture_group = latin
+						culture_group = iberian
+						culture_group = arabic	
+						culture_group = iranian
+						}
+					}
+					set_character_flag = dwe_blood_helenoftroy
+					narrative_event = { id = DWE.104 }
+			
+			
+			
+			}
+			10 = { # Medb
+					modifier = {
+						factor = 25
+						OR = {
+						culture = irish
+						}
+					}
+					modifier = {
+						factor = 10
+						culture_group = celtic
+					}
+					modifier = {
+						factor = 0.5
+						culture_group = celtic
+						NOT = { 
+						culture = irish
+								}
+					}				
+					modifier = { # since norman has potential celtic roots
+						factor = 1.5
+								culture = norman
+							
+					}		
+					modifier = {
+						factor = 0.5
+						culture_group = latin
+						NOT = { 
+								culture = norman
+								}
+					}		
+					modifier = { #lower chance if not on the isles
+						factor = 0.5
+						culture_group = west_germanic
+						NOR = { 
+								culture = saxon
+								culture = english
+								}
+					}
+					modifier = {
+						factor = 0.2
+						OR = { 
+							culture_group = north_germanic
+							culture_group = iberian
+							culture_group = byzantine						
+							}
+					}
+					
+					modifier = {
+						factor = 0
+						NOR = { 
+						culture_group = celtic
+						culture_group = west_germanic
+						culture_group = north_germanic
+						culture_group = latin
+						culture_group = iberian
+						culture_group = byzantine						
+						}
+					}
+					set_character_flag = dwe_blood_medb
+					narrative_event = { id = DWE.104 }
+			
+			
+			}
+			5 = { # Gilgamesh - has a lower chance, but can spawn for everyone
+					modifier = {
+						factor = 0.5
+						NOR = {
+							culture_group = byzantine
+							culture_group = altaic
+							culture_group = arabic	
+							culture_group = iranian
+							}
+						}
+					set_character_flag = dwe_blood_gilgamesh
+					narrative_event = { id = DWE.104 }
+			
+			
+			}
+			10 = { # Cu Chulainn
+					modifier = {
+						factor = 25						
+						culture = irish						
+					}
+					modifier = {
+						factor = 10
+						culture_group = celtic
+					}
+					modifier = {
+						factor = 0.5
+						culture_group = celtic
+						NOT = { 
+						culture = irish
+								}
+					}				
+					modifier = { # since norman has potential celtic roots
+						factor = 1.5
+								culture = norman
+							
+					}		
+					modifier = {
+						factor = 0.5
+						culture_group = latin
+						NOT = { 
+								culture = norman
+								}
+					}		
+					modifier = { #lower chance if not on the isles
+						factor = 0.5
+						culture_group = west_germanic
+						NOR = { 
+								culture = saxon
+								culture = english
+								}
+					}
+					modifier = {
+						factor = 0.2
+						OR = { 
+							culture_group = north_germanic
+							culture_group = iberian
+							culture_group = byzantine						
+							}
+					}
+					
+					modifier = {
+						factor = 0
+						NOR = { 
+							culture_group = celtic
+							culture_group = west_germanic
+							culture_group = north_germanic
+							culture_group = latin
+							culture_group = iberian
+							culture_group = byzantine						
+							}
+						}
+					set_character_flag = dwe_blood_cuchulainn
+					narrative_event = { id = DWE.104 }
+		
+			
+			}
+			10 = { # Siegfried
+					modifier = {
+						factor = 25 
+						OR ={
+						culture_group = central_germanic
+						culture_group = north_germanic
+						}
+					}
+					modifier = {
+						factor = 10
+						OR ={
+						culture_group = central_germanic
+						culture_group = north_germanic
+						}
+						NOR = {
+						culture = suebi
+						culture = lombard						
+						}
+					}
+					modifier = {
+						factor = 10
+						culture_group = west_germanic
+						NOT = {
+							culture = english
+							culture = saxon
+						}
+					}
+					modifier = {
+						factor = 1.5 # much less likely for west germanic characters on the isles
+						OR = {
+						culture = saxon
+						culture = english
+						}
+					}
+					modifier = { # since norman has norse roots
+						factor = 3
+								culture = norman
+					}		
+					modifier = {
+						factor = 0.25
+						culture_group = latin
+						NOT = { 
+								culture = norman
+								}
+					}		
+					modifier = {
+						factor = 0.25 # much less likely for characters on the isles
+						OR = { 
+							culture_group = celtic
+							culture_group = iberian
+							culture_group = byzantine
+							}
+					}
+					modifier = {
+						factor = 0
+						NOR = { 
+						culture_group = celtic
+						culture_group = west_germanic
+						culture_group = north_germanic
+						culture_group = latin
+						culture_group = iberian
+						culture_group = byzantine						
+						culture = frankish
+						}
+					}
+			
+					set_character_flag = dwe_blood_siegfried
+					narrative_event = { id = DWE.104 }
+			}
+		}
+	}
+}
+		
+narrative_event = {
+	id = DWE.104
+	title = "DWE104name"
+		picture = DWEOldTome
+	is_triggered_only = yes  
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_semiramis
+		}
+		text = "DWE104semiramis"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_mordred
+		}
+		text = "DWE104mordred"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cleopatra
+		}
+		text = "DWE104cleopatra"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_scathach
+		}
+		text = "DWE104scathach"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_helenoftroy
+		}
+		text = "DWE104helenoftroy"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_medb
+		}
+		text = "DWE104medb"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_gilgamesh
+		}
+		text = "DWE104gilgamesh"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cuchulainn
+		}
+		text = "DWE104cuchulainn"
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_siegfried
+		}
+		text = "DWE104siegfried"
+	}
+			
+
+	option = { #Proclaim your findings!
+	name = DWE104optA
+	trigger = {
+		prestige = 5000 # can afford to burn that sort of prestige
+		}
+		character_event = { id = DWE.105 }
+		prestige = -5000
+	}
+
+	option = { #More proof is needed
+		name = DWE104optB
+		narrative_event = { id = DWE.110 days = 10 }
+	}
+
+	option = { #Reject the findings
+		name = DWE104optC
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		clr_character_flag = dwe_blood_cleopatra
+		clr_character_flag = dwe_blood_cuchulainn
+		clr_character_flag = dwe_blood_gilgamesh
+		clr_character_flag = dwe_blood_scathach
+		clr_character_flag = dwe_blood_semiramis
+		clr_character_flag = dwe_blood_mordred
+		clr_character_flag = dwe_blood_siegfried
+		clr_character_flag = dwe_blood_helenoftroy
+		clr_character_flag = dwe_blood_medb
+		
+	}
+
+}
+
+
+
+character_event = {
+	id = DWE.105
+	is_triggered_only = yes
+	hide_window = yes
+	
+	
+	immediate = {
+
+			random_list = { #Basic lower chance if tomb was not found.
+				#Success. - Bloodline created.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = dwe_blood_min
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = dwe_blood_med
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = dwe_blood_high
+					}
+					modifier = {
+						factor = 1.25
+						trait = socializer
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 10
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 26
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 20
+						}
+					}
+					narrative_event = { id = DWE.106 days = 350 random = 450 }
+				}
+				60 = { #Failure
+
+					narrative_event = { id = DWE.107 days = 350 random = 450 }
+				}
+			}
+		}
+
+}
+
+
+narrative_event = {
+	id = DWE.106
+	title = DWE106name
+	desc = DWE106desc
+	picture = DWECheeringSoldiers
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		set_global_flag = dwe_ancient_bloodline
+
+	}
+
+option = {
+		name = DWE106optA
+		prestige = 1000
+		
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_semiramis
+			}
+			character_event = { id = DWE.10 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_mordred
+			}
+			character_event = { id = DWE.11 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_cleopatra
+			}
+			character_event = { id = DWE.12 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_scathach
+			}
+			character_event = { id = DWE.13 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_helenoftroy
+			}
+			character_event = { id = DWE.14 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_medb
+			}
+			character_event = { id = DWE.15 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_gilgamesh
+			}
+			character_event = { id = DWE.16 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_cuchulainn
+			}
+			character_event = { id = DWE.17 }
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_siegfried
+			}
+			character_event = { id = DWE.18 }
+		}
+	}
+}
+
+narrative_event = {
+	id = DWE.107
+	title = "DWE107name"
+	desc = "DWE107desc"
+	picture = DWTInvestigation
+	is_triggered_only = yes
+	
+	immediate = {
+		any_realm_character = {
+			opinion = { modifier = opinion_dwe_laughingstock who = ROOT years = 10 } 
+			set_character_flag = dwe_bl_convince_failure
+		}
+	}
+
+	option = { #I need more proof!
+		name = DWE107optA
+		trigger = {
+			prestige = 5000 # you still have enough prestige that people won't just ignore that too
+		}
+		narrative_event = { id = DWE.110 days = 10 }
+		
+	}
+	option = { #Abandon the effort
+		name = DWE104optC
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		set_character_flag = dwe_blsearch_failed
+	}
+}
+
+
+narrative_event = {
+	id = DWE.109
+	desc = DWE109desc
+	title = DWE109name
+	picture = DWECheeringSoldiers
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = dwe_bl_convince_failure
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		clr_character_flag = dwe_bl_min_search
+		clr_character_flag = dwe_bl_self_search
+		clr_character_flag = dwe_bl_high_search
+		clr_character_flag = dwe_bl_med_search
+		set_global_flag = dwe_ancient_bloodline
+		remove_trait = travelling
+	}
+
+option = {
+		name = DWE109optA
+		prestige = 2000
+		
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_semiramis
+			}
+			character_event = { id = DWE.10 }
+			clr_character_flag = dwe_blood_semiramis
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_mordred
+			}
+			character_event = { id = DWE.11 }
+			clr_character_flag = dwe_blood_mordred
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_cleopatra
+			}
+			character_event = { id = DWE.12 }
+			clr_character_flag = dwe_blood_cleopatra
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_scathach
+			}
+			character_event = { id = DWE.13 }
+			clr_character_flag = dwe_blood_scathach
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_helenoftroy
+			}
+			character_event = { id = DWE.14 }
+			clr_character_flag = dwe_blood_helenoftroy
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_medb
+			}
+			character_event = { id = DWE.15 }
+			clr_character_flag = dwe_blood_medb
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_gilgamesh
+			}
+			character_event = { id = DWE.16 }
+			clr_character_flag = dwe_blood_gilgamesh
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_cuchulainn
+			}
+			character_event = { id = DWE.17 }
+			clr_character_flag = dwe_blood_cuchulainn
+		}
+		if = {
+			limit = {
+			has_character_flag = dwe_blood_siegfried
+			}
+			character_event = { id = DWE.18 }
+			clr_character_flag = dwe_blood_siegfried	
+		}
+	}
+}
+
+narrative_event = {
+	id = DWE.110
+	desc = "DWE110desc"
+	title = "DWE110name"
+	picture = DWECastleLandscape
+	is_triggered_only = yes
+
+
+	option = { #Search for it myself
+		name = DWE110OptA
+		trigger = {
+			NOR = {
+				trait = infirm
+				trait = incapable
+			
+			}
+			wealth = 500
+		}
+		set_character_flag = dwe_bl_self_search
+		add_trait = travelling
+		wealth = -500
+		character_event = { id = DWE.112 }
+
+	}
+	option = { #Send a team to search for it
+		name = DWE110OptB
+		narrative_event = { id = DWE.111 }
+
+	}
+	option = { #Forget about it
+		name = DWE110OptC
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+	}
+
+}
+
+narrative_event = {
+	id = DWE.111
+	desc = DWE111desc
+	title = DWE111name
+	picture = DWEAdventurers
+	is_triggered_only = yes
+	
+	option = { #Spare no expense
+		trigger = {
+			wealth = 1000
+		}
+		name = DWE111optA
+		set_character_flag = dwe_bl_high_search
+		wealth = -2000
+		character_event = { id = DWE.112 }
+
+	}
+	option = { #Modest Funds
+		name = DWE111optB
+		trigger = {
+			wealth = 500
+		}
+		set_character_flag = dwe_bl_med_search
+		wealth = -1000
+		character_event = { id = DWE.112 }
+	
+	}
+	option = { #Minimal Funds
+		name = DWE111optC
+		set_character_flag = dwe_bl_min_search
+		wealth = -100
+		character_event = { id = DWE.112 }
+		
+	}
+	
+	option = { #Forget about it
+		name = DWE111optD
+		random = {
+			chance = 10
+			add_trait = depressed
+		
+		}
+		clr_character_flag = dwe_bl_convince_failure
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		clr_character_flag = dwe_blood_semiramis
+		clr_character_flag = dwe_blood_mordred
+		clr_character_flag = dwe_blood_cleopatra
+		clr_character_flag = dwe_blood_scathach
+		clr_character_flag = dwe_blood_medb
+		clr_character_flag = dwe_blood_helenoftroy
+		clr_character_flag = dwe_blood_gilgamesh
+		clr_character_flag = dwe_blood_cuchulainn
+		clr_character_flag = dwe_blood_siegfried		
+	}
+
+}	
+
+character_event = {
+	id = DWE.112
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+			random_list = {
+				#Success. - Tomb discovered
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = dwe_bl_min_search
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = dwe_bl_med_search
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = dwe_bl_high_search
+					}
+					modifier = {
+						factor = 1.25
+						learning = 10
+					}
+					modifier = {
+						factor = 1.25
+						learning = 12
+					}
+					modifier = {
+						factor = 1.25
+						learning = 14
+					}
+					modifier = {
+						factor = 1.25
+						learning = 16
+					}
+					modifier = {
+						factor = 1.25
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						learning = 26
+					}
+					modifier = {
+						factor = 1.5
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						learning = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}					
+					modifier = {
+						factor = 1.25
+						intrigue = 10
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 12
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 14
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 16
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 26
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 20
+						}
+					}
+					#rather than penalize for distance, we'll make it take longer instead
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_semiramis
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_asia_minor
+										region = world_middle_east_jerusalem
+										region = world_middle_east_arabia
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_mordred
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_europe_west_brittania
+										region = world_europe_west_francia
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_cleopatra
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_asia_minor
+										region = world_middle_east_jerusalem
+										region = world_europe_south_east
+										region = world_africa_east
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}	
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_scathach
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_europe_west_brittania
+										region = world_europe_west_francia
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}	
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_helenoftroy
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_asia_minor
+										region = world_middle_east_jerusalem
+										region = world_europe_south_east
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}	
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_medb
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_europe_west_brittania
+										region = world_europe_west_francia
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}	
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_gilgamesh
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_middle_east_arabia
+										region = world_middle_east_jerusalem
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}	
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_cuchulainn
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_europe_west_brittania
+										region = world_europe_west_francia
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}	
+					   
+					if = {
+						limit = {
+							has_character_flag = dwe_blood_siegfried
+						}
+						if = {
+							limit = {
+								capital_scope = { 
+									NOR = { 
+										region = world_europe_north
+										region = world_europe_west_germania
+									}
+								}
+							}
+							narrative_event = { id = DWE.114 days = 250 random = 350 }
+						}
+						else = {
+							narrative_event = { id = DWE.114 days = 150 random = 250 }
+						
+						}
+					}	
+					   
+					   
+					
+
+				}
+				60 = { #Failure
+					#always longer duration if we failed
+					narrative_event = { id = DWE.113 days = 250 random = 350 }
+				}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+	}
+
+}
+
+narrative_event = {
+	id = DWE.113
+	is_triggered_only = yes
+	title = "DWE113name"
+	desc = "DWE113desc"
+	picture = DWECastleLandscape
+	
+	option = { # Keep Searching
+		name = DWE113optA
+		trigger = {
+			OR = {
+				AND = {
+					has_character_flag = dwe_bl_self_search
+					wealth = 250
+				}
+				AND = {
+					has_character_flag = dwe_bl_high_search
+					wealth = 500
+				}
+				AND = {
+					has_character_flag = dwe_bl_med_search
+					wealth = 250
+				}
+				AND = {
+					has_character_flag = dwe_bl_min_search
+					wealth = 50
+				}
+			}
+		}
+		if = {
+				limit = {	has_character_flag = dwe_bl_self_search		}
+				wealth = -250
+		}
+		else_if = {
+				limit = {	has_character_flag = dwe_bl_high_search		}
+				wealth = -500
+		}
+		else_if = {
+				limit = {	has_character_flag = dwe_bl_med_search		}
+				wealth = -250
+		}
+		else = {
+				wealth = -50
+		}
+		character_event = { id = DWE.112 }
+		
+	}
+	option = { # Just try to convince people
+		name = DWE113optB
+		trigger = {
+		 NOT = { has_character_flag = dwe_bl_convince_failure }
+		}
+		character_event = { id = DWE.105 }
+	}
+	option = { # Give up
+		name = DWE113optC
+		random = {
+			chance = 10
+			add_trait = depressed		
+		}
+		clr_character_flag = dwe_bl_convince_failure
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		clr_character_flag = dwe_blood_semiramis
+		clr_character_flag = dwe_blood_mordred
+		clr_character_flag = dwe_blood_cleopatra
+		clr_character_flag = dwe_blood_scathach
+		clr_character_flag = dwe_blood_medb
+		clr_character_flag = dwe_blood_helenoftroy
+		clr_character_flag = dwe_blood_gilgamesh
+		clr_character_flag = dwe_blood_cuchulainn
+		clr_character_flag = dwe_blood_siegfried	
+		clr_character_flag = dwe_bl_min_search
+		clr_character_flag = dwe_bl_self_search
+		clr_character_flag = dwe_bl_high_search
+		clr_character_flag = dwe_bl_med_search
+	}
+	
+	
+}
+
+narrative_event = {
+	id = DWE.114
+	is_triggered_only = yes
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_semiramis
+		}
+		title = "DWE114name"
+		text = "DWE114semiramis"
+		picture = DWERuinsEgypt
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_mordred
+		}
+		title = "DWE114name"
+		text = "DWE114mordred"
+		picture = DWERuinsAncient
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cleopatra
+		}
+		title = "DWE114name"
+		text = "DWE114cleopatra"
+		picture = DWERuinsEgypt
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_scathach
+		}
+		title = "DWE114name"
+		text = "DWE114scathach"
+		picture = DWERuinsCeltic
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_helenoftroy
+		}
+		title = "DWE114name"
+		text = "DWE114helenoftroy"
+		picture = DWERuinsGreek
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_medb
+		}
+		title = "DWE114name"
+		text = "DWE114medb"
+		picture = DWERuinsCeltic
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_gilgamesh
+		}
+		title = "DWE114name"
+		text = "DWE114gilgamesh"
+		picture = DWERuinsBabylon
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cuchulainn
+		}
+		title = "DWE114name"
+		text = "DWE114cuchulainn"
+		picture = DWERuinsCeltic
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_siegfried
+		}
+		title = "DWE114name"
+		text = "DWE114siegfried"
+		picture = DWERuinsCeltic
+	}	
+
+	option = { #if we led the search, we can investigate the tomb ourselves
+		trigger = { has_character_flag = dwe_bl_self_search }
+		name = DWE114optA
+		narrative_event = { id = DWE.118 days = 1 random = 2 }
+	}
+	option = { #have your men gather evidence
+		name = DWE114optB
+		trigger = { has_character_flag = dwe_bl_self_search }
+		narrative_event = { id = DWE.115 days = 50 random = 50 }
+	}
+	option = { #if you're not there, review what they found and present it
+		name = DWE114optC
+		trigger = { NOT = { has_character_flag = dwe_bl_self_search } }
+		character_event = { id = DWE.116  }
+
+	}
+
+}
+
+narrative_event = {
+	id = DWE.115
+	is_triggered_only = yes
+	desc = "DWE115desc"
+	title = "DWE115name"
+	picture = DWTInvestigation
+	
+	immediate = { #we're home now
+	remove_trait = travelling
+	}
+	option = { # time to publish the claim
+		name = DWE115optA
+		character_event = { id = DWE.116  }
+	}
+
+}
+
+character_event = {
+	id = DWE.116
+	is_triggered_only = yes
+	hide_window = yes
+	
+	
+	immediate = {
+
+			random_list = { #Higher chance since tomb was found.
+				#Success. - Bloodline created.
+				#Failure. - Retry or change approach.
+				80 = { #Success
+					modifier = { # less likely to believe you if you failed to convince them before
+						factor = 0.75 
+						has_character_flag = dwe_bl_convince_failure					
+						}				
+					modifier = { #having a reputation for honesty helps here
+						factor = 1.5
+						trait = honest
+					}
+					modifier = {
+						factor = 1.25
+						trait = socializer
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 10
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 26
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 20
+						}
+					}
+					narrative_event = { id = DWE.106 days = 350 random = 450 }
+				}
+				20 = { #Failure
+
+					narrative_event = { id = DWE.117 days = 350 random = 450 }
+				}
+			}
+		}
+
+}
+
+narrative_event = {
+	id = DWE.117
+	title = "DWE117name"
+	desc = "DWE117desc"
+	picture = DWTInvestigation
+	is_triggered_only = yes
+	
+	immediate = {
+		any_realm_character = {
+			opinion = { modifier = opinion_dwe_laughingstock who = ROOT years = 10 } 
+		}
+	}
+
+	option = { #Abandon the effort
+		name = DWE117optA
+		clr_character_flag = dwe_bl_convince_failure
+		clr_character_flag = dwe_blood_max
+		clr_character_flag = dwe_blood_high
+		clr_character_flag = dwe_blood_med
+		clr_character_flag = dwe_blood_min
+		clr_character_flag = dwe_blood_greatprogress
+		clr_character_flag = dwe_blood_goodprogress
+		clr_character_flag = dwe_blood_minprogress
+		clr_character_flag = dwe_blood_noprogress
+		clr_character_flag = dwe_blsearch_in_progress
+		clr_character_flag = dwe_blood_semiramis
+		clr_character_flag = dwe_blood_mordred
+		clr_character_flag = dwe_blood_cleopatra
+		clr_character_flag = dwe_blood_scathach
+		clr_character_flag = dwe_blood_medb
+		clr_character_flag = dwe_blood_helenoftroy
+		clr_character_flag = dwe_blood_gilgamesh
+		clr_character_flag = dwe_blood_cuchulainn
+		clr_character_flag = dwe_blood_siegfried	
+		clr_character_flag = dwe_bl_min_search
+		clr_character_flag = dwe_bl_self_search
+		clr_character_flag = dwe_bl_high_search
+		clr_character_flag = dwe_bl_med_search
+		set_character_flag = dwe_blsearch_failed
+	}
+}
+
+narrative_event = {
+	id = DWE.118
+		title = DWE118name
+	picture = aplaceholder
+	is_triggered_only = yes
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_semiramis
+		}
+		text = DWE118semiramis
+		picture = DWESemiramis
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_mordred
+		}
+		text = DWE118mordred
+		picture = DWEMordred
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cleopatra
+		}
+		text = DWE118cleopatra
+		picture = DWECleopatra
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_scathach
+		}
+		text = DWE118scathach
+		picture = DWEScathach
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_helenoftroy
+		}
+		text = DWE118helenoftroy
+		picture = DWEHelenofTroy
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_medb
+		}
+		text = DWE118medb
+		picture = DWEMedb
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_gilgamesh
+		}
+		text = DWE118gilgamesh
+		picture = DWEGilgamesh
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cuchulainn
+		}
+		text = DWE118cuchulainn
+		picture = DWECuchulainn
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_siegfried
+		}
+		text = DWE118siegfried
+		picture = DWESiegfried
+	}	
+	option = { #Question the spirit
+		name = DWE118optA
+		narrative_event = { id = DWE.119 }
+		
+	}
+	option = { #Run away
+		name = DWE118optB
+		random = {
+			chance = 50
+			add_trait = craven
+		}
+		narrative_event = { id = DWE.115 days = 50 random = 50 }
+	
+	}
+
+}
+
+narrative_event = { #questioning the spirit
+	id = DWE.119
+	picture = aplaceholder
+		title = "DWE119name"
+	is_triggered_only = yes
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_semiramis
+		}
+		text = "DWE119semiramis"
+		picture = DWESemiramis
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_mordred
+		}
+		text = "DWE119mordred"
+		picture = DWEMordred
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cleopatra
+		}
+		text = "DWE119cleopatra"
+		picture = DWECleopatra
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_scathach
+		}
+		text = "DWE119scathach"
+		picture = DWEScathach
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_helenoftroy
+		}
+		text = "DWE119helenoftroy"
+		picture = DWEHelenofTroy
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_medb
+		}
+		text = "DWE119medb"
+		picture = DWEMedb
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_gilgamesh
+		}
+		text = "DWE119gilgamesh"
+		picture = DWEGilgamesh
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_cuchulainn
+		}
+		text = "DWE119cuchulainn"
+		picture = DWECuchulainn
+	}
+	desc ={
+		trigger = {
+			has_character_flag = dwe_blood_siegfried
+		}
+		text = "DWE119siegfried"
+		picture = DWESiegfried
+	}	
+
+	option = { #Challenge the spirit
+		name = DWE119optA
+		if = {		
+			limit = { has_character_flag = dwe_blood_semiramis }
+			narrative_event = { id = DWE.120 }
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_mordred }
+			narrative_event = { id = DWE.125 }	
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_cleopatra }
+			narrative_event = { id = DWE.130 }			
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_scathach }
+			narrative_event = { id = DWE.125 }	
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_helenoftroy }
+			narrative_event = { id = DWE.135 }	
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_medb }
+			narrative_event = { id = DWE.140 }	
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_gilgamesh }
+			narrative_event = { id = DWE.125 }	
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_cuchulainn }
+			narrative_event = { id = DWE.125 }	
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_siegfried }
+			narrative_event = { id = DWE.125 }	
+		}
+	
+	}
+	option = { #Run away
+		name = DWE118optB
+		random = {
+			chance = 50
+			add_trait = craven
+		}
+		narrative_event = { id = DWE.115 days = 50 random = 50 }
+	
+	}
+
+}
+
+narrative_event = { #Semiramis's challenge
+	id = DWE.120
+	title = "DWE120name"
+	desc = "DWE120desc"
+	picture = DWESemiramisChallenge
+	is_triggered_only = yes
+	
+	option = { #Choose the wine in front of you
+		name = DWE120optA
+		character_event = { id = DWE.121 }
+	}
+	option = { #Choose the wine in front of her
+		name = DWE120optB
+		character_event = { id = DWE.121 }	
+	}
+	option = { #They're both poisoned!
+		name = DWE120optC
+		trigger = {
+			intrigue = 15
+		}
+		narrative_event = { id = DWE.123 }
+	}
+}
+
+character_event = {
+	id = DWE.121
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		random_list = {
+			30 = {
+					modifier = {
+						factor = 0.5
+						trait = strong
+					}
+					modifier = {
+						factor = 10
+						NOT = { health = 5 }
+					}
+					modifier = {
+						factor = 5
+						AND = { health = 5
+						NOT = { health = 6 } }
+					}
+					modifier = {
+						factor = 2
+						AND = { health = 6
+						NOT = { health = 7 }}
+					}
+					modifier = {
+						factor = 1.1
+						AND = { health = 7
+						NOT = { health = 8 }}
+					}
+					modifier = {
+						factor = 0.75
+						AND = { health = 8
+						NOT = { health = 10 }}
+					}
+					modifier = {
+						factor = 0.5
+						AND = { health = 10
+						NOT = { health = 12 }}
+					}
+					modifier = {
+						factor = 0.25
+						health = 12
+					}
+				death = { death_reason = death_drank_poison killer = ROOT }
+			
+			}
+			30 = { #doesn't kill you but messes you up badly
+					modifier = {
+						factor = 2
+						NOT = { health = 5 }
+					}
+					modifier = {
+						factor = 5
+						AND = { health = 5
+						NOT = { health = 6 }}
+					}
+					modifier = {
+						factor = 10
+						AND = { health = 6
+						NOT = { health = 7 }}
+					}
+					modifier = {
+						factor = 5
+						AND = { health = 7
+						NOT = { health = 8 }}
+					}
+					modifier = {
+						factor = 2
+						AND = { health = 8
+						NOT = { health = 10 }}
+					}
+					modifier = {
+						factor = 1.5
+						AND = { health = 10
+						NOT = { health = 12 }}
+					}
+					modifier = {
+						factor = 1.1
+						health = 12
+					}
+					add_trait = infirm
+					random = {
+						chance = 40
+						add_trait = cancer
+					}
+					random = {
+						chance = 40
+						add_trait = dystentery
+					}
+					random = {
+						chance = 40
+						add_trait = food_poisoning
+					}
+					random = {
+						chance = 40
+						add_trait = leper
+					}
+					random = {
+						chance = 40
+						add_trait = pneumonic
+					}
+			
+			}
+			30 = {
+					modifier = {
+						factor = 2
+						trait = strong
+					}
+					modifier = {
+						factor = 0.25
+						NOT = { health = 5 }
+					}
+					modifier = {
+						factor = 5
+						AND = { health = 0.5
+						NOT = { health = 6 }}
+					}
+					modifier = {
+						factor = 0.75
+						AND = { health = 6
+						NOT = { health = 7 }}
+					}
+					modifier = {
+						factor = 1.1
+						AND = { health = 7
+						NOT = { health = 8 }}
+					}
+					modifier = {
+						factor = 2
+						AND = { health = 8
+						NOT = { health = 10 }}
+					}
+					modifier = {
+						factor = 4
+						AND = { health = 10
+						NOT = { health = 12 }}
+					}
+					modifier = {
+						factor = 4
+						health = 12
+					}
+					random = {
+						chance = 10
+						add_trait = cancer
+					}
+					random = {
+						chance = 10
+						add_trait = dystentery
+					}
+					random = {
+						chance = 10
+						add_trait = food_poisoning
+					}
+					random = {
+						chance = 10
+						add_trait = leper
+					}
+					random = {
+						chance = 10
+						add_trait = pneumonic
+					}
+					
+			
+			}
+		}
+	
+	}
+	after = {
+		if = {
+		limit = { is_alive = yes } # if you somehow survived 
+		narrative_event = { id = DWE.122 }
+			
+		}
+	}
+
+}
+
+narrative_event = { #Semiramis's challenge - survived poison
+	id = DWE.122
+	desc = "DWE122desc"
+	title = "DWE122name"
+	picture = DWESemiramisWine
+	is_triggered_only = yes
+	
+	option = { #Still alive
+		name = DWE122optA
+		narrative_event = { id = DWE.124 }
+	}
+}
+
+narrative_event = { #Semiramis's challenge - clever choice
+	id = DWE.123
+	desc = "DWE123desc"
+	title = "DWE123name"
+	picture = DWESemiramisWine
+	is_triggered_only = yes
+	
+	option = { #Claim the spoils
+		name = DWE123optA
+		narrative_event = { id = DWE.124 }
+	}
+}
+
+narrative_event = { #Semiramis's challenge - victory
+	id = DWE.124
+	title = "DWE124name"
+	desc = "DWE124desc"
+	picture = DWESemiramisWine
+	is_triggered_only = yes
+	
+	option = { #Claim the spoils
+		name = DWE124optA
+		add_artifact = dwe_semiramis_talon
+		narrative_event = { id = DWE.109 days = 50 random = 50 }
+	}
+}
+
+narrative_event = { #Fight!
+	id = DWE.125
+		title = "DWE125name"
+	picture = aplaceholder
+	desc = {
+		trigger = { has_character_flag = dwe_blood_mordred }
+		text = "DWE125mordreddesc"
+		picture = DWEMordredFight
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_scathach }
+		text = "DWE125scathachdesc"
+		picture = DWEScathachFight
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_gilgamesh }
+		text = "DWE125gilgameshdesc"
+		picture = DWEGilgameshFight
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_cuchulainn }
+		text = "DWE125cuchulainndesc"
+		picture = DWECuchulainnFight
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_siegfried }
+		text = "DWE125siegfrieddesc"
+		picture = DWESiegfriedFight
+	}
+	is_triggered_only = yes
+	
+	option = { #To battle!
+		name = DWE125optA
+		character_event = { id = DWE.126 }
+	}
+}
+
+character_event = {
+	id = DWE.126
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		random_list = {
+		40 = { # Lose/Death
+					modifier = {
+						factor = 10
+						NOT = { combat_rating = 0 }
+					}
+					modifier = {
+						factor = 5
+						AND = { combat_rating = 0
+						NOT = { combat_rating = 20 }}
+					}
+					modifier = {
+						factor = 2
+						AND = { combat_rating = 20
+						NOT = { combat_rating = 50 }}
+					}
+					modifier = {
+						factor = 1.1
+						AND = { combat_rating = 50 
+						NOT = { combat_rating = 100 }}
+					}
+					modifier = {
+						factor = 0.25
+						AND = { combat_rating = 100
+						NOT = { combat_rating = 150 }}
+					}
+					modifier = {
+						factor = 0.1
+						combat_rating = 150
+					}
+				death = { death_reason = death_duel }			
+			}
+		30 = { # Severe Injury
+					modifier = {
+						factor = 1.1
+						NOT = { combat_rating = 0 }
+					}
+					modifier = {
+						factor = 1.1
+						AND = { combat_rating = 0
+						NOT = { combat_rating = 20 }}
+					}
+					modifier = {
+						factor = 2.5
+						AND = { combat_rating = 20
+						NOT = { combat_rating = 50 }}
+					}
+					modifier = {
+						factor = 1.25
+						AND = { combat_rating = 50
+						NOT = { combat_rating = 100 }}
+					}
+					modifier = {
+						factor = 0.75
+						AND = { combat_rating = 100
+						NOT = { combat_rating = 150 }}
+					}
+					modifier = {
+						factor = 0.25
+						combat_rating = 150
+					}
+					random_list ={
+							50 = {
+								add_trait = mangled
+								random = {
+									chance = 25
+									add_trait = one_eyed
+									}
+								random = {
+									chance = 25
+									add_trait = one_handed
+									}
+								random = {
+									chance = 25
+									add_trait = one_legged
+									}
+								}
+							50 = {						
+								add_trait = severely_injured
+								}
+							}
+					 narrative_event = { id = DWE.127 } 
+			}
+		30 = { # Wounded
+					modifier = {
+						factor = 0.25
+						NOT = { combat_rating = 0 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { combat_rating = 0
+						NOT = { combat_rating = 20 }}
+					}
+					modifier = {
+						factor = 1.1
+						AND = { combat_rating = 20
+						NOT = { combat_rating = 50 }}
+					}
+					modifier = {
+						factor = 1.5
+						AND = { combat_rating = 50
+						NOT = { combat_rating = 100 }}
+					}
+					modifier = {
+						factor = 2
+						AND = { combat_rating = 100
+						NOT = { combat_rating = 150 }}
+					}
+					modifier = {
+						factor = 0.75
+						combat_rating = 150
+					}
+					random_list ={
+							75 = {
+								add_trait = wounded
+								}
+							25 = {						
+								add_trait = severely_injured
+								}
+							}
+					narrative_event = { id = DWE.127 } 
+
+			}
+		20 = { # Unscathed
+					modifier = {
+						factor = 0
+						NOT = { combat_rating = 0 }
+					}
+					modifier = {
+						factor = 0
+						AND = { combat_rating = 0
+						NOT = { combat_rating = 20 }}
+					}
+					modifier = {
+						factor = 0.5
+						AND = { combat_rating = 20
+						NOT = { combat_rating = 50 }}
+					}
+					modifier = {
+						factor = 1.1
+						AND = { combat_rating = 50
+						NOT = { combat_rating = 100 }}
+					}
+					modifier = {
+						factor = 2
+						AND = { combat_rating = 100
+						NOT = { combat_rating = 150 }}
+					}
+					modifier = {
+						factor = 4
+						combat_rating = 150
+					}
+					 narrative_event = { id = DWE.128 } 
+
+			}
+
+
+		}
+	}
+
+}
+narrative_event = { #Fight - survived with injuries
+	id = DWE.127
+		title = "DWE127name"
+	picture = aplaceholder
+	desc = {
+		trigger = { has_character_flag = dwe_blood_mordred }
+		text = "DWE127mordreddesc"
+		picture = DWEMordredVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_scathach }
+		text = "DWE127scathachdesc"
+		picture = DWEScathachVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_gilgamesh }
+		text = "DWE127gilgameshdesc"
+		picture = DWEGilgameshVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_cuchulainn }
+		text = "DWE127cuchulainndesc"
+		picture = DWECuchulainnVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_siegfried }
+		text = "DWE127siegfrieddesc"
+		picture = DWESiegfriedVictory
+	}
+	is_triggered_only = yes
+	
+	option = { #Still alive
+		name = DWE127optA
+		character_event = { id = DWE.129 }
+		narrative_event = { id = DWE.109 days = 50 random = 50 }
+	}
+}
+
+narrative_event = { #Fight - clear victor
+	id = DWE.128
+	picture = aplaceholder
+		title = "DWE128name"
+	desc = {
+		trigger = { has_character_flag = dwe_blood_mordred }
+		text = "DWE128mordreddesc"
+		picture = DWEMordredVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_scathach }
+		text = "DWE128scathachdesc"
+		picture = DWEScathachVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_gilgamesh }
+		text = "DWE128gilgameshdesc"
+		picture = DWEGilgameshVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_cuchulainn }
+		text = "DWE128cuchulainndesc"
+		picture = DWECuchulainnVictory
+	}
+	desc = {
+		trigger = { has_character_flag = dwe_blood_siegfried }
+		text = "DWE128siegfrieddesc"
+		picture = DWESiegfriedVictory
+	}
+	is_triggered_only = yes
+	
+	option = { #Claim the spoils
+		name = DWE128optA
+		character_event = { id = DWE.129 }
+		narrative_event = { id = DWE.109 days = 50 random = 50 }
+	}
+}
+
+character_event = {
+	id = DWE.129
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { has_character_flag = dwe_blood_mordred }
+				add_artifact = dwe_clarent				
+		}
+		else_if = {
+			limit = { 
+						OR = {
+							has_character_flag = dwe_blood_cuchulainn 
+							has_character_flag = dwe_blood_scathach 
+							}
+					}
+				add_artifact = dwe_gae_bolg				
+		
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_gilgamesh }
+				add_artifact = dwe_gilgamesh_scepter				
+		}
+		else_if = {
+			limit = { has_character_flag = dwe_blood_siegfried }
+				add_artifact = dwe_balmung			
+		}
+		
+	}
+}
+
+narrative_event = {
+	id = DWE.130
+		title = "DWE130name"
+	desc = "DWE130desc"
+	picture = DWECleopatraChallenge
+	is_triggered_only = yes
+	
+	option = { #make your case
+		name = DWE130optA
+		character_event = { id = DWE.131 }
+	}
+}
+
+character_event = {
+	id = DWE.131
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		random_list = {
+			40 = { # success
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { diplomacy = 10
+						NOT = { diplomacy = 15 }}
+					}
+					modifier = {
+						factor = 5
+						diplomacy = 15
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { stewardship = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { stewardship = 10
+						NOT = { stewardship = 15 }}
+					}
+					modifier = {
+						factor = 5
+						stewardship = 15
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { martial = 10
+						NOT = { martial = 15 }}
+					}
+					modifier = {
+						factor = 5
+						martial = 15
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { intrigue = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { intrigue = 10
+						NOT = { intrigue = 15 }}
+					}
+					modifier = {
+						factor = 5
+						intrigue = 15
+					}
+					narrative_event = { id = DWE.133 }
+			
+			
+			}
+			60 = { # failure
+					modifier = {
+						factor = 2
+						NOT = { diplomacy = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { diplomacy = 10
+						NOT = { diplomacy = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						diplomacy = 15
+					}
+					modifier = {
+						factor = 2
+						NOT = { stewardship = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { stewardship = 10
+						NOT = { stewardship = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						stewardship = 15
+					}
+					modifier = {
+						factor = 2
+						NOT = { martial = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { martial = 10
+						NOT = { martial = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						martial = 15
+					}
+					modifier = {
+						factor = 2
+						NOT = { intrigue = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { intrigue = 10
+						NOT = { intrigue = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						intrigue = 15
+					}
+					narrative_event = { id = DWE.132 }
+			
+			}
+		
+		}
+	}
+}
+
+narrative_event = {
+	id = DWE.132
+	title = "DWE132name"
+	desc = "DWE132desc"
+	picture = DWECleopatraChallenge
+	is_triggered_only = yes
+	
+	option = { #snakebite city
+		name = DWE132optA
+		death = { death_reason = death_murder_unknown_snakes }
+	}
+}
+
+narrative_event = {
+	id = DWE.133
+	title = "DWE133name"
+	desc = "DWE133desc"
+	picture = DWECleopatra
+	is_triggered_only = yes
+	
+	option = { #claim your prize
+		name = DWE133optA
+		character_event = { id = DWE.25 }
+		narrative_event = { id = DWE.109 days = 50 random = 50 }
+	}
+}
+
+narrative_event = {
+	id = DWE.135
+	title = "DWE135name"
+	desc = "DWE135desc"
+	picture = DWEHelenofTroy
+	is_triggered_only = yes
+	
+	option = { # no challenge immediately, but you'll suffer several adventurer attacks and claims from others
+		name = DWE135optA
+		character_event = { id = DWE.24}
+		narrative_event = { id = DWE.109 days = 50 random = 50 }	
+		
+		
+		
+		
+		
+		
+	}
+
+
+
+
+}
+
+
+
+
+narrative_event = {
+	id = DWE.140
+	title = "DWE140name"
+	desc = "DWE140desc"
+	picture = DWEMedbChallenge
+	is_triggered_only = yes
+	
+	option = { #make your case
+		name = DWE140optA
+		character_event = { id = DWE.141 }
+	}
+}
+
+character_event = {
+	id = DWE.141
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		random_list = {
+			40 = { # success
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { diplomacy = 10
+						NOT = { diplomacy = 15 }}
+					}
+					modifier = {
+						factor = 5
+						diplomacy = 15
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { stewardship = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { stewardship = 10
+						NOT = { stewardship = 15 }}
+					}
+					modifier = {
+						factor = 5
+						stewardship = 15
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { martial = 10
+						NOT = { martial = 15 }}
+					}
+					modifier = {
+						factor = 5
+						martial = 15
+					}
+					modifier = {
+						factor = 0.5
+						NOT = { intrigue = 5 }
+					}
+					modifier = {
+						factor = 2
+						AND = { intrigue = 10
+						NOT = { intrigue = 15 }}
+					}
+					modifier = {
+						factor = 5
+						intrigue = 15
+					}
+					narrative_event = { id = DWE.143 }
+			
+			
+			}
+			60 = { # failure
+					modifier = {
+						factor = 2
+						NOT = { diplomacy = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { diplomacy = 10
+						NOT = { diplomacy = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						diplomacy = 15
+					}
+					modifier = {
+						factor = 2
+						NOT = { stewardship = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { stewardship = 10
+						NOT = { stewardship = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						stewardship = 15
+					}
+					modifier = {
+						factor = 2
+						NOT = { martial = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { martial = 10
+						NOT = { martial = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						martial = 15
+					}
+					modifier = {
+						factor = 2
+						NOT = { intrigue = 5 }
+					}
+					modifier = {
+						factor = 0.5
+						AND = { intrigue = 10
+						NOT = { intrigue = 15 }}
+					}
+					modifier = {
+						factor = 0.2
+						intrigue = 15
+					}
+					narrative_event = { id = DWE.142 }
+			
+			}
+		
+		}
+	}
+}
+
+narrative_event = {
+	id = DWE.142
+	title = "DWE142name"
+	desc = "DWE142desc"
+	picture = DWEMedbChallenge
+	is_triggered_only = yes
+	
+	option = { #squish
+		name = DWE142optA
+		death = { death_reason = death_execution_crushing }
+	}
+}
+
+narrative_event = {
+	id = DWE.143
+	title = "DWE143name"
+	desc = "DWE143desc"
+	picture = DWEMedb
+	is_triggered_only = yes
+	
+	option = { #claim your prize
+		name = DWE143optA
+		character_event = { id = DWE.26 }
+		narrative_event = { id = DWE.109 days = 50 random = 50 }
+	}
+}
+

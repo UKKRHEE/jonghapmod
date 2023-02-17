@@ -1,0 +1,2206 @@
+#######################################
+#
+# Arglebargle's Events
+#
+# Event ID DWT.351-500
+#
+# Random court events
+#
+# 351-355 Bored ruler
+# 361-365 Exotic merchant
+# 366-373 Exotic merchant -> eunuch-lover chain
+# 375-386 Poll tax
+# 387 Dream of Lilith
+# 388-405 Visiting the country 
+#
+#######################################
+
+namespace = DWT
+
+# Bored ruler, controll event
+narrative_event = {	
+	id = DWT.351
+	desc = EVTDESCDWT.351
+	picture = GFX_evt_throne_room
+
+	min_age = 14			# you, as ruler
+	capable_only = yes
+	prisoner = no
+	ai = no
+	
+	trigger = {			# are you able and willing, not in war?
+		in_command = no
+		is_female = no
+		war = no
+		NOT = {
+			trait = shy
+			trait = chaste
+			trait = homosexual
+			trait = celibate
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1200		# chance for the event to fire
+		modifier = {		# more chance to fire, if you're lustful
+			factor = 0.4
+			trait = lustful
+		 }
+		modifier = {		# more chance to fire, if you're hedonist
+			factor = 0.6
+			trait = hedonist
+		 }
+	}
+
+	option = {			# one of the four options to choose
+		name = EVTOPTDWT.351A
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = DWT.352 }
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = EVTOPTDWT.351B
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = DWT.353 }
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = EVTOPTDWT.351C
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = DWT.354 }
+			}
+		}
+	}
+	option = {			# one of the four options to choose
+		name = EVTOPTDWT.351D
+		hidden_tooltip = {
+			ROOT = {
+				narrative_event = { id = DWT.355 }
+			}
+		}
+	}
+}
+
+
+# First option - Greek play
+narrative_event = {
+	id = DWT.352
+	desc = EVTDESCDWT.352
+	picture = GFX_evt_DWTr008
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = EVTOPTDWT.352
+		prestige = 1		# prestige gain
+		wealth = -1 		# money loss
+	}
+}
+
+# Second option - Sexy masquerade
+narrative_event = {
+	id = DWT.353
+	desc = EVTDESCDWT.353
+	picture = GFX_evt_DWTr009
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = EVTOPTDWT.353
+		prestige= 1		# prestige gain
+		wealth = -1 		# money loss
+	}
+}
+
+# Third option - Bottom-pageant
+narrative_event = {
+	id = DWT.354
+	desc = EVTDESCDWT.354		
+	picture = GFX_evt_DWTr010
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = EVTOPTDWT.354
+		prestige= 1		# prestige gain
+		wealth = -1 		# money loss
+	}
+}
+
+# Fourt option - Breast-pageant
+narrative_event = {
+	id = DWT.355
+	desc = EVTDESCDWT.355		
+	picture = GFX_evt_DWTr011
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {
+		name = EVTOPTDWT.355
+		prestige= 1		# prestige gain
+		wealth = -1 		# money loss
+	}
+}
+
+###
+
+# Exotic merchant - at the gates
+narrative_event = {
+	id = DWT.361
+	desc = EVTDESCDWT.361
+	picture = GFX_evt_carriage2
+	
+	ai = no
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		age = 16
+		in_command = no
+		NOT = { trait = in_hiding }
+	}
+	
+	mean_time_to_happen = {
+		months = 360			
+	}
+	
+	option = {
+		name = EVTOPTDWT.361A	 	# letting in the merchant
+		narrative_event = { id = DWT.362 tooltip = EVTTOOLTIPDWT.361A }
+	}
+	option = {
+		name = EVTOPTDWT.361B		# sending the merchant away (end of event chain)
+		custom_tooltip = { text = DWT_send_exotic_merchant_away }
+	}
+}
+
+# Spends the Night
+narrative_event = {
+	id = DWT.362
+	desc = EVTDESCDWT.362
+	picture = GFX_evt_feast
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTDWT.362A		# you don't want to buy anything (end of event chain)
+		custom_tooltip = { text = DWT_listening_to_merchants_tales }
+	}
+
+	option = {
+		name = EVTOPTDWT.362B		# exotic trinkets
+		narrative_event = { id = DWT.363 tooltip = EVTTOOLTIPDWT.362B }
+	}
+
+	option = {
+		name = EVTOPTDWT.362C		# special wares
+		narrative_event = { id = DWT.364 tooltip = EVTTOOLTIPDWT.362C }
+	}
+
+}
+
+
+# Exotic trinkets to buy
+narrative_event = {
+	id = DWT.363
+	desc = EVTDESCDWT.363
+	picture = GFX_evt_feast
+
+	hide_from = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTDWT.363A		#  little gifts
+		wealth = -20
+		hidden_tooltip = {
+			any_spouse = {
+				opinion = {
+					modifier = opinion_grateful
+					who = ROOT
+					months = 6
+				}
+			}
+			any_lover = {
+				opinion = {
+					modifier = opinion_grateful
+					who = ROOT
+					months = 6
+				}
+			}
+			any_child = {
+				opinion = {
+					modifier = opinion_grateful
+					who = ROOT
+					months = 6
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTDWT.363B		# you don't buy anything
+		hidden_tooltip = {
+			any_spouse = {
+				opinion = {
+					modifier = opinion_unhappy
+					who = ROOT
+					months = 1
+				}
+			}
+			any_lover = {
+				opinion = {
+					modifier = opinion_unhappy
+					who = ROOT
+					months = 1
+				}
+			}
+			any_child = {
+				opinion = {
+					modifier = opinion_unhappy
+					who = ROOT
+					months = 1
+				}
+			}
+		}
+	}
+}
+
+# Special wares
+narrative_event = {
+	id = DWT.364
+	desc = EVTDESCDWT.364
+	picture = GFX_evt_DWTr013
+
+	hide_from = yes
+	
+	is_triggered_only = yes
+
+	option = {			# How beautiful! -> nothing (not chaste/celibate)
+		name = EVTOPTDWT.364A
+		trigger = {
+			NOT = { 
+				trait = chaste 
+				trait = celibate 
+			}
+		}		
+	}
+	option = {			# Buying someone (not chaste/celibate)
+		name = EVTOPTDWT.364B
+		trigger = {
+			NOT = { 
+				trait = chaste 
+				trait = celibate 
+			}
+		}	
+		narrative_event = { id = DWT.365 tooltip = EVTTOOLTIPDWT.364B }
+	}
+	option = {			# Depravity (only for chaste/celibate)
+		name = EVTOPTDWT.364C
+		trigger = {
+			OR = { 
+				trait = chaste
+				trait = celibate 
+			}
+		}		
+		custom_tooltip = { text = DWT_throwing_out_merchant }
+		hidden_tooltip = {
+			piety = 10
+		}
+	}
+}
+
+
+# Buying someone
+narrative_event = {
+	id = DWT.365
+	desc = EVTDESCDWT.365
+	picture = GFX_evt_DWTr013
+
+	hide_from = yes
+	
+	is_triggered_only = yes
+
+	option = {			# Dancer as lover (for a male ruler)
+		name = EVTOPTDWT.365AA
+		trigger = {
+			AND = { 
+				is_female = no
+				NOT = { trait = homosexual }
+			}
+		}
+		wealth = -25
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = DWT.9001 } }
+				25 = { narrative_event = { id = DWT.9002 } }
+				25 = { narrative_event = { id = DWT.9003 } }
+			}
+		}
+	}
+	option = {			# Dancer as lover (for a female ruler)
+		name = EVTOPTDWT.365AB
+		trigger = {
+			AND = {
+				is_female = yes
+				trait = homosexual
+			}			
+		}
+		wealth = -25
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = DWT.9001 } }
+				25 = { narrative_event = { id = DWT.9002 } }
+				25 = { narrative_event = { id = DWT.9003 } }
+			}
+		}
+	}
+	option = {			# Dancer as handmaiden
+		name = EVTOPTDWT.365B
+		wealth = -25
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = DWT.9004 } }
+				25 = { narrative_event = { id = DWT.9005 } }
+				25 = { narrative_event = { id = DWT.9006 } }
+			}
+		}
+	}
+	option = {			# Eunuch as guard
+		name = EVTOPTDWT.365CA
+		wealth = -25
+		hidden_tooltip = {
+
+			random_list = {
+				25 = { narrative_event = { id = DWT.9007 } }
+				25 = { narrative_event = { id = DWT.9008 } }
+				25 = { narrative_event = { id = DWT.9009 } }
+			}
+		}
+	}
+	option = {			# Eunuch as guard (and a little more - for a female ruler)
+		name = EVTOPTDWT.365CB
+		trigger = {
+			AND = {
+				is_female = yes
+				NOT = { trait = homosexual }
+			}			
+		}
+		wealth = -25
+		hidden_tooltip = {
+
+			random_list = {
+				25 = { narrative_event = { id = DWT.9010 } }
+				25 = { narrative_event = { id = DWT.9011 } }
+				25 = { narrative_event = { id = DWT.9012 } }
+			}
+		}
+	}
+	option = {			# Eunuch as guard and lover (for a male ruler)
+		name = EVTOPTDWT.365CC
+		trigger = {
+			AND = {
+				is_female = no
+				trait = homosexual
+			}			
+		}
+		wealth = -25
+		hidden_tooltip = {
+
+			random_list = {
+				25 = { narrative_event = { id = DWT.9013 } }
+				25 = { narrative_event = { id = DWT.9014 } }
+				25 = { narrative_event = { id = DWT.9015 } }
+			}
+		}
+	}
+}
+
+###			# quite a stupid chain with these ping-backs, but at least now it seems to work
+
+# Eunuch-lover for female rulers (just a ping-back) 1.
+narrative_event = {	
+	id = DWT.366
+	desc = EVTDESCDWT.366
+	picture = GFX_evt_DWTr017
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTDWT.366
+		ai_chance = {
+			factor = 100
+		}
+		hidden_tooltip = { ruler = { narrative_event = { id = DWT.367 } } }
+	}
+}
+
+
+# Eunuch-lover for female rulers 2. 
+narrative_event = {	
+	id = DWT.367
+	desc = EVTDESCDWT.367
+	picture = GFX_evt_DWTr017
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = has_new_eunuch_massager
+	
+	}
+	
+	option = {
+		name = EVTOPTDWT.367
+		hidden_tooltip = {
+		clr_character_flag = has_new_eunuch_massager
+			random_list = {
+				95 = { FROM = { narrative_event = { id = DWT.368 } } }	# yep, an eunuch
+				5 = { FROM = { narrative_event = { id = DWT.370 } } }	# the balls are missing, but the rod is still working
+			}
+		}
+	}
+}
+
+# Eunuch-lover for female rulers (just a ping-back) 3a.
+narrative_event = {	
+	id = DWT.368
+	desc = EVTDESCDWT.368
+	picture = GFX_evt_DWTr018
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTDWT.368
+		ai_chance = {
+			factor = 100
+		}
+		hidden_tooltip = { FROM = { narrative_event = { id = DWT.369 } } }
+			}
+		
+	
+}
+
+# Eunuch-lover for female rulers 4a. 
+narrative_event = {	
+	id = DWT.369
+	desc = EVTDESCDWT.369
+	picture = GFX_evt_DWTr018
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTDWT.369
+	}
+}
+
+# Eunuch-lover for female rulers (just a ping-back) 3a.
+narrative_event = {	
+	id = DWT.370
+	desc = EVTDESCDWT.370
+	picture = GFX_evt_DWTr018
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTDWT.370
+		ai_chance = {
+			factor = 100
+		}
+		hidden_tooltip = { FROM = { narrative_event = { id = DWT.371 } } }
+		
+	}
+}
+
+
+# Eunuch-lover for female rulers 4b. 
+narrative_event = {	
+	id = DWT.371
+	desc = EVTDESCDWT.371
+	picture = GFX_evt_DWTr018
+	
+	is_triggered_only = yes
+	
+	option = {			# one-time swing
+		name = EVTOPTDWT.371A
+	}
+	option = {			# a secret lover, no pregnancy risk (hopefully, I didn't checked so far the normal pregnancy events)
+		name = EVTOPTDWT.371B
+		add_lover = FROM
+	}
+}
+
+# Eunuch-lover for setup 1. 		# even more stupid pre-chain for the chain - to delay the chain for 3 days
+narrative_event = {	
+	id = DWT.372
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = new_eunuch_massager
+
+	}
+
+	immediate = {
+		narrative_event = { id = DWT.373 days = 3 }
+	}
+}
+
+# Eunuch-lover for setup 2. 		# even more stupid pre-chain for the chain 
+narrative_event = {	
+	id = DWT.373
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = new_eunuch_massager
+		set_character_flag = eunuch_massager
+		narrative_event = { id = DWT.366 }
+	}
+}
+
+###
+
+# Poll tax, controll event
+narrative_event = {	
+	id = DWT.375
+	desc = EVTDESCDWT.375
+	picture = GFX_evt_market
+
+	min_age = 14			# you, as ruler
+	capable_only = yes
+	prisoner = no
+	ai = no
+	
+	trigger = {			# are you able and willing, not in war?
+		in_command = no
+		is_female = no
+		war = no
+		NOT = {
+			trait = homosexual
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600		# chance for the event to fire
+	}
+
+	option = {			
+		name = EVTOPTDWT.375A
+		hidden_tooltip = {
+			random_list = {	# random of five possibilities
+				20 = { ROOT = { narrative_event = { id = DWT.376 } } }	# the smith's daughter
+				20 = { ROOT = { narrative_event = { id = DWT.378 } } }	# the horsemonger's wife
+				20 = { ROOT = { narrative_event = { id = DWT.380 } } }	# the widowed weawer
+				20 = { ROOT = { narrative_event = { id = DWT.382 } } }	# the merchant's bored wife
+				20 = { ROOT = { narrative_event = { id = DWT.384 } } }	# the late potter's daughters
+			}
+		}
+
+	}
+	option = {			
+		name = EVTOPTDWT.375B
+		custom_tooltip = { text = DWT_lazy_ruler }
+	}
+}
+
+# First possibility - the smith's daughter
+narrative_event = {
+	id = DWT.376
+	desc = EVTDESCDWT.376
+	picture = GFX_evt_DWTr019
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {			# you want the money
+		name = EVTOPTDWT.376A
+		wealth = 1 		# money gain
+		remove_trait = charitable
+		random = {
+			chance = 10
+			add_trait = cruel
+		}
+		random = {
+			chance = 25
+			add_trait = greedy
+		}
+	}
+	option = {			# your heart is soft
+		name = EVTOPTDWT.376B
+		wealth = -2 		# money loss
+		add_trait = charitable
+		random = {
+			chance = 50
+			remove_trait = lustful
+		} 
+	}
+	option = {			# maybe your heart is soft, but down there you're hard
+		name = EVTOPTDWT.376C
+		wealth = -1 		# money loss
+		random = {
+			chance = 5
+			add_trait = lustful
+		}
+		random = {
+			chance = 50
+			remove_trait = greedy
+		}
+		ROOT = { narrative_event = { id = DWT.377 } }  
+	}
+}
+
+# First possibility - the smith's daughter, follow-up
+narrative_event = {
+	id = DWT.377
+	desc = EVTDESCDWT.377
+	picture = GFX_evt_DWTr019
+
+	is_triggered_only = yes		# called by the previous event
+
+	option = { # it was nice
+		name = EVTOPTDWT.377A
+#		hidden_tooltip = {
+#			random_list = {	# 5% chance for the girl getting pregnant with your bastard (calling the event)
+#				5 = { narrative_event = { id = DWT.201 days = 270 } }
+#				95 = { }
+#			}
+#
+	}
+	option = { # it was nice
+		name = EVTOPTDWT.377B
+		wealth = -1		# money loss
+		random = {
+			chance = 20
+			add_trait = charitable
+		}
+#		hidden_tooltip = {
+#			random_list = {	# 5% chance for the girl getting pregnant with your bastard (calling the event)
+#				5 = { narrative_event = { id = DWT.201 days = 270 } }
+#				95 = { }
+#			}
+#
+	}
+	option = { # you bastard
+		name = EVTOPTDWT.377C
+		wealth = 1		# money gain
+		add_trait = cruel
+		add_trait = greedy
+		capital_scope = {
+			hidden_tooltip = { remove_province_modifier = merchants_unhappy }
+			add_province_modifier = {
+				name = merchants_unhappy
+				duration = 365
+			}
+		}
+#		hidden_tooltip = {
+#			random_list = {	# 5% chance for the girl getting pregnant with your bastard (calling the event)
+#				5 = { narrative_event = { id = DWT.201 days = 270 } }
+#				95 = { }
+#			}
+#
+	}
+}
+
+# Second possibility - the horsemonger's wife
+narrative_event = {
+	id = DWT.378
+	desc = EVTDESCDWT.378
+	picture = GFX_evt_DWTr020
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {			# you want the money
+		name = EVTOPTDWT.378A
+		wealth = 1 		# money gain
+		random = {
+			chance = 50
+			remove_trait = lustful
+		}
+		random = {
+			chance = 5
+			add_trait = greedy
+		}
+	}
+
+	option = {			# you take her offer
+		name = EVTOPTDWT.378B
+		wealth = -1 		# money loss
+		random = {
+			chance = 25
+			add_trait = lustful
+		}
+		random = {
+			chance = 5
+			remove_trait = greedy
+		}
+		ROOT = { narrative_event = { id = DWT.379 } }  
+	}
+}
+
+# Second possibility - the horsemonger's wife, follow-up
+narrative_event = {
+	id = DWT.379
+	desc = EVTDESCDWT.379
+	picture = GFX_evt_DWTr020
+
+	is_triggered_only = yes		# called by the previous event
+
+	option = { # it was nice
+		name = EVTOPTDWT.379A
+	}
+	option = { # you bastard
+		name = EVTOPTDWT.379B
+		wealth = 1		# money gain
+		random = {
+			chance = 20
+			add_trait = greedy
+		}
+		random = {
+			chance = 20
+			add_trait = deceitful
+		}
+
+		capital_scope = {
+			hidden_tooltip = { remove_province_modifier = merchants_unhappy }
+			add_province_modifier = {
+				name = merchants_unhappy
+				duration = 365
+			}
+		}
+	}
+}
+
+# Third possibility - the widowed weawer
+narrative_event = {
+	id = DWT.380
+	desc = EVTDESCDWT.380
+	picture = GFX_evt_DWTr021
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {			# you want the money
+		name = EVTOPTDWT.380A
+		wealth = 1 		# money gain
+		remove_trait = charitable
+		random = {
+			chance = 10
+			add_trait = cruel
+		}
+		random = {
+			chance = 25
+			add_trait = greedy
+		}
+	}
+	option = {			# moral high ground
+		name = EVTOPTDWT.380B
+		trigger = {
+			OR = {
+				trait = chaste
+				trait = zealous
+			}			
+		}
+		remove_trait = charitable
+		remove_trait = kind
+		random = {
+			chance = 30
+			add_trait = cruel
+		}
+	}
+	option = {			# your heart is soft
+		name = EVTOPTDWT.380C
+		wealth = -3 		# money loss
+		add_trait = charitable
+		random = {
+			chance = 5
+			remove_trait = lustful
+		} 
+	}
+	option = {			# maybe your heart is soft, but down there you're hard
+		name = EVTOPTDWT.380D
+		wealth = -1 		# money loss
+		random = {
+			chance = 5
+			add_trait = lustful
+		}
+		random = {
+			chance = 5
+			remove_trait = greedy
+		}
+		ROOT = { narrative_event = { id = DWT.381 } }  
+	}
+}
+
+# Third possibility - the widowed weawer, follow-up
+narrative_event = {
+	id = DWT.381
+	desc = EVTDESCDWT.381
+	picture = GFX_evt_DWTr021
+
+	is_triggered_only = yes		# called by the previous event
+
+	option = { # it was nice
+		name = EVTOPTDWT.381A
+#		hidden_tooltip = {
+#			random_list = {	# 5% chance for the girl getting pregnant with your bastard (calling the event)
+#				5 = { narrative_event = { id = DWT.201 days = 270 } }
+#				95 = { }
+#			}
+#
+	}
+	option = { # You want her again and again.
+		name = EVTOPTDWT.381B
+		add_trait = lustful
+		ROOT = { narrative_event = { id = DWT.916 } }
+	}
+	option = { # you bastard
+		name = EVTOPTDWT.381C
+		wealth = 1		# money gain
+		add_trait = cruel
+		add_trait = greedy
+		capital_scope = {
+			hidden_tooltip = { remove_province_modifier = merchants_unhappy }
+			add_province_modifier = {
+				name = merchants_unhappy
+				duration = 365
+			}
+		}
+#		hidden_tooltip = {
+#			random_list = {	# 5% chance for the girl getting pregnant with your bastard (calling the event)
+#				5 = { narrative_event = { id = DWT.201 days = 270 } }
+#				95 = { }
+#			}
+#
+	}
+}
+
+# Fourth possibility - the merchant's bored wife
+narrative_event = {
+	id = DWT.382
+	desc = EVTDESCDWT.382
+	picture = GFX_evt_DWTr022
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {			# you are not that kind of man
+		name = EVTOPTDWT.382A
+		wealth = 1 		# money gain
+		random = {
+			chance = 50
+			remove_trait = lustful
+		}
+		random = {
+			chance = 5
+			add_trait = chaste
+		}
+	}
+
+	option = {			# you are definitely that kind of man
+		name = EVTOPTDWT.382B
+		wealth = 1 		# money gain
+		random = {
+			chance = 25
+			add_trait = lustful
+		}
+		remove_trait = chaste
+		ROOT = { narrative_event = { id = DWT.383 } }  
+	}
+}
+
+# Fourth possibility - the merchant's bored wife, follow-up
+narrative_event = {
+	id = DWT.383
+	desc = EVTDESCDWT.383
+	picture = GFX_evt_DWTr022
+
+	is_triggered_only = yes		# called by the previous event
+
+	option = { # it was nice
+		name = EVTOPTDWT.383
+	}
+}
+
+# Fifth possibility -  the late potter's daughters
+narrative_event = {
+	id = DWT.384
+	desc = EVTDESCDWT.384
+	picture = GFX_evt_DWTr023
+	
+	is_triggered_only = yes		# called by the controll event
+	
+	option = {			# you want the money
+		name = EVTOPTDWT.384A
+		wealth = 2 		# money gain
+		remove_trait = charitable
+		random = {
+			chance = 40
+			add_trait = cruel
+		}
+		random = {
+			chance = 40
+			add_trait = greedy
+		}
+	}
+	option = {			# your heart is soft
+		name = EVTOPTDWT.384B
+		wealth = -3 		# money loss
+		add_trait = charitable
+		random = {
+			chance = 5
+			remove_trait = lustful
+		} 
+	}
+	option = {			# maybe your heart is soft, but down there you're hard
+		name = EVTOPTDWT.384C
+		wealth = -3 		# money loss
+		add_trait = lustful
+		random = {
+			chance = 5
+			remove_trait = greedy
+		}
+		ROOT = { narrative_event = { id = DWT.385 } } 
+	}
+	option = {			# a pervert's mind
+		name = EVTOPTDWT.384D
+		trigger = {
+			trait = lustful
+		}			
+		wealth = -10 		# money loss
+		random = {
+			chance = 5
+			remove_trait = greedy
+		}
+		ROOT = { narrative_event = { id = DWT.386 } }  
+	}
+}
+
+# Fifth possibility -  the late potter's daughters, follow-up 1.
+narrative_event = {
+	id = DWT.385
+	desc = EVTDESCDWT.385
+	picture = GFX_evt_DWTr023
+
+	is_triggered_only = yes		# called by the previous event
+
+	option = { # it was nice
+		name = EVTOPTDWT.385
+	}
+	
+}
+
+# Fifth possibility -  the late potter's daughters, follow-up 2.
+narrative_event = {
+	id = DWT.386
+	desc = EVTDESCDWT.386
+	picture = GFX_evt_DWTr024
+
+	is_triggered_only = yes		# called by the previous event
+
+	option = { # it was nice
+		name = EVTOPTDWT.386
+	}
+}
+
+###
+
+#Dream of Lilith
+narrative_event = {
+	id = DWT.387
+	title = EVTTITLEDWT.387
+	desc = EVTDESCDWT.387
+	picture = GFX_evt_DWTr025
+
+	min_age = 14			# you, as ruler
+	capable_only = yes
+	prisoner = no
+	ai = no
+	
+	trigger = {			# are you able and willing, not in war?
+		in_command = no
+		war = no
+		trait = chaste
+		NOT = { trait = in_hiding }
+		NOT = { has_character_flag = tempted_by_lilith }
+	}
+	
+	mean_time_to_happen = {
+		months = 24		# chance for the event to fire
+	}
+
+	option = {
+		name = EVTOPTDWT.387A	 # nothing happens
+		piety = 5
+		hidden_tooltip = {
+			set_character_flag = tempted_by_lilith
+		}
+	}
+
+	option = {
+		name = EVTOPTDWT.387B	 # chaste -> lustful
+		remove_trait = chaste
+		add_trait = lustful
+		piety = -25
+		hidden_tooltip = {
+			set_character_flag = tempted_by_lilith
+		}
+	}
+}
+
+###
+
+# Visiting the country, controll event (for male ruler)
+narrative_event = {	
+	id = DWT.388
+	desc = EVTDESCDWT.388
+	picture = GFX_evt_stone_church
+
+	min_age = 14			# you, as ruler
+	capable_only = yes
+	prisoner = no
+	ai = no
+	
+	trigger = {			# are you able and willing, not in war?
+		in_command = no
+		is_female = no
+		war = no
+		NOT = {
+			trait = homosexual
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600		# xxx 600 chance for the event to fire
+	}
+
+	option = {			
+		name = EVTOPTDWT.388
+		hidden_tooltip = {
+			random_list = {	# random of five possibilities
+				15 = { ROOT = { narrative_event = { id = DWT.390 days = 3 } } }	# the clever maiden at the stream
+				15 = { ROOT = { narrative_event = { id = DWT.394 days = 3 } } }	# the naive girl at the lake
+				15 = { ROOT = { narrative_event = { id = DWT.396 days = 3 } } }	# the fisherman's wife
+				15 = { ROOT = { narrative_event = { id = DWT.399 days = 3 } } }	# the whore of the village
+				15 = { ROOT = { narrative_event = { id = DWT.402 days = 3 } } }	# the minor noble's wife
+				15 = { ROOT = { narrative_event = { id = DWT.404 days = 3 } } }	# the corn-thieves
+			}
+		}
+	}
+	option = {			
+		name = EVTOPTDWT.375B
+		custom_tooltip = { text = DWT_lazy_ruler }
+	}
+}
+
+## Visiting the country, controll event (for female ruler)
+#narrative_event = {	
+#	id = DWT.389
+#	desc = EVTDESCDWT.389
+#	picture = GFX_evt_stone_church
+#
+#	min_age = 18			# you, as ruler
+#	capable_only = yes
+#	prisoner = no
+#	ai = no
+#	
+#	trigger = {			# are you able and willing, not in war?
+#		in_command = no
+#		is_female = yes
+#		war = no
+#		NOT = {
+#			trait = homosexual
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 6		# xxx 600 chance for the event to fire
+#	}
+#
+#	option = {			
+#		name = EVTOPTDWT.388
+#		hidden_tooltip = {
+#			random_list = {	# random of five possibilities
+##				20 = { ROOT = { narrative_event = { id = DWT.390 days = 2 } } }	# xxx
+##				20 = { ROOT = { narrative_event = { id = DWT.394 days = 2 } } }	# xxx
+##				20 = { ROOT = { narrative_event = { id = DWT.380 } } }	# xxx
+##				20 = { ROOT = { narrative_event = { id = DWT.382 } } }	# xxx
+##				20 = { ROOT = { narrative_event = { id = DWT.384 } } }	# xxx
+#			}
+#		}
+#	}
+#	option = {			
+#		name = EVTOPTDWT.375B
+#		custom_tooltip = { text = DWT_lazy_ruler }
+#	}
+#}
+
+# First possibility - the clever maiden at the stream
+narrative_event = {
+	id = DWT.390
+	desc = EVTDESCDWT.390
+	picture = GFX_evt_DWTr026
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			# moral high ground
+		name = EVTOPTDWT.390B
+		random = {
+			chance = 10
+			add_trait = chaste
+		}
+		random = {
+			chance = 25
+			remove_trait = lustful
+		}
+	}
+	option = {			# Peeping Tom
+		name = EVTOPTDWT.390A
+		random = {
+			chance = 25
+			remove_trait = chaste
+		}
+	}
+	option = {			# courting at the creek
+		name = EVTOPTDWT.390C
+		trigger = {
+			NOT = { trait = chaste }			
+		}
+		random = {
+			chance = 5
+			add_trait = lustful
+		}
+		ROOT = { narrative_event = { id = DWT.391 } }  
+	}
+}
+
+# First possibility - the clever maiden at the stream, follow-up 1.
+narrative_event = {
+	id = DWT.391
+	desc = EVTDESCDWT.391
+	picture = GFX_evt_DWTr026
+	
+	is_triggered_only = yes
+
+	option = {			# defeated
+		name = EVTOPTDWT.391A
+		random = {
+			chance = 10
+			add_trait = stressed
+		}
+	}
+	option = {			# trying to buy the love
+		name = EVTOPTDWT.391B
+		ROOT = { narrative_event = { id = DWT.392 } }  
+	}
+	option = {			# attempting rape
+		name = EVTOPTDWT.391C
+		trigger = {
+			NOT = { 
+				trait = shy 
+				trait = just
+				trait = chaste
+			}			
+		}
+		random = {
+			chance = 25
+			add_trait = cruel
+		}
+		ROOT = { narrative_event = { id = DWT.393 } }  
+	}
+}		
+
+# First possibility - the clever maiden at the stream, follow-up 2.
+narrative_event = {
+	id = DWT.392
+	desc = EVTDESCDWT.392
+	picture = GFX_evt_DWTr026
+	
+	is_triggered_only = yes
+	option = {			# no way, Jose
+		name = EVTOPTDWT.392
+		random = {
+			chance = 10
+			add_trait = stressed
+		}
+	}
+}
+
+# First possibility - the clever maiden at the stream, follow-up 3.
+narrative_event = {
+	id = DWT.393
+	desc = EVTDESCDWT.393
+	picture = GFX_evt_DWTr026
+	
+	is_triggered_only = yes
+	option = {			# no way, Jose
+		name = EVTOPTDWT.393
+		random = {
+			chance = 50
+			add_trait = stressed
+		}
+	}
+}
+
+# Second possibility - the naive girl at the lake
+narrative_event = {
+	id = DWT.394
+	desc = EVTDESCDWT.394
+	picture = GFX_evt_DWTr029
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			# moral high ground
+		name = EVTOPTDWT.394B
+		random = {
+			chance = 10
+			add_trait = chaste
+		}
+		random = {
+			chance = 25
+			remove_trait = lustful
+		}
+	}
+	option = {			# Peeping Tom
+		name = EVTOPTDWT.394A
+		random = {
+			chance = 25
+			remove_trait = chaste
+		}
+	}
+	option = {			# courting at the lake
+		name = EVTOPTDWT.394C
+		trigger = {
+			NOT = { 
+				trait = chaste
+				trait = shy 
+			}			
+		}
+		random = {
+			chance = 5
+			add_trait = lustful
+		}
+		ROOT = { narrative_event = { id = DWT.395 } }  
+	}
+}
+
+# Second possibility - the naive girl at the lake, follow-up
+narrative_event = {
+	id = DWT.395
+	desc = EVTDESCDWT.395
+	picture = GFX_evt_DWTr029
+	
+	is_triggered_only = yes
+
+	option = {			# tumble at the lake
+		name = EVTOPTDWT.395
+		random = {
+			chance = 50
+			remove_trait = stressed
+		}
+#		hidden_tooltip = {
+#			random_list = {	# 5% chance for the girl getting pregnant with your bastard (calling the event)
+#				5 = { narrative_event = { id = DWT.201 days = 270 } }
+#				95 = { }
+#			}
+#		}
+	}
+}
+
+# Third possibility - the fisherman's wife
+narrative_event = {
+	id = DWT.396
+	desc = EVTDESCDWT.396
+	picture = GFX_evt_DWTr030
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			# moral high ground
+		name = EVTOPTDWT.396A
+		random = {
+			chance = 10
+			add_trait = chaste
+		}
+		random = {
+			chance = 25
+			remove_trait = lustful
+		}
+	}
+	option = {			# moral high ground 2.
+		name = EVTOPTDWT.396B
+		trigger = {
+			OR = { 
+				trait = cruel
+				trait = wroth
+			}			
+		}
+		custom_tooltip = { text = DWT_fishermans_wife_1 }
+		hidden_tooltip = {
+			random = {
+				chance = 25
+				remove_trait = lustful
+			}
+		}
+	}
+	option = {			# well, if she insists...
+		name = EVTOPTDWT.396C
+		random = {
+			chance = 5
+			add_trait = lustful
+		}
+		random = {
+			chance = 20
+			remove_trait = chaste
+		}
+		ROOT = { narrative_event = { id = DWT.397 } }  
+	}
+}
+
+# Third possibility - the fisherman's wife, follow-up 1.
+narrative_event = {
+	id = DWT.397
+	desc = EVTDESCDWT.397
+	picture = GFX_evt_DWTr030
+	
+	is_triggered_only = yes		
+
+	option = {			# a little shame
+		name = EVTOPTDWT.397A
+		random = {
+			chance = 25
+			remove_trait = shy
+		}
+	}
+	option = {			# you are not ashamed
+		name = EVTOPTDWT.397B
+		remove_trait = shy
+		wealth = -1
+	}
+	option = {			# good lord, bad man
+		name = EVTOPTDWT.397C
+		trigger = {
+			NOR = { 
+				trait = just
+				trait = kind
+			}			
+		}
+		custom_tooltip = { text = DWT_fishermans_wife_2 }
+		hidden_tooltip = {
+			ROOT = { narrative_event = { id = DWT.398 } }
+		} 
+	}
+}
+
+# Third possibility - the fisherman's wife, follow-up 2.
+narrative_event = {
+	id = DWT.398
+	desc = EVTDESCDWT.398
+	picture = GFX_evt_DWTr030
+	
+	is_triggered_only = yes		
+
+	option = {			
+		name = EVTOPTDWT.398
+		add_trait = cruel
+		piety = -5
+		capital_scope = {
+			hidden_tooltip = { remove_province_modifier = angry_peasants }
+			add_province_modifier = {
+				name = angry_peasants
+				duration = 365
+			}
+		}
+	}
+}
+
+# Fourth possibility - the whore of the village
+narrative_event = {
+	id = DWT.399
+	desc = EVTDESCDWT.399
+	picture = GFX_evt_DWTr028
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			# moral high ground
+		name = EVTOPTDWT.399A
+		random = {
+			chance = 10
+			add_trait = chaste
+		}
+		random = {
+			chance = 25
+			remove_trait = lustful
+		}
+	}
+	option = {			# doing the two-backed beast
+		name = EVTOPTDWT.399B
+		random = {
+			chance = 5
+			add_trait = lustful
+		}
+		random = {
+			chance = 25
+			remove_trait = chaste
+		}
+		ROOT = { narrative_event = { id = DWT.400 } }
+	}
+	option = {			# you send your henchmen
+		name = EVTOPTDWT.399C
+		custom_tooltip = { text = DWT_village_whore }
+		hidden_tooltip = {
+			ROOT = { narrative_event = { id = DWT.401 } }  
+		}
+	}
+}
+
+# Fourth possibility - the whore of the village, follow-up 1.
+narrative_event = {
+	id = DWT.400
+	desc = EVTDESCDWT.400
+	picture = GFX_evt_DWTr028
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			# xxx small pox	
+		name = EVTOPTDWT.400
+		wealth = -1
+	}
+}
+
+
+# Fourth possibility - the whore of the village, follow-up 2.
+narrative_event = {
+	id = DWT.401
+	desc = EVTDESCDWT.401
+	picture = GFX_evt_DWTr028
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			
+		name = EVTOPTDWT.401
+		wealth = -2
+		piety = -2
+		prestige = 2
+	}
+}
+
+# Fifth possibility - the minor noble's wife
+narrative_event = {
+	id = DWT.402
+	desc = EVTDESCDWT.402
+	picture = GFX_evt_DWTr031
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			# moral high ground
+		name = EVTOPTDWT.402A
+		random = {
+			chance = 10
+			add_trait = chaste
+		}
+		random = {
+			chance = 25
+			remove_trait = lustful
+		}
+	}
+	option = {			# moral high ground 2.
+		name = EVTOPTDWT.402B
+		random = {
+			chance = 10
+			add_trait = chaste
+		}
+		random = {
+			chance = 25
+			remove_trait = lustful
+		}
+		add_trait = cruel
+	}
+	option = {			# accepting the invitation
+		name = EVTOPTDWT.402C
+		random = {
+			chance = 10
+			add_trait = lustful
+		}
+		random = {
+			chance = 25
+			remove_trait = chaste
+		}
+		ROOT = { narrative_event = { id = DWT.403 } }  
+	}
+}
+
+
+# Fifht possibility - the minor noble's wife, follow-up 2.
+narrative_event = {
+	id = DWT.403
+	desc = EVTDESCDWT.403
+	picture = GFX_evt_DWTr031
+	
+	is_triggered_only = yes
+
+	option = {			
+		name = EVTOPTDWT.403
+		remove_trait = stressed
+	}
+}
+
+# Sixth possibility - the corn-thieves
+narrative_event = {
+	id = DWT.404
+	desc = EVTDESCDWT.404
+	picture = GFX_evt_DWTr027
+	
+	is_triggered_only = yes		# called by the controll event
+
+	option = {			# moral high ground
+		name = EVTOPTDWT.404A
+		trigger = {
+			NOT = {
+				trait = cruel
+				trait = wroth	
+			}
+		}
+		random = {
+			chance = 5
+			add_trait = cruel
+		}
+		random = {
+			chance = 25
+			add_trait = just
+		}
+		random = {
+			chance = 25
+			remove_trait = charitable
+		}
+	}
+	option = {			# moral high ground 2.
+		name = EVTOPTDWT.404B
+		trigger = {
+			OR = {
+				trait = cruel
+				trait = wroth	
+			}
+		}
+		add_trait = cruel
+		remove_trait = charitable
+	}
+	option = {			# take pity
+		name = EVTOPTDWT.404C
+		trigger = {
+			NOT = {
+				trait = cruel
+				trait = wroth	
+			}
+		}
+		remove_trait = cruel
+		remove_trait = wroth
+		wealth = -1
+		random = {
+			chance = 25
+			add_trait = charitable
+		}
+	}
+	option = {			# use the chance
+		name = EVTOPTDWT.404D
+		random = {
+			chance = 10
+			add_trait = lustful
+		}
+		random = {
+			chance = 25
+			remove_trait = chaste
+		}
+		ROOT = { narrative_event = { id = DWT.405 } }  
+	}
+}
+
+# Sixth possibility - the corn-thieves, follow-up
+narrative_event = {
+	id = DWT.405
+	desc = EVTDESCDWT.405
+	picture = GFX_evt_DWTr027
+	
+	is_triggered_only = yes		# 
+
+	option = {			# grateful
+		name = EVTOPTDWT.405A
+		random = {
+			chance = 25
+			add_trait = charitable
+		}
+		wealth = -1 
+	}
+	option = {			# just 1.
+		name = EVTOPTDWT.405B
+		random = {
+			chance = 5
+			add_trait = just
+		}
+		random = {
+			chance = 5
+			add_trait = charitable
+		}
+		random = {
+			chance = 5
+			remove_trait = cruel
+		}
+	}
+	option = {			# just 2.
+		name = EVTOPTDWT.405C
+		random = {
+			chance = 25
+			add_trait = just
+		}
+		random = {
+			chance = 5
+			remove_trait = charitable
+		}
+	}
+	option = {			# take pity
+		name = EVTOPTDWT.405D
+		trigger = {
+			NOT = {
+				trait = kind
+				trait = just
+			}
+		}
+		add_trait = cruel
+		custom_tooltip = { text = DWT_corn_thives }
+		capital_scope = {
+			hidden_tooltip = { 
+				remove_province_modifier = angry_peasants 
+				add_province_modifier = {
+					name = angry_peasants
+					duration = 365
+				}
+			}
+		}
+	}
+}
+
+# DWT.9001 Normal Dancer as lover generated (player hidden)
+narrative_event = {
+	id = DWT.9001
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = small_tits
+			trait = hedonist
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		if =  { limit = { ROOT = {is_female = yes }}
+			new_character = { add_trait = homosexual }
+			}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_lover = ROOT
+		}		
+	}
+}
+# DWT.9002 Pretty Dancer as lover generated (player hidden)
+narrative_event = {
+	id = DWT.9002
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = fair
+			trait = hedonist
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		if =  { limit = { ROOT = {is_female = yes }}
+			new_character = { add_trait = homosexual }
+			}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_lover = ROOT
+		}		
+	}
+}
+
+# DWT.9003 Special Dancer as lover generated (player hidden)
+narrative_event = {
+	id = DWT.9003
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = fair
+			trait = hedonist
+			culture = random
+			religion = ROOT
+			trait = branded_slave
+		}
+		if =  { limit = { ROOT = {is_female = yes }}
+			new_character = { add_trait = homosexual }
+			}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_lover = ROOT
+			narrative_event = { id = DWT.9021 } # determines what kind of special character this is
+		}	
+
+
+	}
+
+}
+
+
+# DWT.9004 Normal Dancer as handmaiden generated (player hidden)
+narrative_event = {
+	id = DWT.9004
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = small_tits
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+		}		
+
+
+	}
+}
+
+# DWT.9005 Pretty Dancer as handmaiden generated (player hidden)
+narrative_event = {
+	id = DWT.9005
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = fair
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+		}		
+	}
+}
+
+# DWT.9006 Special Dancer as handmaiden generated (player hidden)
+narrative_event = {
+	id = DWT.9006
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = fair
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			narrative_event = { id = DWT.9021 } # determines what kind of special character this is
+		}		
+
+	}
+}
+
+
+# DWT.9007 Eunuch as Guard generated (player hidden)
+narrative_event = {
+	id = DWT.9007
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+		}		
+		
+	}
+}
+
+# DWT.9008 Strong Eunuch as Guard generated (player hidden)
+narrative_event = {
+	id = DWT.9008
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			trait = strong
+			trait = brave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+		}		
+	}
+}
+
+# DWT.9009 Special Eunuch as guard generated (player hidden)
+narrative_event = {
+	id = DWT.9009
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			trait = strong
+			trait = brave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+			narrative_event = { id = DWT.9022 } # determines what kind of special character this is
+		}		
+
+	}
+}
+
+
+# DWT.9010 Eunuch as Guard generated (player hidden)
+narrative_event = {
+	id = DWT.9010
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+			add_lover = ROOT
+		}		
+		
+	}
+}
+
+# DWT.9011 Strong Eunuch as Guard generated (player hidden)
+narrative_event = {
+	id = DWT.9011
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			trait = strong
+			trait = brave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+			add_lover = ROOT
+		}		
+	}
+}
+
+# DWT.9012 Special Eunuch as guard generated (player hidden)
+narrative_event = {
+	id = DWT.9012
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			trait = strong
+			trait = brave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+			add_lover = ROOT
+			narrative_event = { id = DWT.9022 } # determines what kind of special character this is
+		}		
+
+	}
+}
+
+# DWT.9013 Eunuch as Guard generated (player hidden)
+narrative_event = {
+	id = DWT.9013
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+			add_lover = ROOT
+		}		
+		
+	}
+}
+
+# DWT.9014 Strong Eunuch as Guard generated (player hidden)
+narrative_event = {
+	id = DWT.9014
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			trait = strong
+			trait = brave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+			add_lover = ROOT
+		}		
+	}
+}
+
+# DWT.9015 Special Eunuch as guard generated (player hidden)
+narrative_event = {
+	id = DWT.9015
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = eunuch
+			trait = branded_slave
+			trait = strong
+			trait = brave
+			culture = random
+			religion = ROOT
+		}
+		new_character = {
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }		
+			add_lover = ROOT
+			narrative_event = { id = DWT.9022 } # determines what kind of special character this is
+		}		
+	}
+}
+
+
+# DWT.9021 - choose between female special slaves
+narrative_event = {
+	id = DWT.9021
+	is_triggered_only = yes
+	ai = yes #only AI should get this
+	option = {
+		name = OK
+		hidden_tooltip = {
+			random_list = {
+			10 = { ROOT = { 
+						add_trait = angel
+						#portrait =  angel_start1
+						} 
+						}
+			10 = { ROOT = { 	 
+						add_trait = elf
+						add_trait = feeble
+						add_random_elf_portrait = yes
+						} }
+			10 = { ROOT = { 
+						add_trait = neko
+						add_random_neko_portrait = yes
+					
+						 } }
+			10 = { ROOT = { 
+						add_trait = kitsune
+						add_random_kitsune_portrait = yes
+					
+						 } }
+			10 = { ROOT = { 
+						add_trait = lilith
+						add_trait = lustful					
+						 } }
+					}
+				}		
+		}
+}
+
+
+# DWT.9022 - choose between male special slaves
+narrative_event = {
+	id = DWT.9022
+	is_triggered_only = yes
+	ai = yes #only AI should get this
+	option = {
+		name = OK
+		hidden_tooltip = {
+			random_list = {
+			10 = { ROOT = { 
+						add_trait = orc
+						add_random_orc_portrait = yes
+						} }
+						
+			10 = { ROOT = { 	 
+						add_trait = incubus
+						add_trait = lustful
+						} }
+			10 = { ROOT = { 
+						add_trait = tentacle
+						add_random_tentacle_portrait = yes
+					
+						 } }
+			10 = { ROOT = { 
+						add_trait = werewolf
+						add_random_werewolf_portrait = yes
+					
+						 } }
+				}
+			}
+		}
+}

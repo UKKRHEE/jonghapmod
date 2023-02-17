@@ -1,5 +1,0 @@
-﻿feast_default_event_selection = { #Picks out the event for a participant in a default feast
-	random_events = {
-		#Self-triggered events
-	}
-}

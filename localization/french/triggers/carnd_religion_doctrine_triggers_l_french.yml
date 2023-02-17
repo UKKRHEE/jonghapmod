@@ -1,4 +1,0 @@
-﻿l_french:
-carnd_incompatible_doctrine_male_dominated_trigger:1 "Incompatible avec la [doctrine|El] $doctrine_gender_male_dominated_name$"
-carnd_incompatible_doctrine_lust_shunned_trigger:1 "Incompatible avec la [doctrine|El] $carnd_doctrine_lust_shunned_name$"
-carnd_incompatible_doctrine_prostitution_crime_trigger:1 "Incompatible avec toute [doctrine|El] rendant la prostitution [Concept( 'shunned', 'mal vue' )|El] ou [Concept( 'crime', 'criminelle' )|El]"

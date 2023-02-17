@@ -1,0 +1,75 @@
+19999985 = {
+	name = "Song"
+	culture = "korean"
+	used_for_random=yes
+}
+19999986 = {
+	name = "An"
+	culture = "korean"
+	used_for_random=yes
+}
+19999987 = {
+	name = "Yu"
+	culture = "korean"
+	used_for_random=yes
+}
+19999988 = {
+	name = "Cho"
+	culture = "korean"
+	used_for_random=yes
+}
+19999989 = {
+	name = "Mun"
+	culture = "korean"
+	used_for_random=yes
+}
+19999990 = {
+	name = "Han"
+	culture = "korean"
+	used_for_random=yes
+}
+19999991 = {
+	name = "Kim"
+	culture = "korean"
+	used_for_random=yes
+}
+19999992 = {
+	name = "Park"
+	culture = "korean"
+	used_for_random=yes
+}
+19999993 = {
+	name = "Lee"
+	culture = "korean"
+	used_for_random=yes
+}
+19999994 = {
+	name = "Rhee"
+	culture = "korean"
+	used_for_random=yes
+}
+19999995 = {
+	name = "Shin"
+	culture = "korean"
+	used_for_random=yes
+}
+19999996 = {
+	name = "Baek"
+	culture = "korean"
+	used_for_random=yes
+}
+19999997 = {
+	name = "Jeong"
+	culture = "korean"
+	used_for_random=yes
+}
+19999998 = {
+	name = "Choi"
+	culture = "korean"
+	used_for_random=yes
+}
+19999999 = {
+	name = "Kang"
+	culture = "korean"
+	used_for_random=yes
+}

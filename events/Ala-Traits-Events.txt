@@ -1,0 +1,619 @@
+
+######################
+#        MENU        #
+######################
+
+namespace = Alatraits
+
+character_event = {
+	id = Alatraits.1
+	desc = EVTDESCAlatraits.1
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAAlatraits.1
+		trigger = {
+			FROM = {
+				is_female = yes
+				NOT = { trait = lilith }
+			}
+		}
+		FROM = {
+			add_trait = lilith
+		}
+	}
+	option = {
+		name = EVTOPTAAAlatraits.1
+		trigger = {
+			FROM = {
+				is_female = no
+				NOT = { trait = incubus }
+			}
+		}
+		FROM = { 
+			add_trait = incubus
+		}
+	}
+	option = {
+		name = EVTOPTAAAAlatraits.1
+		tooltip_info = lilith
+		trigger = {
+			FROM = {
+				trait = lilith
+				is_female = yes
+			}
+		}
+		FROM = {
+			remove_trait = lilith
+		}
+	}
+	option = {
+		name = EVTOPTAAAAAlatraits.1
+		tooltip_info = incubus
+		trigger = {
+			FROM = {
+				trait = incubus
+				is_female = no
+			}
+		}
+		FROM = {
+			remove_trait = incubus
+		}
+	}
+	option = {
+		name = EVTOPTBAlatraits.1
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = angel
+				}
+			}
+		}
+		FROM = {
+			add_trait = angel
+		}
+	}
+	option = {
+		name = EVTOPTBBAlatraits.1
+		tooltip_info = angel
+		trigger = {
+			FROM = {
+				trait = angel
+			}
+		}
+		FROM = {
+			remove_trait = angel
+		}
+	}
+	option = {
+		name = EVTOPTCAlatraits.1
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = tentacle
+				}
+			}
+		}
+		FROM = {
+			add_trait = tentacle
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_adult = yes
+					}
+					add_random_tentacle_portrait = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCCAlatraits.1
+		tooltip_info = tentacle
+		trigger = {
+			FROM = {
+				trait = tentacle
+			}
+		}
+		FROM = {
+			remove_trait = tentacle
+			hidden_tooltip = {
+				remove_custom_portrait = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDAlatraits.1
+	}
+}
+
+character_event = {
+	id = Alatraits.2
+	desc = EVTDESCAlatraits.2
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAAlatraits.2
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = vampire
+				}
+			}
+		}
+		FROM = {
+			add_trait = vampire
+		}
+	}
+		option = {
+		name = EVTOPTAAAlatraits.2
+		tooltip_info = vampire
+		trigger = {
+			FROM = {
+				trait = vampire
+			}
+		}
+		FROM = {
+			remove_trait = vampire
+		}
+	}
+	option = {
+		name = EVTOPTBAlatraits.2
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = vampire_ancient
+				}
+			}
+		}
+		FROM = {
+			add_trait = vampire_ancient
+			add_trait = immortal
+		}
+	}
+	option = {
+		name = EVTOPTBBAlatraits.2
+		tooltip_info = vampire_ancient
+		trigger = {
+			FROM = {
+				trait = vampire_ancient
+			}
+		}
+		FROM = {
+			remove_trait = vampire_ancient
+			remove_trait = immortal
+		}
+	}
+	option = {
+		name = EVTOPTCAlatraits.2
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = dhampir
+				}
+			}
+		}
+		FROM = {
+			add_trait = dhampir
+		}
+	}
+	option = {
+		name = EVTOPTCCAlatraits.2
+		tooltip_info = dhampir
+		trigger = {
+			FROM = {
+				trait = dhampir
+			}
+		}
+		FROM = {
+			remove_trait = dhampir
+		}
+	}
+	option = {
+		name = EVTOPTDAlatraits.2
+	}
+}
+
+character_event = {
+	id = Alatraits.3
+	desc = EVTDESCAlatraits.3
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAAlatraits.3
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = werewolf
+				}
+			}
+		}
+		FROM = {
+			add_trait = werewolf
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_adult = yes
+					}
+					add_random_werewolf_portrait = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTAAAlatraits.3
+		tooltip_info = werewolf
+		trigger = {
+			FROM = {
+				trait = werewolf
+			}
+		}
+		FROM = {
+			remove_trait = werewolf
+			hidden_tooltip = {
+				remove_custom_portrait = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBAlatraits.3
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = werewolf_ancient
+				}
+			}
+		}
+		FROM = {
+			add_trait = werewolf_ancient
+			add_trait = immortal
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_adult = yes
+					}
+					add_random_werewolf_portrait = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBBAlatraits.3
+		tooltip_info = werewolf_ancient
+		trigger = {
+			FROM = {
+				trait = werewolf_ancient
+			}
+		}
+		FROM = {
+			remove_trait = werewolf_ancient
+			remove_trait = immortal
+			hidden_tooltip = {
+				remove_custom_portrait = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCAlatraits.3
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = werekin
+				}
+			}
+		}
+		FROM = {
+			add_trait = werekin
+		}
+	}
+	option = {
+		name = EVTOPTCCAlatraits.3
+		tooltip_info = werekin
+		trigger = {
+			FROM = {
+				trait = werekin
+			}
+		}
+		FROM = {
+			remove_trait = werekin
+		}
+	}
+	option = {
+		name = EVTOPTDAlatraits.3
+	}
+}
+
+character_event = {
+	id = Alatraits.4
+	desc = EVTDESCAlatraits.4
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAAlatraits.4
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = orc
+				}
+			}
+		}
+		FROM = {
+			add_trait = orc
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_adult = yes
+					}
+					add_random_orc_portrait = yes
+				}
+			}
+		}
+	}
+		option = {
+		name = EVTOPTAAAlatraits.4
+		tooltip_info = orc
+		trigger = {
+			FROM = {
+				trait = orc
+			}
+		}
+		FROM = {
+			remove_trait = orc
+			hidden_tooltip = {
+				remove_custom_portrait = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBAlatraits.4
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = elf
+				}
+			}
+		}
+		FROM = {
+			add_trait = elf
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_adult = yes
+					}
+					add_random_elf_portrait = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBBAlatraits.4
+		tooltip_info = elf
+		trigger = {
+			FROM = {
+				trait = elf
+			}
+		}
+		FROM = {
+			remove_trait = elf
+			hidden_tooltip = {
+				remove_custom_portrait = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCAlatraits.4
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = fairy
+				}
+			}
+		}
+		FROM = {
+			add_trait = fairy
+		}
+	}
+	option = {
+		name = EVTOPTCCAlatraits.4
+		tooltip_info = fairy
+		trigger = {
+			FROM = {
+				trait = fairy
+			}
+		}
+		FROM = {
+			remove_trait = fairy
+		}
+	}
+	option = {
+		name = EVTOPTDAlatraits.4
+	}
+}
+
+character_event = {
+	id = Alatraits.5
+	desc = EVTDESCAlatraits.5
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAAlatraits.5
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = kitsune
+				}
+			}
+		}
+		FROM = {
+			add_trait = kitsune
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_adult = yes
+					}
+					add_random_kitsune_portrait = yes
+				}
+			}
+		}
+	}
+		option = {
+		name = EVTOPTAAAlatraits.5
+		tooltip_info = kitsune
+		trigger = {
+			FROM = {
+				trait = kitsune
+			}
+		}
+		FROM = {
+			remove_trait = kitsune
+			hidden_tooltip = {
+				remove_custom_portrait = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBAlatraits.5
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = neko
+				}
+			}
+		}
+		FROM = {
+			add_trait = neko
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_adult = yes
+					}
+					add_random_neko_portrait = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBBAlatraits.5
+		tooltip_info = neko
+		trigger = {
+			FROM = {
+				trait = neko
+			}
+		}
+		FROM = {
+			remove_trait = neko
+			hidden_tooltip = {
+				remove_custom_portrait = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTCAlatraits.5
+		trigger = {
+			FROM = {
+				NOT = {
+					trait = genie
+				}
+			}
+		}
+		FROM = {
+			add_trait = genie
+		}
+	}
+	option = {
+		name = EVTOPTCCAlatraits.5
+		tooltip_info = genie
+		trigger = {
+			FROM = {
+				trait = genie
+			}
+		}
+		FROM = {
+			remove_trait = genie
+		}
+	}
+	option = {
+		name = EVTOPTDAlatraits.5
+	}
+}
+
+character_event = {
+	id = Alatraits.6
+	desc = EVTDESCAlatraits.6
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAAlatraits.6
+		trigger = {
+			FROM = {
+				is_female = yes
+				NOT = {
+					trait = futa
+				}
+			}
+		}
+		FROM = {
+			add_trait = futa
+			hidden_effect = { character_event = { id = DWCore.10 } }
+		}
+	}
+	option = {
+		name = EVTOPTAAAlatraits.6
+		trigger = {
+			FROM = {
+				is_female = no
+				NOT = {
+					trait = trap
+				}
+			}
+		}
+		FROM = { 
+			add_trait = trap
+		}
+	}
+	option = {
+		name = EVTOPTAAAAlatraits.6
+		tooltip_info = futa
+		trigger = {
+			FROM = {
+				is_female = yes
+				trait = futa
+			}
+		}
+		FROM = {
+			remove_trait = futa
+			hidden_tooltip = {
+				remove_trait = micro_dick
+				remove_trait = tiny_dick
+				remove_trait = small_dick
+				remove_trait = regular_dick
+				remove_trait = big_dick
+				remove_trait = huge_dick
+				remove_trait = enormous_dick
+				remove_trait = gigantic_dick
+				clr_character_flag = dw_junk_checked
+			}
+		}
+	}
+	option = {
+		name = EVTOPTAAAAAlatraits.6
+		tooltip_info = trap
+		trigger = {
+			FROM = {
+				is_female = no
+				trait = trap
+			}
+		}
+		FROM = {
+			remove_trait = trap
+		}
+	}
+	option = {
+		name = EVTOPTBAlatraits.6
+	}
+}

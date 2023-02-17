@@ -1,1 +1,0 @@
-﻿carnd_youthful_rulership_age_cutoff = 40

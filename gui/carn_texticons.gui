@@ -1,9 +1,0 @@
-texticon = {
-	icon = carn_icon
-	iconsize = {
-		texture = "gfx/interface/icons/carn_icon.dds"
-		size = { 25 25 }
-		offset = { 0 6 }
-		fontsize = 16
-	}
-}

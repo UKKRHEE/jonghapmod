@@ -1,0 +1,115 @@
+namespace = elvenRecruit
+
+narrative_event = {
+	id = elvenRecruit.1
+	desc = elvenRecruit_desc
+	picture = elf_recruit
+	title = elf_recruit_title
+	is_triggered_only = yes # Triggered by targetted decision
+
+
+option = { # Elf recruit
+		name = elvenRecruitMil
+			
+			hidden_tooltip = {
+				random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = elf
+						trait = small_tits
+						trait = proud
+						trait = brilliant_strategist
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = ROOT
+						female = no
+						age = 16
+						trait = elf
+						trait = small_dick
+						trait = proud
+						trait = brilliant_strategist
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 2 }
+				set_variable = { which = dick_size value = 2 }
+				save_event_target_as = invited_character
+				add_random_elf_portrait = yes
+			}
+			character_event = { id = NE.1 }	
+			}
+	}
+}
+
+narrative_event = {
+	id = elvenRecruit.2
+	desc = elvenRecruit_faith_desc
+	picture = elf_recruit_faith
+	title = elf_recruit_faith_title
+	is_triggered_only = yes # Triggered by targetted decision
+
+
+option = { # Elf recruit
+		name = elvenRecruitFaith
+			
+			hidden_tooltip = {
+				random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = elf
+						trait = small_tits
+						trait = proud
+						trait = mastermind_theologian
+						trait = mystic
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = ROOT
+						female = no
+						age = 16
+						trait = elf
+						trait = small_dick
+						trait = proud
+						trait = mastermind_theologian
+						trait = mystic
+					}
+				}
+			}
+			new_character = {
+				set_immune_to_pruning = yes
+				set_character_flag = dw_boobs_checked
+				set_character_flag = dw_junk_checked
+				set_variable = { which = breast_size value = 2 }
+				set_variable = { which = dick_size value = 2 }
+				save_event_target_as = invited_character
+				add_random_elf_portrait = yes
+			}
+			character_event = { id = NE.1 }	
+			}
+	}
+}

@@ -1,0 +1,108 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lilith_armor"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_armor.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_armor_small"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_armor_small.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_bow"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_bow.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_bow_small"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_bow_small.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_dagger"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_dagger.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_dagger_small"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_dagger_small.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_seducer"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_seducer.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_seducer_small"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_seducer_small.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_lilith_crown"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_crown.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_crown_small"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_crown_small.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_lilith_scepter"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_scepter.dds"
+	}	
+	spriteType = {
+		name = "GFX_lilith_scepter_small"
+		texturefile = "gfx/interface/inventory/artifacts/lilith_scepter_small.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_cleo_necklace"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_cleo_necklace.dds"
+	}
+	spriteType = {
+		name = "GFX_dwe_cleo_necklace_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_cleo_necklace_small.dds"
+	}
+	spriteType = {
+		name = "GFX_dwe_helen_apple"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_helen_apple.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_helen_apple_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_helen_apple_small.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_semiramis_talon"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_semiramis_talon.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_semiramis_talon_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_semiramis_talon_small.dds"
+	}		
+	spriteType = {
+		name = "GFX_dwe_clarent"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_clarent.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_clarent_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_clarentsmall.dds"
+	}		
+	spriteType = {
+		name = "GFX_dwe_gae_bolg"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_gaebolg.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_gae_bolg_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_gaebolgsmall.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_balmung"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_balmung.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_balmung_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_balmungsmall.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_rhongomyniad"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_rhongomyniad.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwe_rhongomyniad_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwe_rhongomyniadsmall.dds"
+	}	
+}

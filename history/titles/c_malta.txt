@@ -1,0 +1,91 @@
+
+768.9.24={
+	holder = 144999 #Carloman I
+	law = agnatic_succession
+}
+769.1.1 = {
+	de_jure_liege = e_france
+}
+771.12.4={
+	holder = 6392 #Charlemagne
+}
+817.1.1={
+	holder = 30227 #Lothair I
+	law = agnatic_succession
+}
+855.8.22={
+	holder = 144998 #Lothair II
+}
+867.1.1 = {
+	de_jure_liege = e_hre
+}
+869.8.8={
+	holder = 90104 #Charles I the Bald
+}
+877.6.10 ={ 
+	holder = 42019 #Louis I the Younger
+}
+882.1.20={
+	holder = 90105 #Charles II the Fat
+}
+888.1.1={
+	holder = 7945 #Arnulf of Carinthia
+}
+895.1.1={
+	holder = 144997 #Zwentibold
+}
+900.8.13={
+	holder = 7949 #Louis III the Child
+}
+907.1.1={
+	holder=6402 #Herbert II
+}
+943.1.1={
+	holder = 412 #Albert I
+}
+987.1.1={
+	holder = 414 #Albert II
+}
+1000.10.18={
+	holder = 416 #Otton de Vermandois
+}
+1045.1.1={
+	holder=418 #Herbert III of karling
+}
+1080.1.1={
+	holder=40432
+	liege = e_westkorea
+}
+1085.1.1={
+	holder=130000
+}
+1134.1.19={
+	holder=130002
+}
+1164.1.19={
+	holder=130003
+}
+1178.1.19={
+	holder=130004
+}
+1202.1.19={
+	holder=130005
+}
+1223.1.19={
+	holder=130007
+}
+1269.1.19={
+	holder=130008
+}
+1299.1.19={
+	holder=130009
+}
+1331.1.19={
+    holder=130010
+}
+1333.1.19={
+    holder=130012
+}
+1336.12.30={
+    holder=130018
+}

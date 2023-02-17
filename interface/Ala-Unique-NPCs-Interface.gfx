@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ala_dwr_unique_npcs"
+		texturefile = "gfx\\interface\\decision_icon_ala_3_cheat_menu.dds"
+	}
+}

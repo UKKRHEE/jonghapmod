@@ -1,0 +1,1067 @@
+################################################################################
+### Contains events that are intended for use in the Mercenary Commander Mod ###
+################################################################################
+
+namespace = mercom
+
+## COMMANDER CREATION ##
+narrative_event = {
+	id = mercom.1
+	desc = "mercom1"
+	picture = commander_throne_reg
+	title = mercom_commander_creation
+	
+	is_triggered_only = yes # Only from .4
+	
+	option = {
+		name = "mercom_yes" # Creates the commander
+		narrative_event = { id = mercom.998 days = 2 }  
+			### Clear flags because we like things tidy ###
+			set_global_flag = mercom_recruited
+			clr_character_flag = mercom_attempted
+			clr_character_flag = mercomopt1
+			clr_character_flag = mercomopt2
+			clr_character_flag = mercomopt3
+			activate_title = { title = c_red_hand status = yes }
+		create_character = {
+		  random_traits = no
+		  name = "Athena"
+		  dynasty = none
+		  dna = dbeacsjdfay
+		  religion = ROOT
+		  culture = prussian
+		  female = yes
+		  age = 19
+		  attributes = {
+			martial = 18
+			diplomacy = 6
+			stewardship = 6
+			intrigue = 6
+			learning = 6
+		  }
+		  health = 11
+		  fertility = 0.90
+		  trait = brilliant_strategist
+		  trait = portrait209
+		  trait = strong
+		  trait = redhandvet
+		  trait = fair
+		  trait = shrewd
+		  trait = shieldmaiden
+		  trait = impaler
+		  trait = diligent
+		  trait = patient
+		  trait = proud
+		  trait = brave
+		  trait = futa
+		  trait = dick_large
+		  trait = big_tits
+		  trait = inspiring_leader
+		  trait = unyielding_leader
+		  trait = siege_leader
+		  trait = organizer
+		  trait = narrow_flank_leader
+		  trait = experimenter
+		  trait = heavy_infantry_leader
+		}
+		  new_character = {
+			c_red_hand  = {
+				grant_title = PREV
+					}
+			set_defacto_liege = ROOT
+			set_character_flag = special_marshal
+			set_character_flag = mercom_alpha
+			set_character_flag = dw_boobs_checked
+			set_character_flag = dw_junk_checked
+			give_nickname = nick_mercom_com
+			culture = norse
+			add_lover = root
+			add_friend = root
+			add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+			}
+		}
+	}
+
+## START OF CHAIN ##
+character_event = {
+	id = mercom.2
+	ai = no # Player only
+	hide_window = yes #Hides event from view
+	is_triggered_only = yes # Triggered from player only decision
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = mercom_attempted
+			}
+			narrative_event = { id = mercom.4 } #Not first attempt
+			break = yes # Takes us out of the immediate block
+		}
+		narrative_event = { id = mercom.31 } #First attempt
+	}
+}
+
+### First time trying to recruit. Should only trigger once! ###
+
+narrative_event = {
+	id = mercom.31
+	desc = "mercom31"
+	picture = castle_1
+	title = mercom_recruit_desc
+	
+	is_triggered_only = yes # Triggered from .2
+	
+	option = {
+		name = "mercom31a"
+		set_global_flag = mercom_recruited
+		narrative_event = { id = mercom.3 days = 10 }
+	}
+	option = { ### Allow the player to skip most of the narrative if they choose.
+		name = "mercom31b"
+		set_global_flag = mercom_recruited
+		narrative_event = { id = mercom.11 }
+	}
+}
+
+narrative_event = {
+	id = mercom.3
+	desc = "mercom3"
+	picture = castle_1
+	title = mercom_recruit_desc
+	
+	is_triggered_only = yes # Triggered from .31
+
+	immediate = { set_character_flag = mercom_attempted
+		      	clr_global_flag = mercom_recruited }
+	
+	option = {
+		name = "mercom3a"
+		narrative_event = { id = mercom.5 days = 2 }
+	}
+	option = { 
+		name = "mercom3b"
+		narrative_event = { id = mercom.62 days = 4 }
+	}
+	option = { 
+		name = "mercom3c"
+		narrative_event = { id = mercom.7 days = 4 }
+	}
+	#Exit Event Chain
+	option = { 
+		name = "mercom3f"
+	}
+}
+
+### 2nd time trying to recruit.  Can fire multiple times. ###
+narrative_event = {
+	id = mercom.4
+	desc = "mercom4"
+	picture = castle_1
+	title = mercom_recruit_desc2
+	
+	is_triggered_only = yes # Triggered from .2
+	
+	option = {
+		trigger = { not = { has_character_flag = mercomopt1 }
+		}
+		name = "mercom3a"
+		narrative_event = { id = mercom.5 days = 2 } 
+	}
+	option = { 
+		trigger = { not = { has_character_flag = mercomopt2 }
+		}
+		name = "mercom3b"
+		narrative_event = { id = mercom.62 days = 4 }
+	}
+	option = { 
+		trigger = { not = { has_character_flag = mercomopt3 }
+		}
+		name = "mercom3c"
+		narrative_event = { id = mercom.7 days = 4 }
+	}
+	option = { 
+		trigger = { has_character_flag = mercomopt1
+				has_character_flag = mercomopt2
+				has_character_flag = mercomopt3
+			}
+		name = "mercom3d"
+		narrative_event = { id = mercom.11 }
+	}
+	#Exit Event Chain
+	option = { 
+		name = "mercom3e"
+	}
+}
+############# The Nubian #############
+narrative_event = {
+	id = mercom.5
+	desc = "mercom5" ## Arrival at the Inn
+	picture = inn_1
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .3 & .4
+	option = {
+		trigger = { is_female = no }
+		name = "mercom5a"
+		narrative_event = { id = mercom.521 }
+		}
+	option = {
+		trigger = { is_female = yes }
+		name = "mercom5a"
+		narrative_event = { id = mercom.525 }
+		}
+}
+############# Nubian Flavor for the menfolk #############
+narrative_event = {
+	id = mercom.521
+	desc = "mercom521"
+	picture = darkness
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .5
+	option = {
+		name = "mercom521a"
+		narrative_event = { id = mercom.522 }
+		}
+}
+narrative_event = {
+	id = mercom.522
+	desc = "mercom522"
+	picture = 1capt_male1
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .521
+	option = {
+		name = "mercom522a"
+		narrative_event = { id = mercom.523 }
+		}
+}
+
+narrative_event = {
+	id = mercom.523
+	desc = "mercom523"
+	picture = 1capt_chair
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .522
+	option = {
+		name = "mercom523a"
+		narrative_event = { id = mercom.524 }
+		}
+}
+narrative_event = {
+	id = mercom.524
+	desc = "mercom524"
+	picture = 1capt_chair
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .523
+	option = {
+		name = "mercom524a"
+		set_character_flag = mercomopt1
+		narrative_event = { id = mercom.51 }
+		}
+}
+
+############# Nubian Flavor for the ladies #############
+
+narrative_event = {
+	id = mercom.525
+	desc = "mercom525"
+	picture = darkness
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .5
+	option = {
+		name = "mercom525a"
+		narrative_event = { id = mercom.526 }
+		}
+}
+narrative_event = {
+	id = mercom.526
+	desc = "mercom526"
+	picture = 1capt_female2
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .525
+	option = {
+		name = "mercom526a"
+		narrative_event = { id = mercom.527 }
+		}
+}
+narrative_event = {
+	id = mercom.527
+	desc = "mercom527"
+	picture = 1capt_female1
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .526
+	option = {
+		name = "mercom527a"
+		narrative_event = { id = mercom.528 }
+		}
+}
+narrative_event = {
+	id = mercom.528
+	desc = "mercom528"
+	picture = 1capt_chair
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .527
+	option = {
+		name = "mercom528a"
+		narrative_event = { id = mercom.529 }
+		}
+}
+narrative_event = {
+	id = mercom.529
+	desc = "mercom529"
+	picture = 1capt_chair
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .528
+	option = {
+		name = "mercom529a"
+		set_character_flag = mercomopt1
+		narrative_event = { id = mercom.51 }
+		}
+}
+#############-END EVENT- The Nubian #############
+narrative_event = {
+	id = mercom.51
+	desc = "mercom51"
+	picture = 1capt_face2
+	title = mercom5_title
+	
+	is_triggered_only = yes # Triggered from .529 and .524
+	
+	option = {
+		name = "mercom51a"
+		narrative_event = { id = mercom.4 }
+		}
+	#Exit Event Chain
+	option = {
+		name = "mercom_end_search"
+		}
+}
+############# The Viking girl #############
+
+narrative_event = {
+	id = mercom.62
+	desc = "mercom62"
+	picture = nord_town_3
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .3 & .4
+	option = {
+		name = "mercom62a"
+		narrative_event = { id = mercom.63 }
+		}
+}
+narrative_event = {
+	id = mercom.63
+	desc = "mercom63"
+	picture = strange_warrior_1
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .62
+	option = {
+		name = "mercom63a"
+		narrative_event = { id = mercom.64 }
+		}
+	option = {
+		name = "mercom63b"
+		}
+}
+narrative_event = {
+	id = mercom.64
+	desc = "mercom64"
+	picture = 2capt_face1
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .63
+	option = {
+		name = "mercom64a"
+		narrative_event = { id = mercom.65 }
+		}
+}
+##### Viking Girl, Gender Splits event line #####
+
+narrative_event = {
+	id = mercom.65
+	desc = "mercom65"
+	picture = 2capt_lower
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .64
+	option = {
+		trigger = { is_female = no }
+		name = "mercom65a"
+		narrative_event = { id = mercom.66 }
+		}
+	option = {
+		trigger = { is_female = yes }
+		name = "mercom65a"
+		narrative_event = { id = mercom.69 }
+		}
+}
+#### Viking Girl - Male line ####
+narrative_event = {
+	id = mercom.66
+	desc = "mercom66"
+	picture = 2capt_male2
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .65
+	option = {
+		name = "mercom66a"
+		narrative_event = { id = mercom.67 }
+		}
+}
+narrative_event = {
+	id = mercom.67
+	desc = "mercom67"
+	picture = 2capt_male1
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .66
+	option = {
+		name = "mercom67a"
+		narrative_event = { id = mercom.61 }
+		}
+}
+
+#### Viking Girl - Ladies Event Line ####
+narrative_event = {
+	id = mercom.69
+	desc = "mercom69"
+	picture = 2capt_female2
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .65
+	option = {
+		name = "mercom69a"
+		narrative_event = { id = mercom.691 }
+		}
+}
+narrative_event = {
+	id = mercom.691
+	desc = "mercom691"
+	picture = 2capt_female1
+	title = mercom6_title
+	
+	is_triggered_only = yes # Triggered from .69
+	option = {
+		name = "mercom691a"
+		narrative_event = { id = mercom.61 }
+		}
+}
+############# END EVENT - The Viking girl #############
+narrative_event = {
+	id = mercom.61
+	desc = "mercom61"
+	picture = 2capt_face2
+	title = mercom6_title
+	immediate = { set_character_flag = mercomopt2 }
+	is_triggered_only = yes # Triggered from .691 & ..67
+	
+	option = {
+		name = "mercom61a"
+		narrative_event = { id = mercom.4 }
+		}
+	option = {
+		name = "mercom_end_search"
+		}
+}
+
+############# The Scouts ############# 
+narrative_event = {
+	id = mercom.7
+	desc = "mercom7"
+	picture = inn_3
+	title = mercom7_title
+	
+	is_triggered_only = yes # Triggered from .3 & .4
+	option = {
+		name = "mercom7a"
+		narrative_event = { id = mercom.721 }
+		}
+}
+
+narrative_event = {
+	id = mercom.721
+	desc = "mercom721"
+	picture = scout_face
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .7
+	option = {
+		name = "mercom721a"
+		narrative_event = { id = mercom.722 }
+		}
+}
+
+narrative_event = {
+	id = mercom.722
+	desc = "mercom722"
+	picture = darkness
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .721
+	option = {
+		name = "mercom722a"
+		narrative_event = { id = mercom.723 }
+		}
+}
+
+narrative_event = {
+	id = mercom.723
+	desc = "mercom723"
+	picture = fut_trio
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .722
+	option = {
+		name = "mercom723a"
+		narrative_event = { id = mercom.724 days = 1 }
+		}
+}
+
+narrative_event = {
+	id = mercom.724
+	desc = "mercom724"
+	picture = fut_trio
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .723
+	option = {
+		name = "mercom724a"
+		narrative_event = { id = mercom.725 days = 2 }
+		}
+}
+
+narrative_event = {
+	id = mercom.725
+	desc = "mercom725"
+	picture = fut_greeting
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .724
+	option = {
+		name = "mercom725a"
+		narrative_event = { id = mercom.726 days = 3 }
+		}
+}
+
+narrative_event = {
+	id = mercom.726
+	desc = "mercom726"
+	picture = fut_lower_1
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .725
+	option = {
+		name = "mercom726a"
+		narrative_event = { id = mercom.727 days = 7 }
+		}
+}
+narrative_event = {
+	id = mercom.727
+	desc = "mercom727"
+	picture = 1capt_lower
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .726
+	option = {
+		name = "mercom727a"
+		narrative_event = { id = mercom.728 days = 4 }
+		}
+}
+narrative_event = {
+	id = mercom.728
+	desc = "mercom728"
+	picture = commander_lower2
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .727
+	option = {
+		name = "mercom728a"
+		narrative_event = { id = mercom.729 }
+		}
+}
+narrative_event = {  
+	id = mercom.729
+	desc = "mercom729"
+	picture = nord_town_2
+	title = mercom7_title
+	is_triggered_only = yes # Triggered from .728
+	option = {
+		name = "mercom729a"
+		narrative_event = { id = mercom.71 }
+		}
+	option = {
+		name = "mercom729b"
+		narrative_event = { id = mercom.71 }
+		give_nickname = nick_mercom_cocksleeve
+		}
+}
+############# The Scouts - END EVENT ############# 
+
+narrative_event = {
+	id = mercom.71
+	desc = "mercom71"
+	picture = nord_town_2
+	title = mercom7_title
+	immediate = { set_character_flag = mercomopt3 }
+	is_triggered_only = yes # Triggered from .729
+	
+	option = {
+		name = "mercom71a"
+		narrative_event = { id = mercom.4 }
+		}
+	option = {
+		name = "mercom_end_search"
+		}
+}
+
+############# Meeting the Commander ############# 
+
+narrative_event = {
+	id = mercom.11
+	desc = "mercom11"
+	picture = castle_1
+	title = mercom11_title
+	is_triggered_only = yes # Triggered from .4
+	option = {
+		name = "mercom11a"
+		narrative_event = { id = mercom.12 }
+		}
+}
+
+narrative_event = {
+	id = mercom.12
+	desc = "mercom12"
+	picture = commander_action_5
+	title = mercom11_title
+	is_triggered_only = yes # Triggered from .11
+	option = {
+		name = "mercom12a"
+		narrative_event = { id = mercom.13 }
+		}
+}
+
+narrative_event = {
+	id = mercom.13
+	desc = "mercom13"
+	picture = commander_action_1
+	title = mercom11_title
+	is_triggered_only = yes # Triggered from .12
+	option = {
+		name = "mercom13a"
+		narrative_event = { id = mercom.14 }
+		}
+}
+
+narrative_event = {
+	id = mercom.14
+	desc = "mercom14"
+	picture = commander_action_2
+	title = mercom11_title
+	is_triggered_only = yes # Triggered from .13
+	option = {
+		name = "mercom14a"
+		narrative_event = { id = mercom.15 }
+		}
+	option = {
+		name = "mercom14b" ### ENDS ALL EVENT CHAINS COMPLETELY
+			### Clear event flags because we like things tidy ###
+			set_global_flag = mercom_denied
+			clr_character_flag = mercom_attempted
+			clr_character_flag = mercomopt1
+			clr_character_flag = mercomopt2
+			clr_character_flag = mercomopt3
+		}
+}
+
+narrative_event = {
+	id = mercom.15
+	desc = "mercom15"
+	picture = commander_lower4
+	title = mercom11_title
+	is_triggered_only = yes # Triggered from .14
+	option = {
+		name = "mercom15a"
+		narrative_event = { id = mercom.1 }
+	}
+}
+
+narrative_event = {
+	id = mercom.801
+	desc = {
+		trigger = { has_character_flag = slutpilgrim1 }
+		text = mercom801yes
+	}
+	desc = {
+			trigger = { NOT = { has_character_flag = slutpilgrim1 }}
+		text = mercom801no
+	}
+	picture = redhand_veterans
+	title = mercom801_title
+	is_triggered_only = yes # Triggered from Recruit RedHand Commander Decision
+	option = {
+		trigger = { has_character_flag = slutpilgrim1 }
+		name = "mercom801a" #Accept the price and gain a recruit
+			prestige = -250
+			scaled_wealth = -0.25
+			random_list = {
+
+			75 = { ### Randomly Generated ### THANKS BICOBUS
+			create_random_soldier = {
+				random_traits = yes
+				dynasty = none
+				female = yes
+				religion = root
+                attributes = {
+                    martial = 8
+                    diplomacy = 6
+                    stewardship = 4
+                    intrigue = 6
+                    learning = 6
+                }
+                health = 11
+                fertility = 0.9
+			}
+			new_character = {
+                set_character_flag = special_marshal
+                set_character_flag = dw_boobs_checked
+                set_character_flag = dw_junk_checked
+                
+				remove_trait = weak
+				remove_trait = slow
+				remove_trait = imbecile
+				remove_trait = dull
+				
+				remove_trait = mystic
+				remove_trait = socializer
+				remove_trait = gamer
+				remove_trait = hedonist
+				remove_trait = duelist
+				remove_trait = hunter
+				remove_trait = strategist
+				remove_trait = administrator
+				remove_trait = architect
+				remove_trait = gardener
+				remove_trait = schemer
+				remove_trait = impaler
+				remove_trait = seducer
+				remove_trait = seductress
+				remove_trait = theologian
+				remove_trait = scholar
+                remove_trait = craven
+                
+                add_trait = redhandvet
+                add_trait = heavy_infantry_leader
+                add_trait = winter_soldier
+                add_trait = futa
+                add_trait = shieldmaiden
+                
+                culture = norse
+                
+                add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+				
+                random_list = {
+                    20 = {
+                        random_list = {
+                            10 = { add_trait = portrait218 }
+                            10 = { add_trait = portrait220 }
+                            10 = { add_trait = portrait222 }
+                            10 = { add_trait = portrait223 }
+                            10 = { add_trait = portrait226 }
+                            10 = { add_trait = portrait232 }
+                            10 = { add_trait = portrait233 }
+                        }
+                        random_list = {
+                            10 = { set_name = Aphrodite }
+                            10 = { set_name = Pandora }
+                            10 = { set_name = Opal }
+                            10 = { set_name = Helena }
+                            10 = { set_name = Hera }
+                            10 = { set_name = Rainis }
+                            10 = { set_name = Persephone }
+                            10 = { set_name = Luet }
+						}
+                    }
+                    20 = {
+                        random_list = {
+                            25 = { add_trait = portrait219}
+                            25 = { add_trait = portrait221}
+                            25 = { add_trait = portrait227}
+                            25 = { add_trait = portrait229}
+                        }
+                        random_list = {
+                            10 = { set_name = Gwen }
+                            10 = { set_name = Boudica }
+                            10 = { set_name = Bethany }
+                            10 = { set_name = Leliana }
+                            10 = { set_name = Lorelai }
+                            10 = { set_name = Aribeth }
+						}
+                    }
+                    20 = {
+                        add_trait = portrait224
+                        random_list = {
+                            10 = { set_name = Dominica }
+                            10 = { set_name = Delissa }
+                            10 = { set_name = Nokra }
+                            10 = { set_name = Theresa }
+                            10 = { set_name = Liara }
+                            10 = { set_name = Laera }
+                            10 = { set_name = Gilianne }
+                            10 = { set_name = Nora }
+                            10 = { set_name = Shadra }
+                            10 = { set_name = Shankra }
+                            10 = { set_name = Lola }
+						}
+                    }
+                    20 = {
+                        random_list = {
+                            50 = { add_trait = portrait228 }
+                            50 = { add_trait = portrait230 }
+                        }
+                        random_list = {
+                            25 = { set_name = Ariana }
+                            25 = { set_name = Concordia }
+                            25 = { set_name = Nadia }
+                            25 = { set_name = Mira }
+                            25 = { set_name = Tunare }
+                            25 = { set_name = Dibella }
+                            25 = { set_name = Mara }
+                        }
+                    }
+                    20 = {
+                        add_trait = portrait231
+                        random_list = {
+                            25 = { set_name = Calypso }
+                            25 = { set_name = Kyra }
+                            25 = { set_name = Opal }
+                            25 = { set_name = Cleo }
+                            25 = { set_name = Octavia }
+                            25 = { set_name = Rori }
+                            25 = { set_name = Violet }
+                            25 = { set_name = Titania }
+						}
+                    }
+                }
+                random_list = {
+                    35 = {
+                        add_trait = small_tits
+                        add_trait = dick_horse
+                        add_trait = strong
+                    }
+                    25 = {
+                        add_trait = regular_tits
+                        add_trait = dick_huge
+                    }
+                    15 = {
+                        add_trait = big_tits
+                        add_trait = dick_large
+                    }
+                    10 = {
+                        add_trait = gigantic_tits
+                        add_trait = dick_average
+                    }
+                }
+				random_list = { # Flavor Randomization
+					35 = { 
+						# Nothing
+					}
+					15 = {
+						add_trait = lustful
+					}
+					10 = {
+						add_trait = robust
+					}
+					10 = {
+						add_trait = duelist
+					}
+					10 = {
+						add_trait = hunter
+					}
+					5 = {
+						add_trait = strategist
+					}
+					5 = {
+						change_martial = 4
+					}
+					5 = {
+						if = {
+							limit = {
+								has_dlc = "Reapers"
+							}
+							add_trait = one_eyed
+						}
+					}
+					5 = { 
+						add_trait = shrewd
+					}
+				}
+				hidden_tooltip = {
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+				}
+				set_character_flag = invited_soldier
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+			}
+
+			10 = { ### Aela the Werewolf ###
+				modifier = {
+					factor = 0  # turns it from 25 to 0
+					has_global_flag = mercomnpc_aela_seeded
+				}
+				create_character = {
+					random_traits = no
+					dynasty = none
+					female = yes
+					name = Aela
+					culture = root
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 8
+					 diplomacy = 4
+					 stewardship = 6
+					 intrigue = 2
+					 learning = 4
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = strong
+					trait = portrait212
+					trait = redhandvet
+					trait = wroth
+					trait = proud
+					trait = lustful
+					trait = brilliant_strategist
+					trait = werewolf
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = regular_tits
+		 			trait = inspiring_leader
+		  			trait = unyielding_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					set_character_flag = mercomnpc_aela
+					set_global_flag = mercomnpc_aela_seeded
+					add_friend = root
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					set_character_flag = invited_soldier
+					save_event_target_as = invited_character
+					}
+				character_event = { id = NE.1 }
+				}
+
+			10 = { ### Lydia - She is sworn to carry your burdens... ###
+				modifier = {
+					factor = 0  # turns it from 25 to 0
+					has_global_flag = mercomnpc_lydia_seeded
+				}
+				create_character = {
+					random_traits = no
+					dynasty = none
+					name = Lydia
+					female = yes
+					culture = root
+					age = 16
+					religion = root
+					attributes = {
+					 martial = 5
+					 diplomacy = 3
+					 stewardship = 5
+					 intrigue = 3
+					 learning = 7
+		  			 }
+					health = 11
+			  		fertility = 0.90
+					trait = redhandvet
+					trait = portrait215
+					trait = diligent
+					trait = lustful
+					trait = honest
+					trait = brave
+					trait = scarred
+					trait = martial_cleric
+					trait = dick_large
+					trait = futa
+					trait = shieldmaiden
+		  			trait = big_tits
+		  			trait = mountain_terrain_leader
+		  			trait = organizer
+		  			trait = narrow_flank_leader
+		  			trait = heavy_infantry_leader
+				}
+				new_character = {
+					set_character_flag = special_marshal
+					set_character_flag = special_treasurer
+					set_character_flag = special_spymaster
+					set_character_flag = special_spiritual 
+					set_character_flag = special_chancellor
+					set_character_flag = dw_boobs_checked
+					set_character_flag = dw_junk_checked
+					set_character_flag = mercomnpc_lydia
+					set_global_flag = mercomnpc_lydia_seeded
+					add_friend = root
+					culture = norse
+					add_character_modifier = { name = dw_alpha_bitch duration = -1 }
+					set_character_flag = invited_soldier
+					save_event_target_as = invited_character
+					}
+				character_event = { id = NE.1 }
+				}
+			}
+	}
+	option = {
+		trigger = { has_character_flag = slutpilgrim1 }
+		name = "mercom801b" #Decline the price
+	}
+	option = {
+		trigger = { NOT = { has_character_flag = slutpilgrim1 }}
+		name = "mercom801c" #Denied a recruit
+	}
+}
+
+
+### Freja and Kanika join the court
+narrative_event = {
+	id = mercom.998
+	desc = "mercom998"
+	picture = commander_planning
+	title = mercom998_title
+	is_triggered_only = yes # Triggered from .1
+	option = {
+		name = "mercom998a"
+		character_event = { id = redhand.1012 days = 3 } #Create Freya
+	}
+}
+	
+### Slut Offer
+narrative_event = {
+	id = mercom.999
+	desc = "mercom999"
+	picture = commander_throne_fut3
+	title = mercom999_title
+	is_triggered_only = yes #
+	option = {
+		name = "mercom999a"
+		set_global_flag = mercom_slutoffer
+	}
+}

@@ -1,0 +1,89 @@
+dwt_death_rape_prisoner = {
+	long_desc = "DWT_DEATH_RAPE_PRISONER"
+	can_nokiller = yes
+	violent = yes
+	sound_list = {
+		female = {
+			"death_prison_female_01"
+			"death_prison_female_02"
+			"death_prison_female_03"
+		}
+		male = {
+			"death_prison_male_01"
+			"death_prison_male_02"
+			"death_prison_male_03"
+		}
+	}
+}
+
+dwt_fucked_to_death = {
+	long_desc = "DWT_FUCKED_TO_DEATH"
+	can_nokiller = yes
+	violent = yes
+	sound_list = {
+		female = {
+			"death_prison_female_01"
+			"death_prison_female_02"
+			"death_prison_female_03"
+		}
+		male = {
+			"death_prison_male_01"
+			"death_prison_male_02"
+			"death_prison_male_03"
+		}
+	}
+}
+
+dwt_death_rape_courtier = {
+	long_desc = "DWT_DEATH_RAPE_COURTIER"
+	can_nokiller = yes
+	violent = yes
+	sound_list = {
+		female = {
+			"death_prison_female_01"
+			"death_prison_female_02"
+			"death_prison_female_03"
+		}
+		male = {
+			"death_prison_male_01"
+			"death_prison_male_02"
+			"death_prison_male_03"
+		}
+	}
+}
+
+death_murder_harley = {
+	violent = yes
+	long_desc = "DEATH_BY_HARLEY"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"impaling_female_01"
+			"impaling_female_02"
+			"impaling_female_03"
+		}
+		male = {
+			"impaling_male_01"
+			"impaling_male_02"
+			"impaling_male_03"
+		}
+	}
+}
+
+death_murder_harley_rival = {
+	violent = yes
+	long_desc = "DEATH_BY_HARLEY_RIVAL"
+	can_nokiller = yes
+	sound_list = {
+		female = {
+			"impaling_female_01"
+			"impaling_female_02"
+			"impaling_female_03"
+		}
+		male = {
+			"impaling_male_01"
+			"impaling_male_02"
+			"impaling_male_03"
+		}
+	}
+}

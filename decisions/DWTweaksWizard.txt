@@ -1,0 +1,424 @@
+targetted_decisions = {
+
+	dwtw_wizards_summon_familiar = {
+		is_in_society = yes
+		
+		filter = self
+		ai_target_filter = self
+		
+		potential = {
+			society_member_of = dw_the_wizards
+			prisoner = no
+			NOT = { trait = incapable }
+			character = FROM
+			society_rank >= 1
+			NOR = {
+				has_character_modifier = wolf_familiar
+				has_character_modifier = cat_familiar
+				has_character_modifier = owl_familiar
+				has_character_modifier = raven_familiar			
+			}
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = devil_worshipers_summon_familiar_cd_tooltip
+				NOT = { has_character_modifier = summon_familiar_cooldown }
+			}
+			has_society_currency_major_trigger = yes
+		}
+
+		effect = {
+			increase_visibility_effect = yes
+			hidden_effect = {
+				add_character_modifier = {
+					name = summon_familiar_cooldown
+					years = 5
+					hidden = yes
+				}
+				character_event = { id = MNM.7815 }
+			}
+			detract_society_currency_major_effect = yes	
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_character_modifier = wolf_familiar
+					has_character_modifier = cat_familiar
+					has_character_modifier = owl_familiar
+					has_character_modifier = raven_familiar
+				}
+			}
+		}
+	}
+	
+	dwtw_wizards_spell_of_body_enslavement = {
+		is_in_society = yes
+		
+		filter = realm
+		ai_target_filter = none
+		
+		from_potential = {
+			society_member_of = dw_the_wizards
+			prisoner = no
+			NOT = { trait = incapable }
+			society_rank >= 2
+			OR = {
+				has_character_modifier = dwtw_basic_spellbook
+				has_character_modifier = dwtw_good_spellbook
+				has_character_modifier = dwtw_best_spellbook
+			}
+		}
+
+		potential = {
+			is_landed = no
+			is_adult = yes
+			same_realm = FROM
+			is_within_diplo_range = FROM
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+		}			
+		allow = {
+			is_landed = no
+			is_adult = yes
+			prisoner = no
+			NOT = {
+				opinion = { 
+					who = FROM 
+					value = 0
+				}
+			}
+			NOT = {
+				trait = branded_slave
+			}		
+			FROM = {
+				has_artifact = ingredient_metal_exotic8 # Iron
+				has_artifact = ingredient_metal_exotic9 # Tin
+				has_society_currency_medium_trigger = yes
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				detract_society_currency_medium_effect = yes	
+				character_event = {
+					id = DWTweaksWizard.2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dwtw_wizards_spell_of_trusting = {
+		is_in_society = yes
+		
+		filter = realm
+		ai_target_filter = none
+		
+		from_potential = {
+			society_member_of = dw_the_wizards
+			prisoner = no
+			NOT = { trait = incapable }
+			society_rank >= 1
+			OR = {
+				has_character_modifier = dwtw_basic_spellbook
+				has_character_modifier = dwtw_good_spellbook
+				has_character_modifier = dwtw_best_spellbook
+			}
+		}
+
+		potential = {
+			any_spouse = { 
+				character = FROM 
+			}
+			is_within_diplo_range = FROM			
+			is_adult = yes
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+		}			
+		allow = {
+			prisoner = no
+			NOT = {
+				trait = trusting
+			}			
+			any_spouse = { 
+				character = FROM 
+			}			
+			FROM = {
+				has_artifact = ingredient_animal3 # Eyeball
+				has_society_currency_minor_trigger = yes
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				detract_society_currency_minor_effect = yes	
+				character_event = {
+					id = DWTweaksWizard.7
+				}
+			}
+		}
+	}	
+
+	dwtw_wizards_spell_of_heart_enslavement = {
+		is_in_society = yes
+		
+		filter = realm
+		ai_target_filter = none
+		
+		from_potential = {
+			society_member_of = dw_the_wizards
+			prisoner = no
+			NOT = { trait = incapable }
+			society_rank >= 2
+			OR = {
+				has_character_modifier = dwtw_basic_spellbook
+				has_character_modifier = dwtw_good_spellbook
+				has_character_modifier = dwtw_best_spellbook
+			}
+		}
+
+		potential = {
+			is_adult = yes
+			same_realm = FROM
+			is_within_diplo_range = FROM
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+
+		}			
+		allow = {
+			is_adult = yes
+			prisoner = no
+			opinion = { 
+				who = FROM 
+				value = 1
+			}
+			NOT = {
+				trait = eunuch
+				trait = celibate
+			}
+			practical_age < 45
+			FROM = {
+				practical_age < 45
+				NOR = {
+					trait = eunuch
+					trait = celibate
+				}
+				has_artifact = ingredient_animal7 # Heart
+				has_artifact = ingredient_metal_exotic7 # Copper
+				has_society_currency_medium_trigger = yes
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				detract_society_currency_medium_effect = yes	
+				character_event = {
+					id = DWTweaksWizard.3
+				}
+			}
+		}
+	}	
+
+	dwtw_wizards_spell_of_fireball = {
+		is_in_society = yes
+		
+		filter = realm
+		ai_target_filter = none
+		
+		from_potential = {
+			society_member_of = dw_the_wizards
+			prisoner = no
+			NOT = { trait = incapable }
+			society_rank >= 3
+			OR = {
+				has_character_modifier = dwtw_good_spellbook
+				has_character_modifier = dwtw_best_spellbook
+			}
+		}
+
+		potential = {
+			is_landed = no
+			same_realm = FROM
+			is_within_diplo_range = FROM
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+
+		}			
+		allow = {
+			is_landed = no
+			prisoner = no
+			OR = {
+				NOT = {
+					opinion = { 
+						who = FROM 
+						value = 1
+					}
+				}
+				is_rival = FROM
+			}
+			FROM = {
+				has_artifact = ingredient_metal_exotic5 # Brimstone
+				has_artifact = ingredient_metal_exotic2 # Mercury
+				has_society_currency_major_trigger = yes
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				detract_society_currency_major_effect = yes	
+				character_event = {
+					id = DWTweaksWizard.4
+				}
+			}
+		}
+	}
+
+	dwtw_wizards_spell_of_flamestrike = {
+		is_in_society = yes
+		
+		filter = independent_rulers
+		
+		from_potential = {
+			society_member_of = dw_the_wizards
+			prisoner = no
+			NOT = { trait = incapable }
+			society_rank == 4
+			has_character_modifier = dwtw_best_spellbook
+		}
+
+		potential = {
+			is_landed = yes
+			NOT = { same_realm = FROM }
+			is_within_diplo_range = FROM
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+		}			
+		allow = {
+			is_landed = yes
+			OR = {
+				NOT = {
+					opinion = { 
+						who = FROM 
+						value = 1
+					}
+				}
+				is_rival = FROM
+			}
+			prisoner = no
+			FROM = {
+				has_artifact = ingredient_metal_exotic5 # Brimstone
+				has_artifact = ingredient_metal_exotic2 # Mercury
+				has_artifact = ingredient_metal_exotic6 # Gold
+				has_society_currency_major_trigger = yes
+			}
+			
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				detract_society_currency_major_effect = yes	
+				character_event = {
+					id = DWTweaksWizard.5
+				}
+			}
+		}
+	}	
+}
+
+society_decisions = {
+
+	dwtw_wizards_buy_spellbook = {
+		potential = {
+			society_member_of = dw_the_wizards
+			NOR = {
+				has_character_modifier = dwtw_basic_spellbook
+				has_character_modifier = dwtw_good_spellbook
+				has_character_modifier = dwtw_best_spellbook
+			}
+		}
+		
+		allow = {
+			wealth = 75
+		}
+		
+		effect = {
+			character_event = { id = DWTweaksWizard.6 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	dwtw_wizards_acquire_ingredients_decision = {
+		potential = {
+			society_member_of = dw_the_wizards
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = tooltip_not_busy
+				hidden_trigger = {
+					block_general_event_trigger = no
+				}
+			}
+			custom_tooltip = {
+				text = acquire_ingredients_decision_cooldown_timer_tt
+				hidden_trigger = {
+					NOT = {
+						has_character_modifier = acquire_ingredients_decision_cooldown_timer
+					}
+				}
+			}
+			custom_tooltip = {
+				text = acquire_ingredients_decision_apprentice_requirement
+				hidden_trigger = {
+					any_courtier_or_vassal = {
+						liege = { character = ROOT }
+						has_minor_title = title_dw_the_wizards_apprentice
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = {
+				text = acquire_ingredients_effect_tooltip
+			}
+			add_character_modifier = {
+				modifier = acquire_ingredients_decision_cooldown_timer
+				years = 5
+				hidden = yes
+			}
+			character_event = { id = DWTweaksWizard.1 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	
+}

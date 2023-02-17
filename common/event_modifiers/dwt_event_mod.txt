@@ -1,0 +1,98 @@
+# ICONS:
+# None for now. All we need are covered by Dark World Core
+#
+
+# As our rapes have more consequences for the victim, we lower the penalties that the DW:Core dw_rape_trauma has:
+
+
+dwt_morale_booster = {
+	land_morale = 0.2
+	icon = 13
+}
+
+dwt_rape_trauma = {
+	icon = 40
+	health = -0.10
+	general_opinion = -5
+	sex_appeal_opinion = -25
+	diplomacy = -1
+	intrigue = -2
+	martial = -1
+	learning = -2
+	combat_rating = -1
+	monthly_character_prestige = -1
+}
+
+dwt_rape_trauma_light = {
+	icon = 40
+	health = -0.10
+	general_opinion = -0.01
+	sex_appeal_opinion = -10
+	intrigue = -1
+}
+
+dwt_cat_familiar = {
+	is_visible = { 
+		OR = {
+			is_devil_worshiper_trigger = yes
+            character = FROM
+		}
+	}
+	sex_appeal_opinion = 10
+	intrigue = 5
+	icon = 46
+}
+
+dwt_wolf_familiar = {
+	is_visible = { 
+		OR = {
+			is_devil_worshiper_trigger = yes
+            character = FROM
+		}
+	}
+	sex_appeal_opinion = 10
+	martial = 2
+	intrigue = 3
+	icon = 71
+}
+
+dwt_raven_familiar = {
+	is_visible = { 
+		OR = {
+			is_devil_worshiper_trigger = yes
+            character = FROM
+		}
+	}
+	sex_appeal_opinion = 10
+	stewardship = 2
+	intrigue = 3
+	icon = 73
+}
+
+dwt_owl_familiar = {
+	is_visible = { 
+		OR = {
+			is_devil_worshiper_trigger = yes
+			character = FROM
+		}
+	}
+	sex_appeal_opinion = 10
+	learning = 2
+	intrigue = 3
+	icon = 47
+}
+
+recently_did_dark_divorce = {
+	is_visible = { 
+		character = FROM
+	}
+	icon = 40
+	monthly_character_piety = -0.05
+}
+
+known_lilith = {
+	general_opinion = -20
+	same_religion_opinion = -30
+	monthly_character_piety = -2
+	icon = 78
+}

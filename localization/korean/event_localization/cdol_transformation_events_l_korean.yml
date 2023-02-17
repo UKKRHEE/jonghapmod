@@ -1,7 +1,0 @@
-﻿l_korean:
-
- cdol_transformation.0001.t: "육체의 각성"
- cdol_transformation.0001.intro: "드디어 변화의 시간이 왔습니다. 나는 내 방에 무릎을 꿇고, 잊혀진 내 영혼의 구석진 곳에서 흘러나오는 욕망을 느끼며 몸부림을 칩니다. 난생 처음으로 내 속을 들여다보고 내가 누구인지, 내가 무엇이 될지 알게 됩니다."
- cdol_transformation.0001.negative: "내가 눈을 뜨면, 나는 달라진 여자입니다. 나는 내 벌거벗은 몸을 부끄럽게 여기지 않고, 뜨겁고 달콤한 수증기의 애무 속에 몸을 일으킵니다. 나는 더 이상[ROOT.Char.GetFaith.HighGodName]을(를) 두려워하는 예전의 내가 아니라, 훨씬 더 강력하고, 더 세속적이며, 더 관능적인 존재입니다."
- cdol_transformation.0001.positive: "내가 눈을 뜨면, 나는 달라진 여자입니다. 나는 내 벌거벗은 몸을 부끄럽게 여기지 않고, 뜨겁고 달콤한 수증기의 애무 속에 몸을 일으킵니다. 나는 더 이상 예전의 내가 아니라, 훨씬 더 강력하고, 신성하고, 관능적인 존재입니다."
-cdol_transformation.0001.a: "나는 [ROOT.Char.Custom( 'CdolSuccubusName' )]이고 이 지구는 내 것입니다."

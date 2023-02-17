@@ -1,0 +1,79 @@
+################################################################################
+### ONACTION events for the Dark World Content Pack ############################
+################################################################################
+on_startup = {
+	events = {
+	}
+}
+
+on_birth = {
+	events = {
+		redhand.1010 # Daughters of RedHandVet's should be FUTA too.  Alpha's are like that.	
+		redhand.99999 # Daughters of RedHandVet's will be flagged as "alphafuta"
+		redhand.99998 # Daughters of "AlphaFuta's" will be flagged as "alphafuta"
+	}
+}
+
+on_death = {
+	events = {
+			redhand.1011 # Forcing the Red Hand to go to a female after the commander dies.
+	}
+}
+
+on_yearly_childhood_pulse = {
+	events = {
+			TTcontent_kids.1500 # Children tagged as "alphafuta" can gain the "Brave" trait during childhood.
+			TTcontent_kids.3000 # "AlphaFuta" adolescent tries to seduce brother into cocklust. Every Futa needs a good cocksleeve.
+	}
+}
+
+#character
+on_yearly_pulse = {
+
+	events = { 
+			mercomran.2999 # Freja and Player duel (Martial Focus)
+			redhand.1599 # Recalculate RedHand succession
+			redhand.1009 # Populate RedHand with Cumsluts
+			redhand.1201 # Retire Old RedHandVeterans
+			redhand.1202 # Retire Old RedHandSluts
+	}
+	random_events = {
+			### Red Hand Events ###
+			100 = redhand.1003 # Daughter wants to join the Red Hand
+			100 = redhand.1006 # Daughter returns home from the Red Hand
+			
+			### Commander Events ###
+			30 = mercomran.101 # Rape of player
+		}
+	}
+
+#character
+on_bi_yearly_pulse = {
+	events = {
+	}
+}
+
+#character
+on_five_year_pulse = {
+	
+	events = { }
+	
+	random_events = {
+		### Red Hand Events ###
+		100 = mercomran.105 # Futa's stop corrupt magistrate
+	}
+}
+
+# Fires for the owner of the winning unit (ROOT). The taken Holding title is in FROM.
+on_siege_over_winner = {
+	random_events = {
+		100 = 0
+		30 = TTcontent_war.1000
+	}
+}
+
+
+
+
+
+

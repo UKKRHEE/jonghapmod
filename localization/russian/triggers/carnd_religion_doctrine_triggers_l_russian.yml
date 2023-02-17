@@ -1,4 +1,0 @@
-﻿l_russian:
- carnd_incompatible_doctrine_male_dominated_trigger: "Несовместимо с [doctrine|E] $doctrine_gender_male_dominated_name$"
- carnd_incompatible_doctrine_lust_shunned_trigger: "Несовместимо с [doctrine|E] $carnd_doctrine_lust_shunned_name$"
- carnd_incompatible_doctrine_prostitution_crime_trigger: "Несовместимо с любой [doctrine|E] делающий проституцию [shunned|E] или [criminal|E]"

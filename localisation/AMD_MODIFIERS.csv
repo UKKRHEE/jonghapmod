@@ -1,0 +1,263 @@
+#		Crusader Kings 2 : Advanced Medieval Desires
+
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+
+#		??;??;;;;;;;;;;;;x;
+
+
+#		#		Character Modifiers
+AMD_CMF_first_blood;±·êŒïŒ éÆÐ¦·æŒ;;;;;;;;;;;;x;
+AMD_CMF_first_blood_desc;ëˆåÆÐ «·çÆÌùÇ ¡º¥³ÌëÆÐ ë»Ð¦³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CMF_party_invited;±³°È †ˆ¥´¬³Ý;;;;;;;;;;;;x;
+AMD_CMF_party_invited_desc;ªÈä»ÝùÇ ð»ÉðÁÝëŒçˆ †ˆ¥´©³Ï«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+
+AMD_CM_cooldown;²¹Ì¬³ùÇ ªÈ¡³Ì;;;;;;;;;;;;x;
+AMD_CM_cooldown_desc;ïÆÉ©¹Ð²³Ì ÿ¼Ðæ»Ý ôÄ«¸åÆÌ ¬³ØªÈ ‡‹ªÈÉ«È ±ÈÐë‰²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_sex_study;«µ²³É;;;;;;;;;;;;x;
+AMD_CM_sex_study_desc;ª³¦³ÝùÇ ¥· å»âëÆÌ ¡¹Ý¬È«¸ æˆ¥³Ð²³¡È ùÄ²´ ©³Ø¢³Þ«·Ú«È êŠ¦¹Ì«¸ ¨´¬ÈÌ²³äˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_skill;«µ²³É : ¡¹Ý²·ØåŠ¬·É;;;;;;;;;;;;x;
+AMD_CM_xp_skill_desc;©³Ø¡ÈêÁÐëÆÐ «¹Ì¨³²³¨¹ ¡¹Ý²·ØëÆÐ “³ã«³ÜêÆÙ¢È¥³. ¥· å»âëÆÌ ¡¹Ý¬È«¸ ë»Ð¦³¡³åÆÌ ¥¸ æˆëÁØ«È ô¿Ð ¡·Û«ÈÙ¢È¥³...;;;;;;;;;;;;x;
+
+
+AMD_CM_drug_aphrodisiac;û¿ëÆØ;;;;;;;;;;;;x;
+AMD_CM_drug_aphrodisiac_desc;ª·Ý¡³Øò¼ ü¾¦³É«È ª³ÝêÆÝ²³Ì ª·Ý¬·É ñÆÝéÁÌª³Ý°´«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_drug_contraceptive;±È«ÈØ;;;;;;;;;;;;x;
+AMD_CM_drug_contraceptive_desc;«ÈØªÈÌ ¡³åÆÝª·Ý«È îŒ¡¸ ¡³Øêˆ²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_drug_fertilizer;«ÈØªÈÌí»É¬ÈÌ;;;;;;;;;;;;x;
+AMD_CM_drug_fertilizer_desc;«ÈØªÈÌ ¡³åÆÝª·Ý«È ª³ÝêÆÝ²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_drug_enlarger;ª·Ý¬³Ýí»É¬ÈÌ;;;;;;;;;;;;x;
+AMD_CM_drug_enlarger_desc;ìÁÝë‰ ªÈÌ®¸éŠùÄ¡³ ª·Ý¬³Ý²³äˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+
+AMD_CM_first_happy;«ÈÌ¬·Ðê»Ì;;;;;;;;;;;;x;
+AMD_CM_first_happy_desc;«È¦·ã¡¸ ¡ÈéÁÌì»ãëÆÌ ¡·Ð è»Ð¦³Ü¥³¢È, «ÈÌª´ÝùÇ ¬·Ð©³Ì ê»Ì²´÷¼Ü«·ë‰!;;;;;;;;;;;;x;
+AMD_CM_first_common;ï»Ýò¼ùÇ¦º;;;;;;;;;;;;x;
+AMD_CM_first_common_desc;¡³èÁÌëÆÐ «È«·¡³¦¹åÆÌ òÄì»É«È¦³¨¹Ì åŠäŠ¢³ ²³åÆÌ ¡¹Ý²·ØëÆÐ ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_first_bad;ªÈÐ¨³Ý;;;;;;;;;;;;x;
+AMD_CM_first_bad_desc;®·ëÆØ ¡¹Ý²·Ø²³Ì ©³Øå»Ð«ÈåÆÌ ©¹Ðçˆ ìÆÐ¡·Ù¬È «³Î«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_first_raped;¬ÈÛ©³Ó²ÈÌ •»ß;;;;;;;;;;;;x;
+AMD_CM_first_raped_desc;¡³Ý¬¸çˆ [Root.GetVirginCherry]çÆÐ(ëÆÐ) ’´«³Û¡¹ÜêÆÙ¢È¥³. «È íÁÝ¡¹ÉëÆÌ ªÈ¡³Ì¨³Ì«È ®Èë‹²´ ìÁÐ êŠ «ÈÜëÆÐ ¡·Ù¢È¥³...;;;;;;;;;;;;x;
+
+AMD_CM_after_good_norm;«¹Ì«ÈÌùÇ ùÄ«³Ì;;;;;;;;;;;;x;
+AMD_CM_after_good_norm_desc;íÁÝªÈÐ²³äˆ ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´Ì ¥·ÉéÁÌ«¸ ªÈØªÈÌùÇ ±¹Ýÿ¼çÆÐ «·Ï«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_gay;ª·É«µÝùÇ ¡·ØïŠª³;;;;;;;;;;;;x;
+AMD_CM_after_good_gay_desc;ª³¢³«È¥³Ù¡¸ ¡·ØëÆÐ ¡¹çŠåÆÌ –Œ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_les;©´É²³ÙùÇ ²µÝ¡È;;;;;;;;;;;;x;
+AMD_CM_after_good_les_desc;¥³ÝªÈÌëÆÌ ¨·Ð¦Èª· ¨ÈÌ¥³Ð±´Ý«È¡³ éÁÌåˆçˆ ëÁÐéŠ¬ÈÞåÆÌ êˆ¦ÈçÆÐ æÆÐ«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_raper;«µÉ°³Ð¬³ùÇ ¬·Ì¦ÈðÁØ;;;;;;;;;;;;x;
+AMD_CM_after_good_raper_desc;¡³Ý¡³ÌëÆÌ ©·Øú¿«ÈÙ¢È¥³. ²¹ÌªÈÐ«¸ª· ªÈæˆ²³Ð ¡¹ÝëŠ ©·ÙùÇ ®·©·ÐëÆÐ ©³ÏêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_raped;«ÈÌ¬·Ý²³Ð êŠ «·ÚåÆÌ ü¾¦³É;;;;;;;;;;;;x;
+AMD_CM_after_good_raped_desc;éÁÌ²³¥³... ²³¬È¨³Ì... åŒŽ¹©·¦¹...;;;;;;;;;;;;x;
+AMD_CM_after_good_trade;ä»Ý¬·Ý¡·¦´;;;;;;;;;;;;x;
+AMD_CM_after_good_trade_desc;ì»ãëÆÌ ¡·¦´çÆÐ ²³¨¹Ì ¡ÈéÁÌæˆ ì»ã«³¬ÈÙ¢È¥³.;;;;;;;;;;;;x;
+
+AMD_CM_after_good_human;«ÈÌç‹«´;;;;;;;;;;;;x;
+AMD_CM_after_good_human_desc;«ÈÌç‹ùÇ ª³¦³ÝëÆÐ ©³ÏåÆÌ ì»Ì¬´«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_horse;¦·éŒ ¦³«ÈæŒ;;;;;;;;;;;;x;
+AMD_CM_after_good_horse_desc;ëŠ¬·ÝëÆÌ ¨³©·Ù«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_bear;©¸«· ²·äŒ;;;;;;;;;;;;x;
+AMD_CM_after_good_bear_desc;¨´Ìè»ØëŒçˆ ä»Øò¼ ¨³Þª·åÆÌ ¬³«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_cat;¯´Û ñ»Ð¦ÈÉ;;;;;;;;;;;;x;
+AMD_CM_after_good_cat_desc;äˆ«µÝ«ÈçÆÐ ì»ã«³²³Ù¢È¥³.;;;;;;;;;;;;x;
+
+AMD_CM_after_bad_human;æ»ÝèÁÐ²³É¥´;;;;;;;;;;;;x;
+AMD_CM_after_bad_human_desc;«ÈÌ¡³Ì... ëÀÝª·²³¬È «³Î¡¸Ü¥³...;;;;;;;;;;;;x;
+AMD_CM_after_bad_horse;ðˆÿ¼É”ÈÞ;;;;;;;;;;;;x;
+AMD_CM_after_bad_horse_desc;¨³ÐëÆÌ ùÄ²·Ø²³Ì ª´ÝèÁÐ«ÈÙ¢È¥³. ¥³ÝªÈÌëÆÌ ìÁÉëÆÐ êŠæˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_bad_bear;™‹—‹™‹—‹;;;;;;;;;;;;x;
+AMD_CM_after_bad_bear_desc;ä»ØëÆÌ ùÄ²·Ø²³Ì ª´ÝèÁÐ«ÈÙ¢È¥³. ¥³ÝªÈÌëÆÌ ìÁÉëÆÐ êŠæˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_bad_cat;‘¸Ž·ÐçÁÉ;;;;;;;;;;;;x;
+AMD_CM_after_bad_cat_desc;äˆ«µÝ«ÈçÆÐ ¯³±¸ÛëŒçˆ ¨³ÌæÆÐ«·©·¦Èäˆ ªÈâ«·²³Ù¢È¥³.;;;;;;;;;;;;x;
+
+AMD_CM_after_good_mp_guys;äˆ†Š©³áùÇ ±³êŠ•ÁÌ;;;;;;;;;;;;x;
+AMD_CM_after_good_mp_guys_desc;¨³Û«ÈÜåÆÌ äˆ†ŠçÆÐ ©´°·¬È¡¸ ¨·É«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_good_mp_gals;²³¦¸Ø ªº«ÈîŒ (Harem Sheike);;;;;;;;;;;;x;
+AMD_CM_after_good_mp_gals_desc;¨³ÎëÆÌ «¹¬³æÆÐ«¸¡¸ æÁÐ¦·“³«¹ ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+
+
+AMD_CM_after_raped;¡³Ý¡³Ì ïŒ¦³ëŠ¨³;;;;;;;;;;;;x;
+AMD_CM_after_raped_desc;¡³Ý¡³ÌëÆÐ ¥³Ý²´ ªÈØªÈÌ«È ±È±º²´¬¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_tired;±Èçˆ;;;;;;;;;;;;x;
+AMD_CM_after_tired_desc;¡¹É¦¹Ð²³Ì ©³ØùÇ ÿ¼Ðæ»ÝëŒçˆ «ÈÌ²³Ì ±Èçˆù¼ äˆï»Ý«È è»Øò¼ ¨³ëÆØëÆÐ æÁÌ²³¡¸ ²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_angry;éÁÌåˆ;;;;;;;;;;;;x;
+AMD_CM_after_angry_desc;ÿ¼¡³ ¢³Ð ¬·Ýæˆçˆ éÁÐü¾²³Ì ¡¹Ý²·ØëÆÐ ²³«¹ ¡ÈéÁÌ«È ì»ã¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_after_unsat;ëÀÉäŠéÁÐ¨³Ì;;;;;;;;;;;;x;
+AMD_CM_after_unsat_desc;¥³ ®´ëŠ¬È è»Û²³Ì ëÀÉ¨³ÝùÇ ¬³ÌéÁÐ«È è»ØëÆÐ ò¿ç»Ù²ÈÙ¢È¥³.;;;;;;;;;;;;x;
+
+
+AMD_CM_after_bad;ªÈÐ¨³ÝêŒ¦·ëÁÌ ©³Ø;;;;;;;;;;;;x;
+AMD_CM_after_bad_desc;íÁÝì»Éô¿¬È è»Û²³Ì ëÀÉ¨³Ýò¼ éÁÐü¾²³Ì ¡¹Ý²·ØëŒçˆ «ÈÌ²´ ¡ÈéÁÌ«È ì»ã¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;x;
+
+
+
+
+
+
+AMD_CM_lovers_gift_1;«¹Ì«ÈÌùÇ ª·ÌèÁÐ : ë»Û;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_1_desc;«¹Ì«ÈÌ«¸¡¸ª· ë»ÛëÆÐ ª·ÌèÁÐ©³Ï«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_2;«¹Ì«ÈÌùÇ ª·ÌèÁÐ : ¬³ÝªÈÌäŠ;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_2_desc;«¹Ì«ÈÌ«¸¡¸ª· ¬³ÝªÈÌäŠçÆÐ ª·ÌèÁÐ©³Ï«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_3;«¹Ì«ÈÌùÇ ª·ÌèÁÐ : èŠ¡È;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_3_desc;«¹Ì«ÈÌ«¸¡¸ª· èŠ¡ÈçÆÐ ª·ÌèÁÐ©³Ï«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_4;«¹Ì«ÈÌùÇ ª·ÌèÁÐ : äŒ¦ÈØ;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_4_desc;«¹Ì«ÈÌ«¸¡¸ª· äŒ¦ÈØëÆÐ ª·ÌèÁÐ©³Ï«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_5;«¹Ì«ÈÌùÇ ª·ÌèÁÐ : ìˆ¡³Éª³Ý;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_5_desc;«¹Ì«ÈÌ«¸¡¸ª· ìˆ¡³Éª³ÝëÆÐ ª·ÌèÁÐ©³Ï«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_6;«¹Ì«ÈÌùÇ ª·ÌèÁÐ : ª·¬·É;;;;;;;;;;;;x;
+AMD_CM_lovers_gift_6_desc;«¹Ì«ÈÌ«¸¡¸ª· ª·¬·ÉëÆÐ ª·ÌèÁÐ©³Ï«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+
+
+
+
+AMD_CM_alchemy_search;«¹ÌäÆØêÁÐª³ °³Øª´É;;;;;;;;;;;;x;
+AMD_CM_alchemy_search_desc;ªÈÌ©È²³Ì «µÉëÆÐ ¨³ÌæŒåÆÌ ª³¦³ØëÆÐ ®³Þ¡È ùÄ²´ «ºª³ÌëÆÐ ¢³Ý©È²³äˆ «ÈÜêÆÙ¢È¥³...;;;;;;;;;;;;x;
+AMD_CM_alchemy_xeno;¨³¦³ ª³Ýª³ ÿ¿ùÂÌòÂÌ;;;;;;;;;;;;x;
+AMD_CM_alchemy_xeno_desc;ù¿¡º«ÈÌò¼ ¡º«µÉ²³«¹ «µÉèÁÐëÆÐ ä»ÝäÆÙ©³ÏêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_alchemy_synth;¬ÈäŠ ò¼Ì¦È¥³Ì;;;;;;;;;;;;x;
+AMD_CM_alchemy_synth_desc;û¿ëŠª·Ìéˆ‡ˆ¥´ª³Ýë‹¡Èª´Ý¨¹Ý®¸ùÇ ¡´®¸êŠë‹¬Èÿ¼Ðæ»Ý¬ÈùÂÌ ðŒçˆïˆî»Ð«¸ ¥´²³Ì ²³Ì¬·Ý¬·É ¬·ÙäÆÌòÂÌ²³Ì êÆÝ«ÈÌ.;;;;;;;;;;;;x;
+AMD_CM_alchemy_meruru;ò¼äÆØêÁÐª³ùÇ «³–ÆÐ¦È«¸;;;;;;;;;;;;x;
+AMD_CM_alchemy_meruru_desc;æ»Ì¨³Ì ìŠ¨¹Ì öÂæÆÌ¬È ²³åÆÌ ª³«³É²³Ì ¨³¢¹«¸¡¸ ïÆÉêŠ²³Ì «µÉèÁÐëÆÐ ä»ÝäÆÙ©³ÏêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_alchemy_hermetic;²¸çŒ¨¸êŒ «¹ÌäÆØêÁÐ;;;;;;;;;;;;x;
+AMD_CM_alchemy_hermetic_desc;²¸çŒ¨¸êŒ ²³Éÿ¿ùÇ «¹ÌäÆØêÁÐçˆ ïÆÉêŠ²³Ì «µÉèÁÐëÆÐ ¬¸¬³É²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_alchemy_darkness;¡·ØëÆÌ «¹ØêˆùÇ ê»Ì¡ÈÐ;;;;;;;;;;;;x;
+AMD_CM_alchemy_darkness_desc;ñÆÉ¨³©·ÙëŒçˆ ïÆÉêŠ²³Ì «µÉèÁÐëÆÐ ¬¸¬³É²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_alchemy_medical;ùÇ«µÉ¡¹Ø«·Ù;;;;;;;;;;;;x;
+AMD_CM_alchemy_medical_desc;ùÇ²³É¬·É ¬ÈªÈÉëÆÐ æ»ÝùÂÌ²´ ïÆÉêŠ²³Ì «µÉèÁÐëÆÐ ¬¸¬³É²³Ù¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_alchemy_shaman;ðÁÝë‰ùÇ ìŠêÁÐ;;;;;;;;;;;;x;
+AMD_CM_alchemy_shaman_desc;ìŠêÁÐ¬·É ¬ÈªÈÉëÆÐ æ»ÝùÂÌ²´ ïÆÉêŠ²³Ì «µÉèÁÐëÆÐ ¬¸¬³É²³Ù¢È¥³.;;;;;;;;;;;;x;
+
+AMD_CM_alchemy_xeno_work;¬·ÉäÆÉ¬·É«ÈÌ ò¼ÌíÆÉ ÿ¼Ðæ»Ý;;;;;;;;;;;;x;
+AMD_CM_alchemy_xeno_work_desc;¡³íÁÉò¼ ¨ÈÌ¡³Ì«ÈÌ«È ªÈÐì»Ýô¿¡·¢³, ²¹Ý«·Ì²³Ð êŠ «·ÚåÆÌ «È¡ºùÇ ì»Ì¬´¡³ è»É¡¹Éô¿åÆÌ æÆÝ êˆçÆØŽÈ®ÈåÆÌ ²¹Ìª³Ý«È «ÈÐ«·¢³äˆ «ÈÜêÆÙ¢È¥³. ¬È«¹É¨ÈÌæÆÐëÆÌ ä»Ýðˆ«¸ ‘·Ðäˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_alchemy_cooldown;«¹ÌäÆØêÁÐ îÁÐ¥³ëÁÌ;;;;;;;;;;;;x;
+AMD_CM_alchemy_cooldown_desc;«µÉèÁÐ ¬¸¬³É«È¢³ ïŠ«µÉ«¸ ©³ÌæŒªÈ ¬´ª³ëÀÝ ¥´¡ÈªÈ¡³Ì«È ±ÈÐë‰²³Ì ¡·Û«ÈÌ¡³? «ÈÐ¥³Ì AMD ï»Ý²³Ù îÁÐ¥³ëÁÌëŒçˆ ®·¦È²³åÆÌ ¡¸ ¢³Û¬È «³ÎëÆÐŽ³...;;;;;;;;;;;;x;
+
+
+
+AMD_CM_slave_lust;ú¿êŠùÇ ëÀÉ¨³Ý;;;;;;;;;;;;x;
+AMD_CM_slave_lust_desc;ú¿êŠùÇ ëÀÉ¨³Ý;;;;;;;;;;;;x;
+AMD_CM_slave_fear;ú¿êŠùÇ ä»Ýðˆ;;;;;;;;;;;;x;
+AMD_CM_slave_fear_desc;ú¿êŠùÇ ä»Ýðˆ;;;;;;;;;;;;x;
+AMD_CM_slave_obey;ú¿êŠùÇ äÁÐé»É;;;;;;;;;;;;x;
+AMD_CM_slave_obey_desc;ú¿êŠùÇ äÁÐé»É;;;;;;;;;;;;x;
+AMD_CM_slave_hate;ú¿êŠùÇ ©³Ì©³Ð;;;;;;;;;;;;x;
+AMD_CM_slave_hate_desc;ú¿êŠùÇ ©³Ì©³Ð;;;;;;;;;;;;x;
+
+AMD_CM_prostitute_suspicious;ùÇªÈØ©³ÏëÆØ;;;;;;;;;;;;x;
+AMD_CM_prostitute_suspicious_desc;éÁÐ¡·Ì¬·Ì²³Ì «·Ùêˆ«¸ íÁÐ«ÈÙ²³Ì¥³åÆÌ êˆèÁÌ«È «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_prostitute_unknown;©È¨ÈÐ ®³ÝéŠ;;;;;;;;;;;;x;
+AMD_CM_prostitute_unknown_desc;«È «ÈÌèÁÐò¼ ¨´ëŠ ¥³ÒëÆÌ ¬³¡³ éÁÐ¡·Ì¬·Ì²³Ì «·Ùêˆ«¸ª· è»ØëÆÐ ±³Ðäˆ «ÈÜ¥³åÆÌ êˆèÁÌ«È «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_prostitute_known;«³Ð¦¹¬ÈÌ ®³ÝéŠ;;;;;;;;;;;;x;
+AMD_CM_prostitute_known_desc;«È «ÈÌèÁÐëÆÌ éÁÐ¨¹Ý«ºêŒ¦·ëÁÌ ¬³Ýª³çÆÐ ²³äˆ «ÈÜëŒ¨¹, ìŠùÄ ª³¦³ØæÆÐæˆ èˆæŠ äŒ ª³ªÈÐëÆÐ «³Ðäˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_prostitute_renown;ë‹¨¹Ý²³Ì ®³ÝéŠ;;;;;;;;;;;;x;
+AMD_CM_prostitute_renown_desc;«È «ÈÌèÁÐëÆÌ ©³ØùÇ ª·©ÈêŒ«·ÙëÆÐ ²³åÆÌ ¡·ÛëŒçˆ ¢·Ð¦È «³Ð¦¹¬¹ «ÈÜêÆÙ¢È¥³. äŒ«µ¨³Ðçˆ «·Ù¡ºùÇ ¬·Ìª·Ð«È¦³ ²³Ð ¨³Ì ²³¬È¨³Ì, «ÈåÆÌ òÄì»ÉëŒçˆª· ¡¹Ðîˆ ¨¹Ý«ºçˆëÁÌ «ÈÐ«È «³¢ÈÙ¢È¥³...;;;;;;;;;;;;x;
+AMD_CM_prostitute_retired;ëÆÌý¿²³Ì ®³ÝéŠ;;;;;;;;;;;;x;
+AMD_CM_prostitute_retired_desc;«È «ÈÌèÁÐëÆÌ ²³Ì‘´ éÁÐ¨ÈêŒ¦·ëÁÌ ¬ÈÉ«·Ù«¸ ì»Ýª³²³«¹ÜëŒ¢³, ¬ÈäÆØëÆÌ äŒ¨³ÌæŠ«·ÜêÆÙ¢È¥³. äŒ¦·¢³ äŒ éÁÐ¨¹Ý«ºåÆÌ ª³¦³¬È¬È «³ÎëÆÐ ¡·Û«ÈÙ¢È¥³...;;;;;;;;;;;;x;
+
+
+
+
+
+
+
+
+
+#		#		Character Modifiers (Hidden)
+AMD_CMF_v_roll;AMD Flag - Virgin Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_b_roll;AMD Flag - Body Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_v_roll_desc;AMD Flag - Virgin Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_b_roll_desc;AMD Flag - Body Trait Checked;;;;;;;;;;;;x;
+AMD_CMF_vip;ª·Ý ò¼Ì¦¹Ì ¬·Ýéˆ;;;;;;;;;;;;x;
+AMD_CMF_vip_desc;[Root.GetName]ùÇ ª·Ý²´ÝùÄ ò¼Ì¦¹Ì ©¹ÌêŠ «ÈÐ¦³Ø;;;;;;;;;;;;x;
+
+AMD_CMF_cuckoo_child;°³Ìª´ÝùÇ ©È¨ÈÐ;;;;;;;;;;;;x;
+AMD_CMF_cuckoo_child_desc;«È ª³¦³ØùÇ °³Ìª´Ý«¸åÆÌ ©È¨ÈÐ«È «ÈÜêÆÙ¢È¥³...;;;;;;;;;;;;x;
+
+AMD_CM_pregnant;°³«È¨· : «ÈØªÈÌ;;;;;;;;;;;;x;
+AMD_CM_pregnant_desc;«È èˆ¥È±³«È«·¡³ «ÈÜåÆÌ æ»Ý«³Ì, AMD èˆæŒçˆåÆÌ «ÈØªÈÌ²³¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+
+
+
+
+AMD_CMF_FC_UNKNOWN;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPER;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPED;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BUY;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_SELL;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HETERO;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HOMO;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_ORGY;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HUMAN;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HORSE;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BEAR;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_CAT;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_UNKNOWN_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPER_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_RAPED_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BUY_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_SELL_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HETERO_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HOMO_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_ORGY_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HUMAN_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_HORSE_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_BEAR_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+AMD_CMF_FC_CAT_desc;AMD_CMF_FC_UNKNOWN;;;;;;;;;;;;x;
+
+
+#		#		Character Modifiers (Unused)
+AMD_CM_lifemaker;ª´Ý¨¹Ý®³Ýìˆ;;;;;;;;;;;;x;
+AMD_CM_lifemaker_desc;ª·Ý©¹Ð –ˆåÆÌ ì»Ýì»ÉùÇ ¬¸²³ÌëÆÐ ©³Ï¬È «³Îäˆ «ÈØªÈÌ²³¡·¢³ «ÈØªÈÌªÈ¯ÈÐ êŠ «ÈÜåÆÌ ïÆÉ©¹Ð²³Ì ì»Ì¬´«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_nymphomaniac;ª´É¬·Ýò¼Ý;;;;;;;;;;;;x;
+AMD_CM_nymphomaniac_desc;ª·Ý¬·É ëÀÉ¨³Ý«¸ ª³çˆ¬³Ù²¹ «ÈÐª³Ýª´Ýÿ¼Ð«È éÁÐ±¹Ì²³Ì ©¹Ì°´«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_CM_lustful_wasted;ëÆØ¦³Ì¨³òÄ;;;;;;;;;;;;x;
+AMD_CM_lustful_wasted_desc;ëÆØ¦³Ì¨³òÄùÇ åˆ«º¡³ ô¿«· «ÈÐª³Ýª´Ýÿ¼ÐëÆÐ ²³Ð êŠ «·ÚåÆÌ «ÈÌ¡³Ì ˜Œ¦¸¡È«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+
+
+#		#		Character Modifiers (Hidden)
+AMD_CM_xp_foreplay;¡¹Ý²·Ø - ©Èª³Ù«ÈÙ²´ÝùÄ;;;;;;;;;;;;x;
+AMD_CM_xp_foreplay_desc;¬ÈÉ¬·Ù¬·É«ÈÌ ª·Ý¡ÈùÇ ¡¹Ð²³Ù«È «·ÚåÆÌ ª·Ý¬·É²´ÝùÄùÇ ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_realplay;¡¹Ý²·Ø - ¬·Ì©³Ý²´ÝùÄ;;;;;;;;;;;;x;
+AMD_CM_xp_realplay_desc;¬ÈÉ¬·Ù¬·É«ÈÌ ª·Ý¡ÈùÇ ¡¹Ð²³ÙëÆÐ æ»Ý©³Ì²³åÆÌ ª·Ý¬·É²´ÝùÄùÇ ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_analplay;¡¹Ý²·Ø - ‡Š©³Ý²´ÝùÄ;;;;;;;;;;;;x;
+AMD_CM_xp_analplay_desc;²³ÝèÁÌò¼ ª·Ý¡ÈùÇ ¡¹Ð²³Ù«¸ ùÇ²³Ì ª·Ý¬·É²´ÝùÄùÇ ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_raper;¡¹Ý²·Ø - ¡³Ý¡³Ì²´ÝùÄ;;;;;;;;;;;;x;
+AMD_CM_xp_raper_desc;¡³Ý¬¸¬·É«ÈÌ ª·Ý¬·É²´ÝùÄçÆÐ ª³Ý¥´«¸¡¸ ¡³Ýë‰²³Ì ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_raped;¡¹Ý²·Ø - ¡³Ý¡³Ì±È²´;;;;;;;;;;;;x;
+AMD_CM_xp_raped_desc;¡³Ý¬¸¬·É«ÈÌ ª·Ý¬·É²´ÝùÄçÆÐ ¡³Ýë‰¥³Ý²³Ì ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_human;¡¹Ý²·Ø - «ÈÌ¡³Ì;;;;;;;;;;;;x;
+AMD_CM_xp_human_desc;‡ˆèˆ ª³±È«¸ÌêŒì»Ýò¼ ª·Ý¬·É²´ÝùÄçÆÐ ²³Ì ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_horse;¡¹Ý²·Ø - ¨³¡³Ì;;;;;;;;;;;;x;
+AMD_CM_xp_horse_desc;¨³Ðò¼ ª·Ý¬·É²´ÝùÄçÆÐ ²³Ì ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_bear;¡¹Ý²·Ø - ëÁÝ¡³Ì;;;;;;;;;;;;x;
+AMD_CM_xp_bear_desc;ä»Øò¼ ª·Ý¬·É²´ÝùÄçÆÐ ²³Ì ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_cat;¡¹Ý²·Ø - è‰¡³Ì;;;;;;;;;;;;x;
+AMD_CM_xp_cat_desc;äˆ«µÝ«Èò¼ ª´ÝèÁÐò¼ ª·Ý¬·É²´ÝùÄçÆÐ ²³Ì ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+AMD_CM_xp_unknown;¡¹Ý²·Ø - éÁÐ¨¹Ý;;;;;;;;;;;;x;
+AMD_CM_xp_unknown_desc;ª³Ýª¸éÁÐ¨¹ÝùÇ ª³Ý¥´ù¼ ª·Ý¬·É²´ÝùÄçÆÐ ²³Ì ¡·ÛëŒçˆ ¡³ÌìŠô¿åÆÌ ¡¹Ý²·Ø. «È èˆ¥È±³«È«·åÆÌ ©¹ÌêŠçÆÐ ¥´ªÈÌ²³åÆÌ ¡·Û«È¨¹, ë‹¬·«¸¡¸ éˆ«È¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;x;
+
+
+
+
+
+
+
+
+
+#		#		Opinion Modifiers
+
+AMD_opinion_had_sex;ª·Ýò¼Ì¡º;;;;;;;;;;;;x;
+AMD_opinion_raped_me;¢³çÆÐ ¡³Ý¡³Ì²³Ø;;;;;;;;;;;;x;
+AMD_opinion_raped_close_kin;¡³Ž³ëÁÌ ®ÈÌì»ÉëÆÐ ¡³Ý¡³Ì²³Ø;;;;;;;;;;;;x;
+AMD_opinion_raped_family;¡³èÁÌùÂÌëÆÐ ¡³Ý¡³Ì²³Ø;;;;;;;;;;;;x;
+AMD_opinion_had_first_sex;®·Û ª³Ý¥´;;;;;;;;;;;;x;
+
+AMD_opinion_yielded;êÁÌì»Ý;;;;;;;;;;;;x;
+AMD_opinion_obedient;é»Éì»Ý;;;;;;;;;;;;x;
+AMD_opinion_to_slave;í»Ý«´;;;;;;;;;;;;x;
+
+#		#		Opinion Modifiers (Unused)
+AMD_opinion_masochism;±È²³Éª·Ý ¨³Ìì»É;;;;;;;;;;;;x;
+AMD_opinion_sadism;¡³²³Éª·Ý ¨³Ìì»É;;;;;;;;;;;;x;
+AMD_opinion_first_good;®·Û ª³Ý¥´;;;;;;;;;;;;x;
+AMD_opinion_first_bad;[GetVirginCherry] ¡³Ý°³Ð;;;;;;;;;;;;x;
+
+

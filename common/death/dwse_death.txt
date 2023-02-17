@@ -1,0 +1,7 @@
+death_went_to_forest = {
+	can_nokiller = yes
+	long_desc = "DEATH_WENT_TO_FOREST"
+	icon = 2
+	killer_icon = 1
+	sound = no
+}

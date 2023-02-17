@@ -1,0 +1,231 @@
+#############################################
+# CHARACTER NICKNAMES
+# Independent dukes, kings and emperors only
+#
+# 'factor' is the percentage per year of 
+# gaining the nickname
+#
+#############################################
+
+# TRIGGERED ONLY
+################
+nick_AMD_horsefucker = {}
+nick_AMD_bearfucker = {}
+nick_AMD_catfucker = {}
+nick_AMD_xenofucker = {}
+nick_AMD_unicorn = {}
+nick_AMD_lolicon = {}
+nick_AMD_rabbit = {}
+
+# GIVEN BY TRAITS
+#################
+
+nick_AMD_earthworm = {
+	allow = {
+		age = 12
+		NOT = {
+			race = horse
+			trait = AMD_virgin	
+		}
+		trait = AMD_penis_1
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.2
+			trait = lustful
+		}
+		modifier = {
+			factor = 1.2
+			trait = seducer
+		}
+		modifier = {
+			factor = 1.2
+			is_married = yes
+		}
+		modifier = {
+			factor = 1.2
+			is_consort = yes
+		}
+	}
+}
+nick_AMD_shortsword = {
+	allow = {
+		age = 12
+		NOT = {
+			race = horse
+			trait = AMD_virgin	
+		}
+		trait = AMD_penis_2
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.2
+			trait = lustful
+		}
+		modifier = {
+			factor = 1.2
+			trait = seducer
+		}
+		modifier = {
+			factor = 1.2
+			is_married = yes
+		}
+		modifier = {
+			factor = 1.2
+			is_consort = yes
+		}
+	}
+}
+nick_AMD_longsword = {
+	allow = {
+		age = 12
+		NOT = {
+			race = horse
+			trait = AMD_virgin	
+		}
+		trait = AMD_penis_4
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.2
+			trait = lustful
+		}
+		modifier = {
+			factor = 1.2
+			trait = seducer
+		}
+		modifier = {
+			factor = 1.2
+			is_married = yes
+		}
+		modifier = {
+			factor = 1.2
+			is_consort = yes
+		}
+	}
+}
+nick_AMD_centaur = {
+	allow = {
+		age = 12
+		NOT = {
+			race = horse
+			trait = AMD_virgin	
+		}
+		trait = AMD_penis_5
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.2
+			trait = lustful
+		}
+		modifier = {
+			factor = 1.2
+			trait = seducer
+		}
+		modifier = {
+			factor = 1.2
+			trait = cavalry_leader
+		}
+		modifier = {
+			factor = 1.2
+			is_married = yes
+		}
+		modifier = {
+			factor = 1.2
+			is_consort = yes
+		}
+	}
+}
+nick_AMD_milkcow = {
+	allow = {
+		age = 12
+		OR = {
+			trait = AMD_breast_4
+			trait = AMD_breast_5
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = AMD_breast_5
+		}
+		modifier = {
+			factor = 1.2
+			trait = lustful
+		}
+		modifier = {
+			factor = 1.2
+			trait = seductress
+		}
+		modifier = {
+			factor = 1.2
+			is_married = yes
+		}
+		modifier = {
+			factor = 1.2
+			num_of_children = 2
+		}
+		modifier = {
+			factor = 1.2
+			num_of_children = 3
+		}
+		modifier = {
+			factor = 1.2
+			num_of_children = 4
+		}
+	}
+}
+nick_AMD_cliff = {
+	allow = {
+		age = 18
+		OR = {
+			trait = AMD_breast_1
+			trait = AMD_breast_2
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			trait = AMD_breast_1
+		}
+	}
+}
+
+
+#nick_the_cruel = {
+#	allow = {
+#		age = 20
+#		NOT = { trait = kind }
+#		NOT = { trait = charitable }
+#		OR = {
+#			trait = cruel
+#			trait = wroth
+#			trait = impaler
+#		}
+#	}
+#	chance = {
+#		factor = 1
+#		modifier = {
+#			factor = 5.0
+#			trait = impaler
+#		}
+#		modifier = {
+#			factor = 2.0
+#			trait = cruel
+#		}
+#		modifier = {
+#			factor = 2.0
+#			trait = greedy
+#		}
+#	}
+#}
+
+
+
+

@@ -1,0 +1,105 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+###MENU
+show_cheats;Show Cheats;;;;;;;;;;;;;x
+show_cheats_desc;Show Cheat Decisions;;;;;;;;;;;;;x
+hide_cheats;Hide Cheats;;;;;;;;;;;;;x
+hide_cheats_desc;Hide Cheat Decisions;;;;;;;;;;;;;x
+
+###EMPLOYMENT
+cheat_employ_great_commander;Cheater Marshall;;;;;;;;;;;;;x
+cheat_employ_great_commander_desc;Hire a Cheater Marshall;;;;;;;;;;;;;x
+cheat_employ_elusive_shadow;Cheater Spymaster;;;;;;;;;;;;;x
+cheat_employ_elusive_shadow_desc;Hire a Cheater Spymaster;;;;;;;;;;;;;x
+cheat_employ_grey_eminence;Cheater Chancellor;;;;;;;;;;;;;x
+cheat_employ_grey_eminence_desc;Hire a Cheater Chancellor;;;;;;;;;;;;;x
+cheat_employ_midas_touched;Cheater Steward;;;;;;;;;;;;;x
+cheat_employ_midas_touched_desc;Hire a Cheater Steward;;;;;;;;;;;;;x
+cheat_employ_mastermind_theologian;Cheater Chaplain;;;;;;;;;;;;;x
+cheat_employ_mastermind_theologian_desc;Hire a Cheater Chaplain;;;;;;;;;;;;;x
+cheat_employ_female;Employ Cheater Female;;;;;;;;;;;;;x
+cheat_employ_female_desc;Hire a Cheater Female;;;;;;;;;;;;;x
+cheat_employ_female_child;Create Daughter;;;;;;;;;;;;;x
+cheat_employ_female_child_desc;A child appears. She is your daughter.;;;;;;;;;;;;;x
+cheat_employ_male_child;Create Son;;;;;;;;;;;;;x
+cheat_employ_male_child_desc;A child appears. He is your son.;;;;;;;;;;;;;x
+
+### ADD/REMOVE TRAITS
+cheat_add_babyface;Cheat Trait: Babyface;;;;;;;;;;;;;x
+cheat_add_babyface_desc;Cheat the trait Babyface;;;;;;;;;;;;;x
+cheat_remove_babyface;Remove Cheat Trait: Babyface;;;;;;;;;;;;;x
+cheat_remove_babyface_desc;Lose the trait Babyface;;;;;;;;;;;;;x
+cheat_add_babymaker;Cheat Trait: Babymaker;;;;;;;;;;;;;x
+cheat_add_babymaker_desc;Cheat the trait Babymaker;;;;;;;;;;;;;x
+cheat_remove_babymaker;Remove Cheat Trait: Babymaker;;;;;;;;;;;;;x
+cheat_remove_babymaker_desc;Lose the trait Babymaker;;;;;;;;;;;;;x
+cheat_add_builder;Cheat Trait: Builder;;;;;;;;;;;;;x
+cheat_add_builder_desc;Cheat the trait Builder;;;;;;;;;;;;;x
+cheat_remove_builder;Remove Cheat Trait: Builder;;;;;;;;;;;;;x
+cheat_remove_builder_desc;Lose the trait Builder;;;;;;;;;;;;;x
+cheat_add_chosen_one;Cheat Trait: Chosen One;;;;;;;;;;;;;x
+cheat_add_chosen_one_desc;Cheat the trait Chosen One;;;;;;;;;;;;;x
+cheat_remove_chosen_one;Remove Cheat Trait: Chosen One;;;;;;;;;;;;;x
+cheat_remove_chosen_one_desc;Lose the trait Chosen One;;;;;;;;;;;;;x
+cheat_add_immortal;Cheat Trait: Immortal;;;;;;;;;;;;;x
+cheat_add_immortal_desc;Cheat the trait Immortal;;;;;;;;;;;;;x
+cheat_remove_immortal;Remove Cheat Trait: Immortal;;;;;;;;;;;;;x
+cheat_remove_immortal_desc;Lose the trait Immortal;;;;;;;;;;;;;x
+cheat_add_infertile;Cheat Trait: Infertile;;;;;;;;;;;;;x
+cheat_add_infertile_desc;Cheat the trait Infertile;;;;;;;;;;;;;x
+cheat_remove_infertile;Remove Cheat Trait: Infertile;;;;;;;;;;;;;x
+cheat_remove_infertile_desc;Lose the trait Infertile;;;;;;;;;;;;;x
+cheat_add_loyalist;Cheat Trait: Loyalist;;;;;;;;;;;;;x
+cheat_add_loyalist_desc;Cheat the trait Loyalist;;;;;;;;;;;;;x
+cheat_remove_loyalist;Remove Cheat Trait: Loyalist;;;;;;;;;;;;;x
+cheat_remove_loyalist_desc;Lose the trait Loyalist;;;;;;;;;;;;;x
+cheat_add_money_hands;Cheat Trait: Money Hands;;;;;;;;;;;;;x
+cheat_add_money_hands_desc;Cheat the trait Money Hands;;;;;;;;;;;;;x
+cheat_remove_money_hands;Remove Cheat Trait: Money Hands;;;;;;;;;;;;;x
+cheat_remove_money_hands_desc;Lose the trait Money Hands;;;;;;;;;;;;;x
+cheat_add_ninja;Cheat Trait: Ninja;;;;;;;;;;;;;x
+cheat_add_ninja_desc;Cheat the trait Ninja;;;;;;;;;;;;;x
+cheat_remove_ninja;Remove Cheat Trait: Ninja;;;;;;;;;;;;;x
+cheat_remove_ninja_desc;Lose the trait Ninja;;;;;;;;;;;;;x
+cheat_add_prophet_blooded;Cheat Trait: Prophet Blooded;;;;;;;;;;;;;x
+cheat_add_prophet_blooded_desc;Cheat the trait Prophet Blooded;;;;;;;;;;;;;x
+cheat_remove_prophet_blooded;Remove Cheat Trait: Prophet Blooded;;;;;;;;;;;;;x
+cheat_remove_prophet_blooded_desc;Lose the trait Prophet Blooded;;;;;;;;;;;;;x
+cheat_add_terrain_master;Cheat Trait: Terrain Master;;;;;;;;;;;;;x
+cheat_add_terrain_master_desc;Cheat the trait Terrain Master;;;;;;;;;;;;;x
+cheat_remove_terrain_master;Remove Cheat Trait: Terrain Master;;;;;;;;;;;;;x
+cheat_remove_terrain_master_desc;Lose the trait Terrain Master;;;;;;;;;;;;;x
+cheat_add_terror;Cheat Trait: Terror;;;;;;;;;;;;;x
+cheat_add_terror_desc;Cheat the trait Terror;;;;;;;;;;;;;x
+cheat_remove_terror;Remove Cheat Trait: Terror;;;;;;;;;;;;;x
+cheat_remove_terror_desc;Lose the trait Terror;;;;;;;;;;;;;x
+cheat_add_warpriest;Cheat Trait: Warpriest;;;;;;;;;;;;;x
+cheat_add_warpriest_desc;Cheat the trait Warpriest;;;;;;;;;;;;;x
+cheat_remove_warpriest;Remove Cheat Trait: Warpriest;;;;;;;;;;;;;x
+cheat_remove_warpriest_desc;Lose the trait Warpriest;;;;;;;;;;;;;x
+
+###OTHER
+cheat_add_doomstack;Summon Doomstack;;;;;;;;;;;;;x
+cheat_add_doomstack_desc;An Army appears at your Capital;;;;;;;;;;;;;x
+cheat_add_doomstack_navy;Summon Navy;;;;;;;;;;;;;x
+cheat_add_doomstack_navy_desc;Ships appear at the closest location to your Capital;;;;;;;;;;;;;x
+cheat_remove_crappy_traits;Remove Crappy Traits;;;;;;;;;;;;;x
+cheat_remove_crappy_traits_desc;Get rid of bad traits;;;;;;;;;;;;;x
+cheat_remove_crap_from_dynasty_kids;Heal Dynasty Children;;;;;;;;;;;;;x
+cheat_remove_crap_from_dynasty_kids_desc;Remove Crappy Traits from children of your Dynasty;;;;;;;;;;;;;x
+add_awesome_to_dynasty_kids;Bless Dynasty Children;;;;;;;;;;;;;x
+add_awesome_to_dynasty_kids_desc;Bless the children of your Dynasty with some good traits.;;;;;;;;;;;;;x
+
+happy_vassals;Happy Vassals;;;;;;;;;;;;;x
+happy_vassals_desc;Vassals become Content and Honest;;;;;;;;;;;;;x
+
+cheat_gold;1000 Gold;;;;;;;;;;;;;x
+cheat_gold_desc;Gain 1000 Gold;;;;;;;;;;;;;x
+
+cheat_prestige;1000 Prestige;;;;;;;;;;;;;x
+cheat_prestige_desc;Gain 1000 Prestige;;;;;;;;;;;;;x
+
+cheat_piety;1000 Piety;;;;;;;;;;;;;x
+cheat_piety_desc;Gain 1000 Piety;;;;;;;;;;;;;x
+
+cheat_techpoints;1000 Techpoints;;;;;;;;;;;;;x
+cheat_techpoints_desc;Gain 1000 Techpoints;;;;;;;;;;;;;x

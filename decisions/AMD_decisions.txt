@@ -1,0 +1,471 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Decisions
+
+
+#	일반 디시전 : AMD_DCS_소문자
+#	타겟 디시전 : AMD_TD_소문자
+#AMD_DCS_work_alchemist;약물 생산, AMD.25010, AMD.25011, AMD.25012 이벤트가 여기에 해당.
+#AMD_TD_alchemy_drug;약물 사용, AMD_PING.25020 이벤트가 여기에 해당.
+#AMD_TD_alchemy_magic;신비한 의식, AMD.25021, AMD.15022 이벤트가 여기에 해당.
+#위 세가지를 구현해야한다.
+#
+#
+
+decisions = {
+	AMD_DCS_sex_study = {	#수련	AMD.24000로 연결됨
+		is_high_prio = no
+		revoke_allowed = {		always = no	}
+		ai_will_do = {	factor = 0	}
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			AMD_T_NOT_BUSY = yes
+			NOT = {	AMD_T_HCM_SEX_STUDY = yes	}
+		}
+		allow = {
+			OR = {
+				has_focus = focus_seduction
+				has_focus = focus_scholarship
+				trait = lustful
+				trait = hedonist
+				trait = scholar
+				NOT = {	has_dlc = "Way of Life"	}
+			}
+			NOT = {
+				trait = AMD_sex_skill_5
+				trait = celibate
+			}
+		}
+		effect = {	character_event = {	id = AMD.24000	}
+		}
+	}
+	AMD_DCS_visit_brothel= {	#창관 방문 AMD.26000로 연결
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			AMD_T_HAS_BROTHEL = yes
+		}
+		allow = {
+			OR = {
+				AND = {
+					custom_tooltip = {	NOT = {	has_global_flag = AMD_GF_IN_ACTION	}	#다른 AMD이벤트 발생중이 아님
+						text = "AMD_String_T_NOT_IN_ACTION"
+					}
+					custom_tooltip = {	NOT = {	has_character_modifier = AMD_CM_cooldown	}	#방문 쿨타임
+						text = "AMD_String_T_NOT_IN_COOLDOWN"
+					}
+					FROM = {
+						custom_tooltip = {	NOT = {	has_character_modifier = AMD_CM_cooldown	}	#방문 쿨타임
+							text = "AMD_String_T_NOT_IN_COOLDOWN"
+						}
+					}
+					AMD_T_NOT_BUSY = yes
+				}
+				trait = yiminhyee
+			}	
+			#AMD_T_IS_DOABLE = yes
+			#always = no
+		}
+		effect = {
+			set_global_flag = AMD_GF_IN_ACTION
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			hidden_tooltip = {		#	AMD_GF_IN_ACTION	AMD_CM_cooldown
+				FROM = {	AMD_E_ACM_COOLDOWN_7 = yes	}
+					character_event = {	id = AMD.26000	}
+			}
+		}
+	}
+	AMD_DCS_quit_brothel = {	#창관 관두기 AMD.26292로 연결됨
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			AMD_T_IS_PROS = yes
+			NOT = {	has_character_modifier = AMD_CM_prostitute_retired	}
+		}
+		allow = {
+			AMD_T_NOT_IN_ACTION = yes
+		}
+		effect = {
+			hidden_tooltip = {	
+				set_global_flag = AMD_GF_IN_ACTION	character_event = {	id = AMD.26292	}
+			}
+		}
+	}
+	AMD_DCS_buy_horse = {	#말	AMD.20008로 연결됨
+		is_high_prio = no	
+		revoke_allowed = {		always = no	}	
+		ai_will_do = {	factor = 0	}
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			AMD_T_NOT_BUSY = yes
+		}
+		allow = {
+			wealth = 50
+		}
+		effect = {
+			hidden_tooltip = {	
+				character_event = {	id = AMD.20008	}
+			}
+		}
+	}
+	AMD_DCS_party_play = {		#하렘파티	AMD.20100으로 연결됨
+		is_high_prio = no
+		revoke_allowed = {		always = no	}
+		ai_will_do = {	factor = 0	}
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			AMD_T_IS_DOABLE = yes
+			any_courtier_or_vassal = {
+				has_minor_title = title_AMD_courtesan		#이 타이틀은 AMD_T_IS_DOABLE_AGE 를 포함한다.
+				liege = {	character = ROOT	}
+				count = 1
+			}
+			NOT = {
+				trait = celibate
+				trait = chaste
+			}
+		}
+		allow = {
+			AMD_T_NOT_BUSY = yes
+			AMD_T_NOT_IN_ACTION = yes
+			OR = {
+				AMD_T_NOT_IN_COOLDOWN = yes
+				trait = yiminhyee
+			}	
+			any_courtier_or_vassal = {
+				has_minor_title = title_AMD_courtesan		#이 타이틀은 AMD_T_IS_DOABLE_AGE 를 포함한다.
+				liege = {	character = ROOT	}
+				count = 3
+			}
+			OR = {
+				trait = lustful
+				trait = hedonist
+				trait = decadent
+				has_focus = focus_seduction
+				has_focus = focus_carousing
+			}
+		}
+		effect = {
+			hidden_tooltip = {	set_global_flag = AMD_GF_IN_ACTION
+				character_event = {	id = AMD.20100	}
+			}
+		}
+	}
+	AMD_DCS_find_alchemist = {	#연금술사 찾기	AMD.25000로 연결됨
+		is_high_prio = no
+		revoke_allowed = {		always = no	}
+		ai_will_do = {	factor = 0	}
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			AMD_T_NOT_BUSY = yes
+			NOT = {	
+				OR = { 
+					has_character_modifier = AMD_CM_alchemy_search
+					has_character_modifier = AMD_CM_alchemy_synth
+					has_character_modifier = AMD_CM_alchemy_xeno
+					has_character_modifier = AMD_CM_alchemy_meruru
+					has_character_modifier = AMD_CM_alchemy_darkness
+					has_character_modifier = AMD_CM_alchemy_shaman
+					has_character_modifier = AMD_CM_alchemy_hermetic
+					has_character_modifier = AMD_CM_alchemy_medical
+				}
+			}
+		}
+		allow = {
+			OR = {
+				has_focus = focus_seduction
+				has_focus = focus_scholarship
+				trait = lustful
+				trait = hedonist
+				trait = scholar
+				NOT = {	has_dlc = "Way of Life"	}
+			}
+			NOT = {
+				trait = celibate
+			}
+		}
+		effect = {	character_event = {	id = AMD.25000	}	}
+	}
+}
+
+
+##################################################	바닐라의 설명 파트
+# Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] ('self' MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
+# ai_target_filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+#	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	vassals: direct vassal rulers of the AI's employer
+#	sub_realm: all characters below the AI's employer
+#	realm: all characters in the same top realm as the AI
+#	dynasty: all members of the same dynasty
+#	rivals: your rivals plus any character you have an opinion modifier with 'crime = yes' set (the same set of characters the 'is_foe' trigger evaluates)
+#	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
+#	
+
+#
+#	Localization
+#		decision_name: label in diplomacy menu
+#		decision_name_named: label displayed when selecting the action. [Root.GetTitledFirstName] can be used to display the target name.
+#		FROM 은 디시전을 실행하시는 바로 당신
+#		ROOT 는 이 디시전 버튼이 뜨는 타겟
+
+#has_ambition = obj_AMD_sex_labor
+
+targetted_decisions = {
+	AMD_TD_visit_lover = {	#배우자, 첩, 연인과 데이트
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = realm
+		ai_target_filter = self		#AI가 이걸 쓰게 해준다면 CPU가 나를 암살할지도 모릅니다.
+		from_potential = {	#12세 이상 인간플레이어	
+			ai = no
+			age = 7
+		}
+		potential = {	#배우자, 첩, 연인, 성노예, 비밀친구. 감옥x, 외교가능거리.
+			NOT = {	race = horse	}
+			prisoner = no
+		}
+		allow = {		#다른 이벤트중이 아님. 상대도 나도 행동가능할 것.
+			
+			is_within_diplo_range = FROM
+		}
+		effect = {
+			hidden_tooltip = {		#	AMD_GF_IN_ACTION	AMD_CM_cooldown
+				set_global_flag = AMD_GF_IN_ACTION
+				FROM = {
+					add_character_modifier = {
+						name = AMD_CM_cooldown
+						days = 7
+					}
+				}
+				add_character_modifier = {
+					name = AMD_CM_cooldown
+					days = 14
+				}
+			}
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			character_event = {	id =  AMD_PING.21001	}
+		}
+	}
+	AMD_TD_visit_prisoner = {	#감옥 방문
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = court
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+			age = 7
+		}
+		potential = {	#상대의 신분, 국적, 성별에 따라 선택지와 효과가 달라질 뿐.
+			host = { character = FROM }
+			prisoner = yes
+			NOT = {	race = horse	}
+		}
+		allow = {		#다른 이벤트x, 바쁘면 안됨
+			NOT = {	race = horse	}
+			age = 7
+		}
+		effect = {
+			set_global_flag = AMD_GF_IN_ACTION
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			hidden_tooltip = {		#	AMD_GF_IN_ACTION	AMD_CM_cooldown
+				set_global_flag = AMD_GF_IN_ACTION
+				FROM = {
+					add_character_modifier = {
+						name = AMD_CM_cooldown
+						days = 7
+					}
+				}
+				add_character_modifier = {
+					name = AMD_CM_cooldown
+					days = 14
+				}
+			}
+			FROM = {	character_event = {	id = AMD.22010	}	}
+		}
+	}
+	AMD_TD_make_medicine_meruru = {		#약 제조 : 메챙
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = self
+		ai_target_filter = realm
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			has_character_modifier = AMD_CM_alchemy_meruru
+		}
+		allow = {	AMD_T_NOT_IN_ACTION = yes	AMD_T_NOT_BUSY = yes	}
+		effect = {
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			character_event = {	id = AMD.25010	}
+		}
+	}
+	AMD_TD_make_medicine_XENO = {		#약 제조 : 제노
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = self
+		ai_target_filter = realm
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			has_character_modifier = AMD_CM_alchemy_xeno
+		}
+		allow = {	AMD_T_NOT_IN_ACTION = yes	AMD_T_NOT_BUSY = yes	}
+		effect = {
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			character_event = {	id = AMD.25011	}
+		}
+	}
+	AMD_TD_make_medicine_HERMETIC = {		#약 제조 : 헤르메틱/약사
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = self
+		ai_target_filter = realm
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			OR = {
+			has_character_modifier = AMD_CM_alchemy_hermetic
+			has_character_modifier = AMD_CM_alchemy_medical
+			}
+		}
+		allow = {	AMD_T_NOT_IN_ACTION = yes	AMD_T_NOT_BUSY = yes	}
+		effect = {
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			character_event = {	id = AMD.25012	}
+		}
+	}
+	AMD_TD_use_medicine_ITEM = {		#약 사용 : 아이템
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = self
+		ai_target_filter = realm
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			OR = {
+			has_artifact = AMD_drug_aphrodisiac
+			has_artifact = AMD_drug_contraceptive
+			has_artifact = AMD_drug_fertilizer
+			has_artifact = AMD_drug_enlarger
+			}
+		}
+		allow = {	AMD_T_NOT_IN_ACTION = yes	AMD_T_NOT_BUSY = yes	}
+		effect = {
+			FROM = {	save_event_target_as = AMD_ET_STT	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			character_event = {	id = AMD_PING.25020	}
+		}
+	}
+	AMD_TD_use_medicine_SYNTH = {		#약 사용 : 신스
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = self
+		ai_target_filter = realm
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			has_character_modifier = AMD_CM_alchemy_synth
+		}
+		allow = {	AMD_T_NOT_IN_ACTION = yes	AMD_T_NOT_BUSY = yes	}
+		effect = {
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			character_event = {	id = AMD.25021	}
+		}
+	}
+	AMD_TD_use_medicine_DEMON = {		#약 사용 : 악마숭배자/주술
+		is_high_prio = no
+		revoke_allowed = {	always = no	}
+		ai_will_do = {	factor = 0	}
+		filter = self
+		ai_target_filter = realm
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			OR = {
+			has_character_modifier = AMD_CM_alchemy_darkness
+			has_character_modifier = AMD_CM_alchemy_shaman
+			}
+		}
+		allow = {	AMD_T_NOT_IN_ACTION = yes	AMD_T_NOT_BUSY = yes	}
+		effect = {
+			FROM = {	save_event_target_as = AMD_ET_POV	}
+			ROOT = {	save_event_target_as = AMD_ET_TGT	}
+			character_event = {	id = AMD.25022	}
+		}
+	}
+	#포확찢
+		#	이벤트 : 달리기 / 떡치기 / 그만두기.
+	AMD_TD_visit_beast = {		#짐승친구와 놀아요
+		revoke_allowed = {	always = no	}	ai_will_do = {	factor = 0	}
+		is_high_prio = no
+		filter = realm
+		ai_target_filter = self		
+		from_potential = {	AMD_T_IS_PLAYER = yes	AMD_T_IS_DOABLE_AGE = yes	}
+		potential = {		#인간이 아님
+			AMD_T_IS_HUMAN = no
+			is_within_diplo_range = FROM
+		}
+		allow = {
+			AMD_T_IS_PLAYER = no	#일단 플레이어 상대는 금지.
+			AMD_T_NOT_IN_ACTION = yes
+			AMD_T_NOT_IN_COOLDOWN = yes
+			AMD_T_NOT_BUSY = yes
+			FROM = {	AMD_T_NOT_BUSY = yes	}
+			is_within_diplo_range = FROM
+		}
+		effect = {
+			hidden_tooltip = {		#	AMD_in_action	AMD_action_cooldown_timer
+				set_global_flag = AMD_GF_IN_ACTION
+				FROM = {	AMD_E_SETA_POV = yes	AMD_E_SETA_STT = yes	}
+				AMD_E_SETA_TGT = yes
+				character_event = {	id = AMD_PING.27001	}
+			}
+		}
+	}
+	AMD_TD_dynasty_manage = {	#가문 관리 : 분가 만들기, 내 가문으로 들이기가 가능.
+		revoke_allowed = {	always = no	}	ai_will_do = {	factor = 0	}
+		is_high_prio = no
+		filter = realm
+		ai_target_filter = self		
+		from_potential = {	AMD_T_IS_PLAYER = yes	AMD_T_IS_DOABLE_AGE = yes	}
+		potential = {		#배우자, 첩, 연인.
+			OR = {
+				mother = {	character = FROM	}
+				father = {	character = FROM	}
+				AND = {
+					is_father_real_father = no
+					real_father = {	character = FROM	}
+				}
+			}
+		}
+		allow = {
+			is_within_diplo_range = FROM
+			is_married = no
+			is_consort = no
+			is_adult = no
+			is_heir = no
+			num_of_children == 0
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {	AMD_E_SETA_POV = yes	AMD_E_SETA_STT = yes	}
+				AMD_E_SETA_TGT = yes
+				character_event = {	id = AMD_PING.20009	}
+			}
+		}
+	}
+}
+

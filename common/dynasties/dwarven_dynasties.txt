@@ -1,0 +1,120 @@
+9051455 = {
+	name="Hornaxe"
+	culture="dwarven"
+}
+9051456 = {
+	name="Bluntsword"
+	culture="dwarven"
+}
+9051457 = {
+	name="Warmfoot"
+	culture="dwarven"
+}
+9051458 = {
+	name="Bittergut"
+	culture="dwarven"
+}
+9051459 = {
+	name="Giantspine"
+	culture="dwarven"
+}
+9051460 = {
+	name="Hammercloak"
+	culture="dwarven"
+}
+9051461 = {
+	name="Runegut"
+	culture="dwarven"
+}
+9051462 = {
+	name="Stormdigger"
+	culture="dwarven"
+}
+9051463 = {
+	name="Heavybelly"
+	culture="dwarven"
+}
+9051464 = {
+	name="Hillmaster"
+	culture="dwarven"
+}
+9051465 = {
+	name="Giantview"
+	culture="dwarven"
+}
+9051466 = {
+	name="Jadejaw"
+	culture="dwarven"
+}
+9051467 = {
+	name="Brownhide"
+	culture="dwarven"
+}
+9051468 = {
+	name="Merrybelt"
+	culture="dwarven"
+}
+9051469 = {
+	name="Fierytoe"
+	culture="dwarven"
+}
+9051470 = {
+	name="Bristleriver"
+	culture="dwarven"
+}
+9051471 = {
+	name="Bristlebow"
+	culture="dwarven"
+}
+9051472 = {
+	name="Metalaxe"
+	culture="dwarven"
+}
+9051473 = {
+	name="Kegbranch"
+	culture="dwarven"
+}
+9051474 = {
+	name="Goldenshoulder"
+	culture="dwarven"
+}
+9051475 = {
+	name="Beastmantle"
+	culture="dwarven"
+}
+9051476 = {
+	name="Sapphirebow"
+	culture="dwarven"
+}
+9051477 = {
+	name="Keggrip"
+	culture="dwarven"
+}
+9051478 = {
+	name="Bronzehand"
+	culture="dwarven"
+}
+9051479 = {
+	name="Bristlecoat"
+	culture="dwarven"
+}
+9051480 = {
+	name="Goldenbasher"
+	culture="dwarven"
+}
+9051481 = {
+	name="Greatbrewer"
+	culture="dwarven"
+}
+9051482 = {
+	name="Battlebuckle"
+	culture="dwarven"
+}
+9051483 = {
+	name="Koboldrock"
+	culture="dwarven"
+}
+9051484 = {
+	name="Mithrilgut"
+	culture="dwarven"
+}

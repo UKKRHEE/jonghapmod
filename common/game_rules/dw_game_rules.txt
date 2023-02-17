@@ -1,0 +1,93 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+dw_major_campaign = { # This is for selecting whether or not to start with one of the Dark World Campaign events
+	name = "DW_RULE_MAJOR_CAMPAIGN"
+	group = "RULE_GROUP_DW"
+	option = {
+		name = dw_no_campaign
+		text = "DW_RULE_NO_CAMPAIGN"
+		desc = "DW_RULE_NO_CAMPAIGN_DESC"
+	}
+	option = {
+		name = dw_lilith_campaign
+		text = "DW_RULE_LILITH_CAMPAIGN"
+		desc = "DW_RULE_LILITH_CAMPAIGN_DESC"
+	}
+	option = {
+		name = dw_fenris_pack_campaign
+		text = "DW_RULE_FENRIS_PACK_CAMPAIGN"
+		desc = "DW_RULE_FENRIS_PACK_CAMPAIGN_DESC"
+	}
+	option = {
+		name = dw_neko_campaign
+		text = "DW_RULE_NEKO_START"
+		desc = "DW_RULE_NEKO_START_DESC"
+	}
+	option = {
+		name = dw_vampire_campaign
+		text = "DW_RULE_VAMPIRE_START"
+		desc = "DW_RULE_VAMPIRE_START_DESC"
+	}
+	option = {
+		name = dw_orc_campaign
+		text = "DW_RULE_ORC_START"
+		desc = "DW_RULE_ORC_START_DESC"
+	}
+	option = {
+		name = dw_elf_campaign
+		text = "DW_RULE_ELF_START"
+		desc = "DW_RULE_ELF_START_DESC"
+	}
+	option = {
+		name = dw_kitsune_campaign
+		text = "DW_RULE_KITSUNE_START"
+		desc = "DW_RULE_KITSUNE_START_DESC"
+	}
+	option = {
+		name = dw_angel_campaign
+		text = "DW_RULE_ANGEL_START"
+		desc = "DW_RULE_ANGEL_START_DESC"
+	}
+	option = {
+		name = dw_tentacle_campaign
+		text = "DW_RULE_TENTACLE_START"
+		desc = "DW_RULE_TENTACLE_START_DESC"
+	}
+	option = {
+		name = dwtw_fairy_campaign
+		text = "DWTW_RULE_FAIRY_START"
+		desc = "DWTW_RULE_FAIRY_START_DESC"
+	}
+	option = {
+		name = dwse_lizard_campaign
+		text = "DWSE_RULE_LIZARD_CAMPAIGN"
+		desc = "DWSE_RULE_LIZARD_CAMPAIGN_DESC"
+	}
+}
+
+dw_bonus_trait = { # This is for selecting whether or not to start with an additional trait
+	name = "DW_BONUS_TRAIT" # Futa and Trap content
+	group = "RULE_GROUP_DW"
+	option = {
+		name = dw_no_bonus
+		text = "DW_RULE_NO_BONUS"
+		desc = "DW_RULE_NO_BONUS_DESC"
+	}
+	option = {
+		name = dw_yes_bonus_futa
+		text = "DW_RULE_YES_BONUS_FUTA"
+		desc = "DW_RULE_YES_BONUS_FUTA_DESC"
+	}
+}

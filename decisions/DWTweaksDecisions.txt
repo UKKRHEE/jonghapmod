@@ -1,0 +1,658 @@
+decisions = {
+
+	dwf_a_hide_unimportant_shit = {
+		potential = {
+			ai = no
+			NOT = {
+				has_character_flag = dwf_unimportant_shit_hidden
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_character_flag = dwf_unimportant_shit_hidden
+		}
+	}
+	dwf_a_show_unimportant_shit = {
+		potential = {
+			ai = no
+			has_character_flag = dwf_unimportant_shit_hidden
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_character_flag = dwf_unimportant_shit_hidden
+		}
+	}	
+
+	dwf_a_claim_lilith_bloodline = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			trait = lilith
+			NOT = { has_global_flag = lilith_bloodline_claimed }
+		}
+		allow = {
+			check_variable = { which = lilith_seduction value >= 30 }
+		}
+		effect = {
+			set_global_flag = lilith_bloodline_claimed
+			create_bloodline = {
+				type = lilith_bloodline
+			}
+			new_bloodline = {
+				set_description = "lilith_bloodline_desc"
+			}
+		}
+	}
+	
+	dwf_a_claim_incubus_bloodline = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			trait = incubus
+			NOT = { has_global_flag = incubus_bloodline_claimed }
+		}
+		allow = {
+			check_variable = { which = lilith_seduction value >= 30 }
+		}
+		effect = {
+			set_global_flag = incubus_bloodline_claimed
+			create_bloodline = {
+				type = incubus_bloodline
+			}
+			new_bloodline = {
+				set_description = "incubus_bloodline_desc"
+			}
+		}
+	}	
+
+	dwf_a_claim_slaver_bloodline = {
+		is_high_prio = yes
+		potential = {
+			capital_holding = {
+				OR = {
+					has_building = dw_slave_dungeon_3 # Castle
+					has_building = dw_slave_wagon_5 # Nomad
+					has_building = dw_slave_pen_3 # Tribal
+				}
+			}
+			NOT = { has_global_flag = dwf_slavers_bloodline_claimed }
+		}
+		allow = {
+			check_variable = { which = dwf_slaves_sold value >= 50 }
+			NOR = {
+				trait = kind
+			}
+		}
+		effect = {
+			set_global_flag = dwf_slavers_bloodline_claimed
+			create_bloodline = {
+				type = dwf_slavers_bloodline
+			}
+			new_bloodline = {
+				set_description = "dwf_slavers_bloodline_desc"
+			}
+			if = {
+				limit = {
+					is_female = yes
+				}
+				give_nickname = nick_dw_slave_mistress
+			}
+			else = {
+				give_nickname = nick_dw_slave_master
+			}
+		}
+	}				
+	
+	dwf_a_dark_world_options = {
+		potential = {
+			ai = no
+			has_dark_world_started = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			character_event = { id = DWOptions.1 }
+		}
+	}
+
+	dwf_a_fairy_starting_trait = {
+		is_high_prio = yes
+		potential = {
+			ai = no # Only the player should ever see this
+			has_fairy_start = yes
+			has_dwtw_fairy_started = no
+		}
+		allow = {
+			always = yes # It should always be displayed if it is relevant
+		}
+		effect = {
+			set_global_flag = dwtw_fairy_started
+			narrative_event = { id = DWTweaksFairy.2 }
+		}
+		ai_will_do = {
+			factor = 0 # Zero chance the ai uses this
+		}
+	}
+
+# Recruit an Exotic Race
+	dwf_b_recruit_exotic = {
+		ai_check_interval = 120 # AI wont recruit except every ten years
+		potential = {
+			NOT = {
+				has_character_flag = dwf_unimportant_shit_hidden
+			}
+			OR = {
+				has_fae_content = yes # Content check
+				has_heaven_hell_content = yes
+				has_far_east_content = yes
+			}
+		}
+		allow = {
+			is_ruler = yes
+			scaled_wealth = 1.00
+			prisoner = no
+			NOT = {
+				has_character_modifier = in_seclusion
+			}
+		}
+		effect = {
+			scaled_wealth = -1.00
+			narrative_event = { id = DWTweaksRecruit.1 }
+		}
+		ai_will_do = {
+			factor = 0.05 # Every ten years there is a 5% chance they will take this decision
+		}
+	}
+	
+#
+# Remove unimportant children
+#	
+	dwf_b_remove_parentage = {
+		potential = {
+			NOT = {
+				has_character_flag = dwf_unimportant_shit_hidden
+			}
+			ai = no
+			any_child_even_if_dead = {
+				is_alive = no
+				has_children = no
+			}
+		}
+		allow = {
+			ai = no
+				any_child_even_if_dead = {
+					is_alive = no
+					OR = {
+						has_children = no
+						any_child_even_if_dead = {
+							is_alive = no
+						}
+					}
+				}
+		}
+		effect = {
+			hidden_effect = {
+				any_child_even_if_dead = {
+					limit = {
+						is_alive = no
+						OR = {
+							has_children = no
+							any_child_even_if_dead = {
+								is_alive = no
+							}
+						}
+					}
+					set_mother = 0
+					set_father = 0
+				}
+			}
+		}
+	}
+}
+targetted_decisions = {
+
+#
+# Remove eternal loli/shota portrait for immortals
+#
+
+	dwf_immortal_grow_up = {
+		filter = self
+		ai_target_filter = self
+		potential = {
+			immortal_age < 16
+			age = 16
+			age < 50
+			trait = immortal
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				remove_trait = immortal
+				if = {
+					limit = {
+						trait = dragon_child
+					}
+					remove_trait = dragon_child
+					add_trait = dragon_adult
+				}
+				else_if = {
+					limit = {
+						trait = orc
+						trait = elf
+						trait = kitsune
+						trait = neko
+						trait = fairy
+					}
+					character_event = { id = DWChildren.2 }
+				}
+				add_trait = immortal
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+
+#	
+# Motivate tribal steward
+#
+	dwtw_motivate_tribal_steward = {
+		filter = court
+		ai_target_filter = self #We don't want the ai actually doing this, but we're reducing CPU impact just in case
+		from_potential = {
+			ai = no			
+		}
+		potential = {
+			has_job_title = job_treasurer
+			has_job_action = action_settle_tribe
+			liege = {
+				ai = no
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = { character_event = { id = DWTweaksSteward.4000 } } # Event triggers for the liege
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+#
+# Motivate priest
+#
+	dwtw_motivate_priest = {
+		filter = court
+		ai_target_filter = self #We don't want the ai actually doing this, but we're reducing CPU impact just in case
+		from_potential = {
+			ai = no			
+		}
+		potential = {
+			has_job_title = job_spiritual
+			has_job_action = action_inquisition
+			liege = {
+				ai = no
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = { character_event = { id = DWTweaksPriest.4000 } } # Event triggers for the liege
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+#
+# Add/remove custom portraits
+#
+	
+	dwtw_change_custom_portrait = {
+		filter = self
+		potential = {
+			character = FROM
+			OR = {
+				trait = tentacle
+				trait = orc
+				trait = elf
+				trait = neko
+				trait = kitsune
+				trait = werewolf
+				trait = fairy
+				trait = dragon_adult
+			}
+			is_adult = yes
+			NOT = {
+				has_character_flag = portrait_is_fine
+			}
+		}
+		allow= {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				remove_angel_portrait = yes
+				remove_demon_portrait = yes
+			}
+			if = {
+				limit = {
+					trait = fairy
+				}
+				hidden_tooltip = {
+					remove_fairy_portrait = yes
+					add_random_fairy_portrait = yes				
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					trait = orc
+				}
+				hidden_tooltip = {
+					remove_custom_portrait = yes
+					add_random_orc_portrait = yes				
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					trait = elf
+				}
+				hidden_tooltip = {
+					remove_custom_portrait = yes
+					add_random_elf_portrait = yes				
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					trait = neko
+				}
+				hidden_tooltip = {
+					remove_custom_portrait = yes
+					add_random_neko_portrait = yes				
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					trait = kitsune
+				}
+				hidden_tooltip = {
+					remove_custom_portrait = yes
+					add_random_kitsune_portrait = yes				
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					trait = werewolf
+				}
+				hidden_tooltip = {
+					remove_custom_portrait = yes
+					add_random_werewolf_portrait = yes				
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					trait = tentacle
+				}
+				hidden_tooltip = {
+					remove_custom_portrait = yes
+					add_random_tentacle_portrait = yes				
+				}
+				break = yes
+			}				
+			if = {
+				limit = {
+					trait = dragon_adult
+				}
+				hidden_tooltip = {
+					remove_dwse_dragon_portrait = yes
+					add_random_dwse_dragon_portrait = yes				
+				}
+				break = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dwf_change_angelic_portrait = {
+		filter = self
+		potential = {
+			character = FROM
+			AND = {
+				NOR = {
+					trait = tentacle
+					trait = orc
+					trait = elf
+					trait = neko
+					trait = kitsune
+					trait = werewolf
+					trait = fairy
+					trait = dragon_adult
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+					trait = dwse_lizard
+				}
+				trait = angel
+			}
+			is_adult = yes
+			NOT = {
+				has_character_flag = portrait_is_fine
+			}
+		}
+		allow= {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				remove_angel_portrait = yes
+				add_random_angel_portrait = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}		
+
+	dwf_change_demonic_portrait = {
+		filter = self
+		potential = {
+			character = FROM
+			AND = {
+				NOR = {
+					trait = tentacle
+					trait = orc
+					trait = elf
+					trait = neko
+					trait = kitsune
+					trait = werewolf
+					trait = fairy
+					trait = dragon_adult
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+					trait = dwse_lizard
+				}
+				OR = {
+					trait = lilith
+					trait = incubus
+				}
+			}
+			is_adult = yes
+			NOT = {
+				has_character_flag = portrait_is_fine
+			}
+		}
+		allow= {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				remove_demon_portrait = yes
+				add_random_demon_portrait = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	dwtw_change_aura_custom_portrait = {
+		filter = self
+		potential = {
+			character = FROM
+			trait = dwse_lizard
+			is_adult = yes
+			NOT = {
+				has_character_flag = portrait_is_fine
+			}
+		}
+		allow= {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				remove_angel_portrait = yes
+				remove_demon_portrait = yes
+				remove_dwse_lizard_portrait = yes
+				add_random_dwse_lizard_portrait = yes				
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	dwtw_portrait_is_fine = {
+		filter = self
+		potential = {
+			ai = no
+			character = FROM
+			OR = {
+				trait = tentacle
+				trait = orc
+				trait = elf
+				trait = neko
+				trait = kitsune
+				trait = werewolf
+				trait = fairy
+				trait = dwse_lizard
+				trait = dragon_adult
+				trait = angel
+				trait = lilith
+				trait = succubus
+			}
+			is_adult = yes
+			NOT = {
+				has_character_flag = portrait_is_fine
+			}
+		}
+		allow= {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				set_character_flag = portrait_is_fine				
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+#
+# DWR Stop Whoring, but for yourself
+#	
+
+	dwtw_stop_whoring = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 36 # AI will check every three years
+		potential = { # This is where we check the target to ensure they're valid
+			OR = { # they need to have one of the whoring traits
+				trait = cheap_whore
+				trait = experienced_whore
+				trait = exclusive_whore
+			}			
+		}
+		from_potential = {
+			character = ROOT
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			remove_trait = cheap_whore
+			remove_trait = experienced_whore
+			remove_trait = exclusive_whore
+			add_trait = retired_whore
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = { # 100% chance for celibate free courtiers
+				factor = 10
+				OR = {
+					practical_age = 45
+					AND = { 
+						trait = celibate
+						NOT = {
+							trait = branded_slave
+						}
+					}
+				}
+			}
+			modifier = { # No chance for young sinful courtiers, or slaves
+				factor = 0
+				OR = {
+						AND = {
+							practical_age < 45
+							OR = {
+								trait = hedonist
+								trait = seducer
+								trait = seductress
+								trait = lustful
+								trait = proud
+								trait = greedy
+							}
+						}
+					trait = branded_slave
+				}
+			}
+			modifier = { # 50% chance for chaste free courtiers, or married free courtiers
+				factor = 5
+				OR = {
+					AND = {
+						trait = chaste
+						NOT = {
+							trait = branded_slave
+						}
+					}
+					AND = {
+						is_married = yes
+						NOT = {
+							trait = branded_slave
+						}
+					}	
+				}
+			}			
+		}
+	}
+	
+}

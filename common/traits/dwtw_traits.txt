@@ -1,0 +1,86 @@
+unicorn = {
+	random = no
+	customizer = no
+	general_opinion = 5
+	health = 1
+	diplomacy = 3
+	ai_honor = 50
+	elf_opinion = 15
+	opinion_of_elf = 15
+	fairy_opinion = 15
+	opinion_of_fairy = 15
+	orc_opinion = -15
+	opinion_of_orc = -15
+}
+
+alu_fiend = { # Half-succubus trait
+	random = no
+	customizer = no
+	opposites =  {
+		angel
+		lilith
+		incubus
+		cambion
+	}
+	potential = {
+		is_female = yes
+	}
+	is_visible = {
+		OR = {
+			character = FROM
+			society_member_of = dw_the_chosen_of_lilith
+			trait = angel # Angels can sniff them out
+			trait = alu_fiend
+			trait = cambion
+			trait = lilith
+			trait = incubus
+			trait = hedonist # Those with similar lifestyles can see through the disguise
+		}
+	}
+	angel_opinion = -25 # Despite being demons, angels don't care as much about them as incubi/succubi
+	opinion_of_angel = -25
+	sex_appeal_opinion = 5
+	female_insult = INSULT_DEVIL_WOMAN
+	female_insult_adj = INSULT_WANTON
+	female_compliment = COMPL_ENCHANTRESS
+	female_compliment_adj = COMPL_RAVISHING
+}
+cambion = { # Half-incubus trait
+	random = no
+	customizer = no
+	opposites =  {
+		angel
+		lilith
+		alu_fiend
+		cambion
+	}
+	potential = {
+		is_female = no
+	}
+	is_visible = {
+		OR = {
+			character = FROM
+			society_member_of = dw_the_chosen_of_lilith
+			trait = angel # Angels can sniff them out
+			trait = alu_fiend
+			trait = cambion
+			trait = lilith
+			trait = incubus
+			trait = hedonist # Those with similar lifestyles can see through the disguise
+		}
+	}
+	angel_opinion = -25 # Despite being demons, angels don't care as much about them as incubi/succubi
+	opinion_of_angel = -25
+	sex_appeal_opinion = 5
+	male_insult = INSULT_ABOMINATION
+	male_insult_adj = INSULT_WANTON
+	male_compliment = COMPL_SEDUCER
+	male_compliment_adj = COMPL_CHARMING
+}
+
+dwf_ghost = {
+	random = no
+	customizer = no
+	immortal = yes
+	fertility = -1000
+}

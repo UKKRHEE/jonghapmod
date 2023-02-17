@@ -1,0 +1,116 @@
+# This file holds the diseases for DWToska
+# note the "rip = yes" -- this will make it so that the disease is The Reaper's Due exclusive, so that we can have both versions of the disease
+# if "rip" is not specified, the disease will be available in both version (with the same values in both) and doesn't need to be set twice
+
+lilith_plague = {
+	rip = yes
+	contagiousness = 0.025
+	outbreak_chance = 0.008
+	effect = {
+		city_tax_modifier = -0.1
+		supply_limit = -1
+		max_attrition = 0.01
+		disease_defence = 0.2
+	}
+	yearly_province_pulse = {
+		
+	}
+	icon = 7
+	tooltip = LILITH_PLAGUE_INFO
+	months = 12
+	trait = lilith_plague
+	character_infection_chances = {
+		months = 9
+	}
+	on_character_infection = {
+		if = {
+			limit = {
+				age = 12
+				NOR = {
+					has_character_flag = immune_lilith_plague
+					has_character_flag = got_lilith_plague
+					trait = lilith_plague
+					trait = horse
+					trait = incapable
+				}
+			}			
+			random_list = {
+				50 = { # Get the disease
+					modifier = {
+						factor = 15
+						trait = lilith
+					}
+					modifier = {
+						factor = 15
+						trait = incubus
+					}
+					modifier = {
+						factor = 5
+						trait = lustful
+					}
+					modifier = {
+						factor = 5
+						trait = hedonist
+					}
+					modifier = {
+						factor = 3
+						trait = seducer
+					}
+					modifier = {
+						factor = 3
+						trait = seductress
+					}
+					modifier = {
+						factor = 0.5
+						trait = temperate
+					}
+					modifier = {
+						factor = 0.01
+						trait = celibate
+					}
+					modifier = {
+						factor = 15
+						trait = sexcrazed
+					}
+					modifier = {
+						factor = 50
+						is_unimportant_trigger = yes
+					}
+					set_character_flag = got_lilith_plague
+					character_event = { id = DWTFF.4002 }
+				}
+				50 = { # Nothing happens
+					set_character_flag = immune_lilith_plague
+					character_event = { id = DWTFF.4002 }
+				}
+			}
+		}
+	}
+	on_province_infection = {
+		#province_event = {
+		#	id = RIP.11703 #prosperity ended by epidemic
+		#}
+	}
+	always_get_message = yes
+	color = { 247 157 157 } # Sort of a rose color
+	
+	timeperiod = {
+		start_date = 769.1.1
+		end_date = 1452.1.1
+		
+		can_outbreak = {
+			has_dlc = "Reapers"
+		}
+		
+		max_total_provinces = 12
+		province_infection_duration = 12
+		spread_through_water = no
+		
+		min_nb_province = 1	# ignored if 0
+		max_nb_province = 1	# ignored if 0
+
+		one_only = no
+		
+	}
+	disease_gfx = disease_gfx_lilith_plague
+}

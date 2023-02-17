@@ -1,0 +1,294 @@
+cheat_title_chosen_one = {
+	dignity = 0.4
+	grant_limit = 1
+	realm_in_name = no
+	is_unique = yes
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_friend = ROOT }
+	gain_effect = { add_trait = cheat_trait_chosen_one }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_cursed = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 50
+	monthly_prestige = -0.5
+	monthly_piety = -0.5
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_cursed }
+	gain_effect = { add_rival = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_disinherited_blood = {
+	dignity = 0.2
+	grant_limit = 50
+	realm_in_name = no
+	opinion_effect = -200
+	monthly_prestige = -0.5
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_disinherited_blood }
+	gain_effect = { add_rival = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_enemy = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 50
+	opinion_effect = -300
+	monthly_prestige = -0.5
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_rival = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_forbidden_marriage = {
+	dignity = 0.5
+	realm_in_name = no
+	grant_limit = 50
+	opinion_effect = -200
+	monthly_prestige = -0.5
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	gain_effect = { add_trait = cheat_trait_forbidden_marriage }	
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_forsaken_blood = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 50
+	opinion_effect = -200
+	monthly_prestige = -0.5
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_forsaken_blood }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_friend = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 50
+	monthly_salary = 0.05
+	monthly_prestige = 0.05
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_friend = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_loyalist = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 50
+	monthly_salary = 0.05
+	monthly_prestige = 0.05
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_loyalist }
+	gain_effect = { add_friend = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_ninja = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 1
+	monthly_salary = 0.05
+	monthly_prestige = 0.05
+
+	is_unique = yes
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_ninja }
+	gain_effect = { add_friend = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_prophet_blooded = {
+	dignity = 0.2
+	grant_limit = 50
+	realm_in_name = no
+	monthly_prestige = 0.5
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no
+			religion_group = muslim
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_prophet_blooded }
+	gain_effect = { add_friend = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_puppykicker = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 10
+	opinion_effect = -200
+	monthly_prestige = -0.5
+	monthly_piety = -0.5
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_puppykicker }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+cheat_title_treacherous = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 10
+	opinion_effect = -200
+	monthly_prestige = -0.5
+	monthly_piety = -0.5
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_treacherous }
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+
+
+cheat_title_warpriest = {
+	dignity = 0.2
+	realm_in_name = no
+	grant_limit = 2
+	monthly_prestige = 0.1
+	monthly_piety
+
+	allow = {
+
+		FROM = {
+			age = 1
+			ai = no	
+		}
+	}
+	
+	gain_effect = { add_trait = cheat_trait_warpriest }
+	gain_effect = { add_friend = ROOT }
+	lose_effect = {
+	}
+
+	message = yes
+}

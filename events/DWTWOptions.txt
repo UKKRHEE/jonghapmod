@@ -1,0 +1,685 @@
+namespace = DWOptions
+
+character_event = { # Hub
+	id = DWOptions.1
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = DWOptions1
+	
+	option = { # DWR content rules
+		name = DWOptions1A
+		character_event = { id = DWOptions.2 }
+	}
+	option = { # DWR extra options
+		name = DWOptions1B
+		character_event = { id = DWOptions.7 }
+	}
+	option = { # DWR dependencies (other mods) rules
+		name = DWOptions1C
+		character_event = { id = DWOptions.8 }
+	}
+	option = { # Exit
+		name = DWOptionsExit
+	}
+}
+
+character_event = { # Content Hub 1
+	id = DWOptions.2
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = DWTWHHOn
+			has_global_flag = DWTWFaeOn
+		}
+		text = DWOptions2OnOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWHHOn
+			has_global_flag = DWTWFaeOff
+		}
+		text = DWOptions2OnOff
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWHHOff
+			has_global_flag = DWTWFaeOn
+		}
+		text = DWOptions2OffOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWHHOff
+			has_global_flag = DWTWFaeOff
+		}
+		text = DWOptions2OffOff
+	}
+	
+	
+	option = { # Turn off Heaven & Hell content
+		name = DWOptions2A
+		trigger = {
+			has_global_flag = DWTWHHOn
+		}
+		clr_global_flag = DWTWHHOn
+		set_global_flag = DWTWHHOff
+		character_event = { id = DWOptions.2 }
+	}
+	option = { # Turn on Heaven & Hell content
+		name = DWOptions2B
+		trigger = {
+			NOT = { has_global_flag = DWTWHHOn }
+		}
+		clr_global_flag = DWTWHHOff
+		set_global_flag = DWTWHHOn
+		character_event = { id = DWOptions.2 }
+	}	
+	option = { # Turn off Fae content
+		name = DWOptions2C
+		trigger = {
+			has_global_flag = DWTWFaeOn
+		}
+		clr_global_flag = DWTWFaeOn
+		set_global_flag = DWTWFaeOff
+		character_event = { id = DWOptions.2 }
+	}
+	option = { # Turn on Fae content
+		name = DWOptions2D
+		trigger = {
+			NOT = { has_global_flag = DWTWFaeOn }
+		}
+		clr_global_flag = DWTWFaeOff
+		set_global_flag = DWTWFaeOn
+		character_event = { id = DWOptions.2 }
+	}	
+	option = { # Next page
+		name = DWOptionsNextPage
+		character_event = { id = DWOptions.3 }
+	}
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.1 }
+	}	
+}
+
+character_event = { # Content Hub 2
+	id = DWOptions.3
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFarEastOn
+			has_global_flag = DWTWClassicOn
+		}
+		text = DWOptions3OnOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFarEastOn
+			has_global_flag = DWTWClassicOff
+		}
+		text = DWOptions3OnOff
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFarEastOff
+			has_global_flag = DWTWClassicOn
+		}
+		text = DWOptions3OffOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFarEastOff
+			has_global_flag = DWTWClassicOff
+		}
+		text = DWOptions3OffOff
+	}	
+	option = { # Turn off Far East content
+		name = DWOptions3A
+		trigger = {
+			has_global_flag = DWTWFarEastOn
+		}
+		clr_global_flag = DWTWFarEastOn
+		set_global_flag = DWTWFarEastOff
+		character_event = { id = DWOptions.3 }
+	}
+	option = { # Turn on Far East content
+		name = DWOptions3B
+		trigger = {
+			NOT = { has_global_flag = DWTWFarEastOn }
+		}
+		clr_global_flag = DWTWFarEastOff
+		set_global_flag = DWTWFarEastOn
+		character_event = { id = DWOptions.3 }
+	}
+	option = { # Turn off Classic Monsters content
+		name = DWOptions3C
+		trigger = {
+			has_global_flag = DWTWClassicOn
+		}
+		clr_global_flag = DWTWClassicOn
+		set_global_flag = DWTWClassicOff
+		character_event = { id = DWOptions.3 }
+	}
+	option = { # Turn on Classic Monsters content
+		name = DWOptions3D
+		trigger = {
+			NOT = { has_global_flag = DWTWClassicOn }
+		}
+		clr_global_flag = DWTWClassicOff
+		set_global_flag = DWTWClassicOn
+		character_event = { id = DWOptions.3 }
+	}
+	option = { # Next page
+		name = DWOptionsNextPage
+		character_event = { id = DWOptions.4 }
+	}
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.1 }
+	}	
+}
+
+character_event = { # Content Hub 3
+	id = DWOptions.4
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = DWTWTentacleOn
+			has_global_flag = DWTWGenderBendOn
+		}
+		text = DWOptions4OnOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWTentacleOn
+			has_global_flag = DWTWGenderBendOff
+		}
+		text = DWOptions4OnOff
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWTentacleOff
+			has_global_flag = DWTWGenderBendOn
+		}
+		text = DWOptions4OffOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWTentacleOff
+			has_global_flag = DWTWGenderBendOff
+		}
+		text = DWOptions4OffOff
+	}	
+	option = { # Turn off Seed of Chaos content
+		name = DWOptions4A
+		trigger = {
+			has_global_flag = DWTWTentacleOn
+		}
+		clr_global_flag = DWTWTentacleOn
+		set_global_flag = DWTWTentacleOff
+		character_event = { id = DWOptions.4 }
+	}
+	option = { # Turn on Seed of Chaos content
+		name = DWOptions4B
+		trigger = {
+			NOT = { has_global_flag = DWTWTentacleOn }
+		}
+		clr_global_flag = DWTWTentacleOff
+		set_global_flag = DWTWTentacleOn
+		character_event = { id = DWOptions.4 }
+	}
+	option = { # Turn off Gender Bend content
+		name = DWOptions4C
+		trigger = {
+			has_global_flag = DWTWGenderBendOn
+		}
+		clr_global_flag = DWTWGenderBendOn
+		set_global_flag = DWTWGenderBendOff
+		character_event = { id = DWOptions.4 }
+	}
+	option = { # Turn on Gender Bend content
+		name = DWOptions4D
+		trigger = {
+			NOT = { has_global_flag = DWTWGenderBendOn }
+		}
+		clr_global_flag = DWTWGenderBendOff
+		set_global_flag = DWTWGenderBendOn
+		character_event = { id = DWOptions.4 }
+	}
+	option = { # Next page
+		name = DWOptionsNextPage
+		character_event = { id = DWOptions.5 }
+	}
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.1 }
+	}	
+}
+
+character_event = { # Content Hub 3
+	id = DWOptions.5
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = DWTWBeastialityOn
+			has_global_flag = DWFGhostOff
+		}
+		text = DWOptions5OnOff
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWBeastialityOff
+			has_global_flag = DWFGhostOff
+		}
+		text = DWOptions5OffOff
+	}	
+	desc = {
+		trigger = {
+			has_global_flag = DWTWBeastialityOff
+			has_global_flag = DWFGhostOn
+		}
+		text = DWOptions5OffOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWBeastialityOn
+			has_global_flag = DWFGhostOn
+		}
+		text = DWOptions5OnOn
+	}	
+	option = { # Turn off beastiality content
+		name = DWOptions5A
+		trigger = {
+			has_global_flag = DWTWBeastialityOn
+		}
+		clr_global_flag = DWTWBeastialityOn
+		set_global_flag = DWTWBeastialityOff
+		character_event = { id = DWOptions.5 }
+	}
+	option = { # Turn on beastiality content
+		name = DWOptions5B
+		trigger = {
+			has_global_flag = DWTWBeastialityOff
+		}
+		clr_global_flag = DWTWBeastialityOff
+		set_global_flag = DWTWBeastialityOn
+		character_event = { id = DWOptions.5 }
+	}
+	option = { # Turn off ghost content
+		name = DWOptions5C
+		trigger = {
+			has_global_flag = DWFGhostOn
+		}
+		clr_global_flag = DWFGhostOn
+		set_global_flag = DWFGhostOff
+		character_event = { id = DWOptions.5 }
+	}
+	option = { # Turn on ghost content
+		name = DWOptions5D
+		trigger = {
+			has_global_flag = DWFGhostOff
+		}
+		clr_global_flag = DWFGhostOff
+		set_global_flag = DWFGhostOn
+		character_event = { id = DWOptions.5 }
+	}
+	option = { # First page
+		name = DWOptionsFirstPage
+		character_event = { id = DWOptions.2 }
+	}
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.1 }
+	}	
+}
+
+character_event = { # DWR extra options hub 1
+	id = DWOptions.7
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOn
+			has_global_flag = DWTWPopCultureOn
+			has_global_flag = DWTWVampireAttacksOn
+		}
+		text = DWOptions7OnOnOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOn
+			has_global_flag = DWTWPopCultureOn
+			has_global_flag = DWTWVampireAttacksOff
+		}
+		text = DWOptions7OnOnOff
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOn
+			has_global_flag = DWTWPopCultureOff
+			has_global_flag = DWTWVampireAttacksOn
+		}
+		text = DWOptions7OnOffOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOff
+			has_global_flag = DWTWPopCultureOn
+			has_global_flag = DWTWVampireAttacksOn
+		}
+		text = DWOptions7OffOnOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOff
+			has_global_flag = DWTWPopCultureOff
+			has_global_flag = DWTWVampireAttacksOn
+		}
+		text = DWOptions7OffOffOn
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOn
+			has_global_flag = DWTWPopCultureOff
+			has_global_flag = DWTWVampireAttacksOff
+		}
+		text = DWOptions7OnOffOff
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOff
+			has_global_flag = DWTWPopCultureOn
+			has_global_flag = DWTWVampireAttacksOff
+		}
+		text = DWOptions7OffOnOff
+	}	
+	desc = {
+		trigger = {
+			has_global_flag = DWTWFairyTaleOff
+			has_global_flag = DWTWPopCultureOff
+			has_global_flag = DWTWVampireAttacksOff
+		}
+		text = DWOptions7OffOffOff
+	}		
+	option = { # Turn off Fairy Tale content
+		name = DWOptions7A
+		trigger = {
+			has_global_flag = DWTWFairyTaleOn
+		}
+		clr_global_flag = DWTWFairyTaleOn
+		set_global_flag = DWTWFairyTaleOff
+		character_event = { id = DWOptions.7 }
+	}
+	option = { # Turn on Fairy Tale content
+		name = DWOptions7B
+		trigger = {
+			NOT = { has_global_flag = DWTWFairyTaleOn }
+		}
+		clr_global_flag = DWTWFairyTaleOff
+		set_global_flag = DWTWFairyTaleOn
+		character_event = { id = DWOptions.7 }
+	}
+	option = { # Turn of pop culture characters
+		name = DWOptions7C
+		trigger = {
+			has_global_flag = DWTWPopCultureOn
+		}
+		clr_global_flag = DWTWPopCultureOn
+		set_global_flag = DWTWPopCultureOff
+		character_event = { id = DWOptions.7 }
+	}
+	option = { # Turn on pop culture characters
+		name = DWOptions7D
+		trigger = {
+			NOT = { has_global_flag = DWTWPopCultureOn }
+		}
+		clr_global_flag = DWTWPopCultureOff
+		set_global_flag = DWTWPopCultureOn
+		character_event = { id = DWOptions.7 }
+	}
+	option = { # Turn off random vampire attacks
+		name = DWOptions7E
+		trigger = {
+			has_global_flag = DWTWVampireAttacksOn
+		}
+		clr_global_flag = DWTWVampireAttacksOn
+		set_global_flag = DWTWVampireAttacksOff
+		character_event = { id = DWOptions.7 }
+	}
+	option = { # Turn on random vampire attacks
+		name = DWOptions7F
+		trigger = {
+			NOT = { has_global_flag = DWTWVampireAttacksOn }
+		}
+		clr_global_flag = DWTWVampireAttacksOff
+		set_global_flag = DWTWVampireAttacksOn
+		character_event = { id = DWOptions.7 }
+	}
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.1 }
+	}	
+}
+
+character_event = { # DWR dependencies hub 1
+	id = DWOptions.8
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = DWOptions8
+	
+	option = { # DWSE Lizard content
+		name = DWOptions8A
+		character_event = { id = DWOptions.9 }
+	}
+	option = { # DWSE Dragon content
+		name = DWOptions8B
+		character_event = { id = DWOptions.10 }
+	}
+	option = { # Other mod options
+		name = DWOptions8C
+		trigger = {
+			has_dwe_started = yes
+		}
+
+		character_event = { id = DWOptions.11 }
+	}
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.1 }
+	}	
+}
+
+character_event = { # DWSE Reptillian Content
+	id = DWOptions.9
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = DWTWDWSELizardOn
+		}
+		text = DWOptions9On
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWDWSELizardMarriage
+		}
+		text = DWOptions9Marriage
+	}	
+	desc = {
+		trigger = {
+			has_global_flag = DWTWDWSELizardOff
+		}
+		text = DWOptions9Off
+	}	
+	option = { # DWSE Lizard content marriage only
+		name = DWOptions9A
+		trigger = {
+			NOT = { has_global_flag = DWTWDWSELizardMarriage }
+		}
+		clr_global_flag = DWTWDWSELizardOn
+		clr_global_flag = DWTWDWSELizardOff
+		set_global_flag = DWTWDWSELizardMarriage
+		character_event = { id = DWOptions.9 }
+	}
+	option = { # DWSE Lizard content off
+		name = DWOptions9B
+		trigger = {
+			NOT = { has_global_flag = DWTWDWSELizardOff }
+		}
+		clr_global_flag = DWTWDWSELizardMarriage
+		clr_global_flag = DWTWDWSELizardOn
+		set_global_flag = DWTWDWSELizardOff
+		character_event = { id = DWOptions.9 }
+	}
+	option = { # DWSE Lizard content on
+		name = DWOptions9C
+		trigger = {
+			NOT = { has_global_flag = DWTWDWSELizardOn }
+		}
+		clr_global_flag = DWTWDWSELizardOff
+		clr_global_flag = DWTWDWSELizardMarriage
+		set_global_flag = DWTWDWSELizardOn
+		character_event = { id = DWOptions.9 }
+	}	
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.8 }
+	}	
+}
+character_event = { # DWSE Dragon Content
+	id = DWOptions.10
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = DWTWDWSEDragonOn
+		}
+		text = DWOptions10On
+	}
+	desc = {
+		trigger = {
+			has_global_flag = DWTWDWSEDragonOff
+		}
+		text = DWOptions10Off
+	}	
+	desc = {
+		trigger = {
+			has_global_flag = DWTWDWSEDragonPlayerOnly
+		}
+		text = DWOptions10PlayerOnly
+	}	
+	option = { # DWSE Dragon Player Only
+		name = DWOptions10A
+		trigger = {
+			NOT = { has_global_flag = DWTWDWSEDragonPlayerOnly }
+		}
+		clr_global_flag = DWTWDWSEDragonOn
+		clr_global_flag = DWTWDWSEDragonOff
+		set_global_flag = DWTWDWSEDragonPlayerOnly
+		character_event = { id = DWOptions.10 }
+	}
+	option = { # DWSE Dragon Off
+		name = DWOptions10B
+		trigger = {
+			NOT = { has_global_flag = DWTWDWSEDragonOff }
+		}
+		clr_global_flag = DWTWDWSEDragonPlayerOnly
+		clr_global_flag = DWTWDWSEDragonOn
+		set_global_flag = DWTWDWSEDragonOff
+		character_event = { id = DWOptions.10 }
+	}
+	option = { # DWSE Dragon On
+		name = DWOptions10C
+		trigger = {
+			NOT = { has_global_flag = DWTWDWSEDragonOn }
+		}
+		clr_global_flag = DWTWDWSEDragonOff
+		clr_global_flag = DWTWDWSEDragonPlayerOnly
+		set_global_flag = DWTWDWSEDragonOn
+		character_event = { id = DWOptions.10 }
+	}	
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.8 }
+	}	
+}
+
+character_event = { # DWE Content
+	id = DWOptions.11
+	is_triggered_only = yes
+	picture = lilith_lonely
+	sound = "generic_click_03"
+	desc = {
+		trigger = {
+			has_global_flag = rape_content_yes
+		}
+		text = DWOptions11On
+	}	
+	desc = {
+		trigger = {
+			has_global_flag = rape_content_no
+		}
+		text = DWOptions11Off
+	}	
+	option = { # DWE Rape Off
+		name = DWOptions11A
+		trigger = {
+			has_global_flag = rape_content_yes
+		}
+		clr_global_flag = rape_content_yes
+		set_global_flag = rape_content_no
+		character_event = { id = DWOptions.11 }
+	}
+	option = { # DWE Rape On
+		name = DWOptions11B
+		trigger = {
+			 has_global_flag = rape_content_no
+		}
+		clr_global_flag = rape_content_no
+		set_global_flag = rape_content_yes
+		character_event = { id = DWOptions.11 }
+	}	
+	option = { # Go back
+		name = DWOptionsGoBack
+		character_event = { id = DWOptions.8 }
+	}	
+}
+
+character_event = { # on_startup flag setting
+	id = DWOptions.1000
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		NOT = { has_global_flag = dark_world_flags_set }
+	}
+	immediate = {
+		set_global_flag = DWTWHHOn
+		set_global_flag = DWTWFaeOn
+		set_global_flag = DWTWFarEastOn
+		set_global_flag = DWTWClassicOn
+		set_global_flag = DWTWTentacleOn
+		set_global_flag = DWTWGenderBendOn
+		set_global_flag = DWTWBeastialityOn
+		set_global_flag = DWTWDWSELizardOn
+		set_global_flag = DWTWDWSEDragonOn
+		set_global_flag = DWTWFairyTaleOn
+		set_global_flag = DWTWPopCultureOn
+		set_global_flag = DWTWVampireAttacksOn
+		set_global_flag = DWFGhostOn
+		set_global_flag = rape_content_yes # DWE flag
+		set_global_flag = dark_world_flags_set # All flags set
+	}
+}

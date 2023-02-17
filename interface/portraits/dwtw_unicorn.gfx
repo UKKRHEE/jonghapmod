@@ -1,0 +1,63 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_dwtw_unicorn"
+		texturefile = "gfx/static_portraits/unicorn_portrait.tga"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+    portraitType = {
+        name = "DWTW_PORTRAIT_static_unicorn"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				portrait_has_trait = unicorn
+	 		}
+        }
+
+        layer = {
+			"GFX_empty:p0"
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_dwtw_unicorn:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+				0  = { always = yes }
+            }
+			2 = {
+				0 = { always = yes }
+			}
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = unicorn }
+			}
+		}
+	}
+}

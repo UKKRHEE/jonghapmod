@@ -1,0 +1,366 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Character Modifiers
+
+# ICONS:	18캐릭	37감옥	39하트	41해골	59고기	69침대
+#
+# Good 			<=> 		Bad
+#
+#  1 - Martial 				- 19
+#  2 - Learning 			- 20
+#  3 - Diplomacy 			- 21
+#  4 - Stewardship 			- 22
+#  5 - Intrigue 			- 23
+#  6 - Money 				- 24
+#  7 - Prestige 			- 25
+#  8 - Piety 				- 26
+#  9 - Titles 				- 27
+# 10 - Council 				- 28 
+# 11 - Laws 				- 29
+# 12 - Tech 				- 30 
+# 13 - Military 			- 31
+# 14 - Plots 				- 32
+# 15 - Messages 			- 33
+# 16 - Diplomatic actions 	- 34
+# 17 - Church 				- 35
+# 18 - Characters 			- 36
+# 37 - Prison 				- 38
+# 39 - Love 				- 40
+# 41 - Death 				- 42
+# 43 - Indian religion 		- 44
+# 45 - Dog					- 65
+# 46 - Cat					- 66
+# 47 - Owl					- 67
+# 48 - Pagan religion       - 49
+# 50 - Staff of Asclepius   - 51
+# 52 - Mystic               - 53
+# 54 - Bonesaw              - 55
+# 56 - Horseshoe            - 57
+# 58 - Parrot				- 68
+# 59 - Ham					- 60
+# 61 - Anchor				- 62
+# 63 - Jewish religion		- 64
+# 69 - Bed					- 70
+# 71 - Wolf					- 72
+# 73 - Raven				- 74
+# 75 - Demon horns			- 76
+# 77 - Trident				- 78
+# 79 - Stars				- 80
+# 81 - Eye					- 82
+# 83 - Test-tubes			- 84
+# 85 - Science flask		- 86
+# 87 - Flower				- 88
+# 89 - Rats		 			- 90
+# 91 - Otter				- 92
+# 93 - Hedgehog				- 94
+
+#캐릭터 모디파이어는 사망 또는 기간 만료시 소멸하므로 플래그와 달리 뒷정리를 빠뜨리더라도 수습이 쉽다.
+#사망한 캐릭터들에게 변수와 플래그가 남아서 세이브파일을 늘리는 일도 없을 것이라고 생각됨.
+#스택을 이용하면 변수...에 비하면 무리지만 응용 가능성도 있지 않을까.
+
+#AMD_CM_**** : AMD Character Modifiers. 모디파이어는 소문자로 이름을 짓는다. 플래그나 변수는 대문자로 한다.
+
+
+#	CMF - Character Modifier as Flag. 플래그처럼 사용하고 있는 모디파이어들.
+AMD_CMF_v_roll = {	icon = 39	}
+AMD_CMF_b_roll = {	icon = 39	}	
+AMD_CMF_first_blood = {	icon = 39	fertility = 0.05	}
+AMD_CMF_party_invited = {	icon = 39	}	#멀티플레이 레이드 참가 초대장
+AMD_CMF_vip = {	icon = 18	fertility = 0.05	sex_appeal_opinion = 5	}	#플레이어 캐릭터가 아니라도 각종 경험 변수를 기록합니다.
+AMD_CMF_cuckoo_child = {	icon = 36	}	#탄생의 비밀
+
+AMD_CMF_FC_UNKNOWN = {	icon = 39	}
+AMD_CMF_FC_RAPER = {	icon = 39	}
+AMD_CMF_FC_RAPED = {	icon = 39	}
+AMD_CMF_FC_BUY = {	icon = 39	}
+AMD_CMF_FC_SELL = {	icon = 39	}
+AMD_CMF_FC_HETERO = {	icon = 39	}
+AMD_CMF_FC_HOMO = {	icon = 39	}
+AMD_CMF_FC_ORGY = {	icon = 39	}
+AMD_CMF_FC_HUMAN = {	icon = 39	}
+AMD_CMF_FC_HORSE = {	icon = 39	}
+AMD_CMF_FC_BEAR = {	icon = 39	}
+AMD_CMF_FC_CAT = {	icon = 39	}
+
+AMD_CM_sex_study = {	icon = 2	learning = 1	fertility = 0.05	monthly_character_wealth = -0.10	}	#섹터디 개시했습니다.
+AMD_CM_xp_skill = {		icon = 16	fertility = 0.01	health = 0.05	}	#스킬 레벨업을 위한 경험. 중첩.
+
+AMD_CM_xp_foreplay = {	icon = 16	}	#비삽입행위 경험
+AMD_CM_xp_realplay = {	icon = 16	}	#전방삽입 경험
+AMD_CM_xp_analplay = {	icon = 16	}	#후방삽입 경험
+
+AMD_CM_cooldown = {		icon = 16	health = 0.05	}	#	AMD 개인 쿨다운 타이머. 이 모디파이어가 있는 캐릭터는 AMD 모드 행위 대상에서 제외됨.
+AMD_CM_pregnant = {	icon = 69	health = 0.50	fertility = -2.00	}	#	AMD 모드에 의한 임신을 표시하는 플래그. 약 11개월 정도의 임신 쿨다운 효과.
+
+AMD_CM_first_happy = {			#처음 : 만족
+	icon = 39
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	fertility = 0.10
+	health = 0.10
+	monthly_character_prestige = 0.10
+}
+AMD_CM_first_common = {		#처음 : 보통
+	icon = 39
+	fertility = 0.05
+	health = 0.05
+}
+AMD_CM_first_bad = {	#처음 : 실망
+	icon = 40
+	fertility = -0.10
+}
+AMD_CM_first_raped = {		#처음 : 강간당함
+	icon = 40
+	diplomacy = -5
+	martial = -5
+	stewardship = -5
+	intrigue = -5
+	learning = -5
+	fertility = -0.5
+	monthly_character_prestige = -0.5
+}
+
+AMD_CM_after_good_norm = {	#만족	일반	연인의 위안 (lover's comfort)
+	icon = 39
+	health = 0.05
+	fertility = 0.05
+	sex_appeal_opinion = 5
+}
+AMD_CM_after_good_gay = {	#만족	게이	석양의 검투사 (Gladiators of sunset)
+	icon = 39
+	health = 0.1
+	combat_rating = 1
+}
+AMD_CM_after_good_les = {	#만족	레즈	백합의 향기 (scent of lily)
+	icon = 39
+	health = 0.1
+	general_opinion = 5
+}
+AMD_CM_after_good_raper = {	#만족	강간	약탈자의 즐거움 (Looter's booty)
+	icon = 39
+	health = 0.1
+	fertility = 0.1
+	monthly_character_piety = -0.1
+}
+AMD_CM_after_good_raped = {	#만족	피간	?, 죽여라 (Gulty Pleasure)
+	icon = 39
+	health = 0.10
+	fertility = -0.10
+	monthly_character_prestige = -0.1
+}
+AMD_CM_after_good_trade = {	#만족	거래	공정거래 (Fair trade)
+	icon = 39
+	stewardship = 1
+	health = 0.05
+	fertility = 0.05
+}
+AMD_CM_after_good_human = {	#만족	인간	인류애 (Love for mankind)
+	icon = 39
+	diplomacy = 5
+	martial = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	health = 5.0
+	monthly_character_prestige = 5.0
+}
+AMD_CM_after_good_horse = {	#만족	마간	러브 라이드 (Love ride)
+	icon = 56
+	martial = 2
+	health = 1.0
+}
+AMD_CM_after_good_bear = {	#만족	웅간	베어 허그 (Bear hug)
+	icon = 39
+	combat_rating = 2
+	health = 1.0
+}
+AMD_CM_after_good_cat = {	#만족	묘간	캣 홀릭 (Cat holic)
+	icon = 46
+	intrigue = 2
+	health = 1.0
+}
+
+AMD_CM_after_good_mp_guys = {	#만족	mp	남자들	고추밭의 파수꾼 (Banana Republic)
+	icon = 39
+	diplomacy = 2
+	martial = 2
+	stewardship = 2
+	intrigue = 2
+	learning = 2
+	health = 0.2
+	fertility = 0.2
+	sex_appeal_opinion = 5
+	monthly_character_prestige = 2.0
+}
+AMD_CM_after_good_mp_gals = {	#만족	mp	여자들	하렘 셰이크 (Harem Sheike)
+	icon = 39
+	diplomacy = 2
+	martial = 2
+	stewardship = 2
+	intrigue = 2
+	learning = 2
+	health = 0.2
+	fertility = 0.2
+	sex_appeal_opinion = 5
+	monthly_character_prestige = 2.0
+}
+
+AMD_CM_after_raped = {		#강간 트라우마
+	icon = 40
+	diplomacy = -3
+	martial = -3
+	stewardship = -3
+	intrigue = -3
+	learning = -3
+	combat_rating = -3
+	fertility = -0.3
+}
+AMD_CM_after_tired = {		#성행위 후 피로함 : 실패율 증가
+	icon = 40
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	combat_rating = -1
+	fertility = -0.1
+}
+AMD_CM_after_angry = {		#분노	너무 불쾌하여 화가 남
+	icon = 40
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	combat_rating = 1
+	fertility = -0.1
+}
+AMD_CM_after_unsat = {		#불만	다음 행위시 성공률 증가
+	icon = 40
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	fertility = 0.1
+}
+
+
+
+
+AMD_CM_drug_aphrodisiac = {	icon = 85	health = 0.05	fertility = 0.50	sex_appeal_opinion = 10	}	#미약
+AMD_CM_drug_contraceptive = {	icon = 85	health = 0.05	fertility = -20	}	#피임약
+AMD_CM_drug_fertilizer = {	icon = 85	health = 0.05	fertility = 0.25	}	#임신약
+AMD_CM_drug_enlarger = {	icon = 85	health = 0.05	fertility = 0.05	sex_appeal_opinion = 1	}	#확대약
+
+
+AMD_CM_lovers_gift_1 = {	icon = 39	diplomacy = 1	}	#	연인의 선물 : 옷
+AMD_CM_lovers_gift_2 = {	icon = 39	sex_appeal_opinion = 5	}	#	연인의 선물 : 장신구
+AMD_CM_lovers_gift_3 = {	icon = 39	martial = 1	}	#	연인의 선물 : 무기
+AMD_CM_lovers_gift_4 = {	icon = 39	monthly_character_prestige = 0.1	}	#	연인의 선물 : 그림
+AMD_CM_lovers_gift_5 = {	icon = 39	monthly_character_prestige = 0.1	}	#	연인의 선물 : 조각상
+AMD_CM_lovers_gift_6 = {	icon = 39	learning = 1	}	#	연인의 선물 : 서적
+
+
+AMD_CM_alchemy_search = {	icon = 18	monthly_character_wealth = -1.0	}	#연금술사 수색중
+
+AMD_CM_alchemy_synth = {	icon = 79	levy_reinforce_rate = 0.01	disease_defence = 0.01	health = 0.1	}
+AMD_CM_alchemy_xeno = {	icon = 79	levy_reinforce_rate = -0.01	disease_defence = -0.01	}
+AMD_CM_alchemy_meruru = {	icon = 85	monthly_character_wealth = -10.0	}
+AMD_CM_alchemy_darkness = {	icon = 52	monthly_character_wealth = -2.0	monthly_character_piety = -2.0	}
+AMD_CM_alchemy_shaman = {	icon = 52	monthly_character_wealth = -1.0	monthly_character_piety = -1.0	}
+AMD_CM_alchemy_hermetic = {	icon = 50	monthly_character_wealth = -2.0	learning = 2	}
+AMD_CM_alchemy_medical = {	icon = 50	monthly_character_wealth = -1.0	learning = 1	}
+
+AMD_CM_alchemy_xeno_work = {	icon = 79	levy_reinforce_rate = -0.05	local_tax_modifier = -0.05	local_revolt_risk = -0.01	}
+
+
+#노예조교 이벤트에 사용. 중첩. 건강에 페널티를 줌으로서, 함락시 사망 가능성이 높아짐...?
+
+AMD_CM_slave_lust = {	icon = 37	health = -0.25	}	#욕망	에로한 행위로 상승
+AMD_CM_slave_fear = {	icon = 37	health = -0.25	}	#공포	가혹한 행위로 상승
+AMD_CM_slave_obey = {	icon = 37	health = -0.50	}	#복종	모든 행위시 상승
+AMD_CM_slave_hate = {	icon = 38	health = -0.50	}	#반발	초기 저항 또는 커맨드 실패시
+
+
+AMD_CM_prostitute_suspicious = {	#수상함
+	icon = 40
+	diplomacy = -1
+	spouse_opinion = -5
+	church_opinion = -5
+	monthly_character_prestige = -0.5
+	monthly_character_piety = -0.5
+}
+AMD_CM_prostitute_unknown = {	#안 알려짐
+	icon = 40
+	diplomacy = -3
+	general_opinion = -5
+	spouse_opinion = -10
+	church_opinion = -10
+	monthly_character_prestige = -1.0
+	monthly_character_piety = -1.0
+	monthly_character_wealth = 0.1
+}
+AMD_CM_prostitute_known = {	#알려짐
+	icon = 40
+	diplomacy = -5
+	general_opinion = -10
+	spouse_opinion = -50
+	church_opinion = -50
+	monthly_character_prestige = -3.0
+	monthly_character_piety = -3.0
+	monthly_character_wealth = 0.5
+}
+AMD_CM_prostitute_renown = {	#유명함
+	icon = 40
+	diplomacy = -10
+	general_opinion = -25
+	spouse_opinion = -50
+	church_opinion = -100
+	monthly_character_prestige = -5.0
+	monthly_character_piety = -5.0
+	monthly_character_wealth = 1.0
+}
+AMD_CM_prostitute_retired = {	#은퇴함
+	icon = 40
+	diplomacy = -1
+	general_opinion = -5
+	spouse_opinion = -10
+	church_opinion = -10
+	monthly_character_prestige = -1.0
+	monthly_character_piety = -1.0
+}
+
+
+AMD_CM_nymphomaniac = {		#쾌락중독
+	icon = 40
+	diplomacy = -5
+	martial = -5
+	stewardship = -5
+	intrigue = -5
+	learning = -5
+	monthly_character_piety = -5.0
+	monthly_character_prestige = -5.0
+	fertility = 0.5
+	health = -0.5
+	church_opinion = -5
+}
+AMD_CM_lustful_wasted = {		#음란마귀
+	icon = 40
+	diplomacy = -10
+	martial = -10
+	stewardship = -10
+	intrigue = -10
+	learning = -10
+	monthly_character_piety = -10
+	monthly_character_prestige = -10
+	fertility = 1.0
+	health = -1.0
+}
+
+
+#	이하 구버전 잔재
+AMD_CM_lifemaker = {		icon = 70	fertility = -0.15	}	#	동성임신 가능
+#AMD_CM_manpower_consumed = {	icon = 31	max_manpower_mult = -0.2	levy_size = -0.2	levy_reinforce_rate = -0.2	}
+

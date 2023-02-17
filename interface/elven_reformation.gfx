@@ -1,0 +1,14 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_religion_feature_elven"
+		texturefile = "gfx/interface/reformation/religion_feature_Elven.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_religion_doctrine_wild_hunt"
+		texturefile = "gfx/interface/reformation/religion_doctrine_wild_hunt.dds"
+	}
+	
+	
+}

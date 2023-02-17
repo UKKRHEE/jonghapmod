@@ -1,0 +1,75 @@
+# Crown level (de jure) laws
+# Laws ending with 0 will be default laws at game start
+law_groups = {
+	dwse_crown_expansion = {
+		law_type = realm
+		allowed_for_councillors = yes
+	}
+}
+
+de_jure_laws = {
+
+	# Not Active
+	dwse_crown_expansion_0 = {
+		show_as_title = yes
+		group = dwse_crown_expansion 
+		default = yes
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+			}
+		}
+		allow = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = dwse_crown_expansion_0
+				revoke_law = dwse_crown_expansion_1
+			}
+		}
+	}
+	
+	# Active
+	dwse_crown_expansion_1 = {
+		show_as_title = yes
+		global_revolt_risk = -0.05 # A 2% increase in the odds of a global revolt from such an unpopular law
+		city_opinion = 5
+		feudal_opinion = -5 
+		temple_opinion = 5
+		group = dwse_crown_expansion 
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0.002 # Rare to do this
+			}
+			modifier = {
+				factor = 0 # 
+				OR = {
+					holder_scope = {
+						NOT = { trait = paranoid }
+					}
+					NOT = { has_law = dwse_crown_expansion_0 }
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = dwse_crown_expansion_0
+				revoke_law = dwse_crown_expansion_1
+			}
+			set_the_kings_peace = no
+			set_the_kings_full_peace = yes
+		}
+	}	
+}

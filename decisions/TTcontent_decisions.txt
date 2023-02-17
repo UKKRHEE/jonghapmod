@@ -1,0 +1,101 @@
+###################################################################################
+### Contains DECISIONS that are intended for use in the Dark World Content Pack ###
+###################################################################################
+###  SEARCH ###FIXME FOR WORK TO DO  ##############################################
+######################## DECISIONS ############################################
+decisions = {
+############### Recruit a the RED HAND #####################
+
+	mercom_recruit = {
+		is_high_prio = yes # Will show an alert once decision is enabled
+		potential = {
+			ai = no #Only the player should see this
+			OR = {
+				tier = duke
+				tier = king
+				tier = emperor
+				}
+			NOT = {  # Should only be visible if it hasn't been used yet.
+				has_global_flag = mercom_recruited
+				has_global_flag = mercom_denied
+				}
+			}
+		allow = {
+			always = yes # Decision will be available until no longer relevant
+		}
+		effect = {
+			character_event = { id = mercom.2 }  
+		}
+		revoke_allowed = {
+			always = no # Generic setting
+		}
+		ai_will_do = {
+			factor = 0 # Bad AI, you no choosey this!!
+		}
+	}
+	
+###################  MERCOM SLUT PILGRIM!! #######################
+
+	mercom_pilgrimage = {      # Player goes to the redhand to serve as a Slut
+		only_playable = yes
+		potential = {
+			ai = no # Only the player
+			is_playable = yes
+			has_global_flag = mercom_slutoffer
+			NOT = {  # Should only be visible if the REDHAND wasn't recruited.
+				has_global_flag = mercom_denied
+				}
+		}
+		allow = {
+			war = no
+			in_command = no
+			any_demesne_title = {
+				NOT = { higher_tier_than = count }
+				is_occupied = no
+			}
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			age = 16
+			custom_tooltip = {
+				text = health_travel_condition
+				hidden_tooltip = {
+					NOT = {	trait = pregnant }
+					NOT = {	trait = incapable }
+					NOT = {	trait = blinded }
+					NOT = {	trait = has_tuberculosis }
+					NOT = {	trait = has_typhoid_fever }
+					NOT = {	trait = has_typhus }
+					NOT = {	trait = has_bubonic_plague }
+					NOT = {	trait = has_measles }
+					NOT = {	trait = has_small_pox }
+					NOT = {	trait = has_aztec_disease }
+				}
+			}
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			set_character_flag = do_not_disturb
+			add_trait = slutpilgrim
+			if = { limit = { NOT = { has_character_flag = slutpilgrim1 } }
+					narrative_event = { id = redhand.2000 }
+			}
+			if = { limit = { has_character_flag = slutpilgrim1 } 
+					narrative_event = { id = redhand.2100 }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0 # Bad AI, you no choosey this!!
+		}
+	}
+######################## END DECISIONS ########################################
+}
+
+
+

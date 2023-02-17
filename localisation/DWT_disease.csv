@@ -1,0 +1,32 @@
+lilith_plague;Lilith Plague;;;;;;;;;;;;;x
+lilith_plague_desc;This character is suffering from the Lilith Plague and is unable to stop engaging in sexual acts. A very exhausting condition, as this character constantly tries to get off.;;;;;;;;;;;;;x
+lilith_plague_death;went out with a bang during the Lilith Plague.;;;;;;;;;;;;;x
+LILITH_PLAGUE_INFO;The Lilith Plague, also known as the 'Fucking Disease', is spreading like wildfire amongst the populace. The ailment is possibly caused by something on the air.;;;;;;;;;;;;;x
+EVTNAME_DWTFF_4001;The Lilith Plague;;;;;;;;;;;;;x
+EVTDESC_DWTFF_4001;Something very strange is happening in the county of [lilith_plague_outbreak_location.GetName].\n\n It all started with some peasants just staring at each other in amazement. Then they dropped their clothes and started to copulate in public.\n\nSoon there were dozens of them, and now there are hundreds - men, women and young adults alike! Groans of pleasures and joys fill the air all day and all night and the peasants barely have time to eat or sleep. The sexual orgy has gone on for days and people have started to collapse from utter exhaustion.\n\nIt seems as if the uncontrolled urge to mate is spreading at an alarming rate, with groups of copulating people setting off in the direction of other towns, but stopping every few hundred meeters for another fuck on the roadsides and in the fields.;;;;;;;;;;;;;x
+EVTOPTA_DWTFF_4001;This is truly an unprecedented situation!;;;;;;;;;;;;;x
+EVTDESC_DWTFF_4002;After enjoying a hearty meal you look out the window at the mating peasants. Their groands and cries of joy and pleasure is tantalizingly inviting, and you have felt a bit restless as of late...;;;;;;;;;;;;;x
+EVTOPTA_DWTFF_4002;Perhaps I should join in their joyous copulations!;;;;;;;;;;;;;x
+EVTOPTB_DWTFF_4002;No, I should get some rest instead.;;;;;;;;;;;;;x
+join_in_fuck;Join the peasant's mating!\n;;;;;;;;;;;;;x
+refuse_to_join_in_fuck;Get some rest\n;;;;;;;;;;;;;x
+EVTDESC_DWTFF_4003;Right as you are about to leave, your court physician grabs hold of your arm.\n\n[target_physician.GetFirstName] tells you that it is not a good idea to join the orgy, lest you too should collapse from exhaustion!\n\nInstead [target_physician.GetSheHe] recommends that you rest.;;;;;;;;;;;;;x
+EVTOPTA_DWTFF_4003;Oh well, if you say so!;;;;;;;;;;;;;x
+EVTOPTB_DWTFF_4003;No! I need to get laid!;;;;;;;;;;;;;x
+fucking_queen;Fucking Queen;;;;;;;;;;;;;x
+fucking_king;Fucking King;;;;;;;;;;;;;x
+fucking_queen_desc;This character has impressed the peasants with [GetHerHis] unrivaled ability to take cocks and to get people off with unprecedented skills and pleasures.;;;;;;;;;;;;;x
+fucking_king_desc;This character has impressed the peasants with [GetHerHis] unrivaled stammina and ability to get women off with unprecedented pleasures.;;;;;;;;;;;;;x
+EVTDESC_DWTFF_4004;You spend hours fucking with the peasants, and they are clearly impressed!\n\nThey would never have expected their [Root.PrimaryTitle.GetRulerTitle] to join in their sexual debauchery.\n\nLong lines form in front of you as your subjects await their turn for a very personal and very intimate audience with you.\n\nThis is a moment they will remember for decades to come!;;;;;;;;;;;;;x
+EVTOPTA_DWTFF_4004;I have never had this much fun!;;;;;;;;;;;;;x
+cant_stop_fucking;Can't stop fucking!;;;;;;;;;;;;;x
+cant_stop_fucking_desc;This character can't stop fucking [GetHerHis] peasants! Unable to eat or sleep, this character is close to death.;;;;;;;;;;;;;x
+EVTDESCA_DWTFF_4005;While it was pleasant to fuck with the peasants at first, it has quickly become tiring and exhausting.\n\nYou have no desire to stop though, and when your servants plead for you to return back home for dinner you choose to ignore them.\n\nYou simply MUST fuck!;;;;;;;;;;;;;x
+EVTDESCB_DWTFF_4005;You lie down to rest but are unable to fall asleep.\n\nAll you can think of is the ongoing orgy in the streets...\n\nOh, how enjoyable it would be to join them in their orgy!\n\nAfter a while you feel yourself unable to resist the urge and bolt outside to join the peasants in their debauchery, shedding your robe and undergarments as you go.\n\nAs soon as you are outside, you float into the arms of the first peasant that gets your attention and show him what real royal pleasures are.;;;;;;;;;;;;;x
+EVTOPTA_DWTFF_4005;I will fuck forever!;;;;;;;;;;;;;x
+EVTDESC_DWTFF_4006;Months have passed since you first joined the fuck-fest.\n\nThe copulating peasants have dropped like flies around you, from exhaustion, starvation or worn out genitals.\n\nSuddenly your hips stop thrusting and meeting thrusts and the desire to mate leaves you.\n\nFor once you realize how thoroughly soiled you are and you don't even want to start to identify what all those bodily fluids are.\n\nAll you want to do is to go home, bath and sleep for days on end. Preferably alone.;;;;;;;;;x
+EVTOPTA_DWTFF_4006;Finally, Lilith no longer controls my lust!;;;;;;;;;;;;;x
+EVTDESC_DWTFF_4007;It never ceases!\n\nWhere at first you were able to take breaks to eat and sleep, you now cannot do even that!\n\nWhile still coated in the juices from your previous sex partner you already start looking for the next and are more than eager to take or be taken again, again and again.;;;;;;;;;;;;;x
+EVTOPTA_DWTFF_4007;Do not stop me now, I'm nearing another big orgasm!;;;;;;;;;;;;;x
+EVTDESC_DWTFF_4008;After several days of continuous fucking the pain in your abused genitals is becoming unbearable.\n\nSuddenly something gives!\n\nYou fall to the ground clutching your genitals and yell in pain.\n\nIt looks as if your days of unrelented fucking are over.;;;;;;;;;;;;;x
+EVTOPTA_DWTFF_4008;Fuck, fuck, fuck, fuck!!!;;;;;;;;;x

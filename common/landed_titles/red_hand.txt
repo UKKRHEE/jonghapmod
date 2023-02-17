@@ -1,0 +1,16 @@
+c_red_hand = {
+	color={ 180 180 180 }
+	color2={ 255 255 255 }
+	graphical_culture = holygfx
+	religion = catholic
+	culture = norse
+	mercenary = yes
+	dignity = 40
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	landless = yes
+	primary = yes
+	monthly_income = 10
+	strength_growth_per_century = 0.50
+	mercenary_type = red_hand_composition
+}

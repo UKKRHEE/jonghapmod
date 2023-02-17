@@ -1,2 +1,0 @@
-﻿base_desire_reduction_from_sex = -15 # sexual satisfaction is multiplied by this number to get libido reduction (so its always lower)
-

@@ -1,0 +1,116 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+# Tooltips related to Decisions
+dw_visit_recovery;30-day Visit Recovery;;;;;;;;;;;;;x
+# Decisions
+dw_motivate_chancellor_claim;ù¿ä‰ò¼Ì«¸¡¸ æ»İ¡È éŠ«¹²³¡È;;;;;;;;;;;;;x
+dw_motivate_chancellor_claim_desc;¥³İªÈÌùÇ ù¿ä‰ò¼Ì«¸¡¸ îÆĞ¦¸«ÈØëÆĞ ìˆ¬³É²³¡È ùÄ²³Ì åˆ¦¹É«¸ ¥´²´ ¬³É«·Ù ª·İä»İçÅĞëÆĞ å»â«È¡È ùÄ²³Ì ìˆ«·ÌæÆĞëÆĞ ²´ìÁÙ¢È¥³.;;;;;;;;;;;;;x
+dwf_b_resign_title;ï»İ®È¬³çÆĞ ª³«ÈØ²³Ì¥³.;;;;;;;;;;;;;x
+dwf_b_resign_title_desc;²¹Ì¬´ ª³İê»É¬³«¸¡¸ ¥³İªÈÌùÇ ¬ÈùÄçÆĞ ¢·Ø¡¹ìÁÙ¢È¥³.;;;;;;;;;;;;;x
+dwf_b_hire_jester;äÁİ¬·Ì ò¼İ¥´ èˆ¬ÈÙ;;;;;;;;;;;;;x
+dwf_b_hire_jester_desc;¥³İªÈÌëÆÌ äÁİ¬·Ì ò¼İ¥´çÆĞ ùÂÌ²³Ù¢È¥³ åŠ¡³ ¬ÈùÂÌ²³Ğ³ë‰?;;;;;;;;;;;;;x
+dwf_b_go_shopping;ê‰±Èİ²³¦·¡³¡È;;;;;;;;;;;;;x
+dwf_b_go_shopping_desc;ê‰±ÈİëÆĞ ¡³Ğ êŠ «ÈÜåÆÌ ¬È«¹É«È ²³¢³ «Èª³İ «ÈÜäÁÌë‰.;;;;;;;;;;;;;x
+dwf_b_visit_wizard_tower;¨³©·Ùª³ °³ùÂ ©³İèÁÌ;;;;;;;;;;;;;x
+dwf_b_visit_wizard_tower_desc;©È¨ÈĞùÇ «ºêÁĞ«È ¥³İªÈÌëÆĞ ª´çˆëÁÌ ®³ùÂÌëŒçˆ «È•ÆĞ¡·Û«ÈÌ¡³, «³¢È¨¹Ì ¥³İªÈÌ«¸¡¸ è»Ğ¦³ÉëÆĞ ª·Ìª³²³¡¸ ô¿Ğ¡·Û«ÈÌ¡³.;;;;;;;;;;;;;x
+dw_keep_slave;åˆ«ºçˆ ¥¸¦¹ëˆ¡È;;;;;;;;;;;;;x
+dw_keep_slave_desc;åˆ«º ¥¸¦¹ëˆ¡ÈåÆÌ ¡³Øë»É«¸ «ÈÜåÆÌ äŒæÆĞëÆĞ ²´©³İ²³äˆ ¥³İªÈÌ äÁİ¬·ÌùÇ «ÈĞùÂÌëŒçˆ ğˆ²³ØªÈ¯ÈÙ¢È¥³. äŒæÆĞëÆÌ «¹¬·Ì²È ª³İğ‰¡³ éÁá«ÈÌ ®´çˆ åˆ«º«È¨¹, «·Ì¬¸æÆÌ¬È ±³Ì¨´²³ĞêŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;x
+dw_sell_slave;ú¿êŠ ±³Ğ¡È;;;;;;;;;;;;;x
+dw_sell_slave_desc;«ÈĞ¥³Ì åˆ«º«¸ ª³İğ‰¡³ éÁáëŒ¨¹Ì «È¬¸ äŒæÆĞëÆĞ ±³Ğ êŠ «ÈÜªÈÙ¢È¥³. ±³Ì¨´²³åÆÌ åˆ«ºùÇ ¡³®ÈåÆÌ äŒæÆĞ«È ù¼Ìç‰²³Ì ä‰ëÅÉ—ÁÌ¨³Ì «³¢È¦³ ¬³Ø¬´¬·É«ÈÌ ïÆÉª·İæÆĞ«¸ ùÇ²´ ¡¹Ğ¬·İô¿Ù¢È¥³.;;;;;;;;;;;;;x
+dw_brand_slave;éŒ¦´ÌæŒ åˆ«º;;;;;;;;;;;;;x
+dw_brand_slave_desc;åˆ«º«¸¡¸ éŒ¦´Ì¥Èİ ²³Ì¥³åÆÌ ¡·ÛëÆÌ äŒæÆĞ«È ¬·É«·æˆ ²³Ì ©·ØìŠùÇ ñÁÌ¦¹ÌëÆĞ ª·İä»İ¬·ÉëŒçˆ ¨³®¹Ü¥³åÆÌ ¡·Û«È¥³. ¥³İªÈÌùÇ äÁİ¬·Ì«¸ †Š¡³ªÈ¯È¡·¢³ ±³Ì¨´²³Ğ êŠ «ÈÜ¥³åÆÌ ¡·ÛëÆĞ ùÇ¨È²³¥³.;;;;;;;;;;;;;x
+dw_select_slave_training;åˆ«º ñÁÌ¦¹ÌëÆĞ ª·Ì°´É²³Ì¥³.;;;;;;;;;;;;;x
+dw_select_slave_training_desc;åˆ«º«¸¡¸ «·‘·Ì ä‰ëÅÉëÆĞ ªÈ¯ÈĞ¬È ª·Ì°´É²³ĞêŠ «ÈÜåÆÌ «È©¸ÌïŒ¡³ «¹Ğ¦ÈÙ¢È¥³.;;;;;;;;;;;;;x
+dw_enslave_prisoner;ú¿êŠ åˆ«º;;;;;;;;;;;;;x
+dw_enslave_prisoner_desc;¥³İªÈÌùÇ ú¿êŠæÆĞ«¸¡¸ ¬³©ÈçÆĞ ©¸ğÁĞäˆ äŒæÆĞëÆĞ åˆ«ºÿ¼²³åÆÌ ë»Ùª¹Ì«ÈÙ¢È¥³.;;;;;;;;;;;;;x
+dwf_b_visit_brothel;¨´ëÆØäÁĞ ©³İèÁÌ;;;;;;;;;;;;;x
+dwf_b_visit_brothel_desc;'ª³¡È¬ÈÌ¬³É'ëÆĞ æˆù¼ìÁĞ «¹ª·İ –ˆåÆÌ ¢³Øª·İùÇ ª·©ÈêŒçÆĞ ©³ÏëŒª¸ë‰.;;;;;;;;;;;;;x
+dwf_b_work_whore;¨´ëÆØäÁĞ«¸ª· «ÈĞ²³¡È;;;;;;;;;;;;;x
+dwf_b_work_whore_desc;æ»Ìæˆ ©·Ğäˆ ìÆĞ¡·Ù¡¸ «ÈĞæˆ ²³ª¸ë‰. win-win- «È¬È «³Î¢³ë‰.;;;;;;;;;;;;;x
+dw_collect_slave_whore_payment;®³İ¢¹ùÇ êŠ«ÈÙëÆĞ êŠäÆØ²³¡È;;;;;;;;;;;;;x
+dw_collect_slave_whore_payment_desc;¥³İªÈÌùÇ åˆ«º ®³İ¢¹¡³ «ÈĞ²³äˆ ©·Ì æ»ÌëÆĞ êŠäÆØ²³Ğ êŠ «ÈÜêÆÙ¢È¥³. åˆ«ºåÆÌ ¥³İªÈÌùÇ ¬´ª³Ì«È¡È ‘´èÁÌ«¸ ¡´«ÈÌ êˆë‹èÁĞ ‘³ùÄåÆÌ ¡³¬ÈĞêŠ «·ÚêÆÙ¢È¥³. äŒæÆĞ«È «·ÏëÆÌæ»ÌëÆĞ è»İ‘³İ ’´ÛëŒª¸ë‰.;;;;;;;;;;;;;x
+dw_visit_mage_sorcey;êˆçŒªÈù¼ ¨¹Ì¥³Ø²³¡È;;;;;;;;;;;;;x
+dw_visit_mage_sorcey_desc;«ÈĞéŠ ¨³©·Ùª³æÆĞëÆÌ ¬³ªÈÌò¼ ¨¹Ì¥³Ø²³ØëŒçˆ“· ¨¹ß¡³¬È ª·©ÈêŒæÆĞëÆĞ ¬¸ä»İ²³Ù¢È¥³. ¥· ¨³ÎëÆÌ ª·©ÈêŒæÆĞëÆÌ ¥· ¨³ÎëÆÌ «¸¢·¬ÈçÆĞ êˆ©È²³Ù¢È¥³.;;;;;;;;;;;;;x
+dw_spell_frog;¡´äŠ¦Èçˆ ¨³ÌæÆĞ¡È;;;;;;;;;;;;;x
+dw_spell_frog_desc;åŠäÁÌ¡³çÆĞ ¡´äŠ¦Èçˆ ©³•ŠåÆÌ ¡·ÛëÆÌ ¬·ìŠ«ÈÙ¢È¥³. ¡´äŠ¦Èçˆ ©¹Ì²³Ìª³¦³ØëÆÌ «·ÙèŠçÆĞ ®·¦È²³Ğ êŠ «·Úäˆ ª·Ù¬·İ«È «ÈØ¨¹İô¿Ù¢È¥³. –ˆ²³Ì ¬·ìŠ©³ÏëÆÌ ¬³åÆÌ ¡¹Ğñ»Ìæˆ ²³Ğ êŠ «·Úäˆ ª³İê»Éæˆ ©³ÏëÆĞêŠ «·ÚêÆÙ¢È¥³. «ÈÌ¡³Ì«È «³¢È¬³Î«³ë‰!;;;;;;;;;;;;;x
+dw_target_stop_whoring;Stop Whoring;;;;;;;;;;;;;x
+dw_target_stop_whoring_desc;As a ruler you can attempt to talk someone into giving up their whoring ways. It isn't guaranteed to work, as some folks simply become part of that lifestyle. Especially if they've certain traits.;;;;;;;;;;;;;x
+dwf_b_visit_stable;¨³äŠ¡³Ì ©³İèÁÌ;;;;;;;;;;;;;x
+dwf_b_visit_stable_desc;¨³Ğê‰åÆÌ ¨¸ÉªÈîˆ¡³ ©³Ğ¨¹İ²³Ì¡¸ «³¢È¦³Ù¢È¥³ :( ;;;;;;;;;;;;;x
+dw_spend_time_with_hermione;²¸çŒ¨Èë»ÌåŒù¼ ªÈ¡³ÌëÆĞ éˆ¢´Ì¥³.;;;;;;;;;;;;;x
+dw_spend_time_with_hermione_desc;²¸çŒ¨Èë»ÌåŒù¼ ®ÈÌ¨ÈĞ²³Ì ªÈ¡³ÌëÆĞ éˆ¢´Ù¢È¥³. ¢³åÆÌ «È ¡³áëÆÌ ¡Èÿ¿çÆĞ åÆĞ ì»ã«³²³Ù¢È¥³.;;;;;;;;;;;;;x
+dwf_b_visit_arena;«³¦¸¢³çÆĞ ©³İèÁÌ;;;;;;;;;;;;;x
+dwf_b_visit_arena_desc;«ÈÌª³İ¬·É«ÈÌ ¡¹İ¡ÈçÆĞ ò¼Ì¦³Ø²³ª¸ë‰. ëÁÌò¼ ¡ÈêÁĞ èˆæŠ¡³ ±ÈĞë‰²³äˆ èˆæÆÌ¡·ÛëÆĞ «È×«·©·¦ÈåÆÌ ä»Û , ®´Ø±È«·Ì«È °³Ìª´İ²³äˆ ±´¬³¡³ ìÁÉ«·¡³åÆÌ «È ä»ÛëÆĞ ©³İèÁÌ²³ª¸ë‰!;;;;;;;;;;;;;x
+dw_hermione_purity_spell;²¸çŒ¨Èë»ÌåŒùÇ êÁÌ¡¹Ğ²³Ì ìŠèÁÌ;;;;;;;;;;;;;x
+dw_hermione_purity_spell_desc;²¸çŒ¨Èë»ÌåŒåÆÌ è»Éğ‰èÁĞùÇ ëÆØ°³İ²³Øò¼ ü¾¦³ÉìŠùÇ ïÆÉª·İëÆĞ ¬¸¡·²³åÆÌ ©·ÙëÆĞ ©´ùÂÜêÆÙ¢È¥³. è»Éğ‰èÁĞ«È ¨³Ì«µÉ äŒ¦·Ì ïÆÉª·İ«È «·Ú¥³¨¹Ì äŒæÆĞëÆÌ êÁÌ¡¹Ğ ïÆÉª·İëÆĞ «·Ï¡¸ ô¿Ğ¡·Ù¢È¥³. äŒæÆĞ«È «È¨È êÁÌ¡¹Ğ²³¥³¨¹Ì æ»ÉªÈÌìŠùÇ¬³¡³ ô¿Ğ¡·Ù¢È¥³.;;;;;;;;;;;;;x
+dw_hermione_love_potion;²¸çŒ¨Èë»ÌåŒùÇ ª³¦³İùÇ èÁĞ«µÉ;;;;;;;;;;;;;x
+dw_hermione_love_potion_desc;è»Éğ‰èÁĞ«¸¡¸ ª³¦³İùÇ èÁĞ«µÉëÆĞ ¨³ªÈ¡¸ ²³Ù¢È¥³. ªÈĞ±´²³Ğ ¡³åÆİª·æˆ «ÈÜêÆÙ¢È¥³. ¥³İªÈÌùÇ ëÆØèˆêŠ®È¡³ å»âëÆĞêŠç»É ª·İä»İ²³Ğ  ¡³åÆİª·İ«È ¯·¬ÈÙ¢È¥³.;;;;;;;;;;;;;x
+dw_spend_time_with;ªÈ¡³ÌëÆĞ éˆ¢´Ì¥³...;;;;;;;;;;;;;x
+dw_spend_time_with_desc;«¹Ì«ÈÌ, ©´ëŠ¬³ –ˆåÆÌ ®·Ùò¼ ²³Ø¸ ªÈ¡³ÌëÆĞ éˆ¢´Ù¢È¥³. ëˆåÆĞ ¢·ùÇ ª³¦³İò¼ «ÈÌª´İëÆĞ åŠ¦ÈªÈÙªÈëˆ!;;;;;;;;;;;;;x
+dw_correct_dynasty;¬·İ¥³İ²³Ì ª³İê»É¬³;;;;;;;;;;;;;x
+dw_correct_dynasty_desc;ck2ùÇ ¡Èé»Ì¬·É«ÈÌ ª³İê»É¬¸æˆåÆÌ ¬¸²³Ì«È ¢·èŠ ¨³ÎêÆÙ¢È¥³. «¹ª·İ ï»İ®È¬³çˆ“·åÆÌ ïÆÉ²È ¥·ëÁÉ äŒ¦·ãêÆÙ¢È¥³. «È¡·ÛëÆÌ äŒ¦·Ì èÁÌ¬¸æÆĞëÆĞ æˆù¼ìÁĞ¡·Ù¢È¥³.;;;;;;;;;;;;;x
+dw_campaign_style_selection;¯´Ø±¸«ÈÌ êŒ°³«ÈĞ ª·Ì°´É;;;;;;;;;;;;;x
+dw_campaign_style_selection_desc;Choose to start with a special trait or character modifier due to one of the mods you have installed.;;;;;;;;;;;;;x
+dw_immortal_ascension;éÁĞ¨¹ĞùÇ êÆİ®·Ì;;;;;;;;;;;;;x
+dw_immortal_ascension_desc;¯´¦ÈÉ°· «³Ì«¸ «ÈÜåÆÌ éÁĞ¨¹ĞùÇ ²ÈØëÆĞ äŒ è»Ø«³Ì«¸ª· ’´¢´Ù¢È¥³. äŒæÆĞùÇ ëÅÉ®¸åÆÌ ±ÈĞ¨¹Ğ¬³çˆ æ»Ğ«³¡³Ğ¡·Ù¢È¥³.;;;;;;;;;;;;;x
+dw_child_of_lilith_campaign;¥³îŒ æŒ¦ÈØ;;;;;;;;;;;;;x
+dw_child_of_lilith_campaign_desc;¥³İªÈÌùÇ •ÁØ«È «È©·Ì«¸åÆÌ öÂÌ¡³ ¥· ²¹ÌªÈĞ¬·ÉëŒçˆ éˆ«ÈåÆÌäÁÌë‰.;;;;;;;;;;;;;x
+dw_bonus_trait_decision_futa;¢³Ø¬³İ«¹¬³İ éˆ¢·êŒ ïŒ¦¸«ÈÛ;;;;;;;;;;;;;x
+dw_bonus_trait_decision_futa_desc;ª·İ©¹Ğ«¸ ‘³¦³ ‡Š°³¢³¦È –ˆåÆÌ ïŒ¦´Ù(«¹¬³İ¢³Ø¬³) ïÆÉª·İëÆĞ ¡³¬ÈÙ¢È¥³.;;;;;;;;;;;;;x
+dw_neko_campaign;±È¡³ •Æ×«·ëˆçÆÌ¥³;;;;;;;;;;;;;x
+dw_neko_campaign_desc;¥³İªÈÌùÇ ìˆª³İëÆÌ äÆÉæ»İ ¬È«¹É íÁĞªÈÌ«ÈÙ¢È¥³. ¥³İªÈÌùÇ «³Ì«¸ «ÈÜ¥·Ì äŒ ²¹Ğï»İ«È •Æ×«·ëˆçŒåÆÌ¡· ¡³áêÆÙ¢È¥³.;;;;;;;;;;;;;x
+dw_vampire_start;èÁĞ¦ÈÌ¬³åÆÌ ª´ç»Ù¡¸ ´«·¢³Ì¥³.;;;;;;;;;;;;;x
+dw_vampire_start_desc;¢³åÆÌ «·‘·Ì ª´İèÁĞ«¸¡¸ èÁĞ¦¹Üäˆ ©´Ø±³«È«·çˆ ¥³ªÈ °´«·¢³Ü¥³.;;;;;;;;;;;;;x
+dw_orc_campaign;‡ˆæŒçÆĞ ùÄ²³«¹!;;;;;;;;;;;;;x
+dw_orc_campaign_desc;«ÈĞì»ÉùÇ «¹İò¼İò¼ éŠñÆİëÆĞùÄ²³«¹! ¢³åÆÌ «Èª³İ¬·É«ÈÌ ª¸ª³İëÆĞ ®³ŞëÆÌ¡· ¡³á¥³!;;;;;;;;;;;;;x
+dw_elf_campaign;±¸«È¥Èİ ïŒù¼«ÈĞ¦³«ÈÛ;;;;;;;;;;;;;x
+dw_elf_campaign_desc;¥´éŠéÁÌëÆÌ ëŠ¦ÈçÆĞ ¥³ÌêÁÌ²È ¬·Ìª·Ğ«È¦³äˆ ª´İ¡³É²³Ù¢È¥³. ¬·İ¨³Ğçˆ ëŠ¦ÈåÆÌ ª³¦³¬ÈĞ ëÁÌ¨¹İ«ÈÌ¡³ë‰?;;;;;;;;;;;;;x
+dw_kitsune_campaign;«¹ëŠù¼ ª³¢µİ¡´;;;;;;;;;;;;;x
+dw_kitsune_campaign_desc;ë‰‡ˆåÆÌ ¡³İ²³Ì ¬·İªÈÌò¼ ²ÈØëÆĞ ¡³¬Èäˆ «ÈÜåÆÌ ª³¢µİ•ÁÌ«ÈÙ¢È¥³.;;;;;;;;;;;;;x
+dw_angel_campaign;ªÈÌª·İ²³Ì «¹İ¡³Ø;;;;;;;;;;;;;x
+dw_angel_campaign_desc;ªÈÌ«È ¢³«¸¡¸ ¨³Ğ²³«¹Ü¥³. ¢³åÆÌ ªÈÌùÇ éŠçÆØëÆĞ ©³Ïäˆ ªÈÌª·İ²³Ì íÁÉé»ÉëŒçˆ ï»İ®È ²³Ğ ¡·Û«È¥³.;;;;;;;;;;;;;x
+dw_tentacle_campaign;ñ»Ìæ»ÌùÇ ¬·Ìª³;;;;;;;;;;;;;x
+dw_tentacle_campaign_desc;«·‘·Ì«ÈæÆĞëÆÌ ¢´¡³ ì»Ì¬´²´ª·åÆÌ «³Ìô¿Ì¥³äˆ ¨³Ğ²³Ì¥³. ù¾¢µ²³¨¹Ì ¢³åÆÌ ªÈÌª·İ²³¬È è»Û²³Ì ¡¹Ğ²³ÙùÇ ª³İ¬ÈİèÁĞ«È¡È ‘´èÁÌ«È¥³. ²³¬È¨³Ì ¢³åÆÌ äŒ «Èª³İ«È¦³äˆ ª´İ¡³É²³Ì¥³!;;;;;;;;;;;;;x
+dw_lilith_immortality;éÁĞª³ùÇ ùÇªÈÉ;;;;;;;;;;;;;x
+dw_lilith_immortality_desc;«·¨·¢È ¦ÈĞ¦ÈêŒ¡³ ¢´¡¸ ìŠªÈÌ ¬È²ºù¼ åÆİ¦¹ÉëÆĞ ï»İ²´ ¢³åÆÌ ìÁÉëÆØ«È¦³åÆÌ ì»Ì¬´ ìˆ®³ ©³éˆ ûÄäÆÙ²³Ğ êŠ «ÈÜ¡¸ ô¿«·Ü¥³. äŒ¦·ã¡¸ ²³ØëŒçˆ“·, ¬³«¹ÌùÇ êÁÌ¦ÈçÆĞ èŠªÈ²³äˆ ¢´ ğ‰¬·ÉëÆÌ ìÁÉ¬È «³ÎëÆĞ¡·Û«È¨¹ ¡È·«È ¢³«¸¡¸ äˆ¨³ùÂ ²³Ğ¡·Û«È¥³.;;;;;;;;;;;;;x
+dw_kidnap;¢³Ù®È;;;;;;;;;;;;;x
+dw_kidnap_desc;¥³İªÈÌëÆÌ ¬³Ø¬´¬·É«ÈÌ è»Éğ‰èÁĞëÆĞ ¢³Ù®È²´ª· ¡³Øë»É«¸ ®¹¢·ãêÆÙ¢È¥³. ùÄ²·Ø²³Ì ¬³É«·Ù«È æ»İ©³Ìô¿¨¹ ¬³äÆØëÆĞ ïŠ¬³²³Ù¢È¥³. ªÈĞ±´²³Ğ ÿ¼ÉçÅĞæˆ «ÈÜëŒ¨¹ ¬³É«·ÙëÆĞ ²³Ì ®·Ùéˆò¼Ì«È ª´İ¨¹İùÇ ùÄ²¹ÙëÆĞ ©³ÏëÆĞ êŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;x
+dw_tentacle_mindfuck;Mind Fuck;;;;;;;;;;;;;x
+dw_tentacle_mindfuck_desc;A crude term for a crude ability. This is an assault most vile. Widely considered to be worse than either rape or murder. Your target will resist if they're able, so it's best to plan accordingly.;;;;;;;;;;;;;x
+dw_apply_random_trap_image;Apply Random Trap Portrait;;;;;;;;;;;;;x
+dw_apply_random_trap_image_desc;I've been asked to provide the means for a trap, to obtain a less 'manly' portrait. Since tampering with portrait dna isn't an option, I offer this solution, which will assign a random custom portrait. If you don't like what you get, remove it and then try again.;;;;;;;;;;;;;x
+dw_remove_custom_portrait;¯·êŒ°·Ø ğˆïŒ¦¸«ÈÛëÆĞ ô¿æ»Ğ¦ÈÌ¥³.;;;;;;;;;;;;;x
+dw_remove_custom_portrait_desc;«È è»Éğ‰åÆÌ ª³ëÀİ¬³ ¬È¬·İùÇ ¯·êŒ°·ØêŒ ğˆïŒ¦¸«ÈÛëÆĞ ¬¸¡·²³¡¸ô¿Ù¢È¥³. ª³ëÀİ¬³ ¬È¬·İ «È¨È¬ÈùÇ ¬·İ¬·É«ÈÌ «È¨È¬È¡³ ¬¸¡·ô¿äˆ ¡Èé»Ì ck2 «ÈÌèÁĞ ªÈêŒ°¸ØëŒçˆ ô¿æ»Ğ«³¡³Ù¢È¥³.;;;;;;;;;;;;;x
+dw_the_chosen_of_lilith_invite_society_member_to_court;Invite Chosen of Lilith;;;;;;;;;;;;;x
+dw_the_chosen_of_lilith_invite_society_member_to_court_desc;Place a call to one of the Chosen of Lilith to join your court.;;;;;;;;;;;;;x
+dw_the_chosen_of_lilith_invite_society_member_to_court_power_desc;An intrigue decision where you can invite a fellow society member to your court.;;;;;;;;;;;;;x
+dw_the_wizards_build_laboratory;Build Arcane Laboratory;;;;;;;;;;;;;x
+dw_the_wizards_build_laboratory_desc;Every member of the Wizards College can benefit in their studies with the help of a laboratory to help them study the arcane.;;;;;;;;;;;;;x
+dw_prisoner_lilith_sacrifice;Sacrifice to Lilith;;;;;;;;;;;;;x
+dw_prisoner_lilith_sacrifice_desc;Sacrifice the prisoner to Mother Lilith.;;;;;;;;;;;;;x
+dw_prisoner_lilith_sacrifice_power_desc;Right-click on the portrait of one of your prisoners, to sacrifice them to Lilith.;;;;;;;;;;;;;x
+dw_chosen_recruit;ª³¦³ØæÆĞ èˆ¬ÈÙ²³¡È;;;;;;;;;;;;;x
+dw_chosen_recruit_desc;«È ¥ÈªÈ¬·ÌëÆĞ ª·Ì°´É²³ØëŒçˆ“· äŒ ª³¦³ØëÆĞ ¥³İªÈÌùÇ ¥³Ì®¸«¸ ¡³«ÈÙªÈ¯È¦¹äˆ åˆ¦¹É²³Ù¢È¥³.;;;;;;;;;;;;;x
+dw_chosen_recruit_power_desc;Right click on the portrait of a prospective member to begin the recruitment evaluation process.;;;;;;;;;;;;;x
+dw_arcane_college_recruit;Recruit into the Arcane College;;;;;;;;;;;;;x
+dw_arcane_college_recruit_desc;Begins the recruitment process to determine if the person is both a good fit, and if they're interested in joining.;;;;;;;;;;;;;x
+dw_arcane_college_recruit_power_desc;Right click on the portrait of a prospective member to begin the recruitment evaluation process.;;;;;;;;;;;;;x
+dwf_b_visit_beautys_village;«³çÆØ¥³ëÁÌ ¨³ëÆĞ ©³İèÁÌ;;;;;;;;;;;;;x
+dwf_b_visit_beautys_village_desc;¢´¡³ «¹²´İ²³äˆ äŠ¡¹İ²³Ğ êŠ «ÈÜåÆÌ ¨³ëÆĞ. äŒä»ÛùÇ «³çÆØ¥³ëÁÌ «¹ª·İ«È ¢´ ò¼ÌªÈØëÆĞ •ÆĞ«·Ü¥³.;;;;;;;;;;;;;x
+dw_visit_gaston;Spend time with Gaston;;;;;;;;;;;;;x
+dw_visit_gaston_desc;This is a customized 'Spend time with' decision that has special events for the player and Gaston.;;;;;;;;;;;;;x
+dw_beast_assassinate;The Beast Attacks;;;;;;;;;;;;;x
+dw_beast_assassinate_desc;For sparing the life of the Beast, and keeping his curse alive, he can leave his lands once a decade to strike out at a target. This is not a guaranteed success, and the Beast may be slain. The risk level varies on the station of the individual.;;;;;;;;;;;;;x
+dw_visit_belle;Spend time with Belle;;;;;;;;;;;;;x
+dw_visit_belle_desc;This is a customized 'Spend time with' decision that has special events for the player and Belle.;;;;;;;;;;;;;x
+dwf_b_rub_aladdins_lamp;«³Ğ¦³¥ÈÌ ¦´ØğŒçÆĞ èÁÌ¬ÈçÆÌ¥³;;;;;;;;;;;;;x
+dwf_b_rub_aladdins_lamp_desc;¬·Ìª·Ğ«¸ ‘³çŒ¨¹Ì ¦´ØğŒ «³Ì«¸åÆÌ ¬È¢È¡³ «ÈÜ¥³äˆ ²³Ù¢È¥³. ¢³åÆÌ «µÉ¡³Ì èÁÌ¬ÈçŒ¡È¨³Ì ²³¨¹Ì äŒ¡·ÛëÆĞ êˆÿ¼Ì ²³Ğ êŠ «ÈÜëÆĞ¡·Ù¢È¥³.;;;;;;;;;;;;;x
+dw_vampire_create_thrall;Create Vampire Thrall;;;;;;;;;;;;;x
+dw_vampire_create_thrall_desc;Turn one who is of simple mind and weak will, to be your willing servant.;;;;;;;;;;;;;x
+dw_vampire_feeds;¬³©³Ğ¬·É«ÈÌ èÁĞ¦ÈØ;;;;;;;;;;;;;x
+dw_vampire_feeds_desc;¥³İªÈÌùÇ ¡·Ì¡³İª³İêÆİëÆĞ ùÄ²´ êŒ¦ÈĞ«È¢³ «¹Ì«ÈÌ«¸¡¸ éŠ°³É²³Ù¢È¥³. è»Éğ‰èÁĞëÆÌ ìÁÉ¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;;x
+dw_vampire_seduction;©´Ø±³«È«· ë‹ñ»É;;;;;;;;;;;;;x
+dw_vampire_seduction_desc;©´Ø±³«È«·åÆÌ ğ‰¬·ÉùÇ ¨³ëÆØò¼ ùÇ¬ÈçÆĞ «µÉÿ¼ªÈ¯ÈĞ êŠ «ÈÜêÆÙ¢È¥³. ¬³Ø¬´¬·É«ÈÌ ©·Øú¿çÆĞ «ÈëÀİ²³ª¸ë‰.;;;;;;;;;;;;;x
+dw_werewolf_blood_potion_td;Werewolf Blood Potion;;;;;;;;;;;;;x
+dw_werewolf_blood_potion_td_desc; The target werekin will consume the potion and become a full blooded werewolf.\n Only useful on werekin.;;;;;;;;;;;;;x
+dw_vampire_sires;©´Ø±³«È«·çˆ ¨³ÌæÆĞ¥³;;;;;;;;;;;;;x
+dw_vampire_sires_desc;«ÈĞ©³Ì¬·ÉëŒçˆåÆÌ äˆæ»É²³Ì ©´Ø±³«È«·¬È¨³Ì ì»İì»İ ¥³çÆÌ ª³¦³ØæÆĞëÆĞ ©´Ø±³«È«· –ˆåÆÌ ©´Ø±³«È«· åˆ«ºçˆ ¨³ÌæÆĞäˆ ªÈâ«·²³Ì¥³.;;;;;;;;;;;;;x

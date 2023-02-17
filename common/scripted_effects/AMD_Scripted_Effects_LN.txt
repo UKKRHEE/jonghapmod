@@ -1,0 +1,413 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Scripted Effects
+
+# scripted_effect에서 PREV, 커스텀스코프, 커스텀트리거를 사용할 수 있다.
+
+#AMD_E_SCRIPTED_EFFECTS : Effect.
+
+
+AMD_E_LN_MOOD_SET_TO_SOFT = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_MOOD	value = 1	}	}	}
+AMD_E_LN_MOOD_SET_TO_HARD = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_MOOD	value = 2	}	}	}
+AMD_E_LN_MOOD_SET_TO_RAND = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_MOOD	value = 3	}	}	}
+AMD_E_LN_MOOD_SET_TO_HATE = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_MOOD	value = 4	}	}	}
+AMD_E_LN_MOOD_SET_TO_LUST = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_MOOD	value = 5	}	}	}
+
+AMD_E_LN_PACE_SET_TO_SOFT = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_PACE	value = 1	}	}	}
+AMD_E_LN_PACE_SET_TO_HARD = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_PACE	value = 2	}	}	}
+AMD_E_LN_PACE_SET_TO_RAND = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_PACE	value = 3	}	}	}
+AMD_E_LN_PACE_SET_TO_OVER = {	event_target:AMD_ET_POV = {	set_variable = {	which = local_LN_PACE	value = 4	}	}	}
+
+AMD_E_SETA_FLAG_DS = {	save_event_target_as = AMD_ET_FLAG_DS	}	#Double Shot
+AMD_E_SETA_FLAG_WF = {	save_event_target_as = AMD_ET_FLAG_WF	}	#Withdraw Failed
+AMD_E_SETA_FLAG_WS = {	save_event_target_as = AMD_ET_FLAG_WS	}	#Withdraw Success
+
+#	Fore-Play-Only
+AMD_E_SETA_FLAG_T0 = {	save_event_target_as = AMD_ET_FLAG_T0	}
+AMD_E_SETA_STOP_BUY = {	save_event_target_as = AMD_ET_STOP_BUY	}
+AMD_E_SETA_STOP_SELL = {	save_event_target_as = AMD_ET_STOP_SELL	}
+AMD_E_SETA_STOP_STUDY = {	save_event_target_as = AMD_ET_STOP_STUDY	}
+AMD_E_SETA_STOP_TRAIN = {	save_event_target_as = AMD_ET_STOP_TRAIN	}
+
+AMD_E_LN_MOOD = {	#	1Soft 2Hard 3Rand 4bad 5Aroused		# POV 설정후 *대상의 스코프에서* 사용할것.....???
+	if = {	
+		limit = {
+			NOT = {
+				AMD_T_LN_MOOD_IS_SOFT = yes
+				AMD_T_LN_MOOD_IS_HARD = yes
+				AMD_T_LN_MOOD_IS_RAND = yes
+				AMD_T_LN_MOOD_IS_HATE = yes
+				AMD_T_LN_MOOD_IS_LUST = yes
+			}
+		}
+		random_list = {
+			#	5	Aroused	하고싶다	(모든 경우 성공률 증가)
+			5 = {	AMD_E_LN_MOOD_SET_TO_LUST = yes
+				#강간당하는 경우
+				modifier = {	factor = 0.10	AMD_T_STF_THIS_IS_RAPED = yes	}
+				
+				#구매자
+				modifier = {	factor = 2.00	AMD_T_STF_THIS_IS_BUYER = yes	}
+				
+				#	음란 특성
+				modifier = {	factor = 2.00	trait = dancing_plague	}
+				modifier = {	factor = 1.50	trait = lustful	}
+				modifier = {	factor = 1.50	trait = hedonist	}
+				modifier = {	factor = 1.50	trait = decadent	}
+				modifier = {	factor = 2.50	has_education_stewardship_trigger = yes	}
+				#	미약
+				modifier = {	factor = 8.00	AMD_T_HCM_DRUG_A = yes	}
+				#	관계가 아주 좋은 경우
+				modifier = {	factor = 2.00	AMD_T_P_OPINION_TO_MATE_ABOVE_90 = yes	}
+				modifier = {	factor = 2.00	AMD_T_P_OPINION_TO_MATE_ABOVE_99 = yes	}
+			}
+			#	4	Nope	하기싫다	(모든 경우 실패율 증가)
+			5 = {	AMD_E_LN_MOOD_SET_TO_HATE = yes
+				#몸이나 마음이 좋지 않아서 아무것도 하고 싶지 않다
+				modifier = {	factor = 2.00	is_weak_trigger = yes	}
+				modifier = {	factor = 2.00	has_symptom_trigger = yes	}
+				modifier = {	factor = 3.00	has_injury_trigger = yes	}
+				modifier = {	factor = 3.00	has_disability_trigger = yes	}
+				modifier = {	factor = 4.00	character_disease_trigger = yes	}
+				modifier = {	factor = 4.00	has_mental_disorder_trigger = yes	}
+				
+				#성행위를 싫어함
+				modifier = {	factor = 3.00	trait = celibate	}
+				modifier = {	factor = 2.00	trait = chaste	}
+				modifier = {	factor = 1.50	has_education_learning_trigger = yes	}
+				
+				#강간당하는 경우
+				modifier = {	factor = 2.00	AMD_T_STF_THIS_IS_RAPED = yes	}
+				
+				#구매자
+				modifier = {	factor = 0.10	AMD_T_STF_THIS_IS_BUYER = yes	}
+				
+				#관계도 낮으면 확률증가
+				modifier = {	factor = 1.50	AMD_T_P_OPINION_TO_MATE_UNDER_20 = yes	}
+				modifier = {	factor = 1.50	AMD_T_P_OPINION_TO_MATE_UNDER_40 = yes	}
+				modifier = {	factor = 2.50	AMD_T_P_OPINION_TO_MATE_UNDER_60 = yes	}
+				modifier = {	factor = 3.50	AMD_T_P_OPINION_TO_MATE_UNDER_80 = yes	}
+				modifier = {	factor = 5.00	AMD_T_P_OPINION_TO_MATE_UNDER_99 = yes	}
+				#관계도 높으면 확률감소
+				modifier = {	factor = 0.50	AMD_T_P_OPINION_TO_MATE_ABOVE_40 = yes	}
+				modifier = {	factor = 0.60	AMD_T_P_OPINION_TO_MATE_ABOVE_30 = yes	}
+				modifier = {	factor = 0.70	AMD_T_P_OPINION_TO_MATE_ABOVE_20 = yes	}
+				modifier = {	factor = 0.80	AMD_T_P_OPINION_TO_MATE_ABOVE_10 = yes	}
+			}
+			#	3	Rand	주도하고 싶다	(상대에게 맡긴다 성공률 증가)
+			30 = {	AMD_E_LN_MOOD_SET_TO_RAND = yes
+				#강간당하는 경우
+				modifier = {	factor = 0.01	AMD_T_STF_THIS_IS_RAPED = yes	}
+				
+				modifier = {	factor = 0.01	trait = AMD_masochist	}
+				modifier = {	factor = 5.00	trait = AMD_sadist	}
+				
+				modifier = {	factor = 1.50	trait = wroth	}
+				modifier = {	factor = 1.50	trait = brave	}
+				modifier = {	factor = 2.50	trait = seducer	}
+				modifier = {	factor = 2.50	trait = seductress	}
+				modifier = {	factor = 2.50	has_education_intrigue_trigger = yes	}
+			}
+			#	2	Hard	격렬하게	(HARD 성공률 증가)
+			30 = {	AMD_E_LN_MOOD_SET_TO_HARD = yes
+				modifier = {	factor = 5.00	trait = AMD_masochist	}
+				modifier = {	factor = 0.01	trait = AMD_sadist	}
+				
+				modifier = {	factor = 1.50	trait = shy	}
+				modifier = {	factor = 1.50	trait = craven	}
+				modifier = {	factor = 2.00	trait = slothful	}
+				modifier = {	factor = 2.00	trait = gamer	}	#강한 여성... 왜곡된 성욕...
+				modifier = {	factor = 2.50	has_education_martial_trigger = yes	}
+			}
+			#	1	Soft	부드럽게	(Soft 성공률 증가)
+			30 = {	AMD_E_LN_MOOD_SET_TO_SOFT = yes
+				modifier = {	factor = 1.50	trait = zealous	}
+				modifier = {	factor = 1.50	trait = chaste	}
+				modifier = {	factor = 1.50	trait = stubborn	}
+				modifier = {	factor = 2.50	has_education_diplomacy_trigger = yes	}
+			}
+		}
+	}
+}
+AMD_E_LN_PART1 = {	#시작 이벤트를 결정. MOOD에 따라 리스트 가중치 변동. POV에게 쏜다.	wip
+	event_target:AMD_ET_POV = {
+		if = {	limit = {	AMD_T_LN_INSERTABLE = no	}
+			if = {	limit = {	check_variable = {	which = local_AMD_BROTHEL_WORK	value == 104	}	}	character_event = {	id = AMD_PLAY.10400	}	}
+			if = {	limit = {	check_variable = {	which = local_AMD_BROTHEL_WORK	value == 105	}	}	character_event = {	id = AMD_PLAY.10500	}	}
+			if = {	limit = {	check_variable = {	which = local_AMD_BROTHEL_WORK	value == 106	}	}	character_event = {	id = AMD_PLAY.10600	}	}
+			if = {	limit = {	check_variable = {	which = local_AMD_BROTHEL_WORK	value == 107	}	}	character_event = {	id = AMD_PLAY.10700	}	}
+		}
+		else = {
+			random_list = {
+				50 = {	character_event = {	id = AMD_PLAY.10100	}	#	1wait
+					modifier = {	factor = 2.0	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}
+					modifier = {	factor = 2.0	event_target:AMD_ET_ATK = {	AMD_T_IS_VIRGIN = yes	}	}
+					modifier = {	factor = 2.0	AMD_T_LN_MOOD_IS_SOFT = yes	}
+					modifier = {	factor = 4.0	AMD_T_LN_MOOD_IS_HATE = yes	}
+				}
+				100 = {	character_event = {	id = AMD_PLAY.10200	}	#	2kiss
+					modifier = {	factor = 0.0	AMD_T_STF_IS_RAPE = yes	}
+					modifier = {	factor = 2.0	AMD_T_LN_MOOD_IS_SOFT = yes	}
+				}
+				100 = {	character_event = {	id = AMD_PLAY.10300	}	#	3bb
+					modifier = {	factor = 0.0	AMD_T_STF_IS_FMRP = yes	}
+					modifier = {	factor = 2.0	AMD_T_LN_MOOD_IS_SOFT = yes	}
+				}
+				100 = {	character_event = {	id = AMD_PLAY.10400	}	#	4hj
+					modifier = {	factor = 0.5	AMD_T_STF_IS_RAPE = yes	}
+					modifier = {	factor = 2.0	AMD_T_LN_MOOD_IS_RAND = yes	}
+					modifier = {	factor = 0.1	AMD_T_LN_MOOD_IS_HATE = yes	}
+				}
+				100 = {	character_event = {	id = AMD_PLAY.10500	}	#	5bj
+					modifier = {	factor = 0.5	AMD_T_STF_IS_RAPE = yes	}
+					modifier = {	factor = 2.0	AMD_T_LN_MOOD_IS_HARD = yes	}
+					modifier = {	factor = 2.0	AMD_T_LN_MOOD_IS_RAND = yes	}
+					modifier = {	factor = 0.1	AMD_T_LN_MOOD_IS_HATE = yes	}
+				}
+				100 = {	character_event = {	id = AMD_PLAY.10600	}	#	6pz
+					modifier = {	factor = 0.5	AMD_T_STF_IS_RAPE = yes	}
+					modifier = {	factor = 0.5	event_target:AMD_ET_DEF = {	AMD_T_SIZE_SMALL = yes	}	}
+					modifier = {	factor = 2.0	event_target:AMD_ET_DEF = {	AMD_T_SIZE_LARGE = yes	}	}
+					modifier = {	factor = 0.1	AMD_T_LN_MOOD_IS_HATE = yes	}
+				}
+				100 = {	character_event = {	id = AMD_PLAY.10700	}	#	7fj
+					modifier = {	factor = 0.0	AMD_T_STF_IS_MFRP = yes	}
+					modifier = {	factor = 8.0	AMD_T_STF_IS_FMRP = yes	}
+					modifier = {	factor = 4.0	event_target:AMD_ET_DEF = {	trait = AMD_sadist	}	}
+					modifier = {	factor = 0.0	event_target:AMD_ET_DEF = {	trait = AMD_masochist	}	}
+					modifier = {	factor = 2.0	AMD_T_LN_MOOD_IS_RAND = yes	}
+					modifier = {	factor = 1.5	AMD_T_LN_MOOD_IS_HATE = yes	}
+				}
+			}
+		
+		}
+	}
+}
+AMD_E_LN_PART2 = {	#LN_PACE와 STF에 따라 합체 이벤트를 결정, POV에게 쏜다.
+	hidden_tooltip = {
+		random_list = {
+			100 = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_PLAY.20100	}	}	#정상
+				modifier = {	factor = 0.01	AMD_T_STF_IS_FMRP = yes	}
+				modifier = {	factor = 4.00	AMD_T_LN_PACE_IS_OVER = yes	event_target:AMD_ET_POV = {	is_female = no	}	}	#남성, OVER
+				modifier = {	factor = 8.00	AMD_T_LN_PACE_IS_SOFT = yes	}
+			}
+			100 = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_PLAY.20200	}	}	#후배
+				modifier = {	factor = 0.01	AMD_T_STF_IS_FMRP = yes	}
+				modifier = {	factor = 2.00	event_target:AMD_ET_ATK = {	trait = AMD_sadist	}	}
+				modifier = {	factor = 2.00	event_target:AMD_ET_DEF = {	trait = AMD_masochist	}	}
+				modifier = {	factor = 4.00	AMD_T_LN_PACE_IS_OVER = yes	event_target:AMD_ET_POV = {	is_female = no	}	}	#남성, OVER
+				modifier = {	factor = 8.00	AMD_T_LN_PACE_IS_HARD = yes	event_target:AMD_ET_POV = {	is_female = no	}	}	#남성, 하드
+				modifier = {	factor = 8.00	AMD_T_LN_PACE_IS_RAND = yes	event_target:AMD_ET_POV = {	is_female = yes	}	}	#당신이 여성이며 상대에게 주도권을 줌
+			}
+			100 = {	event_target:AMD_ET_POV = {	character_event = {	id = AMD_PLAY.20300	}	}	#기승
+				modifier = {	factor = 0.50	AMD_T_STF_IS_MFRP = yes	}
+				modifier = {	factor = 2.00	event_target:AMD_ET_DEF = {	trait = AMD_sadist	}	}
+				modifier = {	factor = 2.00	event_target:AMD_ET_ATK = {	trait = AMD_masochist	}	}
+				modifier = {	factor = 2.00	AMD_T_LN_PACE_IS_OVER = yes	event_target:AMD_ET_POV = {	is_female = yes	}	}	#여성, OVER
+				modifier = {	factor = 8.00	AMD_T_LN_PACE_IS_HARD = yes	event_target:AMD_ET_POV = {	is_female = yes	}	}	#여성, 하드
+				modifier = {	factor = 8.00	AMD_T_LN_PACE_IS_RAND = yes	event_target:AMD_ET_POV = {	is_female = no	}	}	#당신이 남성이며 상대에게 주도권을 줌
+				modifier = {	factor = 0.01	AMD_T_LN_PACE_IS_RAND = yes	event_target:AMD_ET_POV = {	is_female = yes	}	}	#당신이 여성이며 상대에게 주도권을 줌
+			}
+			100 = {	AMD_E_PLACEHOLDER = yes	#착한아이를 위한 뒷문
+				modifier = {	factor = 0.00	AMD_T_LN_PACE_IS_ANAL = no	}
+			}
+		}
+	}
+}
+
+
+
+#		#		#		ERA 초반선택지 : 합체태세를 선택
+AMD_E_LN_SOFT = {	#	1 Soft	로우리스크 로우리턴. -1 0 +1
+	custom_tooltip = {	text = AMD_EV_TT_LN_SOFT	}
+	random_list = {
+		100 = {	AMD_E_2P_SCORE_U100 = yes
+			modifier = {	factor = 5.00	check_variable = {	which = local_LN_MOOD	value == 1	}	}
+			modifier = {	factor = 0.80	check_variable = {	which = local_LN_MOOD	value == 2	}	}
+			
+		}
+		100 = {	AMD_E_DO_NOTHING = yes
+			
+		}
+		50 = {	AMD_E_2P_SCORE_D100 = yes	#실패
+			modifier = {	factor = 0.01	check_variable = {	which = local_LN_MOOD	value == 5	}	}
+			modifier = {	factor = 3.00	check_variable = {	which = local_LN_MOOD	value == 4	}	}
+			
+		}
+	}
+	hidden_tooltip = {	AMD_E_LN_PACE_SET_TO_SOFT = yes	}
+}
+AMD_E_LN_HARD = {	#	2 Hard 하이리스크 하이리턴. +1 -1
+	custom_tooltip = {	text = AMD_EV_TT_LN_HARD	}
+	random_list = {
+		100 = {	AMD_E_2P_SCORE_U100 = yes
+			modifier = {	factor = 0.80	check_variable = {	which = local_LN_MOOD	value == 1	}	}
+			modifier = {	factor = 5.00	check_variable = {	which = local_LN_MOOD	value == 2	}	}
+			
+		}
+		100 = {	AMD_E_2P_SCORE_D100 = yes
+			modifier = {	factor = 0.01	check_variable = {	which = local_LN_MOOD	value == 5	}	}
+			modifier = {	factor = 3.00	check_variable = {	which = local_LN_MOOD	value == 4	}	}
+		}
+	}
+	hidden_tooltip = {	AMD_E_LN_PACE_SET_TO_HARD = yes	}
+}
+AMD_E_LN_RAND = {	#	3 Rand 상대에게 맡긴다... 는 정직한 랜덤 -1 0 +1
+	custom_tooltip = {	text = AMD_EV_TT_LN_RAND	}
+	random_list = {
+		100 = {	AMD_E_2P_SCORE_U100 = yes	#성공
+			modifier = {	factor = 5.00	AMD_T_LN_MOOD_IS_RAND = yes	}	#내가 주도하고 싶어!
+		}
+		100 = {	AMD_E_2P_SCORE_D100 = yes	#실패
+			modifier = {	factor = 0.01	AMD_T_LN_MOOD_IS_LUST = yes	}
+			modifier = {	factor = 3.00	AMD_T_LN_MOOD_IS_HATE = yes	}
+		}
+		100 = {	AMD_E_DO_NOTHING = yes
+			
+		}
+	}
+	hidden_tooltip = {	AMD_E_LN_PACE_SET_TO_RAND = yes
+		#	random_list = {	50 = {	AMD_E_SETA_LNF_SOFT = yes	}	50 = {	AMD_E_SETA_LNF_HARD = yes	}	}
+	}
+}
+AMD_E_LN_OVER = {	#	고정페널티 하이리턴. 0/+1/+2
+	custom_tooltip = {	text = AMD_EV_TT_LN_OVER	}
+	event_target:AMD_ET_STT = {	health = 0.1	}
+	event_target:AMD_ET_TGT = {	health = 0.1	}
+	random_list = {
+		100 = {	AMD_E_DO_NOTHING = yes	#실패
+			modifier = {	factor = 0.01	check_variable = {	which = local_LN_MOOD	value == 5	}	}
+			modifier = {	factor = 3.00	check_variable = {	which = local_LN_MOOD	value == 4	}	}
+			modifier = {	factor = 1.50	check_variable = {	which = local_LN_MOOD	value == 3	}	}
+		}
+		150 = {	AMD_E_2P_SCORE_U100 = yes
+			
+		}
+		50 = {	AMD_E_2P_SCORE_U200 = yes
+			modifier = {	factor = 3.0	AMD_T_F_SKILL_5 = yes	}
+		}
+	}
+	hidden_tooltip = {	AMD_E_LN_PACE_SET_TO_OVER = yes	}
+}
+
+AMD_E_LN_ACM_XP_FORE = {	hidden_tooltip = {	add_character_modifier = {	name = AMD_CM_xp_foreplay	duration = -1	stacking = yes	hidden = yes	}	}	}
+AMD_E_LN_ACM_XP_REAL = {	hidden_tooltip = {	add_character_modifier = {	name = AMD_CM_xp_realplay	duration = -1	stacking = yes	hidden = yes	}	}	}
+AMD_E_LN_ACM_XP_ANAL = {	hidden_tooltip = {	add_character_modifier = {	name = AMD_CM_xp_analplay	duration = -1	stacking = yes	hidden = yes	}	}	}
+
+
+
+#전희경험+1, 성과에 따른 경험치 또는 보수 획득. 위신 변동 후 종료.
+
+AMD_E_LN_STOP = {	#비삽입 종료 선택지.
+	if = {	limit = {	AMD_T_LN_STOP_BUY = yes	}
+		custom_tooltip = {	text = AMD_EV_TT_LN_STOP_BUY	}
+			if = {	limit = {	AMD_T_2P_SCORE_7 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 4	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_6 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 3	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_5 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 2	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_4 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 1	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_3 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_unsat	months = 1	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_2 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_unsat	months = 2	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_1 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_unsat	months = 3	stacking = no	}	}
+	}
+	if = {	limit = {	AMD_T_LN_STOP_SELL = yes	}
+		custom_tooltip = {	text = AMD_EV_TT_LN_STOP_SELL	}
+			if = {	limit = {	AMD_T_2P_SCORE_7 = yes	}	prestige = 3	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 3	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_6 = yes	}	prestige = 2	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 2	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_5 = yes	}	prestige = 1	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 1	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_4 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_good_trade	months = 1	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_3 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_unsat	months = 2	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_2 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_unsat	months = 4	stacking = no	}	}
+		else_if = {	limit = {	AMD_T_2P_SCORE_1 = yes	}	add_character_modifier = {	modifier = AMD_CM_after_unsat	months = 6	stacking = no	}	}
+	}
+	if = {	limit = {	AMD_T_LN_STOP_STUDY = yes	}
+		custom_tooltip = {	text = AMD_EV_TT_LN_STOP_STUDY	AMD_E_ACM_XP_SKILL = yes	}
+	}
+	if = {	limit = {	AMD_T_LN_STOP_TRAIN = yes	}
+		custom_tooltip = {	text = AMD_EV_TT_LN_STOP_TRAIN		}
+		#죄수 조교 파트라면... 죄수에게 현재 점수에 비례하여 확률?적으로 욕망 버프 누적시킬것.
+	}
+
+	hidden_tooltip = {
+		event_target:AMD_ET_ATK = {
+			AMD_E_LN_ACM_XP_FORE = yes
+			event_target:AMD_ET_DEF = {
+				AMD_E_LN_ACM_XP_FORE = yes
+				AMD_E_STD_TRANSFER_WITH_PREV = yes
+			}
+		}
+		AMD_E_END_CHAIN = yes
+	}
+}
+
+#		#		#		ERA 후반선택지 : 발사태세를 선택
+AMD_E_LN_LIFEDRAIN = {	#흡정
+	event_target:AMD_ET_POV = {
+		save_event_target_as = AMD_ET_DRAIN_ATK
+		if = {	limit = {	character = event_target:AMD_ET_ATK	}
+			event_target:AMD_ET_DEF = {	save_event_target_as = AMD_ET_DRAIN_DEF	}
+		}
+		if = {	limit = {	character = event_target:AMD_ET_DEF	}
+			event_target:AMD_ET_ATK = {	save_event_target_as = AMD_ET_DRAIN_DEF	}
+		}
+	}
+	random_list = {
+		100 = {	#성공
+			random_list = {
+				10 = {	#대성공
+					event_target:AMD_ET_DRAIN_ATK = {	health = 0.5	}
+					event_target:AMD_ET_DRAIN_DEF = {	health = -2.5	}
+					event_target:AMD_ET_DRAIN_ATK = {	fertility = 0.05	}
+					event_target:AMD_ET_DRAIN_DEF = {	fertility = -0.25	}
+				}
+				90 = {	#성공
+					event_target:AMD_ET_DRAIN_ATK = {	health = 0.10	}
+					event_target:AMD_ET_DRAIN_DEF = {	health = -0.50	}
+				}
+			}
+		}
+		100 = {	#실패
+			random_list = {
+				80 = {	#실패
+					event_target:AMD_ET_DRAIN_ATK = {	health = -0.10	}
+				}
+				20 = {	#대실패
+					event_target:AMD_ET_DRAIN_ATK = {	health = -0.50	}
+					event_target:AMD_ET_DRAIN_ATK = {	fertility = -0.05	}
+				}
+			}
+		}
+	}
+}
+AMD_E_LN_WITHDRAW = {	custom_tooltip = {	text = "AMD_EV_OPT_LN_OUT_TOOLTIP"	}
+	#이 선택지는 일대일 이성 인간에서만 발생하므로, 다른 경우는 고려하지 않음.
+	random_list = {
+		60 = {	#성공
+			modifier = {	factor = 3.00	event_target:AMD_ET_ATK = {	trait = patient	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 3	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 4	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 5	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 6	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 7	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 8	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 9	}	}
+			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 10	}	}
+			custom_tooltip = {	text = "AMD_EV_CT_WS"	}
+			hidden_tooltip = {	AMD_E_SETA_FLAG_WS = yes	}	#Withdraw Success
+		}
+		40 ={	#실패
+			modifier = {	factor = 0.80	event_target:AMD_ET_ATK = {	trait = AMD_penis_1	}	}
+			modifier = {	factor = 0.90	event_target:AMD_ET_ATK = {	trait = AMD_penis_2	}	}
+			modifier = {	factor = 1.50	event_target:AMD_ET_ATK = {	trait = AMD_penis_4	}	}
+			modifier = {	factor = 2.50	event_target:AMD_ET_ATK = {	trait = AMD_penis_5	}	}
+			modifier = {	factor = 2.00	event_target:AMD_ET_ATK = {	AMD_T_IS_VIRGIN = yes	}	}
+			modifier = {	factor = 2.00	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}
+			modifier = {	factor = 0.50	AMD_T_F_SKILL_3 = yes	}
+			modifier = {	factor = 0.20	AMD_T_F_SKILL_4 = yes	}
+			modifier = {	factor = 0.10	AMD_T_F_SKILL_5 = yes	}
+			custom_tooltip = {	text = "AMD_EV_CT_WF"	}
+			hidden_tooltip = {	AMD_E_SETA_FLAG_WF = yes	}	#Withdraw Fail
+		}
+	}
+}
+
+
+
+

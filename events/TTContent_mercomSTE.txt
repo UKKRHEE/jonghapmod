@@ -1,0 +1,467 @@
+
+#################################################################
+###    "Spending time with..." events for special NPC's.      ###
+#################################################################
+###           Spend Time events start at .1000                ###
+###              Futa Cum Slut Events at .2000                ###
+###                 Freja Duel Events at .3000                ###
+###             Visit Recovery starts at .9000                ###
+#################################################################
+
+namespace = mercomste
+
+###Futa Cum Slut, initial routing (hidden) 
+character_event = {
+	id = mercomste.2000
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # Triggered via targeted decision
+	immediate = {
+		# FROM = Futa, ROOT = player
+			FROM = { save_event_target_as = mercom_visit_target }
+			narrative_event = { id = mercomste.2010 }
+	}
+}
+
+# .1010 ### Futa Cum Slut
+narrative_event = {
+	id = mercomste.2010
+	desc = "mercomste3010"
+	picture = fut_visit
+	title = mercomste3010_title
+	
+	is_triggered_only = yes # Triggered from .2000
+	
+	option = { # Good times as always
+		name = "mercomste3010a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		opinion = {
+				modifier = mercom_opinion_ima_bitch
+				who = event_target:mercom_visit_target
+				years = 1
+			}
+			event_target:mercom_visit_target = {
+				opinion = {
+					modifier = mercom_opinion_my_bitch
+					who = ROOT
+					years = 1
+				}
+				add_character_modifier = { name = dw_good_sex duration = 30 }
+			}
+	}
+}
+
+###Spending time with ATHENA, initial routing (hidden) 
+character_event = {
+	id = mercomste.1000
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # Triggered via targeted decision
+	immediate = {
+		# FROM = Athena, ROOT = player
+		if = {
+			limit = { # Ruler is a guy, target Athena
+				is_female = no
+			}
+			FROM = { save_event_target_as = mercom_visit_target }
+			narrative_event = { id = mercomste.1010 }
+			break = yes # Takes us out of the immediate block
+		}
+		if = {
+			limit = { # Player is a lady, target Athena
+				is_female = yes
+			}
+			FROM = { save_event_target_as = mercom_visit_target }
+			narrative_event = { id = mercomste.1020 } 
+			break = yes # Takes us out of the immediate block
+		}
+	}
+}
+# .1010 Spending Time with Athena (player is a male) - Athena fucks player 
+narrative_event = {
+	id = mercomste.1010
+	desc = "mercomste1010"
+	picture = commander_visit_male
+	title = mercomste1010_title
+	
+	is_triggered_only = yes # Triggered from .1000
+	
+	option = { # Good times as always
+		name = "mercomste1010a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+	}
+}
+# .1020 Spending Time with Athena - (player is a female) 
+narrative_event = {
+	id = mercomste.1020
+	desc = "mercomste1020"
+	picture = commander_visit_female
+	title = mercomste1020_title
+	
+	is_triggered_only = yes # Triggered from .1000
+	
+	option = { # Good times as always
+		name = "mercomste1020a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+		hidden_tooltip = { event_target:mercom_visit_target = { character_event = { id = DWCore.9005 }}} # Pregnancy check for player
+	}
+}
+
+######################################################
+
+###Spending time with Kanika, initial routing (hidden) 
+character_event = {
+	id = mercomste.1001
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # Triggered via targeted decision
+	immediate = {
+		# FROM = Kanika, ROOT = player
+		if = {
+			limit = { # Ruler is a guy, target Kanika
+				is_female = no
+			}
+			FROM = { save_event_target_as = mercom_visit_target }
+			narrative_event = { id = mercomste.1030 }
+			break = yes # Takes us out of the immediate block
+		}
+		if = {
+			limit = { # Player is a lady, target Kanika
+				is_female = yes
+			}
+			FROM = { save_event_target_as = mercom_visit_target }
+			narrative_event = { id = mercomste.1040 } 
+			break = yes # Takes us out of the immediate block
+		}
+	}
+}
+# .1030 Spending Time with Kanika (player is a male) - Kanika fucks player 
+narrative_event = {
+	id = mercomste.1030
+	desc = "mercomste1030"
+	picture = kanika_visit_male1
+	title = mercomste1030_title
+	
+	is_triggered_only = yes # Triggered from .1001
+	
+	option = { # Good times as always
+		name = "mercomste1030a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+	}
+}
+# .1040 Spending Time with Kanika - (player is a female) 
+narrative_event = {
+	id = mercomste.1040
+	desc = "mercomste1040"
+	picture = kanika_visit_female1
+	title = mercomste1020_title
+	
+	is_triggered_only = yes # Triggered from .1001
+	
+	option = { # Good times as always
+		name = "mercomste1040a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+		hidden_tooltip = { event_target:mercom_visit_target = { character_event = { id = DWCore.9005 }}} # Pregnancy check for player
+	}
+}
+
+######################################################
+
+###Spending time with Freja, initial routing (hidden) 
+character_event = {
+	id = mercomste.1002
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # Triggered via targeted decision
+	immediate = {
+		# FROM = Freja, ROOT = player
+		if = {
+			limit = { # Ruler is a guy, target Freja
+				is_female = no
+			}
+			FROM = { save_event_target_as = mercom_visit_target }
+			random_list = {
+				50 = { narrative_event = { id = mercomste.1050 }}
+				50 = { narrative_event = { id = mercomste.1051 }}
+				}
+			break = yes # Takes us out of the immediate block
+		}
+		if = {
+			limit = { # Player is a lady, target Freja
+				is_female = yes
+			}
+			FROM = { save_event_target_as = mercom_visit_target }
+			random_list = {
+				50 = { narrative_event = { id = mercomste.1060 }}
+				50 = { narrative_event = { id = mercomste.1061 }}
+				}
+			break = yes # Takes us out of the immediate block
+		}
+	}
+}
+# .1050 Spending Time with Freja (player is a male) - Freja fucks player 
+narrative_event = {
+	id = mercomste.1050
+	desc = "mercomste1050"
+	picture = freja_visit_male1
+	title = mercomste1050_title
+	
+	is_triggered_only = yes # Triggered from .1002
+	
+	option = { # Good times as always
+		name = "mercomste1050a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+	}
+}
+# .1051 Spending Time with Freja (player is a male 2nd version) - Freja fucks player 
+narrative_event = {
+	id = mercomste.1051
+	desc = "mercomste1051"
+	picture = freja_visit_male1
+	title = mercomste1051_title
+	
+	is_triggered_only = yes # Triggered from .1002
+	
+	option = { # Good times as always
+		name = "mercomste1051a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+	}
+}
+# .1060 Spending Time with Freja - (player is a female) 
+narrative_event = {
+	id = mercomste.1060
+	desc = "mercomste1060"
+	picture = freja_visit_female1
+	title = mercomste1060_title
+	
+	is_triggered_only = yes # Triggered from .1002
+	
+	option = { # Good times as always
+		name = "mercomste1060a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+	}
+}
+# .1061 Spending Time with Freja - (player is a female second version) 
+narrative_event = {
+	id = mercomste.1061
+	desc = "mercomste1061"
+	picture = freja_visit_female2
+	title = mercomste1061_title
+	
+	is_triggered_only = yes # Triggered from .1002
+	
+	option = { # Good times as always
+		name = "mercomste1061a"
+		add_character_modifier = { name = dw_good_sex duration = 30 }
+		event_target:mercom_visit_target = { add_character_modifier = { name = dw_good_sex duration = 30 }}
+		hidden_tooltip = { event_target:mercom_visit_target = { character_event = { id = DWCore.9005 }}} # Pregnancy check for player
+	}
+}
+
+
+############ FREJA DUEL (Repeatable) ############
+
+narrative_event = { #### On Action Handling Event ####
+	id = mercomste.3999
+	hide_window = yes # Nothing to see here
+	has_global_flag = mercom_recruited
+	has_character_flag = redhand_npc_freja 
+	is_triggered_only = yes # Called from Targeted Decision
+	immediate = { save_event_target_as = freja_duel_seed }
+		
+	option = {
+		liege = {
+			narrative_event = { id = mercomste.3000 }
+		}
+	}
+}
+
+narrative_event = {
+	id = mercomste.3000
+	desc = "mercomste2000"
+	picture = freja_face
+	title = mercomste_2000title
+	is_triggered_only = yes # Called from OnAction Handling Event
+
+	option = {
+		name = "mercomste2000a"
+		narrative_event = { id = mercomste.3001 }
+		set_global_flag = mercomste_frejaduel
+		}
+}
+
+narrative_event = {
+	id = mercomste.3001
+	desc = "mercomste2001"
+	picture = mercom_combat
+	title = mercomste_2001title
+	is_triggered_only = yes # Called from .3000
+
+	option = {
+		name = "mercomste2001a"
+		narrative_event = { id = mercomste.3002 }
+			random_list = {
+				10 = { change_martial = 1 }
+				90 = { }
+			}
+		}
+	option = {
+		name = "mercomste2001b"
+		narrative_event = { id = mercomste.3002 } 
+			random_list = {
+				10 = { change_intrigue = 1 }
+				90 = { }
+			}
+		}
+	option = {
+		name = "mercomste2001c"
+		narrative_event = { id = mercomste.3002 }
+			random_list = {
+				10 = { change_diplomacy = 1 }
+				90 = { }
+			}
+		}
+}
+
+narrative_event = {
+	id = mercomste.3002
+	desc = "mercomste2002"
+	picture = mercom_combat
+	title = mercomste_2002title
+	is_triggered_only = yes # Called from .3001
+
+	option = { ## Male loses
+		trigger = { is_female = no }
+		name = "mercomste2002a"
+		narrative_event = { id = mercomste.3010 }
+		}
+	option = { ## Female loses
+		trigger = { is_female = yes }
+		name = "mercomste2002a"
+		narrative_event = { id = mercomste.3020 }
+		}
+}
+
+####  Begin Male Specific Line
+
+narrative_event = {
+	id = mercomste.3010
+	desc = "mercomste2010"
+	picture = viking_male_wins
+	title = mercomste_2010title
+	is_triggered_only = yes # Called from .3002
+
+	option = {
+		name = "mercomste2010a"
+		narrative_event = { id = mercomste.3011 }
+		}
+}
+
+narrative_event = {
+	id = mercomste.3011
+	desc = "mercomste2011"
+	picture = viking_male_wins2
+	title = mercomste_2011title
+	is_triggered_only = yes # Called from .3010
+
+	option = {
+		name = "mercomste2011a"
+		narrative_event = { id = mercomste.3012 }
+		}
+}
+
+narrative_event = {
+	id = mercomste.3012
+	desc = "mercomste2012"
+	picture = viking_male_wins
+	title = mercomste_2012title
+	is_triggered_only = yes # Called from .3011
+
+	option = {
+		name = "mercomste2012a"
+		narrative_event = { id = mercomste.3003 } 
+		}
+}
+
+####  End Male Specific Line
+####  Begin Female Specific Line
+
+narrative_event = {
+	id = mercomste.3020
+	desc = "mercomste2020"
+	picture = viking_girl_wins
+	title = mercomste_2020title
+	is_triggered_only = yes # Called from .3002
+
+	option = {
+		name = "mercomste2020a"
+		narrative_event = { id = mercomste.3021 }
+		hidden_tooltip = { event_target:freja_duel_seed = { character_event = { id = DWCore.9005 }}} # Pregnancy check for player
+		}
+}
+
+narrative_event = {
+	id = mercomste.3021
+	desc = "mercomste2021"
+	picture = viking_girl_wins2
+	title = mercomste_2021title
+	is_triggered_only = yes # Called from .3020
+
+	option = {
+		name = "mercomste2021a"
+		narrative_event = { id = mercomste.3022 }
+		}
+}
+
+narrative_event = {
+	id = mercomste.3022
+	desc = "mercomste2022"
+	picture = viking_girl_wins
+	title = mercomste_2022title
+	is_triggered_only = yes # Called from .3021
+
+	option = {
+		name = "mercomste2022a"
+		narrative_event = { id = mercomste.3003 } 
+		}
+}
+
+####  End Female Specific Line
+####  Begin CLOSING EVENT FOR VIKING DUEL CHAIN
+
+narrative_event = {
+	id = mercomste.3003
+	desc = "mercomste2003"
+	picture = mercom_sword
+	title = mercomste_2003title
+	is_triggered_only = yes # Called from .3022 & .3012
+
+	option = {
+		name = "mercomste2003a"
+		}
+}
+
+########################################################################
+
+# .9000 mercom_visit_recovery flag removal (hidden)  
+character_event = {
+	id = mercomste.9000
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # Various decisions call this, usually after 30 days
+	immediate = {
+		clr_character_flag = mercom_visit_recovery
+	}
+}
+
+# .9001 mercom_duel_recovery flag removal (hidden)  
+character_event = {
+	id = mercomste.9001
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # Various decisions call this, usually after 30 days
+	immediate = {
+		clr_character_flag = mercom_duel_recovery
+	}
+}

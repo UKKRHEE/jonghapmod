@@ -1,6 +1,0 @@
-﻿l_english:
-	regula_stress_loss_sex_event.0001.t:0 "Compedita releases stress."
-	regula_stress_loss_sex_event.0001.desc:0 "Your wife [stressed.GetTitledFirstName] has found comfort in the arms of [stressed_partner.GetTitledFirstName]. They both seem much more relaxed."
-
-	regula_stress_loss_sex_decision:0 "Find relief in a friend's arms."
-	regula_stress_loss_sex_decision_confirm:0 "Lay with another"

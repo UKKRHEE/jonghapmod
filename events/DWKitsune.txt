@@ -1,0 +1,70 @@
+### This file contains events specific to the Kitsune portion of the Dark World mod
+
+namespace = DWKitsune
+
+# .10 Hunted for my power
+narrative_event = {
+	id = DWKitsune.10
+	picture = a_placeholder
+	is_triggered_only = yes # Triggered by Decision
+	title = dw_kitsune_start_title	
+	trigger = {
+		has_far_east_content = yes # Content check
+	}
+	desc = { # Female specific
+		trigger = { 
+			is_female = yes
+		}
+		text = DWKitsune10
+		picture = kitsune_start1
+	}
+	desc = { # Male specific
+		trigger = {
+			is_female = no
+		}
+		text = DWKitsune10
+		picture = kitsune_start2
+	}
+	option = { # I shall not be a victim
+		name = DWTweaksOriginalKitsune
+		add_trait = kitsune
+		culture = kitsune_culture
+		capital_scope = {
+			culture = kitsune_culture
+		}		
+		hidden_tooltip = {
+			add_random_kitsune_portrait = yes
+		}
+	}
+	option = {
+		name = DWTweaksOriginalKitsune2
+		add_trait = kitsune
+		culture = kitsune_culture
+		capital_scope = {
+			culture = kitsune_culture
+		}
+		hidden_tooltip = {
+			add_random_kitsune_portrait = yes
+		}
+		custom_tooltip = {
+			text = DWAllRealmCharacters
+		}
+		hidden_tooltip = {
+			character_event = { id = DWKitsune.11 }
+		}
+	}	
+}
+
+character_event = {
+	id = DWKitsune.11
+	hide_window = yes
+	is_triggered_only = yes # Triggered by Decision
+	immediate = {
+		any_realm_character = {
+			limit = {
+				any_liege = { character = ROOT }
+			}
+			character_event = { id = DWSeeding.7 }
+		}
+	}
+}

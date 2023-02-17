@@ -1,0 +1,8 @@
+1.1.1 = {
+	active = yes
+	holder = 1
+	de_jure_liege = k_westkorea
+}
+769.1.1 = {
+	holder = 1
+}

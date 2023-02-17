@@ -1,0 +1,647 @@
+####아우구스투스 옥타비아누스의 후손####
+111000 = {
+	name=Khoruno
+	dynasty=8648
+	dna="dgbdfhhcaap"
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=145290
+	32.2.21={
+		birth=yes
+	}
+	92.1.1={
+		death=yes
+	}
+}
+111001 = {
+	name=Danmno
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=111000
+	67.2.21={
+		birth=yes
+	}
+	157.1.1={
+		death=yes
+	}
+}
+
+111002 = {
+	name=Korhunious
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=111001
+	102.2.21={
+		birth=yes
+	}
+	169.1.1={
+		death=yes
+	}
+}
+
+111003 = {
+	name=Augustus
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=111002
+	145.2.21={
+		birth=yes
+	}
+	214.1.1={
+		death=yes
+	}
+}
+
+111004 = {
+	name=Caiser
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=111003
+	200.2.21={
+		birth=yes
+	}
+	291.1.1={
+		death=yes
+	}
+}
+
+111005 = {
+	name=Coskipnous
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=111003
+	210.2.21={
+		birth=yes
+	}
+	301.1.1={
+		death=yes
+	}
+}
+
+111006 = {
+	name=Karinious-Lationuos
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=111005
+	241.2.21={
+		birth=yes
+	}
+	310.1.1={
+		death=yes
+	}
+}
+
+111006 = {
+	name=Karinou-Juliouss
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 1
+	stewardship = 1
+	father=111004
+	221.2.21={
+		birth=yes
+	}
+	281.1.1={
+		death=yes
+	}
+}
+
+111007 = {
+	name=Augustus-Caesar
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111005
+	301.2.21={
+		birth=yes
+	}
+	394.1.1={
+		death=yes
+	}
+}
+
+111008 = {
+	name=Caesar
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111007
+	381.2.21={
+		birth=yes
+	}
+	441.1.1={
+		death=yes
+	}
+}
+
+111009 = {
+	name="Caesar II"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111008
+	423.2.21={
+		birth=yes
+	}
+	492.1.1={
+		death=yes
+	}
+}
+
+111010 = {
+	name="Caesar III"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111009
+	478.2.21={
+		birth=yes
+	}
+	562.1.1={
+		death=yes
+	}
+}
+
+111011 = {
+	name="Caesar IV"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111010
+	531.2.21={
+		birth=yes
+	}
+	579.1.1={
+		death=yes
+	}
+}
+
+111012 = {
+	name="Caesar V"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111011
+	561.2.21={
+		birth=yes
+	}
+	599.1.1={
+		death=yes
+	}
+}
+
+111013 = {
+	name="Caesar VI"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111012
+	597.2.21={
+		birth=yes
+	}
+	649.1.1={
+		death=yes
+	}
+}
+
+111014 = {
+	name="Caesar VII"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111013
+	637.2.21={
+		birth=yes
+	}
+	701.1.1={
+		death=yes
+	}
+}
+
+111015 = {
+	name="Caesar VIII"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111014
+	692.2.21={
+		birth=yes
+	}
+	771.1.1={
+		death=yes
+	}
+}
+111016 = {
+	name="Caesar IX"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111015
+	723.2.21={
+		birth=yes
+	}
+	782.1.1={
+		death=yes
+	}
+}
+
+111017 = {
+	name="Caesar X"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111016
+	769.2.21={
+		birth=yes
+	}
+	822.1.1={
+		death=yes
+	}
+}
+
+111018 = {
+	name="Caesar XI"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111017
+	803.2.21={
+		birth=yes
+	}
+	876.1.1={
+		death=yes
+	}
+}
+
+111019 = {
+	name="Caesar XII"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111018
+	833.2.21={
+		birth=yes
+	}
+	876.1.1={
+		death=yes
+	}
+}
+
+111020 = {
+	name="Caesar XIII"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111019
+	867.2.21={
+		birth=yes
+	}
+	876.1.1={
+		death=yes
+	}
+}
+
+111021 = {
+	name="Augustus II"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111019
+	868.2.21={
+		birth=yes
+	}
+	929.1.1={
+		death=yes
+	}
+}
+
+111022 = {
+	name="Caesar XIV"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111021
+	900.2.21={
+		birth=yes
+	}
+	956.1.1={
+		death=yes
+	}
+}
+
+111023 = {
+	name="Caesar XV"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111022
+	936.2.21={
+		birth=yes
+	}
+	1102.1.1={
+		death=yes
+	}
+}
+
+111024 = {
+	name="Caesar XVI"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111023
+	967.2.21={
+		birth=yes
+	}
+	1032.1.1={
+		death=yes
+	}
+}
+
+111025 = {
+	name="Caesar XVII"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111024
+	1020.2.21={
+		birth=yes
+	}
+	1078.1.1={
+		death=yes
+	}
+}
+
+111026 = {
+	name="Caesar XVIII"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111025
+	1069.2.21={
+		birth=yes
+	}
+	1131.1.1={
+		death=yes
+	}
+}
+
+111027 = {
+	name="Caesar XIX"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111026
+	1101.2.21={
+		birth=yes
+	}
+	1179.1.1={
+		death=yes
+	}
+}
+
+111028 = {
+	name="Caesar XX"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111027
+	1130.2.21={
+		birth=yes
+	}
+	1189.1.1={
+		death=yes
+	}
+}
+
+111029 = {
+	name="Caesar XXI"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111028
+	1159.2.21={
+		birth=yes
+	}
+	1202.1.1={
+		death=yes
+	}
+}
+
+111030 = {
+	name="Caesar XXII"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111029
+	1181.2.21={
+		birth=yes
+	}
+	1232.1.1={
+		death=yes
+	}
+}
+
+111031= {
+	name="Caesar XXIII"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111030
+	1210.2.21={
+		birth=yes
+	}
+	1279.1.1={
+		death=yes
+	}
+}
+
+111032= {
+	name="Caesar XXIV"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111031
+	1250.2.21={
+		birth=yes
+	}
+	1321.1.1={
+		death=yes
+	}
+}
+
+111033= {
+	name="Caesar XXV"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111032
+	1289.2.21={
+		birth=yes
+	}
+	1341.1.1={
+		death=yes
+	}
+}
+
+111034= {
+	name="Caesar XXVI"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111033
+	1312.2.21={
+		birth=yes
+	}
+	1391.1.1={
+		death=yes
+	}
+}
+
+111034= {
+	name="Caesar XXVII"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111032
+	1312.2.21={
+		birth=yes
+	}
+	1391.1.1={
+		death=yes
+	}
+}
+
+111035= {
+	name="Caesar XXVIII"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111034
+	1343.2.21={
+		birth=yes
+	}
+	1381.1.1={
+		death=yes
+	}
+}
+
+111036= {
+	name="Caesar XXIX"
+	dynasty=8648
+	religion=catholic
+	dna="dgbdfhhcaap"
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111035
+	1367.2.21={
+		birth=yes
+	}
+	1431.1.1={
+		death=yes
+	}
+}
+
+111037= {
+	name="Caesar XXX"
+	dynasty=8648
+	religion=catholic
+	culture=roman
+	diplomacy = 9
+	stewardship = 3
+	father=111036
+	1421.2.21={
+		birth=yes
+	}
+	1491.1.1={
+		death=yes
+	}
+}

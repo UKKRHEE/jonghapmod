@@ -1,0 +1,56 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_society_main_background_dw_the_chosen_of_lilith"
+		texturefile = "gfx\\interface\\societies\\society_bg_dw_the_chosen_of_lilith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_dw_the_chosen_of_lilith"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_dw_the_chosen_of_lilith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_dw_the_chosen_of_lilith"
+		texturefile = "gfx\\interface\\societies\\symbol_small_dw_the_chosen_of_lilith.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_dw_the_chosen_of_lilith"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_dw_the_chosen_of_lilith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_dw_the_chosen_of_lilith"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_dw_the_chosen_of_lilith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_influence_dw_the_chosen_of_lilith"
+		texturefile = "gfx\\interface\\societies\\society_influence_dw_the_chosen_of_lilith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_dw_the_chosen_of_lilith"
+		texturefile = "gfx\\interface\\societies\\society_currency_dw_the_chosen_of_lilith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_dw_the_chosen_of_lilith_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_dw_the_chosen_of_lilith.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_dw_the_chosen_of_lilith_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_dw_the_chosen_of_lilith_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_dw_the_chosen_of_lilith_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_dw_the_chosen_of_lilith_locked.dds"
+		noOfFrames = 4
+	}
+}

@@ -1,0 +1,199 @@
+### This file contains events specific to the Elf portion of the Dark World mod
+
+namespace = DWElf
+
+# .10 The struggle against time
+narrative_event = {
+	id = DWElf.10
+	picture = a_placeholder
+	is_triggered_only = yes # Triggered by Decision
+	title = dw_elf_start_title	
+	trigger = {
+		has_fae_content = yes # Content check
+	}
+	desc = { # Female specific
+		trigger = { 
+			is_female = yes
+		}
+		text = DWElf10
+		picture = elf_start1
+	}
+	desc = { # Male specific
+		trigger = {
+			is_female = no
+		}
+		text = DWElf10
+		picture = elf_start2
+	}
+	option = { # I shall be a new dawn
+		name = DWElf10A
+		add_trait = elf
+		culture = elven
+		capital_scope = {
+			culture = elven
+		}		
+		hidden_tooltip = {
+			add_random_elf_portrait = yes
+		}
+	}
+	option = {
+		name = DWElf10B
+		add_trait = elf
+		culture = elven
+		capital_scope = {
+			culture = elven
+		}
+		hidden_tooltip = {
+			add_random_elf_portrait = yes
+		}
+		custom_tooltip = {
+			text = DWAllRealmCharacters
+		}
+		hidden_tooltip = {
+			character_event = { id = DWElf.11 }
+		}
+	}	
+}
+
+character_event = {
+	id = DWElf.11
+	hide_window = yes
+	is_triggered_only = yes # Triggered by Decision
+	immediate = {
+		any_realm_character = {
+			limit = {
+				any_liege = { character = ROOT }
+			}
+			character_event = { id = DWSeeding.5 }
+		}
+	}
+}
+
+narrative_event = { # Unicorn
+	id = DWElf.20
+	ai = no
+	picture = GFX_unicorn
+	is_triggered_only = yes
+	title = DWElf2T
+	desc = DWElf2
+	trigger = {
+		has_fae_content = yes
+		trait = elf
+		OR = {
+			trait = virgin
+			trait = chaste
+			trait = just
+			trait = kind
+		}
+		practical_age < 45
+		is_pregnant = no
+	}
+
+	immediate = {
+		create_character = {
+			random_traits = no
+			female = no
+			name = Wynn
+			age = 16
+			religion = ROOT
+			culture = horse
+			race = horse
+			health = 8.0
+			historical = yes
+			trait = flamboyant_schemer
+			trait = fair
+			trait = strong
+			trait = kind
+			trait = just
+			trait = gigantic_dick
+			trait = unicorn
+			attributes = {
+				diplomacy = 6 
+				intrigue = 6 
+				martial = 6
+				stewardship = 6
+				learning = 6 
+			}
+		}
+		new_character = {
+			set_character_flag = dw_unicorn
+			save_event_target_as = unicorn
+			set_variable = { which = dick_size value = 6 }
+			if = {  # For Christianity mod compatibility, to prevent a second set of tits getting assigned later
+				limit = {
+					has_global_flag = christ_enabled
+				}
+				set_character_flag = nada_checked
+			}
+		}
+	}
+	option = { # He is so majestic. I must bring him to court!
+		name = DWElf2TTA
+		event_target:unicorn = { }
+	}
+	option = { # He is so... big.
+		name = DWElf2TTB
+		trigger = {
+			has_bestiality_content = yes
+			OR = {
+				AND = {
+					is_female = no
+					trait = homosexual
+				}
+				is_female = yes
+			}
+		}
+		event_target:unicorn = { }
+		add_lover = event_target:unicorn
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_married = no
+				}
+				impregnate = event_target:unicorn
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:unicorn
+			}
+		}
+	}
+	option = {
+		name = DWElf2TTC
+		trigger = {
+			OR = {
+				trait = cruel
+				trait = impaler
+				trait = is_fat
+				trait = is_malnourished
+				trait = gluttonous
+			}
+		}
+		event_target:unicorn = {
+			death = { death_reason = death_execution_eaten killer = ROOT }
+		}
+		add_character_modifier = {
+			name = unicorn_meat
+			duration = -1
+		}
+	}
+		
+}
+
+character_event = { # Wynn's children are horses
+	id = DWElf.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		true_father_even_if_dead = {
+			has_character_flag = dw_unicorn
+		}
+	}
+	immediate = {
+		culture = horse
+	}
+}

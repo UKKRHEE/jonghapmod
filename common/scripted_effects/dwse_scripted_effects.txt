@@ -1,0 +1,462 @@
+leave_court_for_forest_effect = { # NOTE: this does not set a "killer", meaning if you want them to be ORDERED to go to China, a killer needs to be set (eg: "killer = ROOT")
+	custom_tooltip = {
+		text = will_leave_for_forest_tt
+	}
+	set_character_flag = ignore_refund
+	hidden_effect = { death = { death_reason = death_went_to_forest } }
+}
+
+kidnap_dragon = { # Very similar to the basic setting - yet the additional money improves odds
+	random_list ={
+		20 = { # Opposing SpyMaster involved
+			modifier = { # No chance Opposing SpyMaster gets involved if our SpyMaster is 8 points better in intrigue
+				factor = 0
+				FROM = {
+					any_child = {
+							trait = dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target_spymaster
+								attribute = intrigue
+								value = 8
+							}
+					}
+				}
+			}
+			modifier = { # 50% less chance Opposing SpyMaster gets involved if our SpyMaster is 4 points better in intrigue
+				factor = 0.5
+				FROM = {
+					any_child = {
+							trait = dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target_spymaster
+								attribute = intrigue
+								value = 4
+							}
+					}
+				}
+			}
+			# Random List
+			random_list = { # new potential results list that is more risky and less likely to succeed
+				25 = { # Basic Failure - only loss of money
+					# TODO event regarding the failure and opposing SpyMaster involvement
+				}
+				25 = { # Bad Failure
+					random_list = { # Variations of bad failures.
+						# TODO Add events regarding each failure - perhaps add more failure options
+						45 = { # SpyMaster is wounded, but escapes
+							FROM = {
+								any_child = {
+									limit = {
+										trait = dragon_adult
+										is_adult = yes
+										is_alive = yes
+									}
+									add_trait = wounded
+								}
+							}
+						}
+						10 = { # SpyMaster 'falls' to their death accidentally
+							FROM = {
+								any_child = {
+									limit = {
+										trait = dragon_adult
+										is_adult = yes
+										is_alive = yes
+									}
+									death = { death_reason = death_accident_fall }
+								}
+							}
+						}
+					}
+				}
+				50 = { # Success
+					narrative_event = { id = dwseom.3801 days = 7 }
+				}
+			}
+		}
+		20 = { # Basic Failure - only loss of money
+			modifier = { # 75% less chance of basic failure if our SpyMaster is 8 points better in intrigue
+				factor = 0.25
+				FROM = {
+					any_child = {
+							trait = dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 8
+							}
+					}
+				}
+			}
+			modifier = { # 50% less chance of basic failure if our SpyMaster is 4 points better in intrigue
+				factor = 0.5
+				FROM = {
+					any_child = {
+							trait = dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 4
+							}
+					}
+				}
+			}
+			# TODO Add event regarding the failure
+		}
+		20 = { # Bad Failure - SpyMaster injured / imprisoned / or killed			
+			modifier = { # No chance of a bad failure if our SpyMaster is 8 points better in intrigue
+				factor = 0
+				FROM = {
+					any_child = {
+							trait = dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 8
+							}
+					}
+				}
+			}
+			modifier = { # 50% less chance of a bad failure if our SpyMaster is 4 points better in intrigue
+				factor = 0.5
+				FROM = {
+					any_child = {
+							trait = dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 4
+							}
+					}
+				}
+			}
+			random_list = { # Variations of bad failures.
+				# TODO Add events regarding each failure - perhaps add more failure options
+				90 = { # SpyMaster is wounded, but escapes
+					FROM = {
+						any_child = {
+							limit = {
+								trait = dragon_adult
+								is_adult = yes
+								is_alive = yes
+							}
+							add_trait = wounded
+						}
+					}
+				}
+				10 = { # SpyMaster 'falls' to their death accidentally
+					FROM = {
+						any_child = {
+							limit = {
+								trait = dragon_adult
+								is_adult = yes
+								is_alive = yes
+							}
+							death = {
+								death_reason = death_accident_fall
+							}
+						}
+					}
+				}
+			}
+		}
+		40 = { # Success
+			narrative_event = { id = dwseom.3801 days = 7 }
+		}
+	}
+}
+
+add_random_dwse_lizard_portrait = {
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait1 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait2 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait3 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait4 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait5 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait6 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait7 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait8 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait9 
+		}
+
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait10 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait11 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait12 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait13 
+		}
+
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait14
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait15 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait16 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait17 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait18 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait19 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait20 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				is_female = no
+			}
+			add_trait = dwse_portrait21 
+		}
+		20 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwse_portrait22 
+		}
+		20 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwse_portrait23 
+		}
+		20 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwse_portrait24 
+		}
+		20 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwse_portrait25 
+		}
+		20 = {
+			modifier = {
+				factor = 0
+				is_female = yes
+			}
+			add_trait = dwse_portrait26 
+		}
+	}
+}
+
+remove_dwse_lizard_portrait = {
+	remove_trait = dwse_portrait1
+	remove_trait = dwse_portrait2
+	remove_trait = dwse_portrait3
+	remove_trait = dwse_portrait4
+	remove_trait = dwse_portrait5
+	remove_trait = dwse_portrait6
+	remove_trait = dwse_portrait7
+	remove_trait = dwse_portrait8
+	remove_trait = dwse_portrait9
+	remove_trait = dwse_portrait10
+	remove_trait = dwse_portrait11
+	remove_trait = dwse_portrait12
+	remove_trait = dwse_portrait13
+	remove_trait = dwse_portrait14
+	remove_trait = dwse_portrait15
+	remove_trait = dwse_portrait16
+	remove_trait = dwse_portrait17
+	remove_trait = dwse_portrait18
+	remove_trait = dwse_portrait19
+	remove_trait = dwse_portrait20
+	remove_trait = dwse_portrait21
+	remove_trait = dwse_portrait22
+	remove_trait = dwse_portrait23
+	remove_trait = dwse_portrait24
+	remove_trait = dwse_portrait25
+	remove_trait = dwse_portrait26
+}
+
+add_random_dwse_dragon_portrait = {
+	random_list = {
+		5 = {
+			add_trait = dwse_dragon_portrait1 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait2 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait3 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait4 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait5 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait6 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait7 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait8 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait9 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait10 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait11 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait12 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait13 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait14
+		}
+	}
+}
+
+remove_dwse_dragon_portrait = {
+	remove_trait = dwse_dragon_portrait1
+	remove_trait = dwse_dragon_portrait2
+	remove_trait = dwse_dragon_portrait3
+	remove_trait = dwse_dragon_portrait4
+	remove_trait = dwse_dragon_portrait5
+	remove_trait = dwse_dragon_portrait6
+	remove_trait = dwse_dragon_portrait7
+	remove_trait = dwse_dragon_portrait8
+	remove_trait = dwse_dragon_portrait9
+	remove_trait = dwse_dragon_portrait10
+	remove_trait = dwse_dragon_portrait11
+	remove_trait = dwse_dragon_portrait12
+	remove_trait = dwse_dragon_portrait13
+	remove_trait = dwse_dragon_portrait14
+
+}

@@ -1,0 +1,35 @@
+###################################################################################
+### Contains nicknames that are intended for use in the Dark World Content Pack ###
+###################################################################################
+###  SEARCH ###FIXME FOR WORK TO DO
+
+# TRIGGERED ONLY
+################
+
+nick_the_goddess = {}
+nick_the_cumslut = {}
+nick_the_painslut = {}
+nick_the_dominatrix = {}
+nick_the_ironlady = {}
+nick_the_sexy = {}
+nick_the_slut = {}
+nick_the_gorgeous = {}
+nick_the_ttpervert = {}
+nick_the_ttdeviant = {}
+
+## Mercom Specific###
+nick_mercom_cocksleeve = {}
+nick_mercom_com = {}
+
+# GIVEN BY TRAITS
+#################
+#nick_the_lisp_and_lame = {
+#	allow = {
+#		age = 16
+#		trait = lisp
+#		trait = clubfooted
+#	}
+#	chance = {
+#		factor = 5
+#	}
+#}

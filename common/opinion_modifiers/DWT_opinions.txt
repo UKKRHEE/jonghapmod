@@ -1,0 +1,96 @@
+# Rape opinions
+
+opinion_rape_fight = {
+	opinion = -10
+	months = 3
+}
+
+dw_opinion_good_brawl = {
+	opinion = 15
+	months = 3
+}
+
+opinion_refused_investigation_help = {
+	opinion = -20
+	months = 4
+}
+
+opinion_raped_me = {
+	opinion = -100
+	months = 240
+	prison_reason = yes	# This one gives righteous cause to imprison
+	revoke_reason = yes	# This one gives righteous cause to revoke ONE title
+}
+opinion_almost_raped_me = {
+	opinion = -40
+	months = 4
+}
+opinion_almost_raped_family = {
+	opinion = -10
+	months = 6
+	inherit = yes
+}
+opinion_almost_raped_spouse = {
+	opinion = -40
+	months = 6
+}
+opinion_took_virginity_by_force = {
+	opinion = -30
+	months = 120
+	prison_reason = yes
+	revoke_reason = yes
+}
+opinion_took_virginity = {
+	opinion = 20
+	months = 1200
+}
+opinion_took_family_members_virginity_by_force = {
+	opinion = -30
+	months = 240
+	prison_reason = yes
+	revoke_reason = yes
+}
+opinion_raped_me2 = {
+	opinion = -100
+	months = 240
+	prison_reason = yes
+	revoke_reason = yes
+}
+opinion_raped_family = {
+	opinion = -40
+	months = 240
+	prison_reason = yes
+	revoke_reason = yes
+	inherit = yes
+}
+opinion_raped_spouse = {
+	opinion = -80
+	months = 240
+	prison_reason = yes
+	revoke_reason = yes
+}
+opinion_raped_subject = {
+	opinion = -10
+	months = 120
+	prison_reason = yes
+	revoke_reason = yes
+}
+dwt_tyrant_rapist = {
+	opinion = -40
+	months = 240
+}
+raper_ruler = {
+	opinion = -10
+	months = 1
+}
+# Seduced my spouse and have him/her turn against me
+opinion_used_spouse = {
+	opinion = -20
+	months = 24
+}
+
+# Seduced my family member
+opinion_used_family_member = {
+	opinion = -10
+	months = 24
+}

@@ -1,0 +1,15 @@
+9051218 = {
+	name="Satrina"
+	culture="ashkenazi"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 4
+			texture_internal = 12
+			emblem = 0
+			color = 10
+			color = 5
+		}
+		religion="messalian"
+	}
+}

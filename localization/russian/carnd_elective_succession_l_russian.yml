@@ -1,3 +1,0 @@
-﻿l_russian:
-
- carnd_tooltip_elector_vote_not_futa:0 "[candidate.GetSheHe|U] не [GetTrait('futa').GetName( candidate.Self )]: $VALUE|=+0$"

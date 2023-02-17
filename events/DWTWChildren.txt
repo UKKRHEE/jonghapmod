@@ -1,0 +1,170 @@
+namespace = DWChildren
+
+character_event = {
+	id = DWChildren.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = dwse_lizard
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_female = yes
+				trait = orc
+			}
+			add_trait = orc_child1
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				trait = orc
+			}
+			add_trait = orc_child2
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				trait = elf
+			}
+			add_trait = elf_child1
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				trait = elf
+			}
+			add_trait = elf_child2
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				trait = kitsune
+			}
+			add_trait = kitsune_child1
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				trait = kitsune
+			}
+			add_trait = kitsune_child2
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				trait = neko
+			}
+			add_trait = neko_child1
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				trait = neko
+			}
+			add_trait = neko_child2
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				trait = fairy
+			}
+			add_trait = fairy_child1
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				trait = fairy
+			}
+			add_trait = fairy_child2
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				trait = dwse_lizard
+			}
+			add_trait = dwse_lizard_child1
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				trait = dwse_lizard
+			}
+			add_trait = dwse_lizard_child2
+		}		
+	}
+}
+
+character_event = {
+	id = DWChildren.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			trait = orc
+			trait = elf
+			trait = kitsune
+			trait = neko
+			trait = fairy
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = orc
+			}
+			remove_trait = orc_child1
+			remove_trait = orc_child2
+			add_random_orc_portrait = yes
+		}
+		else_if = {
+			limit = {
+				trait = elf
+			}
+			remove_trait = elf_child1
+			remove_trait = elf_child2
+			add_random_elf_portrait = yes
+		}
+		else_if = {
+			limit = {
+				trait = kitsune
+			}
+			remove_trait = kitsune_child1
+			remove_trait = kitsune_child2
+			add_random_kitsune_portrait = yes
+		}	
+		else_if = {
+			limit = {
+				trait = neko
+			}
+			remove_trait = neko_child1
+			remove_trait = neko_child2
+			add_random_neko_portrait = yes
+		}
+		else_if = {
+			limit = {
+				trait = fairy
+			}
+			remove_trait = fairy_child1
+			remove_trait = fairy_child2
+			add_random_fairy_portrait = yes
+		}
+		else_if = {
+			limit = {
+				trait = dwse_lizard
+			}
+			remove_trait = dwse_lizard_child1
+			remove_trait = dwse_lizard_child2
+			add_random_dwse_lizard_portrait = yes
+		}		
+	}
+}

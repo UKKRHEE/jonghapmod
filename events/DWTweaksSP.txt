@@ -1,0 +1,68 @@
+## Serpents Purge - choose to abort or keep
+# .8200 Kills the child, removes the parents (hidden)
+
+namespace = DWTweaksSP
+
+character_event = {
+	id = DWTweaksSP.1
+	is_triggered_only = yes # Triggered by on_action
+	hide_window = yes
+	trigger = {
+		mother_even_if_dead = { 
+			has_character_flag = dwtw_purge_childbirth
+		}
+	}	
+	immediate = {
+		if = {
+			limit = {
+				mother_even_if_dead = { 
+					has_character_flag = dwtw_purge_childbirth
+				}
+			}
+			mother = { 
+				narrative_event = { id = DWTweaksSP.2 } 
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = DWTweaksSP.2
+	desc = "DWTweaks2"
+	is_triggered_only = yes # Triggered by on_action
+	picture = alchemist_serpentspurge
+	title = dwtw_serpentpurge_choice
+	
+	option = {
+		name = "DWTweaks2a"
+		hidden_effect = { clr_character_flag = dwtw_purge_childbirth }
+	}
+	option = {
+		name = "DWTweaks2b"
+		hidden_effect = {
+			FROM = {
+				mother = { clr_character_flag = dwtw_purge_childbirth }
+				set_father = 0
+				set_mother = 0
+				death ={
+					death_reason = death_natural
+				}
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = DWTweaksSP.3
+	desc = "DWCourt250"
+	picture = alchemist_serpentspurge
+	title = dw_alchemist_shopping
+	is_triggered_only = yes
+	option = {
+		name = "DWCourt250A"
+		wealth = -25
+		set_character_flag = dwtw_purge_childbirth
+		piety = -50 # Frowned upon by the faiths
+	}
+}
+

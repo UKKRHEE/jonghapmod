@@ -1,0 +1,4 @@
+opinion_dwe_laughingstock = {
+	opinion = -10
+	years = 10
+}

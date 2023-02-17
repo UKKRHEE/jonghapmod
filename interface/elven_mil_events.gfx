@@ -1,0 +1,33 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "elf_recruit"
+		texturefile = "gfx/event_pictures/elven_recruit.dds"
+	}
+	
+	spriteType = {
+		name = "elf_recruit_faith"
+		texturefile = "gfx/event_pictures/elf_recruit_faith.dds"
+	}
+	
+	spriteType = {
+		name = "elf_human_capture"
+		texturefile = "gfx/event_pictures/elven_slave_capture.dds"
+	}
+	
+	spriteType = {
+		name = "elf_human_usage"
+		texturefile = "gfx/event_pictures/elven_slave_usage.dds"
+	}
+	
+	spriteType = {
+		name = "elf_human_warriors"
+		texturefile = "gfx/event_pictures/elven_slave_fight.dds"
+	}
+	
+	spriteType = {
+		name = "elf_victory"
+		texturefile = "gfx/event_pictures/elf_victory.dds"
+	}
+	
+}

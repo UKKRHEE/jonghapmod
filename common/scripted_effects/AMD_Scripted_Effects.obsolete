@@ -1,0 +1,433 @@
+
+
+AMD_E_2P_RESULT_G3 = {	#	화강피 15/15/10		위신 50/25/-25
+	if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#강간
+		event_target:AMD_E_ET_RA = {	#피해자에게 +15/12	위신+3
+			opinion = {	who = event_target:AMD_E_ET_RV	modifier = opinion_favorite	months = 18	}
+			prestige = 50
+		}
+		event_target:AMD_E_ET_RV = {	#강간자에게 +10/12	위신-1
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_disgusted	months = 6	}
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_seduced_lustful_worship	months = 18	}
+			prestige = -50
+		}
+	}
+	else = {	#화간	서로 +15/12, 위신+25
+		event_target:AMD_ET_ATK = {
+			opinion = {	who = event_target:AMD_ET_DEF	modifier = opinion_seduced_lustful_worship	months = 30	}
+			prestige = 50
+		}
+		event_target:AMD_ET_DEF = {
+			opinion = {	who = event_target:AMD_ET_ATK	modifier = opinion_seduced_lustful_worship	months = 30	}
+			prestige = 50
+		}
+	}
+}
+AMD_E_2P_RESULT_G2 = {	#	화강피 15/15/10		위신 25/10/-10
+	if = {	limit = {	AMD_T_STF_IS_CONS = yes	}	#화간	서로 +15/12, 위신+25
+		event_target:AMD_ET_ATK = {
+			opinion = {	who = event_target:AMD_ET_DEF	modifier = opinion_happy	months = 18	}
+			prestige = 25
+		}
+		event_target:AMD_ET_DEF = {
+			opinion = {	who = event_target:AMD_ET_ATK	modifier = opinion_happy	months = 18	}
+			prestige = 25
+		}
+	}
+	if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#강간
+		event_target:AMD_E_ET_RA = {	#피해자에게 +15/12	위신+3
+			opinion = {	who = event_target:AMD_E_ET_RV	modifier = opinion_delighted	months = 12	}
+			prestige = 15
+		}
+		event_target:AMD_E_ET_RV = {	#강간자에게 +10/12	위신-1
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_disgusted	months = 6	}
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_lustful_buddy	months = 12	}
+			prestige = -25
+		}
+	}
+}
+AMD_E_2P_RESULT_G1 = {	#	화강피 10/10/5		위신 10/5/-5
+	if = {	limit = {	AMD_T_STF_IS_CONS = yes	}	#화간	서로 +10/6, 위신+5
+		event_target:AMD_ET_ATK = {
+			opinion = {	who = event_target:AMD_ET_DEF	modifier = opinion_lustful_buddy	months = 12	}
+			prestige = 10
+		}
+		event_target:AMD_ET_DEF = {
+			opinion = {	who = event_target:AMD_ET_ATK	modifier = opinion_lustful_buddy	months = 12	}
+			prestige = 10
+		}
+	}
+	if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#강간
+		event_target:AMD_E_ET_RA = {	#피해자에게 +10/6	위신+5
+			opinion = {	who = event_target:AMD_E_ET_RV	modifier = opinion_satisfied	months = 6	}
+			prestige = 5
+		}
+		event_target:AMD_E_ET_RV = {	#강간자에게 +5/6	위신-1
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_disgusted	months = 6	}
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_impressed	months = 6	}
+			prestige = -10
+		}
+	}
+}
+AMD_E_2P_RESULT_G0 = {	#	화강피 5/5/-5		위신 5/3/-1
+	if = {	limit = {	AMD_T_STF_IS_CONS = yes	}	#화간	서로 +5/6, 위신+5
+		event_target:AMD_ET_ATK = {
+			opinion = {	who = event_target:AMD_ET_DEF	modifier = opinion_satisfied	months = 6	}
+			prestige = 5
+		}
+		event_target:AMD_ET_DEF = {
+			opinion = {	who = event_target:AMD_ET_ATK	modifier = opinion_satisfied	months = 6	}
+			prestige = 5
+		}
+	}
+	if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#강간
+		event_target:AMD_E_ET_RA = {	#피해자에게 +5/6	위신+1
+			opinion = {	who = event_target:AMD_E_ET_RV	modifier = opinion_satisfied	months = 6	}
+			prestige = 3
+		}
+		event_target:AMD_E_ET_RV = {	#강간자에게 -5/6	위신-1
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_disgusted	months = 6	}
+			prestige = -5
+		}
+	}
+}
+AMD_E_2P_RESULT_F1 = {	#	화강피 -3/-5/-10		위신 -5/-10/-1
+	if = {	limit = {	AMD_T_STF_IS_CONS = yes	}	#화간
+		#	상대가 남자라면 -5/3 사내답지 않음	여자라면 -3/6 약간 실망함	위신 -10
+		event_target:AMD_ET_ATK = {
+			if = {	limit = {	event_target:AMD_ET_DEF = {	is_female = yes	}	}
+				opinion = {	who = event_target:AMD_ET_DEF	modifier = opinion_mildly_disappointed	months = 6	}
+			}
+			if = {	limit = {	event_target:AMD_ET_DEF = {	is_female = no	}	}
+				opinion = {	who = event_target:AMD_ET_DEF	modifier = not_a_real_man	months = 3	}
+			}
+			prestige = -5
+		}
+		event_target:AMD_ET_DEF = {
+			if = {	limit = {	event_target:AMD_ET_ATK = {	is_female = yes	}	}
+				opinion = {	who = event_target:AMD_ET_ATK	modifier = opinion_mildly_disappointed	months = 6	}
+			}
+			if = {	limit = {	event_target:AMD_ET_ATK = {	is_female = no	}	}
+				opinion = {	who = event_target:AMD_ET_ATK	modifier = not_a_real_man	months = 3	}
+			}
+			prestige = -5
+		}
+	}
+	if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#강간
+		event_target:AMD_E_ET_RA = {	#	상대가 남자라면 -5/3 사내답지 않음	여자라면 -5/3 실망함	위신 -10
+			if = {	limit = {	event_target:AMD_E_ET_RV = {	is_female = yes	}	}
+				opinion = {	who = event_target:AMD_E_ET_RV	modifier = opinion_disappointed	months = 3	}
+			}
+			if = {	limit = {	event_target:AMD_E_ET_RV = {	is_female = no	}	}
+				opinion = {	who = event_target:AMD_E_ET_RV	modifier = not_a_real_man	months = 3	}
+			}
+			prestige = -10
+		}
+		event_target:AMD_E_ET_RV = {	#강간자에게 -5/6 싫어함	위신 -1
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_dislike	months = 6	}
+			prestige = -1
+		}
+	}
+}
+AMD_E_2P_RESULT_F2 = {	#	화강피 -10/-5/-15		위신 -15/-25/-1
+	if = {	limit = {	AMD_T_STF_IS_CONS = yes	}	#화간
+		#	-10/6 불만스러워함, 위신 -10
+		event_target:AMD_ET_ATK = {
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_disgruntled	months = 6	}
+			prestige = -10
+		}
+		event_target:AMD_ET_DEF = {
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_disgruntled	months = 6	}
+			prestige = -10
+		}
+	}
+	if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#강간
+		#	
+		event_target:AMD_E_ET_RA = {	#피해자에게 -5/6 실망함,	위신 -25
+			if = {	limit = {	event_target:AMD_E_ET_RV = {	is_female = yes	}	}
+				opinion = {	who = event_target:AMD_E_ET_RV	modifier = opinion_disappointed	months = 6	}
+			}
+			if = {	limit = {	event_target:AMD_E_ET_RV = {	is_female = no	}	}
+				opinion = {	who = event_target:AMD_E_ET_RV	modifier = not_a_real_man	months = 6	}
+			}
+			prestige = -25
+		}
+		event_target:AMD_E_ET_RV = {	#강간자에게 -15/12 화가남,	위신 -1
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_angry	months = 12	}
+			prestige = -1
+		}
+	}
+}
+AMD_E_2P_RESULT_F3 = {	#	화강피 -15/-5/-25		위신 -15/-50/-1
+	if = {	limit = {	AMD_T_STF_IS_CONS = yes	}	#화간
+		#	-15/12 화가남, 위신 -10
+		event_target:AMD_ET_ATK = {
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_angry	months = 12	}
+			prestige = -15
+		}
+		event_target:AMD_ET_DEF = {
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_angry	months = 12	}
+			prestige = -15
+		}
+	}
+	if = {	limit = {	AMD_T_STF_IS_RAPE = yes	}	#강간
+		event_target:AMD_E_ET_RA = {	#피해자에게 -5/12 실망함,	위신 -50
+			if = {	limit = {	event_target:AMD_E_ET_RV = {	is_female = yes	}	}
+				opinion = {	who = event_target:AMD_E_ET_RV	modifier = opinion_disappointed	months = 12	}
+			}
+			if = {	limit = {	event_target:AMD_E_ET_RV = {	is_female = no	}	}
+				opinion = {	who = event_target:AMD_E_ET_RV	modifier = not_a_real_man	months = 12	}
+			}
+			prestige = -50
+		}
+		event_target:AMD_E_ET_RV = {	#강간자에게 -15/30 화가남, -10/18 싫어함,	위신 -1
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_dislike	months = 18	}
+			opinion = {	who = event_target:AMD_E_ET_RA	modifier = opinion_angry	months = 30	}
+			prestige = -1
+		}
+	}
+}
+
+
+AMD_E_2P_SCORE_CLEAR = {
+	clear_event_target = AMD_ET_SCORE_G3
+	clear_event_target = AMD_ET_SCORE_G2
+	clear_event_target = AMD_ET_SCORE_G1
+	clear_event_target = AMD_ET_SCORE_G0
+	clear_event_target = AMD_ET_SCORE_F1
+	clear_event_target = AMD_ET_SCORE_F2
+	clear_event_target = AMD_ET_SCORE_F3
+}
+AMD_E_2P_SCORE_GOOD1 = {	#	스코어	+1
+	custom_tooltip = {	text = "String_AMD_E_2P_SCORE_GOOD"	}	
+	hidden_tooltip = {
+		if = {	limit = {	event_target:AMD_ET_SCORE_G3 = {	is_alive = yes	}	}	break = yes	}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G2 = {	is_alive = yes	}	#	with skill_5
+				OR = {
+					event_target:AMD_ET_POV = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_ATK = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_DEF = {	trait = AMD_sex_skill_5	}
+				}
+			}
+			clear_event_target = AMD_ET_SCORE_G2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G3	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G1 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G2	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G0 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G0
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G1	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F1 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G0	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F2 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F1	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F3 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F3
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F2	}
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					event_target:AMD_ET_SCORE_G3 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G0 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F3 = {	always = yes	}
+				}
+			}
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G0	}
+			break = yes
+		}
+	}
+}
+AMD_E_2P_SCORE_GOOD2 = {	#	스코어	+2
+	custom_tooltip = {	text = "String_AMD_E_2P_SCORE_GOOD"	}	
+	hidden_tooltip = {
+		if = {	limit = {	event_target:AMD_ET_SCORE_G3 = {	is_alive = yes	}	}	break = yes	}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G2 = {	is_alive = yes	}	#	with skill_5
+				OR = {
+					event_target:AMD_ET_POV = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_ATK = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_DEF = {	trait = AMD_sex_skill_5	}
+				}
+			}
+			clear_event_target = AMD_ET_SCORE_G2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G3	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G1 = {	is_alive = yes	}	#	with skill_5
+				OR = {
+					event_target:AMD_ET_POV = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_ATK = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_DEF = {	trait = AMD_sex_skill_5	}
+				}
+			}
+			clear_event_target = AMD_ET_SCORE_G1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G3	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G1 = {	is_alive = yes	}	#	without skill_5
+				NOT = {
+					event_target:AMD_ET_POV = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_ATK = {	trait = AMD_sex_skill_5	}
+					event_target:AMD_ET_DEF = {	trait = AMD_sex_skill_5	}
+				}
+			}
+			clear_event_target = AMD_ET_SCORE_G1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G2	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G0 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G0
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G2	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F1 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G1	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F2 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G0	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F3 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F3
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F1	}
+			break = yes
+		}
+		if = {	#어떤 스코어도 없을때
+			limit = {
+				NOT = {
+					event_target:AMD_ET_SCORE_G3 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G0 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F3 = {	always = yes	}
+				}
+			}
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G1	}
+			break = yes
+		}
+	}
+}
+AMD_E_2P_SCORE_FAIL1 = {	#	스코어	-1
+	custom_tooltip = {	text = "String_AMD_E_2P_SCORE_FAIL"	}	
+	hidden_tooltip = {
+		if = {	limit = {	event_target:AMD_ET_SCORE_F3 = {	is_alive = yes	}	}	break = yes	}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F2 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F3	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F1 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F2	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G0 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G0
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F1	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G1 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G0	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G2 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G1	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G3 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G3
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G2	}
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					event_target:AMD_ET_SCORE_G3 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G0 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F3 = {	always = yes	}
+				}
+			}
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F1	}
+			break = yes
+		}
+	}
+}
+AMD_E_2P_SCORE_FAIL2 = {	#	스코어	-2
+	custom_tooltip = {	text = "String_AMD_E_2P_SCORE_FAIL"	}	
+	hidden_tooltip = {
+		if = {	limit = {	event_target:AMD_ET_SCORE_F3 = {	is_alive = yes	}	}	break = yes	}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F2 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F3	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_F1 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_F1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F3	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G0 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G0
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F2	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G1 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G1
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F1	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G2 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G2
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G0	}
+			break = yes
+		}
+		if = {	limit = {	event_target:AMD_ET_SCORE_G3 = {	is_alive = yes	}	}
+			clear_event_target = AMD_ET_SCORE_G3
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_G1	}
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					event_target:AMD_ET_SCORE_G3 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_G0 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F1 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F2 = {	always = yes	}
+					event_target:AMD_ET_SCORE_F3 = {	always = yes	}
+				}
+			}
+			event_target:AMD_ET_POV = {	save_event_target_as = AMD_ET_SCORE_F2	}
+			break = yes
+		}
+	}
+}

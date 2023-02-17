@@ -1,0 +1,70 @@
+dwse_dragon_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+}	
+dwse_dragon_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait5 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait6 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait7 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait8 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait9 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait10 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}

@@ -1,0 +1,140 @@
+targetted_decisions = {
+
+#
+# Original code by zia, author of Serpent Expansion
+#
+
+	exotictakecrown = {
+		is_high_prio = yes
+		ai_target_filter = realm
+		ai_check_interval = 36
+		from_potential = {
+			has_game_rule = { name = dw_racial_seeding value = dw_seeding_off }
+			is_landed = no
+			is_adult = yes
+			OR = {
+				is_female = no
+				AND = {
+					is_female = yes
+					OR = {
+						has_law = enatic_cognatic_succession
+						has_law = enatic_succession
+						has_law = true_cognatic_succession
+					}
+				}
+			}
+			NOR = {
+				trait = imbecile
+				trait = inbred
+				trait = slow
+			}			
+			OR = { # Not putting in the dragons because they have special events tied to them being unlanded
+				trait = houseirae_halfelf # House Irae integration
+				trait = houseirae_drow # House Irae integration
+				trait = dwse_lizard
+				trait = kitsune
+				trait = neko
+				trait = tentacle
+				trait = fairy
+				trait = orc
+				trait = elf
+			}
+		}
+		potential = {
+			ai = yes
+			is_landed = yes
+			is_close_relative = FROM
+			NOT = { is_child_of = FROM } # Murderer wont whack their own kids
+			NOR = {
+				trait = dragon_adult
+				trait = dragon_child
+				trait = houseirae_halfelf # House Irae integration
+				trait = houseirae_drow # House Irae integration
+				trait = dwse_lizard
+				trait = kitsune
+				trait = neko
+				trait = tentacle
+				trait = fairy
+				trait = orc
+				trait = elf
+				trait = dwf_ghost
+			}
+			OR = {
+				trait = imbecile
+				trait = inbred
+				trait = slow
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			abdicate_to = FROM
+			death = { death_reason = death_duel killer = FROM }
+			if = {
+				limit = { 
+					dynasty = FROM
+					OR = { 
+						sibling = FROM
+						ROOT = {
+							is_child_of = FROM
+						}
+						ROOT = {
+							is_grandchild_of = FROM
+						}
+						is_grandchild_of = FROM
+					}
+				}
+				FROM = {
+					add_trait = kinslayer
+				}
+			}
+			else_if = {
+				limit = { 
+					dynasty = FROM
+					OR = { 
+						is_aunt_uncle_of = FROM
+						ROOT = {
+							is_aunt_uncle_of = FROM
+						}
+						is_cousin_of = FROM
+					}
+				}
+				FROM = {
+					add_trait = familial_kinslayer
+				}
+			}
+			else_if = {
+				limit = { 
+					dynasty = FROM
+				}
+				FROM = {
+					add_trait = dynastic_kinslayer
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				any_player = {
+					player_heir = { # Prevents the player's own heir from getting whacked
+						character = ROOT
+					}
+				}
+				FROM = {
+					OR = {
+						trait = kind
+						trait = content
+						trait = craven
+						trait = patient
+					}
+				}
+			}
+			modifier = {
+				factor = 2.5
+				trait = ambitious
+			}
+		}
+	}
+}

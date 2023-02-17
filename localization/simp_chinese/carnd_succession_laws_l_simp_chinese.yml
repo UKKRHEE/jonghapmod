@@ -1,7 +1,0 @@
-﻿l_simp_chinese:
- carnd_futa_elective_succession_law: "[GetPlayer.Custom('CarnFutaTraitName')|U]选举法"
- carnd_futa_elective_succession_law_effects: "$feudal_elective_succession_law_effects$ [GetTrait('futa').GetName( GetNullCharacter )] 候选人的优先级总是高于其他候选人。"
- carnd_futa_elective_candidates:0 "$feudal_elective_candidates$"
- carnd_futa_elective_candidates_tooltip:0 "$feudal_elective_candidates_tooltip$"
- carnd_futa_elective_electors:0 "$feudal_elective_electors$"
- carnd_futa_elective_electors_tooltip:0 "$feudal_elective_electors_tooltip$"

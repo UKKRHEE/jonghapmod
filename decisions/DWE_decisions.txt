@@ -1,0 +1,37 @@
+#
+# Dark World Extras Decisions
+#
+#
+#
+
+decisions = {
+
+	dwe_bloodlinesearch = {
+		potential = {
+		 ai = no
+		 NOT = { has_global_flag = dwe_ancient_bloodline }
+		 NOT = { has_character_flag = dwe_blsearch_in_progress }
+		 NOT = { has_character_flag = dwe_blsearch_failed }
+
+		}
+		allow = {
+			 NOR = {
+			 trait = infirm
+			 trait = incapable
+			 trait = lunatic
+			 trait = possessed
+			 }
+			is_adult = yes
+			prestige = 500
+			piety = 100
+			learning = 10
+			wealth = 50
+		}
+		
+		effect = {
+			narrative_event = { id = DWE.100 days = 3 }
+			set_character_flag = dwe_blsearch_in_progress
+		}
+
+	}
+}

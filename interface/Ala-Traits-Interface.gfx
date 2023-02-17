@@ -1,0 +1,18 @@
+spriteTypes = 
+{
+	spriteType = {
+		name = "GFX_ala_race_traits_on"
+		texturefile = "gfx\\interface\\decision_icon_ala_2_cheat_menu.dds"
+	}
+	spriteType = {
+		name = "GFX_ala_race_traits_off"
+		texturefile = "gfx\\interface\\decision_icon_ala_2_cheat_menu.dds"
+	}
+	spriteType = {
+		name = "GFX_ala_menu"
+		texturefile = "gfx\\event_pictures\ala_menu.dds"
+		allwaystransparent = yes
+	}
+}
+
+

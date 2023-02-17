@@ -1,0 +1,1204 @@
+namespace = DWSeeding
+
+character_event = {
+	id = DWSeeding.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_game_rule = { name = dw_racial_seeding value = dw_seeding_on }
+			has_game_rule = { name = dw_racial_seeding value = dw_seeding_full }
+		}
+		NOT = {
+			is_alternate_start = yes
+		}
+		NOT = {
+			has_global_flag = dw_racial_seeding
+		}
+	}
+	
+	immediate = {
+		character_event = { id = DWSeeding.101 days = 1 }
+	}
+}
+
+character_event = {
+	id = DWSeeding.101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_game_rule = { name = dw_racial_seeding value = dw_seeding_on }
+			has_game_rule = { name = dw_racial_seeding value = dw_seeding_full }
+		}
+		NOT = {
+			is_alternate_start = yes
+		}
+		NOT = {
+			has_global_flag = dw_racial_seeding
+		}
+	}	
+	immediate = {
+		any_independent_ruler = {
+			limit = {
+				ai = yes
+				is_ruler = yes
+				NOR = { # Removes redundancy. DWSE Dragons not included.
+					trait = incubus
+					trait = angel
+					trait = lilith
+					trait = orc
+					trait = elf
+					trait = fairy
+					trait = kitsune
+					trait = neko
+					trait = vampire
+					trait = werewolf
+					trait = dwse_lizard
+					trait = tentacle
+					trait = houseirae_drow
+					trait = alu_fiend
+					trait = cambion
+					is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+					is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+				}
+			}
+			random_list = {
+				72 = { # Nothing
+					modifier = {
+						factor = 0
+						has_game_rule = { name = dw_racial_seeding value = dw_seeding_full }
+					}
+					set_character_flag = dw_seeded
+				}
+				3 = { # Demons
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWHHOff
+					}
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOR = {
+								trait = alu_fiend
+								trait = cambion
+								trait = lilith
+								trait = succubus
+							}
+						}
+					}
+					character_event = { id = DWSeeding.3 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.3 }
+					}
+				}
+				3 = { # Angels
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = angel
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWHHOff
+					}
+					character_event = { id = DWSeeding.2 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.2 }
+					}
+				}
+				3 = { # Orcs
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = orc
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWFaeOff
+					}
+					character_event = { id = DWSeeding.4 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.4 }
+					}
+				}					
+				3 = { # Elves
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = elf
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWFaeOff
+					}
+					character_event = { id = DWSeeding.5 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.5 }
+					}
+				}					
+				3 = { # Fairies
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = fairy
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWFaeOff
+					}
+					character_event = { id = DWSeeding.6 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.6 }
+					}
+				}
+				3 = { # Kitsune
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = kitsune
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWFarEastOff
+					}
+					character_event = { id = DWSeeding.7 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.7 }
+					}
+				}				
+				3 = { # Neko
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = neko
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWFarEastOff
+					}
+					character_event = { id = DWSeeding.8 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.8 }
+					}
+				}					
+				3 = { # Vampire
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = vampire
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWClassicOff
+					}
+					character_event = { id = DWSeeding.9 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.9 }
+					}
+				}
+				3 = { # Werewolf
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = werewolf
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWClassicOff
+					}
+					character_event = { id = DWSeeding.10 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.10 }
+					}
+				}
+				3 = { # DWSE Reptillian
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = dwse_lizard
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = DWTWDWSELizardOff
+							has_global_flag = DWTWDWSELizardMarriage
+						}
+					}
+					character_event = { id = DWSeeding.11 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.11 }
+					}
+				}
+				3 = { # Tentacle-kin
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = tentacle
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_global_flag = DWTWTentacleOff
+					}
+					character_event = { id = DWSeeding.12 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.12 }
+					}
+				}
+				3 = { # House Irae dark elves
+					modifier = {
+						factor = 0
+						any_realm_character = {
+							ai = no
+							NOT = {
+								trait = houseirae_drow
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						has_game_rule = { name = houseirae_house_irae_spawn value = houseirae_no_irae }
+					}
+					character_event = { id = DWSeeding.13 }
+					any_realm_character = {
+						character_event = { id = DWSeeding.13 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = { name = dw_racial_seeding value = dw_seeding_full }
+			}
+			any_character = {
+				limit = {
+					NOT = {
+						has_character_flag = dw_seeded
+					}
+					ai = yes
+					NOR = { # Removes redundancy. DWSE Dragons not included.
+						trait = incubus
+						trait = angel
+						trait = lilith
+						trait = orc
+						trait = elf
+						trait = fairy
+						trait = kitsune
+						trait = neko
+						trait = vampire
+						trait = werewolf
+						trait = dwse_lizard
+						trait = tentacle
+						trait = houseirae_drow
+						trait = alu_fiend
+						trait = cambion
+						is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+						is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+					}				
+				}
+				character_event = { id = DWSeeding.14 }
+			}
+		}
+		set_global_flag = dw_racial_seeding
+	}
+}
+
+character_event = { # Angels
+	id = DWSeeding.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			add_trait = angel
+			add_random_angel_portrait = yes
+		}
+		else = {
+			add_trait = angel
+		}
+	}
+}
+
+character_event = { # Demons
+	id = DWSeeding.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_female = yes
+			}
+			random_list = {
+				50 = {
+					add_trait = lilith
+					add_random_demon_portrait = yes
+				}
+				50 = {
+					add_trait = alu_fiend
+				}
+			}
+			break = yes
+		}
+		else = {
+			random_list = {
+				50 = {		
+					add_trait = incubus
+					add_random_demon_portrait = yes
+				}
+				50 = {
+					add_trait = cambion
+				}
+			}
+			break = yes
+		}
+	}
+}
+
+character_event = { # Orcs
+	id = DWSeeding.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = orc
+			culture = orcish
+			add_random_orc_portrait = yes
+			any_demesne_province = {
+				culture = orcish
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+				is_ruler = no
+			}
+			add_trait = orc
+			culture = orcish
+			add_random_orc_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				is_adult = no
+			}
+			add_trait = orc_child1
+			add_trait = orc
+			culture = orcish
+			break = yes
+		}
+		else = {
+			limit = {
+				is_female = no
+				is_adult = no
+			}
+			add_trait = orc_child2
+			add_trait = orc
+			culture = orcish
+			break = yes
+		}		
+	}
+}
+
+character_event = { # Elves
+	id = DWSeeding.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = elf
+			culture = elven
+			add_random_elf_portrait = yes
+			any_demesne_province = {
+				culture = elven
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+				is_ruler = no
+			}
+			add_trait = elf
+			culture = elven
+			add_random_elf_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				is_adult = no
+			}
+			add_trait = elf_child1
+			add_trait = elf
+			culture = elven
+			break = yes
+		}
+		else = {
+			limit = {
+				is_female = no
+				is_adult = no
+			}
+			add_trait = elf_child2
+			add_trait = elf
+			culture = elven
+			break = yes
+		}
+	}
+}
+
+character_event = { # Fairies
+	id = DWSeeding.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = fairy
+			culture = fae
+			add_random_fairy_portrait = yes
+			any_demesne_province = {
+				culture = fae
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+				is_ruler = no
+			}
+			add_trait = fairy
+			culture = fae
+			add_random_fairy_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				is_adult = no
+			}
+			add_trait = fairy_child1
+			add_trait = fairy
+			culture = fae
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				is_adult = no
+			}
+			add_trait = fairy_child2
+			add_trait = fairy
+			culture = fae_culture
+			break = yes
+		}
+	}
+}
+
+character_event = { # Kitsune
+	id = DWSeeding.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = kitsune
+			culture = kitsune_culture
+			add_random_kitsune_portrait = yes
+			any_demesne_province = {
+				culture = kitsune_culture
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+				is_ruler = no
+			}
+			add_trait = kitsune
+			culture = kitsune_culture
+			add_random_kitsune_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				is_adult = no
+			}
+			add_trait = kitsune_child1
+			add_trait = kitsune
+			culture = kitsune_culture
+			break = yes
+		}
+		else = {
+			limit = {
+				is_female = no
+				is_adult = no
+			}
+			add_trait = kitsune_child2
+			add_trait = kitsune
+			culture = kitsune_culture
+			break = yes
+		}
+	}
+}
+
+character_event = { # Nekos
+	id = DWSeeding.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = neko
+			culture = neko_culture
+			add_random_neko_portrait = yes
+			any_demesne_province = {
+				culture = neko_culture
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+				is_ruler = no
+			}
+			add_trait = neko
+			culture = neko_culture
+			add_random_neko_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				is_adult = no
+			}
+			add_trait = neko_child1
+			add_trait = neko
+			culture = neko_culture
+			break = yes
+		}
+		else = {
+			limit = {
+				is_female = no
+				is_adult = no
+			}
+			add_trait = neko_child2
+			add_trait = neko
+			culture = neko_culture
+			break = yes
+		}
+	}
+}
+
+character_event = { # Vampires
+	id = DWSeeding.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		add_trait = vampire
+	}
+}
+
+character_event = { # Werewolves
+	id = DWSeeding.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = werewolf
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+			}
+			add_trait = werewolf
+			break = yes
+		}
+		else = {
+			add_trait = werewolf
+			break = yes
+		}
+	}
+}
+
+character_event = { # DWSE Reptillians
+	id = DWSeeding.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = dwse_lizard
+			add_random_dwse_lizard_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+			}
+			add_trait = dwse_lizard
+			add_random_dwse_lizard_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+				is_adult = no
+			}
+			add_trait = dwse_lizard_child1
+			add_trait = dwse_lizard
+			break = yes
+		}
+		else = {
+			limit = {
+				is_female = no
+				is_adult = no
+			}
+			add_trait = dwse_lizard_child2
+			add_trait = dwse_lizard
+			break = yes
+		}
+	}
+}
+
+character_event = { # Tentaclekin
+	id = DWSeeding.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = tentacle
+			add_random_tentacle_portrait = yes
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+			}
+			add_trait = tentacle
+			add_random_tentacle_portrait = yes
+			break = yes
+		}
+		else = {
+			add_trait = tentacle
+			break = yes
+		}
+	}
+}
+
+character_event = { # House Irae Dark Elves
+	id = DWSeeding.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. DWSE Dragons not included.
+			trait = incubus
+			trait = angel
+			trait = lilith
+			trait = orc
+			trait = elf
+			trait = fairy
+			trait = kitsune
+			trait = neko
+			trait = vampire
+			trait = werewolf
+			trait = dwse_lizard
+			trait = tentacle
+			trait = houseirae_drow
+			trait = alu_fiend
+			trait = cambion
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = dw_seeded
+		if = {
+			limit = {
+				is_adult = yes
+				is_ruler = yes
+			}
+			add_trait = houseirae_drow
+			culture = drow
+			add_random_drow_portrait = yes
+			any_demesne_province = {
+				culture = drow
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+				is_ruler = no
+			}
+			add_trait = houseirae_drow
+			culture = drow
+			add_random_drow_portrait = yes
+			break = yes
+		}
+		else = {
+			add_trait = houseirae_drow
+			add_trait = houseirae_drow_child
+			culture = drow
+			break = yes
+		}
+	}
+}
+
+character_event = { # Leftovers
+	id = DWSeeding.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_character_flag = dw_seeded
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = DWTWHHOn
+				liege = { 
+					OR = {
+						trait = incubus
+						trait = lilith
+						trait = alu_fiend
+						trait = cambion
+					}
+				}
+			}
+			character_event = { id = DWSeeding.3 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWHHOn
+				liege = { 
+					trait = angel
+				}
+			}
+			character_event = { id = DWSeeding.2 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWFaeOn
+				liege = { 
+					trait = orc
+				}
+			}
+			character_event = { id = DWSeeding.4 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWFaeOn
+				liege = { 
+					trait = elf
+				}
+			}
+			character_event = { id = DWSeeding.5 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWFaeOn
+				liege = { 
+					trait = fairy
+				}
+			}
+			character_event = { id = DWSeeding.6 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWFarEastOn
+				liege = { 
+					trait = kitsune
+				}
+			}
+			character_event = { id = DWSeeding.7 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWFarEastOn
+				liege = { 
+					trait = neko
+				}
+			}
+			character_event = { id = DWSeeding.8 }
+		}	
+		else_if = {
+			limit = {
+				has_global_flag = DWTWClassicOn
+				liege = { 
+					trait = vampire
+				}
+			}
+			character_event = { id = DWSeeding.9 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWDWSELizardOn
+				liege = { 
+					trait = dwse_lizard
+				}
+			}
+			character_event = { id = DWSeeding.11 }
+		}
+		else_if = {
+			limit = {
+				has_global_flag = DWTWClassicOn
+				liege = { 
+					trait = werewolf
+				}
+			}
+			character_event = { id = DWSeeding.10 }
+		}
+		else_if = {
+				has_global_flag = DWTWTentacleOn
+			limit = {
+				liege = { 
+					trait = tentacle
+				}
+			}
+			character_event = { id = DWSeeding.12 }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_game_rule = { name = houseirae_house_irae_spawn value = houseirae_no_irae }
+				}
+				liege = { 
+					trait = houseirae_drow
+				}
+			}
+			character_event = { id = DWSeeding.13 }
+		}
+		else = { }
+	}
+}

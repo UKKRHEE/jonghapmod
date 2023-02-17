@@ -1,0 +1,127 @@
+### spritType = {
+### 	name = "GFX_decision_name"
+### 	texturefile = "gfx/interface/decision_icon.dds
+### }
+spriteTypes = {
+	spriteType = {
+		name = "GFX_dw_child_of_lilith_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_bonus_trait_decision_futa"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_resign_title"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_hire_jester"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_visit_wizard_tower"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_go_shopping"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_visit_brothel"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_work_whore"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_visit_stable"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_blood_moon_ritual"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_dw_infuse_with_demon_blood_half"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_infuse_with_demon_blood_full"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_visit_beautys_village"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_b_visit_arena"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_rise_of_pack_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_vampire_start"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwf_a_werewolf_goes_hunting"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_the_wizards_write_arcane_theory_paper"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_the_wizards_build_laboratory"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_tentacle_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}	
+	spriteType = {
+		name = "GFX_dw_orc_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_elf_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_kitsune_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_neko_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_angel_campaign"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwtw_wizards_buy_spellbook"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dwtw_wizards_acquire_ingredients_decision"
+		texturefile = "gfx/interface/dwf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dragon_battle"
+		texturefile = "gfx/interface/dragon_sex_event.dds"
+	}
+	spriteType = {
+		name = "GFX_dragon_sex_event"
+		texturefile = "gfx/interface/dragon_sex_event.dds"
+	}
+	spriteType = {
+		name = "GFX_dwse_starting_trait"
+		texturefile = "gfx/interface/dragon_sex_event.dds"
+	}
+}

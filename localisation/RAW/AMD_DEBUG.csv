@@ -1,0 +1,121 @@
+#		Crusader Kings 2 : Advanced Medieval Desires
+
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+
+
+#AMD_EV_DESC_LENGTH;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;	이벤트 창 1 line 제한 약 70byte
+
+
+#		#		Decisions	:	Debug
+AMD_DCS_debug_on_decision;AMD 디버그 작동;;;;;;;;;;;;x;
+AMD_DCS_debug_on_decision_desc;이 모드를 웹하드 등에서 돈주고 받으셨나요? 업로더가 바로 제작자입니다. 이 모드의 제작, 배포, 설치, 이용에 대한 모든 법적 책임은 그에게 있습니다!;;;;;;;;;;;;x;
+AMD_DCS_debug_off_decision;AMD 디버그 해제;;;;;;;;;;;;x;
+AMD_DCS_debug_off_decision_desc;AMD도 아니고 버그를 잡지도 못하며 해제되지도 않는다.;;;;;;;;;;;;x;
+AMD_DCS_debug_mp_test_decision;AMD MP TEST;;;;;;;;;;;;x;
+AMD_DCS_debug_mp_test_decision_desc;NO AMD, NO MULTIPLAYER, NO TEST.;;;;;;;;;;;;x;
+
+AMD_TD_debug_main;AMD 디버그 기능;;;;;;;;;;;;x;
+AMD_TD_debug_main_desc;AMD도 아니고 버그를 잡지도 못하며 작동하지도 않는다.;;;;;;;;;;;;x;
+AMD_TD_debug_play_test;AMD 2P PLAY TEST;;;;;;;;;;;;x;
+AMD_TD_debug_play_test_desc;2p test...;;;;;;;;;;;;x;
+AMD_TD_debug_ln_test;AMD 2P LONG NIGHT PLAY TEST;;;;;;;;;;;;x;
+AMD_TD_debug_ln_test_desc;2p LN test...;;;;;;;;;;;;x;
+
+
+
+
+#		#		Event	:	Debug
+AMD_EV_DESC_DEBUG_100;AMD : Advanced Medieval Desires \n v2 Duron \n 디버그 기능을 활성화하시겠습니까?;;;;;;;;;;;;x;
+AMD_EV_OPT_YESYES;나는 그것만을 위해 존재합니다!;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_ON;디버그 모드는 게임 분위기를 해칠 수 있으며, 기능을 남용하면 예상치 못한 문제가 생길 수도 있습니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_NONONO;난 여기서 나가야겠어!;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_101;DEBUG FUNCTION ONLINE.;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_DEBUG_10001;AMD : Advanced Medieval Desires \n DEBUG MENU 1;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_10002;AMD : Advanced Medieval Desires \n DEBUG MENU 2;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10001_1;TEST : ADJUST TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10001_2;TEST : SPECIAL OPINION;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10001_3;TEST : DRUG EFFECT;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10002_1;TEST : PLAY WITH YOU;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10002_2;TEST : PLAY WITH TESTER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_10002_3;TEST : PLAY WITH YOU (LONG NIGHT);;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_11000;DEBUG : ADJUST AMD MOD TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_1;CHANGE SEX SKILL TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_2;CHANGE BODY SIZE TRAITS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_3;TURN TO VIRGIN;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_11000_4;RESET SKILL AND SIZE;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_11100;DEBUG : CHANGE SEX SKILL TRAITS \n ANY SELECTION WILL END THE DEBUG EVENT;;;;;;;;;;;;x;
+AMD_EV_DESC_DEBUG_11200;DEBUG : CHANGE BODY SIZE TRAITS \n ANY SELECTION WILL END THE DEBUG EVENT;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_12000;DEBUG : TEST AMD SPECIAL OPINION;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_1;MAKE TARGET OBEY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_2;MAKE TARGET OBEY MORE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_3;OBEY TO TARGET;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_4;OBEY TO TARGET MORE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_12000_5;CLEAR OBEDIENT OPINION;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_13000;DEBUG : TEST AMD DRUG EFFECT (CHARACTER MODIFIER);;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_1;APHRODISIAC;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_2;CONTRACEPTIVE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_3;FERTILIZER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_4;ENLARGER (TEST SIZE_UP_EFFECT);;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_5;TEST SIZE_UP_EFFECT;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_13000_6;REMOVE ALL DRUG EFFECT;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_14000;DEBUG : TEST PLAY WITH YOU \n 박느냐 박히느냐, 그것이 문제로다.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_14000_1;FRIENDLY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_14000_2;ATTACK;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_14000_3;DEFENSE;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15000;DEBUG : AMD ACTION \n새 캐릭터를 생성하여 대상과 지정한 행위를 합니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15000_1;2P;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15000_2;MULTIPLAYER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15000_3;HORSE RIDE;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15100;DEBUG : TEST PERSONAL ACTION \n대상과 테스트 플레이를 할 인물의 성별을 선택.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15100_1;CREATE TESTER WOMAN;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15100_2;CREATE TESTER MAN;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15101;DEBUG : TEST PERSONAL ACTION \n테스트 플레이 종류를 선택.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15101_1;FRIENDLY PLAY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15101_2;AGGRESIVE PLAY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15101_3;DEFENSIVE PLAY;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_CONS;[AMD_ET_TGT.GetTitledFirstName] will play game with new_character;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_RAPES;[AMD_ET_TGT.GetTitledFirstName] will rapes new_character;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_RAPED;[AMD_ET_TGT.GetTitledFirstName] will be raped by new_character;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15103;DEBUG : TEST RIDING ACTION \n대상과 테스트 플레이를 할 말의 성별을 선택. 화간으로 간주, 즉시 플레이 시작됨.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15103_1;HORSERIDE : NORMAL;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15103_2;HORSERIDE : HOMO;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_DEBUG_15199;DEBUG : TEST PERSONAL ACTION \n최종 확인.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15199_1;2p short;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15199_2;2p silent;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_DEBUG_15200;DEBUG : TEST PARTY ACTION \n대상과 테스트 플레이를 할 인물들의 성별을 선택.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15200_1;MULTIPLAYER : NORMAL;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15200_2;MULTIPLAYER : HOMO;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15201;DEBUG : TEST PARTY ACTION \n테스트 플레이 종류를 선택.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_1;MULTIPLAYER : HOSTILE DEFENSIVE;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_2;MULTIPLAYER : FRIENDLY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_3;MULTIPLAYER : BUY;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15201_4;MULTIPLAYER : SELL;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_CONS;[AMD_ET_TGT.GetTitledFirstName]는 사랑하는 연인들과 즐거운 시간을 보낼 겁니다.;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_RAPED;[AMD_ET_TGT.GetTitledFirstName]는 사악한 강간마들과 즐거운 시간을 보낼 겁니다.;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_BUY;[AMD_ET_TGT.GetTitledFirstName]는 사랑의 전문가들과 즐거운 시간을 보낼 겁니다.;;;;;;;;;;;;x;
+AMD_EV_String_DEBUG_MP_SELL;[AMD_ET_TGT.GetTitledFirstName]는 소중한 고객님들과 즐거운 시간을 보낼 겁니다.;;;;;;;;;;;;x;
+
+AMD_EV_DESC_DEBUG_15250;DEBUG : TEST PARTY ACTION \nTO TEST MP_CONS_PARTY, NEED 3 OR MORE LOVERS.;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_1;CREATE MALE LOVER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_2;CREATE FEMALE LOVER;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_3;PARTY WITH GUYS;;;;;;;;;;;;x;
+AMD_EV_OPT_DEBUG_15250_4;PARTY WITH GIRLS;;;;;;;;;;;;x;
+
+
+
+

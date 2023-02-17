@@ -1,0 +1,264 @@
+#전설
+yiminhyee = {
+	immortal = yes
+	martial=10000
+	diplomacy=10000
+	stewardship=10000
+	intrigue=10000
+	learning=10000
+	combat_rating=10000
+	general_opinion=20000
+	health=100000
+	fertility=100000
+	global_tax_modifier = 50000.0
+	build_time_modifier = -1.0
+	build_cost_modifier = -1.0
+	monthly_character_piety = 100.0
+	monthly_character_prestige = 100.0
+	monthly_character_wealth = 100.0
+	plot_power_modifier = 1.5
+	arrest_chance_modifier = 1.5
+	assassinate_chance_modifier = 1.5
+	cannot_inherit = yes
+	revoke_reason = no
+	banish_reason = no
+	customizer = no
+	random = no
+	command_modifier = {
+		speed = 1000
+		defence = 10
+		damage = 10
+	}
+	tech_growth_modifier = 100
+	commander_limit = 1000
+	max_tradeposts = 1000
+	
+	male_compliment = COMPL_SAYYID
+	female_compliment = COMPL_SAYYIDA
+}
+jesus_of_god = {
+	
+	immortal = yes
+	martial=10000
+	diplomacy=10000
+	stewardship=10000
+	intrigue=10000
+	learning=10000
+	combat_rating=10000
+	general_opinion=20000
+	health=100000
+	fertility=100000
+	general_opinion = 5000.0
+	build_time_modifier = -1.0
+	build_cost_modifier = -1.0
+	monthly_character_piety = 100.0
+	monthly_character_prestige = 100.0
+	monthly_character_wealth = 100.0
+	plot_power_modifier = 1.5
+	arrest_chance_modifier = 1.5
+	assassinate_chance_modifier = 1.5
+	cannot_inherit = yes
+	revoke_reason = no
+	banish_reason = no
+	customizer = no
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+	male_compliment = COMPL_SAYYID
+	female_compliment = COMPL_SAYYIDA
+}
+chinese_empress = { #장남
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+yiminhyee_2 = { #장남
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+jesus_of_god_1 = { #장남
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+first_son_of_minhyee = { #장남
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+son_of_minhyee = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+holyorder_of_minhyee = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+grandson_of_minhyee = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+holyorder_grandson_of_minhyee = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+dougther_of_minhyee = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+dougther_of_minhyee_2 = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+dougther_of_minhyee_3 = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+dougther_of_minhyee_4 = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+dougther_of_minhyee_5 = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+dougther_of_minhyee_6 = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+sister_of_minhyee = {
+	random = no
+	customizer = no
+	immortal = yes
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+branden = {
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}

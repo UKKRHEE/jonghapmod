@@ -1,0 +1,30 @@
+#AMD_DCS_work_alchemist;약물 생산, AMD.25010, AMD.25011, AMD.25012 이벤트가 여기에 해당.
+	AMD_DCS_work_alchemist = {	#약물 생산	AMD.25000로 연결됨
+		is_high_prio = no
+		revoke_allowed = {		always = no	}
+		ai_will_do = {	factor = 0	}
+		potential = {
+			AMD_T_IS_PLAYER = yes
+			AMD_T_NOT_BUSY = yes
+			OR = { 
+				has_character_modifier = AMD_CM_alchemy_xeno
+				has_character_modifier = AMD_CM_alchemy_meruru
+				has_character_modifier = AMD_CM_alchemy_hermetic
+				has_character_modifier = AMD_CM_alchemy_medical
+			}
+		}
+		allow = {
+			wealth = 150
+			}
+		}
+		effect = {	character_event = {	id = AMD.25000	}	}
+1. 조건
+2. 모디파이어 체크 후 각 이벤트로 향하도록.
+3. 대상자 확인.
+#AMD_TD_alchemy_drug;약물 사용, AMD_PING.25020 이벤트가 여기에 해당.
+1. 조건
+2. 대상자 확인
+#AMD_TD_alchemy_magic;신비한 의식, AMD.25021, AMD.15022 이벤트가 여기에 해당.
+1. 조건
+2. 모디파이어 체크 후 각 이벤트로 향하도록.
+3. 대상자 확인.

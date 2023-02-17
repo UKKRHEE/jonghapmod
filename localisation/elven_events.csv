@@ -1,0 +1,61 @@
+#Events - Court
+elfcourt.1;I want to spice up the day of my court;;;;;;;;;;;;;x
+elfcourt_desc.1;I need to decide how best to make my courts day more fun.;;;;;;;;;;;;;x
+elfcourt.1a;Summon some Succubi.;;;;;;;;;;;;;x
+elfcourt.1b;Lets have a dayt where all women only wear their underwear.;;;;;;;;;;;;;x
+elfcourt.1c;Order the court women to bath in the fountains.;;;;;;;;;;;;;x
+elfcourt.1d;Lets hold an orgy.;;;;;;;;;;;;;x
+elfcourt.2;Succubus Dance Party;;;;;;;;;;;;;x
+elfcourt_desc.2;The party began with the Succubi singing many court favorite songs and ended with a lesbian orgy on the stage. It proved to be so popular that I heard some nobles plan on holding one themselves.;;;;;;;;;;;;;x
+elfcourt.3;Underwear Day;;;;;;;;;;;;;x
+elfcourt_desc.3;All of the women in my court only wear their underwear and it is a beautiful sight. I may even need to visit some of those women later myself.;;;;;;;;;;;;;x
+elfcourt.4;Public Bathing;;;;;;;;;;;;;x
+elfcourt_desc.4;Though some of the women didnt want to bathe outside, once they did not only did they love it but you later learn some of them keep doing it.;;;;;;;;;;;;;x
+elfcourt.5;Hold an Orgy;;;;;;;;;;;;;x
+elfcourt_desc.5;I hold a orgy in the throne room. After several hours when everyone is satisfied it end with a toast to our kingdoms future success.;;;;;;;;;;;;;x
+elfcourt_desc.11;You Decide to go out to a near by pond and take a bath with some of the female courtiers. You notice one of them is particularly Beautiful and you deciude to have somne fun with her before you return to the grind of the daily court life. once your done having fun with her you decide to make her return...;;;;;;;;;;;;;x
+courtnude;in the nude.;;;;;;;;;;;;;x
+courtunderwear;in her underwear.;;;;;;;;;;;;;x
+elfcourt_desc.12;She look quite beautiful as she walk along wearing nothing at all and you end up unable to resist the urge to enjoy her body furthur on the trip home. Once you return you send her to you rooms so you can furthur enjoy her body later on tonight.;;;;;;;;;;;;;x
+elfcourt_desc.13;You return to the court with her in her underwear and decide to share her with the rest of your court.Unfortunatly you dont really get much else done that day even if you are glad you have found a new pet for your court.;;;;;;;;;;;;;x
+#Events - General
+courtgenricender;What a wonderful evening.;;;;;;;;;;;;;x
+#Events - Seasons
+elvenseason1_desc;Spring is a time of renewal and growth for the elves. But at the same time not all of the effects of winter have departed prepare for war but you sould hold off until summer to start your war.;;;;;;;;;;;;;x
+elvenseason1_but;Spring has arrived make ready for war.;;;;;;;;;;;;;x
+elvenseason2_desc;Summer is a time of great activity for the elves. It is in the summer that the great hunt is called and the elves go to war. Now is the best time to call your people to war.;;;;;;;;;;;;;x
+elvenseason2_but;To war for the summer is upon us.;;;;;;;;;;;;;x
+elvenseason3_desc;The fall has begun. This is the time that the elves begin to wish to return home and make ready for the winter. Finish any wars you have now before the snows set in.;;;;;;;;;;;;;x
+elvenseason3_but;We should start to return to out homes for fall has arrived.;;;;;;;;;;;;;x
+elvenseason4_desc;Winter has arrived and the elves now deeply desire to remain indoors and rest till the spring arrives. Your warriors will be quick to return home in this time so making war is ill advised.;;;;;;;;;;;;;x
+elvenseason4_but;Shut the doors and warm the fires for winter has arrived.;;;;;;;;;;;;;x
+spring;Elven Spring;;;;;;;;;;;;;x
+summer;Elven Summer;;;;;;;;;;;;;x
+fall;Elven Fall;;;;;;;;;;;;;x
+winter;Elven Winter;;;;;;;;;;;;;x
+#recruitment
+recruit_elven_commander;«¸ĞğŒ ª³¦¹İò¼ÌëÆĞ èˆ¬ÈÙ²³Ì¥³;;;;;;;;;;;;;x
+recruit_elven_commander_desc;äÁÌ¥´çÆĞ «È•ÆĞ ª´çˆëÁÌ «¸ĞğŒ ª³¦¹İò¼ÌëÆĞ èˆ¬ÈÙ²³Ù¢È¥³. äŒæÆĞëÆÌ ²³Ù¦È¬·ÉëŒçˆ «ÈĞëÆĞ ¬³Ğ²³Ğ¡·Ù¢È¥³.;;;;;;;;;;;;;x
+elf_recruit_title;New Elven Commander;;;;;;;;;;;;;x
+elvenRecruit_desc;ª´çˆëÁÌ «¸ĞğŒ ª³¦¹İò¼Ì«È ¥³İªÈÌùÇ ë‰®·İ«¸ ùÇ²´ æˆ®³É²³«¹Ü¥³.;;;;;;;;;;;;;x
+elvenRecruitMil;ñÁĞçÀİ²´;;;;;;;;;;;;;x
+recruit_elven_seer;«¸ĞğŒ «º«·Ì¬³çÆĞ èˆ¬ÈÙ²³Ì¥³;;;;;;;;;;;;;x
+recruit_elven_seer_desc;ª´çˆëÁÌ «¸ĞğŒ «º«·Ì¬³çÆĞ èˆ¬ÈÙ²³Ù¢È¥³. äŒæÆĞëÆÌ ²³Ù¦È¬·ÉëŒçˆ «ÈĞëÆĞ ¬³Ğ²³Ğ¡·Ù¢È¥³.;;;;;;;;;;;;;x
+elvenRecruitFaith;ñÁĞçÀİ²´;;;;;;;;;;;;;x
+elvenRecruit_faith_desc;ª´çˆëÁÌ «¸ĞğŒ «º«·Ì¬³¡³ ¥³İªÈÌùÇ ë‰®·İ«¸ ùÇ²´ æˆ®³É²³«¹Ü¥³.;;;;;;;;;;;;;x
+elf_recruit_faith_title;New Elven Seer;;;;;;;;;;;;;x
+#event modifiers
+breedingSlaves;Human Sex Slaves;;;;;;;;;;;;;x
+fightingSlaves;Human Fighting Slaves;;;;;;;;;;;;;x
+#battle events
+elf_human_slave_event;Human Slaves
+elf_human_slave_event_desc;During the clean up after the battle your warriors overrun as fleeing convoy and capture many human women. As you look over them you see some have already been raped. What shall you do with them?;;;;;;;;;;;;;x
+elf_human_slave_event_a;Use them for pleasure;;;;;;;;;;;;;x
+elf_human_slave_event_b;Press them into battle;;;;;;;;;;;;;x
+elf_human_slave_event_c;By Ellenastra Release Them;;;;;;;;;;;;;x
+elf_human_slave_event_comment;Excellent;;;;;;;;;;;;;x
+elf_human_slave_event_breed_desc;The women are hauled back to the castles and cities of your kingdom and forced to work in brothels and on the street corners. If any resist to much or are found unsastifactory they are giving to the horses. the number of new births causes the number of new recruits to boom.;;;;;;;;;;;;;x
+elf_human_slave_Fighter_event_desc;The women are armed with cheap thin armour and used to skirmish and carry loads. they are also used for pleasure after the battles. The fact that your men dont have to do menial tasks or take on risky skirmishs as well as the post battle fun causes morale to soar in your armies.;;;;;;;;;;;;;x
+elf_victory;A Great Victory;;;;;;;;;;;;;x
+elf_victory_comment;VICTORY;;;;;;;;;;;;;x
+elf_victory_desc;After many hours of fight you have finally achieved a great victory. You can feel the power of the fallen flowing into you and granting you greater strength. Enjoy this victory for tomorrow may bring defeat.;;;;;;;;;;;;;x

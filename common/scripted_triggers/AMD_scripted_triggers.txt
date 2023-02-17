@@ -1,0 +1,1852 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Scripted Triggers
+
+#	#AMD_T_SCRIPTED_TRIGGERS : Trigger.
+
+
+
+#		#캐릭터의 속성에 대한 조건문
+AMD_T_IS_PLAYER = {	ai = no		is_playable = yes	}
+#VIP : 플레이어 이외에 각종 경험치 변수를 가지도록 허가된 캐릭터. 이 모디파이어가 없으면 경험 기록 안함.
+AMD_T_IS_VIP = {	OR = {	AMD_T_IS_PLAYER = yes	AMD_T_HCM_VIP = yes	}	}
+
+AMD_T_IS_VIRGIN = {	OR = {	trait = AMD_virgin	has_character_modifier = AMD_CMF_first_blood	}	}
+AMD_T_IS_FIRST_BLOOD = {	has_character_modifier = AMD_CMF_first_blood	}
+
+AMD_T_IS_HUMAN = {	NOT = {	graphical_culture = horsegfx	graphical_culture = beargfx	graphical_culture = catgfx	}	}
+AMD_T_IS_HORSE = {	graphical_culture = horsegfx	}	#	개도 아니고 고양이 곰 추가라니 제정신인가???
+AMD_T_IS_BEAR = {	graphical_culture = beargfx	}
+AMD_T_IS_CAT = {	graphical_culture = catgfx	}
+
+AMD_T_IS_WHITE = {	#this content may contain racism.
+	OR = {
+		graphical_culture = westerngfx
+		graphical_culture = celticgfx
+		graphical_culture = germangfx
+		graphical_culture = frankishgfx
+		graphical_culture = englishgfx
+		graphical_culture = norsegfx
+		graphical_culture = saxongfx
+		graphical_culture = normangfx
+		graphical_culture = southerngfx
+		graphical_culture = italiangfx
+		graphical_culture = occitangfx
+		graphical_culture = easterngfx
+		graphical_culture = byzantinegfx
+		graphical_culture = easternslavicgfx
+		graphical_culture = westernslavicgfx
+		graphical_culture = ugricgfx
+	}
+}
+AMD_T_IS_SANDMAN = {
+	OR = {
+		graphical_culture = muslimgfx
+		graphical_culture = andalusiangfx
+		graphical_culture = turkishgfx
+		graphical_culture = arabicgfx
+		graphical_culture = persiangfx
+		
+		graphical_culture = indiangfx
+		graphical_culture = southindiangfx
+	}
+}
+AMD_T_IS_ASIAN = {
+	OR = {
+		graphical_culture = mongolgfx
+		graphical_culture = chinesegfx
+		graphical_culture = bodpagfx
+		
+		graphical_culture = mesoamericangfx
+	}
+}
+AMD_T_IS_BLACK = {
+	OR = {
+		graphical_culture = africangfx
+		graphical_culture = westafricangfx
+	}
+}
+
+
+
+#		#글로벌 플래그에 대한 조건문
+AMD_T_NOT_IN_ACTION = {	custom_tooltip = {	text = "AMD_String_T_NOT_IN_ACTION"	}	hidden_tooltip = {	NOT = {	has_global_flag = AMD_GF_IN_ACTION	}	}	}
+
+
+
+#		#캐릭터 모디파이어에 대한 조건문
+AMD_T_NOT_IN_COOLDOWN = {	custom_tooltip = {	text = "AMD_String_T_NOT_IN_COOLDOWN"	NOT = {	has_character_modifier = AMD_CM_cooldown	}	}	}
+AMD_T_HCM_PREGNANT = {	has_character_modifier = AMD_CM_pregnant	}
+AMD_T_HCM_DRUG_F = {	has_character_modifier = AMD_CM_drug_fertilizer	}
+AMD_T_HCM_DRUG_C = {	has_character_modifier = AMD_CM_drug_contraceptive	}
+AMD_T_HCM_DRUG_A = {	has_character_modifier = AMD_CM_drug_aphrodisiac	}
+AMD_T_HCM_VIP = {	has_character_modifier = AMD_CMF_vip	}
+
+AMD_T_HCM_PARTY = {	has_character_modifier = AMD_CMF_party_invited	}
+
+AMD_T_HCM_LUSTFUL_WASTED = {	has_character_modifier = AMD_CM_lustful_wasted	}
+AMD_T_HCM_LIFEMAKER = {	has_character_modifier = AMD_CM_lifemaker	}
+
+
+
+
+#	바쁜가?	투옥, 행불, 전투, 공성, 성지순례, 명상, 고행, 은신
+AMD_T_IS_BUSY = {	#전투, 공성, 죄수, 은신, 섭정, 순례, 행불, 기타 바닐라 이벤트로 바쁜가?
+	custom_tooltip = {	text = "AMD_String_T_IS_BUSY"	}
+	hidden_tooltip = {
+		OR = {
+			prisoner = yes
+			is_incapable = yes
+			in_siege = yes
+			in_battle = yes
+			#has_character_flag = do_not_disturb
+			trait = in_hiding
+			trait = on_hajj
+			trait = on_pilgrimage
+			trait = on_indian_pilgrimage
+			trait = kow_tow_travels
+			has_character_modifier = in_seclusion
+			has_character_modifier = in_meditation
+			has_character_modifier = doing_penance
+			has_character_modifier = out_traveling
+		}
+	}
+}
+AMD_T_NOT_BUSY = {	#전투, 공성, 죄수, 은신, 섭정, 순례, 행불, 기타 이벤트가 없는가?
+	custom_tooltip = {	text = "AMD_String_T_NOT_BUSY"	}
+	hidden_tooltip = {
+		NOR = {
+			prisoner = yes
+			is_incapable = yes
+			in_siege = yes
+			in_battle = yes
+			#has_character_flag = do_not_disturb
+			trait = in_hiding
+			trait = on_hajj
+			trait = on_pilgrimage
+			trait = on_indian_pilgrimage
+			trait = kow_tow_travels
+			has_character_modifier = in_seclusion
+			has_character_modifier = in_meditation
+			has_character_modifier = doing_penance
+			has_character_modifier = out_traveling
+		}
+	}
+}
+AMD_T_CAN_ACCESS_PREV = {	#THIS가 지휘/업무/봉쇄중이라면 PREV와 같은 위치에 있어야 한다. 해당사항이 없어도 된다.
+	#바다에 있는 경우?를 어떻게 처리할지 일단 보류.
+	OR = {
+		#AND = {	is_at_sea = yes	at_location = PREV	}
+		AND = {	in_command = yes	at_location = PREV	}
+		AND = {	has_job_action = yes	at_location = PREV	}
+		AND = {	has_character_modifier = in_seclusion	at_location = PREV	}
+		NOR = {	has_character_modifier = in_seclusion	has_job_action = yes	in_command = yes	}
+	}
+}
+
+#	하크니스 테스트		곰, 고양이 도입에 의한 개정필요
+
+AMD_T_IS_DOABLE_AGE = {	#	아청법 옵션에 따라 차등판정.
+	OR = {	#하한선	옵션에 따라 12 OR 16
+		AND = {	has_global_flag = AMD_GF_ACB	is_marriage_adult = yes	}
+		AND = {	NOT = {	has_global_flag = AMD_GF_ACB	}	age = 12	}
+	}
+	OR = {	#상한	남성70, 여성50, 동물 30. 조건에 따라 한계돌파가능
+		#인남	70
+		AND = {	AMD_T_IS_HUMAN = yes	is_female = no	NOT = {	age = 70	}	}
+		#인녀	50
+		AND = {	AMD_T_IS_HUMAN = yes	is_female = yes	NOT = {	age = 50	}	}
+		#짐승	30
+		AND = {	OR = {	AMD_T_IS_HORSE = yes	AMD_T_IS_CAT = yes	AMD_T_IS_BEAR = yes	}	NOT = {	age = 30	}	}
+		
+		#한계돌파
+		trait = strong
+		trait = robust
+		health = 7.5
+		fertility = 0.75
+		immortal = yes
+		trait = AMD_sex_skill_4
+		trait = AMD_sex_skill_5
+		AMD_T_HCM_DRUG_A = yes
+	}
+}
+AMD_T_IS_DOABLE_APL = {	#	동물보호법 옵션에 따라 가능한 행위인지 판정	(...)
+	OR = {
+		AND = {	#동물보호법 ON : 같은 종족끼리만 할 수 있음. 하이고 의미없다
+			has_global_flag = AMD_GF_APL
+			OR = {
+				AND = {	#인간 대 인간
+					event_target:AMD_ET_ATK = {	AMD_T_IS_HUMAN = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	}
+				}
+				AND = {	#말 대 말
+					event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				}
+				AND = {	#고양이 대 고양이
+					event_target:AMD_ET_ATK = {	AMD_T_IS_CAT = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+				}
+				AND = {	#곰 대 곰
+					event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	}
+					event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+				}
+			}
+		}
+		#동물보호법 OFF : 이종간이 가능하지만... 사실 되는 조합은 말-인간 뿐.
+		NOT = {	has_global_flag = AMD_GF_APL	}
+	}
+}
+
+AMD_T_IS_DOABLE = {
+	AMD_T_IS_DOABLE_AGE = yes
+	NOR = {		#고자나 임신중, 에로금지캐릭은 못함
+		trait = eunuch
+		trait = pregnant
+		has_character_flag = AMD_CF_UNFUCKABLE
+		#custom_tooltip = {	text = "AMD_String_T_IS_CANNOT_PLAY_GAME"	hidden_tooltip = {		}	}
+	}
+	#	발기부전이라도 미약을 먹으면 선다! 할 수 있다!
+	OR = {	NOT = {	trait = AMD_impotence	}	AND = {	trait = AMD_impotence	AMD_T_HCM_DRUG_A = yes	}	}
+}
+AMD_T_CAN_PREGNANT = {	OR = {	is_female = yes	AMD_T_HCM_LIFEMAKER = yes	}	#여성 또는 특수한 남성만 가능.
+	OR = {	#12-50세 인간 or 6-30세 말, 성기술4,5 또는 건강, 생식력, 불멸, 미약 등으로 나이 상한 돌파가능.
+		AND = {	#인간여성 : 50세 미만 또는 건강, 정력, 기술, 불멸, 약물 필요
+			AMD_T_IS_HUMAN = yes		age = 12
+			OR = {
+				NOT = {	age = 50	}
+				AND = {	age = 50	OR = {	health = 6.6	fertility = 0.66	}	}
+				AND = {	age = 60	OR = {	health = 7.7	fertility = 0.77	}	}
+				AND = {	age = 70	OR = {	health = 8.8	fertility = 0.88	}	}
+				immortal = yes
+				has_character_modifier = AMD_CM_drug_fertilizer
+			}
+		}
+		AND = {	#비인간 : 30세 미만 또는 건강, 정력, 기술, 불멸, 약물 필요
+			AMD_T_IS_HUMAN = no	age = 6
+			OR = {
+				NOT = {	age = 30	}
+				AND = {	age = 30	OR = {	health = 6.6	fertility = 0.66	}	}
+				AND = {	age = 40	OR = {	health = 7.7	fertility = 0.77	}	}
+				AND = {	age = 50	OR = {	health = 8.8	fertility = 0.88	}	}
+				immortal = yes
+				has_character_modifier = AMD_CM_drug_fertilizer
+			}
+		}
+	}
+	NOT = {		#피임약 먹었으면 임신못함. 이미 임신했거나 임신 쿨다운 중이면 임신못함.
+		has_character_modifier = AMD_CM_drug_contraceptive
+		AMD_T_HCM_PREGNANT = yes
+		is_pregnant = yes
+	}
+}
+AMD_T_CAN_IMPREGNATE = {	is_female = no	#임신시킬 수 있는 건 남성뿐. 동성임신 추가 고려중.
+	OR = {	#12-50세 인간 or 6-30세 말, 성기술4,5 또는 건강, 생식력, 불멸, 미약 등으로 나이 상한 돌파가능.
+		AND = {	#custom_tooltip = {	text = "AMD_String_T_IS_DOABLE_HUMAN"	}
+			AMD_T_IS_HUMAN = yes		age = 12
+			OR = {		#인남 : 70세 미만 또는 건강, 정력, 기술, 불멸, 미약 필요
+				NOT = {	age = 70	}
+				AND = {	age = 70	OR = {	health = 6.0	fertility = 0.6	}	}
+				AND = {	age = 80	OR = {	health = 7.0	fertility = 0.7	}	}
+				AND = {	age = 90	OR = {	health = 8.0	fertility = 0.8	}	}
+				immortal = yes
+				has_character_modifier = AMD_CM_drug_fertilizer
+			}
+		}
+		AND = {	#custom_tooltip = {	text = "AMD_String_T_IS_DOABLE_HORSE"
+			AMD_T_IS_HUMAN = no	age = 6
+			OR = {
+				NOT = {	age = 30	}
+				AND = {	age = 30	OR = {	health = 6.0	fertility = 0.60	}	}
+				AND = {	age = 40	OR = {	health = 7.0	fertility = 0.70	}	}
+				AND = {	age = 50	OR = {	health = 8.0	fertility = 0.80	}	}
+				immortal = yes
+				has_character_modifier = AMD_CM_drug_fertilizer
+			}
+		}
+	}
+	NOR = {	#고자, 임신중, 피임약
+		trait = eunuch
+		has_character_modifier = AMD_CM_drug_contraceptive
+		AMD_T_HCM_PREGNANT = yes
+		is_pregnant = yes
+	}
+}
+
+
+
+#바닐라의 스크립트 트리거
+#	is_inaccessible_trigger	은신/성지순례/봉쇄/명상/penance 중인 경우 (접근불가)
+#	attacted_to_prev_trigger	현재 스코프가 PREV에게 성적 선호가 되는지 판정
+#	sad_example_trigger	30세 이상, 미혼, 자식업음
+#	gender_equality_trigger	성평등법 관련 판정
+
+
+AMD_T_IS_MARRIAGE_HEAD = {		#자식을 자기 가문에 넣는 쪽인가를 판정.
+	OR = {
+		AND = {		#여자, 모계결혼
+			is_female = yes
+			is_married_matrilineally = yes
+		}
+		AND = {		#남자, 부계결혼
+			is_female = no
+			is_married_matrilineally = no
+		}
+	}
+}
+AMD_T_HAD_SEX_WITH_PREV = {	#	이 스코프는 PREV와 성행위한 적이 있는가?
+	has_opinion_modifier = {	who = PREV	modifier = AMD_opinion_had_sex	}
+	reverse_has_opinion_modifier = {	who = PREV	modifier = AMD_opinion_had_sex	}
+}
+
+
+
+AMD_T_TRUESIGHT = {		#디버그, 진실의 시야, 또는 5레벨 성기술 보유여부. 스트링 상세정보 출력시 사용.
+	OR = {
+		has_global_flag = AMD_GF_DEBUG
+		has_character_modifier = AMD_CM_truesight
+		#trait = AMD_sex_skill_5
+	}
+}
+
+AMD_T_MEET_SIZE_LIMIT = {
+	OR = {
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_5	}
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_4	}
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_3	}
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_2	}
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_1	}
+		
+		AND = {	OR = {	trait = AMD_breast_4	trait = AMD_penis_4	}	trait = AMD_bodysize_gene_4	}
+		AND = {	OR = {	trait = AMD_breast_4	trait = AMD_penis_4	}	trait = AMD_bodysize_gene_3	}
+		AND = {	OR = {	trait = AMD_breast_4	trait = AMD_penis_4	}	trait = AMD_bodysize_gene_2	}
+		AND = {	OR = {	trait = AMD_breast_4	trait = AMD_penis_4	}	trait = AMD_bodysize_gene_1	}
+		
+		AND = {	OR = {	trait = AMD_breast_3	trait = AMD_penis_3	}	trait = AMD_bodysize_gene_3	}
+		AND = {	OR = {	trait = AMD_breast_3	trait = AMD_penis_3	}	trait = AMD_bodysize_gene_2	}
+		AND = {	OR = {	trait = AMD_breast_3	trait = AMD_penis_3	}	trait = AMD_bodysize_gene_1	}
+		
+		AND = {	OR = {	trait = AMD_breast_2	trait = AMD_penis_2	}	trait = AMD_bodysize_gene_2	}
+		AND = {	OR = {	trait = AMD_breast_2	trait = AMD_penis_2	}	trait = AMD_bodysize_gene_1	}
+		
+		AND = {	OR = {	trait = AMD_breast_1	trait = AMD_penis_1	}	trait = AMD_bodysize_gene_1	}
+	}
+}
+AMD_T_OVER_SIZE_LIMIT = {
+	OR = {
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_4	}
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_3	}
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_2	}
+		AND = {	OR = {	trait = AMD_breast_5	trait = AMD_penis_5	}	trait = AMD_bodysize_gene_1	}
+		
+		AND = {	OR = {	trait = AMD_breast_4	trait = AMD_penis_4	}	trait = AMD_bodysize_gene_3	}
+		AND = {	OR = {	trait = AMD_breast_4	trait = AMD_penis_4	}	trait = AMD_bodysize_gene_2	}
+		AND = {	OR = {	trait = AMD_breast_4	trait = AMD_penis_4	}	trait = AMD_bodysize_gene_1	}
+		
+		AND = {	OR = {	trait = AMD_breast_3	trait = AMD_penis_3	}	trait = AMD_bodysize_gene_2	}
+		AND = {	OR = {	trait = AMD_breast_3	trait = AMD_penis_3	}	trait = AMD_bodysize_gene_1	}
+		
+		AND = {	OR = {	trait = AMD_breast_2	trait = AMD_penis_2	}	trait = AMD_bodysize_gene_1	}
+	}
+}
+
+#	신체사이즈 관련 판정
+AMD_T_SIZE_SMALL = {
+	OR = {
+		AMD_T_SIZE_1 = yes
+		AMD_T_SIZE_2 = yes
+	}
+}
+AMD_T_SIZE_LARGE = {
+	OR = {
+		AMD_T_SIZE_4 = yes
+		AMD_T_SIZE_5 = yes
+	}
+}
+AMD_T_SIZE_5 = {	OR = {	trait = AMD_penis_5	trait = AMD_breast_5	}	}
+AMD_T_SIZE_4 = {	OR = {	trait = AMD_penis_4	trait = AMD_breast_4	}	}
+AMD_T_SIZE_3 = {	OR = {	trait = AMD_penis_3	trait = AMD_breast_3	}	}
+AMD_T_SIZE_2 = {	OR = {	trait = AMD_penis_2	trait = AMD_breast_2	}	}
+AMD_T_SIZE_1 = {	OR = {	trait = AMD_penis_1	trait = AMD_breast_1	}	}
+
+AMD_T_BODY_SMALL = {
+	OR = {
+		is_adult = no
+		trait = dwarf
+		trait = feeble
+		AND = {	is_female = yes	AMD_T_SIZE_SMALL = yes	}
+	}
+}
+
+#성기능 스킬이 일정 수치 이상
+AMD_T_SKILL_ABOVE_2 = {	#스킬 2 이상
+	NOT = {
+		trait = AMD_sex_skill_1
+	}
+	OR = {
+		trait = AMD_sex_skill_2
+		trait = AMD_sex_skill_3
+		trait = AMD_sex_skill_4
+		trait = AMD_sex_skill_5
+	}
+}
+AMD_T_SKILL_ABOVE_3 = {	#스킬 3 이상
+	NOR = {
+		trait = AMD_sex_skill_1
+		trait = AMD_sex_skill_2
+	}
+	OR = {
+		trait = AMD_sex_skill_3
+		trait = AMD_sex_skill_4
+		trait = AMD_sex_skill_5
+	}
+}
+AMD_T_SKILL_ABOVE_4 = {	#스킬 4 이상
+	NOR = {
+		trait = AMD_sex_skill_1
+		trait = AMD_sex_skill_2
+		trait = AMD_sex_skill_3
+	}
+	OR = {
+		trait = AMD_sex_skill_4
+		trait = AMD_sex_skill_5
+	}
+}
+AMD_T_SKILL_UNDER_3 = {	#스킬 3 미만
+	OR = {
+		trait = AMD_sex_skill_1
+		trait = AMD_sex_skill_2
+	}
+	NOR = {
+		trait = AMD_sex_skill_3
+		trait = AMD_sex_skill_4
+		trait = AMD_sex_skill_5
+	}
+}
+AMD_T_SKILL_UNDER_4 = {	#스킬 4 미만
+	OR = {
+		trait = AMD_sex_skill_1
+		trait = AMD_sex_skill_2
+		trait = AMD_sex_skill_3
+	}
+	NOR = {
+		trait = AMD_sex_skill_4
+		trait = AMD_sex_skill_5
+	}
+}
+
+#화간시 둘 중 하나, 강간시 강간자, 집단전시 중심인물의 스킬을 체크.	(FACTOR_SKILL)
+AMD_T_F_SKILL_1 = {	#1레벨 수준의 경기입니다
+	OR = {
+		#화간시 둘다 1레벨
+		AND = {		AMD_T_STF_IS_NOT_RAPE = yes
+			event_target:AMD_ET_ATK = {	trait = AMD_sex_skill_1	}
+			event_target:AMD_ET_DEF = {	trait = AMD_sex_skill_1	}
+		}
+		#강간시 강간자 1레벨
+		AND = {	AMD_T_STF_IS_RAPE = yes
+			event_target:AMD_ET_RA = {	trait = AMD_sex_skill_1	}
+		}
+		#집단전시 중심인물 1레벨
+		event_target:AMD_ET_OH = {	trait = AMD_sex_skill_1	}
+	}
+}
+AMD_T_F_SKILL_2 = {	#2레벨 이상의 경기입니다
+	OR = {
+		AND = {		AMD_T_STF_IS_NOT_RAPE = yes
+			OR = {
+				event_target:AMD_ET_ATK = {	AMD_T_SKILL_ABOVE_2 = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_SKILL_ABOVE_2 = yes	}
+			}
+		}
+		AND = {	AMD_T_STF_IS_RAPE = yes
+			event_target:AMD_ET_RA = {	AMD_T_SKILL_ABOVE_2 = yes	}
+		}
+		event_target:AMD_ET_OH = {	AMD_T_SKILL_ABOVE_2 = yes	}
+	}
+}
+AMD_T_F_SKILL_3 = {	#3레벨 이상의 경기입니다
+	OR = {
+		AND = {		AMD_T_STF_IS_NOT_RAPE = yes
+			OR = {
+				event_target:AMD_ET_ATK = {	AMD_T_SKILL_ABOVE_3 = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_SKILL_ABOVE_3 = yes	}
+			}
+		}
+		AND = {	AMD_T_STF_IS_RAPE = yes
+			event_target:AMD_ET_RA = {	AMD_T_SKILL_ABOVE_3 = yes	}
+		}
+		event_target:AMD_ET_OH = {	AMD_T_SKILL_ABOVE_3 = yes	}
+	}
+}
+AMD_T_F_SKILL_4 = {	#4레벨 이상의 경기입니다
+	OR = {
+		AND = {		AMD_T_STF_IS_NOT_RAPE = yes
+			OR = {
+				event_target:AMD_ET_ATK = {	AMD_T_SKILL_ABOVE_4 = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_SKILL_ABOVE_4 = yes	}
+			}
+		}
+		AND = {	AMD_T_STF_IS_RAPE = yes
+			event_target:AMD_ET_RA = {	AMD_T_SKILL_ABOVE_4 = yes	}
+		}
+		event_target:AMD_ET_OH = {	AMD_T_SKILL_ABOVE_4 = yes	}
+	}
+}
+AMD_T_F_SKILL_5 = {	#5레벨 수준의 경기입니다
+	OR = {
+		AND = {		AMD_T_STF_IS_NOT_RAPE = yes
+			OR = {
+				event_target:AMD_ET_ATK = {	trait = AMD_sex_skill_5	}
+				event_target:AMD_ET_DEF = {	trait = AMD_sex_skill_5	}
+			}
+		}
+		AND = {	AMD_T_STF_IS_RAPE = yes
+			event_target:AMD_ET_RA = {	trait = AMD_sex_skill_5	}
+		}
+		event_target:AMD_ET_OH = {	trait = AMD_sex_skill_5	}
+	}
+}
+
+
+#	밤기술 연마 이벤트라인
+AMD_T_HCM_SEX_STUDY = {	has_character_modifier = AMD_CM_sex_study	}
+AMD_T_HAS_SEX_STUDY_BOOK = {
+	OR = {
+		AMD_T_HAS_EROTIC_BOOK = yes
+		AMD_T_HAS_ROMANTIC_BOOK = yes
+		AMD_T_HAS_ANATOMY_BOOK = yes
+	}
+}
+AMD_T_HAS_EROTIC_BOOK = {
+	OR = {
+		has_artifact = kama_sutra
+		has_artifact = fifty_shades_of_root
+		has_artifact = AMD_chinese_book_erotic
+		has_artifact = AMD_lusty_armenian_maid
+	}
+}
+AMD_T_HAS_ROMANTIC_BOOK = {
+	OR = {
+		has_artifact = chinese_book_history
+		has_artifact = notes_from_a_kitchen
+		has_artifact = kama_sutra
+		has_artifact = the_art_of_love
+		has_artifact = in_honor_of_roots_beloved_1
+		has_artifact = in_honor_of_roots_beloved_2
+		has_artifact = in_honor_of_roots_beloved_3
+		has_artifact = AMD_lusty_armenian_maid
+	}
+}
+AMD_T_HAS_ANATOMY_BOOK = {
+	OR = {
+		has_artifact = necronomicon
+		has_artifact = kama_sutra
+		has_artifact = chinese_book_health
+		has_artifact = AMD_chinese_book_erotic
+		has_artifact = human_anatomy
+	}
+}
+
+
+#	연금술 이벤트 관련
+AMD_T_HAS_ALCHEMIST = {	#종류불문
+	OR = {
+		AMD_T_HCM_ALCHEMY_MEDIC = yes
+		AMD_T_HCM_ALCHEMY_MAGIC = yes
+	}
+}
+AMD_T_HCM_ALCHEMY_MEDIC = {
+	OR = {
+		has_character_modifier = AMD_CM_alchemy_xeno
+		has_character_modifier = AMD_CM_alchemy_meruru
+		has_character_modifier = AMD_CM_alchemy_hermetic
+		has_character_modifier = AMD_CM_alchemy_medical
+	}
+}
+AMD_T_HCM_ALCHEMY_MAGIC = {
+	OR = {
+		has_character_modifier = AMD_CM_alchemy_synth
+		has_character_modifier = AMD_CM_alchemy_darkness
+		has_character_modifier = AMD_CM_alchemy_shaman
+	}
+}
+
+
+#	창관 이벤트 관련
+AMD_T_HAS_BROTHEL = {
+	OR = {
+		AND = {
+			any_demesne_province = {	#any_demesne_province	capital_holding
+				OR = {
+					has_building = AMD_building_brothel_castle_1
+					has_building = AMD_building_brothel_city_1
+					has_building = AMD_building_brothel_nomad_1
+					has_building = AMD_building_brothel_temple
+					has_building = AMD_building_brothel_tribal
+					trade_post_has_building = AMD_building_brothel_tradepost
+					#fort_has_building = AMD_building_brothel_fort
+				}
+			}
+		}
+		trait = yiminhyee
+	}
+}
+AMD_T_HGF_BROTHEL_HOMO = {	custom_tooltip = {	text = AMD_String_T_HGF_BROTHEL_HOMO	has_global_flag = AMD_GF_BROTHEL_HOMO	}	}
+AMD_T_HGF_BROTHEL_ORGY = {	custom_tooltip = {	text = AMD_String_T_HGF_BROTHEL_ORGY	has_global_flag = AMD_GF_BROTHEL_ORGY	}	}
+AMD_T_HGF_BROTHEL_BEAST = {	custom_tooltip = {	text = AMD_String_T_HGF_BROTHEL_BEAST	has_global_flag = AMD_GF_BROTHEL_BEAST	}	}
+AMD_T_HGF_BROTHEL_UPGRADE_COMP = {		}
+
+AMD_T_STF_BROTHEL_SHORT_2P = {
+	event_target:AMD_ET_POV = {
+		OR = {
+			check_variable = {	which = local_AMD_BROTHEL_WORK	value == 294	}
+			check_variable = {	which = local_AMD_BROTHEL_WORK	value == 610	}
+			check_variable = {	which = local_AMD_BROTHEL_WORK	value == 650	}
+			check_variable = {	which = local_AMD_BROTHEL_WORK	value == 701	}
+			check_variable = {	which = local_AMD_BROTHEL_WORK	value == 702	}
+			check_variable = {	which = local_AMD_BROTHEL_WORK	value == 703	}
+			check_variable = {	which = local_AMD_BROTHEL_WORK	value == 704	}
+		}
+	}
+}
+AMD_T_STF_BROTHEL_LONG_2P = {
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_AMD_BROTHEL_WORK	value == 100	}
+	}
+}
+
+
+AMD_T_IS_PROS = {
+	OR = {
+		has_character_modifier = AMD_CM_prostitute_unknown
+		has_character_modifier = AMD_CM_prostitute_known
+		has_character_modifier = AMD_CM_prostitute_renown
+	}
+}
+
+
+#				#	Scene Type Flag
+AMD_T_F_VISIT_PRISONER = {	event_target:AMD_ET_F_VISIT_PRISONER = {	always = yes	}	}
+AMD_T_IS_PLAYER_INVOLVED = {
+	OR = {
+		event_target:AMD_ET_ATK = {	AMD_T_IS_PLAYER = yes	}
+		event_target:AMD_ET_DEF = {	AMD_T_IS_PLAYER = yes	}
+	}
+}
+
+AMD_T_IS_LEGAL = {	#합법적인 관계인가?
+	OR = {
+		AND = {	#둘 다 미혼
+			event_target:AMD_ET_ATK = {	is_married = no	is_consort = no	}
+			event_target:AMD_ET_DEF = {	is_married = no	is_consort = no	}
+		}
+		event_target:AMD_ET_ATK = {	#결혼관계
+			is_married = yes
+			any_spouse = {	character = event_target:AMD_ET_DEF	}
+		}
+		event_target:AMD_ET_ATK = {	#축첩
+			is_consort = yes
+			any_consort = {	character = event_target:AMD_ET_DEF	}
+		}
+	}
+}
+AMD_T_IS_ILLEGAL = {	#합법적인 관계인가?
+	OR = {	#불법
+		#AND {	event_target:AMD_ET_ATK = {	is_betrothed = yes	}	event_target:AMD_ET_DEF = {	is_betrothed = no	}	}
+		event_target:AMD_ET_ATK = {	#기혼이지만 상대가 배우자가 아님
+			is_married = yes
+			NOT = {	any_spouse = {	character = event_target:AMD_ET_DEF	}	}
+		}
+		event_target:AMD_ET_ATK = {	#축첩이지만 상대와는 무관
+			is_consort = yes
+			NOT = {	any_consort = {	character = event_target:AMD_ET_DEF	}	}
+		}
+		event_target:AMD_ET_DEF = {	#기혼이지만 상대가 배우자가 아님
+			is_married = yes
+			NOT = {	any_spouse = {	character = event_target:AMD_ET_ATK	}	}
+		}
+		event_target:AMD_ET_DEF = {	#축첩이지만 상대와는 무관
+			is_consort = yes
+			NOT = {	any_consort = {	character = event_target:AMD_ET_ATK	}	}
+		}
+	}
+}
+AMD_T_IS_EPC_WITH_PREV = {	#PREV와 혼외정사가 성립하는가
+	OR = {	
+		AND = {	#기혼이지만 상대가 배우자가 아님
+			is_married = yes
+			NOT = {	any_spouse = {	character = PREV	}	}
+		}
+		AND = {	#기혼이지만 상대가 배우자가 아님
+			is_consort = yes
+			NOT = {	any_consort = {	character = PREV	}	}
+		}
+	}
+}
+
+
+AMD_T_STF_IS_2P = {
+	NOT = {	event_target:AMD_ET_OH = {	always = yes	}	event_target:AMD_ET_OG = {	always = yes	}	}
+}
+AMD_T_STF_IS_ORGY = {
+	OR = {	event_target:AMD_ET_OH = {	always = yes	}	event_target:AMD_ET_OG = {	always = yes	}	}
+}
+AMD_T_STF_ORGY_BUY = {	#Orgy	Buy
+	OR = {	event_target:AMD_ET_OH = {	always = yes	}	event_target:AMD_ET_OG = {	always = yes	}	}
+	event_target:AMD_ET_TB = {	always = yes	}
+	NOT = {	event_target:AMD_ET_TS = {	always = yes	}	}
+}
+AMD_T_STF_ORGY_SELL = {	#Orgy	Sell
+	OR = {	event_target:AMD_ET_OH = {	always = yes	}	event_target:AMD_ET_OG = {	always = yes	}	}
+	event_target:AMD_ET_TS = {	always = yes	}
+	NOT = {	event_target:AMD_ET_TB = {	always = yes	}	}
+}
+
+
+AMD_T_STF_IS_LES = {
+	OR = {
+		event_target:AMD_ET_ATK = {	same_sex = event_target:AMD_ET_DEF	is_female = yes	}
+		event_target:AMD_ET_STF_LES = {	always = yes	}
+	}
+}
+AMD_T_STF_IS_GAY = {
+	OR = {
+		event_target:AMD_ET_ATK = {	same_sex = event_target:AMD_ET_DEF	is_female = no	}
+		event_target:AMD_ET_STF_GAY = {	always = yes	}
+	}
+}
+AMD_T_STF_IS_HOMO = {	AMD_T_STF_IS_LES = no	AMD_T_STF_IS_GAY = no	}
+AMD_T_STF_IS_HETERO = {
+	NOT = {
+		event_target:AMD_ET_ATK = {	same_sex = event_target:AMD_ET_DEF	}
+		event_target:AMD_ET_STF_LES = {	always = yes	}
+		event_target:AMD_ET_STF_GAY = {	always = yes	}
+	}
+}
+AMD_T_STF_IS_NORM = {	event_target:AMD_ET_ATK = {	is_opposite_sex = event_target:AMD_ET_DEF	}	}
+
+AMD_T_STF_THIS_IS_RAPER = {	character = event_target:AMD_ET_RA	}
+AMD_T_STF_THIS_IS_RAPED = {	character = event_target:AMD_ET_RV	}
+AMD_T_STF_IS_RAPE = {	#	AMD_ET_RA 또는 	AMD_ET_RV	가 존재하는가 체크
+	OR = {	event_target:AMD_ET_RA = {	always = yes	}	event_target:AMD_ET_RV = {	always = yes	}	}
+}
+AMD_T_STF_IS_FMRP = {	#Female to Male Rape
+	#강간자가 여성, 피해자가 남성
+	event_target:AMD_ET_RA = {	is_female = yes	}	event_target:AMD_ET_RV = {	is_female = no	}
+}
+AMD_T_STF_IS_MFRP = {	#Male to Female Rape
+	#강간자가 남성, 피해자가 여성
+	event_target:AMD_ET_RA = {	is_female = no	}	event_target:AMD_ET_RV = {	is_female = yes	}
+}
+
+AMD_T_STF_THIS_IS_BUYER = {	character = event_target:AMD_ET_TB	}
+AMD_T_STF_THIS_IS_SELLER = {	character = event_target:AMD_ET_TS	}
+AMD_T_STF_IS_TRADE = {	#	AMD_ET_TB 또는 	AMD_ET_TS	가 존재하는가 체크
+	OR = {	event_target:AMD_ET_TB = {	always = yes	}	event_target:AMD_ET_TS = {	always = yes	}	}
+}
+
+#이 두개의 필요성에 대한 재고바람
+AMD_T_STF_IS_CONS = {	#	AMD_T_STF_IS_RAPE = no
+	NOT = {	event_target:AMD_ET_RA = {	always = yes	}	event_target:AMD_ET_RV = {	always = yes	}	}
+}
+AMD_T_STF_IS_PURE = {	#	AMD_T_STF_IS_RAPE = no	AMD_T_STF_IS_TRADE = no
+	NOT = {
+		event_target:AMD_ET_RA = {	always = yes	}	event_target:AMD_ET_RV = {	always = yes	}
+		event_target:AMD_ET_TB = {	always = yes	}	event_target:AMD_ET_TS = {	always = yes	}
+	}
+}
+AMD_T_STF_IS_NOT_RAPE = {	#	AMD_T_STF_IS_RAPE = no
+	NOT = {	event_target:AMD_ET_RA = {	always = yes	}	event_target:AMD_ET_RV = {	always = yes	}	}
+}
+
+
+
+#	NBR	Normal Breeding	일반교배	CBR	Cross Breeding	이종간
+
+AMD_T_STF_HUMAN = {	#	인간만의 행위
+	event_target:AMD_ET_ATK = {	AMD_T_IS_HUMAN = yes	}	event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	}
+}
+AMD_T_STF_NBR = {	#	짐승간의 동종교배
+	OR = {	AMD_T_STF_NBR_CAT = yes	AMD_T_STF_NBR_HORSE = yes	AMD_T_STF_NBR_BEAR = yes	}
+}
+AMD_T_STF_NBR_HORSE = {
+	event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}	event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+}
+AMD_T_STF_NBR_BEAR = {
+	event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	}	event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+}
+AMD_T_STF_NBR_CAT = {
+	event_target:AMD_ET_ATK = {	AMD_T_IS_CAT = yes	}	event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+}
+
+AMD_T_STF_CBR = {
+	OR = {
+		AND = {		event_target:AMD_ET_ATK = {	AMD_T_IS_HUMAN = yes	}	#	인간 vs	말	곰	고양이
+			OR = {
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+			}
+		}
+		AND = {		event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}	#	말 vs	인간	곰	고양이
+			OR = {
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+			}
+		}
+		AND = {		event_target:AMD_ET_ATK = {	AMD_T_IS_HUMAN = yes	}	#	인간 vs	말	곰	고양이
+			OR = {
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+			}
+		}
+	}
+}
+AMD_T_STF_CBR_ETC = {	#	그 외 CG지원 없는 모든 이종간
+	OR = {
+		AND = {	#	말	VS	냥
+			event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}	event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+		}
+		AND = {	#	말	VS	곰
+			event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}	event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+		}
+		AND = {		event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	}	#	곰 vs	말	인간	고양이
+			OR = {
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+			}
+		}
+		AND = {		event_target:AMD_ET_ATK = {	AMD_T_IS_CAT = yes	}	#	고양이 vs	말	인간	곰
+			OR = {
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+			}
+		}
+	}
+}
+
+AMD_T_STF_IS_TNRKS = {		#수간 : 인간과 이종족
+	OR = {	
+		AND = {	event_target:AMD_ET_ATK = {	AMD_T_IS_HUMAN = yes	}
+			OR = {
+				event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+				#만약 또다른 종족(?)이 추가된다면 추가할것.
+				event_target:AMD_ET_DEF = {	AMD_T_IS_BEAR = yes	}
+				event_target:AMD_ET_DEF = {	AMD_T_IS_CAT = yes	}
+			}
+		}
+	
+		AND = {	event_target:AMD_ET_DEF = {	AMD_T_IS_HUMAN = yes	}
+			OR = {
+				event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}
+				#씨발 그런데 그것이 실제로 일어났습니다
+				event_target:AMD_ET_ATK = {	AMD_T_IS_BEAR = yes	}
+				event_target:AMD_ET_ATK = {	AMD_T_IS_CAT = yes	}
+			}
+		}
+	}
+}
+AMD_T_STF_IS_HORSEBREED = {		#	말x말
+	AND = {
+		event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}
+		event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}
+	}
+}
+
+
+
+
+AMD_T_2P_SCORE_1 = {	#	100 <= score < 200
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 100	}
+		check_variable = {	which = local_2P_SCORE	value < 200	}
+	}
+}
+AMD_T_2P_SCORE_2 = {	#	200 <= score < 300
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 200	}
+		check_variable = {	which = local_2P_SCORE	value < 300	}
+	}
+}
+AMD_T_2P_SCORE_3 = {	#	300 <= score < 400
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 300	}
+		check_variable = {	which = local_2P_SCORE	value < 400	}
+	}
+}
+AMD_T_2P_SCORE_4 = {	#	400 <= score < 500
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 400	}
+		check_variable = {	which = local_2P_SCORE	value < 500	}
+	}
+}
+AMD_T_2P_SCORE_5 = {	#	500 <= score < 600
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 500	}
+		check_variable = {	which = local_2P_SCORE	value < 600	}
+	}
+}
+AMD_T_2P_SCORE_6 = {	#	600 <= score < 700
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 600	}
+		check_variable = {	which = local_2P_SCORE	value < 700	}
+	}
+}
+AMD_T_2P_SCORE_7 = {	#	700 <= score < 800
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 700	}
+		check_variable = {	which = local_2P_SCORE	value < 800	}
+	}
+}
+
+AMD_T_2P_SCORE_BAD = {	#	100 <= score < 400
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 100	}
+		check_variable = {	which = local_2P_SCORE	value < 400	}
+	}
+}
+AMD_T_2P_SCORE_COMMON = {	#	400 <= score < 500
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 400	}
+		check_variable = {	which = local_2P_SCORE	value < 500	}
+	}
+}
+AMD_T_2P_SCORE_GOOD = {	#	500 <= score < 800
+	event_target:AMD_ET_POV = {
+		check_variable = {	which = local_2P_SCORE	value >= 500	}
+		check_variable = {	which = local_2P_SCORE	value < 800	}
+	}
+}
+
+
+
+AMD_T_PAIR_LIKING = {	#아래 넷중 하나라도 성립하는가?
+	OR = {	AMD_T_PAIR_SM = yes	AMD_T_PAIR_LOLICON = yes	AMD_T_PAIR_HORSE = yes	AMD_T_PAIR_HOMO = yes	}	
+}
+AMD_T_PAIR_SM = {	#새디스트와 마조히스트
+	OR = {
+		AND = {
+			event_target:AMD_ET_ATK = {	trait = AMD_sadist	}
+			event_target:AMD_ET_DEF = {	trait = AMD_masochist	}
+		}
+		AND = {
+			event_target:AMD_ET_ATK = {	trait = AMD_masochist	}
+			event_target:AMD_ET_DEF = {	trait = AMD_sadist	}
+		}
+	}
+}
+AMD_T_PAIR_LOLICON = {	#로리콘과 로리 또는 작은체형
+	OR = {
+		AND = {
+			event_target:AMD_ET_ATK = {	trait = AMD_lolicon	}
+			event_target:AMD_ET_DEF = {	AMD_T_BODY_SMALL = yes	}
+		}
+		AND = {
+			event_target:AMD_ET_ATK = {	AMD_T_BODY_SMALL = yes	}
+			event_target:AMD_ET_DEF = {	trait = AMD_lolicon	}
+		}
+	}
+}
+AMD_T_PAIR_HORSE = {	#말과 말박이
+	OR = {
+		AND = {
+			event_target:AMD_ET_ATK = {	trait = AMD_horsefucker	}
+			event_target:AMD_ET_DEF = {	AMD_T_IS_HORSE = yes	}
+		}
+		AND = {
+			event_target:AMD_ET_ATK = {	AMD_T_IS_HORSE = yes	}
+			event_target:AMD_ET_DEF = {	trait = AMD_horsefucker	}
+		}
+	}
+}
+AMD_T_PAIR_HOMO = {	#동성애자 콤비
+	event_target:AMD_ET_ATK = {	trait = homosexual	}
+	event_target:AMD_ET_DEF = {	trait = homosexual	}
+	AMD_T_STF_IS_HOMO = yes
+}
+AMD_T_PAIR_SUBJECT = {	#	지배/복종 페어	상호관계로 할것인지 일방관계로 할것인지 고려 필요. 아직 확정되지 않았음!!
+	OR = {	#일방의 모디파이어만 체크한다
+		event_target:AMD_ET_ATK = {
+			OR = {
+				has_opinion_modifier = {	who = event_target:AMD_ET_DEF	modifier = AMD_opinion_yielded	}
+				has_opinion_modifier = {	who = event_target:AMD_ET_DEF	modifier = AMD_opinion_obedient	}
+			}
+		}
+		event_target:AMD_ET_DEF = {
+			OR = {
+				has_opinion_modifier = {	who = event_target:AMD_ET_ATK	modifier = AMD_opinion_yielded	}
+				has_opinion_modifier = {	who = event_target:AMD_ET_ATK	modifier = AMD_opinion_obedient	}
+			}
+		}
+	}
+	OR = {	#양방향으로 체크
+		event_target:AMD_ET_ATK = {
+			has_opinion_modifier = {	who = event_target:AMD_ET_DEF	modifier = AMD_opinion_to_slave	}
+			OR = {
+				reverse_has_opinion_modifier = {	who = event_target:AMD_ET_DEF	modifier = AMD_opinion_yielded	}
+				reverse_has_opinion_modifier = {	who = event_target:AMD_ET_DEF	modifier = AMD_opinion_obedient	}
+			}
+		}
+		event_target:AMD_ET_DEF = {
+			has_opinion_modifier = {	who = event_target:AMD_ET_ATK	modifier = AMD_opinion_to_slave	}
+			OR = {
+				reverse_has_opinion_modifier = {	who = event_target:AMD_ET_ATK	modifier = AMD_opinion_yielded	}
+				reverse_has_opinion_modifier = {	who = event_target:AMD_ET_ATK	modifier = AMD_opinion_obedient	}
+			}
+		}
+	}
+}
+
+
+
+#	상대(ATK or DEF)와의 개인적인 관계도(personal_opinion)를 판정하는 조건문.
+
+#	personal_opinion	국가정치력, 법령, 기타 국가적 문제로 인한 영향을 제외
+
+#상대에 대한 개인적 의견 
+AMD_T_P_OPINION_TO_MATE_ABOVE_99 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 99	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 99	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_90 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 90	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 90	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_80 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 80	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 80	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_70 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 70	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 70	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_60 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 60	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 60	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_50 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 50	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 50	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_40 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 40	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 40	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_30 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 30	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 30	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_20 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 20	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 20	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_ABOVE_10 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			personal_opinion = {	who = event_target:AMD_ET_DEF	value = 10	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			personal_opinion = {	who = event_target:AMD_ET_ATK	value = 10	}
+		}
+	}
+}
+
+#	UNDER_xx	'-xx 미만' 을 의미
+AMD_T_P_OPINION_TO_MATE_UNDER_99 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -99	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -99	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_90 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -90	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -90	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_80 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -80	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -80	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_70 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -70	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -70	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_60 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -60	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -60	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_50 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -50	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -50	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_40 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -40	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -40	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_30 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -30	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -30	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_20 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -20	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -20	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_TO_MATE_UNDER_10 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_DEF	value = -10	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	personal_opinion = {	who = event_target:AMD_ET_ATK	value = -10	}	}
+		}
+	}
+}
+
+
+
+#상대로부터의 개인적 의견
+AMD_T_P_OPINION_FROM_MATE_ABOVE_99 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 99	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 99	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_90 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 90	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 90	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_80 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 80	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 80	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_70 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 70	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 70	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_60 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 60	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 60	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_50 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 50	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 50	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_40 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 40	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 40	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_30 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 30	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 30	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_20 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 20	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 20	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_ABOVE_10 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = 10	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = 10	}
+		}
+	}
+}
+
+#	UNDER_xx	-xx 미만 을 의미
+AMD_T_P_OPINION_FROM_MATE_UNDER_99 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -99	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -99	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_90 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -90	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -90	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_80 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -80	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -80	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_70 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -70	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -70	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_60 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -60	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -60	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_50 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -50	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -50	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_40 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -40	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -40	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_30 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -30	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -30	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_20 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -20	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -20	}	}
+		}
+	}
+}
+AMD_T_P_OPINION_FROM_MATE_UNDER_10 = {
+	OR = {
+		AND = {	#현재 스코프가 ATK
+			character = event_target:AMD_ET_ATK
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_DEF	value = -10	}	}
+		}
+		AND = {	#현재 스코프가 DEF
+			character = event_target:AMD_ET_DEF
+			NOT = {	reverse_personal_opinion = {	who = event_target:AMD_ET_ATK	value = -10	}	}
+		}
+	}
+}
+
+
+AMD_CTI_GOOD_TRAITS = {
+	OR = {
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_2 = {	calc_true_if = {	amount = 2
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_3 = {	calc_true_if = {	amount = 3
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_4 = {	calc_true_if = {	amount = 4
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_5 = {	calc_true_if = {	amount = 5
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_6 = {	calc_true_if = {	amount = 6
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_7 = {	calc_true_if = {	amount = 7
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_8 = {	calc_true_if = {	amount = 8
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+AMD_CTI_GOOD_TRAITS_9 = {	calc_true_if = {	amount = 9
+		#지성
+		trait = quick	trait = shrewd
+		#성격
+		trait = just	trait = brave	trait = gregarious	trait = trusting
+		#미덕
+		trait = kind	trait = patient	trait = diligent
+		#생활
+		trait = poet	trait = socializer	trait = mystic
+	}
+}
+
+AMD_CTI_GREAT_TRAITS = {
+	OR = {
+		#신체
+		trait = genius	trait = fair	trait = strong	trait = robust
+		#정신
+		trait = lustful	trait = possessed
+		#생활
+		trait = seducer	trait = seductress	trait = hedonist	trait = decadent
+	}
+}
+AMD_CTI_GREAT_TRAITS_2 = {	calc_true_if = {	amount = 2
+		#신체
+		trait = genius	trait = fair	trait = strong	trait = robust
+		#정신
+		trait = lustful	trait = possessed
+		#생활
+		trait = seducer	trait = seductress	trait = hedonist	trait = decadent
+	}
+}
+AMD_CTI_GREAT_TRAITS_3 = {	calc_true_if = {	amount = 3
+		#신체
+		trait = genius	trait = fair	trait = strong	trait = robust
+		#정신
+		trait = lustful	trait = possessed
+		#생활
+		trait = seducer	trait = seductress	trait = hedonist	trait = decadent
+	}
+}
+AMD_CTI_GREAT_TRAITS_4 = {	calc_true_if = {	amount = 4
+		#신체
+		trait = genius	trait = fair	trait = strong	trait = robust
+		#정신
+		trait = lustful	trait = possessed
+		#생활
+		trait = seducer	trait = seductress	trait = hedonist	trait = decadent
+	}
+}
+AMD_CTI_GREAT_TRAITS_5 = {	calc_true_if = {	amount = 5
+		#신체
+		trait = genius	trait = fair	trait = strong	trait = robust
+		#정신
+		trait = lustful	trait = possessed
+		#생활
+		trait = seducer	trait = seductress	trait = hedonist	trait = decadent
+	}
+}
+AMD_CTI_GREAT_TRAITS_6 = {	calc_true_if = {	amount = 6
+		#신체
+		trait = genius	trait = fair	trait = strong	trait = robust
+		#정신
+		trait = lustful	trait = possessed
+		#생활
+		trait = seducer	trait = seductress	trait = hedonist	trait = decadent
+	}
+}
+
+AMD_CTI_BAD_TRAITS = {
+	OR = {
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_2 = {	calc_true_if = {	amount = 2
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_3 = {	calc_true_if = {	amount = 3
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_4 = {	calc_true_if = {	amount = 4
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_5 = {	calc_true_if = {	amount = 5
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_6 = {	calc_true_if = {	amount = 6
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_7 = {	calc_true_if = {	amount = 7
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_8 = {	calc_true_if = {	amount = 8
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+AMD_CTI_BAD_TRAITS_9 = {	calc_true_if = {	amount = 9
+		#정신
+		trait = slow	trait = dull
+		#신체
+		trait = weak	trait = feeble
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		#정신
+		trait = chaste	trait = slothful	trait = drunkard	trait = stressed
+		trait = craven	trait = shy	trait = arbitrary	trait = stubborn
+		#생활
+		trait = gamer	trait = theologian
+	}
+}
+
+AMD_CTI_POOR_TRAITS = {
+	OR = {
+		#정신
+		trait = imbecile	trait = lunatic	trait = depressed
+		#신체
+		trait = ugly	trait = dwarf	trait = hunchback	trait = inbred
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		trait = disfigured	trait = mangled	trait = maimed	trait = blinded
+		#생활
+		trait = celibate	trait = gluttonous
+	}
+}
+AMD_CTI_POOR_TRAITS_2 = {	calc_true_if = {	amount = 2
+		#정신
+		trait = imbecile	trait = lunatic	trait = depressed
+		#신체
+		trait = ugly	trait = dwarf	trait = hunchback	trait = inbred
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		trait = disfigured	trait = mangled	trait = maimed	trait = blinded
+		#생활
+		trait = celibate	trait = gluttonous
+	}
+}
+AMD_CTI_POOR_TRAITS_3 = {	calc_true_if = {	amount = 3
+		#정신
+		trait = imbecile	trait = lunatic	trait = depressed
+		#신체
+		trait = ugly	trait = dwarf	trait = hunchback	trait = inbred
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		trait = disfigured	trait = mangled	trait = maimed	trait = blinded
+		#생활
+		trait = celibate	trait = gluttonous
+	}
+}
+AMD_CTI_POOR_TRAITS_4 = {	calc_true_if = {	amount = 4
+		#정신
+		trait = imbecile	trait = lunatic	trait = depressed
+		#신체
+		trait = ugly	trait = dwarf	trait = hunchback	trait = inbred
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		trait = disfigured	trait = mangled	trait = maimed	trait = blinded
+		#생활
+		trait = celibate	trait = gluttonous
+	}
+}
+AMD_CTI_POOR_TRAITS_5 = {	calc_true_if = {	amount = 5
+		#정신
+		trait = imbecile	trait = lunatic	trait = depressed
+		#신체
+		trait = ugly	trait = dwarf	trait = hunchback	trait = inbred
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		trait = disfigured	trait = mangled	trait = maimed	trait = blinded
+		#생활
+		trait = celibate	trait = gluttonous
+	}
+}
+AMD_CTI_POOR_TRAITS_6 = {	calc_true_if = {	amount = 6
+		#정신
+		trait = imbecile	trait = lunatic	trait = depressed
+		#신체
+		trait = ugly	trait = dwarf	trait = hunchback	trait = inbred
+		trait = clubfooted	trait = harelip	trait = lisp	trait = stutter
+		trait = disfigured	trait = mangled	trait = maimed	trait = blinded
+		#생활
+		trait = celibate	trait = gluttonous
+	}
+}
+
+AMD_CTI_XF_TRAITS = {
+	OR = {
+		trait = AMD_x_horsefucker
+		trait = AMD_x_bearfucker
+		trait = AMD_x_catfucker
+		trait = AMD_xenophile
+	}
+}
+

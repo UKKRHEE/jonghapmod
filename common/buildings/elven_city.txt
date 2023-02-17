@@ -1,0 +1,321 @@
+city = {
+	elven_major_port_1 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		port = yes
+		desc = elven_port_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		galley = 10
+	}
+	elven_major_port_2 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		port = yes
+		desc = elven_port_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		upgrades_from  = elven_major_port_1
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		galley = 10
+	}
+	elven_major_port_3 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		port = yes
+		desc = elven_port_desc
+		add_number_to_name = yes
+		gold_cost = 300
+		build_time = 365
+		ai_creation_factor = 0
+		upgrades_from  = elven_major_port_2
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		galley = 10
+	}
+	elven_major_port_4 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		port = yes
+		desc = elven_port_desc
+		add_number_to_name = yes
+		gold_cost = 300
+		build_time = 365
+		ai_creation_factor = 0
+		upgrades_from  = elven_major_port_3
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		galley = 10
+	}
+	elven_mist_forest_1 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_wild_forest_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		fort_level = 1.0
+	}
+	elven_mist_forest_2 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_wild_forest_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		upgrades_from = elven_mist_forest_1
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		fort_level = 1.0
+	}
+	elven_mist_forest_3 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_wild_forest_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		upgrades_from = elven_mist_forest_2
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		fort_level = 1.0
+	}
+	elven_mist_forest_4 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_wild_forest_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 0
+		upgrades_from = elven_mist_forest_3
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		fort_level = 1.0
+	}
+    elven_castle_1 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_castle_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 10
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		archers = 20 
+		archers_offensive = 0.1
+		tax_income = 0.5
+	}
+	elven_castle_2 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_castle_desc
+		add_number_to_name = yes
+		upgrades_from = elven_castle_1
+		gold_cost = 350
+		build_time = 365
+		ai_creation_factor = 10
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		archers = 20 
+		archers_offensive = 0.1
+		tax_income = 0.5
+	}
+	elven_trade_hall_1 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_trade_hall_desc
+		add_number_to_name = yes
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 10
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		tax_income = 2.0
+	}
+	elven_trade_hall_2 = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_trade_hall_desc
+		add_number_to_name = yes
+		gold_cost = 300
+		build_time = 365
+		ai_creation_factor = 10
+		upgrades_from = elven_trade_hall_1
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		tax_income = 2.0
+	}
+	elven_baths = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_baths_desc
+		add_number_to_name = yes
+		gold_cost = 600
+		build_time = 730
+		ai_creation_factor = 10
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		disease_defence = 0.10
+	}
+	elven_herb_gatherer = {
+		potential = {
+			OR = {
+				culture = elven
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = elven
+				}
+			}
+		}
+		desc = elven_herb_gatherer_desc
+		add_number_to_name = yes
+		gold_cost = 600
+		build_time = 730
+		ai_creation_factor = 10
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		disease_defence = 0.05
+		levy_reinforce_rate = 0.10
+	}
+}

@@ -1,0 +1,106 @@
+# Original code by zia, author of Serpent Expansion
+
+targetted_decisions = {
+	dwf_futa_concubine = {
+		filter = realm
+		ai_target_filter = none
+
+		from_potential = {
+			has_polygamy = no # Polygamy and concubinage cant co-exist.
+			ai = no
+			practical_age = 16
+			trait = futa
+			OR = {
+				trait = lilith
+				trait = alu_fiend
+			}
+			society_rank >= 2
+			society_member_of = dw_the_chosen_of_lilith
+			prisoner = no
+		}
+		potential = {
+			prisoner = no
+			same_realm = FROM
+			practical_age = 16
+			is_married = no
+			is_betrothed = no
+			is_consort = no
+			is_female = yes
+			is_ruler = no
+			OR = {
+				NOT = {
+					is_close_relative = FROM
+				}
+				AND = {
+					is_close_relative = FROM
+					FROM = {
+						OR = {
+							has_religion_feature = religion_holy_family
+							religion = messalian
+							religion = zoroastrian
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				OR = {
+					AND = {
+						society_rank == 2
+						society_member_of = dw_the_chosen_of_lilith
+						NOT = {
+							num_of_consorts = 1
+						}
+					}
+					AND = {
+						society_rank == 3
+						society_member_of = dw_the_chosen_of_lilith
+						NOT = {
+							num_of_consorts = 2
+						}
+					}
+					AND = {
+						society_rank == 4
+						society_member_of = dw_the_chosen_of_lilith
+						NOT = {
+							num_of_consorts = 3
+						}
+					}
+				}
+				has_society_currency_medium_trigger = yes
+			}
+		}
+		effect = {
+			FROM = { detract_society_currency_medium_effect = yes }
+			hidden_effect = {
+				set_gender = male
+			}
+			FROM = {
+				add_consort = ROOT
+			}
+			hidden_effect = {
+				set_gender = female
+			}
+			if = {
+				limit = {
+					NOT = {
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			opinion = {
+				who = FROM
+				modifier = dw_futa_mistress
+			}
+			add_lover = ROOT
+			hidden_effect = { 
+				remove_virginity_trait = yes
+				FROM = { add_lover = ROOT } 
+			}		}
+		ai_will_do = {
+    			factor = 0
+ 		}
+	}
+}

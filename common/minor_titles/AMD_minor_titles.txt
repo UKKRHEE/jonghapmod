@@ -1,0 +1,69 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allowed_to_hold: conditions for the character to hold the title
+#	allowed_to_grant: conditions for a ruler to grant the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+title_AMD_courtesan = {
+	dignity = 0.01
+	realm_in_name = no
+	grant_limit = 10
+	opinion_effect = 5
+	
+	monthly_salary = 0.01
+	monthly_prestige = -0.05
+	
+	is_unique = yes		#yes는 다른 명예직과 겸직할 수 없다는 의미
+	
+	allowed_to_hold = {
+		AMD_T_IS_DOABLE_AGE = yes
+		prisoner = no
+		NOT = {		#고자나 임신중, 에로금지캐릭은 못함... 그러나 임신 체크는 제외하는데, 임신했다고 보직해임(?)되면 이상하니까...
+			trait = eunuch
+			has_character_flag = AMD_CF_UNFUCKABLE
+			#custom_tooltip = {	text = "AMD_String_T_IS_CANNOT_PLAY_GAME"	hidden_tooltip = {		}	}
+		}
+		OR = {		#이성이거나 동성애자일 것
+			is_opposite_sex = FROM
+			AND = {	same_sex = FROM	trait = homosexual	FROM = {	trait = homosexual	}	}
+		}
+		OR = {		#연인, 배우자, 첩,  복종 또는 관계도 75이상
+			is_married = FROM
+			is_consort = FROM
+			is_lover = FROM
+			has_opinion_modifier = {	who = FROM	modifier = AMD_opinion_yielded	}
+			has_opinion_modifier = {	who = FROM	modifier = AMD_opinion_obedient	}
+			has_opinion_modifier = {	who = FROM	modifier = opinion_loyal_servant	}
+			has_opinion_modifier = {	who = FROM	modifier = opinion_the_chosen_one	}
+			opinion = {	who = FROM	value = 75	}
+		}
+	}
+	
+	allowed_to_grant = {
+		AMD_T_IS_PLAYER = yes
+		NOT = {		#고자나 임신중, 에로금지캐릭은 못함
+			trait = eunuch
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	
+	revoke_trigger = {	always = yes	}
+
+	message = yes
+}
+
+
+
+

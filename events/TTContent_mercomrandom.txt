@@ -1,0 +1,344 @@
+### Contains events that are intended for use in the Mercenary Commander Mod
+
+# .1000 Regular Periodic EVENTS
+# .2000 Focus related EVENTS
+# .3000 Fair related events
+namespace = mercomran
+
+#######################################
+##### Periodic player Domination ######
+#######################################
+
+character_event = {
+	id = mercomran.101
+	hide_window = yes # Nothing to see here
+	only_playable = yes # Pre-trigger
+	has_global_flag = mercom_recruited
+	ai = no # Should never happen to the AI
+	is_triggered_only = yes # Called from OnAction
+	trigger = {
+		is_adult = yes # Commander doesn't truck with children
+		any_character = { 
+			has_character_flag = mercom_alpha # Unique to Commander
+			prisoner = no # Commander shouldn't be in prison
+			in_command = no # shouldn't be away leading an army
+			NOT = { trait = in_hiding } # Commander shouldn't be in hiding
+		}
+	}
+	immediate = {
+		# Aquire the commander as the event target
+		any_character = {
+			limit = {
+				has_character_flag = mercom_alpha # Unique to commander
+			}
+			save_event_target_as = mercom_futadom
+		}
+		narrative_event = { id = mercomran.102 }
+	}
+}
+
+narrative_event = {
+	id = mercomran.102
+	desc = "mercomran102"
+	picture = commander_lower3
+	title = mercomran_102title
+	
+	is_triggered_only = yes 
+	option = {
+		trigger = { is_female = yes }
+		name = "mercomran102a"
+		narrative_event = { id = mercomran.103 }
+		}
+	option = {
+		trigger = { is_female = no }
+		name = "mercomran102a"
+		narrative_event = { id = mercomran.104 }
+		}
+}
+
+# .103 Female Player raped by Commander
+narrative_event = {
+	id = mercomran.103
+	desc = "mercomran103"
+	picture = commander_female1
+	title = mercomran_103title
+	is_triggered_only = yes # triggered by .102
+		option = { 
+		name = "mercomran103a"
+		opinion = {
+				modifier = mercom_opinion_ima_bitch
+				who = event_target:mercom_futadom
+			}
+			event_target:mercom_futadom = {
+				opinion = {
+					modifier = mercom_opinion_my_bitch
+					who = ROOT
+				}
+			}
+		if = {
+			limit = {
+				NOT = { has_character_modifier = mercom_futaslut }
+			}
+			add_character_modifier = { modifier = mercom_futaslut duration = -1 }
+		}
+		event_target:mercom_futadom = {
+			character_event = { id = DWCore.9005 }
+		}
+	}
+}
+# .104 Male Player raped by Commander
+narrative_event = {
+	id = mercomran.104
+	desc = "mercomran104"
+	picture = commander_male1
+	title = mercomran_104title
+
+	is_triggered_only = yes # by .102
+		option = { 
+		name = "mercomran104a"
+		opinion = {
+				modifier = mercom_opinion_ima_bitch
+				who = event_target:mercom_futadom
+			}
+			event_target:mercom_futadom = {
+				opinion = {
+					modifier = mercom_opinion_my_bitch
+					who = ROOT
+				}
+			}
+		if = {
+			limit = {
+				NOT = { has_character_modifier = mercom_futaslut }
+			}
+			add_character_modifier = { modifier = mercom_futaslut duration = -1 }
+		}
+	}
+}
+
+#######################################
+######### Corrupt Magistrate ##########
+#######################################
+
+
+# .105 Futa's stop corrupt magistrate
+narrative_event = {
+	id = mercomran.105
+	desc = "mercomran105"
+	picture = fut_blow
+	title = mercomran_105title
+	has_global_flag = mercom_recruited
+	only_playable = yes # Pre-trigger
+	ai = no # Should never happen to the AI	
+	is_triggered_only = yes # Called from OnAction
+	trigger = {
+		is_adult = yes # The Red Hand doesn't approach children
+		NOT = { has_character_flag = bad_magister_futa }
+	}
+	option = {
+		name = "mercomran105a"
+		set_character_flag = bad_magister_futa
+		}
+}
+
+
+#######################################
+############# FOCUS EVENTS ############
+#######################################
+
+## .2000 Viking Girl wins the practice duel.  
+
+narrative_event = { #### On Action Handling Event ####
+	id = mercomran.2999
+	hide_window = yes # Nothing to see here
+	has_global_flag = mercom_recruited
+	has_character_flag = redhand_npc_freja 
+	is_triggered_only = yes # Called from OnAction
+	trigger = { 
+		liege = { has_focus = focus_war }
+		not = { has_global_flag = mercomran_frejaduel }
+		}
+	immediate = { save_event_target_as = freja_duel_seed }
+		
+	option = {
+		liege = {
+			narrative_event = { id = mercomran.2000 }
+		}
+	}
+}
+
+narrative_event = {
+	id = mercomran.2000
+	desc = "mercomran2000"
+	picture = freja_face
+	title = mercomran_2000title
+	is_triggered_only = yes # Called from OnAction Handling Event
+
+	option = {
+		name = "mercomran2000a"
+		narrative_event = { id = mercomran.2001 }
+		set_global_flag = mercomran_frejaduel
+		}
+}
+
+narrative_event = {
+	id = mercomran.2001
+	desc = "mercomran2001"
+	picture = mercom_combat
+	title = mercomran_2001title
+	is_triggered_only = yes # Called from .2000
+
+	option = {
+		name = "mercomran2001a"
+		narrative_event = { id = mercomran.2002 }
+		change_martial = 1
+		}
+	option = {
+		name = "mercomran2001b"
+		narrative_event = { id = mercomran.2002 } 
+		change_intrigue = 1
+		}
+	option = {
+		name = "mercomran2001c"
+		narrative_event = { id = mercomran.2002 }
+		change_diplomacy = 1
+		}
+}
+
+narrative_event = {
+	id = mercomran.2002
+	desc = "mercomran2002"
+	picture = mercom_combat
+	title = mercomran_2002title
+	is_triggered_only = yes # Called from .2001
+
+	option = { ## Male loses
+		trigger = { is_female = no }
+		name = "mercomran2002a"
+		narrative_event = { id = mercomran.2010 }
+		}
+	option = { ## Female loses
+		trigger = { is_female = yes }
+		name = "mercomran2002a"
+		narrative_event = { id = mercomran.2020 }
+		}
+}
+
+####  Begin Male Specific Line
+
+narrative_event = {
+	id = mercomran.2010
+	desc = "mercomran2010"
+	picture = viking_male_wins
+	title = mercomran_2010title
+	is_triggered_only = yes # Called from .2002
+
+	option = {
+		name = "mercomran2010a"
+		narrative_event = { id = mercomran.2011 }
+		}
+}
+
+narrative_event = {
+	id = mercomran.2011
+	desc = "mercomran2011"
+	picture = viking_male_wins2
+	title = mercomran_2011title
+	is_triggered_only = yes # Called from .2010
+
+	option = {
+		name = "mercomran2011a"
+		narrative_event = { id = mercomran.2012 }
+		}
+}
+
+narrative_event = {
+	id = mercomran.2012
+	desc = "mercomran2012"
+	picture = viking_male_wins
+	title = mercomran_2012title
+	is_triggered_only = yes # Called from .2011
+
+	option = {
+		name = "mercomran2012a"
+		narrative_event = { id = mercomran.2003 } 
+		}
+}
+
+####  End Male Specific Line
+####  Begin Female Specific Line
+
+narrative_event = {
+	id = mercomran.2020
+	desc = "mercomran2020"
+	picture = viking_girl_wins
+	title = mercomran_2020title
+	is_triggered_only = yes # Called from .2002
+
+	option = {
+		name = "mercomran2020a"
+		narrative_event = { id = mercomran.2021 }
+		hidden_tooltip = { event_target:freja_duel_seed = { character_event = { id = DWCore.9005 }}} # Pregnancy check for player
+		}
+}
+
+narrative_event = {
+	id = mercomran.2021
+	desc = "mercomran2021"
+	picture = viking_girl_wins2
+	title = mercomran_2021title
+	is_triggered_only = yes # Called from .2020
+
+	option = {
+		name = "mercomran2021a"
+		narrative_event = { id = mercomran.2022 }
+		}
+}
+
+narrative_event = {
+	id = mercomran.2022
+	desc = "mercomran2022"
+	picture = viking_girl_wins
+	title = mercomran_2022title
+	is_triggered_only = yes # Called from .2021
+
+	option = {
+		name = "mercomran2022a"
+		narrative_event = { id = mercomran.2003 } 
+		}
+}
+
+####  End Female Specific Line
+####  Begin CLOSING EVENT FOR VIKING DUEL CHAIN
+
+narrative_event = {
+	id = mercomran.2003
+	desc = "mercomran2003"
+	picture = mercom_sword
+	title = mercomran_2003title
+	is_triggered_only = yes # Called from .2022 & .2012
+
+	option = {
+		name = "mercomran2003a"
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+ghost_male = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+ghost_female = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+dwtw_others3 = { # Red Sonja
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+orc_child1 = { # Orc female child
+	hidden = yes
+	random = no
+	customizer = no
+}
+orc_child2 = { # Orc male child
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+elf_child1 = { # Elf female child
+	hidden = yes
+	random = no
+	customizer = no
+}
+elf_child2 = { # Elf male child
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+kitsune_child1 = { # Kitsune female child
+	hidden = yes
+	random = no
+	customizer = no
+}
+kitsune_child2 = { # Kitsune male child
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+neko_child1 = { # Neko female child
+	hidden = yes
+	random = no
+	customizer = no
+}
+neko_child2 = { # Neko male child
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+fairy_child1 = { # Fairy female child
+	hidden = yes
+	random = no
+	customizer = no
+}
+fairy_child2 = { # Fairy male child
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_lizard_child1 = { # DWSE Reptillian female child
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_lizard_child2 = { # DWSE Reptillian male child
+	hidden = yes
+	random = no
+	customizer = no
+}

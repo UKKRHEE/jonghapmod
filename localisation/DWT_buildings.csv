@@ -1,0 +1,125 @@
+DWTBuildings1;Finding yourself with some free time, you take the opportunity to go out and look around some shops.;;;;;;;;;;;;;x
+DWTBuildings1A;Let's visit the Exotic Emporium;;;;;;;;;;;;;x
+DWTBuildings10;I visit the Exotic Emporium, where they have a varied selection of rare goods from around the world. While 'goods from around the world' often mean the lands nearby, the shop does indeed get their hands on some wondrous items that you aren't likely to find in another other store or marketplace. \n Clothes made from rare materials, some of which are rumored to have magical effects. Rare items that may hold hidden uses or hold special powers themselves. And even exotic pets or trained animals. \n The merchant steps forward and asks if he may be of assistance.;;;;;;;;;;;;;x
+DWTBuildings10A;I'd like to take a look at your clothing.;;;;;;;;;;;;;x
+DWTBuildings10B;Let's see some of these rare wondrous items.;;;;;;;;;;;;;x
+DWTBuildings10C;I'm curious about your exotic and/or trained animals.;;;;;;;;;;;;;x
+DWTBuildings10D;I don't believe I'm interested in any shopping today.;;;;;;;;;;;;;x
+DWTBuildings20;I let the merchant know I'm interested in the clothing options. It is a fair selection of clothing, many of the items being what is popular in one court or another. Interestingly enough, none of it seems outdated, which speaks highly of the merchant's business acumen. \n However, I've my own tailors that handle my courtly wear. What I'm interested in are the rarer items, and I'm pleased to see that a few are indeed in stock. \n I make a side comment about how there seems to be more woman's options than men, and the merchant responds, "That it is largely due to the ladies being those who seek the finery, so their options are indeed more expansive." \n Note: clothing shown is based on sex of visiting character.;;;;;;;;;;;;;x
+DWTBuildings20A;I'd like the silken miniskirt attire.;;;;;;;;;;;;;x
+DWTBuildings20B;I'll take the revealing regal dress.;;;;;;;;;;;;;x
+DWTBuildings20C;I'll take the cute lingerie.;;;;;;;;;;;;;x
+DWTBuildings20D;I'll take the black and gold doublet.;;;;;;;;;;;;;x
+dwt_golden_doublet;Golden Doublet;;;;;;;;;;;;;x
+DWTBuildingsNope;¥³ªÈ ª´İ¡³É²´éˆ¢È, ¢³åÆÌ «È¡¸ ±ÈĞë‰²³¬È «³ÎëÆĞ¡· ¡³á«³.;;;;;;;;;;;;;x
+DWTBuildings21;You select a beautiful outfit with a miniskirt and top, that is made of fine white silk, with a gold midriff. It includes lace stockings that and heeled boots that seem to accent your ass when you're standing.;;;;;;;;;;;;;x
+DWTBuildings21A;I can already feel eyes appreciating me.;;;;;;;;;;;;;x
+dwt_miniskirt;Silken Miniskirt;;;;;;;;;;;;;x
+dwt_miniskirt_desc;The outfit accents your ass and draws the attention of those around you.;;;;;;;;;;;;;x
+dwt_revealing_dress;Revealing Regal Dress;;;;;;;;;;;;;x
+dwt_revealing_dress_desc;The intricate outfit is a mix of courtly elegance and provocative indulgence.;;;;;;;;;;;;;x
+dwt_lingerie;Lingerie;;;;;;;;;;;;;x
+dwt_lingerie_desc;An intimate piece certain to please your lover.;;;;;;;;;;;;;x
+DWTBuildings22;You select an elegant, yet scandalous gown that displays a lady's finer features. It is said that the virgin pearls and blessed gold weave inspire the wearer in matters of business.;;;;;;;;;;;;;x
+DWTBuildings22A;Revealing yet commanding, a perfect match for my style.;;;;;;;;;;;;;x
+DWTBuildings23;You opt for an intimate piece made of a fine mix of red velvet and soft white cotton, with a sheer lace frill. The dye used in making the velvet is said to contain the blood of baby seals, which promotes fertility.;;;;;;;;;;;;;x
+DWTBuildings23A;I wonder how I'll look while on my knees in this?;;;;;;;;;;;;;x
+dw_shopping_exotic_emporium;«ÈäÁÉ¬·É«ÈÌ îÆÌ ª³İ¬·Ø;;;;;;;;;;;;;x
+dw_shopping_exotic_emporium_desc;«ÈäÁÉ¬·É«ÈÌ îÆÌ ª³İ¬·Ø«¸ª· «´ù¼Ìæ»İèÁĞëÆĞ äŠ«ÈÙ²³Ì¥³.;;;;;;;;;;;;;x
+DWTBuildings24;I've selected an impressive doublet. It is a mixture of supple black leather and cotton, with a weaved gold embroidery. The chain that holds on the cloak is made of fine pressed plates of gold with rubies in the center.;;;;;;;;;;;;;x
+DWTBuildings24A;An outfit that may be worth its weight in gold.;;;;;;;;;;;;;x
+DWTBuildings1B;Let's visit the armorer today.;;;;;;;;;;;;;x
+DWTBuildings100;You visit your armorer, a master of his craft. While his primary role is equipping your troops, he does do business on the side where he sells  the few custom pieces he is able to make during the year. With a nod and a smile he asks, "What can I help you with today?";;;;;;;;;;;;;x
+dwt_chainbikini;Chain Bikini;;;;;;;;;;;;;x
+DWTBuildings100A;I like the look of the Chain Bikini;;;;;;;;;;;;;x
+DWTBuildings110;Sturdy polished steel chain links cover a finer layer of soft leather and cotton cloth. The protected area can absorb a blow without shattering, while the leather and cloth held absorb and distribute the impact, lessening brusing. The cotton also absorbs sweat and helps prevent chaffing.;;;;;;;;;;;;;x
+DWTBuildings110A;My most important parts are protected.;;;;;;;;;;;;;x
+DWTBuildings100B;I'll take the regal looking Griffon Armor.;;;;;;;;;;;;;x
+DWTBuildings120;Forged of high quality steel, with intricate craftsmanship that gives the look of layered feather or wings upon the armor. It is regal, functional, and the kind of armor that makes men feel proud to follow the one who wears it.;;;;;;;;;;;;;x
+DWTBuildings120A;I am a leader of men.;;;;;;;;;;;;;x
+dwt_griffonarmor;Griffon Armor;;;;;;;;;;;;;x
+dwt_ladywarrior;Lady Warrior Armor;;;;;;;;;;;;;x
+DWTBuildings130;The finest armor for a lady. Thin forged steel plate atop thick, supple leather provides both comfort and protection. A dress of rare fabric known as dragon's webbing makes a regal dress that is just long enough to look proper, yet not impede movement. When not in combat, the armor looks great in court as well.;;;;;;;;;;;;;x
+DWTBuildings130A;I am a shining example for all.;;;;;;;;;;;;;x
+DWTBuildings100C;I'll take the Lady Warrior Armor.;;;;;;;;;;;;;x
+dwt_tankarmor;Intimidator Armor;;;;;;;;;;;;;x
+DWTBuildings140;Not the most mobile armor, which hinders it slightly in solo combat, but on a battle field, it is wonderful as it is both imposing and unparalleled in its protection. Heavy iron and steel plates combine with leather strips which slow incoming blows before they meet the metal. Not for the weak to try and wear.;;;;;;;;;;;;;x
+DWTBuildings140A;I'll be unstoppable!;;;;;;;;;;;;;x
+DWTBuildings100D;I like the looks of this heavy intimidating armor.;;;;;;;;;;;;;x
+DWTBuildings200;The building is filled with a variety of herbs, books, and animal parts. A cute woman appears before you, smiling as she says, "We specialize in a variety of remedies, all will do something, although how effective they are depends on the person. What can we interest you in? Oh, and no refunds.";;;;;;;;;;;;;x
+DWTBuildings200A;Penis Enlargement;;;;;;;;;;;;;x
+DWTBuildings200B;Breast Enlargement;;;;;;;;;;;;;x
+DWTBuildings200C;Good Fortune;;;;;;;;;;;;;x
+DWTBuildings210;The cute woman frowns a bit, "Aah, the little fella needs a bit of confidence? Well this potion is certain to fill your pants!" You look at the brownish-purple swill and shrug. No refunds after all.;;;;;;;;;;;;;x
+DWTBuildings210A;Bottom's up.;;;;;;;;;;;;;x
+DWTBuildings220;The cute woman smiles, "Hey, I think your rack looks great, but if you're in the mood for a bit more cleavage, who am I to say no? This potion may require you to get some new clothes, but hey, who doesn't love new cloths?" You look at the sweet smelling pinkish-purple liquid and shrug. No refunds after all.;;;;;;;;;;;;;x
+DWTBuildings220A;Bottom's up.;;;;;;;;;;;;;x
+DWTBuildings230;The cute woman smiles, "Ooh, I see. Oddly enough, that one isn't as popular as you'd imagine. I think it's because it only improves your revenue for a year, and it takes a few months to earn your initial investment back depending on how good you are already with money." You look at the metallic smelling golden liquid and shrug. No refunds after all.;;;;;;;;;;;;;x
+DWTBuildings230A;Bottom's up.;;;;;;;;;;;;;x
+maximum_fortune;Maximum Good Fortune Potion Effect;;;;;;;;;;;;;x
+moderate_fortune;Moderate Good Fortune Potion Effect;;;;;;;;;;;;;x
+minor_fortune;Minor Good Fortune Potion Effect;;;;;;;;;;;;;x
+DWTBuildings1C;How about a nice alchemical potion?;;;;;;;;;;;;;x
+mage;¨³©·Ùª³;;;;;;;;;;;;;x
+mage_desc;«ÈæÆĞëÆÌ ©È¨ÈĞêŒ¦·Ùäˆ ò¼²³É¬·É«ÈÙ¢È¥³. äŒæÆĞùÇ ¬ÈªÈÉ ©·ØùÄåÆÌ ¢·èŠ¢³ ©³İ¥´²³Ù¢È¥³.;;;;;;;;;;;;;x
+pet_guard_dog;¡¹İ©È¡¹Ì;;;;;;;;;;;;;x
+DWTBuildings40;¢³åÆÌ «ÈäÁÉ¬·É«ÈÌ îÆÌ ª³İ¬·Ø«¸ ¡³¡Èçˆ ²³«¹Ü¥³. ¡·¡È«¸åÆÌ «ÈäÁÉ¬·É«ÈÌ êŠ¬ÈÙğÁØæÆĞò¼ æ»İèÁĞò¼ ¬ÈØêÆİæÆĞ ªÈØ¬È«·åÆÌ ª³¦³Øæˆ ©³É¬¸ éˆì»Ìô¿«· ¬·ÌªÈô¿«· «ÈÜ«·Ü¥³. ªÈª·ÌëÆĞ ª³çˆ¬³ÙåÆÌ ¨³ÎëÆÌ ¡·ÛæÆĞ«È «ÈÜ«·Ü¬È¨³Ì ¢´¡³ ®³ŞåÆÌ ¡·ÛëÆÌ «·Ú«·Ü¥³. äŒ¦´ª· ¢³åÆÌ ¡³¡¸ùÇ ìˆ¦¹Ìª³«¸¡¸ ¥³¡³¡³Ü¥³. äŒæÆĞëÆÌ ñÁÌ¦¹Ìô¿Ì ¡´çÆĞ ±³Ğäˆ«ÈÜ«·Üäˆ ¢³åÆÌ äŒæÆĞùÇ ñÁÌ¦¹Ì«¸ ¥´²´ èÁĞ«·éˆäˆ ñÁÌ¦¹Ìô¿Ì ¡¹İ©È¡¹ÌëÆĞ ±³Ì¥³åÆÌ ¡·ÛëÆĞ «³Ğ«³Ü¥³. ¡¹İ©È¡¹ÌëÆÌ ìŠ«ÈÌùÇ ª´İ¨¹İëÆĞ ¬È¯Èäˆ éˆ‡ˆ²³åÆÌ¥¸ ìÁİ¬·ØëÆĞ æÁÌ¥³äˆ ²³«¹Ü¥³. ¢³åÆÌ ¬ÈØêÆİùÇ êŠ¨¹İ«¸ ¥´²´ èÁĞ«·éˆ«³Ü¥³. äŒ ¡´æÆĞëÆÌ ±¹İäÅÌ¬·ÉëŒçˆ 10¢¹Ì¬·İæˆ ª³Ì¥³äˆ ²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWTBuildings40A;¢³åÆÌ ¬·É«È ¨³Î¬È, «È ¡¹İ©È¡¹ÌëÆÌ ¬·İ¨³Ğ «³çÆØ¥³ÙäÁÌ.;;;;;;;;;;;;;x
+DWTBuildings41;¢³åÆÌ ¡³İ²´éˆ«ÈåÆÌ ¡´çÆĞ ä»Ğ¦³¢´äˆ ìˆ¦¹Ìª³åÆÌ ¢³«¸¡¸ ïÆÉ©¹Ğ²³Ì ¨¹İ¦¹İëŒçˆ «ÈÌªÈÉ²³åÆÌ ¨¹ß ¡³¬È ²´ÉªÈØ ¥³Ì«·æÆĞëÆĞ «³Ğ¦¹ìŠ«·Ü¥³. ìˆ¦¹Ìª³¡³ ¢³«¸¡¸ «È«µ¡È ²³Ğ‘´ äŒ ¡´åÆÌ ª´çˆëÁÌ ìŠ«ÈÌëÆĞ «³Ğ«³éˆæÆÛ ¢³«¸¡¸ ®ÈÌ¬·Ğ²³¡¸ ›Ä«·¥³¢È¡È ªÈ¬³É²´Ü¥³. ¢´¡³ äŒ ¡´çÆĞ é»Ğ‘´ ¢´ äÁİ¬·Ì«¸ «ÈÜåÆÌ ¨¹ß¨¹ß ¨·İ®·İ«ÈæÆĞéˆ¥³ –»É–»É²´ éˆ«¹Ü¥³.;;;;;;;;;;;;;x
+DWTBuildings41A;®³É²³¬È, ¢´¡³ «È¬¸ ¢·ùÇ ìŠ«ÈÌ«È¦³Ì¥³. «È¬¸éŠ°· ¢³Ğ ¬È¯¹ìŠ¦¹Ø.;;;;;;;;;;;;;x
+dwt_bad_dog_root;[Root.GetFirstName]'s Bad Dog;;;;;;;;;;;;;x
+dwt_bad_dog_from;[From.GetFirstName]'s Bad Dog;;;;;;;;;;;;;x
+opinion_bad_dog_raper_owner;Owner of Dog Rapist;;;;;;;;;;;;;x
+DWTRandom603;I yelp in surprise as something nudges into the base of my butt. Turning I see [From.GetFirstName]'s dog. I shoo the dog away, only for it to begin growling. I turn to flee, only to have it bite my clothing and drag me down. I struggle to protect myself, getting scratched in the process. \n It's on my back, it clamps down on the base of my neck with its jaws. I freeze, only to then feel it shaking on top of me. I realize as I feel something hard strike near my ass that my privates are exposed, and worse yet, the shaking is the beast trying to hump me. I try to move, only for it to grown and squeeze its jaws. \n Soon it finds its target. A long, warm, thin penis slides into me. Having found its target, its humping increases. It's tip is slamming into my cervix, while the base of its cock smacks my pussy. Finally, it finishes. Leaving me.;;;;;;;;;;;;;x
+DWTRandom603A;*Sob* *Sob* *Sob* I've been violated.;;;;;;;;;;;;;x
+DWTRandom605;I realize too late the the damn devil dog is missing. Hunting around for it I worry as I hear it growl and a woman sob. Running over, I see the damn thing has pinned [From.GetFirstName] to the ground. \n It has scratched the shit out of her and its presently rutting her as though it's the stable boy's bitch dog. I watch as it pounds her and I feel a little shame as I feel my cock stir from the site. May [Root.GetRandomGodNameCap] forgive me for these feelings my body displayed. \n I notice the dog as released her neck, although I don't believe she knows it as she's still lying there taking the pounding. It finally finishes. Thankfully the knot didn't slip in as the dog seems indifferent now, as it gets off her, licks itself and wanders off. \n I run up to see if she's alright. Upon seeing me, she wails and hurls insults. Best I leave her be.;;;;;;;;;;;;;x
+DWTRandom605A;Damn dog is more trouble than its worth.;;;;;;;;;;;;;x
+DWTBuildings501;I hear someone shout out the word "Procreo" and turn to see [From.GetBestName] pointing at me, with their guard dog charging in my direction. I feel a shudder pass over me as a cruel grin spreads across [From.GetFirstName]'s mouth. \n The guard dog is bearing down on me and I've little in the way of options.;;;;;;;;;;;;;x
+DWTBuildings501A;I must flee!;;;;;;;;;;;;;x
+DWTBuildings501B;I must fight!;;;;;;;;;;;;;x
+DWTBuildings501C;Oh [Root.GetRandomGodName] I want it inside of me.;;;;;;;;;;;;;x
+DWTBuildings501D;I've not the time for this, begone beast!;;;;;;;;;;;;;x
+dwt_alpha_bitch_beats_dog;I stare the dog down, leaving as it slinks back to its master with its tail between its legs.;;;;;;;;;;;;;x
+DWTBuildings510;[From.GetFirstName] ¡³ ¢´ ª³¢µİ¡´«¸¡¸ª· æˆ¨³İ®ÈåÆÌ¡·ÛëÆĞ ¬È¯¹éˆ«³Ü¥³. ¢´ ª³¢µİ¡´åÆÌ äŒ¢¹ùÇ æŒ¦¸êŒçÆĞ ”ÈŞ«·©·¦È¨¹ äŒ¢¹çÆĞ åÁÙ²¹Üäˆ äŒ¢¹åÆÌ ¥³¦ÈçÆĞ ©·Ğ¦ÈÌ®´ «·âæŒ¦È¡¸ ô¿«·Ü¥³.[From.GetFirstName] ëÆÌ ¢¸©³Ğçˆ ğˆé»Éô¿Ì ¬³ª¸¡³ ô¿«·Ü¥³.\n ¡´åÆÌ ìŠ¬·²³¬È «³Îäˆ äŒ¢¹ùÇ ©·Ğ¡·©·ÛëÆÌ è»Ø«¸ ¬³¬ÈçÆĞ ¡³¬¹¥³ ¥´¨¹ ñÆÌæÆĞ¡È ªÈ¬³É²´Ü¥³. äŒ¢¹åÆÌ äŒ èˆêÆÙ«¸ «·Ğ«·©·¦ÈÌæÆÛ å»Ğ¦³Ü¥³. ¢³åÆÌ ¡´ùÇ ¬³¬È¡³ ¬³Ğ æÆĞ«·¡³¬È «³Î¬³ ùÄ®ÈçÆĞ ¬³Ù«³ìŠäˆ äŒ¢¹ùÇ éˆ¬È«¸ ¨ÈĞ«·¢·ã¡È øÄÙ¡¸ ²´ìŠ«·Ü¥³.\n [From.GetFirstName] ùÇ éˆ¬È «³Ì«¸ ¢´ ª³¢µİ¡´ùÇ ¬³¬È¡³ æÆĞ«·¡³¨¹Ìª· äŒ¢¹åÆÌ ëÁĞéŠ¬ÈŞëŒ¨¹ åÁÌèÁĞ«È ’µØëÆĞ °³äˆ ñÆĞ¦·¢´¦¹Ü¥³. \n ¢´ ª³¢µİ¡´åÆÌ ¨³¬È¨³ÉëŒçˆ ê»ÉæˆçÆĞ ë»Ğ¦¹Üäˆ «È¢´ äŒ¢¹ù¼ «·İ¥·İ«ÈçÆĞ ¨³Ş¥´äˆ ¨´æÆÙëÆĞ ¬ÈÛæÆÛ ¬³ª¸çÆĞ ©³•Š«·Ü¥³. ¨³®ÈØ¢´ ¡¹İ©È¡¹ÌëÆÌ äŒ ¬³ª¸çˆ ª³¬·İ²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWTBuildings510A;«·‘·Ì ¡³İ«³¬È¡³ ì»ãëÆÌ ¡¹İ©È¡¹Ì«ÈĞ³? ©³çˆ ¢·¬È... «³«ÈäŠ ®³É²³Ì ëŠ¦È ¡¹İ©È¡¹Ì.;;;;;;;;;;;;;x
+DWTBuildings511;I try to flee from [From.GetFirstName]'s hound. I don't get far before the beast clips the back of my legs, causing me to fall to the ground. I try to scramble away as the dog tears away my dress. \n I don't get more than a foot or so before I feel something slap against my ass. Visions of a dog humping someone's leg flash across my mind's eye and don't appear to be too funny any longer. My pausing was a big mistake as dog's weight has me pinned and I suddenly feel his cock penetrate me. It's painful as I'm not ready, yet the beast begins thrusting. \n Tears well up as I'm helpless, my ass up in the air while being violated by a dog. The pain passes as I become numb to the sensation. \n I barely notice the dog pull out of me. I can feel its cum dripping from my pussy, and the tears come again.;;;;;;;;;;;;;x
+DWTBuildings511A;Oh my god, I was just raped by a dog!;;;;;;;;;;;;;x
+opinion_intimidated;Intimidated into being more friendly;;;;;;;;;;;;;x
+DWTBuildings522;[From.GetFirstName] tries to fight off my guard dog. It isn't pretty, as [From.GetFirstName] makes an error and my dog wounds them severely, rendering [From.GetFirstName] infirm.;;;;;;;;;;;;;x
+DWTBuildings522A;Shouldn't have resisted.;;;;;;;;;;;;;x
+DWTBuildings523;I attempt to fight off [From.GetFirstName]'s dog. It isn't pretty, as I make an error and the dog wounds me severely, rendering me infirm.;;;;;;;;;;;;;x
+DWTBuildings523A;I'll have my revenge.;;;;;;;;;;;;;x
+DWTBuildings524;[From.GetFirstName] tries to fight off my guard dog. It isn't pretty, as [From.GetFirstName] makes an error and my dog wounds them severely, maiming [From.GetFirstName].;;;;;;;;;;;;;x
+DWTBuildings524A;Shouldn't have resisted.;;;;;;;;;;;;;x
+DWTBuildings525;I attempt to fight off [From.GetFirstName]'s dog. It isn't pretty, as I make an error and the dog wounds me severely, maiming me.;;;;;;;;;;;;;x
+DWTBuildings525A;I'll have my revenge.;;;;;;;;;;;;;x
+DWTBuildings526;I watch as [From.GetFirstName] tries to fight my hound. She doesn't fair well, getting hurt as her legs are taken out from under her. My dog tears away her dress, and [From.GetFirstName] only helps things along as she attempts to crawl away on all fours. \n My dog doesn't hesitate, it's cock that almost seemed to engorge on command slaps against her naked ass. She freezes a second and whimpers a no. Big mistake as that allows my dog to gain his position and with a thrust his cock penetrates her. \n [From.GetFirstName] is pinned, ass up in the air with her pussy being drilled by my dog. Tears run down her cheeks as she grunts while getting slammed. \n Finally my dog whines as the pace accelerates even faster. He finally stops and hops off her back, his cock popping and dripping cum as he trots back. She's lucky he didn't knot her.;;;;;;;;;;;;;x
+DWTBuildings526A;Who's a good guard dog? You are... good boy.;;;;;;;;;;;;;x
+DWTBuildings527;I try to fight [From.GetFirstName]'s hound. I don't fare well before the beast bites my calf, causing me to fall to the ground. I try to scramble away as the dog tears away my dress. \n I don't get more than a foot or so before I feel something slap against my ass. Visions of a dog humping someone's leg flash across my mind's eye and don't appear to be too funny any longer. My pausing was a big mistake as dog's weight has me pinned and I suddenly feel his cock penetrate me. It's painful as I'm not ready, yet the beast begins thrusting. \n Tears well up as I'm helpless, my ass up in the air while being violated by a dog. The pain passes as I become numb to the sensation. \n I barely notice the dog pull out of me. I can feel its cum dripping from my pussy, and the tears come again.;;;;;;;;;;;;;x
+DWTBuildings527A;I was just raped by a dog, that bastard. I shall have my revenge.;;;;;;;;;;;;;x
+DWTBuildings528;[From.GetFirstName] tries to fight off my guard dog. It's a viscous fight as [From.GetFirstName] seems up to the task. After several heated exchanges, both are wounded when I decide to call back my dog.;;;;;;;;;;;;;x
+DWTBuildings528A;Bitch put up a good fight, I'll give her that.;;;;;;;;;;;;;x
+DWTBuildings529;I attempt to fight off [From.GetFirstName]'s dog. It isn't pretty, but I'm up to the task. A heated exchange leaves us both wounded when I hear [From.GetFirstName] call his dog back.;;;;;;;;;;;;;x
+DWTBuildings529A;I'll have my revenge.;;;;;;;;;;;;;x
+DWTBuildings530;[From.GetFirstName] tries to fight off my guard dog. It's a viscous fight as [From.GetFirstName] seems up to the task. After several heated exchanges, she wounds my dog. I call back my dog to save it.;;;;;;;;;;;;;x
+DWTBuildings530A;Bitch hurt my dog!;;;;;;;;;;;;;x
+DWTBuildings531;I attempt to fight off [From.GetFirstName]'s dog. It isn't pretty, but I'm up to the task. A heated exchange leaves the dog wounded when I hear [From.GetFirstName] call his dog back.;;;;;;;;;;;;;x
+DWTBuildings531A;I'll have my revenge.;;;;;;;;;;;;;x
+DWTBuildings532;[From.GetFirstName] tries to fight off my guard dog. It's a viscous fight as [From.GetFirstName] seems up to the task. After several heated exchanges, she guts my dog, killing it. I leave as a crowd gathers.;;;;;;;;;;;;;x
+DWTBuildings532A;Bitch killed my dog!;;;;;;;;;;;;;x
+DWTBuildings533;I attempt to fight off [From.GetFirstName]'s dog. It isn't pretty, but I'm up to the task. After a heated exchange I manage to strike its underbelly, gutting the dog and killing it. [From.GetFirstName] leaves as I catch my breath.;;;;;;;;;;;;;x
+DWTBuildings533A;I'll have my revenge.;;;;;;;;;;;;;x
+DWTBuildings540;å»Ğ¦³Ù¡¸æˆ [From.GetFirstName] ¡³ äŒ¢¹ùÇ ùÇª³İëÆĞ ”ÈŞëŒ¨¹ ¢¸©³Ğçˆ ¡È¡¸ ¨³ÌæÆĞ«·Ü¥³. ¢´ ¡¹İ©È¡¹ÌëÆÌ ìˆäÆØùÇ ªÈ¡³Ìæˆ ¬È®¸²³¬È «³Îäˆ «·İ¥·İ«Èçˆ ¥³Ğ¦¹æÆĞ«·Üäˆ äŒ¢¹ùÇ äŠ¨·İëÆĞ ®³Ş¡È ùÄ²´ «¹¦·©·Ì ±ÈêŒï»Ì¬ÈĞëÆĞ ²´¥´Ü¥³. äŒ¢¹åÆÌ ©³Ğ¡È²³Ì ¬³¬ÈçÆĞ ëÁØ¯¹ ¬³Ùäˆ äŒ¢¹ùÇ éˆ¬È«¸ «³Ì¢´²³«¹Üäˆ «È¢´ ªÈÌëÆØ²³¡¸ ô¿«·Ü¥³. ¬³ØªÈ‡Š [From.GetFirstName] ¡³ ê»ÉæˆçÆĞ ¨³Ş†Š¡È ùÄ²´ ëÁØ¬ÈÉ«¹Ü¥³. äŒ¢¹åÆÌ «·İ¥·İ«ÈçÆĞ ôÄçˆ ¨ÈĞ¨¹Ìª· ê»ÌëÆĞ š¼É úÄ«·Ü¥³. ¢´ ¡¹İ©È¡¹ÌëÆÌ äŒ¡·Û«¸ ©³ÌëÆİ ²³æÆÛ ¡¹É¦¹Ğ²³¡¸ ²¸É²¸É¡·¦È¨¹ ©³É«³¥´Ü¥³. [From.GetFirstName] ëÆÌ ²³Ì ê»ÌëŒçˆåÆÌ ¥³¦Èª³«Èçˆ ’·Ï«· ¡¹Ğ²³ÙëÆĞ ¥·ëÁÉ ¡¹Ìäˆ²È ²³¡ÈùÄ²´ åˆ¦¹É²³«¹Ü¥³. ¬³¬ÈåÆÌ ¥·ëÁÉ ’³Ğ¡³ãäˆ ëÅÌ¡È¡³ ¢³¡È ªÈ¬³É²´Ü¥³. ¢´ ¡¹İ©È¡¹ÌëÆÌ ¬·Ğ¬·İ«¸ «ÈçÆÌæÆÛ ôÄæ»Ğ«³ª· äŒ¢¹ùÇ «·İ¥·İ«Èù¼ ¨´æÆÙëÆĞ ¬ÈÛæÆÛ ª·Ì ‡Š ¬·İ«´ÉëÆĞ ¡Èâ«È ª³¬·İ²´Ü¥³. äŒ¢¹åÆÌ ¡Èâ¡¸ ªÈÌëÆØ²³«¹Üäˆ äŒ ª³İ°´çˆ ¨¹ßéÁÌæ»İ«³Ì ë‹¬È²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWTBuildings540A;«³ìŠ ñÁĞçÀİ²´, «È¬¸ äŒ ¨´æÆÙ«È «·Ì¬¸ ğÁĞ¦ÈåÆÌ¡·¬È.;;;;;;;;;;;;;x
+DWTBuildings541;I see his growing cock and waste no time as he approaches. I flip my dress up and get on all fours. The dog wastes no time hoping up on my hips. I reach back and grasp his warm growing cock as he begins to hump in search of my pussy. I guide him in, moaning as the dog sinks in and picks up the speed of his thrusts. \n After he gets a rhythm, I  work to match his thrusts. Holding onto the grass for purchase I roll my hips back, feeling him fill me and his knot slapping my vulva. We're both panting wildly as his cock hammers away in me. \n I reach between my legs and pull his knot, trying to help it in. With a pop, it slides in and I orgasm from the sensation. \n Too soon the dog whines as it stops and turns. Ass to ass as it's knot keeps us connected. I moan as his cum shoots deep inside me, over and over again.;;;;;;;;;;;;;x
+DWTBuildings541A;[Root.GetRandomGodName], I hope that [From.GetFirstName] brings their dog by again.;;;;;;;;;;;;;x
+opinion_good_dog_owner;Good Dog Owner;;;;;;;;;;;;;x
+opinion_good_dog_slut;Good Dog Slut;;;;;;;;;;;;;x
+DWTBuildings550;I get on all fours and ensure my ass is nice and high. "Procreo," I command and my guard dog immediately mounts me, his hot breath splashing across my naked back as he works to position himself. I feel his stiffening cock slap my back side as he seeks his target. \n  My pussy is already soaking wet as I wait for it. Finally it hits the mark and his thick cock slides into me. I groan and feel my nipples stiffen. He begins humping wildly right away and I arch my back to try and better receive his thrusts. \n  I give in to the sensations, quickly reaching an orgasm and feeling another approaching. He begins to whine and I reach back feeling the base of his knot and help push it inside of me. It swells and he shoots out a strong jet of cum. I orgasm, hard. He continues to cum as do I, losing track of time in the process.;;;;;;;;;;;;;x
+DWTBuildings550A;Mmmmm, good boy. Mommy needed that release.;;;;;;;;;;;;;x
+DWTBuildings550B;Fuck. I'd take canine cock any day, be it dog or wolf.;;;;;;;;;;;;;x
+TestMessage;I'm hoping I see this. If so, it properly triggered a hidden event for the ruler/player.;;;;;;;;;;;;;x
+tentacle_survivor;Tentacle Beast Survivor;;;;;;;;;;;;;x
+dwt_hospital_building;¦ÈĞ¦ÈêŒ ©¹İùÂÌ;;;;;;;;;;;;;x
+dwt_hospital_building_desc;«¹ªÈÌ ¦ÈĞ¦ÈêŒùÇ ²ÈØëÆĞ «ÈëÀİ²´ª· äˆï»İ©³ÏåÆÌ è»Øò¼ ¨³ëÆØëÆĞ ®Èë‹²´ìŠåÆÌ ©¹İùÂÌ.;;;;;;;;;;;;;x
+

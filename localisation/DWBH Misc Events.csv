@@ -1,0 +1,51 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+# Events
+EVTNAME_DWBHE_200;The Guardian of the Ruins;;;;;;;;;;;;;x
+EVTDESC_DWBHE_200;During your hunt, you become lost and separated from your hunting party several days in. Trying to find your way back through the thick forest, you stumble into a clearing near some old ruins. Before you can take stock of your surroundings, a lithe figure jumps down from a nearby tree branch to confront you, a stout staff in her hands. Clearly pointed ears poke out from the sides of her blonde hair, identifying her as an elf, a race thought by most to be little more than fables and legends. "Halt!" she demands, glaring at you. "I am Alleyne, the last guardian of this shrine. There is nothing of value for you to steal here, human. Only the ruins that I alone remain here to guard.";;;;;;;;;;;;;x
+EVTOPTA_DWBHE200;Leave peacefully as asked.;;;;;;;;;;;;;x
+EVTOPTB_DWBHE200;Attempt to persuade her to come with you.;;;;;;;;;;;;;x
+EVTOPTC_DWBHE200;Try to take her prisoner by force.;;;;;;;;;;;;;x
+EVTOPTD_DWBHE200;Try to take her prisoner by trickery.;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_201;Challenging Alleyne;;;;;;;;;;;;;x
+EVTDESC_DWBHE_201;She smirks as you draw your weapon, your intent clear. "So it's a fight you want? You're not the first, and likely not the last either. But you're several hundred years too early for a fight with me." She drops back into a fighting stance, clearly a very experienced combatant by the look of things, and on her home terrain, at that. "Better flee while you can, outsider," she taunts. It might be difficult enough to beat her, let alone capture her.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE201;Attack!;;;;;;;;;;;;;x
+EVTOPTB_DWBHE201;Run away.;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_202;Alleyne defeated;;;;;;;;;;;;;x
+EVTDESC_DWBHE_202;The fight is difficult, and Alleyne is clearly skilled and knowledgeable, but fighting skills tend to atrophy if not kept sharp, and hers have dulled. It takes you several minutes, but once you have an opening, you take it, knocking her staff from her hands. She refuses to surrender at first, but it isn't much longer before you have her on the ground before you, defeated.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE202;A wonderful trophy.;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_203;Alleyne defeated;;;;;;;;;;;;;x
+EVTDESC_DWBHE_203;The fight is difficult, and Alleyne is clearly skilled and knowledgeable. She manages to land a solid blow on you that will clearly leave a nasty wound, but fighting skills tend to atrophy if not kept sharp, and hers have dulled. It takes you several minutes, but once you have an opening, you take it, knocking her staff from her hands. She refuses to surrender at first, but it isn't much longer before you have her on the ground before you, defeated.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE203;A wonderful trophy.;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_204;Alleyne escapes;;;;;;;;;;;;;x
+EVTDESC_DWBHE_204;The fight is difficult, and Alleyne is clearly skilled and knowledgeable. She manages to land one solid blow on you, and then another, her guard nearly impenetrable, and even when you think you see an opening, she uses the terrain to her advantage, ducking behind a tree, or withdrawing while roots trip you up. She circles you for a time, but seemingly unable to land a final blow, and eventually she begins to tire. Just as you think you might be able to regain the advantage, she slips back into the forest, withdrawing from the fight, leaving you bleeding in the clearing.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE204;Blast!;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_205;Alleyne escapes;;;;;;;;;;;;;x
+EVTDESC_DWBHE_205;The fight is difficult, and Alleyne is clearly skilled and knowledgeable. She manages to land one solid blow on you, and then another, her guard nearly impenetrable, and even when you think you see an opening, she uses the terrain to her advantage, ducking behind a tree, or withdrawing while roots trip you up. She circles you for a time, but seemingly unable to land a final blow, until one instant when your guard slips, and her staff comes crashing down painfully, leaving you on the ground, badly injured and perhaps even maimed. She stands above you, as if considering whether to finish you off, but instead simply withdraws into the forest.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE205;Cursed elven harlot!;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_206;Alleyne kills you;;;;;;;;;;;;;x
+EVTDESC_DWBHE_206;The fight is difficult, and Alleyne is clearly skilled and knowledgeable. She manages to land one solid blow on you, and then another, her guard nearly impenetrable, and even when you think you see an opening, she uses the terrain to her advantage, ducking behind a tree, or withdrawing while roots trip you up. She circles you for a time, but seemingly unable to land a final blow, until one instant when your guard slips, and her staff comes crashing down painfully, leaving you on the ground, badly injured and perhaps even maimed. She stands above you, as if considering whether to finish you off, before the end of her staff suddenly rams downward full-force, directly at your face...;;;;;;;;;;;;;x
+EVTOPTA_DWBHE206;Noooooo!;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_207;A subtle ambush;;;;;;;;;;;;;x
+EVTDESC_DWBHE_207;You explain to her that you are on a pilgrimage, seeking out ancient shrines as a rite of spiritual passage. You claim to have no ill intent, and state that you merely wish to pay your respects at the shrine, after which you will be on your way, if she will but escort you to the shrine. She stares back at you, still wary, as if considering your request, before nodding briefly in acquiesence. "Come then. It would dishonor the spirits to turn away anyone who wished to honor them, even an outsider." She turns to lead you towards the rubbled ruin, and you briefly see an opening as her back is turned.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE207;Try to grab her from behind.;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_208;Wise to your treachery;;;;;;;;;;;;;x
+EVTDESC_DWBHE_208;She whirls around as your foot crunches on a stray pebble, jumping back just in time to dodge your lunge at her. "Thought you could trick me? You're not the first, and likely not the last either. But you're several hundred years too early for a fight with me." She drops back into a fighting stance, clearly a very experienced combatant by the look of things, and on her home terrain, at that. "Best to flee while you can, outsider," she taunts. It might be difficult enough to beat her, let alone capture her.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE208;Attack!;;;;;;;;;;;;;x
+EVTOPTB_DWBHE208;Run away.;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_209;Alleyne captured;;;;;;;;;;;;;x
+EVTDESC_DWBHE_209;You catch her off guard, pinning her slender arms to her body, her staff useless as you lift her off the ground slightly, the weapon easily tossed aside. You grab her wrists, and twist one of her arms behind her back, and then the other, pushing her to the ground as you begin to tie her up. She struggles against you, though you quickly disabuse her of that notion, her resistance and shouts eventually subsiding into a glower as you lead your prisoner off.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE209;A wonderful trophy.;;;;;;;;;;;;;x
+
+EVTNAME_DWBHE_210;Alleyne escapes;;;;;;;;;;;;;x
+EVTDESC_DWBHE_210;You catch her off guard, pinning her slender arms to her body, her staff useless as you lift her off the ground slightly, the weapon easily tossed aside. You move to grab her wrists, and twist one of her arms behind her back, but she twists around with it in a lightning-fast move, and executes a sudden throw on you, dropping you to the ground on your back, the wind rushing from your chest briefly. As you struggle to get to your feet, she darts off into the trees, disappearing into the forest.;;;;;;;;;;;;;x
+EVTOPTA_DWBHE210;Cursed elven harlot!;;;;;;;;;;;;;x

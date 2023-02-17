@@ -1,0 +1,1216 @@
+#######################################
+#
+# Toska's Decisions (2.6.1.1 update and 2.6.2)
+#
+#
+# * Rape of a prisoner 
+# * Rape of a courtier
+#
+#######################################
+
+targetted_decisions = {						# right-click on target character (i.e. the victim)	
+
+	############################################################
+	# Male ruler rapes female courtier
+	############################################################
+
+	rape_court_lady = {						### MALE RULER RAPES A FEMALE COURTIER
+
+		# FROM: Victim
+		# ROOT: Agressor
+			
+		filter = all
+		ai_target_filter = realm
+		
+		potential = {						# the victim: female, 14 years old or older, your prisoner
+			prisoner = no
+			is_female = yes
+			age = 16
+			host = { character = FROM } 
+
+		} 
+
+		from_potential = {					# you: male, 14 years old or older, not with your army
+			age = 16
+			OR = {
+			is_female = no
+			trait = futa
+			}
+  			prisoner = no
+  			is_inaccessible_trigger = no
+			has_rape_content = yes
+
+		}
+
+		allow = {			# the victim: your courtier
+			same_realm = FROM
+			#at_location = FROM
+			lower_tier_than = FROM
+			prisoner = no
+			age = 16
+			FROM = { in_command = no }
+
+ 		}
+
+		effect = {
+			# ROOT: Victim
+			# FROM: Liege
+			ROOT = {
+				save_event_target_as = is_rape_victim
+				set_character_flag = rape_target
+				clr_character_flag = victim_lost_brawl 				# As we start fresh, victim should *not* (yet) have this flag anyway.
+			}
+			FROM = { 
+				save_event_target_as = is_rapist
+				set_character_flag = raping_courtier
+				piety = -20 										# you loose more piety than raping a prisoner, because these are your people.
+			}
+			# Calculate what happens:
+			hidden_tooltip = { 
+				ROOT = { 
+					opinion = {										# So far we have done nothing but appearing intimidating:
+						modifier = dw_opinion_intimidated
+						who = FROM
+						months = 3
+					}
+				}	# Saving victim as event target
+				FROM = { 											# calling the character event, you're the scope
+					opinion = { 									# So far we have done nothing but the thrill of power amused us:
+						modifier = dw_opinion_mildly_entertained
+						who = ROOT
+						months = 12
+					}
+				}
+			}
+			# Check if the victim is a lustful and ambitious slut. Because she might want it and see it as opportunity:
+			if = {
+				limit = {
+						trait = lustful 
+						trait = ambitious
+					NOT = { trait = infirm }
+				}
+
+				ROOT = {
+					# We need a slightly differently named event target for this willing 'victim':
+					save_event_target_as = is_lustful_participant
+					set_character_flag = rape_target
+					clr_character_flag = victim_lost_brawl 				# As we start fresh, victim should *not* (yet) have this flag anyway.
+				}
+				hidden_tooltip = { 
+					random_list = {		
+						90 = { 
+							# Victim actually consents. Start slightly different event chain:
+							FROM = { narrative_event = { id = DWT.3200 } }
+						} 
+						10 = { 
+							# Victim doesn't consent. Even sluts have their standards and you're not it! Back to rape then:
+							FROM = { narrative_event = { id = DWT.3100 } }
+						} 
+					}
+				}
+				break = yes
+			}
+			# Check if the victim is brave, strong, shrewd or lunatic enough to fight back:
+			if = {
+				limit = {
+					OR = {
+						trait = brave
+						trait = strong
+						trait = shrewd
+						trait = lunatic
+					}
+					NOT = { trait = infirm }
+				}
+				hidden_tooltip = { 
+					random_list = {		
+						10 = { 
+							# Victim fights. Start slightly different event chain:
+							FROM = { narrative_event = { id = DWT.3101 } }
+						} 
+						80 = { 
+							# Nope, the victim is not fighting back ... proceed:
+							FROM = { narrative_event = { id = DWT.3100 } }
+						} 
+					}
+				}
+				break = yes
+			}
+			# Nope, the victim is not fighting back ... proceed: (Yes, we list this twice as we hide the chances of resitance above)
+			FROM = { narrative_event = { id = DWT.3100 } }
+		}
+		ai_will_do = { 
+				factor = 0
+				}	# AI won't do it
+	}
+
+	############################################################
+	# Male ruler rapes female prisoner
+	############################################################
+	
+	male_rape_female_prisoner = { 			### MALE RULER RAPES FEMALE PRISONER
+	
+		# FROM: Victim
+		# ROOT: Agressor
+			
+		filter = all
+		ai_target_filter = realm
+		
+		potential = {						# the victim: female, 14 years old or older, your prisoner
+			prisoner = yes
+			is_female = yes
+			age = 16
+			host = { character = FROM } 
+
+		} 
+
+		from_potential = {					# you: male, 14 years old or older, not with your army
+			age = 16
+			OR = {
+			is_female = no
+			trait = futa
+			}
+  			prisoner = no
+  			is_inaccessible_trigger = no
+			has_rape_content = yes
+
+		}
+
+		allow = {
+			prisoner = yes
+			age = 14
+			#same_realm = FROM
+			#at_location = FROM
+			FROM = { in_command = no }
+		}
+
+		effect = {
+			# ROOT: Victim
+			# FROM: Liege
+			ROOT = {
+				save_event_target_as = is_rape_victim
+				set_character_flag = rape_target
+				clr_character_flag = victim_lost_brawl 				# As we start fresh, victim should *not* (yet) have this flag anyway.
+			}
+			FROM = { 
+				save_event_target_as = is_rapist
+				set_character_flag = raping_prisoner
+				piety = -10 										# you loose some piety
+			}
+			# Calculate what happens:
+			hidden_tooltip = { 
+				ROOT = { 
+					opinion = {										# So far we have done nothing but appearing intimidating:
+						modifier = dw_opinion_intimidated
+						who = FROM
+						months = 3
+					}
+				}	# Saving victim as event target
+				FROM = { 											# calling the character event, you're the scope
+					opinion = { 									# So far we have done nothing but the thrill of power amused us:
+						modifier = dw_opinion_mildly_entertained
+						who = ROOT
+						months = 12
+					}
+				}
+			}
+			# Check if the victim is brave, strong, shrewd or lunatic enough to fight back:
+			if = {
+				limit = {
+					OR = {
+						trait = brave
+						trait = strong
+						trait = shrewd
+						trait = lunatic
+					}
+					NOT = { trait = infirm }
+				}
+				hidden_tooltip = { 
+					random_list = {		
+						10 = { #10%
+							# Victim fights. Start slightly different event chain:
+							FROM = { narrative_event = { id = DWT.3001 } }
+						} 
+						80 = { #80%
+							# Nope, the victim is not fighting back ... proceed:
+							FROM = { narrative_event = { id = DWT.3000 } }
+						} 
+					}
+				}
+				break = yes
+			}
+			# Nope, the victim is not fighting back ... proceed: (Yes, we list this twice as we hide the chances of resitance above)
+			FROM = { narrative_event = { id = DWT.3000 } }
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				OR = {
+					ai_honor = 10 # An honorable person wouldn't do this
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { FROM = { is_rival = ROOT } } # if they're not our rival we're less likely
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { is_close_relative = ROOT } # if they're our relative we're less likely
+			}
+			modifier = { 
+				factor = 0
+				FROM = { 
+						OR = {
+							trait = kind 
+							trait = chaste
+							trait = celibate
+							trait = incapable
+							}
+						NOT = { trait = sexcrazed }
+						}
+			}
+			modifier = { 
+				factor = 2
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = wroth }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = lunatic }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = impaler }
+			}
+			modifier = {
+				factor = 10
+				FROM = { 
+					trait = sexcrazed 
+					has_character_flag = sc_serial_rapist
+					}
+			}
+			modifier = {
+				factor = 2
+				FROM = { 
+					trait = sexcrazed 
+					NOT = { has_character_flag = sc_serial_rapist }
+					}
+			}
+			
+		}	
+		
+	}
+
+	############################################################
+	# Male ruler rapes male prisoner
+	############################################################
+	
+	male_rape_male_prisoner = { 			### HOMOSEXUAL MALE RULER RAPES MALE PRISONER
+	
+		# FROM: Victim
+		# ROOT: Agressor
+			
+		filter = all
+		ai_target_filter = realm
+		
+		potential = {						# the victim: male, 14 years old or older, your prisoner
+			prisoner = yes
+			is_female = no
+			age = 16
+			host = { character = FROM } 
+		} 
+
+		from_potential = {					# you: male, 14 years old or older, not with your army
+			age = 16
+			OR = {
+			is_female = no
+			trait = futa
+			}
+  			prisoner = no
+  			is_inaccessible_trigger = no
+			has_rape_content = yes
+
+		}
+
+		allow = {
+			prisoner = yes
+			age = 16
+			#same_realm = FROM
+			#at_location = FROM
+			FROM = { in_command = no }
+
+		}
+
+		effect = {
+			# ROOT: Victim
+			# FROM: Liege
+			ROOT = {
+				save_event_target_as = is_rape_victim
+				set_character_flag = rape_target
+				clr_character_flag = victim_lost_brawl 				# As we start fresh, victim should *not* (yet) have this flag anyway.
+			}
+			FROM = { 
+				save_event_target_as = is_rapist
+				set_character_flag = raping_prisoner
+				piety = -10 										# you loose some piety
+			}
+			# Calculate what happens:
+			hidden_tooltip = { 
+				ROOT = { 
+					opinion = {										# So far we have done nothing but appearing intimidating:
+						modifier = dw_opinion_intimidated
+						who = FROM
+						months = 3
+					}
+				}	# Saving victim as event target
+				FROM = { 											# calling the character event, you're the scope
+					opinion = { 									# So far we have done nothing but the thrill of power amused us:
+						modifier = dw_opinion_mildly_entertained
+						who = ROOT
+						months = 12
+					}
+				}
+			}
+			# Check if the victim is brave, strong, shrewd or lunatic enough to fight back:
+			if = {
+				limit = {
+					OR = {
+						trait = brave
+						trait = strong
+						trait = shrewd
+						trait = lunatic
+					}
+					NOT = { trait = infirm }
+				}
+				hidden_tooltip = { 
+					random_list = {		
+						10 = { #10%
+							# Victim fights. Start slightly different event chain:
+							FROM = { narrative_event = { id = DWT.3301 } }
+						} 
+						80 = { #80%
+							# Nope, the victim is not fighting back ... proceed:
+							FROM = { narrative_event = { id = DWT.3300 } }
+						} 
+					}
+				}
+				break = yes
+			}
+			# Nope, the victim is not fighting back ... proceed: (Yes, we list this twice as we hide the chances of resitance above)
+			FROM = { narrative_event = { id = DWT.3300 } }
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				OR = {
+					ai_honor = 10 # An honorable person wouldn't do this
+					NOT = { trait = homosexual }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { FROM = { is_rival = ROOT } } # if they're not our rival we're less likely
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { is_close_relative = ROOT } # if they're our relative we're less likely
+			}
+			modifier = {
+				factor = 0.05
+				FROM = { NOT = { trait = homosexual } } # not non-zero as this is about power, but less likely
+			}
+			modifier = { 
+				factor = 0
+				FROM = { 
+						OR = {
+							trait = kind 
+							trait = chaste
+							trait = celibate
+							trait = incapable
+							}
+						NOT = { trait = sexcrazed }
+						}
+			}
+			modifier = { 
+				factor = 2
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = wroth }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = lunatic }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = impaler }
+			}
+			modifier = {
+				factor = 10
+				FROM = { 
+					trait = sexcrazed 
+					has_character_flag = sc_serial_rapist
+					}
+			}
+			modifier = {
+				factor = 2
+				FROM = { 
+					trait = sexcrazed 
+					NOT = { has_character_flag = sc_serial_rapist }
+					}
+			}
+		}		
+		
+	}
+
+	############################################################
+	# Female ruler rapes male prisoner
+	############################################################
+	
+	female_rape_male_prisoner = { 			### FEMALE RULER RAPES MALE PRISONER
+	
+		# FROM: Victim
+		# ROOT: Agressor
+			
+		filter = all
+		ai_target_filter = realm
+		
+		potential = {						# the victim: male, 14 years old or older, your prisoner
+			prisoner = yes
+			is_female = no
+			age = 16
+			host = { character = FROM } 
+		} 
+
+		from_potential = {					# you: female, 14 years old or older, not with your army
+			age = 16
+			is_female = yes
+			NOT = {trait = futa }
+  			prisoner = no
+  			is_inaccessible_trigger = no
+			has_rape_content = yes
+
+		}
+
+		allow = {
+			prisoner = yes
+			age = 16
+			#same_realm = FROM
+			#at_location = FROM
+			FROM = { in_command = no }
+		}
+
+		effect = {
+			# ROOT: Victim
+			# FROM: Liege
+			ROOT = {
+				save_event_target_as = is_rape_victim
+				set_character_flag = rape_target
+				clr_character_flag = victim_lost_brawl 				# As we start fresh, victim should *not* (yet) have this flag anyway.
+			}
+			FROM = { 
+				save_event_target_as = is_rapist
+				set_character_flag = raping_prisoner
+				piety = -10 										# you loose some piety
+			}
+			# Calculate what happens:
+			hidden_tooltip = { 
+				ROOT = { 
+					opinion = {										# So far we have done nothing but appearing intimidating:
+						modifier = dw_opinion_intimidated
+						who = FROM
+						months = 3
+					}
+				}	# Saving victim as event target
+				FROM = { 											# calling the character event, you're the scope
+					opinion = { 									# So far we have done nothing but the thrill of power amused us:
+						modifier = dw_opinion_mildly_entertained
+						who = ROOT
+						months = 12
+					}
+				}
+			}
+			# Check if the victim is brave, strong, shrewd or lunatic enough to fight back:
+			if = {
+				limit = {
+					OR = {
+						trait = brave
+						trait = strong
+						trait = shrewd
+						trait = lunatic
+					}
+					NOT = { trait = infirm }
+				}
+				hidden_tooltip = { 
+					random_list = {		
+						10 = { #10%
+							# Victim fights. Start slightly different event chain:
+							FROM = { narrative_event = { id = DWT.3401 } }
+						} 
+						80 = { #80%
+							# Nope, the victim is not fighting back ... proceed:
+							FROM = { narrative_event = { id = DWT.3400 } }
+						} 
+					}
+				}
+				break = yes
+			}
+			# Nope, the victim is not fighting back ... proceed: (Yes, we list this twice as we hide the chances of resitance above)
+			FROM = { narrative_event = { id = DWT.3400 } }
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				OR = {
+					ai_honor = 10 # An honorable person wouldn't do this
+					NOT = { trait = homosexual }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { FROM = { is_rival = ROOT } } # if they're not our rival we're less likely
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { is_close_relative = ROOT } # if they're our relative we're less likely
+			}
+			modifier = { 
+				factor = 0
+				FROM = { 
+						OR = {
+							trait = kind 
+							trait = chaste
+							trait = celibate
+							trait = incapable
+							}
+						NOT = { trait = sexcrazed }
+						}
+			}
+			modifier = {
+				factor = 10
+				FROM = { 
+					trait = sexcrazed 
+					has_character_flag = sc_serial_rapist
+					}
+			}
+			modifier = {
+				factor = 2
+				FROM = { 
+					trait = sexcrazed 
+					NOT = { has_character_flag = sc_serial_rapist }
+					}
+			}
+			modifier = { 
+				factor = 2
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = wroth }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = lunatic }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = impaler }
+			}
+		}		
+		
+	}
+
+	
+
+	############################################################
+	# Female ruler rapes female prisoner
+	############################################################
+	
+	female_rape_female_prisoner = { 	### HOMOSEXUAL FEMALE RULER RAPES FEMALE PRISONER
+		filter = all
+		ai_target_filter = realm
+
+		potential = {			# the victim: female, 12 years old or older, your prisoner
+			prisoner = yes
+			is_female = yes
+			age = 16
+			host = { character = FROM } 
+		} 
+
+		from_potential = {		# you: female, 14 years old or older, not with your army
+			age = 16
+			is_female = yes
+			NOT = {trait = futa }
+  			prisoner = no
+  			is_inaccessible_trigger = no
+			has_rape_content = yes
+		}
+
+		allow = {
+			prisoner = yes
+			age = 16
+			#same_realm = FROM
+			#at_location = FROM
+			FROM = { in_command = no }
+			
+		}
+
+		effect = {
+			hidden_tooltip = {	# calling the caracter event, you're the scope
+				FROM = { narrative_event = { id = DWT.004 } 
+				set_character_flag = raping_prisoner
+				}
+			}
+			add_trait = depressed	# victim will be depressed
+			add_trait = raped
+			remove_trait = proud	# victim lost proud
+			if = { 			# if victim under 16, 5% chance she recognises she is lesbian
+				limit = {
+					NOT = { age = 16 }
+					NOT = { trait = homosexual }
+				}
+				random = { chance = 5
+					add_trait = homosexual
+				}
+			}
+			opinion = {		# she will hate you
+				modifier = opinion_raped_me
+				who = FROM
+			}	
+			opinion = {		# she will hate you more in the next few days
+				modifier = raper_ruler
+				who = FROM
+				}
+			FROM = { 
+				add_trait = rapist
+				add_trait = proud
+				liege = {									# Piss off their liege (a little):
+					opinion = {
+						modifier = opinion_raped_subject
+						who = FROM
+					}
+					prestige = -1
+					piety = -2
+				}
+				liege = {									# Piss off their liege (a little):
+					opinion = {
+						modifier = opinion_raped_subject
+						who = FROM
+					}
+					prestige = -1
+					piety = -2
+				}
+				any_dynasty_member = {						# The rest of the dynasty and family of course hears your lies about it and is angry with the 'rapist':
+					limit = { NOT = { dynasty = FROM } }
+					opinion = {
+						modifier = opinion_raped_family
+						who = FROM
+					}
+					prestige = -5
+					piety = -10
+				}
+				father = {
+					opinion = {
+						modifier = opinion_raped_family
+						who = FROM
+					}				
+				}
+				spouse = { 
+					opinion = {
+						modifier = opinion_raped_spouse
+						who = FROM
+					}
+					prestige = -5
+					piety = -10
+				}
+				piety = -20 
+			}	# you loose some piety
+			hidden_tooltip = {
+				if = {		# (not sure it works) if she is from a different dynasty, her relatives will hate you
+					limit = { FROM = { NOT = { dynasty = ROOT } } }
+					any_dynasty_member = {
+						opinion = {
+							modifier = opinion_raped_family
+							who = FROM
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				OR = {
+					ai_honor = 10 # An honorable person wouldn't do this
+					NOT = { trait = homosexual }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { FROM = { is_rival = ROOT } } # if they're not our rival we're less likely
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { is_close_relative = ROOT } # if they're our relative we're less likely
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = homosexual } } # not non-zero as this is about power, but less likely
+			}
+			modifier = { 
+				factor = 0
+				FROM = { 
+						OR = {
+							trait = kind 
+							trait = chaste
+							trait = celibate
+							trait = incapable
+							}
+						}
+						NOT = { trait = sexcrazed }
+						}
+			}
+			modifier = {
+				factor = 10
+				FROM = { 
+					trait = sexcrazed 
+					has_character_flag = sc_serial_rapist
+					}
+			}
+			modifier = {
+				factor = 2
+				FROM = { 
+					trait = sexcrazed 
+					NOT = { has_character_flag = sc_serial_rapist }
+					}
+			}
+			modifier = { 
+				factor = 2
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = wroth }
+			}
+			modifier = {
+				factor = 1.1
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = lunatic }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = impaler }
+			}
+		}		
+		
+	
+
+	## Unleash Dog on Prisoner 
+	dwt_dog_procreo = {
+		filter = court
+		ai_target_filter = court
+
+
+		from_potential = {
+			#removing the guard dog requirement since the building/etc no longer exists
+			#has_character_modifier = dw_pet_guard_dog  
+			has_bestiality_content = yes				
+			NOT = { has_character_flag = dw_dog_procreo_cooldown }
+			NOT = {
+			trait = kind
+			trait = just
+			}
+		}
+		
+		potential = {
+			prisoner = yes
+			host = {character = FROM }
+			is_adult = yes
+			is_female = yes
+		}
+
+		allow = {
+			FROM = {
+			calc_true_if = {
+			amount = 4
+			trait = lilith
+			trait = incubus
+			trait = alu_fiend
+			trait = cambion
+			trait = impaler
+			trait = lunatic
+			trait = possessed
+			trait = cruel
+			trait = wroth
+			trait = arbitrary
+			trait = drunkard
+			trait = hedonist
+			trait = houseirae_drow
+
+				}
+
+
+			}	
+			NOT = { trait = in_hiding }
+			at_location = FROM
+			FROM = { in_command = no }
+		}
+		effect = {
+			FROM = { character_event = { id = DWT.500 }}
+			FROM = { set_character_flag = dw_dog_procreo_cooldown }
+			FROM = { character_event = { id = DWT.599 days = 90 }} #Removes the cooldown flag
+		}
+
+		ai_will_do = {
+			factor = 0.01
+			modifier = { # highly unlikely to do it if we're not rivals
+				factor = 0.01
+				FROM = {
+					NOT = { 
+						is_rival = ROOT
+					}
+				}
+			}
+			# the less of these traits the character has, the less likely they will be to do it
+			modifier = { 
+				factor = 0.1
+				FROM = { NOT = { trait = cruel } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = wroth } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = arbitrary } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = lunatic } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = impaler } }
+			}
+		}
+	}	
+
+
+
+
+	############################################################
+	# Additional spells
+	############################################################	
+
+
+	### Succubus spell rape target with tentacle beast
+	dwt_spell_tentaclebeast = {
+		filter = all
+		ai_target_filter = realm
+
+		from_potential = {
+			has_rape_content = yes
+			has_seeds_chaos_content = yes
+			age = 16
+			piety = 150
+			is_rival = ROOT # only do this if we're rivals
+			OR = {
+				trait = lilith
+				trait = incubus
+				trait = alu_fiend
+				trait = cambion
+			}
+		}
+		
+		potential = {
+			is_adult = yes #No raping kids
+			has_seeds_chaos_content = yes
+		}
+
+		allow = {
+			is_within_diplo_range = FROM
+			has_seeds_chaos_content = yes
+		}
+		effect = {
+			FROM = { character_event = { id = DWTSpells.60 }} # Caster bounce
+		}
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { FROM = { is_rival = ROOT } } # if they're not our rival we won't do it
+					ai_honor = 10 # An honorable person wouldn't summon such a beast
+					ai_rationality = 10 # A rational person would know better than to unleash such a threat
+				}
+			}
+			modifier = { 
+				factor = 0.1
+				FROM = { NOT = { trait = cruel } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = wroth } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = arbitrary } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = lunatic } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { trait = impaler } }
+			}
+		}
+	}	
+	### Succubus spell make the target sexcrazed
+	dwt_spell_sexcraze = {
+		filter = all
+		ai_target_filter = realm
+
+		from_potential = {
+			has_rape_content = yes # though this doesn't rape someone, it will make them start raping people
+			age = 16
+			piety = 250
+			OR = {
+				trait = lilith
+				trait = incubus
+				trait = alu_fiend
+				trait = cambion
+			}
+		}
+		
+		potential = {
+			is_adult = yes #No making kids sexcrazed
+			NOT = { trait = sexcrazed } #so the AI doesn't burn prestige on repeat fires
+		}
+
+		allow = {
+			is_within_diplo_range = FROM
+			FROM = {
+			    OR = {
+				ai = no
+				NOR = { #nice or just people wouldn't do this unless crazy or possessed
+					trait = kind
+					trait = just
+					}			
+				trait = lunatic   #crazies dgaf
+				trait = possessed #possessed dgaf
+				}
+			}
+		}
+		effect = {
+			FROM = { narrative_event = { id = DWTSpells.120 }} # Caster bounce
+		}
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				OR = {
+					is_friend = FROM # Friends don't corrupt other friends (well, not via shitty curses anyway)
+					FROM = { personal_opinion = { who = ROOT value = 1}} # If the ai has a positive opinion of the target, they'll opt not to target them
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ai_honor = 10 # An honorable person wouldn't do such a thing
+					ai_rationality = 10 # A rational person would know better than to unleash such a threat
+				}
+			}
+			modifier = { 
+				factor = 4
+			 FROM = { is_rival = ROOT }  # much more likely against rivals
+			}
+			modifier = { 
+				factor = 0.5
+				FROM = { NOT = { trait = cruel } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { NOT = { trait = arbitrary } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { NOT = { trait = lunatic } }
+			}
+		}
+	}	
+	
+	
+	
+	
+dwt_dog_procreoself = {
+		filter = self
+		ai_target_filter = self
+
+	
+		potential = {
+			has_bestiality_content = yes				
+			is_adult = yes
+			is_female = yes
+			has_character_modifier = pet_hunting_dog
+		}
+
+		from_potential = {
+	
+		}
+
+		allow = {
+			NOT = { has_character_flag = dwt_dog_procreoself_cooldown }
+			OR = {
+				trait = beast_lover
+				trait = lustful
+				trait = hedonist
+				trait = dwtstablewhore
+			}
+			prisoner = no
+			NOT = { trait = in_hiding }
+			NOT = { trait = infirm }
+			NOT = { trait = incapable }
+			in_command = no 
+		}
+		effect = {
+			narrative_event = { id = DWT.550 }
+			set_character_flag = dwt_dog_procreoself_cooldown 
+			character_event = { id = DWT.598 days = 90 } #Removes the cooldown flag
+		}
+
+		ai_will_do = {
+			factor = 1
+			# the less of these traits the character has, the less likely they will be to do it
+			modifier = { 
+				factor = 10
+				trait = beast_lover 
+			}
+			modifier = {
+				factor = 1
+				OR = {
+				trait = hedonist
+				trait = lustful
+				}
+			}
+			modifier = {
+				factor = 1.5
+				trait = stablewhore
+			}
+			modifier = {
+				factor = 0.3
+				trait = chaste
+			}
+			modifier = {
+				factor = 0
+				trait = celibate
+			}
+		}
+	}		
+	
+	
+}
+
+
+
+
+
+#
+### Decisions
+#
+
+decisions = {
+    dwt_gangbang_troops = {
+        potential = {
+            is_female = yes
+			age = 16
+			piety = 150
+            trait = lilith
+        }
+
+        allow = {
+            in_command = yes
+			NOT = { 
+				trait = incapable 
+				trait = chaste
+				trait = celibate
+			}
+			custom_tooltip = {
+				text = dwt_gangbang_recovering
+				NOT = { has_character_flag = dwt_gangbanged_troops }
+			}
+        }
+        effect = {
+            set_character_flag = dwt_gangbanged_troops
+            character_event = { id = DWT.901 days = 180 } # clear flag
+            narrative_event = { id = DWT.900 }
+        }
+        ai_will_do = {
+            factor = 0.1  # Not very often by default
+
+	     modifier = {
+				factor = 2.5
+				 trait = sexcrazed 
+		}           
+	    modifier = {
+                # women with Lilith theology educations are more likely
+                factor = 2
+				is_priest = yes
+				trait = lilith
+            }
+            modifier = {
+                # Lilith clergywomen are also more likely
+                factor = 2
+                is_theocracy = yes
+                trait = lilith
+            }
+            modifier = {
+                factor = 2
+                OR = {
+                    trait = lustful
+                    trait = hedonist
+                    trait = cheap_whore
+                    trait = experienced_whore
+                    trait = exclusive_whore
+					trait = lilith
+                }
+            }
+            modifier = {
+                # Weak characters won't risk incapacitating themselves
+                factor = 0
+                trait = weak
+            }
+            modifier = {
+                # characters who might get ill are less likely
+                factor = 0.5
+                NOT = { trait = strong }
+            }
+        }
+    }
+
+}
+

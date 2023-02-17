@@ -1,0 +1,411 @@
+130000 = {
+	name="Adolf" #카롤링거 혈통의 후예
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=40432
+	1083.1.3={
+		birth=yes
+	}
+	1134.1.19={
+		death=yes
+	}
+}
+130001 = {
+	name="Shutain"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130000
+	1102.1.3={
+		birth=yes
+	}
+	1168.1.19={
+		death=yes
+	}
+}
+130002 = {
+	name="Rudolf"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130000
+	1103.1.3={
+		birth=yes
+	}
+	1164.1.19={
+		death=yes
+	}
+}
+130003 = {
+	name="Robert"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130002
+	1125.1.3={
+		birth=yes
+	}
+	1178.1.19={
+		death=yes
+	}
+}
+130004 = {
+	name="Eldorad"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130003
+	1146.1.3={
+		birth=yes
+	}
+	1202.1.19={
+		death=yes
+	}
+}
+130005 = {
+	name="Richard"
+	dynasty=25061
+	religion=catholic
+	culture=english
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130004
+	1167.1.3={
+		birth=yes
+	}
+	1223.1.19={
+		death=yes
+	}
+}
+130006 = {
+	name="Albert"
+	dynasty=25061
+	religion=catholic
+	culture=english
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130005
+	1187.1.3={
+		birth=yes
+	}
+	1203.1.19={
+		death=yes
+	}
+}
+130007 = {
+	name="Stafen"
+	dynasty=25061
+	religion=catholic
+	culture=english
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130006
+	1200.1.3={
+		birth=yes
+	}
+	1269.1.19={
+		death=yes
+	}
+}
+130008 = {
+	name="Pepin"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130007
+	1253.1.3={
+		birth=yes
+	}
+	1299.1.19={
+		death=yes
+	}
+}
+130009 = {
+	name="Karl"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130008
+	1278.1.3={
+		birth=yes
+	}
+	1331.1.19={
+		death=yes
+	}
+}
+130010 = {
+	name="Karloman"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130009
+	1300.1.3={
+		birth=yes
+	}
+	1333.1.19={
+		death=yes
+	}
+}
+130011 = {
+	name="Karoly"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	add_trait=legit_bastard
+	father=130009
+	1301.1.3={
+		birth=yes
+	}
+	1361.1.19={
+		death=yes
+	}
+}
+130012 = {
+	name="Adolf"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130009
+	1301.12.8={
+		birth=yes
+	}
+	1336.12.30={
+		death=yes
+	}
+}
+130013 = {
+	name="Gustaf Hemil"
+	dynasty=130006
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	add_trait=legit_bastard
+	father=130009
+	1301.12.8={
+		birth=yes
+	}
+	1345.1.19={
+		death=yes
+	}
+}
+130014 = {
+	name="Gustaf Adolf"
+	dynasty=130006
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130013
+	1321.12.8={
+		birth=yes
+	}
+	1398.1.19={
+		death=yes
+	}
+}
+130015 = {
+	name="Vinchent"
+	dynasty=130006
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130013
+	1317.12.8={
+		birth=yes
+	}
+	1398.1.19={
+		death=yes
+	}
+}
+130016 = {
+	name="Adolfine"
+	dynasty=130006
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	female=yes
+	father=130013
+	1318.2.8={
+		birth=yes
+	}
+	1398.1.19={
+		death=yes
+	}
+}
+130017 = {
+	name="Charoles"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130011
+	1324.1.3={
+		birth=yes
+	}
+	1351.1.19={
+		death=yes
+	}
+}
+130018 = {
+	name="Karl"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	
+	father=130012
+	1325.1.3={
+		birth=yes
+		add_spouse=130016
+	}
+	1383.1.19={
+		death=yes
+	}
+}
+130019 = {
+	name="Adolf"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	add_trait=minhyee
+	father=130012
+	1326.1.3={
+		birth=yes
+	}
+	1371.1.19={
+		death=yes
+	}
+}
+130020 = {
+	name="Otto"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	father=130009
+	add_trait=legit_bastard
+	1299.1.3={
+		birth=yes
+	}
+	1344.1.19={
+		death=yes
+	}
+}
+130021 = {
+	name="Pepin"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	father=130020
+	1321.1.3={
+		birth=yes
+	}
+	1344.1.19={
+		death=yes
+	}
+}
+130022 = {
+	name="Octavinous"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	father=130008
+	1278.1.3={
+		birth=yes
+	}
+	1325.1.19={
+		death=yes
+	}
+}
+130023 = {
+	name="Konrad"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	father=130022
+	1302.1.3={
+		birth=yes
+	}
+	1365.1.1={
+		death=yes
+	}
+}
+130024 = {
+	name="Oreantaks"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	father=130022
+	1321.1.3={
+		birth=yes
+	}
+	1395.1.1={
+		death=yes
+	}
+}
+130025 = {
+	name="Lutbein"
+	dynasty=25061
+	religion=catholic
+	culture=old_frankish
+	diplomacy = 1
+	stewardship = 1
+	father=130024
+	1334.1.3={
+		birth=yes
+	}
+}

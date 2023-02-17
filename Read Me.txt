@@ -1,0 +1,8 @@
+Patrum Scuta 3.0x
+Official release
+
+Credits :
+
+Original idea and concept by Keanon
+Graphics and Implementation by Solo
+Graphics by Birger (JSpuller - wappenwiki.org)

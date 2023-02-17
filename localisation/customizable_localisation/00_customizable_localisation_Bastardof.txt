@@ -1,0 +1,31 @@
+defined_text = {
+	name = GetRealFather
+
+	use_first_valid = yes # Defaults to no
+    text = {
+		trigger = {
+			OR = {
+			trait = bastard
+			trait = legit_bastard
+		         }
+		}
+		localisation_key = [This.TrueFather.GetFullName]
+	}
+	text = {
+		trigger = {
+			is_father_real_father = 0
+		}
+		localisation_key = [This.TrueFather.GetFullName]
+	}
+    text = {
+		trigger = {
+		    NOT = {
+				trait = bastard
+				trait = legit_bastard
+		    }
+		}
+		localisation_key = None 
+	}
+}
+		
+	

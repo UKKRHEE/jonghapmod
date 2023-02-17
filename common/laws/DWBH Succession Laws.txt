@@ -1,0 +1,149 @@
+gender_laws = {
+	egalitarian_succession = {
+		male_dynasty_opinion = -5
+		
+		potential = {
+			holder_scope = {
+					AND = {
+						OR = {		
+							religion = lilitu
+							religion = orthlili
+							religion = lilislam
+						}
+					NOT = { culture = basque } # this is to prevent it from showing up twice for Basques 
+					}
+			}
+			is_landless_type_title = no
+			
+			OR = {
+				AND = {
+					tier = baron
+					is_theocracy = no
+					is_republic = no
+				}
+				AND = {
+					is_theocracy = no
+					is_republic = no
+				}
+			}
+			
+			is_primary_type_title = no
+		}
+		allow = {
+				holder_scope = {
+					OR = {		
+					religion = lilitu
+					religion = orthlili
+					religion = lilislam
+					}
+					}
+			}
+		effect = {
+			gender_succ = true_cognatic
+			set_allows_matrilineal_marriage = yes
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+
+	enatic_succession2 = {
+		male_dynasty_opinion = -15
+		female_dynasty_opinion = 10
+		
+		potential = {
+			holder_scope = {
+					OR = {		
+					religion = lilitu
+					religion = lilislam
+					religion = orthlili
+					}
+					ai = no
+				}
+			
+			
+			is_landless_type_title = no
+			
+			OR = {
+				AND = {
+					tier = baron
+					is_theocracy = no
+					is_republic = no
+				}
+				AND = {
+					is_theocracy = no
+					is_republic = no
+				}
+			}
+			
+			is_primary_type_title = no
+		}
+		allow = {
+				holder_scope = {
+					OR = {		
+					religion = lilitu
+					religion = orthlili
+					religion = lilislam
+					}
+					}
+			}
+		effect = {
+			gender_succ = enatic
+			set_allows_matrilineal_marriage = yes
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	
+	enatic_cognatic_succession2 = {
+		male_dynasty_opinion = -10
+		female_dynasty_opinion = 5
+		
+		potential = {
+			holder_scope = {
+					OR = {		
+					religion = lilitu
+					religion = orthlili
+					religion = lilislam
+					}
+				}
+			
+			
+			is_landless_type_title = no
+			
+			OR = {
+				AND = {
+					tier = baron
+					is_theocracy = no
+					is_republic = no
+				}
+				AND = {
+					is_theocracy = no
+					is_republic = no
+				}
+			}
+			
+			is_primary_type_title = no
+		}
+		allow = {
+				holder_scope = {
+					OR = {		
+					religion = lilitu
+					religion = orthlili
+					religion = lilislam
+					}
+					}
+			}
+		
+		effect = {
+			gender_succ = enatic_cognatic
+			set_allows_matrilineal_marriage = yes
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+
+
+}

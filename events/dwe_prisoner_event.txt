@@ -1,0 +1,372 @@
+namespace = dwe_prisoner
+
+narrative_event = { # Prisoner offers body
+	id = dwe_prisoner.1
+	is_triggered_only = yes
+	title = dwe_prisoner1T
+	picture = DWE_Prisoner
+	desc = {
+		trigger = {
+			host = {
+				is_female = no
+			}
+		}
+		text = dwe_prisoner1offerbody
+	}
+	desc = {
+		trigger = {
+			host = {
+				is_female = yes
+			}
+		}
+		text = dwe_prisoner1offerbodylesbian
+	}
+	
+	immediate = {
+		save_event_target_as = dwe_prisoner
+		host = {
+			save_event_target_as = dwe_jailer
+		}
+	}
+	
+	option = { # Offer your virginity in exchange for release
+		name = dwe_prisoner1TToffervirginity
+		trigger = {
+			trait = virgin
+		}
+		set_character_flag = offered_virginity
+		event_target:dwe_jailer = {
+			narrative_event = { id = dwe_prisoner.2 }
+		}
+	}
+
+	option = { # Offer your body in exchange for release (general)
+		name = dwe_prisoner1TTofferbody
+		trigger = {
+			NOT = { trait = virgin }
+		}
+		set_character_flag = offered_body
+		event_target:dwe_jailer = {
+			narrative_event = { id = dwe_prisoner.2 }
+		}
+	}
+	
+	option = { # Offer jailer to impregnate you in exchange for release (male jailer)
+		name = dwe_prisoner1TTofferimpregnate
+		trigger = {
+			is_pregnant = no
+			event_target:dwe_jailer = {
+				is_female = no
+			}
+		}
+		set_character_flag = offered_child
+		event_target:dwe_jailer = {
+			narrative_event = { id = dwe_prisoner.2 }
+		}
+	}
+}
+
+narrative_event = {
+	id = dwe_prisoner.2
+	is_triggered_only = yes
+	title = dwe_prisoner2T
+	picture = DWE_Prisoner
+	desc = {
+		trigger = {
+			is_female = yes
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_body
+			}
+		}
+		text = dwe_prisoner2lesbian
+	}
+	desc = {
+		trigger = {
+			is_female = yes
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_virginity
+			}
+		}
+		text = dwe_prisoner2lesbianvirginity
+	}
+	desc = {
+		trigger = {
+			is_female = no
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_body
+			}
+		}
+		text = dwe_prisoner2straight
+	}	
+	desc = {
+		trigger = {
+			is_female = yes
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_virginity
+			}
+		}
+		text = dwe_prisoner2straightvirginity
+	}
+	desc = {
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_child
+			}
+		}
+		text = dwe_prisoner2straightimpregnation
+	}	
+
+	option = { # Take her virginity
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_virginity
+			}
+		}
+		name = dwe_prisoner2TTtakehervirginity
+		event_target:dwe_prisoner = {
+			remove_trait = virgin
+			set_character_flag = body_taken
+			narrative_event = { id = dwe_prisoner.3 }
+		}
+	}
+	option = { # Take her body
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_body
+			}
+		}
+		name = dwe_prisoner2TTtakeherbody
+		event_target:dwe_prisoner = {
+			set_character_flag = body_taken
+			narrative_event = { id = dwe_prisoner.3 }
+		}
+		narrative_event = { id = dwe_prisoner.4 }
+	}
+	option = { # Impregnate and humiliate her
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = offered_child
+			}
+		}
+		name = dwe_prisoner2TTgiveherchild
+		event_target:dwe_prisoner = {
+			set_character_flag = body_taken
+			narrative_event = { id = dwe_prisoner.3 }
+		}
+		narrative_event = { id = dwe_prisoner.4 }
+	}
+	option = { # She's worthless. Let her rot.
+		name = dwe_prisoner2TTrefuse
+		event_target:dwe_prisoner = {
+			set_character_flag = body_refused
+			narrative_event = { id = dwe_prisoner.3 }
+		}
+	}	
+}
+
+narrative_event = { # Sexytimes, prisoner perspective
+	id = dwe_prisoner.3
+	is_triggered_only = yes
+	title = dwe_prisoner3TReply
+	desc = {
+		trigger = {
+			has_character_flag = body_refused
+		}
+		text = dwe_prisoner3Refused
+		picture = DWE_PrisonerWhipped
+	}
+	desc = {
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_virginity
+			event_target:dwe_jailer = {
+				is_female = yes
+			}
+		}
+		text = dwe_prisoner3lesbianvirginity
+		picture = dwsu_sexslaveff
+	}
+	desc = {
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_virginity
+			event_target:dwe_jailer = {
+				is_female = no
+			}
+		}
+		text = dwe_prisoner3straightvirginity
+		picture = DWE_PrisonerFucked
+	}
+	desc = {
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_body
+			event_target:dwe_jailer = {
+				is_female = yes
+			}
+		}
+		text = dwe_prisoner3lesbianbody
+		picture = dwsu_sexslaveff
+	}
+	desc = {
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_body
+			event_target:dwe_jailer = {
+				is_female = no
+			}
+		}
+		text = dwe_prisoner3straightbody # Male jailer pulls out
+		picture = DWE_PrisonerFucked
+	}	
+	desc = {
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_child
+		}
+		text = dwe_prisoner3straightchild
+		picture = DWE_PrisonerCreampie
+	}	
+
+	immediate = { # Re-adds the virginity trait so prisoner will see it removed
+		if = {
+			limit = {
+				has_character_flag = body_taken
+				has_character_flag = offered_virginity
+			}
+			add_trait = virgin
+		}
+	}
+	
+	option = { # Blast! (offer refused)
+		trigger = {
+			has_character_flag = body_refused
+		}
+		name = dwe_prisoner3TTohnoes
+		clr_character_flag = body_refused
+		clr_character_flag = offered_virginity
+		clr_character_flag = offered_body
+		clr_character_flag = offered_child
+	}
+	option = { # Ow... (virginity taken)
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_virginity
+		}
+		name = dwe_prisoner3TTvirginitytaken
+		piety = -50
+		prestige = -50
+		remove_trait = virgin
+		imprison = no
+		clr_character_flag = body_taken
+		clr_character_flag = offered_virginity
+		clr_character_flag = dwe_made_sexual_offer
+	}
+	option = { # It could have been worse... (body taken)
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_body
+		}
+		name = dwe_prisoner3TTbodytaken
+		piety = -25
+		prestige = -25
+		imprison = no
+		clr_character_flag = body_taken
+		clr_character_flag = offered_body
+		clr_character_flag = dwe_made_sexual_offer
+	}
+	option = { # My womb is full... (impregnated)
+		trigger = {
+			has_character_flag = body_taken
+			has_character_flag = offered_child
+		}
+		name = dwe_prisoner3TTimpregnated
+		impregnate = event_target:dwe_jailer
+		piety = -100
+		prestige = -100
+		imprison = no
+		clr_character_flag = body_taken
+		clr_character_flag = offered_child
+		clr_character_flag = dwe_made_sexual_offer
+	}	
+}		
+
+narrative_event = { # Sexytimes, jailer perspective
+	id = dwe_prisoner.4
+	is_triggered_only = yes
+	title = dwe_prisoner4TReply
+	picture = a_placeholder
+	desc = {
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = body_taken
+				has_character_flag = offered_virginity
+			}
+			is_female = yes
+		}
+		text = dwe_prisoner4lesbianvirginity
+		picture = dwsu_sexslaveff
+	}
+	desc = {
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = body_taken
+				has_character_flag = offered_virginity
+			}
+			is_female = no
+		}
+		text = dwe_prisoner4straightvirginity
+		picture = DWE_PrisonerFucked
+	}
+	desc = {
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = body_taken
+				has_character_flag = offered_body
+			}
+			is_female = yes
+		}
+		text = dwe_prisoner4lesbianbody
+		picture = dwsu_sexslaveff
+	}
+	desc = {
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = body_taken
+				has_character_flag = offered_body
+			}
+			is_female = no
+		}
+		text = dwe_prisoner4straightbody # Male jailer pulls out
+		picture = DWE_PrisonerFucked
+	}	
+	desc = {
+		trigger = {
+			event_target:dwe_prisoner = {
+				has_character_flag = body_taken
+				has_character_flag = offered_child
+			}
+		}
+		text = dwe_prisoner4straightchild
+		picture = DWE_PrisonerCreampie
+	}	
+
+
+	option = { # That felt good.
+		name = dwe_prisoner4TTsex
+	}
+		
+}
+	
+# on_released_from_prison event for cleanup of flags due to release for any other reason
+character_event = {
+	id = dwe_prisoner.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_character_flag = dwe_made_sexual_offer
+	}
+	immediate = {
+		clr_character_flag = dwe_made_sexual_offer
+	}
+}

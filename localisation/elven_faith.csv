@@ -1,0 +1,49 @@
+#Faith localizations   ;;;;;;;;;;;;;x
+Wild_Hunt;Wild Hunt;;;;;;;;;;;;;x
+preistess_healer;Priestess Healer;;;;;;;;;;;;;x
+The_Great_Song;ùÄ¥´²³Ì åˆ¦´;;;;;;;;;;;;;x
+elven_pagan_reformed;«¸ĞçŠ©È¢³çŒ;;;;;;;;;;;;x
+elven_pagan_reformed_DESC;ª´ç»Ù¡¸ °´«·¢³Ì «¸ĞğŒæÆĞùÇ ªÈÌ«³İ. äŒ ùÄ¥´²³Ì åˆ¦´¡³ ¥³ªÈ ²³Ì©·Ì ª¸¡º«¸ ëÁĞ¦¹±·¬ÈÙ¢È¥³.;;;;;;;;;;;;x
+elven_pagan;±³ò¿ô¿Ì «¸ĞçŠ©È¢³çŒ;;;;;;;;;;;;x
+elven_pagan_DESC;«¸ĞğŒæÆĞùÇ ìÁÉ«·¡³åÆÌ ¨ÈÏëÆØ. «È ªÈÌ«³İëÆÌ ùÄ¥´²³Ì åˆ¦´æÆĞ ê»É«¸ª· «È×«·©·¦ÈÌ ¬·Ìª³æÆĞùÇ ²¹Ğï»İæÆĞëÆĞ «È«µ¡È²³¨¹, äŒæÆĞëÆĞ «µÉê»ÉùÇ ‘³İëŒçˆ éˆ¢´ìÁÌ¥³äˆ ¨ÈÏêÆÙ¢È¥³.;;;;;;;;;;;;x
+religion_feature_hunt;The Great Hunt;;;;;;;;;;;;x
+religion_feature_hunt_DESC;The elves call great hunts to claim new territory and weaken there foes.;;;;;;;;;;;;x
+religion_feature_hunt_desc;The elves call great hunts to claim new territory and weaken there foes.;;;;;;;;;;;;x
+religion_elven;åˆ¦´ùÇ ìŠ«ÈÌ;;;;;;;;;;;;x
+religion_elven;«¸ĞğŒæÆĞ«¸¡¸ ¥³İªÈÌùÇ åˆ¦´éˆ¥³ ¥· ìÁİë‰²³Ì ¡·ÛëÆÌ «·Ú¥³. ¥³İªÈÌ«È ¢³Øª·İ«ÈæÆÌ «¹ª·İ«ÈæÆÌ ´•ÆÛ²³Ì åˆ¦´çÆĞ ¡³¬Èäˆ «ÈÜ¥³¨¹Ì äŒ ¬³İêˆçÆĞ ®³ŞëÆĞ êŠ «ÈÜëÆĞ¡·Û«È¥³.;;;;;;;;;;;;x
+religion_elven_desc;«¸ĞğŒæÆĞ«¸¡¸ ¥³İªÈÌùÇ åˆ¦´éˆ¥³ ¥· ìÁİë‰²³Ì ¡·ÛëÆÌ «·Ú¥³. ¥³İªÈÌ«È ¢³Øª·İ«ÈæÆÌ «¹ª·İ«ÈæÆÌ ´•ÆÛ²³Ì åˆ¦´çÆĞ ¡³¬Èäˆ «ÈÜ¥³¨¹Ì äŒ ¬³İêˆçÆĞ ®³ŞëÆĞ êŠ «ÈÜëÆĞ¡·Û«È¥³.;;;;;;;;;;;;x
+God_King_Elven;ªÈÌùÇ ù¼İ;;;;;;;;;;;;x
+God_Queen_Elven;ªÈÌùÇ «¹ù¼İ;;;;;;;;;;;;x
+magic;Magic;;;;;;;;;;;;x
+STAT_PIETY_magic;¨³©·Ù;;;;;;;;;;;;x
+STAT_PIETY_MENU_magic;¨³©·Ù;;;;;;;;;;;;x
+STAT_PIETY_DESC_magic;Magic is the power that flows in the world.;;;;;;;;;;;;x
+temple_baron_elven_pagans;Way Glade;;;;;;;;;;;;x
+temple_baron_elven_pagans_reformed;Way Temple;;;;;;;;;;;;x
+d_pagen_elven_reformed;Mortal Gods;;;;;;;;;;;;x
+gain_bloodline; ªÈÌùÇ ±È¡³ ‡ŒçÆÌ¥³.;;;;;;;;;;;;x
+gain_bloodline_desc; ªÈÌùÇ ±È¡³ ‡ŒçÆÌ¥³.;;;;;;;;;;;;x
+
+#gods
+GOD_ORion;ëˆ¦Èë»Ì;;;;;;;;;;;;;x
+Song_Eater;åˆ¦´çÆĞ ¨·ÉåÆÌ¬³;;;;;;;;;;;;;x
+God_song;«¸Ğ¦¸¢³êŒïŒ¦³;;;;;;;;;;;;;x
+Corellon;îˆ¦¸Ğç»Ì;;;;;;;;;;;;;x
+
+#Events
+elfcourt.2;Blood of the Gods;;;;;;;;;;;;;x
+elfblood_desc.2;«¸ĞğŒù¼ «¸ĞğŒùÇ ‘³İ«È ÿ¿é»Éô¿«·ÜëÆØëÆĞ ¥³İªÈÌùÇ ±È ê»É«¸ª· åŒÈĞêŠ «ÈÜ«·Ü¥³. ªÈÌùÇ ±È¡³ ¥³İªÈÌùÇ ±È«³Ì«¸ ‡ŒçŒåÆÌ¡·Û®·¦·Ø åŒ¹¬ÈåÆÌ¥¸. «³ÌäŒ¦´?;;;;;;;;;;;;;x
+elfblood.1a;äˆ¥´ ¡³Ğ³¨³òÄùÇ ±È¡³ ¢´ è»Ø«¸ ‡ŒçŒåÆÌäŠ¢³.;;;;;;;;;;;;;x
+elfblood.1b;ëˆ¦Èë»ÌùÇ ±È¡³ ¢´ è»Ø«¸ ‡ŒçŒåÆÌäŠ¢³.;;;;;;;;;;;;;x
+elfblood.1c;«¸Ğ¦¸¢³êŒïŒ¦³ùÇ ±È¡³ ¢´ è»Ø«¸ ‡ŒçŒåÆÌäŠ¢³.;;;;;;;;;;;;;x
+elfblood.1d;îˆ¦¸Ğç»ÌùÇ ±È¡³ ¢´ è»Ø«¸ ‡ŒçŒåÆÌäŠ¢³.;;;;;;;;;;;;;x
+
+#decisions
+elven_faith;«¸ĞğŒ ªÈÌ«³İëÆĞ ¨ÈÏåÆÌ¥³;;;;;;;;;;;;;x
+elven_faith_desc;«¸ĞğŒ ªÈÌ«³İëÆĞ ¨ÈÏ¡¸ ô¿Ù¢È¥³.;;;;;;;;;;;;;x
+
+#titles
+title_pagen_elven_reformed_God_King_Elven;God King;;;;;;;;;;;;x
+title_pagen_elven_reformed_King_Elven_desc;The King of all elves;;;;;;;;;;;;x
+title_pagen_elven_reformed_Queen_Elven;God Queen;;;;;;;;;;;;x
+title_pagen_elven_reformed_God_Queen_Elven_desc;The Queen of all elves;;;;;;;;;;;;x

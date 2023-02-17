@@ -1,0 +1,125 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+# Tooltips related to Decisions
+
+# Decisions
+dwsu_slave_shopping;Purchase a Slave;;;;;;;;;;;;;x
+dwsu_slave_shopping_desc;Visit the Slavers' Guild to purchase a slave.;;;;;;;;;;;;;x
+dwsu_use_slave;Use Slave for Sex;;;;;;;;;;;;;x
+dwsu_use_slave_desc;Slaves cannot refuse demands from their owner, even for sex.;;;;;;;;;;;;;x
+dwsu_use_bitch;Use a Werewolf Bitch;;;;;;;;;;;;;x
+dwsu_use_bitch;I don't just have to wait to hunt to enjoy one of my bitches...;;;;;;;;;;;;;x
+
+dwsu_slavebuy_recovery;Waiting time before buying another slave.;;;;;;;;;;;;;x
+
+#Rules
+
+DWSU_RULE_NPCSEEDING;Additional Mythical NPC Seeding;;;;;;;;;;;;;x
+DWSU_RULE_NO_SEEDING;None;;;;;;;;;;;;;x
+DWSU_RULE_NO_SEEDING_DESC;No additional Mythical NPCs will be placed into the world over a normal DW campaign.;;;;;;;;;;;;;x
+DWSU_RULE_SLAVE_BUY_ONLY;Slave purchase only;;;;;;;;;;;;;x
+DWSU_RULE_SLAVE_BUY_ONLY_DESC;Mythical NPCs may be purchased from the Slavers' guild, but no random placement.;;;;;;;;;;;;;x
+DWSU_RULE_ADDITIONAL_SEEDING;Full Seeding;;;;;;;;;;;;;x
+DWSU_RULE_ADDITIONAL_SEEDING_DESC;Random Mythical NPCs will be placed into the world over a normal DW campaign.;;;;;;;;;;;;;x
+DWBH_ORC_INVASION;Orcish Hordes Invasion;;;;;;;;;;;;;x
+DWBH_RULE_ORC_INVASION;Orcish Invasions;;;;;;;;;;;;;x
+DWBH_RULE_ORC_INVASION_DESC;Orcish invasions can occur at any time in the game.;;;;;;;;;;;;;x
+DWBH_RULE_NO_ORC_INVASION;None;;;;;;;;;;;;;x
+DWBH_RULE_NO_ORC_INVASION_DESC;No Orcish invasions will occur.;;;;;;;;;;;;;x
+DWBH_RULE_DELAY_ORC_INVASION;Delayed;;;;;;;;;;;;;x
+DWBH_RULE_DELAY_ORC_INVASION_DESC;No Orcish invasions will occur before 1000 AD.;;;;;;;;;;;;;x
+
+
+# Events
+DWBHE300;When you arrive at the local Slavers' Guild, the slavemaster quickly calls out for an array of the best slaves. He assures you that you will be offered only the highest quality slaves, and inquire as to what sort of slave you was interested in purchasing, and assures me that they have just the sort that will suit my needs. All the slaves are trained for a purpose, he notes, adding hastily that, "Of course, you can use them for whatever purpose you desire once purchased." You consider, and ask to see...;;;;;;;;;;;;;x
+dwsu_slave_buying;Reviewing the slaves for sale;;;;;;;;;;;;;x
+DWBHE300A;A strong male trained as a bodyguard.;;;;;;;;;;;;;x
+DWBHE300B;A pretty female trained as a handmaiden.;;;;;;;;;;;;;x
+DWBHE300C;Ask about truly exotic slaves.;;;;;;;;;;;;;x
+DWBHE300D;Nothing catches my interest for now.;;;;;;;;;;;;;x
+dwsu_slavebodyguard;A Slave Warrior;;;;;;;;;;;;;x
+DWBHE301;The slavemaster brings out a strapping fellow, perhaps formerly a barbarian warrior of some sort. The slave is certainly strong, and his shirtless chest is rippling with muscles. He could be quite useful in a fight, whether in my defense, in the arena, or perhaps in other ways...;;;;;;;;;;;;;x
+DWBHE301A;I'll take him.;;;;;;;;;;;;;x
+DWBHE301B;Let me see some of the other options.;;;;;;;;;;;;;x
+dwsu_sexslave;A Pretty Slave Girl;;;;;;;;;;;;;x
+DWBHE302;The slavemaster brings out a pretty girl, young and fresh, and certainly not too ill-used. She remains calm as you inspect her, keeping her eyes downcast. Her chest is of moderate size, but her looks are certainly pleasing overall...;;;;;;;;;;;;;x
+DWBHE302A;I'll take her.;;;;;;;;;;;;;x
+DWBHE302B;Let me see some of the other options.;;;;;;;;;;;;;x
+DWBHE303;The slavemaster nods furiously, and yells out for his workers and guards to bring up the special slaves. "These are truly unusual specimens, all very, very rare, from the far corners of the globe. Many have been thought to be but myth or legend, yet here they are..." He pauses, licking his lips a little nervously, before continuing. "Of course, the prices are commensurately high... but I'm sure you'll agree, they are quite reasonable nonetheless...";;;;;;;;;;;;;x
+DWBHE303A; Peruse the first exotic slave.;;;;;;;;;;;;;x
+DWBHE304;The slavemaster yells at his workers and guards to bring up the next special slave. "Apologies, but perhaps the next one will be more to your liking....";;;;;;;;;;;;;x
+DWBHE304A; Peruse the next exotic slave.;;;;;;;;;;;;;x
+DWBHE304B; I think I'm done looking.;;;;;;;;;;;;;x
+DWBHE305;Word arrives from the local slavers' guildmaster. Business has been booming, and they have received a special shipment of slaves, including some truly rare ones, thanks to your skilled management and oversight of the realm's economy. The messenger informs you that the guild has sent your share of the expected profits; or if you prefer, you can opt to take first pick of the slaves instead.;;;;;;;;;;;;;x
+dwbh_slave_buying;Boom times in the Slave Trade;;;;;;;;;;;;;x
+DWBHE305A;I'll come take a look at the slaves.;;;;;;;;;;;;;x
+DWBHE305B;Not this time, just the gold.;;;;;;;;;;;;;x
+dwbh_kitsuneslave;A Mystical Kitsune;;;;;;;;;;;;;x
+DWBHE306;The slavers bring out an exotic woman who seems almost human, save for her fox ears, and several foxtails extending behind her. She possesses a strange, mystical sense about her. "This one is called a Kitsune. A fox spirit, she was a rather tricky one to catch, but well worth it," remarks the slavemaster.;;;;;;;;;;;;;x
+DWBHE306A; I'll take her.;;;;;;;;;;;;;x
+DWBHE306B; Not interested - Next.;;;;;;;;;;;;;x
+DWBHE306C; I'll just take my gold instead.;;;;;;;;;;;;;x
+dwbh_orcslave;A Brawny Orc;;;;;;;;;;;;;x
+DWBHE307;The slavers bring out an green-skinned woman with small tusks jutting from her lips, and massive bulging muscles. She looks like she's strong enough to pull a full cart, or perhaps break one in two. "An orc, one of a fabled race from another world, stronger than a bull, even," announces the slavemaster.;;;;;;;;;;;;;x
+DWBHE307A; I'll take her.;;;;;;;;;;;;;x
+DWBHE307B; Not interested - Next.;;;;;;;;;;;;;x
+dwbh_nekoslave;A Whimsical Neko;;;;;;;;;;;;;x
+DWBHE308;The slavers bring out an strange feline woman who features catlike ears, and a thin waving tail. "A Neko, or so they call her kind, found almost exclusively in the distant realms of the mystic east," boasts the slavemaster.;;;;;;;;;;;;;x
+DWBHE308A; I'll take her.;;;;;;;;;;;;;x
+DWBHE308B; Not interested - Next.;;;;;;;;;;;;;x
+dwbh_elfslave;A Beautiful Elf;;;;;;;;;;;;;x
+DWBHE309;The slavers bring out a lithe, beautiful woman, almost ethereal in her appearance, with pointed ears poking through her hair. "One of the last of her kind, most likely - an actual live Elf," boasts the slavemaster.;;;;;;;;;;;;;x
+DWBHE309A; I'll take her.;;;;;;;;;;;;;x
+DWBHE309B; Not interested - Next.;;;;;;;;;;;;;x
+dwbh_angelslave;A Heavenly Angel;;;;;;;;;;;;;x
+DWBHE310;The slavers bring out a woman with white, feathered wings, whose face is so beautiful as to almost be painful to look upon for too long. "An Angel herself, descended from the heavens, and brought here for your use," claims the slavemaster.;;;;;;;;;;;;;x
+DWBHE310A; I'll take her.;;;;;;;;;;;;;x
+DWBHE310B; Not interested - Next.;;;;;;;;;;;;;x
+dwbh_succubusslave;A Sensual Succubus;;;;;;;;;;;;;x
+DWBHE311;The slavers bring out a woman with tiny horns, whose sensual body all but screams sex and lust, drawing stares from all around. "This one bears the blood of demons, a rare and powerful gift, and now available to make your own," notes the slavemaster.;;;;;;;;;;;;;x
+DWBHE311A; I'll take her.;;;;;;;;;;;;;x
+DWBHE311B; Not interested - Next.;;;;;;;;;;;;;x
+DWBHE312;The slavemaster nods furiously, and yells out for his workers and guards to bring up the next slave. A few moments later, one of the workers emerges shaking his head, and informs you that there are no more slaves to be had at this time.;;;;;;;;;;;;;x
+DWBHE312A; Oh well.;;;;;;;;;;;;;x
+
+
+
+DWSU310;I've set aside the time to make use of my slave [dw_visit_target.GetFirstName] and relieve some sexual tension. Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making him strip down for me. \n  Any reluctance on his part quickly vanishes as he submits to my lust, my desire growing, and beginning to evoke a response from him as well. When my passion has reached its height, I put aside the foreplay and give it my all. Loving tenderness gives way to more basic instincts as we give it our all, seeking to reach orgasm. \n  As the first wave finishes, we continue exploring each other, calling upon my stamina to take us through another round.;;;;;;;;;;;;;x
+DWSU310A;A great time as always.;;;;;;;;;;;;;x
+DWSU320;I've set aside the time to make use of my slave [dw_visit_target.GetFirstName] and relieve some sexual tension. Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making her strip down for me. \n  Any reluctance on her part quickly vanishes as she submits to my lust, my desire growing, and beginning to evoke a response from her as well. Carnal desire gives way to more basic instincts as we give it our all. Panting, we grind away at each other, licking, fingering, suckling as we seek to reach orgasm. \n  Our work is rewarded as we both climax, [dw_visit_target.GetFirstName] reaching it first and me just afterwards. Our caresses return to being soft, loving as we continue exploring each other as we ready for a second round.;;;;;;;;;;;;;x
+DWSU320A;I love the feeling of [dw_visit_target.GetFirstName]'s body.;;;;;;;;;;;;;x
+DWSU330;My slave [dw_visit_target.GetFirstName] is waiting for me after a long day, looking forward to some intimate time together. Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making her strip down for me. \n  Any reluctance on her part quickly vanishes as she submits to my lust, my desire growing, and beginning to evoke a response from her as well. When our passion has reached it's height, and foreplay is at an end, I take [dw_visit_target.GetFirstName] from behind. Sinking deep into my slave as she pushes back to meet my every thrust. Carnal desire gives way to more basic instincts as we give it our all, seeking to reach orgasm. \n  She cries out in ecstasy as she reaches her peak, and the sensation itself brings me to my own climax.;;;;;;;;;;;;;x
+DWSU330A;I deliberately cum inside of [dw_visit_target.GetFirstName].;;;;;;;;;;;;;x
+DWSU330B;I pull out of [dw_visit_target.GetFirstName] as I climax.;;;;;;;;;;;;;x
+DWSU340;I summon my slave [dw_visit_target.GetFirstName] looking forward to some intimate time together.  Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making him strip down for me. \n  Any reluctance on his part quickly vanishes as he submits to my lust, my desire growing, and beginning to evoke a response from him as well. When our passion has reached it's height, [dw_visit_target.GetFirstName] turns me and takes me from behind. His manhood filling me, giving me pleasure as he seeks release. Carnal desire gives way to more basic instincts as we seek to reach orgasm. \n  I shudder as my orgasm ripples through me, while [dw_visit_target.GetFirstName] keeps going, until he's finally prepared to climax himself.;;;;;;;;;;;;;x
+DWSU340A;I make [dw_visit_target.GetFirstName] fill me as he climaxes.;;;;;;;;;;;;;x
+DWSU340B;I make [dw_visit_target.GetFirstName] pull out as he climaxes.;;;;;;;;;;;;;x
+DWSU350;I manage to get some time alone with my slave [dw_visit_target.GetFirstName] after a long day.  Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making her strip down for me. Any reluctance on her part quickly vanishes as she submits to my lust, my desire growing, and beginning to evoke a response from her as well, the desire almost radiating from each of us. We undress each other, each seeking to touch, kiss, and get closer to the other. \n  Neither gives quarter in our desires and soon we're entwined on the floor, forming a perfect chain as I do my best to take all of her cock down my throat, while she attempts the same. It soon turns into a contest, as we each seek to disrupt the other through pleasure. It's a give and take with [dw_visit_target.GetFirstName]. One moment I'm in control, the next she has me unfocused and panting for release. \n  I somehow manage to get her to orgasm first, yet my victory is short lived for as her seed splashes in the back of my throat, I climax myself.;;;;;;;;;;;;;x
+DWSU350A;What a great time with [dw_visit_target.GetFirstName].;;;;;;;;;;;;;x
+DWSU360;I summon my slave [dw_visit_target.GetFirstName] after a long day, looking forward to relieving my lust.  Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making her strip down for me. \n  Any reluctance on her part quickly vanishes as she submits to my lust, my desire growing, and beginning to evoke a response from her as well. When our passion has reached it's height, and foreplay is at an end, I take [dw_visit_target.GetFirstName] from behind. Sinking deep into my slave as she pushes back to meet my every thrust. Carnal desire gives way to more basic instincts as we give it our all, seeking to reach orgasm. \n  She cries out in ecstasy as she reaches her peak, and the sensation itself brings me to my own climax.;;;;;;;;;;;;;x
+DWSU360A;I deliberately cum inside of [dw_visit_target.GetFirstName].;;;;;;;;;;;;;x
+DWSU360B;I pull out of [dw_visit_target.GetFirstName] as I climax.;;;;;;;;;;;;;x
+DWSU370;I summon my slave [dw_visit_target.GetFirstName] looking forward to some intimate time together.  Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making her strip down for me. \n  Any reluctance on her part quickly vanishes as she submits to my lust, my desire growing, and beginning to evoke a response from her as well. When our passion has reached it's height, [dw_visit_target.GetFirstName] turns me and takes me from behind. Her cock filling me, giving me pleasure as she seeks release. Carnal desire gives way to more basic instincts as we seek to reach orgasm. \n  I shudder as my orgasm ripples through me, while [dw_visit_target.GetFirstName] keeps going, until she's finally prepared to climax herself.;;;;;;;;;;;;;x
+DWSU370A;I make [dw_visit_target.GetFirstName] fill me as she climaxes.;;;;;;;;;;;;;x
+DWSU370B;I make [dw_visit_target.GetFirstName] pull out as she climaxes.;;;;;;;;;;;;;x
+DWSU380;I summon my slave [dw_visit_target.GetFirstName] to relieve my lust.  Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making him strip down for me. \n  Any reluctance on his part quickly vanishes as he submits to my lust, my desire growing, and beginning to evoke a response from him as well. When our passion has reached it's height, we put aside the foreplay and give it our all. \n  I'm riding his cock frantically, my own bouncing between us and slapping against our stomachs. His face contorts and his cock swells, I ride him faster, seeing victory as he explodes inside of me. Filled with the seed of my slave, I orgasm hard, falling backwards onto the bed as my cock fires a trail of semen through the air.;;;;;;;;;;;;;x
+DWSU380A;Damn, I get so carried away sometimes with [dw_visit_target.GetFirstName].;;;;;;;;;;;;;x
+DWSU390;I summon my slave  [dw_visit_target.GetFirstName] for some intimate time together.  Having time to enjoy myself like this seems like a rarity sometimes, so I don't waste any time making her strip down for me. \n  Any reluctance on her part quickly vanishes as she submits to my lust, my desire growing, and beginning to evoke a response from her as well. When our passion has reached it's height, we put aside the foreplay and give it our all. \n  She is riding my cock frantically, her own dick bouncing between us and slapping against our stomachs. I feel my cock swell and as I consider pulling out, she clamps down and rides me faster, until I explode inside of her. Filled with my seed, she orgasms hard, falling backwards as her cock fires a trail of semen through the air.;;;;;;;;;;;;;x
+DWSU390A;I'll cum inside [dw_visit_target.GetFirstName] every chance she gives me.;;;;;;;;;;;;;x
+dwsu_werewolf_joins;A Strange Wolf Creature;;;;;;;;;;;;;x
+DWSU1010;Your guards inform you that a strange wolf-man has been discovered outside your castle gate, arriving in the dead of night, and concealed with a cloak and hood. They bring you down to the dungeon cell where he is being kept in chains, for safety. Upon seeing you, he bows his furred head, and introduces himself, apologizing for the surreptitious nature of his approach, but he wished to avoid spooking the peasantry. He tells you that his kind is often hunted due to the crimes of the more feral of his brethren, which he is not, and that he has sought refuge at your court, in hopes that your rumored mystical nature will make you see the potential benefit of having someone like him in your service.;;;;;;;;;;;;;x
+DWSU1010A;I could use someone as strong as he is.;;;;;;;;;;;;;x
+DWSU1010B;Begone from my lands, and do not return.;;;;;;;;;;;;;x
+DWSU1011;Late one evening, you find yourself awoken in the middle of the night, taken by a strange feeling, perhaps from the lingering afteraffects of a dream. Dressing, you walk down the quiet halls of your castle, past the rooms of your slumbering courtiers, only to notice that the one belonging to your werewolf courtier has its door wide open, with the bed empty. Curious, you begin to look around the castle, wondering just what the beast could be up to at this hour. The silent halls offer no answer though, and you are hesitant to raise the alarm and look foolish if it turns out to be nothing. Finally, you descend down into the dungeons, examining the shadow-cloaked stone corridors and cells to no avail, and prepare to turn to head back, when suddenly a massive pair of furred arms grabs you from behind...;;;;;;;;;;;;;x
+DWSU1011T;A quiet night in the Castle;;;;;;;;;;;;;x
+DWSU1011A;This can't be good...;;;;;;;;;;;;;x
+DWSU1013;Before you can even blink, your arms are roughly bound, locked into some of the same chains that once held prisoners, and clawed fingers begin to rip and tear at your clothes. The smell of animal musk fills the cell, heady and powerful, as the werewolf's furred chest brushes against you. Your breath catches in your throat as his intentions become clear. You begin to struggle as you feel his thick cock brushing against your leg, but to little avail as he mercilessly strips you, ignoring your pleas to the contrary, seemingly overcome with lust. Finally he grips your legs, pulling them apart, and roughly shoves the tip of his cock into your exposed pussy...;;;;;;;;;;;;;x
+DWSU1013T;A Werewolf's Lust;;;;;;;;;;;;;x
+DWSU1013A;No, no, please don't!;;;;;;;;;;;;;x
+DWSU1015;You cry out as his thick canine shaft pushes forcefully up into you with a growl of pleasure, his hands slipping away to lock a leash about your neck, unhooking your chains from the ceiling as he bends you over at the waist, one hand on your hip, the other gripping tightly on the leash. He begins to pound away into your tight sex, thrusting mercilessly as he buries his large cock deep inside you, the tip pressing up into your cervix even as the swelling knot at the base of that monster rod nudges against the outer folds of your pussy. Your breasts sway and bounce beneath you as the pounding continues, unabated...;;;;;;;;;;;;;x
+DWSU1015T;Fucked by the Beast;;;;;;;;;;;;;x
+DWSU1015A;He can't push it in farther... can he?;;;;;;;;;;;;;x
+DWSU1017;With a massive roar, the Beast grips down on your hips firmly, claws digging into flesh, and slams forward violently, forcing the tip of his cock through your painfully stretching cervix, even as the thick knot lodges up inside your vagina, locking him inside you even as he begins to cum, his seed erupting in sticky bursts inside your womb. He continues to rut inside you, even as the knot keeps him flush inside you, your womb filling with his bestial seed, your body shuddering now in submission to him, hanging your head down, waiting for it to end...;;;;;;;;;;;;;x
+DWSU1017T;Marking his territory;;;;;;;;;;;;;x
+DWSU1017A;I can't resist him...;;;;;;;;;;;;;x
+	
+

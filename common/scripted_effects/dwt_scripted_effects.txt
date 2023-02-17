@@ -1,0 +1,842 @@
+###TRAIT ADDING EFFECTS###
+#Add new ones in alphabetical order.
+
+dwt_add_prolong_life_effect = {
+	if = {
+		limit = {
+			NOR = {
+				has_character_modifier = stolen_life_minor
+				has_character_modifier = stolen_life_medium
+				has_character_modifier = stolen_life_major
+			}
+		}
+		random_list = {
+			30 = {
+				add_character_modifier = {
+					name = stolen_life_minor
+					days = 3650
+				}			
+			}
+			30 = {
+				add_character_modifier = {
+					name = stolen_life_medium
+					days = 3650
+				}
+			}
+			30 = {
+				add_character_modifier = {
+					name = stolen_life_major
+					days = 3650
+				}
+			}
+		}
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				has_character_modifier = stolen_life_minor
+				has_character_modifier = stolen_life_medium
+			}
+		}
+		hidden_effect = {
+			remove_character_modifier = stolen_life_minor
+			remove_character_modifier = stolen_life_medium
+		}
+		add_character_modifier = {
+					name = stolen_life_major
+					days = 3650
+		}
+		break = yes
+	}
+	add_character_modifier = {
+		name = stolen_life_major
+		days = 3650
+	}
+}
+
+dwt_random_Vpic = {
+	clr_character_flag = randomm_1
+	clr_character_flag = randomm_2
+	clr_character_flag = randomm_3
+	clr_character_flag = randomm_4
+	clr_character_flag = randomm_5
+	clr_character_flag = randomm_6
+	clr_character_flag = randomm_7
+	clr_character_flag = randomm_8
+	clr_character_flag = randomm_9
+	clr_character_flag = randomm_10
+	clr_character_flag = randomm_11
+	clr_character_flag = randomm_12
+	clr_character_flag = randomm_13
+	clr_character_flag = randomm_14
+	clr_character_flag = randomm_15
+	clr_character_flag = randomm_16
+	clr_character_flag = randomm_17
+	clr_character_flag = randomm_18
+	clr_character_flag = randomm_19
+	clr_character_flag = randomm_20
+	clr_character_flag = randomm_21
+	clr_character_flag = randomm_22
+	clr_character_flag = randomm_23
+	clr_character_flag = randomm_24
+	clr_character_flag = randomm_25
+	clr_character_flag = randomm_26
+	clr_character_flag = randomm_27
+	clr_character_flag = randomm_28
+	clr_character_flag = randomm_29
+	clr_character_flag = randomm_30
+	clr_character_flag = randomm_31
+	clr_character_flag = randomm_32
+	clr_character_flag = randomm_33
+	clr_character_flag = randomm_34
+	clr_character_flag = randomm_35
+	clr_character_flag = randomm_36
+	clr_character_flag = randomm_37
+	clr_character_flag = randomm_38
+	clr_character_flag = randomm_39
+	clr_character_flag = randomm_40
+	clr_character_flag = randomm_41
+	clr_character_flag = randomm_42
+	clr_character_flag = randomm_43
+	clr_character_flag = randomm_44
+	clr_character_flag = randomm_45
+	clr_character_flag = randomm_46
+	clr_character_flag = randomm_47
+	clr_character_flag = randomm_48
+	clr_character_flag = randomm_49
+	clr_character_flag = randomm_50
+	clr_character_flag = randomm_51
+	clr_character_flag = randomm_52
+	clr_character_flag = randomm_53
+	clr_character_flag = randomm_54
+	clr_character_flag = randomm_55
+	clr_character_flag = randomm_56
+	clr_character_flag = randomm_57
+	clr_character_flag = randomm_58
+	clr_character_flag = randomm_59
+	clr_character_flag = randomm_60
+	clr_character_flag = randomm_61
+	clr_character_flag = randomm_62
+	clr_character_flag = randomm_63
+	clr_character_flag = randomm_64
+	clr_character_flag = randomm_65
+	clr_character_flag = randomm_66
+	clr_character_flag = randomm_67
+	clr_character_flag = randomm_68
+	clr_character_flag = randomm_69
+	clr_character_flag = randomm_70
+	clr_character_flag = randomm_71
+	clr_character_flag = randomm_72
+	clr_character_flag = randomm_73
+	clr_character_flag = randomm_74
+	clr_character_flag = randomm_75
+	clr_character_flag = randomm_76
+	clr_character_flag = randomm_77
+	clr_character_flag = randomm_78
+	clr_character_flag = randomm_79
+	clr_character_flag = randomm_80
+	clr_character_flag = randomm_81
+	clr_character_flag = randomm_82
+	clr_character_flag = randomm_83
+	clr_character_flag = randomm_84
+	clr_character_flag = randomm_85
+	clr_character_flag = randomm_86
+	clr_character_flag = randomm_87
+	clr_character_flag = randomm_88
+	clr_character_flag = randomm_89
+	clr_character_flag = randomm_90
+	clr_character_flag = randomm_91
+	clr_character_flag = randomm_92
+	clr_character_flag = randomm_93
+	clr_character_flag = randomm_94
+	clr_character_flag = randomm_95
+	clr_character_flag = randomm_96
+	clr_character_flag = randomm_97
+	clr_character_flag = randomm_98
+	clr_character_flag = randomm_99
+	clr_character_flag = randomm_100
+	clr_character_flag = randomm_101
+	clr_character_flag = randomm_102
+	clr_character_flag = randomm_103
+	clr_character_flag = randomm_104
+	clr_character_flag = randomm_105
+	clr_character_flag = randomm_106
+	clr_character_flag = randomm_107
+	clr_character_flag = randomm_108
+	clr_character_flag = randomm_109
+	clr_character_flag = randomm_110
+	clr_character_flag = randomm_111
+	clr_character_flag = randomm_112
+	clr_character_flag = randomm_113
+	clr_character_flag = randomm_114
+	clr_character_flag = randomm_115
+	clr_character_flag = randomm_116
+	clr_character_flag = randomm_117
+	clr_character_flag = randomm_118
+	clr_character_flag = randomm_119
+	clr_character_flag = randomm_120
+	clr_character_flag = randomm_121
+	clr_character_flag = randomm_122
+	clr_character_flag = randomm_123
+	clr_character_flag = randomm_124
+	clr_character_flag = randomm_125
+	clr_character_flag = randomm_126
+	clr_character_flag = randomm_127
+	clr_character_flag = randomm_128
+	clr_character_flag = randomm_129
+	clr_character_flag = randomm_130
+	clr_character_flag = randomm_131
+	clr_character_flag = randomm_132
+	clr_character_flag = randomm_133
+	clr_character_flag = randomm_134
+	clr_character_flag = randomm_135
+	clr_character_flag = randomm_136
+	clr_character_flag = randomm_137
+	clr_character_flag = randomm_138
+	clr_character_flag = randomm_139
+	clr_character_flag = randomm_140
+	clr_character_flag = randomm_141
+	clr_character_flag = randomm_142
+	clr_character_flag = randomm_143
+	clr_character_flag = randomm_144
+	clr_character_flag = randomm_145
+	clr_character_flag = randomm_146
+	clr_character_flag = randomm_147
+	clr_character_flag = randomm_148
+	clr_character_flag = randomm_149
+	clr_character_flag = randomm_150
+	clr_character_flag = randomm_151
+	clr_character_flag = randomm_152
+	clr_character_flag = randomm_153
+	clr_character_flag = randomm_154
+	clr_character_flag = randomm_155
+	clr_character_flag = randomm_156
+	clr_character_flag = randomm_157
+	clr_character_flag = randomm_158
+	clr_character_flag = randomm_159
+	clr_character_flag = randomm_160
+	clr_character_flag = randomm_161
+	clr_character_flag = randomm_162
+	clr_character_flag = randomm_163
+	clr_character_flag = randomm_164
+	clr_character_flag = randomm_165
+	clr_character_flag = randomm_166
+	clr_character_flag = randomm_167
+	clr_character_flag = randomm_168
+	clr_character_flag = randomm_169
+	clr_character_flag = randomm_170
+	clr_character_flag = randomm_171
+	clr_character_flag = randomm_172
+	clr_character_flag = randomm_173
+	clr_character_flag = randomm_174
+	clr_character_flag = randomm_175
+	clr_character_flag = randomm_176
+	clr_character_flag = randomm_177
+	clr_character_flag = randomm_178
+	clr_character_flag = randomm_179
+	clr_character_flag = randomm_180
+	clr_character_flag = randomm_181
+	clr_character_flag = randomm_182
+	clr_character_flag = randomm_183
+	clr_character_flag = randomm_184
+	clr_character_flag = randomm_185
+	clr_character_flag = randomm_186
+	clr_character_flag = randomm_187
+	clr_character_flag = randomm_188
+	clr_character_flag = randomm_189
+	clr_character_flag = randomm_190
+	clr_character_flag = randomm_191
+	clr_character_flag = randomm_192
+	clr_character_flag = randomm_193
+	clr_character_flag = randomm_194
+	clr_character_flag = randomm_195
+	clr_character_flag = randomm_196
+	clr_character_flag = randomm_197
+	clr_character_flag = randomm_198
+	clr_character_flag = randomm_199
+	clr_character_flag = randomm_200
+	clr_character_flag = randomm_201
+	clr_character_flag = randomm_202
+	clr_character_flag = randomm_203
+	clr_character_flag = randomm_204
+	clr_character_flag = randomm_205
+	clr_character_flag = randomm_206
+	clr_character_flag = randomm_207
+	clr_character_flag = randomm_208
+	clr_character_flag = randomm_209
+	clr_character_flag = randomm_210
+	random_list = {
+			10 = { set_character_flag = randomm_1 }
+			10 = { set_character_flag = randomm_2 }
+			10 = { set_character_flag = randomm_4 }
+			10 = { set_character_flag = randomm_5 }
+			10 = { set_character_flag = randomm_7 }
+			10 = { set_character_flag = randomm_10 }
+			10 = { set_character_flag = randomm_13 }
+			10 = { set_character_flag = randomm_14 }
+			10 = { set_character_flag = randomm_16 }
+			10 = { set_character_flag = randomm_18 }
+			10 = { set_character_flag = randomm_23 }
+			10 = { set_character_flag = randomm_26 }
+			10 = { set_character_flag = randomm_27 }
+			10 = { set_character_flag = randomm_31 }
+			10 = { set_character_flag = randomm_32 }
+			10 = { set_character_flag = randomm_33 }
+			10 = { set_character_flag = randomm_34 }
+			10 = { set_character_flag = randomm_37 }
+			10 = { set_character_flag = randomm_38 }
+			10 = { set_character_flag = randomm_39 }
+			10 = { set_character_flag = randomm_40 }
+			10 = { set_character_flag = randomm_42 }
+			10 = { set_character_flag = randomm_43 }
+			10 = { set_character_flag = randomm_44 }
+			10 = { set_character_flag = randomm_47 }
+			10 = { set_character_flag = randomm_48 }
+			10 = { set_character_flag = randomm_51 }
+			10 = { set_character_flag = randomm_52 }
+			10 = { set_character_flag = randomm_55 }
+			10 = { set_character_flag = randomm_57 }
+			10 = { set_character_flag = randomm_58 }
+			10 = { set_character_flag = randomm_62 }
+			10 = { set_character_flag = randomm_63 }
+			10 = { set_character_flag = randomm_67 }
+			10 = { set_character_flag = randomm_69 }
+			10 = { set_character_flag = randomm_72 }
+			10 = { set_character_flag = randomm_88 }
+			10 = { set_character_flag = randomm_92 }
+			10 = { set_character_flag = randomm_94 }
+			10 = { set_character_flag = randomm_98 }
+			10 = { set_character_flag = randomm_100 }
+			10 = { set_character_flag = randomm_102 }
+			10 = { set_character_flag = randomm_103 }
+			10 = { set_character_flag = randomm_106 }
+			10 = { set_character_flag = randomm_107 }
+			10 = { set_character_flag = randomm_110 }
+			10 = { set_character_flag = randomm_112 }
+			10 = { set_character_flag = randomm_114 }
+			10 = { set_character_flag = randomm_115 }
+			10 = { set_character_flag = randomm_116 }
+			10 = { set_character_flag = randomm_117 }
+			10 = { set_character_flag = randomm_120 }
+			10 = { set_character_flag = randomm_122 }
+			10 = { set_character_flag = randomm_123 }
+			10 = { set_character_flag = randomm_124 }
+			10 = { set_character_flag = randomm_126 }
+			10 = { set_character_flag = randomm_127 }
+			10 = { set_character_flag = randomm_128 }
+			10 = { set_character_flag = randomm_129 }
+			10 = { set_character_flag = randomm_130 }
+			10 = { set_character_flag = randomm_131 }
+			10 = { set_character_flag = randomm_132 }
+			10 = { set_character_flag = randomm_133 }
+			10 = { set_character_flag = randomm_134 }
+			10 = { set_character_flag = randomm_135 }
+			10 = { set_character_flag = randomm_136 }
+			10 = { set_character_flag = randomm_137 }
+			10 = { set_character_flag = randomm_138 }
+			10 = { set_character_flag = randomm_144 }
+			10 = { set_character_flag = randomm_146 }
+			10 = { set_character_flag = randomm_151 }
+			10 = { set_character_flag = randomm_152 }
+			10 = { set_character_flag = randomm_158 }
+			10 = { set_character_flag = randomm_159 }
+			10 = { set_character_flag = randomm_160 }
+			10 = { set_character_flag = randomm_161 }
+			10 = { set_character_flag = randomm_165 }
+			10 = { set_character_flag = randomm_168 }
+			10 = { set_character_flag = randomm_170 }
+			10 = { set_character_flag = randomm_171 }
+			10 = { set_character_flag = randomm_173 }
+			10 = { set_character_flag = randomm_176 }
+			10 = { set_character_flag = randomm_177 }
+			10 = { set_character_flag = randomm_179 }
+			10 = { set_character_flag = randomm_180 }
+			10 = { set_character_flag = randomm_182 }
+			10 = { set_character_flag = randomm_183 }
+			10 = { set_character_flag = randomm_184 }
+			10 = { set_character_flag = randomm_185 }
+			10 = { set_character_flag = randomm_188 }
+			10 = { set_character_flag = randomm_189 }
+			10 = { set_character_flag = randomm_190 }
+			10 = { set_character_flag = randomm_191 }
+			10 = { set_character_flag = randomm_192 }
+			10 = { set_character_flag = randomm_194 }
+			10 = { set_character_flag = randomm_195 }
+			10 = { set_character_flag = randomm_197 }
+			10 = { set_character_flag = randomm_198 }
+			10 = { set_character_flag = randomm_199 }
+			10 = { set_character_flag = randomm_200 }
+			10 = { set_character_flag = randomm_202 }
+			10 = { set_character_flag = randomm_204 }
+			10 = { set_character_flag = randomm_205 }
+			10 = { set_character_flag = randomm_206 }
+			10 = { set_character_flag = randomm_207 }
+			10 = { set_character_flag = randomm_209 }
+			10 = { set_character_flag = randomm_210 }
+		}
+}
+
+
+dwt_random_Apic = {
+	clr_character_flag = randomm_1
+	clr_character_flag = randomm_2
+	clr_character_flag = randomm_3
+	clr_character_flag = randomm_4
+	clr_character_flag = randomm_5
+	clr_character_flag = randomm_6
+	clr_character_flag = randomm_7
+	clr_character_flag = randomm_8
+	clr_character_flag = randomm_9
+	clr_character_flag = randomm_10
+	clr_character_flag = randomm_11
+	clr_character_flag = randomm_12
+	clr_character_flag = randomm_13
+	clr_character_flag = randomm_14
+	clr_character_flag = randomm_15
+	clr_character_flag = randomm_16
+	clr_character_flag = randomm_17
+	clr_character_flag = randomm_18
+	clr_character_flag = randomm_19
+	clr_character_flag = randomm_20
+	clr_character_flag = randomm_21
+	clr_character_flag = randomm_22
+	clr_character_flag = randomm_23
+	clr_character_flag = randomm_24
+	clr_character_flag = randomm_25
+	clr_character_flag = randomm_26
+	clr_character_flag = randomm_27
+	clr_character_flag = randomm_28
+	clr_character_flag = randomm_29
+	clr_character_flag = randomm_30
+	clr_character_flag = randomm_31
+	clr_character_flag = randomm_32
+	clr_character_flag = randomm_33
+	clr_character_flag = randomm_34
+	clr_character_flag = randomm_35
+	clr_character_flag = randomm_36
+	clr_character_flag = randomm_37
+	clr_character_flag = randomm_38
+	clr_character_flag = randomm_39
+	clr_character_flag = randomm_40
+	clr_character_flag = randomm_41
+	clr_character_flag = randomm_42
+	clr_character_flag = randomm_43
+	clr_character_flag = randomm_44
+	clr_character_flag = randomm_45
+	clr_character_flag = randomm_46
+	clr_character_flag = randomm_47
+	clr_character_flag = randomm_48
+	clr_character_flag = randomm_49
+	clr_character_flag = randomm_50
+	clr_character_flag = randomm_51
+	clr_character_flag = randomm_52
+	clr_character_flag = randomm_53
+	clr_character_flag = randomm_54
+	clr_character_flag = randomm_55
+	clr_character_flag = randomm_56
+	clr_character_flag = randomm_57
+	clr_character_flag = randomm_58
+	clr_character_flag = randomm_59
+	clr_character_flag = randomm_60
+	clr_character_flag = randomm_61
+	clr_character_flag = randomm_62
+	clr_character_flag = randomm_63
+	clr_character_flag = randomm_64
+	clr_character_flag = randomm_65
+	clr_character_flag = randomm_66
+	clr_character_flag = randomm_67
+	clr_character_flag = randomm_68
+	clr_character_flag = randomm_69
+	clr_character_flag = randomm_70
+	clr_character_flag = randomm_71
+	clr_character_flag = randomm_72
+	clr_character_flag = randomm_73
+	clr_character_flag = randomm_74
+	clr_character_flag = randomm_75
+	clr_character_flag = randomm_76
+	clr_character_flag = randomm_77
+	clr_character_flag = randomm_78
+	clr_character_flag = randomm_79
+	clr_character_flag = randomm_80
+	clr_character_flag = randomm_81
+	clr_character_flag = randomm_82
+	clr_character_flag = randomm_83
+	clr_character_flag = randomm_84
+	clr_character_flag = randomm_85
+	clr_character_flag = randomm_86
+	clr_character_flag = randomm_87
+	clr_character_flag = randomm_88
+	clr_character_flag = randomm_89
+	clr_character_flag = randomm_90
+	clr_character_flag = randomm_91
+	clr_character_flag = randomm_92
+	clr_character_flag = randomm_93
+	clr_character_flag = randomm_94
+	clr_character_flag = randomm_95
+	clr_character_flag = randomm_96
+	clr_character_flag = randomm_97
+	clr_character_flag = randomm_98
+	clr_character_flag = randomm_99
+	clr_character_flag = randomm_100
+	clr_character_flag = randomm_101
+	clr_character_flag = randomm_102
+	clr_character_flag = randomm_103
+	clr_character_flag = randomm_104
+	clr_character_flag = randomm_105
+	clr_character_flag = randomm_106
+	clr_character_flag = randomm_107
+	clr_character_flag = randomm_108
+	clr_character_flag = randomm_109
+	clr_character_flag = randomm_110
+	clr_character_flag = randomm_111
+	clr_character_flag = randomm_112
+	clr_character_flag = randomm_113
+	clr_character_flag = randomm_114
+	clr_character_flag = randomm_115
+	clr_character_flag = randomm_116
+	clr_character_flag = randomm_117
+	clr_character_flag = randomm_118
+	clr_character_flag = randomm_119
+	clr_character_flag = randomm_120
+	clr_character_flag = randomm_121
+	clr_character_flag = randomm_122
+	clr_character_flag = randomm_123
+	clr_character_flag = randomm_124
+	clr_character_flag = randomm_125
+	clr_character_flag = randomm_126
+	clr_character_flag = randomm_127
+	clr_character_flag = randomm_128
+	clr_character_flag = randomm_129
+	clr_character_flag = randomm_130
+	clr_character_flag = randomm_131
+	clr_character_flag = randomm_132
+	clr_character_flag = randomm_133
+	clr_character_flag = randomm_134
+	clr_character_flag = randomm_135
+	clr_character_flag = randomm_136
+	clr_character_flag = randomm_137
+	clr_character_flag = randomm_138
+	clr_character_flag = randomm_139
+	clr_character_flag = randomm_140
+	clr_character_flag = randomm_141
+	clr_character_flag = randomm_142
+	clr_character_flag = randomm_143
+	clr_character_flag = randomm_144
+	clr_character_flag = randomm_145
+	clr_character_flag = randomm_146
+	clr_character_flag = randomm_147
+	clr_character_flag = randomm_148
+	clr_character_flag = randomm_149
+	clr_character_flag = randomm_150
+	clr_character_flag = randomm_151
+	clr_character_flag = randomm_152
+	clr_character_flag = randomm_153
+	clr_character_flag = randomm_154
+	clr_character_flag = randomm_155
+	clr_character_flag = randomm_156
+	clr_character_flag = randomm_157
+	clr_character_flag = randomm_158
+	clr_character_flag = randomm_159
+	clr_character_flag = randomm_160
+	clr_character_flag = randomm_161
+	clr_character_flag = randomm_162
+	clr_character_flag = randomm_163
+	clr_character_flag = randomm_164
+	clr_character_flag = randomm_165
+	clr_character_flag = randomm_166
+	clr_character_flag = randomm_167
+	clr_character_flag = randomm_168
+	clr_character_flag = randomm_169
+	clr_character_flag = randomm_170
+	clr_character_flag = randomm_171
+	clr_character_flag = randomm_172
+	clr_character_flag = randomm_173
+	clr_character_flag = randomm_174
+	clr_character_flag = randomm_175
+	clr_character_flag = randomm_176
+	clr_character_flag = randomm_177
+	clr_character_flag = randomm_178
+	clr_character_flag = randomm_179
+	clr_character_flag = randomm_180
+	clr_character_flag = randomm_181
+	clr_character_flag = randomm_182
+	clr_character_flag = randomm_183
+	clr_character_flag = randomm_184
+	clr_character_flag = randomm_185
+	clr_character_flag = randomm_186
+	clr_character_flag = randomm_187
+	clr_character_flag = randomm_188
+	clr_character_flag = randomm_189
+	clr_character_flag = randomm_190
+	clr_character_flag = randomm_191
+	clr_character_flag = randomm_192
+	clr_character_flag = randomm_193
+	clr_character_flag = randomm_194
+	clr_character_flag = randomm_195
+	clr_character_flag = randomm_196
+	clr_character_flag = randomm_197
+	clr_character_flag = randomm_198
+	clr_character_flag = randomm_199
+	clr_character_flag = randomm_200
+	clr_character_flag = randomm_201
+	clr_character_flag = randomm_202
+	clr_character_flag = randomm_203
+	clr_character_flag = randomm_204
+	clr_character_flag = randomm_205
+	clr_character_flag = randomm_206
+	clr_character_flag = randomm_207
+	clr_character_flag = randomm_208
+	clr_character_flag = randomm_209
+	clr_character_flag = randomm_210
+	random_list = {
+			10 = { set_character_flag = randomm_10 }
+			10 = { set_character_flag = randomm_22 }
+			10 = { set_character_flag = randomm_27 }
+			10 = { set_character_flag = randomm_39 }
+			10 = { set_character_flag = randomm_40 }
+			10 = { set_character_flag = randomm_52 }
+			10 = { set_character_flag = randomm_58 }
+			10 = { set_character_flag = randomm_98 }
+			10 = { set_character_flag = randomm_102 }
+			10 = { set_character_flag = randomm_114 }
+			10 = { set_character_flag = randomm_116 }
+			10 = { set_character_flag = randomm_117 }
+			10 = { set_character_flag = randomm_122 }
+			10 = { set_character_flag = randomm_133 }
+			10 = { set_character_flag = randomm_135 }
+			10 = { set_character_flag = randomm_136 }
+			10 = { set_character_flag = randomm_165 }
+			10 = { set_character_flag = randomm_182 }
+			10 = { set_character_flag = randomm_192 }
+			10 = { set_character_flag = randomm_202 }
+			10 = { set_character_flag = randomm_210 }
+		}
+}
+
+dwt_random_Opic = {
+	clr_character_flag = randomm_1
+	clr_character_flag = randomm_2
+	clr_character_flag = randomm_3
+	clr_character_flag = randomm_4
+	clr_character_flag = randomm_5
+	clr_character_flag = randomm_6
+	clr_character_flag = randomm_7
+	clr_character_flag = randomm_8
+	clr_character_flag = randomm_9
+	clr_character_flag = randomm_10
+	clr_character_flag = randomm_11
+	clr_character_flag = randomm_12
+	clr_character_flag = randomm_13
+	clr_character_flag = randomm_14
+	clr_character_flag = randomm_15
+	clr_character_flag = randomm_16
+	clr_character_flag = randomm_17
+	clr_character_flag = randomm_18
+	clr_character_flag = randomm_19
+	clr_character_flag = randomm_20
+	clr_character_flag = randomm_21
+	clr_character_flag = randomm_22
+	clr_character_flag = randomm_23
+	clr_character_flag = randomm_24
+	clr_character_flag = randomm_25
+	clr_character_flag = randomm_26
+	clr_character_flag = randomm_27
+	clr_character_flag = randomm_28
+	clr_character_flag = randomm_29
+	clr_character_flag = randomm_30
+	clr_character_flag = randomm_31
+	clr_character_flag = randomm_32
+	clr_character_flag = randomm_33
+	clr_character_flag = randomm_34
+	clr_character_flag = randomm_35
+	clr_character_flag = randomm_36
+	clr_character_flag = randomm_37
+	clr_character_flag = randomm_38
+	clr_character_flag = randomm_39
+	clr_character_flag = randomm_40
+	clr_character_flag = randomm_41
+	clr_character_flag = randomm_42
+	clr_character_flag = randomm_43
+	clr_character_flag = randomm_44
+	clr_character_flag = randomm_45
+	clr_character_flag = randomm_46
+	clr_character_flag = randomm_47
+	clr_character_flag = randomm_48
+	clr_character_flag = randomm_49
+	clr_character_flag = randomm_50
+	clr_character_flag = randomm_51
+	clr_character_flag = randomm_52
+	clr_character_flag = randomm_53
+	clr_character_flag = randomm_54
+	clr_character_flag = randomm_55
+	clr_character_flag = randomm_56
+	clr_character_flag = randomm_57
+	clr_character_flag = randomm_58
+	clr_character_flag = randomm_59
+	clr_character_flag = randomm_60
+	clr_character_flag = randomm_61
+	clr_character_flag = randomm_62
+	clr_character_flag = randomm_63
+	clr_character_flag = randomm_64
+	clr_character_flag = randomm_65
+	clr_character_flag = randomm_66
+	clr_character_flag = randomm_67
+	clr_character_flag = randomm_68
+	clr_character_flag = randomm_69
+	clr_character_flag = randomm_70
+	clr_character_flag = randomm_71
+	clr_character_flag = randomm_72
+	clr_character_flag = randomm_73
+	clr_character_flag = randomm_74
+	clr_character_flag = randomm_75
+	clr_character_flag = randomm_76
+	clr_character_flag = randomm_77
+	clr_character_flag = randomm_78
+	clr_character_flag = randomm_79
+	clr_character_flag = randomm_80
+	clr_character_flag = randomm_81
+	clr_character_flag = randomm_82
+	clr_character_flag = randomm_83
+	clr_character_flag = randomm_84
+	clr_character_flag = randomm_85
+	clr_character_flag = randomm_86
+	clr_character_flag = randomm_87
+	clr_character_flag = randomm_88
+	clr_character_flag = randomm_89
+	clr_character_flag = randomm_90
+	clr_character_flag = randomm_91
+	clr_character_flag = randomm_92
+	clr_character_flag = randomm_93
+	clr_character_flag = randomm_94
+	clr_character_flag = randomm_95
+	clr_character_flag = randomm_96
+	clr_character_flag = randomm_97
+	clr_character_flag = randomm_98
+	clr_character_flag = randomm_99
+	clr_character_flag = randomm_100
+	clr_character_flag = randomm_101
+	clr_character_flag = randomm_102
+	clr_character_flag = randomm_103
+	clr_character_flag = randomm_104
+	clr_character_flag = randomm_105
+	clr_character_flag = randomm_106
+	clr_character_flag = randomm_107
+	clr_character_flag = randomm_108
+	clr_character_flag = randomm_109
+	clr_character_flag = randomm_110
+	clr_character_flag = randomm_111
+	clr_character_flag = randomm_112
+	clr_character_flag = randomm_113
+	clr_character_flag = randomm_114
+	clr_character_flag = randomm_115
+	clr_character_flag = randomm_116
+	clr_character_flag = randomm_117
+	clr_character_flag = randomm_118
+	clr_character_flag = randomm_119
+	clr_character_flag = randomm_120
+	clr_character_flag = randomm_121
+	clr_character_flag = randomm_122
+	clr_character_flag = randomm_123
+	clr_character_flag = randomm_124
+	clr_character_flag = randomm_125
+	clr_character_flag = randomm_126
+	clr_character_flag = randomm_127
+	clr_character_flag = randomm_128
+	clr_character_flag = randomm_129
+	clr_character_flag = randomm_130
+	clr_character_flag = randomm_131
+	clr_character_flag = randomm_132
+	clr_character_flag = randomm_133
+	clr_character_flag = randomm_134
+	clr_character_flag = randomm_135
+	clr_character_flag = randomm_136
+	clr_character_flag = randomm_137
+	clr_character_flag = randomm_138
+	clr_character_flag = randomm_139
+	clr_character_flag = randomm_140
+	clr_character_flag = randomm_141
+	clr_character_flag = randomm_142
+	clr_character_flag = randomm_143
+	clr_character_flag = randomm_144
+	clr_character_flag = randomm_145
+	clr_character_flag = randomm_146
+	clr_character_flag = randomm_147
+	clr_character_flag = randomm_148
+	clr_character_flag = randomm_149
+	clr_character_flag = randomm_150
+	clr_character_flag = randomm_151
+	clr_character_flag = randomm_152
+	clr_character_flag = randomm_153
+	clr_character_flag = randomm_154
+	clr_character_flag = randomm_155
+	clr_character_flag = randomm_156
+	clr_character_flag = randomm_157
+	clr_character_flag = randomm_158
+	clr_character_flag = randomm_159
+	clr_character_flag = randomm_160
+	clr_character_flag = randomm_161
+	clr_character_flag = randomm_162
+	clr_character_flag = randomm_163
+	clr_character_flag = randomm_164
+	clr_character_flag = randomm_165
+	clr_character_flag = randomm_166
+	clr_character_flag = randomm_167
+	clr_character_flag = randomm_168
+	clr_character_flag = randomm_169
+	clr_character_flag = randomm_170
+	clr_character_flag = randomm_171
+	clr_character_flag = randomm_172
+	clr_character_flag = randomm_173
+	clr_character_flag = randomm_174
+	clr_character_flag = randomm_175
+	clr_character_flag = randomm_176
+	clr_character_flag = randomm_177
+	clr_character_flag = randomm_178
+	clr_character_flag = randomm_179
+	clr_character_flag = randomm_180
+	clr_character_flag = randomm_181
+	clr_character_flag = randomm_182
+	clr_character_flag = randomm_183
+	clr_character_flag = randomm_184
+	clr_character_flag = randomm_185
+	clr_character_flag = randomm_186
+	clr_character_flag = randomm_187
+	clr_character_flag = randomm_188
+	clr_character_flag = randomm_189
+	clr_character_flag = randomm_190
+	clr_character_flag = randomm_191
+	clr_character_flag = randomm_192
+	clr_character_flag = randomm_193
+	clr_character_flag = randomm_194
+	clr_character_flag = randomm_195
+	clr_character_flag = randomm_196
+	clr_character_flag = randomm_197
+	clr_character_flag = randomm_198
+	clr_character_flag = randomm_199
+	clr_character_flag = randomm_200
+	clr_character_flag = randomm_201
+	clr_character_flag = randomm_202
+	clr_character_flag = randomm_203
+	clr_character_flag = randomm_204
+	clr_character_flag = randomm_205
+	clr_character_flag = randomm_206
+	clr_character_flag = randomm_207
+	clr_character_flag = randomm_208
+	clr_character_flag = randomm_209
+	clr_character_flag = randomm_210
+	random_list = {
+			10 = { set_character_flag = randomm_17 }
+			10 = { set_character_flag = randomm_24 }
+			10 = { set_character_flag = randomm_46 }
+			10 = { set_character_flag = randomm_56 }
+			10 = { set_character_flag = randomm_77 }
+			10 = { set_character_flag = randomm_111 }
+			10 = { set_character_flag = randomm_139 }
+			10 = { set_character_flag = randomm_174 }
+			10 = { set_character_flag = randomm_175 }
+			10 = { set_character_flag = randomm_187 }
+			10 = { set_character_flag = randomm_193 }	
+
+		}
+}

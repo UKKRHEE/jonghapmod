@@ -1,4 +1,0 @@
-﻿l_korean:
-trait_ie_masked:0 "가면"
-trait_ie_masked_desc:0 "이 인물은 가면을 사용하여 신분을 숨깁니다."
-trait_ie_masked_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip]이(가) [ROOT.GetCharacter.GetHerHis] 신원을 숨기기 위해 마스크를 사용하고 있습니다."

@@ -1,0 +1,259 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_dwe_bloodlinesearch"
+		texturefile = "gfx\\interface\\dwe_bloodlinesearch.dds"
+	}
+	spriteType = {
+		name = "DWEOldTome"
+		texturefile = "gfx/event_pictures/DWEOldTome.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEAdventurers"
+		texturefile = "gfx/event_pictures/DWEAdventurers.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWECastleLandscape"
+		texturefile = "gfx/event_pictures/DWECastleLandscape.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWECheeringSoldiers"
+		texturefile = "gfx/event_pictures/DWECheeringSoldiers.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWERuinsGreek"
+		texturefile = "gfx/event_pictures/DWEAncientRuinsGreek.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWERuinsCeltic"
+		texturefile = "gfx/event_pictures/DWECelticRuins.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWERuinsEgypt"
+		texturefile = "gfx/event_pictures/DWEAncientRuinsEgypt.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWERuinsBabylon"
+		texturefile = "gfx/event_pictures/DWEAncientRuinsBabylon.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWERuinsAncient"
+		texturefile = "gfx/event_pictures/DWEAncientRuins.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWESemiramis"
+		texturefile = "gfx/event_pictures/DWESemiramis.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWESemiramisChallenge"
+		texturefile = "gfx/event_pictures/DWESemiramisChallenge.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWESemiramisWine"
+		texturefile = "gfx/event_pictures/DWESemiramisWine.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEMordred"
+		texturefile = "gfx/event_pictures/DWEMordred.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEMordredFight"
+		texturefile = "gfx/event_pictures/DWEMordredFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEMordredVictory"
+		texturefile = "gfx/event_pictures/DWEMordredVictory.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWECleopatra"
+		texturefile = "gfx/event_pictures/DWECleopatra.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWECleopatraChallenge"
+		texturefile = "gfx/event_pictures/DWECleopatraChallenge.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEScathach"
+		texturefile = "gfx/event_pictures/DWEScathach.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEScathachFight"
+		texturefile = "gfx/event_pictures/DWEScathachFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEScathachVictory"
+		texturefile = "gfx/event_pictures/DWEScathachVictory.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEHelenofTroy"
+		texturefile = "gfx/event_pictures/DWEHelenofTroy.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEMedb"
+		texturefile = "gfx/event_pictures/DWEMedb.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEMedbChallenge"
+		texturefile = "gfx/event_pictures/DWEMedbChallenge.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEGilgamesh"
+		texturefile = "gfx/event_pictures/DWEGilgamesh.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEGilgameshFight"
+		texturefile = "gfx/event_pictures/DWEGilgameshFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWEGilgameshVictory"
+		texturefile = "gfx/event_pictures/DWEGilgameshVictory.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWECuchulainn"
+		texturefile = "gfx/event_pictures/DWECuchulainn.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWECuchulainnFight"
+		texturefile = "gfx/event_pictures/DWECuchulainnFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWECuchulainnVictory"
+		texturefile = "gfx/event_pictures/DWECuchulainnVictory.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWESiegfried"
+		texturefile = "gfx/event_pictures/DWESiegfried.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWESiegfriedFight"
+		texturefile = "gfx/event_pictures/DWESiegfriedFight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWESiegfriedVictory"
+		texturefile = "gfx/event_pictures/DWESiegfriedVictory.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_cleopatra"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_cleopatra.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_cuchulainn"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_cuchulainn.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_siegfried"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_siegfried.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_gilgamesh"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_gilgamesh.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_helentroy"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_helentroy.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_mordred"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_mordred.dds"
+	}
+	spriteType = {
+		name = "GFX_bloodlines_symbol_scathach"
+		texturefile = "gfx\\interface\\bloodlines\\bloodlines_symbol_scathach.dds"
+	}
+
+}

@@ -1,0 +1,44 @@
+spriteTypes = {
+	spriteType = {
+		name = "priest_default"
+		texturefile = "gfx/event_pictures/priest_default.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "priest__female_default"
+		texturefile = "gfx/event_pictures/priest__female_default.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "steward_default"
+		texturefile = "gfx/event_pictures/steward_default.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "steward__female_default"
+		texturefile = "gfx/event_pictures/steward__female_default.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_red_sonja"
+		texturefile = "gfx/event_pictures/red_sonja.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_unicorn"
+		texturefile = "gfx/event_pictures/dwf_unicorn.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

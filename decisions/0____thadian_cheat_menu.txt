@@ -1,0 +1,1170 @@
+decisions = {
+	show_cheats = {
+		potential = {
+			NOT = {	has_character_flag = show_cheats }
+			ai = no
+		}
+		allow = {
+			NOT = {	has_character_flag = show_cheats }
+		}
+		effect = {
+			set_character_flag = show_cheats
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	hide_cheats = {
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+		}
+		effect = {
+			clr_character_flag = show_cheats
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+
+	cheat_employ_great_commander = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.1
+		}
+		effect = {
+			scaled_wealth = -0.1
+			create_character = {
+				random_traits = no
+				trait = brilliant_strategist
+				trait = strong
+				trait = patient
+				trait = brave
+				trait = diligent
+				dynasty = random
+				female = no
+				age = 18
+				add_friend = ROOT
+				attributes = {
+					martial = 14
+					stewardship = 14
+					intrigue = 14
+					diplomacy = 14
+					learning = 14
+				}
+			}
+			new_character = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_employ_elusive_shadow = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.1
+		}
+		effect = {
+			scaled_wealth = -0.1
+			create_character = {
+				random_traits = no
+				trait = elusive_shadow
+				trait = quick
+				trait = diligent
+				trait = content				
+				dynasty = random
+				female = no
+				age = 18
+				add_friend = ROOT
+				attributes = {
+					martial = 14
+					stewardship = 14
+					intrigue = 14
+					diplomacy = 14
+					learning = 14
+				}
+			}
+			new_character = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	cheat_employ_grey_eminence = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.1
+		}
+		effect = {
+			scaled_wealth = -0.1
+			create_character = {
+				random_traits = no
+				trait = grey_eminence
+				trait = charitable
+				trait = patient			
+				trait = content
+				dynasty = random
+				female = no
+				age = 18
+				add_friend = ROOT
+				attributes = {
+					martial = 14
+					stewardship = 14
+					intrigue = 14
+					diplomacy = 14
+					learning = 14
+				}
+			}
+			new_character = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	cheat_employ_midas_touched = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.1
+		}
+		effect = {
+			scaled_wealth = -0.1
+			create_character = {
+				random_traits = no
+				trait = midas_touched
+				trait = charitable
+				trait = patient
+				trait = honest
+				trait = content
+				dynasty = random
+				female = no
+				age = 18
+				add_friend = ROOT
+				attributes = {
+					martial = 14
+					stewardship = 14
+					intrigue = 14
+					diplomacy = 14
+					learning = 14
+				}
+			}
+			new_character = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	cheat_employ_mastermind_theologian = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.1
+		}
+		effect = {
+			scaled_wealth = -0.1
+			create_character = {
+				random_traits = no
+				trait = mastermind_theologian
+				trait = chaste
+				trait = charitable				
+				trait = honest
+				trait = content
+				dynasty = random
+				female = no
+				age = 16
+				add_friend = ROOT
+				attributes = {
+					martial = 14
+					stewardship = 14
+					intrigue = 14
+					diplomacy = 14
+					learning = 14
+				}
+			}
+			new_character = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_employ_female = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.1
+		}
+		effect = {
+			scaled_wealth = -0.1
+			create_character = {
+				random_traits = no
+				trait = grey_eminence
+				trait = fair
+				trait = genius
+				trait = strong
+				trait = gregarious
+				dynasty = random
+				female = yes
+				age = 16
+				attributes = {
+					martial = 14
+					stewardship = 14
+					intrigue = 14
+					diplomacy = 14
+					learning = 14
+				}
+			}
+			new_character = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+				}
+				set_character_flag = debutante	
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_employ_female_child = {
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.02
+		}
+		effect = {
+			scaled_wealth = -0.02
+			create_character = {
+				random_traits = no
+				trait = fair
+				trait = genius
+				trait = strong
+				trait = immortal
+				dynasty = ROOT
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 5
+				attributes = {
+					martial = 3
+					stewardship = 3
+					intrigue = 3
+					diplomacy = 3
+					learning = 5
+				}
+			}	
+			new_character = {
+				hidden_tooltip = {
+				if = {
+					limit = {
+						ROOT = { is_female = yes }
+					}
+					set_mother = ROOT
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = no }
+					}
+					set_father = ROOT
+				}				
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+					recalc_succession = yes					
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	cheat_employ_male_child = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			scaled_wealth = 0.02
+		}
+		effect = {
+			scaled_wealth = -0.02
+			create_character = {
+				random_traits = no
+				trait = fair
+				trait = genius
+				trait = strong
+				trait = immortal
+				dynasty = ROOT
+				religion = ROOT
+				culture = ROOT
+				age = 5
+				attributes = {
+					martial = 3
+					stewardship = 3
+					intrigue = 3
+					diplomacy = 3
+					learning = 5
+				}
+			}	
+			new_character = {
+				hidden_tooltip = {
+				if = {
+					limit = {
+						ROOT = { is_female = yes }
+					}
+					set_mother = ROOT
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = no }
+					}
+					set_father = ROOT
+				}				
+					if = {
+						limit = {
+							religion_group = indian_group
+						}
+						add_trait = kshatriya
+						character_event = { id = RoI.30121 }
+					}
+					recalc_succession = yes					
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_add_babyface = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_babyface }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_babyface }
+		}
+		effect = {
+			add_trait = cheat_trait_babyface		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_babyface = {
+		 
+		potential = {
+			trait = cheat_trait_babyface
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			trait = cheat_trait_babyface
+			has_character_flag = show_cheats
+		}
+		effect = {
+			remove_trait = cheat_trait_babyface	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+
+	cheat_add_babymaker = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_babymaker }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_babymaker }
+		}
+		effect = {
+			add_trait = cheat_trait_babymaker		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_babymaker = {
+		 
+		potential = {
+			trait = cheat_trait_babymaker 
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			trait = cheat_trait_babymaker
+			has_character_flag = show_cheats
+		}
+		effect = {
+			remove_trait = cheat_trait_babymaker	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+
+	cheat_add_chosen_one = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_chosen_one }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_chosen_one }
+		}
+		effect = {
+			add_trait = cheat_trait_chosen_one		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_chosen_one = {
+		 
+		potential = {
+			trait = cheat_trait_chosen_one 
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			trait = cheat_trait_chosen_one
+			has_character_flag = show_cheats
+		}
+		effect = {
+			remove_trait = cheat_trait_chosen_one		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+
+	cheat_add_immortal = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_immortal }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_immortal }
+
+		}
+		effect = {
+			add_trait = cheat_trait_immortal		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_immortal = {
+		 
+		potential = {
+			trait = cheat_trait_immortal
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			trait = cheat_trait_immortal
+		}
+		effect = {
+			remove_trait = cheat_trait_immortal		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_add_infertile = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_infertile }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_infertile }
+
+		}
+		effect = {
+			add_trait = cheat_trait_infertile		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_infertile = {
+		 
+		potential = {
+			trait = cheat_trait_infertile
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			trait = cheat_trait_infertile
+		}
+		effect = {
+			remove_trait = cheat_trait_infertile		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_add_money_hands = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_money_hands }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_money_hands }
+
+		}
+		effect = {
+			add_trait = cheat_trait_money_hands		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_money_hands = {
+		 
+		potential = {
+			trait = cheat_trait_money_hands
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			trait = cheat_trait_money_hands
+		}
+		effect = {
+			remove_trait = cheat_trait_money_hands		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_add_prophet_blooded = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_prophet_blooded }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_prophet_blooded }
+
+		}
+		effect = {
+			add_trait = cheat_trait_prophet_blooded		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_prophet_blooded = {
+		 
+		potential = {
+			trait = cheat_trait_prophet_blooded
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			trait = cheat_trait_prophet_blooded
+		}
+		effect = {
+			remove_trait = cheat_trait_prophet_blooded		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_add_terrain_master = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_terrain_master }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_terrain_master }
+
+		}
+		effect = {
+			add_trait = cheat_trait_terrain_master		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_terrain_master = {
+		 
+		potential = {
+			trait = cheat_trait_terrain_master
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			trait = cheat_trait_terrain_master
+		}
+		effect = {
+			remove_trait = cheat_trait_terrain_master		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_add_terror = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_terror }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_terror }
+
+		}
+		effect = {
+			add_trait = cheat_trait_terror		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_terror = {
+		 
+		potential = {
+			trait = cheat_trait_terror
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			trait = cheat_trait_terror
+		}
+		effect = {
+			remove_trait = cheat_trait_terror		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_add_warpriest = {
+		 
+		potential = {
+			NOT = {	trait = cheat_trait_warpriest }
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			NOT = {	trait = cheat_trait_warpriest }
+
+		}
+		effect = {
+			add_trait = cheat_trait_warpriest		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	cheat_remove_warpriest = {
+		 
+		potential = {
+			trait = cheat_trait_warpriest
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			trait = cheat_trait_warpriest
+		}
+		effect = {
+			remove_trait = cheat_trait_warpriest		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_add_doomstack = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			prestige = 50
+			wealth = 50
+		}
+		effect = {
+			prestige = -50
+			wealth -50
+			spawn_unit = {
+				owner = ROOT
+				province = ROOT
+				home = ROOT
+				troops = {
+					archers = { 250 250 }
+					heavy_infantry = { 1000 1000 }
+					knights = { 500 500 }
+					horse_archers = { 250 250 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0 # decisions with the "is_mercenary" will not be calculated from the script
+		}
+	}
+
+	cheat_add_doomstack_navy = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			prestige = 50
+			wealth = 50
+		}
+		effect = {
+			prestige = -50
+			wealth -50
+			spawn_unit = {
+				owner = ROOT
+				province = closest
+				troops = {
+					galleys= { 50 50 }
+
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0 # decisions with the "is_mercenary" will not be calculated from the script
+		}
+	}
+
+
+	cheat_remove_crappy_traits = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+		}
+		effect = {
+			remove_trait = depressed
+			remove_trait = lunatic
+			remove_trait = possessed
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = syphilitic
+			remove_trait = leper
+			remove_trait = wounded
+			remove_trait = maimed
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = drunkard
+			remove_trait = has_tuberculosis
+			remove_trait = has_typhoid_fever
+			remove_trait = has_typhus
+			remove_trait = has_bubonic_plague
+			remove_trait = has_measles
+			remove_trait = has_small_pox
+			remove_trait = lustful
+			remove_trait = gluttonous
+			remove_trait = greedy
+			remove_trait = slothful
+			remove_trait = envious
+			remove_trait = wroth
+			remove_trait = proud
+			remove_trait = homosexual
+			remove_trait = stressed
+			remove_trait = stutter
+			remove_trait = ugly
+			remove_trait = clubfooted
+			remove_trait = harelip
+			remove_trait = hunchback
+			remove_trait = lisp
+			remove_trait = slow
+			remove_trait = weak
+			remove_trait = inbred
+			remove_trait = imbecile		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_remove_crap_from_dynasty_kids = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+		}
+		effect = {
+		any_dynasty_member = {
+			dynasty = ROOT
+			limit = {
+				age = 6
+				NOT = { age = 16 }
+				}
+			}
+			remove_trait = depressed
+			remove_trait = lunatic
+			remove_trait = possessed
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = syphilitic
+			remove_trait = leper
+			remove_trait = wounded
+			remove_trait = maimed
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = drunkard
+			remove_trait = has_tuberculosis
+			remove_trait = has_typhoid_fever
+			remove_trait = has_typhus
+			remove_trait = has_bubonic_plague
+			remove_trait = has_measles
+			remove_trait = has_small_pox
+			remove_trait = lustful
+			remove_trait = gluttonous
+			remove_trait = greedy
+			remove_trait = slothful
+			remove_trait = envious
+			remove_trait = wroth
+			remove_trait = proud
+			remove_trait = homosexual
+			remove_trait = stressed
+			remove_trait = stutter
+			remove_trait = ugly
+			remove_trait = clubfooted
+			remove_trait = harelip
+			remove_trait = hunchback
+			remove_trait = lisp
+			remove_trait = slow
+			remove_trait = weak
+			remove_trait = inbred
+			remove_trait = imbecile	
+		}
+
+	}
+
+	add_awesome_to_dynasty_kids = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+		}
+		effect = {
+		any_dynasty_member = {
+			dynasty = ROOT
+			limit = {
+				age = 6
+				NOT = { age = 16 }
+				}
+			}
+			add_trait = content
+			add_trait = gregarious	
+			add_trait = diligent
+		}
+	}	
+
+	happy_vassals = {
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		effect = {
+			any_vassal = {
+				limit = {
+					host = { character = ROOT }
+				}
+				add_trait = content
+				add_trait = honest	
+			}
+		}
+	}
+	cheat_gold = {
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		effect = {
+			wealth = 1000
+		}
+}
+	cheat_prestige = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		effect = {
+			prestige = 1000
+		}
+}
+	cheat_piety = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		effect = {
+			piety = 1000
+		}
+}
+	cheat_techpoints = {
+		 
+		potential = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		allow = {
+			has_character_flag = show_cheats
+			ai = no
+		}
+		effect = {
+			culture_techpoints = 1000
+			military_techpoints = 1000
+			economy_techpoints = 1000
+		}
+}
+}

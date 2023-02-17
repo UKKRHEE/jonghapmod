@@ -1,0 +1,25 @@
+decisions = {
+
+	ala_race_traits_on = {
+		potential = {
+			ai = no
+			NOT = { has_character_flag = art_on }
+		}
+		effect = {
+			set_character_flag = art_on
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ala_race_traits_off = {
+		potential = {
+			has_character_flag = art_on
+		}
+		effect = {
+			clr_character_flag = art_on
+		}
+	}
+
+}

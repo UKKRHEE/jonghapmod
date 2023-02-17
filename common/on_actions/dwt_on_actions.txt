@@ -1,0 +1,122 @@
+#character
+
+
+#character
+on_yearly_pulse = {
+	random_events = {
+		# Random events 10 to 2000
+		50 = DWTRandom.600 # Bad dog rapes nearby female
+		#25 = DWTRandom.610 # Sex crazed person rapes someone (and you find out)
+		#25 = DWTRandom.612 # Sex crazed person rapes someone (and you don't find out)
+	}
+}
+
+#character
+on_bi_yearly_pulse = {
+	events = {
+		#DWTCourt.1000 	# Check to see if Harley will join a player's court
+		#DWTCourt.1009 	# If Harley is active, she may perform an action
+		DWT.910 		# Random sexual events that happen if you are leading troops
+		DWT.1990 		# Random sexual events that happen to stay at home female rulers
+		#DWTHarley.1000 	# Random Harley related events
+		#DWTLLO.10030    # Have AI characters join societies
+		#DWTLLO.7514 	# Dress up witch-nanny
+	}
+	random_events = {
+		75 = DWTRandom.620 # Demon child goes after your relatives (of the opposite sex) who haven't yet been taken by force
+	}
+}
+
+#on combat pulse
+on_combat_pulse = {
+
+}
+
+# Winning army leader is ROOT - opponent army leader is FROM
+on_battle_won_leader = {
+}
+
+# Any leader in battle on losing side is ROOT - opponent army leader is FROM
+on_major_battle_lost = {
+
+}
+
+# Losing army leader ROOT - opponent army leader is FROM
+on_battle_lost_leader = {
+	events = {
+		DWT.8200 	# FM liege in trouble!
+	}
+}
+
+# Fires for all characters presumed to be in the Holding at the time. Siege winner unit owner in the 'new_character' scope, lost holding title in FROM, local character in ROOT.
+on_siege_over_loc_chars = {
+	events = {
+		#DWT.7999 	# Seize up the kittens!
+	}
+}
+
+# Fires for the owner of the winning unit (ROOT). The taken Holding title is in FROM.
+on_siege_over_winner = {
+	events = {
+#		DWT.7999 	# Seize up the kittens!
+		#DWTLLO.7111 # Lilith Worshipers desecrate holding
+	}
+}
+
+# The taken Holding title is in FROM.
+on_siege_won_leader = {
+	events = {
+		DWT.7999 	# Check sacked province for booty!
+	}
+}
+
+# From = Attacker, Root = Defender
+on_war_started = {
+
+}
+
+# From = Attacker, Root = Defender
+on_war_ended_victory = {
+
+}
+
+# Sent to employers of both spouses - ROOT is employer. FROM is employers "employee". new_character is the other spouse.
+on_marriage = {
+
+}
+
+#
+
+
+# character
+on_adulthood = {
+	events = {
+		#DWTLLO.7512 # DWT Demon child comes of age - assign Lilith traits
+	}	
+	random_events = {
+		15 = DWTRandom.1 	# daughter caught masturbating by father
+		15 = DWTRandom.4 	# son caught masturbating by mother
+		70 = DWTRandom.300 	# education of a young courtier by liege
+	}
+}
+
+on_adolescence = { # Checked on 12th birthday.
+	events = {
+		#DWTLLO.7513 # Assign virgin trait
+		#MNM.3429 # Educator/guardian/parent with secret religion get a chance to convince child to convert secretly
+	}
+}
+
+# baby scope
+on_post_birth = {
+	events = {
+	}
+}
+
+#character (at 2 months)
+on_pregnancy = {
+	events = {
+
+ 	}
+}
+

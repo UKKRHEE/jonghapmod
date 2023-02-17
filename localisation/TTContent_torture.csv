@@ -1,0 +1,92 @@
+###########################################################
+#####  LOCALISATION for the Dark World Content Pack   #####
+###########################################################
+#####  Search ###Rewrite for incomplete localisation ######
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+###### TT Content Deviant Torture ######
+#### Routing Event ####
+TTContentTorture;Deviant Torture;;;;;;;;;;;;;x
+TTContentTorture9999;You've given in to your deviant nature and find yourself standing before your prisoner. She is chained and bound here in your dungeons and you are completely free to do with her as you will.  Should you make her "available" to the public in the stocks? Whip her into submission? Or should you strap her to the racks and make this session more one on one? ;;;;;;;;;;;;;x
+TTContentTorture9999alt;The look on her face is a look of excitement. Her eyes are searching you and seem to be almost begging. Could it be she has come to enjoy these punishments?  \n \n She moans slightly as she pulls on her bindings gently. Her eyes have turned pleading.  There is no wish for escape in those eyes, she seeks domination, and she is seeking for it from you...;;;;;;;;;;;;;x
+TTContentTorture9999a;The Stocks;;;;;;;;;;;;;x
+TTContentTorture9999b;The Whip;;;;;;;;;;;;;x
+TTContentTorture9999c;The Rack;;;;;;;;;;;;;x
+TTContentTorture9999d;On second thought, no...;;;;;;;;;;;;;x
+
+####Stocks####
+TTContentTorturestocks;The Stocks;;;;;;;;;;;;;x
+TTContentTorture1000;Bound and shackled you sent [TT_torture_recipient.GetFirstName] to the stocks and opened the doors to the public. Lines formed quickly, many a man wanted to partake of her flesh and more still simply wanted to experience the degradation of someone important enough to upset the [TT_torture_assailant.GetTitle].;;;;;;;;;;;;;x
+TTContentTorture1000a;Good.;;;;;;;;;;;;;x
+TTContentTorture1000b;Get on with it.(Skip Scene).;;;;;;;;;;;;;x
+TTContentTorture1001;Cock after cock lines up and fills [TT_torture_recipient.GetFirstName]. She pleads for it to stop, but her words go unheard by the throngs as they eagerly await their turns. The chain bar between her feet keeps her legs spread wide enough that even an unexperienced man would have no problem getting into a good rhythm against stuch an unwilling participant.;;;;;;;;;;;;;x
+TTContentTorture1001a;I do hope she stays just as feisty after this...;;;;;;;;;;;;;x
+TTContentTorture1002;Cum runs down her legs as yet another man finishes inside of her.  You keep the line moving and organized.  Everyone should get a least one turn, but if they have the stamina they should be able to get back into the end of the line and go again. It's only fair, afterall...;;;;;;;;;;;;;x
+TTContentTorture1002a;What about her mouth?;;;;;;;;;;;;;x
+TTContentTorture1003;With such a large group of the public here you send some ment to the front of the stocks so that they can begin using her mouth as well.  It's doubtful that she has enough spark to try and bite anyone, not after how many men have already taken her. \n \n After a time you check on a man who has been gripping the stocks and fucking [TT_torture_recipient.GetFirstName]'s face for the past 10 minutes. He pulls back, revealing her rosey colored cheeks and he runs a finger along her chin before slapping her sharply.;;;;;;;;;;;;;x
+TTContentTorture1003a;Slut's like her deserve no better.;;;;;;;;;;;;;x
+TTContentTorture1004;Time passes quickly as the throngs thin out. Only a few men are left, but they seem the most insatiable and violent of the bunch. [TT_torture_recipient.GetFirstName] has gone completely quiet. No sobs, no pleading, and her eyes are unfocused as she stares off to the side. She appears broken right now, but she will recover in time. Your mind is awash as you dream of all the other things you could do to her while you have her in your dungeons. Oh the fun that shall be had...;;;;;;;;;;;;;x
+TTContentTorture1004a;I have enjoyed this.;;;;;;;;;;;;;x
+TTContentTorture1500;Bound and shackled, [TT_torture_assailant.GetBestName] has sent you to the stocks and opened the doors the the public. Lines formed quickly, many men wanted to partake of you and your flesh. More still simply wanted to experience the degradation of someone important enough to earn the ire of the [TT_torture_assailant.GetTitle]. ;;;;;;;;;;;;;x
+TTContentTorture1500a;Oh No!;;;;;;;;;;;;;x
+TTContentTorture1500b;Get on with it.(Skip Scene).;;;;;;;;;;;;;x
+TTContentTorture1501;Cock after cock lines up and fills your holes. You plead for it to stop, but your words go unheard by the throngs as they eagerly await their turns. The chain bar between your feet keeps your legs spread wide enough that even an unexperienced man will have no trouble getting into a good rhythm against even your unwilling body...;;;;;;;;;;;;;x
+TTContentTorture1501a;When will it end?;;;;;;;;;;;;;x
+TTContentTorture1502;Cum runs down your legs in a flood. What started as a trickle can not be described as such any longer. Too many men have finished deep inside of you and barely a moment passes before the next is already inside. How many have already finished, and how many more are to come, you don't know. All you know is that it isn't over, and there is no hope of stopping it at all...;;;;;;;;;;;;;x
+TTContentTorture1502a;.......;;;;;;;;;;;;;x
+TTContentTorture1503;You see feet come up in front of your stocks, before you can raise your head to see who it is someone grabs your head roughly. Your mouth is forced open and a cock is sliding into it. \n \n You chock on the cock, coughing and sucking in breath around it as he plunges his cock deep into your mouth and into your throat. The back of your head is pressed into the stocks and the cock and hips before you fall into a rythmn. A rythm of pressure, and release as you gasp for breath every chance you can get. \n \n When he finally cums, he shoves his twitching cock deep into your throat and unloads. Sliding his cock out of your mouth slowly and letting it drop. A finger runs along your chin and then with no warning a sharp slap across your cheek.;;;;;;;;;;;;;x
+TTContentTorture1503a;At least he's finished...;;;;;;;;;;;;;x
+TTContentTorture1504;Time passes slowly as the crowds thin out slowly. Only a few men are left, but they seem the most insatiable and violent of the bunch. You've no more energy to fight, no will to complain or beg.  Your eyes are unfocused as you stare off to the side and your body is rocked by another unnamed assailant...;;;;;;;;;;;;;x
+TTContentTorture1504a;........;;;;;;;;;;;;;x
+
+####Whip####
+TTContentTorturewhip;The Whip;;;;;;;;;;;;;x
+TTContentTorture2000;[TT_torture_recipient.GetSheHe] cries out as you push her toward the wooden cross. Her lithe frame fights against you as you latch her in place and step back to the whip waiting on a nearby table. \n \n "Please don't!  Don't do this..." she pleads... \n \n *CRACK* \n \n The sounds of the whip deafen her words and her words turn unintelligible. You roll up the whip after only a few softer strikes on her tender flesh. You approach her and begin to caress the marks, smoothly and gently your hand rolls to the front and you cup one of her breasts. \n \n "Your training is just beginning, [TT_torture_recipient.GetFirstName]" you say and laugh as you step back, unfurling the whip smoothly...;;;;;;;;;;;;;x
+TTContentTorture2000a;Good.;;;;;;;;;;;;;x
+TTContentTorture2500;You cry out as you are pushed toward the wooden cross. Your fight against your captor as [TT_torture_assailant.GetSheHe] pushes you against the cross and locks you in place. \n \n "Please don't!  Don't do this..." you plead. \n \n *CRACK* \n \n The sounds of the whip deafen your words and you begin to simply mumble through the sharp pain. The pain stops, and you hear rustling behind you as your captor approaches. Hands course over your freshly marked back, gently around your side and cups one of your breasts. \n \n "Your training is just beginning, [TT_torture_recipient.GetFirstName]" says the voice, and laughter fills your ears as you hear the whip drag the floor in preparatio for another strike...;;;;;;;;;;;;;x
+TTContentTorture2500a;Oh No!;;;;;;;;;;;;;x
+
+####Rack####
+TTContentTortureracks;The Racks;;;;;;;;;;;;;x
+TTContentTorture3000;You have [TT_torture_recipient.GetFirstName] dragged to the rack and securely locked into place. She pleads with you for mercy, but you hardly hear her as you stretch her body out, turning the wheel attached to the torture machine. \n \n Her shrieks echo throughout the halls. You lock the machine into place, knowing full well just how imobile she is and you climb up the rack, stradling her face. \n \n "Time for the fun part." you say as you hold her head between your hands and press your large cock into her mouth.  Her first attempt at a scream opened her mouth enough that you were able to press your entire length deep into her throat. Her warm thight throat constricts around your cock, obviously cutting off her air supply. You hold it in place and she begins to thrash violent, pulling against the shackles on the rack, her body shaking horribly. You pull your cock out partially and feels her suck in air from around your cock. \n \n "This will be enjoyable." you mutter to yourself as you begin a rythmic thrusting...;;;;;;;;;;;;;x
+TTContentTorture3000alt;You have [TT_torture_recipient.GetFirstName] dragged to the rack and securely locked into place. She pleads with you for mercy, but you hardly hear her as you stretch her body out, turning the wheel attached to the torture machine. \n \n Her shrieks echo throughout the halls. You lock the machine into place, knowing full well just how imobile she is and motion for the Dungeon Master to climb up the rack, stradling her face. \n \n "Time for the fun part." you say as he holds her head between his hands and press his large cock into her mouth.  Her first attempt at a scream opened her mouth enough that he was able to press his entire length deep into her throat. Her warm thight throat constricts around his cock, obviously cutting off her air supply. He holds it in place and she begins to thrash violent, pulling against the shackles on the rack, her body shaking horribly. He pulls his cock out partially and you hear her suck in air from around his cock. \n \n "This will be enjoyable." you mutter to yourself as you watch your Dungeon Master begin a rythmic thrusting...;;;;;;;;;;;;;x
+TTContentTorture3000a;Such a tight throat...;;;;;;;;;;;;;x
+TTContentTorture3000b;Get on with it.(Skip Scene).;;;;;;;;;;;;;x
+TTContentTorture3001;You have been fucking [TT_torture_recipient.GetFirstName]'s face for a good while now. She has almost completely stopped fighting and instead seems intent on minimizing the pain as she keeps her head angled just right. It would be all too easy for you to finish inside her mouth right now... ;;;;;;;;;;;;;x
+TTContentTorture3001alt;Your Dungeon Master has been fucking [TT_torture_recipient.GetFirstName]'s face for a good while now. She has almost completely stopped fighting and instead seems intent on minimizing the pain as she keeps her head angled just right. It would be all too easy for him to finish inside her mouth right now... ;;;;;;;;;;;;;x
+TTContentTorture3001a;Where is the fun in that?;;;;;;;;;;;;;x
+TTContentTorture3002;You pull out of her mouth and smile as the gasping breaths return to break the quietness of the room. As you climb down her slender frame you run your hands across [TT_torture_recipient.GetFirstName]'s body. Her bosom, her hips, she is an enticing specimen. \n \n She seems relieved, obviously thinking that you must be finished with her for this session. At that moment your cock brushes against the lips of her pussy and her body freezes, you move your body slightly letting the tip of your cock tease her opening.  A soft cry escapes her lips and she shakes her head no.;;;;;;;;;;;;;x
+TTContentTorture3002alt;You have him pull out of her mouth and you smile as the gasping breaths return to break the quietness of the room. As he climbs down her slender frame he run his hands across [TT_torture_recipient.GetFirstName]'s body. Her bosom, her hips, she is an enticing specimen. \n \n She seems relieved, obviously thinking that you must be finished with her for this session. At that moment his cock brushes against the lips of her pussy and her body freezes, you motion towards him and he moves his body slightly letting the tip of his cock tease her opening.  A soft cry escapes her lips and she shakes her head no.;;;;;;;;;;;;;x
+TTContentTorture3002a;Time for the finish...;;;;;;;;;;;;;x
+TTContentTorture3003;You free one of her legs from the manacles and bring her knee up high. Her open pussy is stretched wide for you as you violate her body. Your cock sliding in and out of her well moistened slit. Between her groans and tears time passes and before you can stop the tide you orgasm deep inside of her. Your cock twitches and you push into her with each twitch. \n \n "I'll break you yet dear [TT_torture_recipient.GetFirstName], you'll start to enjoy this treatment. You'll beg me for it..." you whisper into her ear as you pull out and step away...;;;;;;;;;;;;;x 
+TTContentTorture3003alt;Your Dungeon Master frees one of her legs from the manacles and brings her knee up high. Her open pussy is stretched wide for him to violate her body. His cock sliding in and out of her well moistened slit. Between her groans and tears time passes and before he can stop the tide of his orgasm, he releases deep inside of her. He pushes his cock in to the hilt, and you step forward and lean in to her ear. \n \n "I'll break you yet dear [TT_torture_recipient.GetFirstName], you'll start to enjoy this treatment. You'll beg me for it..." you whisper into her ear as your Dungeon Master pulls out and steps away...;;;;;;;;;;;;;x 
+TTContentTorture3003a;She will come around.;;;;;;;;;;;;;x
+TTContentTorture3500;[TT_torture_assailant.GetBestName] has [TT_torture_assailant.GetHerHis] men drag you to the racks and secure you into place. \n \n "Mercy, plaease, I don't deserve this. Surely this is a misunderstanding? My [TT_torture_assailant.GetLordLady]?" you say, but your words seem to have no impact at all. Like they haven't been heard. The ropes tighten and the rack creaks as your are pulled in opposite directions. \n \n You let out a shrill scream from the pain as you hear the lock clasp the machine into place. The pain clouds your mind even as your assailant climbs up your body and holds your head in strong hands. A cock is against your lips, and you open your mouth to scream. That opening was expected and the entire length of the cock is pressed into your mouth and throat. Your air supply is cut off. \n \n You can't breathe and you begin to panic. You pull against your shackles and begin to thrash about trying to free yourself.  AIR! You need to breathe! Then as quickly as it had began the cock in your throat is partially withdrawn allowing you to gasp for air around it... Just before the thrusting begings...;;;;;;;;;;;;;x
+TTContentTorture3500a;Oh No!;;;;;;;;;;;;;x
+TTContentTorture3500b;Get on with it.(Skip Scene).;;;;;;;;;;;;;x
+TTContentTorture3501;Your assailant has been fucking your face with abandon for a while now. You have stopped fighting what you cannot change and instead have been trying to minimize the pain. You hold your head at an angle so that he will hopefully finish more quickly and leave you be.;;;;;;;;;;;;;x
+TTContentTorture3501a;The humiliation is unbearable...;;;;;;;;;;;;;x
+TTContentTorture3502;He pulls out of your mouth without warning and you gasp for breath, finally able to get a full breath without restriction. An appraising hand runs down your body, across your bosom and down to your hips. \n \n Relief begins to set in. He must be done? Surely this is over? But as you imagine such possibilities you feel the tip of his cock brush against the lips of your pussy. You freeze. He moves his body slightly letting the tip of his cock tease you.  \n \n As soft as a mouse you say "No.." and shake your head...;;;;;;;;;;;;;x
+TTContentTorture3502a;Not this, not now...;;;;;;;;;;;;;x
+TTContentTorture3503;He free's one of your legs from the manacles and brings your knee up to your chest. Your pussy is wide open and ready for him to violate you. Helplessness is all you can feel. His cock slides into your well moistened slit and you cry...  Tears streaking down your face. What feels like an eternity passes and you hear his breathing change pace, his cock twitches and he cums deep inside of you. His cock twitches and his pushes it slightly deeper as he leans into your ear. You hear [TT_torture_assailant.GetFirstName] whisper quietly... \n \n "I'll break you yet my dear [TT_torture_recipient.GetFirstName], you'll start to enjoy this treatment. You'll beg me for it..." the words hang in the air as you hear the footsteps move away.;;;;;;;;;;;;;x
+TTContentTorture3503a;NEVER!;;;;;;;;;;;;;x
+
+TTContentPainslutsuccess;PainSlut;;;;;;;;;;;;;x
+TTContentTorture4000;You carefully examine your slut, bruises and marks along her slender frame clearly show the turmoil you have put her through. She looks at you longingly, unwilling to speak until you do.  She adjusts in her position on her knees and even the minor pain from kneeling on a cold stone floor seems to bring her pleasure. \n \n What have your deeds wrought?  A plaything with a very special appetite... \n \n <<She has gained a new trait, "Painslut", and has lost negative opinion modifiers from her the Sexual Torture.>>;;;;;;;;;;;;;x
+TTContentTorture4000a;Just as I had hoped...;;;;;;;;;;;;;x
+TTContentTorture4500;[TT_torture_assailant.GetSheHe] walks around you slowly, carefully examining you as if you were some type of prize pig on display. It makes you feel proud of yourself... \n \n The [TT_torture_assailant.GetTitle] seems to be paying special attention to the marks and bruises on your body. Those delightful welts were well earned. You adjust yourself on the stone floor so that you are sitting as upright as you can. You want your master to see how obedient you are.  Maybe, if you're good, [TT_torture_assailant.GetSheHe] will beat you again?;;;;;;;;;;;;;x
+TTContentTorture4500a;I'm a Painslut!!;;;;;;;;;;;;;x
+
+
+
+
+
+
+
+
+
+
+
+
+
+

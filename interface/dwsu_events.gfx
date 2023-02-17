@@ -1,0 +1,114 @@
+spriteTypes = {
+	spriteType = {
+		name = "dwsu_buying_slaves"
+		texturefile = "gfx/event_pictures/dwsu_buying_slaves.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbh_slave_buying"
+		texturefile = "gfx/event_pictures/dwbh_slave_shipment.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "dwsu_sexslave"
+		texturefile = "gfx/event_pictures/dwsu_sexslave.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_sexslave2"
+		texturefile = "gfx/event_pictures/dwsu_sexslave2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_sexslave3"
+		texturefile = "gfx/event_pictures/dwsu_sexslave3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_sexslave4"
+		texturefile = "gfx/event_pictures/dwsu_sexslave4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_sexslaveff"
+		texturefile = "gfx/event_pictures/dwsu_sexslaveff.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "dwsu_sexslavefm"
+		texturefile = "gfx/event_pictures/dwsu_sexslavefm.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "dwsu_slavebodyguard"
+		texturefile = "gfx/event_pictures/dwsu_slavebodyguard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_special_slaves"
+		texturefile = "gfx/event_pictures/dwsu_special_slaves.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_dungeon_hallway"
+		texturefile = "gfx/event_pictures/dwsu_dungeon_hallway.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_werebitch1"
+		texturefile = "gfx/event_pictures/dwsu_werebitch1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_werebitch2"
+		texturefile = "gfx/event_pictures/dwsu_werebitch2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwsu_werebitch3"
+		texturefile = "gfx/event_pictures/dwsu_werebitch3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbh_lilithdream"
+		texturefile = "gfx/event_pictures/dwbh_lilithdream.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwbh_dreamcathedral"
+		texturefile = "gfx/event_pictures/dwbh_dreamcathedral.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

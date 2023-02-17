@@ -1,0 +1,90 @@
+ #CODE;ENGLISH;;;;;;;;;;;;;x
+#Event Titles
+dw_exotic_merchant;Exotic Merchant;;;;;;;;;;;;;x
+dw_caravan_madame;Caravan Madame;;;;;;;;;;;;;x
+dw_futa_focus_diplomacy;Diplomacy Focused Futa;;;;;;;;;;;;;x
+dw_futa_focus_intrigue;Intrigue Focused Futa;;;;;;;;;;;;;x
+dw_futa_focus_stewardship;Stewardship Focused Futa;;;;;;;;;;;;;x
+dw_futa_focus_martial;Martial Focused Futa;;;;;;;;;;;;;x
+dw_futa_focus_learning;Spiritual Focused Futa;;;;;;;;;;;;;x
+dw_futa_special_mey;Special Futa Mey;;;;;;;;;;;;;x
+dw_futa_bonus_trait_title;Dark World Fantasy Bonus Trait;;;;;;;;;;;;;x
+dw_trap_bonus_trait_title;Dark World Fantasy Bonus Trait;;;;;;;;;;;;;x
+#Decisions
+dw_visit_mey;¨¸«Èù¼ ªÈ¡³ÌëÆĞ éˆ¢´Ì¥³;;;;;;;;;;;;;x
+dw_visit_mey_desc;This is a customized 'Spend time with' decision that has special events for the player and Mey.;;;;;;;;;;;;;x
+#Custom tooltips
+dw_no_futa_for_you;Selecting this ends the merchant event and he departs without leaving you a gift.;;;;;;;;;;;;;x
+#Event Descriptions
+DWFuta100;ª³İ«ÈÌò¼ ª³İ¥³Ì«È ¢´ äÁİ¬·Ì«¸ æˆ®³É²³«¹Üäˆ äŒåÆÌ ¢³«¸¡¸ ¬·İìÁİ²È äÁİ¬·Ì«¸ æÆĞ«·¡³äˆ ªÈâ¥³äˆ ë‰®·İ²´ù¼Ü¥³. " [Root.GetTitledFirstName], ëŠ¦ÈåÆÌ è»É¬·É¬Èçˆ ¡³¡È¬·Ì«¸ ¬·ùÇ ª³İ¥³ÌëÆĞ ÿ¿é»ÉªÈ¯Èäˆ ‡‹ªÈÉëÆĞ ²³Ğ êŠ «ÈÜåÆÌ ä»Û«È ±ÈĞë‰²³Ù¢È¥³. ¬·ÿÇ ¬ÈØêÆİëÆÌ ¨¹ß«ÈĞ¡³ÌùÇ «¹²´İëŒçˆ ¬È®¹«ÈÜäˆ ‡‹ªÈÉ«È ±ÈĞë‰²³Ù¢È¥³. " ¢³åÆÌ äŒùÇ ª³İ¥³Ì«È ûÄäÆÙ²³åÆÌ èÁĞğÁØæÆĞ«¸ ¥´²´ èÁĞ«·éˆ«³Üäˆ «ÈäÁÉ¬·É«ÈÌ èÁĞ¡·æÆĞò¼ ª·©ÈêŒæÆĞëÆĞ ¬·ÌèÁÌ¬·ÉëŒçˆ ¥³çÁÌ¥³äˆ ²³«¹Ü¥³. äŒ¡·ÛæÆĞëÆÌ ¢´ åÁÌëÆĞ ª³çˆ¬³Ù«³Üäˆ ¢³åÆÌ ¥´¥³Ù²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWFuta100A;«¹¡Èª· ¨·èÁĞäˆ ¥³İªÈÌæÆĞ«È ‡‹ªÈÉëÆĞ ûÄ²³Ğ êŠ «ÈÜ¡¸ ²´ìŠ¬Èë‰.;;;;;;;;;;;;;x
+DWFuta100B;¬·¦È¡³©·¦¹. «¹¡È«¸ ¥³İªÈÌæÆĞ«È «ÈÜëÆĞ ¬³¦ÈåÆÌ «·Ú«·.;;;;;;;;;;;;;x
+DWFuta110;ª³İ¥³ÌëÆĞ æÁĞ¦·éˆ¥·Ì ìÁİ, ¢³åÆÌ ª´çˆëÁÌ °¸ÌïŒçÆĞ ©³Ğ¡¹Ì²³«¹Ü¥³. äŒ¡·ÛëŒçˆ ¡·Ğ«·¡³ «³ÌëÆĞ ª³Ğ±¹éˆ¬³ ©·Ğ¡·©·ÛëÆÌ®´çˆ ±³Ğ”³İëÆĞ Èäˆ «ÈÜåÆÌ «¹«ÈÌëÆĞ éˆ«³Ü¥³. ["Root.GetTitledFirstName], «¹¡È«¸ ëˆªÈÌ¡·ÛëÆĞ ÿ¼Ì«¹İ²´ë‰. ª´É¥³çÆÌ ¡¹İ²·ØëÆĞ ®³ŞëŒ¦· ëˆª¹Ü¢³ë‰? ¨´ëŠ ÿÇòÄ²³Ì ²³Ì“³İùÇ "æŒùÂğŒ"æÆĞ«È «ÈÜ¬Èë‰. «È¡·Ì èŠç‰çˆ ¬¸ä»İô¿Ğ¡·äˆ ¥³İªÈÌ«È ùÂÌ²³Ì¥³¨¹Ì «µÉ¡³ÌùÇ æ»ÌëÆĞ ¬ÈéÁĞ²³äˆ ¡º«µÉëÆĞ ¨´ŞëÆĞ êŠ «ÈÜëÆĞ¡·«ºë‰." ¢³åÆÌ ÿ¼ÉªÈĞ²È ¡È¥´²³«¹Üäˆ æŒùÂğŒ«¸ ¥´²´ ‡ˆ¡ÈªÈØ«È ª´İ¡¹Ü¥³. ¬³ØªÈ êÁÉäˆ²³Ì ‡Š ¥´¥³Ù²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWFuta110A;¢³åÆÌ êÁÉ¢¹«È¬È¨³Ì, ²³İª³İ ìˆêÁÉ²³Ì¡·Ğ ùÂÌ²³¬ÈÌ «³Î¬È.;;;;;;;;;;;;;x
+DWFuta110B;I've wondered how tight a dwarf woman is.;;;;;;;;;;;;;x
+DWFuta110C;¢³åÆÌ ¡·¬·Ğ²³Ğ¦´.;;;;;;;;;;;;;x
+DWFuta111;¨³¥³ØëÆÌ ¢³çÆĞ °¸ÌïŒ «³ÌëŒçˆ «È•ÆĞ«·Üäˆ «³Ğè»Ø«È ô¿¡¸ ²³«¹Ü¥³. °¸ÌïŒù¼ °¸ÌïŒÈ¦È «¹Ì¡¹Ğô¿Ì ¥³çÆÌ ä»ÛëŒçˆ «Èæ»İ²³¨¹Ìª· ¥³Ì ²³¢³ùÇ í»ÛéÁĞ¨³Ì ¯¹¬ÈÌ ä»ÛëŒçˆ ¡³Ü¥³. «·æÁÙäˆ ¯·Ø¯·Ø²´Ü¥³. ²³¬È¨³Ì «¹¡È«¸ «¹¦·¨¹İùÇ ª³¦³ØæÆĞ«È «ÈÜ¥³åÆÌ ¡·ÛëÆĞ íÁİéÁÌ²È åŒÈĞ êŠ «ÈÜ«·Ü¥³. åŠäÁÌ¡³ ¢´ èŠçÆâëÆĞ ¨³Ì¬È¨¹ ¢´ ±³ĞëÆĞ ¬³Ù«³Ü¥³. ¢´ éˆ¬È«¸åÆÌ ‘³É‘³É²³¡¸ ©³Ğ¡È²³Ì ¬³¬È¡³ èÁĞ¡ÈçÆĞ èÁá²ÈÌ®´ êŒ®ÈåÆÌ ¡·ÛëÆĞ åŒÈĞêŠ «ÈÜ«·Ü¥³. –ˆ ¥³çÆÌ ê»Ì«È ¢´ ìŠùÄçˆ ¢³çÆĞ ¨³Ì¬È¨¹ ¨È•Œ¦·¬¹  ¡³Üäˆ ¢³åÆÌ ªÈÌëÆØ êˆ¦ÈçÆĞ ¢´«·Ü¥³. äŒùÇ ¬³¬ÈåÆÌ ¢´ éˆ¬È«¸ ª³Ù«ÈÙô¿«·Üäˆ äŒ¡³ ª¸©·ÌùÇ ª³¬·İëÆĞ ²³Ğ æ»İ«³Ì ¡¸ê»Éô¿«·Ü¥³. °¸ÌïŒ«¸åÆÌ ¢³çÆĞ ¬¸ù¿²³äˆ ¥³çÆÌ ª³¦³ØæÆĞ«È ä»İ¡´¬·ÉëŒçˆ ¬³ùÄçÆĞ ²³äˆ «ÈÜ«·Ü¥³. ¨³®ÈØ¢´ ¢³åÆÌ «ÈĞëÆĞ ¨³®Èäˆ ¢³ª· °¸ÌïŒ ©³ÊëŒçˆ ¢³ù¼Ü¥³. ¢´ éˆ¬È«¸åÆÌ «³¬ÈÉæˆ äŒùÇ ¬·İ«´É«È ¨´Ş²¹«ÈÜ«·Ü¥³.;;;;;;;;;;;;;x
+DWFuta111A;¢³åÆÌ äŒù¼ ¡º«µÉ²³äˆ äŒçÆĞ «¹Ì«ÈÌëŒçˆ ¨³ÌæÆÌ¥³.;;;;;;;;;;;;;x
+DWFuta111B;«ÈÌª³İ¬·É«ÈÌ ®¸¦¹É«È«¹Ü¬È¨³Ì, «È¡·Ì •Æá¢³Ü«·.;;;;;;;;;;;;;x
+DWFuta113;The madame claps her hands and a short, stocky, with an ample bosom and a round ass enters the tent. The madame nods my way, and the well endowed dwarf takes my hand and leads me to another tent that is filled with soft bedding and silk sheets. \n  As she undresses me, my cock springs forth as she lowers my trousers and it smacks against her cheek. Judging by her expression, I half believe she intended for that to happen. Taking my cock with one hand, she licks it's underside and then works on it's head as she guides me backwards with her other hand. \n  Laying on my back, the little vixen gives a wet, messy blowjob, leaving my cock slick with her saliva. She then straddles me, and with her hand, guides my cock into her round ass. She moans as she impales herself on my rod, and with no hesitation rides me until I explode.;;;;;;;;;;;;;x
+DWFuta113A;I pay off her contract, and keep her as a lover.;;;;;;;;;;;;;x
+DWFuta113B;An impressive display of stamina, but I'm done.;;;;;;;;;;;;;x
+DWFuta120;While strolling by the caravan, I notice a new tent set-up. Walking by it, I see a seated woman, short, naked from the waist up, with painted arms. Curious, I step inside. \n  "Welcome [Root.GetTitledFirstName]. Have you come seeking an exotic experience? If so, I've a pretty little trap available for the daring. I offer a session for free, and if you so choose, I will absolve your partner of their contract should you pay a fee. Then they would be free to stay and join your court if you are willing." \n  I notice a young looking girl in some outlandish frilly clothing. Then the realization hits me. Not a young girl, but a pretty man who has embraced the role of a woman. Often regarded as a trap, for those who are surprised by seeing a cock, instead of a pussy upon undressing their partner. I shrug and respond.;;;;;;;;;;;;;x
+DWFuta120A;Sure, why not try something new. I'm game.;;;;;;;;;;;;;x
+DWFuta120B;Sorry, not my kind of thing.;;;;;;;;;;;;;x
+DWFuta121;The pretty... trap opens a tent flap and motions for me to follow. I'm led to a nearby tent, with a makeshift bed nearby that the trap is walking towards. \n  With a shove, I send the trap sprawling on the bed. I grasp his undergarments and pull them away. His skin is smooth, shaven. I flip him onto his back and lift his legs up to present his shaved ass to my cock. With no warning, I stuff it in. His eyes change from shock to lust as I pound his ass without mercy, causing his small stiff cock to slap on his belly. \n  He whimpers please, and holds out his hands as if to slow me. I pick up the pace, and the trap can't keep up, cumming before I do. His cum shooting out and splattering on his chest and face. Something in how dirty it looks sends me over the edge, and with a growl, I fill his bowels with my own seed.;;;;;;;;;;;;;x
+DWFuta121A;I pay off his contract, and keep him as a lover.;;;;;;;;;;;;;x
+DWFuta121B;It was an experience, but I'm done.;;;;;;;;;;;;;x
+DWFuta130;ª³İ¥³ÌëÆĞ æÁĞ¦·éˆ¥·ÌìÁİ, ¥³İªÈÌëÆÌ ª´ °¸ÌïŒçÆĞ ©³Ğ¡¹Ì²³«¹Ü¥³. «³ÌëŒçˆ ©³Ğ¡·ĞëÆØëÆĞ ë»Ò¡È¬³ «³Ì«¸åÆÌ ©³Ğ¡³©·ÛëÆÌ ®´çˆ ±³Ğ”³İëÆĞ Èäˆ «³Í«³«ÈÜåÆÌ «¹«ÈÌëÆĞ éˆ«³Ü¥³. " [Root.GetTitledFirstName], «¹¡È«¸ ëˆªÈÌ ¡·ÛëÆĞ ÿ¼Ì«¹İ²³Ù¢È¥³. ª´É¥³çÆÌ ¡¹İ²·ØëÆĞ ®³Şäˆ ¡ºªÈÌ¡³ë‰? äŒ¦·ã¥³¨¹Ì, ¬¸ ‡Š°³¢³¦È ¬³¬ÈçÆĞ «ÈëÀİ ²³ªÈĞêŠ «ÈÜ«·ë‰. ëŠª·Ì ¬·ÿÇ¡³ «È äÁİ¬·Ì«¸ ¨·èŠåÆÌ æ»İ«³Ì ¥³İªÈÌëÆÌ ª·©ÈêŒçÆĞ èŠç‰çˆ ©³ÏëÆĞ¡·«¸ë‰." ¢³åÆÌ äŒ ¨³¥³Ø«È ¨³Ğ²³åÆÌ ¡·Û«¸ «µÉ¡³Ì ëÁÛ«·Ü¥³. ¢³åÆÌ «·´çÆĞ ëŒ˜ÆÉ²³äˆ ©³ÌëÆİëÆĞ ¢³°³¢´Ü¥³.;;;;;;;;;;;;;x
+DWFuta130A;¢³åÆÌ ì»ãëÆÌ ¬³¬ÈçÆĞ ©³Ì¥´²³¬È «³Î¬È.;;;;;;;;;;;;;x
+DWFuta130B;A chick with a dick? How scary can she be?;;;;;;;;;;;;;x
+DWFuta130C;I don't mind being fucked by another futa.;;;;;;;;;;;;;x
+DWFuta130D;ëŒ ìˆäÆØ èŠª·ëÁÌ¥¸, ¢³åÆÌ äŒ¢µİ ±´êŒ²³Ğ¦´.;;;;;;;;;;;;;x
+DWFuta131;¨³¥³ØëÆÌ °¸ÌïŒ ¡ÈâêÁÉ²È ¢³çÆĞ «È•ÆĞ«·Ü¥³. «³Ì«¸ æÆĞ«·¡³¬³ äŒ¢¹åÆÌ ¢´ ìŠ©¹ÌëÆĞ æ»Ğ¨¹ ¢³çÆĞ ò¼Ì®³Ğ²³¡È ªÈ¬³É²³«¹Ü¥³. ¢³åÆÌ ®·Ì®·Ì²È äŒ¦Èäˆ ¨´ñ»É¬·É«È¡¸ ¢³çÆĞ ë‹ñ»É²³åÆÌ äŒ¢¹çÆĞ éˆ«³Ü¥³. ¡³Ù¬³¡È ¢³ùÇ «·İ¥·İ«ÈçÆĞ ‘´¦ÈäˆåÆÌ ¨³Ğ²³«¹Ü¥³. " ¬·åÆÌ ¥³İªÈÌ«¸¡¸ ¬·çÆĞ ò¼Ì®³Ğ²³¦³äˆ ¨³Ğ²³Ì¬·É «·ÚåÆÌ¥¸" äŒ¢¹åÆÌ ¡³İ²³¡¸ ¢³çÆĞ ®ÈØ¥´¡³ «ÈÜåÆÌä»ÛëŒçˆ ¨ÈĞ«·¢·Ø«·–Œ¦¹Ü¥³. äŒ¢¹åÆÌ ¡·®ÈĞ¡¸ ¬³ªÈÌùÇ ¬³¬ÈçÆĞ ñÆÌæÆĞ¨¹ ¢´ ¥³¦È ª³«È«¸ ¬·ŞëÆÌ éˆ¬Èçˆ ª³Ù«ÈÙ²³«¹Ü¥³. ¢³åÆÌ «µÉ¡³Ì æŠ¦¹ëÁØ«¸ ‘·Ğ¨¹ ¡³Ø¡³É«¸ ²·Ğ‘·É«¹Ü¥³. "¬¸¡ÈĞ" äŒ¢¹åÆÌ «¹ĞªÈØ²È ©³É«³¥´¨¹ ù¿®¹Üäˆ, 30éÁÌæ»İ«³Ì ¢³ùÇ ¬³ÉëÆÌ éˆ¬ÈçÆĞ ª³ëÀİ²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWFuta131A;¢³åÆÌ äŒ¢¹ù¼ ¡º«µÉ²³äˆ äŒ¢¹çÆĞ ¢³ùÇ «¹Ì«ÈÌëŒçˆ ª³ØåÆÌ¥³.;;;;;;;;;;;;;x
+DWFuta131B;ì»ãëÆÌ ¡¹İ²·Ø«È«¹Ü¬È¨³Ì, «È¡·Ğçˆ •Æá¢´Ğ¦´.;;;;;;;;;;;;;x
+DWFuta133;The madame points me through a flap at the back of the tent. Going inside I see a woman who's gaze and aura seem to radiate command. "Disrobe," she barks at me. I begin doing so as she walks around and observes me. As I drop my trousers, I get an unexpected slap on the ass. "Over to the bed." \n  I move towards the bed and I feel another slap on my ass, urging me to be quicker. As I get on the bed, she pushes me over, climbs on the bed and puts her dick in my face. "I'm shoving this in your ass, so now's your chance to lubricate it first." My mind spins as I begin to question what I'm doing, when she slaps me in the face with her cock and as I open my mouth in shock, she grabs my head and stick it in. "Suck it bitch." \n  Almost an hour later my jaw and ass are sore, and I'm covered with my own cum. An easy decision.;;;;;;;;;;;;;x
+DWFuta133A;I pay off her contract, and keep her as a lover.;;;;;;;;;;;;;x
+DWFuta133B;It was an experience, but I'm done.;;;;;;;;;;;;;x
+DWFuta135;The madame points me through a flap at the back of the tent. Going inside I see a woman who's gaze and aura seem to radiate command. "Disrobe," she barks at me. As I disrobe, she notices my cock and I get an unexpected slap on the ass. "You're in for true pleasure bitch." \n  She reaches down and grabs my stiffening cock and leads me over to the bed. She bends me over and whistles. "I'm going to fill your cunt with so much cum you whore." I moan as she slips her cock into me. She then reaches around and grabs my cock, squeezing it as she begins to drill me. \n  For the next hour she uses me for her pleasure, while preventing my climax until the very end. When I do, I convulse from the pleasure, as my cock showers me with my own cum and my pussy clenches and squirts on her cock. In a daze, I come to a conclusion.;;;;;;;;;;;;;x
+DWFuta135A;I pay off her contract, and keep her as a lover.;;;;;;;;;;;;;x
+DWFuta135B;It was an experience, but I'm done.;;;;;;;;;;;;;x
+DWFuta140;¢³åÆÌ ª³İ¥³Ì«È ¥³ªÈ «¹²´İ ìÁÌ©ÈçÆĞ ²³¡ÈùÄ²´ ©³’È ëÁØ¬ÈÉ«ÈåÆÌ ò¼¬·İëÆĞ ¬È¯¹éˆ«³Ü¥³. ¯´¦·©´Ì ª³İ«ÈÌ«È ¢³«¸ ¥´²³Ì ÿ¼Ì¥´«¸ ¡³Øª³ùÇ ğ‰ªÈçˆ ¬·¢¹ÉªÈÉª³«¸ †ˆ¥´²³«¹Ü¥³. ëŠ¦ÈåÆÌ äŒù¼ ²³Ø¸ ñÁĞçÀİ²³Ì ù¼«ÈÌëÆĞ ìÆĞ¡È¡¸ ô¿«·Üäˆ äŒåÆÌ ëŠ¦ÈùÇ ¡³Øª³«¸ ¥´²³Ì éˆ¥³ÙëŒçˆ äŒ¡³ «¹²´İ«¸ª· ¡¹ÊëÆÌ «È«µ¡ÈæÆĞëÆĞ ²´ìÁĞ¬È èÁĞ«·éˆ«³Ü¥³. ¢³åÆÌ ¢´ ¡ÈéÁÌëÆĞ åŒÈ¨¹ äŒ«¸¡¸ ¥´¥³Ù²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWFuta140A;¢³åÆÌ ²³İª³İ «È«µ¡ÈçÆĞ ì»ã«³²´Ü¬È. «·ª· «È«µ¡ÈæÆĞëÆĞ ²´úÂ.;;;;;;;;;;;;;x
+DWFuta140B;¢³Ì «È«µ¡ÈæÆĞ ªÈ×«·²´, ¥³İªÈÌùÇ «¹²´İ¡ÈĞ«È «³Ì¬·Ì²³¡ÈĞ.;;;;;;;;;;;;;x
+DWFuta150;ª³İ¥³ÌùÇ ª³İ«ÈÌëÆÌ ¨´ëŠ ë‹åÆİ²³Ì «È«µ¡È•ÁÌ«È«¹Ü¥³. äŒùÇ ¡³Ø¡³ÉëÆÌ ¢·èŠ¢³ «ÈÌª³İ¬·É«È«¹ª· ¢´¡³ äŒùÇ «È«µ¡È¡³ •Æá¢³ÜëÆĞ‘´«µ ªÈ¡³Ì¡³åÆÌìÁĞ èˆçŒäˆ æÆÏäˆ«ÈÜ«·Ü¥³åÆÌ¡·ÛëÆĞ «³Ğ«³Ü¥³. ìŠ©¹Ì«¸ «ÈÜ¥·Ì ¥³çÆÌ ª³¦³ØæÆĞ«È äŒùÇ «È«µ¡È¡³ •Æá¢³¬³ ©³ÉêŠçÆĞ ®¹Ü¥³. ª³İ«ÈÌëÆÌ ÿ¼Ì¥´«¸ ¥´²³Ì ¢³ùÇ ¡³Øª³ğ‰ªÈçˆ ‡Š°³¢³¦ÈçÆĞ ¬¸ä»İ²´ìŠ¦¹äˆ ²´Ü¥³. äŒåÆÌ ¬³ªÈÌ«¸¡¸ «ÈÜåÆÌ¡·Ûéˆ¥³ äÁİ¬·Ì«¸ «ÈÜåÆÌ ¡·Û«È ¥· ¡³®È«ÈÜ¥³äˆ ª´İ¡³É²³åÆÌ¡· ¡³á«³Ü¥³. ¢³åÆÌ äŒùÇ ¬¸«³ÌëÆĞ äˆ¦¹²³äˆ ¥´¥³Ù²³«¹Ü¥³.;;;;;;;;;;;;;x
+DWFuta150A;¥³İªÈÌùÇ «È«µ¡È«¸ ¡³Øª³²³äˆ ¥³İªÈÌùÇ ª·ÌèÁĞëÆĞ ©³Ï«³æÆĞ«È¬Èë‰.;;;;;;;;;;;;;x
+DWFuta150B;¬·åÆÌ ¥³İªÈÌùÇ ª·ÌèÁĞëÆĞ ©³Ï«³æŒ«ÈĞêŠ «·ÚêÆÙ¢È¥³. «³Ì¬·Ì²³Ì «¹²´İ¡ÈĞ«È ô¿¡ÈĞ.;;;;;;;;;;;;;x
+DWFuta160;The merchant introduces me to the futanari in question. He covers her education, which is quiet impressive, and he shares examples of her quick wit. I nod absent mindedly as she's doing little to conceal an impressive bulge, and if that's not distracting, her rather average breasts are still situated to show a great shot of her cleavage. I then wonder how much of her skill also distracting those she's doing business with. \n  I realize the merchant has completed speaking to me and he's now smiling and awaiting a response.;;;;;;;;;;;;;x
+DWFuta160A;I look forward to the extra diplomatic assistance.;;;;;;;;;;;;;x
+DWFuta160B;Oh, I appreciate the offer, but I've changed my mind.;;;;;;;;;;;;;x
+DWFuta170;The merchant introduces me to the futanari in question. He covers her education, which is quiet impressive, and he shares examples of her quick wit. I nod absent mindedly as she's doing little to conceal her impressive assets as she performs a sensual dance routine. I can immediately see how her assets compliment her skills in distracting those she's trying to extract information from. \n  I realize the merchant has completed speaking to me and he's now smiling and awaiting a response.;;;;;;;;;;;;;x
+DWFuta170A;I look forward to the extra intrigue assistance.;;;;;;;;;;;;;x
+DWFuta170B;Oh, I appreciate the offer, but I've changed my mind.;;;;;;;;;;;;;x
+DWFuta180;The merchant introduces me to the futanari in question. He covers her education, which is quiet impressive, and he shares examples of her quick wit. I nod absent mindedly as her breasts are so huge that her blouse seems to be losing the battle in keeping them contained. She notices me staring at her chest, and as her cheeks blush, I notice her already impressive bulge grow. I shake my head to regain my thoughts, and I imagine her explaining alterations in taxes or business initiatives and wonder how much her audience would actually comprehend, which could be both good and bad. \n  I realize the merchant has completed speaking to me and he's now smiling and awaiting a response.;;;;;;;;;;;;;x
+DWFuta180A;I look forward to the extra stewardship assistance.;;;;;;;;;;;;;x
+DWFuta180B;Oh, I appreciate the offer, but I've changed my mind.;;;;;;;;;;;;;x
+DWFuta190;The merchant introduces me to the futanari in question. He covers her education, which is quiet impressive, and he shares examples of some of her feats of strength. I nod absent mindedly as I stare at an obviously strong woman, with some of the largest breasts I've ever seen. I had heard that breasts that size are typically a detriment in combat, yet she sits upon various beasts that she has apparently slain herself. She seems to smile at me, and as she shifts, I notice a dangerously huge cock that seems to be barely contained within a loin cloth/holster. I shake my head to regain my thoughts, and wonder how many have fallen under her blade while being distracted by her body. \n  I realize the merchant has completed speaking to me and he's now smiling and awaiting a response.;;;;;;;;;;;;;x
+DWFuta190A;I look forward to the extra martial assistance.;;;;;;;;;;;;;x
+DWFuta190B;Oh, I appreciate the offer, but I've changed my mind.;;;;;;;;;;;;;x
+DWFuta200;ª³İ«ÈÌëÆÌ ¢³«¸¡¸ ‡Š°³¢³¦ÈçÆĞ êˆ¡´²³«¹Ü¥³. «ÈÌª³İ¬·É«Èäˆ ìˆëÀİ²³Ì äŒ¢¹åÆÌ ä‰ëÅÉëÆĞ ¬³Ğ ©³ÏëÆÌæÆÛ éˆ«¹Üäˆ ¡Èé»Ì¬·É«ÈÌ «º¬·ĞëÆĞ «³åÆÌæÆÛ ²´Ü¥³. ¢³åÆÌ äŒ¢¹¡³ «³èŠ¡·Ûæˆ ¡·Ğ®È¬È «³Îäˆ «ÈÜåÆÌ ¡·ÛëÆĞ éˆäˆ «µÉ¡³Ì ¥³İÿ¼İ²³«¹Ü¥³. äŒ¢¹åÆÌ ¢³çÆĞ ®¹¥³éˆäˆåÆÌ «µÉ¡³Ì ’µØ«È éÁÑ«·¬È¨¹ ¨³Ğ²³«¹Ü¥³. " ù¿¬·É«ÈÌ ëÅÉ®¸åÆÌ ¢´¨¹ÌùÇ ¨³ëÆØò¼ ¬·İªÈÌ«¸ ©È²³¨¹Ì «³èŠ¡·Ûæˆ «³¢È¬Èë‰." ¢³åÆÌ ¬³ØªÈ ª´İ¡³É²³Ì ‡Š äŒ¢¹¡³ èŠ«·Ì¡³ ²¹Ì¨¹İ²´éˆ«Èäˆ ¢´ ¬³ªÈÌ«È ²³ÌªÈØ²´éˆ«¹Ü¥³. «¹â«¸ «ÈÜ¥·Ì ª³İ«ÈÌëÆÌ ¢³ùÇ ¥´¥³ÙëÆĞ ¡È¥³¦Èäˆ «ÈÜåÆÌ æÆÛ éˆ«¹Ü¥³.;;;;;;;;;;;;;x
+DWFuta200A;¢³åÆÌ «È «¹İ¬·É«ÈÌ æˆëÁØëÆĞ ¡È·«È ©³Ï¡¸ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x
+DWFuta200B;ëˆ, ¥³İªÈÌùÇ ¬¸«³ÌëÆÌ ¡³Øª³²³¬È¨³Ì ¨³ëÆØëÆĞ ©³šÂÜ«·ë‰.;;;;;;;;;;;;;x
+DWFuta220;ª³İ«ÈÌëÆÌ ¢³«¸¡¸ ª·ÌèÁĞ²³Ğ ‡Š°³¢³¦ÈçÆĞ êˆ¡´²³«¹Ü¥³. äŒ¢¹ùÇ «ÈçÆØëÆÌ ¨¸«È«Èäˆ äŒ¢¹åÆÌ ä»İªÈÉ¬·ÉëŒçˆ ä‰ëÅÉ©³Ï¬È «³Î«³ÜëÆØ«¸æˆ «·Ø®·İ¢³Ì ¡ÈêÁĞæÆĞëÆĞ ¡³¬Èäˆ «ÈÜåÆÌ ë‹åÆİ²³Ì «¹¬³¦³äˆ ²³«¹Ü¥³. ¢³åÆÌ äŒ¢¹çÆĞ ®·ëÆØ éˆ«³ÜëÆĞ‘´ äŒ¢¹ùÇ îÆÌ ¡³êÆØ«È ¡³ÌªÈÌ²È äŒ¢¹ùÇ ë»Û¬³¦³É«¸ ¨´¥³Ğ¦¹ «ÈÜåÆÌ ¡·ÛëÆĞ éˆ«³Ü¥³. äŒ¢¹ùÇ åÁÌ«¸åÆÌ ¬³İ¢³ÌÈ¡³ éˆ«¹Üäˆ äŒ¢¹ùÇ ê»Ì¡³¦³ÉëÆÌ ë‹ñ»É¬·É«È¡¸ ëÁØ¬ÈÉ«¹Ü¥³. ¢³åÆÌ ¬·İªÈÌëÆĞ ®³¦Èäˆ ¨·¦ÈçÆĞ ñÆÌæÆĞ«·Ü¥³. äŒ¦·äˆåÆÌ ª³İ«ÈÌ«¸¡¸ ¬·İ¨³Ğçˆ ª·ÌèÁĞçˆ ìŠåÆÌ¡·Û«È¢µäˆ ô¿èÁĞ«·Üäˆ ª³İ«ÈÌëÆÌ ¢³ùÇ ¥´¥³ÙëÆĞ ¡È¥³¦ÈåÆÌ¡· ¡³á«³éˆ«¹Ü¥³.;;;;;;;;;;;;;x
+DWFuta220A;¨¸«È¡³ «·‘·Ì¡·ÛæÆĞëÆĞ ²³Ğ êŠ «ÈÜëÆĞ¬È ¡È¥´ô¿åÆÌäÁÌ;;;;;;;;;;;;;x
+DWFuta220B;ëˆ, äˆ¨³Ù¬È¨³Ì ¢³åÆÌ ¨³ëÆØëÆĞ ©³šÂÜ«·.;;;;;;;;;;;;;x
+DWFuta15;\n\n\n¥³İªÈÌëÆÌ ‡Š°³¢³¦ÈçÆĞ ª·Ì°´É²³ĞêŠ «ÈÜêÆÙ¢È¥³. \n èˆæÆÌ ª·Ì°´É ª³²³İæÆĞëÆÌ û¿ì»İ¬·ÉëŒçˆ ©³çˆ ¬·ÉëÀİô¿Ù¢È¥³.;;;;;;;;;;;;;x
+DWFuta15A;Futanari;;;;;;;;;;;;;x
+DWFuta15B;Masculine;;;;;;;;;;;;;x
+DWFuta15C;ª·İ¬·É ûÄ²µİ ª·Ì°´É;;;;;;;;;;;;;x
+DWFuta15C;...that I'm warming up to the idea of wearing trousers.;;;;;;;;;;;;;x
+DWFuta16;\n\n\n¥³ëÆØ ìÁİ ²³¢³çÆĞ ª·Ì°´É ¡³åÆİ²³Ù¢È¥³:\nîÆÌ ¬³¬È ª³¦³İ•ÁÌ\n¬³ÉëÆÌ ¬³¬È ª³¦³İ•ÁÌ\nîÆÌ ¡³êÆØ ª³¦³İ•ÁÌ (¦¸ìŒ©È«·Ì«È¦³¨¹Ì)\n¬³ÉëÆÌ ¡³êÆØ ª³¦³İ•ÁÌ (¦¸ìŒ©È«·Ì«È¦³¨¹Ì)\n\n¥³İªÈÌëÆÌ ëˆ¬ÈÉ ²³¢³¨³Ì ª·Ì°´É ¡³åÆİ²³äˆ èˆæÆÌ ª·Ì°´ÉëÆÌ û¿ì»İ¬·ÉëŒçˆ ©³çˆ ¬·ÉëÀİô¿Ù¢È¥³.;;;;;;;;;;;;;x
+DWFuta12A;¢³åÆÌ îŒäˆ ëŠ¦³Ø²³Ì ¡·ÛëÆĞ ì»ã«³²³¬È!;;;;;;;;;;;;;x
+DWFuta12B;¢³åÆÌ ¬³Éäˆ «µÓëÆÌ ¡·ÛëÆĞ ì»ã«³²³¬È!;;;;;;;;;;;;;x
+DWFuta12C;¢³åÆÌ îŒäˆ ëŠ¦³Ø²³Ì ¡·ÛëÆĞ ì»ã«³²³¬È!;;;;;;;;;;;;;x
+DWFuta12D;¢³åÆÌ ¬³Éäˆ «µÓëÆÌ ¡·ÛëÆĞ ì»ã«³²³¬È!;;;;;;;;;;;;;x
+DWFuta11;\n\n\n¥³İªÈÌëÆÌ «¹ª·İ²µİò¼ ¡³êÆØª·Ğ¬·İëÆĞ ª·Ì°´É²³ĞêŠ «ÈÜêÆÙ¢È¥³. (–ˆåÆÌ,¥³İªÈÌùÇ ¬³¬Èù¼ ¡¸«ÈïÆÉª·İ) \nèˆæÆÌ ª·Ì°´ÉëÆÌ û¿ì»İ¬·ÉëŒçˆ ¬·ÉëÀİô¿Ù¢È¥³.;;;;;;;;;;;;;x
+DWFuta11A;«¹¬³¡³áëÆÌ;;;;;;;;;;;;;x
+DWFuta11B;ª·İ¬·É ûÄ²µİ ª·Ì°´É;;;;;;;;;;;;;x
+DWFuta12;\n\n\n¥³İªÈÌ«È ª·Ì°´É²³ĞêŠ «ÈÜåÆÌ ²³İè»ÉæÆĞ:\nîÆÌ ¬³¬È «´‡ˆ¡³ (¡¸«È¦³¨¹Ì)\n¬³ÉëÆÌ ¬³¬È «´‡ˆ¡³ (¡¸«È¦³¨¹Ì)\nîÆÌ ¡³êÆØ «´‡ˆ¡³\n¬³ÉëÆÌ ¡³êÆØ «´‡ˆ¡³\n\n²³¢³¨³Ì ª·Ì°´É²³ĞêŠ «ÈÜëŒ¨¹ ª·Ì°´ÉëÆÌ û¿ì»İ¬·ÉëŒçˆ ¡¹Ğ¬·İô¿Ù¢È¥³.;;;;;;;;;;;;;x
+#### Rough text length for using narrative events ###############################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################

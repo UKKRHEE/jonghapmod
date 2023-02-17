@@ -1,0 +1,78 @@
+RETTYPE_ELF = 
+{
+	first_type = 5
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		trait = elf
+	}
+	
+	modifier = {
+		archers_offensive = 0.2
+		archers_defensive = 0.1
+	}
+}
+
+RETTYPE_ORC = 
+{
+	first_type = 1
+	first_amount = 200
+	
+	potential = {
+		is_nomadic = no
+		trait = orc
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.2
+		heavy_infantry_morale = 0.4
+	}
+}
+
+
+RETTYPE_FAIRY = 
+{
+	first_type = 3
+	first_amount = 150
+	
+	potential = {
+		is_nomadic = no
+		trait = fairy
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.2
+		light_cavalry_defensive = 0.2
+	}
+}
+
+RETTYPE_NEKO = 
+{
+	first_type = 0
+	first_amount = 100
+	
+	potential = {
+		is_nomadic = no
+		trait = neko
+	}
+	
+	modifier = {
+		light_infantry_offensive = 1
+	}
+}
+
+RETTYPE_KITSUNE = 
+{
+	first_type = 0
+	first_amount = 100
+	
+	potential = {
+		is_nomadic = no
+		trait = kitsune
+	}
+	
+	modifier = {
+		light_infantry_defensive = 1
+	}
+}

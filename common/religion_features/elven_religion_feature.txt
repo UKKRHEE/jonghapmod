@@ -1,0 +1,67 @@
+religion_nature = {
+
+	religion_elven = {
+		picture = GFX_religion_feature_elven
+		trigger = {
+			religion = elven_pagan_reformed
+			has_selected_religion_feature = religion_feature_hunt
+			NOR = {
+				has_selected_religion_feature = religion_patriarchal
+				has_selected_religion_feature = religion_matriarchal
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				set_max_consorts = 5	
+				set_priests_can_marry = yes
+				set_priests_can_inherit = no
+				set_allow_looting = yes
+				set_feminist = yes
+				set_female_temple_holders = yes
+				set_male_temple_holders = no
+				set_aggression = 1.5
+				set_allows_matrilineal_marriage = yes
+				set_hard_to_convert = yes
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+}
+
+
+religion_doctrine = {
+	religion_feature_hunt = {
+		picture = GFX_religion_doctrine_wild_hunt
+		potential = {
+			has_game_started = yes
+			religion = elven_pagan_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = elven_pagan_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_adventuring
+				has_selected_religion_feature = religion_seafaring
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_adventuring }
+			custom_tooltip = { text = tooltip_religion_feature_rivermovement }
+			custom_tooltip = { text = tooltip_religion_feature_ship_maintenance }
+			custom_tooltip = { text = tooltip_religion_feature_seafaring }
+			hidden_tooltip = { 
+				enable_prepared_invasion = yes
+				set_seafaring = yes
+				set_allow_rivermovement = yes
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	}

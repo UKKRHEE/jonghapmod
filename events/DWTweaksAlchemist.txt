@@ -1,0 +1,199 @@
+namespace = DWTweaksAlchemist
+
+## Alchemist \ Village Mystic shopping
+# .200 Visit the Alchemist
+narrative_event = {	
+	id = DWTweaksAlchemist.1
+	desc = "DWCourt200"
+	picture = alchemist
+	title = dw_alchemist_shopping
+	is_triggered_only = yes # Triggered via dw_potion_shopping decision
+	
+	option = { # Body enhancements
+		name = DWTweaksAlchemistBodyChoice
+		narrative_event = { id = DWTweaksAlchemist.2 }
+	}
+	
+	option = { # Ruler enhancements
+		name = DWTweaksAlchemistRulerChoice
+		narrative_event = { id = DWTweaksAlchemist.3 }
+	}
+	
+	option = { # Exotic potions
+		name = DWTweaksAlchemistExoticChoice
+		narrative_event = { id = DWTweaksAlchemist.4 }
+	}
+	
+	option = { # Nothing today thanks
+		name = DWCourtNothing
+	}	
+}
+narrative_event = {	
+	id = DWTweaksAlchemist.2
+	desc = "DWCourt200"
+	picture = alchemist
+	title = dw_alchemist_shopping
+	is_triggered_only = yes # Triggered via dw_potion_shopping decision
+	
+	option = { # Gender Bender potion
+		name = DWCourt200A
+		trigger = {
+			has_gender_bender_content = yes
+			is_adult = yes
+			is_pregnant = no
+			wealth = 50			
+		}
+		wealth = -50
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+				}
+				set_gender = opposite
+				remove_tits = yes
+				remove_cock = yes
+				remove_trait = masculine
+				remove_trait = futa
+				add_trait = small_dick
+				add_trait = feminine
+				if = {
+					limit = {
+						trait = lilith
+					}
+					remove_trait = lilith
+					add_trait = incubus
+				}
+				else_if = {
+					limit = {
+						trait = alu_fiend
+					}
+					remove_trait = alu_fiend
+					add_trait = cambion
+				}
+			}
+			else = {
+				set_gender = opposite
+				remove_cock = yes
+				remove_trait = feminine
+				add_trait = small_tits
+				add_trait = masculine
+				if = {
+					limit = {
+						trait = incubus
+					}
+					remove_trait = incubus
+					add_trait = lilith
+				}
+				else_if = {
+					limit = {
+						trait = cambion
+					}
+					remove_trait = cambion
+					add_trait = alu_fiend
+				}
+			}
+		}
+		clr_character_flag = portrait_is_fine # If the player has a custom portrait they want to change
+	}
+	option = { # Potion of Youth
+		trigger = {
+			practical_age = 41
+			wealth = 250
+		}
+		name = DWCourt200B
+		wealth = -250
+		hidden_tooltip = {
+			add_age = -25
+		}
+	}	
+
+	option = { # Health Potion
+		trigger = {
+			NOT = { health = 10 }
+			wealth = 25
+		}
+		name = DWCourt200D
+		hidden_effect = { narrative_event = { id = DWCourt.260 } }
+	}
+	option = { # Nothing today thanks
+		name = DWCourtNothing
+	}
+}
+
+narrative_event = {	
+	id = DWTweaksAlchemist.3
+	desc = "DWCourt200"
+	picture = alchemist
+	title = dw_alchemist_shopping
+	is_triggered_only = yes # Triggered via dw_potion_shopping decision
+	
+	option = { # Good Fortune
+		trigger = {
+			wealth = 50
+		}
+		name = DWCourt200C
+		hidden_effect = { narrative_event = { id = DWCourt.230 } }
+	}
+	option = { # Beauty Bath
+		trigger = {
+			wealth = 50
+			NOT = {
+				trait = fair
+			}
+		}
+		name = DWCourt200G
+		hidden_effect = { narrative_event = { id = DWCourt.270 } }
+	}
+	option = { # Silver Tongue
+		trigger = {
+			wealth = 10
+		}
+		name = DWCourt200H
+		hidden_effect = { narrative_event = { id = DWCourt.280 } }
+	}
+	option = { # Nothing today thanks
+		name = DWCourtNothing
+	}	
+}
+
+narrative_event = {	
+	id = DWTweaksAlchemist.4
+	desc = "DWCourt200"
+	picture = alchemist
+	title = dw_alchemist_shopping
+	is_triggered_only = yes # Triggered via dw_potion_shopping decision
+	
+	option = { # Aphrodite's Curse
+		trigger = {
+				wealth = 50
+				fertility = 0.1
+		}
+		name = DWCourt200E
+		hidden_effect = { narrative_event = { id = DWCourt.240 } }
+	}
+	option = { # DWTW Serpent's Purge
+		trigger = {
+			is_pregnant = yes
+		}
+		name = DWCourt200F
+		hidden_effect = { narrative_event = { id = DWTweaksSP.3 } }
+	}
+
+	option = { # Werewolf Blood
+		trigger = {
+			has_classic_monsters_content = yes
+				OR = {
+					trait = werewolf
+					trait = werekin
+					trait = werewolf_ancient
+				}
+				wealth = 100
+				NOT = { has_character_modifier = dw_werewolf_blood_potion } 
+		}
+		name = DWCourt200I
+		hidden_effect = { narrative_event = { id = DWCourt.290 } }
+	}
+	option = { # Nothing today thanks
+		name = DWCourtNothing
+	}	
+}

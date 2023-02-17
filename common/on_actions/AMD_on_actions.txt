@@ -1,0 +1,91 @@
+################################################################################
+#		Crusader Kings 2 : Adult Medieval Desires
+################################################################################
+#
+#	1. 게임 시작시 3종 신체 특성 부여
+#	2. 탄생한 캐릭터에게 동정 및 처녀 부여
+#	3. 12세가 되면 가슴과 남근 부여
+#	
+#	
+#
+
+on_startup = {		#게임 시작, 그리고 불러올 때.
+	events = {
+		AMD.9999	#APU 활성화
+		
+		AMD.10001	#바디체크 1
+		AMD.10002	#바디체크 2
+	}
+}
+
+on_chronicle_start = {		#게임 시작.
+	events = {
+		AMD.10001	#바디체크 1
+		AMD.10002	#바디체크 2
+		AMD.10010	#모드 시작 알림 및 룰러디자이너 캐릭터 바디체크 
+	}
+}
+
+on_yearly_pulse = {	#매년
+	events = {
+		AMD.10022		#게임 시작후 생성된 캐릭터 바디체크
+		AMD.24001		#공부를 개시한 자를 위하여
+		#AMD.26292		#창관 정년퇴직 대상자에게 뜬다...보류.
+	}
+}
+on_decade_pulse = {
+	events = {
+		AMD.25098
+	}
+}
+on_birth = {		#신생아 탄생
+	events = {
+		AMD.10023		#부모의 동정/처녀 삭제, 신생아 처녀/동정 부여, 성장잠재력 부여.
+	}
+}
+on_yearly_childhood_pulse = {	# 2-16세의 아이에게 뜨는 이벤트.	
+	events = {
+		AMD.10024		#	12세 바디체크
+	}
+}
+#on_adolescence = {	events = {		}	}	#	12세 생일에 뜨는 이벤트
+on_adulthood = {	#캐릭터가 성인이 될 때
+	events = {
+		AMD.10024	#바디체크
+		AMD.10025	#기술부여
+	}
+}
+on_marriage = {	#결혼
+	events = {	#	FROM 과 new_character 가 결혼, ROOT는 FROM의 주군(영주). 두 당사자가 각각 자기 주군에게 이벤트 실행.
+		AMD.11000
+	}
+}
+on_forced_consort = {	#토속 영주가 죄수를 첩으로 만들 때.
+	events = {	# ROOT = 첩이 된 여성, FROM = 첩을 들인 영주.
+		#AMD.11200
+	}
+}
+on_pregnancy = {	#임신 2개월차의 임부에게. ROOT = 임부.
+	events = {		
+		AMD.13000	#부모 경험처리
+ 	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+#on_new_holder = {	events = {		}	}
+
+# A character leaves or is forced to leave a society. 	Root = Character	From = Society
+on_character_leave_society = {
+	events = {
+		AMD.25099 #헤르메스/악마숭배 연금술 지원을 받고 있다면 제거한다.
+	}
+}
+
+
+
+on_death = {
+	events = {
+		AMD.10099 #캐릭터 사망시, 모든 AMD 모드 플래그를 제거한다.
+	}
+}
+

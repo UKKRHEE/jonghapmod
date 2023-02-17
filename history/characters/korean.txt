@@ -1,0 +1,336 @@
+####가톨릭 고대 신의 후예####
+1 = {	
+	name="Min-Hyee" #가톨릭의 신이자 우주의 창시자
+	dynasty=20000000
+	religion="lilitu"
+	government=theocracy_government
+	culture="german"
+	father=95000
+	mother=95000
+	martial=99 diplomacy=99 stewardship=99 intrigue=99 learning=99
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5 add_trait=gigantic_dick add_trait=angel add_trait=lf_neko
+	add_trait=minhyee add_trait=yiminhyee add_trait=crowned_by_pope add_trait=lustful add_trait=sexcrazed add_trait=seducer
+	wealth = 100000
+	prestige = 100000
+	piety = 100000
+	1.1.2={
+		birth=yes
+		add_spouse_matrilineal=95000
+		immortal_age = 20
+		create_bloodline = {
+			type = son_minhyeesblood
+			has_dlc = "Holy Fury"
+	    }
+		create_bloodline = {
+			type = minhyeesblood
+			has_dlc = "Holy Fury"
+	    }
+		name = "Min-Hyee"
+		effect = {
+			add_spouse_matrilineal=95000
+			add_offmap_currency = {
+				offmap = offmap_china
+				value = 1000000
+			}
+			add_offmap_currency = {
+				offmap = offmap_dwse
+				value = 1000000
+			}
+		}
+	}
+	17.1.1 = {
+		add_trait = immortal
+			set_immortal_age = 17
+	}	
+	29.1.1 = {
+		effect = {
+			add_gold = 15000
+			add_piety = 15000
+			add_prestige = 15000
+			set_immortal_age = 17
+			immortal_age = 17
+			add_spouse_matrilineal=5
+			add_spouse_matrilineal=6
+			add_spouse_matrilineal=7
+			add_spouse_matrilineal=8
+			add_spouse_matrilineal=9
+			add_spouse_matrilineal=95001
+			add_spouse_matrilineal=95002
+			add_spouse_matrilineal=95140
+		}
+	}
+	812.1.1 = {
+		effect = {
+			add_spouse_matrilineal=217704
+		}
+	}	
+    960.1.1={
+		effect = {
+			add_spouse_matrilineal=345021
+		}
+	}
+    1031.1.1={
+		effect = {
+			add_spouse_matrilineal=95181
+			c_95181 = {
+				add_trait = immortal
+			}
+		}
+	}
+	1064.1.1 = {
+		effect = {
+			add_spouse_matrilineal=30206
+			add_spouse_matrilineal=30205
+			c_30206 = {
+				add_trait = immortal
+			}
+			c_30205 = {
+				add_trait = immortal
+			}
+		}
+	}
+	1066.1.1 = {
+		effect = {
+			add_spouse_matrilineal=220820
+			add_spouse_matrilineal=220822
+			add_spouse_matrilineal=100004
+			add_spouse_matrilineal=7757
+		}
+	}
+}
+2 = {	
+	name="Min-Jung" 
+	dynasty=20000017
+	religion="lilitu"
+	culture="german"
+	father=1
+	mother = 95000
+	martial=111 diplomacy=111 stewardship=111 intrigue=111 learning=111
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_penis_3
+	
+	add_trait = son_of_minhyee
+	2.1.1={
+		birth=yes
+		immortal_age = 15
+	}
+}
+3 = {	
+	name="Min-Joo" 
+	dynasty=20000017
+	religion="lilitu"
+	culture="german"
+	father=2
+	martial=120 diplomacy=120 stewardship=120 intrigue=120 learning=120
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5 add_trait=gigantic_dick
+	add_trait = grandson_of_minhyee
+	12.1.1={
+		birth=yes
+		immortal_age = 9
+		employer = 1
+	}
+}
+4 = {	
+	name="Min-seok" 
+	dynasty=20000017
+	religion="lilitu"
+	culture="german"
+	father=2
+	martial=120 diplomacy=120 stewardship=120 intrigue=120 learning=120
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5 add_trait=gigantic_dick
+	add_trait = holyorder_grandson_of_minhyee
+	25.1.1={
+		birth=yes
+		immortal_age = 9
+		employer = 1
+	}
+}
+5 = {	
+	name="Eun-Seo" 
+	dynasty=20000012
+	religion="lilitu"
+	culture="german"
+	father=1
+	female=yes
+	martial=120 diplomacy=120 stewardship=120 intrigue=120 learning=120
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5 add_trait=chaste
+	add_trait = dougther_of_minhyee
+				add_trait=AMD_virgin
+				add_trait=AMD_virgin_girl
+				add_trait=virgin
+	12.1.1={
+		birth=yes
+	}
+	29.1.1 = {
+		add_spouse=1
+		immortal_age = 16
+	}
+	
+}
+6 = {	
+	name="Eun-Ha" 
+	dynasty=20000013
+	religion="lilitu"
+	culture="german"
+	father=1
+	female=yes
+	martial=120 diplomacy=120 stewardship=120 intrigue=120 learning=120
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_breast_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5
+	add_trait = dougther_of_minhyee_2 add_trait=chaste
+				add_trait=AMD_virgin
+				add_trait=AMD_virgin_girl
+				add_trait=virgin
+	13.1.1={
+		birth=yes
+	}
+	29.1.1 = {
+		add_spouse=1
+		immortal_age = 16
+	}
+}
+7 = {	
+	name="Seo-Min" 
+	dynasty=20000014
+	religion="lilitu"
+	culture="german"
+	father=1
+	female=yes
+	martial=120 diplomacy=120 stewardship=120 intrigue=120 learning=120
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_breast_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5
+	add_trait = dougther_of_minhyee_3 add_trait=chaste
+				add_trait=AMD_virgin
+				add_trait=AMD_virgin_girl
+				add_trait=virgin
+	25.1.1={
+		birth=yes
+	}
+	29.1.1 = {
+		add_spouse=1
+		immortal_age = 16
+	}
+}
+8 = {	
+	name="Seo-Ah" 
+	dynasty=20000015
+	religion="lilitu"
+	culture="german"
+	father=1
+	female=yes
+	martial=120 diplomacy=120 stewardship=120 intrigue=120 learning=120
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_breast_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5
+	add_trait = dougther_of_minhyee_4 add_trait=chaste
+				add_trait=AMD_virgin
+				add_trait=AMD_virgin_girl
+				add_trait=virgin
+	29.1.1={
+		birth=yes
+	}
+	29.1.1 = {
+		add_spouse=1
+		immortal_age = 16
+	}
+}
+9 = {	
+	name="Seo-Ji" 
+	dynasty=20000016
+	religion="lilitu"
+	culture="german"
+	father=1
+	female=yes
+	martial=120 diplomacy=120 stewardship=120 intrigue=120 learning=120
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_breast_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5
+	add_trait = dougther_of_minhyee_5 add_trait=chaste
+				add_trait=AMD_virgin
+				add_trait=AMD_virgin_girl
+				add_trait=virgin
+	23.1.1={
+		birth=yes
+	}
+	29.1.1 = {
+		add_spouse=1
+		immortal_age = 16
+	}
+}
+95002 = {	
+	name="Wexianuous'wx" #드래곤 황제
+	dynasty=20000003
+	religion="lilitu"
+	culture="german"
+	father=1
+	mother=95000
+	female=yes
+	martial=100 diplomacy=100 stewardship=100 intrigue=100 learning=100
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5
+	add_trait=minhyee add_trait=crowned_by_pope add_trait=lustful
+	add_trait = dougther_of_minhyee_6 add_trait=chaste
+				add_trait=AMD_virgin
+				add_trait=AMD_virgin_girl
+				add_trait=virgin
+	100.1.3={
+		birth=yes
+		name = "Wexianuous'wx de Labio-krote"
+		add_spouse=1
+		immortal_age = 16
+	}
+}
+95003 = {	
+	name="Geranmons" #드래곤 황제 2
+	dynasty=20000003
+	religion="lilitu"
+	culture="german"
+	father=1
+	mother=95002
+	martial=100 diplomacy=100 stewardship=100 intrigue=100 learning=100
+    add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
+	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
+	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
+	add_trait=reincarnation add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=AMD_bodysize_gene_5
+	add_trait=minhyee add_trait=crowned_by_pope add_trait=lustful
+	980.1.3={
+		birth=yes
+		immortal_age = 16
+	}
+	1980.1.3={
+		name = "Taejo"
+		death=yes
+	}
+}

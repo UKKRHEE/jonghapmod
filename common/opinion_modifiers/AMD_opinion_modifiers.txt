@@ -1,0 +1,22 @@
+#	Crusader Kings 2 : Advanced Medieval Desires			#	Opinion Modifiers
+
+
+AMD_opinion_had_sex = {	opinion = 0	years = 9999	}
+AMD_opinion_raped_me = {	stacking = no	opinion = -50	prison_reason = yes		months = 1200	}
+AMD_opinion_raped_close_kin = {	stacking = no	opinion = -30	prison_reason = yes		months = 1200	}
+AMD_opinion_raped_family = {	stacking = no	opinion = -10	prison_reason = yes		months = 240	}
+AMD_opinion_had_first_sex = {	opinion = 5	years = 9999	}
+
+
+#	복종
+AMD_opinion_yielded = {	opinion = 99	non_interference = yes	}	#	이 기능을 validator가 오류로 판정ㅎㅁ
+AMD_opinion_obedient = {	stacking = no	opinion = 999	obedient = yes	}
+AMD_opinion_to_slave = {	opinion = 50	}
+
+
+#	가학/피학 특수보정. 중첩가능
+AMD_opinion_masochism = {	opinion = 10	}
+AMD_opinion_sadism = {	opinion = 10	}
+
+AMD_opinion_first_good = {	opinion = 25	years = 9999	}
+AMD_opinion_first_bad = {	opinion = -25	years = 9999	}

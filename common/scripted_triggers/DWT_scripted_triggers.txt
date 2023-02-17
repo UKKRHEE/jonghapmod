@@ -1,0 +1,33 @@
+
+
+
+
+# Override for CK2's stock is_virgin_trigger:
+#is_virgin_trigger = {
+#	NOR = {
+#		any_lover = { always = yes }
+#		any_child_even_if_dead = { always = yes }
+#		any_spouse_even_if_dead = { always = yes }
+#		is_pregnant = yes
+#		trait = pregnant
+#		trait = lovers_pox
+#		trait = has_aztec_disease
+#		trait = syphilitic
+#	}
+#	OR = {
+#		NOT = { age = 25 }
+#		NOT = { trait = virgin }
+#		trait = celibate
+#		trait = chaste
+#		trait = shy
+#		is_ascetic_trigger = yes
+#	}
+#}
+
+has_rape_content = {
+	has_global_flag = rape_content_yes
+}
+
+has_dwe_started = {
+    has_global_flag = dark_world_extras_started
+}

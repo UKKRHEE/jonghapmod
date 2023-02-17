@@ -1,0 +1,679 @@
+############ Unique NPCs
+
+ala_dwr_unique_npcs; §R DWR äˆë‹ NPC?
+ala_dwr_unique_npcs_desc; Dark WorldùÇ ª³ëÀÝ¬³ ¬·ÝùÇ «ÈÌèÁÐëÆÐ ª³ëÀÝ²³«¹ npcsçÆÐ ¨³ÌæÆÙ¢È¥³.
+
+EVTDESCAlaunpc.1; ¡³¬ÈçÆÐ ª·Ì°´É²³ªÈÙªÈëˆ. ;;;;;;;;;;;;;
+EVTOPTAAlaunpc.1; ±¸«·¦È °¸«ÈÐ ë»Ùª¹Ì ;;;; x
+EVTOPTBAlaunpc.1; Bordello Options ;;;; x
+EVTOPTCAlaunpc.1; ¨³©·Ùª³ ë»Ùª¹Ì;
+EVTOPTDAlaunpc.1; ¥³ëÆØ §R (¨Èß íÁÐäŠ)? ;;;;;;;;;; x
+EVTDESCAlaunpc.2; ¡³¬ÈçÆÐ ª·Ì°´É²³ªÈÙªÈëˆ. ;;;;;;;;;;;;;
+EVTOPTAAlaunpc.2; îÆÐ¦´ªÈÉ è»ÌêŒ°· ë»Ùª¹Ì ;;;; x
+EVTOPTBAlaunpc.2; ¡¹Ý¡È¬³Ý ë»Ùª¹Ì ;;;;;;;;;; x
+EVTOPTCAlaunpc.2; íÁÐäŠ ;;;;;;;;;;; x
+
+EVTDESCAlaunpc.11; ±¸«·¦È °¸«ÈÐ éŒ¦´Ì®È 1 of 4 ;;; x
+EVTOPTAAlaunpc.11; äŒ¦ÈØ ¨¸å‹;
+EVTOPTBAlaunpc.11; ©´Éª·Ð ä»ÝìŠ ¨¸å‹;
+EVTOPTCAlaunpc.11; ªÈÌ¥¸¦¸Ð¦³ ¨¸å‹ ;;; x
+EVTOPTDAlaunpc.11; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.12; ±¸«·¦È °¸«ÈÐ éŒ¦´Ì®È 2 of 4 ;;; x
+EVTOPTAAlaunpc.12; ¦³ðÁÌ¬¸Ð ¨¸å‹; x
+EVTOPTBAlaunpc.12; Anna Menus ;;; x
+EVTOPTCAlaunpc.12; Elsa Menus ;;;; x
+EVTOPTDAlaunpc.12; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.13; ±¸«·¦È °¸«ÈÐ éŒ¦´Ì®È 3 of 4 ;;; x
+EVTOPTAAlaunpc.13; Ariel Menus ;;;; x
+EVTOPTBAlaunpc.13; Aurora Menus ;;; x
+EVTOPTCAlaunpc.13; Maleficent ¨¸å‹ ;;;;;;;; x
+EVTOPTDAlaunpc.13; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.14; ±¸«·¦È °¸«ÈÐ éŒ¦´Ì®È 4 of 4 ;;; x
+EVTOPTAAlaunpc.14; ©¸Ð & ¡³êŒ ï»Ì ¨¸å‹;
+EVTOPTBAlaunpc.14; Alice & Margaret Menus ;;; x
+EVTOPTCAlaunpc.14; ¬´êŒ¨ÈÌ & ¬È¢È ¨¸å‹;
+EVTOPTDAlaunpc.14; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlaunpc.20; äŒ¦ÈØ ª·Ì°´É ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.20; portrait38 ;;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.20; GrimhiltåÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;;; x
+EVTOPTCAlaunpc.20; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.21; äŒ¦ÈØ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.21; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.21; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.21; Grimhilt Main Menu (ëŒ)çˆ ô¿æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.22; äŒ¦ÈØ ª·Ì°´É ë»Ùª¹Ì 3 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.22; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.22; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.22; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.22; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.23; äŒ¦ÈØ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.23; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.23; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.23; Grimhilt Main Menu (ëŒ)çˆ ô¿æ»Ð«³ ¡³¡È; x;
+
+EVTDESCAlaunpc.30; ©´Éª·Ð ä»ÝìŠ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.30; portrait28 ;;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.30; DWRò¼ ¡³áëÆÌ ©´Éª·Ð ä»ÝìŠ¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.30; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.31; ©´Éª·Ð ä»ÝìŠ ë»Ùª¹Ì 2 of 4 ;;;; x
+EVTOPTAAlaunpc.31; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.31; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.31; ©´Éª·Ð ä»ÝìŠ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.32; êŒåˆëŠ ÿ¼«ÈïŒ ë»Ùª¹Ì 3 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.32; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.32; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.32; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunc.c.32; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.33; ©´Éª·Ð ä»ÝìŠ ë»Ùª¹Ì 4 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.33; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.33; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.33; ©´Éª·Ð ä»ÝìŠ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x;
+
+EVTDESCAlaunpc.40; ªÈÌ¥¸¦¸Ð¦³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.40; portrait33çˆ ¯´¦ÈÉ°·çÆÐ ª´Ýª·Ý²³ªÈÙªÈëˆ ;;;; x
+EVTOPTBAlaunpc.40; DWRçˆ ªÈÌ¥¸¦¸Ð¦³¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.40; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.41; ªÈÌ¥¸¦¸Ð¦³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.41; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.41; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.41; ªÈÌ¥¸¦¸Ð¦³ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+EVTDESCAlaunpc.42; ªÈÌ¥¸¦¸Ð¦³ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.42; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.42; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.42; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.42; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.43; ªÈÌ¥¸¦¸Ð¦³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.43; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.43; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.43; ªÈÌ¥¸¦¸Ð¦³ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlaunpc.50; ¦³ðÁÌ¬¸Ð ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.50; portrait32 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.50; RapunzelëÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.50; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.51; ¦³ðÁÌ¬¸Ð ë»Ùª¹Ì 2 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.51; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.51; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.51; ¦³ðÁÌ¬¸Ð (ëŒ)çˆ æ»Ð«³ ¡³¡È ìŠ ¨¸å‹ ;;;;;;;;; x
+EVTDESCAlaunpc.52; ¦³ðÁÌ¬¸Ð ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.52; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.52; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.52; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.52; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.53; ¦³ðÁÌ¬¸Ð ë»Ùª¹Ì 4 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.53; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.53; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.53; ¦³ðÁÌ¬¸Ð (ëŒ)çˆ æ»Ð«³ ¡³¡È ìŠ ¨¸å‹ ;;;;;;;;; x
+
+EVTDESCAlaunpc.60; «³Ì¢³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.60; portrait29 ;;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.60; DWRçˆ «³Ì¢³¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.60; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.61; «³Ì¢³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.61; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.61; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.61; Anna Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; x
+EVTDESCAlaunpc.62; «³Ì¢³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.62; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.62; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.62; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunc.c.62; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.63; «³Ì¢³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.63; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.63; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.63; «³Ì¢³ ¨¸«ÈÌ ¨¸å‹ (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; 
+
+EVTDESCAlaunpc.70; «¸Ðª³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.70; ª¸çˆçˆ èÁÌ¬³ ¨³ÌæÆÐ¡È 30 ;;;;;;;;;;; x
+EVTOPTBAlaunpc.70; DWRçˆ Elsa¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;;; x
+EVTOPTCAlaunpc.70; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.71; «¸Ðª³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.71; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.71; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.71; Elsa Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+EVTDESCAlaunpc.72; «¸Ðª³ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.72; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.72; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.72; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.72; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.73; «¸Ðª³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.73; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.73; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.73; Elsa Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlaunpc.80; «³¦È«¸Ð ë»Ùª¹Ì 1 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.80; portrait31 ;;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.80; ArielëÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;;; x
+EVTOPTCAlaunpc.80; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.81; «³¦È«¸Ð ë»Ùª¹Ì 2 of 4 ;;;; x
+EVTOPTAAlaunpc.81; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.81; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.81; Ariel Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+EVTDESCAlaunpc.82; «³¦È«¸Ð ë»Ùª¹Ì 3 of 4 ;;;; x
+EVTOPTAAlaunpc.82; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.82; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.82; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.82; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.83; «³¦È«¸Ð ë»Ùª¹Ì 4 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.83; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.83; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.83; Ariel Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlaunpc.90; ëˆçˆ¦³ ë»Ùª¹Ì 1 / 4
+EVTOPTAAlaunpc.90; portrait35 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.90; DWRò¼ ¡³áëÆÌ ëˆçˆ¦³¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.90; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.91; ëˆçˆ¦³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.91; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.91; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.91; Aurora Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; x
+EVTDESCAlaunpc.92; ëˆçˆ¦³ ë»Ùª¹Ì 3 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.92; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.92; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.92; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.92; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.93; ëˆçˆ¦³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.93; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.93; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.93; Aurora Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlaunpc.100; Maleficent ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.100; portrait39çˆ æÆÝ¬³Ý «ÈÌèÁÐëÆÐ ®³Ýìˆ²³ªÈÙªÈëˆ ;;;;; x
+EVTOPTBAlaunpc.100; Maleficent DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·Ü¥³ ;;;;; x
+EVTOPTCAlaunpc.100; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.101; Maleficent Options 2 ìÁÝ 4 éÁÌùÇ 2 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.101; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.101; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.101; Maleficent ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;; x
+EVTDESCAlaunpc.102; Maleficent ë»Ùª¹Ì 3/4 of ;;;;;;;;;; x
+EVTOPTAAlaunpc.102; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.102; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.102; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.102; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.103; Maleficent Options 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.103; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.103; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.103; Maleficent ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;; x
+
+EVTDESCAlaunpc.110; ©¸Ð ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.110; portrait27 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.110; ©¸Ð «È©¸ÌïŒ ¨¸å‹ ;;;;;;; x
+EVTOPTCAlaunpc.110; ¡³êŒï»Ý ë»Ùª¹Ì;
+EVTOPTDAlaunpc.110; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.111; ©¸Ð ë»Ùª¹Ì 2 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.111; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.111; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.111; ©¸Ð ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.112; ©¸Ð ë»Ùª¹Ì 3 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.112; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.112; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.112; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.112; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.113; ©¸Ð ë»Ùª¹Ì 4 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.113; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.113; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.113; Bell ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;; x
+EVTDESCAlaunpc.114; ©¸Ð «È©¸ÌïŒ ¨¸å‹ «È©¸ÌïŒ ®¸«ÈÌëÆÐ ù¼Ìç‰²³¡È ¬·Ì«¸«È ë»Ùª¹ÌëÆÐ ª³ëÀÝ²³¨¹Ì §R ìÁÉ«ÈÙ¢ÈŽ³? ª³¡·Ì ª³êÆÐ ;;;;; x
+EVTOPTAAlaunpc.114; «È©¸ÌïŒ ®¸«ÈÌ ªÈ¬³É ;;;;;;;;;; x
+EVTOPTBAlaunpc.114; DWRçˆª·ùÇ BelleëÆÌ äŒ¢¹çÆÐ ¨³ÌæÆÌ¥³ ;;; x
+EVTOPTCAlaunpc.114; Bell ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;; x
+
+EVTDESCAlaunpc.115; ¡³êŒï»Ý ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.115; portrait37 ;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.115; DWRò¼ ¡³áëÆÌ Gaston«È äŒçÆÐ ¨³ÌæÆÌ¥³ ;;; x
+EVTOPTCAlaunpc.115; ©¸Ð ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.116; ¡³êŒï»Ý ë»Ùª¹Ì 2 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.116; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.116; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.116; ¡³êŒï»Ý ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.117; ¡³êŒï»Ý ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.117; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.117; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.117; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.117; ¡³êŒï»Ý ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.118; ¡³êŒï»Ý ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.118; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.118; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.118; ¡³êŒï»Ý ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+
+EVTDESCAlaunpc.120; «´Ð¦ÈêŒ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.120; portrait34çˆ èÁÌ¬³çÆÐ ª´Ýª·Ý²³ªÈÙªÈëˆ ;;;; x
+EVTOPTBAlaunpc.120; Alice Event Menu ;;; x
+EVTOPTCAlaunpc.120; Margaret Options ;;; x
+EVTOPTDAlaunpc.120; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.121; «´Ð¦ÈêŒ ë»Ùª¹Ì 2/4 of x ;;;;;;;;; x
+EVTOPTAAlaunpc.121; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.121; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.121; «´Ð¦ÈêŒ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.122; «´Ð¦ÈêŒ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.122; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.122; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.122; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.122; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.123; «´Ð¦ÈêŒ ë»Ùª¹Ì 4 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.123; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.123; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.123; «´Ð¦ÈêŒ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.124; Alice Event Menu ;;; x
+EVTOPTAAlaunpc.124; ïˆŽÈ äŠ¨·ÝëÆÐ ®³ÞëŒªÈÙªÈëˆ! ;;;;;;;;;;;;;
+EVTOPTBAlaunpc.124; Alice¡³ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÌ¥³.; x
+EVTOPTCAlaunpc.124; «´Ð¦ÈêŒ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+
+EVTDESCAlaunpc.125; ¨³¡³¦¸Û ë»Ùª¹Ì 1 / 4
+EVTOPTAAlaunpc.125; portrait40ëŒçˆ èÁÌ¬³çÆÐ ª´Ýª·Ý²³ªÈÙªÈëˆ ;;; x
+EVTOPTBAlaunpc.125; Margaret«È DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÌ¥³.; x
+EVTOPTCAlaunpc.125; «´Ð¦ÈêŒ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.126; ¨³¡³¦¸Û ë»Ùª¹Ì 2 of 4 ;;;;; x
+EVTOPTAAlaunpc.126; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.126; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.126; Margaret Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.127; ¨³¡³¦¸Û ë»Ùª¹Ì 3 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.127; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.127; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.127; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.127; Margaret Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.128; ¨³¡³¦¸Û ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.128; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.128; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.128; Margaret Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x;
+
+EVTDESCAlaunpc.130; ¬´êŒ¨ÈÌ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.130; portrait36 ;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.130; ¬´êŒ¨ÈÌ «È©¸ÌïŒ Menu ;;;;;;;;; x
+EVTOPTCAlaunpc.130; Margaret Options ;;; x
+EVTOPTDAlaunpc.130; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.131; ¬´êŒ¨ÈÌ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.131; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.131; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.131; ¬´êŒ¨ÈÌ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.132; ¬´êŒ¨ÈÌ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.132; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.132; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.132; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.132; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.133; ¬´êŒ¨ÈÌ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.133; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.133; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.133; ¬´êŒ¨ÈÌ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.134; ¬´êŒ¨ÈÌ «È©¸ÌïŒ Menu ;;;;;;;;; x
+EVTOPTAAlaunpc.134; «³Ð¦³¥ÈÌ ¦´ØðŒçÆÐ æÆÐäˆ ²³¢³çÆÐ èÁÌ¬ÈçŒª¸ë‰! ;;;;;;;;;;;;;
+EVTOPTBAlaunpc.134; DWRò¼ ¡³áëÆÌ ¬´êŒ¨ÈÌ«È äŒ¢¹çÆÐ ¨³ÌæÆÌ¥³ ;;; x
+EVTOPTCAlaunpc.134; ¬´êŒ¨ÈÌ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+
+EVTDESCAlaunpc.135; ¬È¢È ¨¸å‹ 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.135; portrait43çˆ èÁÌ¬³çÆÐ ª´Ýª·Ý²³ªÈÙªÈëˆ ;;;; x
+EVTOPTBAlaunpc.135; DWRò¼ ¡³áëÆÌ Genie¡³ äŒçÆÐ ¨³ÌæÆÌ¥³ ;;; x
+EVTOPTCAlaunpc.135; ¬´êŒ¨ÈÌ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.136; ¬È¢È ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.136; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.136; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.136; Genie Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x ;;;; x
+EVTDESCAlaunpc.137; ¬È¢È ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.137; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.137; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.137; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.137; Genie Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x ;;;; x
+EVTDESCAlaunpc.138; ¬È¢È ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.138; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.138; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.138; Genie Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x ;;;; x
+
+EVTDESCAlaunpc.200; Bordello Branch 1 of 3 ;;;; x
+EVTOPTAAlaunpc.200; Tiana ¨¸å‹;
+EVTOPTBAlaunpc.200; Pharah Menus;
+EVTOPTCAlaunpc.200; Morrigan Menus ;;; x
+EVTOPTDAlaunpc.200; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.201; Bordello Branch 2 of 3 ;;; x
+EVTOPTAAlaunpc.201; ®³«È¢³ ¨¸å‹; x
+EVTOPTBAlaunpc.201; ¦ÈÝîŒ ¨¸å‹ ;;;;;;;;; x
+EVTOPTCAlaunpc.201; Jessica Menus ;;;; x
+EVTOPTDAlaunpc.201; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.202; Bordello Branch 3 of 3 ;;; x
+EVTOPTAAlaunpc.202; Shantae Menus ;;;; x
+EVTOPTBAlaunpc.202; Mey Menus ;;; x
+EVTOPTCAlaunpc.202; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlaunpc.210; °È«³¢³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.210; portrait21 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.210; DWRçˆ Tiana¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.210; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.211; °È«³¢³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.211; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.211; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.211; Tiana Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;; x
+EVTDESCAlaunpc.212; °È«³¢³ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.212; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.212; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.212; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.212; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.213; °È«³¢³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.213; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.213; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.213; Tiana Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;; x
+
+EVTDESCAlaunpc.220; ±³¦³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.220; portrait22 ;;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.220; DWRçˆ PharahåÆÌ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·Ü¥³ ;;;; x
+EVTOPTCAlaunpc.220; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.221; ±³¦³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.221; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.221; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.221; Pharah Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.222; Pharah Options 3 ìÁÝ 4 3 ;;;;;;;;;; x
+EVTOPTAAlaunpc.222; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.222; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.222; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.222; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.223; ±³¦³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.223; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.223; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.223; Pharah Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x;
+
+EVTDESCAlaunpc.230; Morrigan ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.230; portrait41 ;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.230; èˆ¦È ¡³ÌëÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.230; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.231; Morrigan Options 2 of 4 ;;;; x
+EVTOPTAAlaunpc.231; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.231; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.231; Morrigan ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x
+EVTDESCAlaunpc.232; Morrigan Options 3 of 4 ;;;; x
+EVTOPTAAlaunpc.232; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.232; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.232; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.232; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.233; èˆ¦È ¡³Ì ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.233; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.233; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.233; Morrigan ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlaunpc.240; Tchalla ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.240; portrait23 ;;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.240; DWRçˆ Tchalla¡³ äŒçÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.240; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.241; Tchalla ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.241; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.241; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.241; Tchalla Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; x
+EVTDESCAlaunpc.242; Tchalla ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.242; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.242; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.242; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.242; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.243; Tchalla ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.243; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.243; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.243; Tchalla Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; 
+
+EVTDESCAlaunpc.250; ¦ÈÝîŒ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.250; portrait24 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.250; DWRçˆ ¦ÈÝîŒ²³¨¹Ì äŒçÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.250; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.251; ¦ÈÝîŒ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.251; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.251; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.251; ¦ÈÝîŒ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x ;;;;;;;; x
+EVTDESCAlaunpc.252; ¦ÈÝîŒ ë»Ùª¹Ì 3/4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.252; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.252; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.252; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.252; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.253; ¦ÈÝîŒ ë»Ùª¹Ì 4/4 of ;;;;;;;;;;; x
+EVTOPTAAlaunpc.253; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.253; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.253; ¦ÈÝîŒ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x ;;;;;;;; x
+
+EVTDESCAlaunpc.260; ¬¸ªÈ¯³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.260; portrait26 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.260; JessicaåÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;;; x
+EVTOPTCAlaunpc.260; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.261; ¬¸ªÈ¯³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.261; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.261; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.261; Jessica Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+EVTDESCAlaunpc.262; Jessica Options 3 ìÁÝ 4 éÁÌùÇ 3 ;;;;;;;;;; x
+EVTOPTAAlaunpc.262; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.262; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.262; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.262; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.263; ¬¸ªÈ¯³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.263; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.263; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.263; Jessica Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlaunpc.270; Shantae ë»Ùª¹Ì 1 of 4 ;;;;; x
+EVTOPTAAlaunpc.270; portrait26 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.270; DWRçˆª·ùÇ ShantaeåÆÌ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·Ü¥³ ;;;; x
+EVTOPTCAlaunpc.270; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.271; Shantae ë»Ùª¹Ì 2 of 4 ;;; x
+EVTOPTAAlaunpc.271; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.271; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.271; Shantae Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+EVTDESCAlaunpc.272; Shantae Options 3 of 4 ;;; x
+EVTOPTAAlaunpc.272; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.272; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.272; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.272; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.273; Shantae ë»Ùª¹Ì 4 of 4 ;;;;;;; x
+EVTOPTAAlaunpc.273; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.273; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.273; Shantae Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+
+EVTDESCAlaunpc.280; Mey ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.280; portrait26 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.280; MeyåÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;;; x
+EVTOPTCAlaunpc.280; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.281; Mey ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.281; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.281; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.281; Mey ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.282; Mey Options 3 of 4 ;;;;; x
+EVTOPTAAlaunpc.282; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.282; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.282; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.282; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.283; Mey ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.283; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.283; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.283; Mey ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlaunpc.300; ¨³©·Ùª³ ¬È¬·Ø 1 of 2 ;;; x
+EVTOPTAAlaunpc.300; Hermione Menus ;;; x
+EVTOPTBAlaunpc.300; êˆª· °È ¨¸å‹; x
+EVTOPTCAlaunpc.300; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.301; ¨³©·Ùª³ ¬È¬·Ø 2 of 2 ;;; x
+EVTOPTAAlaunpc.301; ¬È¢È ¨¸å‹ ;;; x
+EVTOPTBAlaunpc.301; Luna Menus ;;; x
+EVTOPTCAlaunpc.301; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlaunpc.310; Hermione ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.310; portrait5 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.310; DWRçˆ Hermione«È äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;;; x
+EVTOPTCAlaunpc.310; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.311; ²¸çŒ¨Èë»Ìëˆ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.311; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.311; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.311; Hermione ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.312; ²¸çŒ¨Èë»Ìëˆ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.312; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.312; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.312; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.312; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.313; ²¸çŒ¨¸ëˆ ¢¸ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.313; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.313; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.313; Hermione ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+
+EVTDESCAlaunpc.320; ¨³©·Ùª³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.320; portrait6 ;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.320; DWRò¼ ¡³áëÆÌ ¨³©·Ùª³¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.320; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.321; êˆªÈ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.321; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.321; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.321; Sorcey Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; x
+EVTDESCAlaunpc.322; ¨³©·Ùª³ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.322; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.322; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.322; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.322; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.323; ¨³©·Ùª³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;;; x
+EVTOPTAAlaunpc.323; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.323; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.323; Sorcey Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlaunpc.330; ¬È¢È ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.330; portrait17 ;;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.330; GinnyåÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·Ü¥³ ;;;; x
+EVTOPTCAlaunpc.330; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.331; ¬È¢È ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.331; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.331; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.331; Ginny ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.332; ¬È¢È ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.332; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.332; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.332; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunc.c.32; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.333; ¬È¢È ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.333; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.333; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.333; Ginny ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; ;
+EVTDESCAlaunpc.340; çŠ¢³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.340; portrait18 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.340; Luna¡³ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³. ;;; x
+EVTOPTCAlaunpc.340; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.341; çŠ¢³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.341; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.341; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.341; çŠ¢³ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+EVTDESCAlaunpc.342; Luna Options 3 of 4 ;;;;; x
+EVTOPTAAlaunpc.342; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.342; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.342; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunc.c.342; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.343; çŠ¢³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.343; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.343; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.343; çŠ¢³ ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;; x
+
+EVTDESCAlaunpc.400; îÆÐ¦´ªÈÉ è»ÌêŒ°· éŒ¦´Ì®È 1 / 2
+EVTOPTAAlaunpc.400; éÆÐ¦·æŒ ¦¸«ÈÌ ¨¸å‹; x
+EVTOPTBAlaunpc.400; éÆÐ¦³¥È¨ÈçŒ ¨¸å‹ ;;; x
+EVTOPTCAlaunpc.400; Fenris Menus ;;;; x
+EVTOPTDAlaunpc.400; ¥³ëÆØ ;;;;;;;;;;; x
+
+EVTDESCAlaunpc.401; îÆÐ¦´ªÈÉ è»ÌêŒ°· éŒ¦´Ì®È 2 of 2 ;;; x
+EVTOPTAAlaunpc.401; ©´Ø±³«È«· ¦¸Ð¦³ ¨¸å‹;
+EVTOPTBAlaunpc.401; Blondelle Menus ;;; x
+EVTOPTCAlaunpc.401; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+
+EVTDESCAlaunpc.430; éÆÐ¦·æŒ ¦¸«ÈÌ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.430; portrait80 ;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.430; DWRçˆ ²¹Ð«´É ¡ºª³¡³ äŒ¢¹çÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³. ;;; x
+EVTOPTCAlaunpc.430; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.431; ±ÈùÇ ä»Ð©³Ì ë»Ùª¹Ì 2 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.431; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.431; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.431; Bloodrayne ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+EVTDESCAlaunpc.432; ±ÈùÇ ä»Ð©³Ì ë»Ùª¹Ì 3 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.432; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.432; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.432; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlauncc.432; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.433; ±ÈùÇ ©¹Ýª³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;; x
+EVTOPTAAlaunpc.433; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.433; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.433; Bloodrayne ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;; x
+
+EVTDESCAlaunpc.440; éÆÐ¦³¥È¨ÈçŒ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.440; portrait4çˆ ¯´¦ÈÉ°·çÆÐ ª´Ýª·Ý²³ªÈÙªÈëˆ ;;; x
+EVTOPTBAlaunpc.440; DWRçˆ éÆÐ¦³¥È¨ÈçŒ¡³ äŒçÆÐ ¨³ÌæÆÌ¥³.
+EVTOPTCAlaunpc.440; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.441; éÆÐ¦³¥È¨ÈçŒ 2 / 4 ë»Ùª¹Ì
+EVTOPTAAlaunpc.441; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.441; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.441; éÆÐ¦³¥È¨ÈçŒçˆ æ»Ð«³ ¡³¡È Main Menu ;;;;;; x
+EVTDESCAlaunpc.442; éÆÐ¦³¥È¨ÈçŒ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.442; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.442; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.442; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.442; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.443; éÆÐ¦³¥È¨ÈçŒ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.443; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.443; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.443; éÆÐ¦³¥È¨ÈçŒçˆ æ»Ð«³ ¡³¡È Main Menu ;;;;;; x
+
+EVTDESCAlaunpc.450; ±¸Ì¦ÈêŒ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.450; portrait130 ;;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.450; DWRò¼ ¡³áëÆÌ Fenris¡³ äŒçÆÐ ¨³ÌæÆÌ¥³.; x
+EVTOPTCAlaunpc.450; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.451; ±¸Ì¦ÈêŒ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.451; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.451; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.451; Fenris Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.452; ±¸Ì¦ÈêŒ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.452; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.452; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.452; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunc.c.452; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.453; ±¸Ì¦ÈêŒ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.453; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.453; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.453; Fenris Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x;
+
+EVTDESCAlaunpc.460; ©´Ø±È ¦¸Ð¦³ ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.460; portrait80 ;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.460; DWRò¼ ¡³áëÆÌ ©´Ø±³«È«· ¦¸Ð¦³¡³ äŒ¢¹çÆÐ ¨³ÌæÆÌ¥³.; x
+EVTOPTCAlaunpc.460; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.461; ©´Ø±È ¦¸Ð¦³ ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.461; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.461; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.461; Vampirella Main Menu (ëŒ)çˆ æ»Ð«³ ¡³¡È; x
+EVTDESCAlaunpc.462; ©´Ø±È ¦¸Ð¦³ ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.462; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.462; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.462; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunc.c.462; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.463; ©´Ø±È ¦¸Ð¦³ ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.463; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.463; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.463; Vampirella ¨¸«ÈÌ ¨¸å‹ (ëŒ)çˆ æ»Ð«³ ¡³¡È; 
+
+EVTDESCAlaunpc.470; éÆÐç»Ì ¥¸Ð ë»Ùª¹Ì 1 / 4
+EVTOPTAAlaunpc.470; portrait80 ;;;;;;;;; xçˆ ¯´¦ÈÉ°· ¨³ÌæÆÐ¡È
+EVTOPTBAlaunpc.470; BlondelleëÆÌ DWRçˆ äŒ¢¹çÆÐ ¨³ÌæÆÙ¢È¥³;
+EVTOPTCAlaunpc.470; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.471; éÆÐç»Ì ¥¸Ð ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.471; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.471; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.471; éÆÐç»Ì¥¸Ð ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.472; éÆÐç»Ì ¥¸Ð ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.472; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.472; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.472; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.472; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.473; éÆÐç»Ì ¥¸Ð ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.473; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.473; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.473; éÆÐç»Ì¥¸Ð ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x;
+
+EVTDESCAlaunpc.550; îˆ¢³Ì ë»Ùª¹Ì 1 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.550; portrait19çˆ æÆÝ¬³Ý «ÈÌèÁÐëÆÐ ®³Ýìˆ²³ªÈÙªÈëˆ ;;;; x
+EVTOPTBAlaunpc.550; DWRò¼ ¡³áëÆÌ Conan«È äŒçÆÐ ¨³ÌæÆÐ«·ÜêÆÙ¢È¥³ ;;; x
+EVTOPTCAlaunpc.550; ìŠ ¨¸å‹çˆ æ»Ð«³ ¡³¡È ;;;;;;;;;;; x
+EVTDESCAlaunpc.551; îˆ¢³Ì ë»Ùª¹Ì 2 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.551; «³Ùæˆô¿äˆ ¬·ÌèÁÌÿ¼ô¿«·«ÈÜåÆÌ; x;
+EVTOPTBAlaunpc.551; èŠ¬³ÉùÄçˆ ª´Ýª·Ý ô¿Ì npc ;;;;;;;;; x
+EVTOPTCAlaunpc.551; îˆ¢³Ì ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x;
+EVTDESCAlaunpc.552; îˆ¢³Ì ë»Ùª¹Ì 3 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.552; ¯³¦ÈêŒ¨³«ÈÜåÆÌ npc (Diplomacy); x
+EVTOPTBAlaunpc.552; ÿ¼¦¹²³Ì npc (Martial) ;; x
+EVTOPTCAlaunpc.552; ¡·Øêˆ²³Ì npc (®·Ý¬È¡È ¬ÈÉ); x
+EVTOPTDAlaunpc.552; ¥³ëÆØ ;;;;;;;;;;; x
+EVTDESCAlaunpc.553; îˆ¢³Ì ë»Ùª¹Ì 4 of 4 ;;;;;;;;;; x
+EVTOPTAAlaunpc.553; «´¨´²³Ì npc (ëÆØèˆ) ;;; x
+EVTOPTBAlaunpc.553; ²³É¬³ npc (²³ÉêÆÙ) ;;; x
+EVTOPTCAlaunpc.553; îˆ¢³Ì ¨¸«ÈÌ ¨¸å‹çˆ æ»Ð«³ ¡³¡È; x;
+

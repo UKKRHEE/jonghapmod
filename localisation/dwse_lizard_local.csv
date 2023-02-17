@@ -1,0 +1,42 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+dwse_lizard;¦¸Ù°³Ğ¦È«³Ì;;;;;;;;;;;;;;x
+dwse_lizard_desc;ëÀİò¼ «ÈÌ¡³ÌùÇ ²³Ùª·İ ì»İì»É. äŒæÆĞëÆÌ ëÀİùÇ ²ÈØëÆĞ «ÈÌ¡³ÌùÇ ²¹İ°´çˆ ¡³¬Èäˆ «ÈÜ¥³.;;;;;;;;;;;;;;x
+dwse_lizardm_comp;Goanna;;;;;;;;;;;;;;x
+dwse_lizardf_comp;Komodo;;;;;;;;;;;;;;x
+dwse_lizardc_comp;Hatchling;;;;;;;;;;;;;;x
+dwse_lizardm_insult;Halfbreed;;;;;;;;;;;;;;x
+dwse_lizardf_insult;Halfbreed;;;;;;;;;;;;;;x
+dwse_lizardc_insult;Abomination;;;;;;;;;;;;;;x
+dwse_lizard_race;Reptilian Race;;;;;;;;;;;;;;x
+dwse_lizard_localisation_label;§RDWSE§! Reptilian Race Rules;;;;;;;;;;;;;;x 
+dwse_lizard_race_on;Reptilian On;;;;;;;;;;;;;;x
+dwse_lizard_localisation_enabled_label;Reptilian On;;;;;;;;;;;;;;x
+dwse_lizard_localisation_enabled_desc;Reptilians are completely enabled.;;;;;;;;;;;;;;x
+dwse_lizard_race_off;Reptilian Off;;;;;;;;;;;;;;x
+dwse_lizard_localisation_disabled_label;Reptilians Off;;;;;;;;;;;;;;x
+dwse_lizard_localisation_disabled_desc;Reptilians will not appear in the game unless you add the trait to someone via console or start as one in the DWR campaign.;;;;;;;;;;;;;;x
+RULE_GROUP_DWSE_EVENTS;DWSE Rules;;;;;;;;;;;;;;x 
+dwse_lizard_race_marrige;Reptilian Marriage;;;;;;;;;;;;;;x
+dwse_lizard_localisation_marriage_label;Marriage;;;;;;;;;;;;;;x
+dwse_lizard_localisation_marriage_desc;The only way for reptilians to exist is if you start as one or marry one from the Empire. They will NOT spawn from events.;;;;;;;;;;;;;;x
+dwse_dragon_marriage;¬¸äÁÉ ¡¹Ğñ»Ì;;;;;;;;;;;;;;x
+dwse_dragon_marriage_desc;æŒ¦´ä»Ì ì»İì»Éò¼ ¡¹Ğñ»Ì²³Ù¢È¥³.;;;;;;;;;;;;;;x
+dwse_lizard_start_title; äÅÌ²¹İùÇ ¬·ëÁĞ;;;;;;;;;;;;;;x
+dwseliz1m;ëŠ¦ÈåÆÌ ëÀİùÇ ²ÈØëÆĞ ëˆ¦´Ûæ»İ«³Ì ¬È¯¹ù¼Ü¥³.¢³èŠù¼ ¡³İ¥´²³Ì êÁâùÇ ¡ÈâëÆÌ ä»Û«¸ ëŠ¦ÈæÆĞëÆĞ êÁØ¡¹ù¼Ü¥³. \n äŒ¦·¢³ «ÈÌ¡³ÌæÆĞëÆÌ ¬·Ø¬·Ø êÁâ«³ÌëŒçˆ æÆĞ«·ù¼Ü¥³. äŒæÆĞ«È ëŠ¦ÈçÆĞ éˆ¨¹Ì èŠêÆÌ ª´İ¡³ÉëÆĞ ²³Ğ³? ëŠ¦ÈçÆĞ ò¿èÁĞ ñ»ÉëÆÌ ®ÈÌäŠçˆ «¹¡ÈĞ³? «³¢È¨¹Ì ¦³«È©·Ğ –ˆåÆÌ «¹Ì«ÈÌëŒçˆ ª´İ¡³É²³Ğ³? ¥³Ì¬È ªÈ¡³Ì«È ¨³Ğ²´ìÁĞ ¡·Û«È«¹Ü¥³.\n ¢³åÆÌ ²¹İ¬¸æÆĞëÆĞ ‘³¦³ ¡ÈĞëÆĞ ¡´®·É²³Ğ ¡·Û«È¥³. ëŠ¦ÈåÆÌ ìˆª³İùÇ ¬ÈÙ«¸ª· ¢³ù¼ «ÈÌ¡³ÌæÆĞò¼ ²³Ø¸ ²³Ğ‘´«¹Ü¥³.;;;;;;;;;;;;;;x 
+dwseliz1f;ëŠ¦ÈåÆÌ ëÀİùÇ ²ÈØëÆĞ ëˆ¦´Ûæ»İ«³Ì ¬È¯¹ù¼Ü¥³.¢³èŠù¼ ¡³İ¥´²³Ì êÁâùÇ ¡ÈâëÆÌ ä»Û«¸ ëŠ¦ÈæÆĞëÆĞ êÁØ¡¹ù¼Ü¥³. \n äŒ¦·¢³ «ÈÌ¡³ÌæÆĞëÆÌ ¬·Ø¬·Ø êÁâ«³ÌëŒçˆ æÆĞ«·ù¼Ü¥³. äŒæÆĞ«È ëŠ¦ÈçÆĞ éˆ¨¹Ì èŠêÆÌ ª´İ¡³ÉëÆĞ ²³Ğ³? ëŠ¦ÈçÆĞ ò¿èÁĞ ñ»ÉëÆÌ ®ÈÌäŠçˆ «¹¡ÈĞ³? «³¢È¨¹Ì ¦³«È©·Ğ –ˆåÆÌ «¹Ì«ÈÌëŒçˆ ª´İ¡³É²³Ğ³? ¥³Ì¬È ªÈ¡³Ì«È ¨³Ğ²´ìÁĞ ¡·Û«È«¹Ü¥³.\n ¢³åÆÌ ²¹İ¬¸æÆĞëÆĞ ‘³¦³ ¡ÈĞëÆĞ ¡´®·É²³Ğ ¡·Û«È¥³. ëŠ¦ÈåÆÌ ìˆª³İùÇ ¬ÈÙ«¸ª· ¢³ù¼ «ÈÌ¡³ÌæÆĞò¼ ²³Ø¸ ²³Ğ‘´«¹Ü¥³.;;;;;;;;;;;;;;x ;;;;;;;;;;;;;;x 
+dwseliz1A;ëŠ¦ÈùÇ ª¸¡ºåÆÌ ²³¢³¡³ ô¿Ğ¡·Û«È¥³! ;;;;;;;;;;;;;;x 
+dwseliz_add_portrait;Add Reptilian Portrait;;;;;;;;;;;;;;x 
+dwseliz_add_portrait_desc;Have the reptilian trait and are an adult? Add a portrait! On Adulthood event fail? Add a Portrait!;;;;;;;;;;;;;;x 
+dwse_prince;Dragon Prince;;;;;;;;;;;;;;x 
+dwse_prince_desc;A child of the Dragon Emperor, that was raised in the Forest.;;;;;;;;;;;;;;x 
+dwse_princess;Dragon Princess;;;;;;;;;;;;;;x
+dwse_princess_desc;A child of the Dragon Emperor, that was raised in the Forest.;;;;;;;;;;;;;;x
+dwse_lizard_nest;Reptilian Nest;;;;;;;;;;;;;;x
+dwse_lizard_nest_desc;A large room that is well insulated and heated. Serves as a resting place for Reptilians who are looking to get out of the cold.;;;;;;;;;;;;;;x
+dwse_lizard_regen;Shedding of Scars;;;;;;;;;;;;;;x
+dwseliz5;The blood of dragons coarse through my veins. Mortal wounds mean nothing as I shed my scales with each molt. Bones grow and flesh mends, by the blessing of my ancestors I am made whole again!;;;;;;;;;;;;;;x
+dwseliz5a;I feel refreshed;;;;;;;;;;;;;;x
+DWSE_RULE_LIZARD_CAMPAIGN;(¦¸Ù°³Ğ¦È«³Ì) äÅÌ²¹İùÇ ¬·ëÁĞ;;;;;;;;;;;;;;x
+DWSE_RULE_LIZARD_CAMPAIGN_DESC;¥³İªÈÌëÆÌ æŒ¦´ä»ÌùÇ ²¹Ğï»İëŒçˆ «µ¨³İ,éŠ,òÂÌ¦¹ÉëÆĞ ¡³Ğ¨³İ²³Ù¢È¥³.;;;;;;;;;;;;;;x
+dwse_starting_trait;äÅÌ²¹İùÇ ¬·ëÁĞ;;;;;;;;;;;;;;x
+dwse_starting_trait_desc;¥³İªÈÌëÆÌ æŒ¦´ä»ÌùÇ «µªÈØò¼ éŠ òÂÌ¦¹ÉëÆĞ ¡³Ğ¨³İ²³Ù¢È¥³.;;;;;;;;;;;;;;x

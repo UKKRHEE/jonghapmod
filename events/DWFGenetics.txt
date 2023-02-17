@@ -1,0 +1,593 @@
+namespace = DWFGenetics
+
+character_event = { # Yiff in hell
+	id = DWFGenetics.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			mother = {
+				OR = {
+					trait = werewolf
+					trait = werewolf_ancient
+					trait = werekin
+				}
+			}
+			true_father_even_if_dead = {
+				OR = {
+					trait = werewolf
+					trait = werewolf_ancient
+					trait = werekin
+				}
+			}
+		}
+	}
+	immediate = {
+		if = { # Fullblood werewolf
+			limit = {
+				mother = {
+					OR = {
+						trait = werewolf
+						trait = werewolf_ancient
+					}
+				}
+				true_father_even_if_dead = {
+					OR = {
+						trait = werewolf
+						trait = werewolf_ancient
+					}
+				}
+			}
+			add_trait = werewolf
+		}
+		else_if = { # Werekin/Werewolf
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = werekin
+						}
+						true_father_even_if_dead = {
+							OR = {
+								trait = werewolf
+								trait = werewolf_ancient
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = werekin
+						}
+						mother = {
+							OR = {
+								trait = werewolf
+								trait = werewolf_ancient
+							}
+						}
+					}
+				}						
+			}
+			random_list = {
+				50 = {
+					add_trait = werekin
+				}
+				50 = {
+					add_trait = werewolf
+				}
+			}
+		}
+		else_if = { # Werekin/werekin
+			limit = {
+				mother = {
+					trait = werekin
+				}
+				true_father_even_if_dead = {
+					trait = werekin
+				}
+			}
+			add_trait = werekin
+		}		
+		else_if = { # Werewolf/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							OR = {
+								trait = werewolf
+								trait = werewolf_ancient
+							}
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = werewolf
+								trait = werewolf_ancient
+								trait = werekin
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							OR = {
+								trait = werewolf
+								trait = werewolf_ancient
+							}
+						}
+						mother = {
+							NOR = {
+								trait = werewolf
+								trait = werewolf_ancient
+								trait = werekin
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				25 = { }
+				50 = {
+					add_trait = werekin
+				}
+				25 = {
+					add_trait = werewolf
+				}
+			}
+		}
+		else_if = { # Werekin/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = werekin
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = werewolf
+								trait = werewolf_ancient
+								trait = werekin
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = werekin
+						}
+						mother = {
+							NOR = {
+								trait = werewolf
+								trait = werewolf_ancient
+								trait = werekin
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					add_trait = werekin
+				}
+				50 = { }
+			}
+		}
+	}
+}
+
+character_event = { # Bite me
+	id = DWFGenetics.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			mother = {
+				OR = {
+					trait = vampire
+					trait = vampire_ancient
+					trait = dhampir
+				}
+			}
+			true_father_even_if_dead = {
+				OR = {
+					trait = vampire
+					trait = vampire_ancient
+					trait = dhampir
+				}
+			}
+		}
+	}
+	immediate = {
+		if = { # Fullblood vampire
+			limit = {
+				mother = {
+					OR = {
+						trait = vampire
+						trait = vampire_ancient
+					}
+				}
+				true_father_even_if_dead = {
+					OR = {
+						trait = vampire
+						trait = vampire_ancient
+					}
+				}
+			}
+			add_trait = vampire
+		}
+		else_if = { # dhampir/dhampir
+			limit = {
+				mother = {
+					trait = dhampir
+				}
+				true_father_even_if_dead = {
+					trait = dhampir
+				}
+			}
+			add_trait = dhampir
+		}		
+		else_if = { # dhampir/vampire
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = dhampir
+						}
+						true_father_even_if_dead = {
+							OR = {
+								trait = vampire
+								trait = vampire_ancient
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = dhampir
+						}
+						mother = {
+							OR = {
+								trait = vampire
+								trait = vampire_ancient
+							}
+						}
+					}
+				}						
+			}
+			random_list = {
+				50 = {
+					add_trait = dhampir
+				}
+				50 = {
+					add_trait = vampire
+				}
+			}
+		}
+		else_if = { # vampire/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							OR = {
+								trait = vampire
+								trait = vampire_ancient
+							}
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = vampire
+								trait = vampire_ancient
+								trait = dhampir
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							OR = {
+								trait = vampire
+								trait = vampire_ancient
+							}
+						}
+						mother = {
+							NOR = {
+								trait = vampire
+								trait = vampire_ancient
+								trait = dhampir
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				25 = { }
+				50 = {
+					add_trait = dhampir
+				}
+				25 = {
+					add_trait = vampire
+				}
+			}
+		}
+		else_if = { # dhampir/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = dhampir
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = vampire
+								trait = vampire_ancient
+								trait = dhampir
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = dhampir
+						}
+						mother = {
+							NOR = {
+								trait = vampire
+								trait = vampire_ancient
+								trait = dhampir
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					add_trait = dhampir
+				}
+				50 = { }
+			}
+		}
+	}
+}
+
+character_event = { # Wanna party?
+	id = DWFGenetics.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			mother = {
+				OR = {
+					trait = lilith
+					trait = alu_fiend
+				}
+			}
+			true_father_even_if_dead = {
+				OR = {
+					trait = lilith
+					trait = incubus
+					trait = alu_fiend
+					trait = cambion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = { # Fullblood demon
+			limit = {
+				mother = {
+					OR = {
+						trait = incubus
+						trait = lilith
+					}
+				}
+				true_father_even_if_dead = {
+					OR = {
+						trait = incubus
+						trait = lilith
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_female = yes
+				}
+				add_trait = lilith
+			}
+			else = {
+				add_trait = incubus
+			}
+		}
+		else_if = { # Halfblood/demon
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							OR = {
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+						true_father_even_if_dead = {
+							OR = {
+								trait = incubus
+								trait = lilith
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							OR = {
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+						mother = {
+							OR = {
+								trait = incubus
+								trait = lilith
+							}
+						}
+					}
+				}						
+			}
+			random_list = {
+				50 = {
+					if = {
+						limit = {
+							is_female = yes
+						}
+						add_trait = lilith
+					}
+					else = {
+						add_trait = incubus
+					}
+				}
+				50 = {
+					if = {
+						limit = {
+							is_female = yes
+						}
+						add_trait = alu_fiend
+					}
+					else = {
+						add_trait = cambion
+					}
+				}
+			}
+		}
+		else_if = { # Halfblood/halfblood
+			limit = {
+				mother = {
+					OR = {
+						trait = alu_fiend
+						trait = cambion
+					}
+				}
+				true_father_even_if_dead = {
+					OR = {
+						trait = alu_fiend
+						trait = cambion
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_female = yes
+				}
+				add_trait = alu_fiend
+			}
+			else = {
+				add_trait = cambion
+			}
+		}		
+		else_if = { # demon/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							OR = {
+								trait = lilith
+								trait = incubus
+							}
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = lilith
+								trait = incubus
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							OR = {
+								trait = lilith
+								trait = incubus
+							}
+						}
+						mother = {
+							NOR = {
+								trait = lilith
+								trait = incubus
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				25 = { }
+				50 = {
+					if = {
+						limit = {
+							is_female = yes
+						}
+						add_trait = alu_fiend
+					}
+					else = {
+						add_trait = cambion
+					}
+				}
+				25 = {
+					if = {
+						limit = {
+							is_female = yes
+						}
+						add_trait = lilith
+					}
+					else = {
+						add_trait = incubus
+					}
+				}
+			}
+		}
+		else_if = { # Halfblood/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							OR = {
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = lilith
+								trait = incubus
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							OR = {
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+						mother = {
+							NOR = {
+								trait = lilith
+								trait = incubus
+								trait = alu_fiend
+								trait = cambion
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					if = {
+						limit = {
+							is_female = yes
+						}
+						add_trait = alu_fiend
+					}
+					else = {
+						add_trait = cambion
+					}
+				}
+				50 = { }
+			}
+		}
+	}
+}	

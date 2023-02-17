@@ -1,5 +1,0 @@
-﻿dag_cdo_death_gang_rape = {
-	public_knowledge = yes
-	icon = "death_murder.dds"
-}
-

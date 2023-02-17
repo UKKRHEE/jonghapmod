@@ -1,0 +1,52 @@
+lilith_bloodline = {
+	diplomacy = 2
+	health = 1
+	sex_appeal_opinion = 20
+	lustful_opinion = 10
+	chaste_opinion = -20
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_murder_rose
+	flags = { historical_bloodline dw_bloodline }
+	active = {
+		OR = {
+			trait = lilith
+			trait = alu_fiend
+		}
+	}
+}
+
+incubus_bloodline = {
+	diplomacy = 2
+	health = 1
+	sex_appeal_opinion = 20
+	lustful_opinion = 10
+	chaste_opinion = -20
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_murder_rose
+	flags = { historical_bloodline dw_bloodline }
+	active = {
+		OR = {
+			trait = incubus
+			trait = cambion
+		}
+	}
+}
+
+dwf_slavers_bloodline = {
+	intrigue = 2
+	general_opinion = 5
+	branded_slave_opinion = -10
+	global_revolt_risk = -0.01
+	global_tax_modifier = 0.05
+	picture = GFX_bloodlines_symbol_ruthless
+	flags = { dw_bloodline }
+	active = {
+		NOR = {
+			trait = branded_slave
+			trait = kind
+		}
+	}
+}
+	

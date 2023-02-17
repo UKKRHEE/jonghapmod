@@ -1,0 +1,1486 @@
+###########################################
+#        DWBHAngel Events                 #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+
+namespace = DWBHAngel
+
+character_event = {
+	id = DWBHAngel.10
+	is_triggered_only = yes
+	hide_window = yes # routing event to see what blessing if any is given
+
+	immediate = {
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					trait = humble
+					}
+				modifier = {
+					factor = 0 #if there's nothing to improve we skip
+					AND = {
+						trait = fair
+						trait = bombshell
+						NOR = {
+							trait = ugly
+							trait = harelip
+							trait = stutter
+							trait = lisp
+							trait = clubfooted
+							trait = hunchback
+							}
+						}
+					}
+				modifier = {
+					factor = 2
+					OR = {
+						trait = ugly
+						trait = harelip
+						trait = stutter
+						trait = lisp
+						trait = clubfooted
+						trait = hunchback
+						}
+					}
+				narrative_event = { id = DWBHAngel.12 }
+				}
+			10 = {
+				modifier = {
+					factor = 2
+					trait = patient
+					}
+				modifier = {
+					factor = 0 #skip if we're already a genius
+						trait = genius
+					}
+				modifier = {
+					factor = 2
+					OR = {
+						trait = slow
+						trait = imbecile
+						}
+					}
+				narrative_event = { id = DWBHAngel.13 }					
+				}						
+			10 = {
+				modifier = {
+					factor = 2
+					trait = kind
+					}
+				modifier = {
+					factor = 0 #skip if we're already a strong non-dwarf
+					AND = {
+						trait = strong
+						NOT = {trait = dwarf }
+						}
+					}
+				modifier = {
+					factor = 2
+					OR = {
+						trait = weak
+						trait = dwarf
+						}
+					}
+				narrative_event = { id = DWBHAngel.14 }
+				}					
+			10 = {
+				modifier = {
+					factor = 2
+					trait = diligent
+					}
+				modifier = {
+					factor = 0 #skip if we're already at max education
+					OR = {
+						trait = grey_eminence
+						trait = brilliant_strategist
+						trait = midas_touched
+						trait = elusive_shadow
+						trait = mastermind_theologian
+						}
+					}
+				modifier = {
+					factor = 2
+					OR = {
+						trait = naive_appeaser
+						trait = misguided_warrior
+						trait = indulgent_wastrel
+						trait = amateurish_plotter
+						trait = detached_priest
+						}
+					}
+				narrative_event = { id = DWBHAngel.15 }
+				}	
+		}
+	}
+}
+
+# clear blessing cooldown flag
+character_event = {
+	id = DWBHAngel.11
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		clr_character_flag = dwbhangel_blessing_request
+	}
+}
+
+narrative_event = { 
+	id = DWBHAngel.12
+	is_triggered_only = yes
+	
+	title = DWBHAngel.12Title
+	picture = GFX_AngelAppearance
+	desc = DWBHAngel.12desc
+	
+	option = {
+		name = DWBHAngel.12optA
+		piety = -100
+		improve_appearance = yes
+
+	}
+
+
+}
+
+narrative_event = { 
+	id = DWBHAngel.13
+	is_triggered_only = yes
+	
+	title = DWBHAngel.13Title
+	picture = GFX_AngelIntellect
+	desc = DWBHAngel.13desc
+	
+	option = {
+		name = DWBHAngel.13optA
+		piety = -100
+				if = {
+						limit = {
+								OR = {
+								trait = slow
+								trait = imbecile
+									}
+								}
+						remove_trait = slow
+						remove_trait = imbecile						
+					}
+				else_if = {
+						limit = {
+								NOT = {
+								trait = quick
+									}
+								}
+						add_trait = quick
+					}
+				else = { # we know they're not a genius if they got this far
+
+						add_trait = genius
+					}			
+	}
+
+
+}
+narrative_event = { 
+	id = DWBHAngel.14
+	is_triggered_only = yes
+	
+	title = DWBHAngel.14Title
+	picture = GFX_AngelStrength
+	desc = DWBHAngel.14desc
+	
+	option = {
+		name = DWBHAngel.14optA
+		piety = -100
+				if = {
+						limit = {
+								OR = {
+								trait = weak
+								trait = dwarf
+									}
+								}
+						remove_trait = weak
+						remove_trait = dwarf						
+					}
+				else = { # we know they're not strong if they got this far
+
+						add_trait = strong
+					}	
+					
+		}
+
+
+}
+
+narrative_event = { 
+	id = DWBHAngel.15
+	is_triggered_only = yes
+	
+	title = DWBHAngel.15Title
+	picture = GFX_AngelKnowledge
+	desc = DWBHAngel.15desc
+	
+	option = {
+		name = DWBHAngel.15optA
+		piety = -100
+				if = {
+					limit = { trait = naive_appeaser }
+						remove_trait = naive_appeaser
+						add_trait = underhanded_rogue											
+					}
+				else_if = {
+					limit = { trait = underhanded_rogue }
+						remove_trait = underhanded_rogue
+						add_trait = charismatic_negotiator											
+					}
+				else_if = {
+					limit = { trait = charismatic_negotiator }
+						remove_trait = charismatic_negotiator
+						add_trait = grey_eminence											
+					}
+				else_if = {
+					limit = { trait = misguided_warrior }
+						remove_trait = misguided_warrior
+						add_trait = tough_soldier											
+					}
+				else_if = {
+					limit = { trait = tough_soldier }
+						remove_trait = tough_soldier
+						add_trait = skilled_tactician											
+					}
+				else_if = {
+					limit = { trait = skilled_tactician }
+						remove_trait = skilled_tactician
+						add_trait = brilliant_strategist											
+					}
+				else_if = {
+					limit = { trait = indulgent_wastrel }
+						remove_trait = indulgent_wastrel
+						add_trait = thrifty_clerk											
+					}
+				else_if = {
+					limit = { trait = thrifty_clerk }
+						remove_trait = thrifty_clerk
+						add_trait = fortune_builder											
+					}
+				else_if = {
+					limit = { trait = fortune_builder }
+						remove_trait = fortune_builder
+						add_trait = midas_touched											
+					}
+				else_if = {
+					limit = { trait = amateurish_plotter }
+						remove_trait = amateurish_plotter
+						add_trait = flamboyant_schemer											
+					}
+				else_if = {
+					limit = { trait = flamboyant_schemer }
+						remove_trait = flamboyant_schemer
+						add_trait = intricate_webweaver											
+					}
+				else_if = {
+					limit = { trait = intricate_webweaver }
+						remove_trait = intricate_webweaver
+						add_trait = elusive_shadow											
+					}
+				else_if = {
+					limit = { trait = detached_priest }
+						remove_trait = detached_priest
+						add_trait = martial_cleric											
+					}
+				else_if = {
+					limit = { trait = martial_cleric }
+						remove_trait = martial_cleric
+						add_trait = scholarly_theologian						
+					}
+				else_if = {
+					limit = { trait = scholarly_theologian }
+						remove_trait = scholarly_theologian
+						add_trait = mastermind_theologian						
+					}
+	}
+
+
+}
+
+
+
+character_event = {
+	id = DWBHAngel.20
+	is_triggered_only = yes
+	hide_window = yes # routing event to see what sins need to be forgiven
+
+	immediate = {
+		random_list = {
+				10 = {
+						modifier = {
+							factor = 0
+							NOR = { 
+								trait = lustful 
+								trait = lovers_pox
+								}
+						}
+						narrative_event = { id = DWBHAngel.22 days = 1 random = 1 }
+					}
+				10 = {
+						modifier = {
+							factor = 0
+							NOT = { trait = slothful }
+						}
+						narrative_event = { id = DWBHAngel.23 days = 1 random = 1 }
+					}
+				10 = {
+						modifier = {
+							factor = 0
+							NOT = { trait = wroth }
+						}
+						narrative_event = { id = DWBHAngel.24 days = 1 random = 1 }
+					}
+				10 = {
+						modifier = {
+							factor = 0
+							NOT = { trait = envious }
+						}
+						narrative_event = { id = DWBHAngel.25 days = 1 random = 1 }
+					}
+				10 = {
+						modifier = {
+							factor = 0
+							NOT = { trait = proud }
+						}
+						narrative_event = { id = DWBHAngel.26 days = 1 random = 1 }
+					}
+				10 = {
+						modifier = {
+							factor = 0
+							NOT = { trait = greedy }
+						}
+						narrative_event = { id = DWBHAngel.27 days = 1 random = 1 }
+					}
+				10 = {
+						modifier = {
+							factor = 0
+							NOT = { trait = gluttonous }
+						}
+						narrative_event = { id = DWBHAngel.28 days = 1 random = 1 }
+					}
+	
+		}
+	}
+
+}
+
+
+
+# clear atonement cooldown flag
+character_event = {
+	id = DWBHAngel.21
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		clr_character_flag = dwbhangel_atonement_made
+	}
+}
+
+narrative_event = {
+	id = DWBHAngel.22
+	is_triggered_only = yes
+	title = DWBHAngel.22title
+	picture = GFX_AngelAtonement
+	desc = DWBHAngel.22desc
+	
+	option = {
+		name = DWBHAngel.22optA
+		if = {
+			limit = { trait = lovers_pox }
+			remove_trait = lovers_pox
+			remove_character_modifier = minor_disease_herpes
+			}	
+		remove_trait = lustful
+		add_trait = chaste
+		piety = -200
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+		}
+	}
+	option = {
+		name = DWBHAngel.22optB
+		random = {
+			chance = 50
+			add_trait = cynical
+		}
+		if = {
+			limit = { NOT = { trait = proud } }
+			random = {
+				chance = 50
+				add_trait = proud
+			}
+
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+		}
+	
+	}
+
+
+}
+
+narrative_event = {
+	id = DWBHAngel.23
+	is_triggered_only = yes
+	title = DWBHAngel.23title
+	picture = GFX_AngelAtonement
+	desc = DWBHAngel.23desc
+	
+	option = {
+		name = DWBHAngel.23optA
+		remove_trait = slothful
+		add_trait = diligent
+		piety = -200
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+		}
+	}
+	option = {
+		name = DWBHAngel.22optB
+		random = {
+			chance = 50
+			add_trait = cynical
+		}
+		if = {
+			limit = { NOT = { trait = proud } }
+			random = {
+				chance = 50
+				add_trait = proud
+			}
+
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+		}
+	
+	}
+
+
+}
+narrative_event = {
+	id = DWBHAngel.24
+	is_triggered_only = yes
+	title = DWBHAngel.24title
+	picture = GFX_AngelAtonement
+	desc = DWBHAngel.24desc
+	
+	option = {
+		name = DWBHAngel.24optA
+		remove_trait = wroth
+		add_trait = patient
+		piety = -200
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+		}
+	}
+	option = {
+		name = DWBHAngel.22optB
+		random = {
+			chance = 50
+			add_trait = cynical
+		}
+		if = {
+			limit = { NOT = { trait = proud } }
+			random = {
+				chance = 50
+				add_trait = proud
+			}
+
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+		}
+	
+	}
+
+
+}
+narrative_event = {
+	id = DWBHAngel.25
+	is_triggered_only = yes
+	title = DWBHAngel.25title
+	picture = GFX_AngelAtonement
+	desc = DWBHAngel.25desc
+	
+	option = {
+		name = DWBHAngel.25optA
+		remove_trait = envious
+		add_trait = kind
+		piety = -200
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+		}
+	}
+	option = {
+		name = DWBHAngel.22optB
+		random = {
+			chance = 50
+			add_trait = cynical
+		}
+		if = {
+			limit = { NOT = { trait = proud } }
+			random = {
+				chance = 50
+				add_trait = proud
+			}
+
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+		}
+	
+	}
+
+
+}
+narrative_event = {
+	id = DWBHAngel.26
+	is_triggered_only = yes
+	title = DWBHAngel.26title
+	picture = GFX_AngelAtonement
+	desc = DWBHAngel.26desc
+	
+	option = {
+		name = DWBHAngel.26optA
+		remove_trait = proud
+		add_trait = humble
+		piety = -200
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = DWBHAngel.22optB
+		random = {
+			chance = 75 # higher chance for this one since they're already proud
+			add_trait = cynical
+		}
+		ai_chance = {
+			factor = 75
+		}
+	
+	}
+
+
+}
+narrative_event = {
+	id = DWBHAngel.27
+	is_triggered_only = yes
+	title = DWBHAngel.27title
+	picture = GFX_AngelAtonement
+	desc = DWBHAngel.27desc
+	
+	option = {
+		name = DWBHAngel.27optA
+		remove_trait = greedy
+		add_trait = charitable
+		piety = -200
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+		}
+	}
+	option = {
+		name = DWBHAngel.22optB
+		random = {
+			chance = 50
+			add_trait = cynical
+		}
+		if = {
+			limit = { NOT = { trait = proud } }
+			random = {
+				chance = 50
+				add_trait = proud
+			}
+
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+		}
+	
+	}
+
+
+}
+narrative_event = {
+	id = DWBHAngel.28
+	is_triggered_only = yes
+	title = DWBHAngel.28title
+	picture = GFX_AngelAtonement
+	desc = DWBHAngel.28desc
+	
+	option = {
+		name = DWBHAngel.28optA
+		remove_trait = gluttonous
+		add_trait = temperate
+		piety = -200
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+		}
+	}
+	option = {
+		name = DWBHAngel.22optB
+		random = {
+			chance = 50
+			add_trait = cynical
+		}
+		if = {
+			limit = { NOT = { trait = proud } }
+			random = {
+				chance = 50
+				add_trait = proud
+			}
+
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+		}
+	
+	}
+
+
+}
+
+
+narrative_event = {
+	id = DWBHAngel.40
+	is_triggered_only = yes
+	desc = DWBHAngel40desc
+	title = dwbhangel_conception_title
+	picture = GFX_angelic_conception
+
+	option = {
+		name = DWBHAngel40option
+		set_character_flag = dwbh_angelic_pregnancy
+		impregnate = 0 
+		add_trait = pregnant
+		hidden_tooltip = { 
+			if = { 
+				limit = {
+					ai = no
+					NOT = { any_courtier = { has_minor_title = title_appointed_regent } 
+					has_global_flag = pregnancy_regent_warning } 
+					}
+				character_event = { id = HFP.20400 } 
+			}
+		}
+		hidden_tooltip = { 
+			random_list = { 
+				50 = { 
+					modifier = { 
+						factor = 0.8
+						trait = shy 
+					}
+					modifier = { 
+						factor = 0.8
+						is_ill = yes
+					}
+					modifier = { 
+						factor = 0.8
+						trait = possessed 
+					}
+					modifier = { 
+						factor = 0.8
+						trait = paranoid 
+					}
+					modifier = { 
+						factor = 0.8
+						trait = lunatic 
+					}
+					modifier = { 
+						factor = 0.8
+						trait = weak 
+					}
+					modifier = { 
+						factor = 0.8
+						age = 37 
+					}
+					modifier = { 
+						factor = 0.8
+						NOT = { age = 20 } 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 3 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 4 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 5 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 6 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 7 
+					}
+					modifier = { 
+						factor = 0.8
+						has_character_flag = special_marshal
+					}
+					modifier = { 
+						factor = 0.8
+						trait = shieldmaiden
+					}
+					modifier = { 
+						factor = 0.6
+						trait = feeble
+					}
+					modifier = { 
+						factor = 1.75
+						trait = robust
+					}
+					modifier = { 
+						factor = 1.5
+						trait = strong
+					}
+				} 
+				50 = { 
+					modifier = { 
+						factor = 0.5
+						is_ill = no
+					}
+					modifier = { 
+						factor = 0.25
+						age = 18
+						NOT = { age = 40 }
+					}
+					modifier = { 
+						factor = 2
+						trait = drunkard
+					}
+					modifier = { 
+						factor = 2
+						has_character_modifier = hashish_addict
+					}
+					modifier = { 
+						factor = 3
+						has_character_modifier = withdrawal_symptoms
+					}
+					character_event = { id = HFP.20404	days = 10 random = 5 } #Hard pregnancy
+				}
+			}
+		}
+
+
+
+		character_event = { id = DWBHAngel.43 days = 170 }		
+		character_event = { id = HFP.20556 }		
+	}
+}
+
+character_event = {
+	id = DWBHAngel.41
+	is_triggered_only = yes # Triggered by on_action
+	hide_window = yes
+	trigger = {
+		mother_even_if_dead = { 
+			has_character_flag = dwbh_angelic_pregnancy
+		}
+	}	
+	immediate = {
+		mother = {
+			clr_character_flag = dwbh_angelic_pregnancy
+		}
+		remove_trait = inbred
+		remove_trait = slow
+		remove_trait = dwarf
+		remove_trait = harelip
+		remove_trait = hunchback
+		remove_trait = imbecile
+		remove_trait = lisp
+		remove_trait = stutter
+		remove_trait = ugly
+		remove_trait = weak
+		remove_trait = giant
+		
+		random_list = {
+			25 = {
+				add_trait = genius
+				add_trait = fair
+			}
+			25 = {
+				add_trait = fair
+				add_trait = strong
+			}
+			25 = {
+				add_trait = strong
+				add_trait = genius
+			}
+			25 = {
+				add_trait = genius
+				add_trait = fair
+				add_trait = strong			
+			}
+		}
+		remove_trait = cambion
+		remove_trait = alu_fiend
+		remove_trait = incubus
+		remove_trait = lilith
+		if = {
+			limit = { NOT = { trait = angel }}
+				add_trait = angel
+			}
+		if = {
+			limit = { trait = sickly }
+				add_trait = sickly
+			}
+		random_list = {
+			25 = {
+				health = 1
+				}
+			25 = {
+				health = 1.5
+				}
+			25 = {
+				health = 2
+				}
+			25 = {
+				health = 2.5
+				}
+		
+			}
+		change_martial = 1
+		change_intrigue = 1
+		change_learning = 1
+		change_diplomacy = 1
+		change_stewardship = 1
+		}
+	
+}
+
+character_event = {
+	id = DWBHAngel.42
+	hide_window = yes
+	
+	trigger = { 
+		trait = pregnant
+		has_game_rule = {
+			name = pregnancy_flavor
+			value = on
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = { 
+		add_trait = pregnancy_finishing
+	}
+}
+
+narrative_event = {
+	id = DWBHAngel.90
+	is_triggered_only = yes
+	desc = DWBHAngel90desc
+	title = dwbhangel_inspire_title
+	picture = GFX_angel_inspired_troops
+	border = GFX_event_normal_frame_war
+
+	option = {
+		name = DWBHAngel90option
+		add_character_modifier = {
+			name = angel_inspired_troops
+			duration = 30
+		}     
+ 
+	}
+}
+
+# clear troop inspiration flag
+character_event = {
+	id = DWBHAngel.91
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		clr_character_flag = dwbhangel_inspired_troops
+	}
+}
+
+
+
+# .120 Heal major spell
+narrative_event = {
+	id = DWBHAngel.120
+	picture = a_placeholder
+	title = dwbhangel_heal_major_title
+	is_triggered_only = yes # by targetted_decision
+	desc = { # self heal
+		trigger = { 
+			FROM = { character = ROOT }
+		}
+		text = DWBHAngel120desc
+		picture = angel_spell_heal_self1
+	}	
+	desc = { # heal other
+		trigger = { 
+			FROM = {NOT = { character = ROOT } }
+		}
+		text = DWBHAngel120desc2
+		picture = angel_spell_heal1
+	}	
+	option = { # I am self healed
+		trigger = {
+			FROM = { character = ROOT }		
+		}
+	
+		name = "DWBHAngel120optA"
+		piety = -250
+		hidden_tooltip = {
+			piety = -150
+			remove_trait = leper
+			remove_trait = has_bubonic_plague
+			remove_trait = has_small_pox
+			remove_trait = has_aztec_disease
+			remove_trait = rabies
+			remove_trait = cancer
+			remove_trait = dancing_plague
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = one_eyed
+			remove_trait = one_handed
+			remove_trait = one_legged
+			remove_trait = scarred_high
+			clr_character_flag = developing_illness
+			clr_character_flag = got_flu
+			clr_character_flag = manifest_flu
+		}
+	}
+	option = { # I am healed
+		trigger = {
+			FROM = {NOT = { character = ROOT } }
+		}
+		
+		name = "DWBHAngel120optB"
+		
+		hidden_tooltip = {
+			FROM = { piety = -150 }
+			remove_trait = leper
+			remove_trait = has_bubonic_plague
+			remove_trait = has_small_pox
+			remove_trait = has_aztec_disease
+			remove_trait = rabies
+			remove_trait = cancer
+			remove_trait = dancing_plague
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = one_eyed
+			remove_trait = one_handed
+			remove_trait = one_legged
+			remove_trait = scarred_high
+			clr_character_flag = developing_illness
+			clr_character_flag = got_flu
+			clr_character_flag = manifest_flu
+		}
+	}	
+}
+
+# .130 Angelic Smite
+narrative_event = {
+	id = DWBHAngel.130
+	desc = DWBHAngel130desc
+	picture = GFX_dwbh_angelic_smite
+	title = dwbh_angelic_smite_title
+	is_triggered_only = yes # triggered by targetted_decision
+	option = {
+		name = DWBHAngel130A
+		hidden_tooltip = {
+		if = { #here we start a bunch of code to increase cost if the angel is sinful
+			limit = {
+				calc_true_if = {
+				amount = 5
+				trait = rapist
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud								
+				trait = seducer
+				trait = seductress
+				trait = impaler
+				trait = cruel
+				trait = deceitful
+				trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = tribal_kinslayer
+				trait = cannibal_trait
+				trait = tentacle
+				trait = cynical #whether doubt is sinful or not, doubting the divine makes using your powers harder
+				AND = {
+					trait = craven
+					OR = {
+						religion = norse_pagan
+						religion = tengri_pagan
+						religion = norse_pagan_reformed
+						religion = tengri_pagan_reformed
+						religion = aztec
+						religion = aztec_reformed
+						}
+					}
+				}
+				}
+			piety = -750		
+			}
+		if = { #here we start a bunch of code to increase cost if the angel is sinful
+			limit = {
+				calc_true_if = {
+				amount = 4
+				trait = rapist
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud								
+				trait = seducer
+				trait = seductress
+				trait = impaler
+				trait = cruel
+				trait = deceitful
+				trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = tribal_kinslayer
+				trait = cannibal_trait
+				trait = tentacle
+				trait = cynical #whether doubt is sinful or not, doubting the divine makes using your powers harder
+				AND = {
+					trait = craven
+					OR = {
+						religion = norse_pagan
+						religion = tengri_pagan
+						religion = norse_pagan_reformed
+						religion = tengri_pagan_reformed
+						religion = aztec
+						religion = aztec_reformed
+						}
+					}
+				}
+				}
+			piety = -625		
+			}
+		if = { #here we start a bunch of code to increase cost if the angel is sinful
+			limit = {
+				calc_true_if = {
+				amount = 3
+				trait = rapist
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud								
+				trait = seducer
+				trait = seductress
+				trait = impaler
+				trait = cruel
+				trait = deceitful
+				trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = tribal_kinslayer
+				trait = cannibal_trait
+				trait = tentacle
+				trait = cynical #whether doubt is sinful or not, doubting the divine makes using your powers harder
+				AND = {
+					trait = craven
+					OR = {
+						religion = norse_pagan
+						religion = tengri_pagan
+						religion = norse_pagan_reformed
+						religion = tengri_pagan_reformed
+						religion = aztec
+						religion = aztec_reformed
+						}
+					}
+				}
+				}
+			piety = -500		
+			}		
+		if = { #here we start a bunch of code to increase cost if the angel is sinful
+			limit = {
+				calc_true_if = {
+				amount = 2
+				trait = rapist
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud								
+				trait = seducer
+				trait = seductress
+				trait = impaler
+				trait = cruel
+				trait = deceitful
+				trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = tribal_kinslayer
+				trait = cannibal_trait
+				trait = tentacle
+				trait = cynical #whether doubt is sinful or not, doubting the divine makes using your powers harder
+				AND = {
+					trait = craven
+					OR = {
+						religion = norse_pagan
+						religion = tengri_pagan
+						religion = norse_pagan_reformed
+						religion = tengri_pagan_reformed
+						religion = aztec
+						religion = aztec_reformed
+						}
+					}
+				}
+				}
+			piety = -375		
+			}
+		if = { #here we start a bunch of code to increase cost if the angel is sinful
+			limit = {
+				calc_true_if = {
+				amount = 1
+				trait = rapist
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = proud								
+				trait = seducer
+				trait = seductress
+				trait = impaler
+				trait = cruel
+				trait = deceitful
+				trait = kinslayer
+				trait = familial_kinslayer
+				trait = dynastic_kinslayer
+				trait = tribal_kinslayer
+				trait = cannibal_trait
+				trait = tentacle
+				trait = cynical #whether doubt is sinful or not, doubting the divine makes using your powers harder
+				AND = {
+					trait = craven
+					OR = {
+						religion = norse_pagan
+						religion = tengri_pagan
+						religion = norse_pagan_reformed
+						religion = tengri_pagan_reformed
+						religion = aztec
+						religion = aztec_reformed
+						}
+					}
+				}
+				}
+			piety = -250		
+			}
+		else = {
+			piety = -125
+		}
+
+
+
+		random_list = {
+			25 = { #target struck blind 
+				FROM = {
+				add_trait = blinded
+				}
+			}
+			25 = { # target becomes incapable
+				FROM = { add_trait = incapable }
+			}
+			25 = { # target becomes an imbecile
+				FROM = { add_trait = imbecile }
+			}
+			25 = { # target dies, believed to be natural causes
+				FROM = {
+					death = {
+						death_reason = death_murder_unknown_lightning
+					}
+				}
+			}
+		}
+		random = { #chance the target falls on their knees and repents
+			chance = 25
+			FROM = {
+				remove_trait = lustful
+				remove_trait = gluttonous
+				remove_trait = greedy
+				remove_trait = proud
+				remove_trait = wroth
+				remove_trait = envious
+				remove_trait = slothful
+				remove_trait = cruel
+				remove_trait = deceitful
+				add_trait = celibate
+				random = {
+					chance = 25
+					add_trait = zealous
+					}
+				}
+			}
+			
+		if = { #if we exceeded our piety, then we face judgment as well
+			limit = {
+				NOT = { piety = 0 }
+					}
+					
+				random_list = {
+					25 = { 					
+						add_trait = stressed						
+					}
+					25 = { 
+						add_trait = wounded						
+					}
+					25 = { 
+						add_trait = severely_injured					
+					}
+					25 = { 
+						add_trait = depressed						
+					}
+				}
+			
+			}
+		}
+	}
+	option = { # If the ai selected the player
+		trigger = {
+			ai = yes
+			FROM = { ai = no }
+		}
+		name = DWLilithDoh
+		ai_chance = {
+			factor = 1000
+		}
+	}
+}
+
+
+# .200 Heal minor spell 
+narrative_event = {
+	id = DWBHAngel.200
+	picture = a_placeholder
+	title = dwbhangel_heal_minor_title
+	is_triggered_only = yes # by targetted_decision
+	desc = { # self
+		trigger = { 
+			FROM = { character = ROOT }
+		}
+		text = DWBHAngel120desc
+		picture = angel_spell_heal_self1
+	}	
+	desc = { # other
+		trigger = { 
+			FROM = {NOT = { character = ROOT } }
+		}
+		text = DWBHAngel120desc2
+		picture = angel_spell_heal1
+	}	
+	option = { # I am healed
+		name = "DWBHAngel120optA"
+		trigger = {
+			FROM = { character = ROOT }		
+		}
+		hidden_tooltip = {
+			piety = -25
+			remove_trait = wounded
+			remove_trait = ill
+			remove_trait = flu
+			remove_trait = dysentery
+			remove_trait = gout
+			remove_trait = cough
+			remove_trait = fever
+			remove_trait = diarrhea
+			remove_trait = vomiting
+			remove_trait = chest_pain
+			remove_trait = cramps
+			remove_trait = rash
+			remove_trait = headache
+			remove_trait = abdominal_pain
+			remove_trait = fatigue
+			remove_trait = malaise
+			remove_trait = infection
+			remove_trait = scarred
+			clr_character_flag = developing_illness
+			clr_character_flag = got_flu
+			clr_character_flag = manifest_flu
+		}
+	}
+	option = { # I am healed
+		name = "DWBHAngel120optB"
+		trigger = {
+			FROM = { NOT = { character = ROOT }		}
+		}
+		hidden_tooltip = {
+			FROM = { piety = -25 }
+			remove_trait = wounded
+			remove_trait = ill
+			remove_trait = flu
+			remove_trait = dysentery
+			remove_trait = gout
+			remove_trait = cough
+			remove_trait = fever
+			remove_trait = diarrhea
+			remove_trait = vomiting
+			remove_trait = chest_pain
+			remove_trait = cramps
+			remove_trait = rash
+			remove_trait = headache
+			remove_trait = abdominal_pain
+			remove_trait = fatigue
+			remove_trait = malaise
+			remove_trait = infection
+			remove_trait = scarred
+			clr_character_flag = developing_illness
+			clr_character_flag = got_flu
+			clr_character_flag = manifest_flu
+		}
+	}	
+	
+}
+# .210 Heal moderate spell
+narrative_event = {
+	id = DWBHAngel.210
+	picture = a_placeholder
+	title = dwbhangel_heal_moderate_title
+	is_triggered_only = yes # by targetted_decision
+	desc = { # self
+		trigger = { 
+			FROM = { character = ROOT }
+		}
+		text = DWBHAngel120desc
+		picture = angel_spell_heal_self1
+	}	
+	desc = { # other
+		trigger = { 
+			FROM = {NOT = { character = ROOT } }
+		}
+		text = DWBHAngel120desc2
+		picture = angel_spell_heal1
+	}	
+	option = { # I am self healed
+		name = "DWBHAngel120optA"
+		trigger = {
+			FROM = { character = ROOT }		
+		}
+		hidden_tooltip = {
+			piety = -75
+			remove_trait = maimed
+			remove_trait = pneumonic
+			remove_trait = syphilitic
+			remove_trait = has_tuberculosis
+			remove_trait = has_typhoid_fever
+			remove_trait = has_typhus
+			remove_trait = has_measles
+			remove_trait = food_poisoning
+			remove_trait = scurvy
+			remove_trait = disfigured
+			remove_trait = mangled
+			remove_trait = severely_injured
+			remove_trait = clubfooted
+			remove_trait = harelip
+			remove_trait = hunchback
+			remove_trait = lisp
+			remove_trait = scarred_mid
+			clr_character_flag = developing_illness
+			clr_character_flag = got_flu
+			clr_character_flag = manifest_flu
+		}
+	}
+	option = { # I am healed
+		name = "DWBHAngel120optB"
+		trigger = {
+			FROM = { NOT = { character = ROOT }		}
+		}
+		hidden_tooltip = {
+			FROM = { piety = -75 }
+			remove_trait = maimed
+			remove_trait = pneumonic
+			remove_trait = syphilitic
+			remove_trait = has_tuberculosis
+			remove_trait = has_typhoid_fever
+			remove_trait = has_typhus
+			remove_trait = has_measles
+			remove_trait = food_poisoning
+			remove_trait = scurvy
+			remove_trait = disfigured
+			remove_trait = mangled
+			remove_trait = severely_injured
+			remove_trait = clubfooted
+			remove_trait = harelip
+			remove_trait = hunchback
+			remove_trait = lisp
+			remove_trait = scarred_mid
+			clr_character_flag = developing_illness
+			clr_character_flag = got_flu
+			clr_character_flag = manifest_flu
+		}
+	}	
+}

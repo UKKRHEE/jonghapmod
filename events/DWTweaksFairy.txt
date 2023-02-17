@@ -1,0 +1,302 @@
+namespace = DWTweaksFairy
+
+character_event = { # Adds a Fairy portrait on adulthood
+	id = DWTweaksFairy.1
+	is_triggered_only = yes  
+	hide_window = yes 
+	trigger = {
+		trait = fairy
+	}
+	immediate = {
+		add_random_fairy_portrait = yes
+	}
+}
+
+narrative_event = {
+	id = DWTweaksFairy.2
+	picture = a_placeholder
+	title = dwtw_fairies2
+	is_triggered_only = yes
+	desc = { # Female specific
+		trigger = { 
+			is_female = yes
+		}
+		text = DWTweaksFairyFemale1
+		picture = fairies_dancing		
+	}
+	desc = { # Male specific
+		trigger = {
+			is_female = no
+		}
+		text = DWTweaksFairyMale1
+		picture = fairies_dancing
+	}
+	option = { # Queen of the Fae
+		trigger = {
+			is_female = yes
+		}
+		name = DWTweaksFairyFemale2
+		add_trait = fairy
+		culture = fae
+		capital_scope = {
+			culture = fae
+		}	
+		hidden_tooltip = {
+			add_random_fairy_portrait = yes
+		}
+	}
+	option = { # King of the Fae
+		trigger = {
+			is_female = no
+		}
+		name = DWTweaksFairyMale2
+		add_trait = fairy
+		culture = fae
+		capital_scope = {
+			culture = fae
+		}		
+		hidden_tooltip = {
+			add_random_fairy_portrait = yes
+		}
+	}
+	option = {
+		name = DWFFairy2
+		add_trait = fairy
+		culture = fae
+		capital_scope = {
+			culture = fae
+		}
+		hidden_tooltip = {
+			add_random_fairy_portrait = yes
+		}
+		custom_tooltip = {
+			text = DWAllRealmCharacters
+		}
+		hidden_tooltip = {
+			character_event = { id = DWTweaksFairy.11 }
+		}
+	}	
+}
+
+character_event = {
+	id = DWTweaksFairy.11
+	hide_window = yes
+	is_triggered_only = yes # Triggered by Decision
+	immediate = {
+		any_realm_character = {
+			limit = {
+				any_liege = { character = ROOT }
+			}
+			character_event = { id = DWSeeding.6 }
+		}
+	}
+}
+	
+#
+# The Bonny Swans event chain
+#	
+
+narrative_event = { # You spy a girl drowning
+	id = DWTweaksFairy.3
+	ai = no
+	title = DWTweaksFairy3T
+	picture = dwf_bonny_swans_drown
+	desc = DWTweaksFairy3
+	is_triggered_only = yes
+	trigger = {
+		trait = poet
+		trait = fairy
+		has_fairy_tale_content = yes
+		NOT = { has_global_flag = bonny_swan_happened }
+	}
+	
+	immediate = {
+		set_global_flag = bonny_swan_happened
+		create_character = {
+			random_traits = no
+			female = yes
+			name = Anne
+			age = 18
+			religion = ROOT
+			culture = ROOT
+			health = 8.0
+			historical = yes
+			trait = flamboyant_schemer
+			trait = fair
+			trait = cruel
+			trait = deceitful
+			trait = regular_tits
+			attributes = {
+				diplomacy = 3 
+				intrigue = 6 
+				martial = 3
+				stewardship = 3
+				learning = 3 
+			}
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			save_event_target_as = bonny_swan_murderer
+			set_variable = { which = breast_size value = 4 }
+			if = {  # For Christianity mod compatibility, to prevent a second set of tits getting assigned later
+				limit = {
+					has_global_flag = christ_enabled
+				}
+				set_character_flag = nada_checked
+			}
+		}
+		create_character = {
+			random_traits = no
+			female = yes
+			age = 16
+			religion = ROOT
+			culture = ROOT
+			health = 8.0
+			trait = charismatic_negotiator
+			trait = fair
+			trait = chaste
+			trait = kind
+			trait = regular_tits
+			attributes = {
+				diplomacy = 6 
+				intrigue = 3 
+				martial = 3
+				stewardship = 3
+				learning = 3 
+			}
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			save_event_target_as = bonny_swan
+			set_variable = { which = breast_size value = 4 }
+			if = {  # For Christianity mod compatibility, to prevent a second set of tits getting assigned later
+				limit = {
+					has_global_flag = christ_enabled
+				}
+				set_character_flag = nada_checked
+			}
+		}		
+	}
+	
+	option = { # I must help the girl!
+		name = DWTweaksFairy3TTA
+		hidden_tooltip = {
+			character_event = { id = DWTweaksFairy.31 } # Hides the portraits
+		}
+		narrative_event = { id = DWTweaksFairy.4 }
+	}
+	
+	option = { # How tragic.
+		name = DWTweaksFairy3TTB
+		hidden_tooltip = {
+			character_event = { id = DWTweaksFairy.31 } # Hides the portraits
+		}
+	}
+}
+
+character_event = { # Ping event
+	id = DWTweaksFairy.31
+	is_triggered_only = yes  
+	hide_window = yes 
+	immediate = {
+		event_target:bonny_swan = {
+			death = { death_reason = death_murder_unknown_drowning killer = event_target:bonny_swan_murderer }
+		}
+		event_target:bonny_swan_murderer = {
+			banish = yes
+		}
+	}
+}
+
+narrative_event = { # What to do with the body?
+	id = DWTweaksFairy.4
+	title = DWTweaksFairy4T
+	picture = dwf_bonny_swans_drown
+	desc = DWTweaksFairy4
+	is_triggered_only = yes	
+	
+	option = { # Maybe I can fashion a harp from her body...
+		name = DWTweaksFairy4TTA
+		add_artifact = macabre_harp
+		narrative_event = { id = DWTweaksFairy.5 days = 30 random = 90 }
+	}
+	option = { # I should bury her
+		name = DWTweaksFairy4TTB
+		piety = 100
+	}
+	option = { # I am getting a little hungry...
+		name = DWTweaksFairy4TTC
+		trigger = {
+			trait = cannibal_trait
+		}
+		tooltip_info = cannibal_trait
+		health = 1
+	}
+}
+
+narrative_event = { # I'm bored
+	id = DWTweaksFairy.5
+	title = DWTweaksFairy5T
+	picture = dwf_bonny_swans_drown
+	desc = DWTweaksFairy5
+	is_triggered_only = yes	
+	
+	option = { # Maybe a party? I'll invite everyone!
+		name = DWTweaksFairy5TTA
+		narrative_event = { id = DWTweaksFairy.6 days = 7 random = 14 }
+	}
+	option = { # Prayer and meditation
+		trigger = {
+			NOT = {
+				trait = content
+			}
+		}
+		name = DWTweaksFairy5TTB
+		piety = 100
+	}
+	option = { # I should go hunting
+		trigger = {
+			NOT = {
+				trait = content
+			}
+		}
+		name = DWTweaksFairy5TTC
+		prestige = 100
+	}	
+	option = { # I am content with my life
+		name = DWTweaksFairy5TTD
+		trigger = {
+			trait = content
+		}
+		piety = 100
+		prestige = 100
+		tooltip_info = content
+	}
+}
+
+narrative_event = { # The party
+	id = DWTweaksFairy.6
+	title = DWTweaksFairy6T
+	picture = dwf_bonny_swans_drown
+	desc = DWTweaksFairy6
+	is_triggered_only = yes	
+	immediate = {
+		event_target:bonny_swan_murderer = {
+			move_character = ROOT
+		}
+	}
+	option = { # She's a murderer. Guards! Seize her!
+		name = DWTweaksFairy6TTA
+		unsafe_destroy_artifact = macabre_harp
+		event_target:bonny_swan_murderer = {
+			imprison = ROOT
+		}
+	}
+	option = { # Break the harp before it embarrasses me further
+		name = DWTweaksFairy6TTB
+		unsafe_destroy_artifact = macabre_harp
+		event_target:bonny_swan_murderer = {
+			add_friend = ROOT
+		}
+	}
+}

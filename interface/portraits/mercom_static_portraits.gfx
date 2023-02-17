@@ -1,0 +1,2253 @@
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping02"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping02.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping03"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping03.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping04"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping04.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping05"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping05.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping06"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping06.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping07"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping07.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping08"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping08.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping09"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping09.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping10"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping10.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping11"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping11.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping12"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping12.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping13"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping13.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping14"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping14.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping15"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping15.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping16"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping16.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping17"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping17.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping18"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping18.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping19"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping19.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping20"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping20.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping21"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping21.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping22"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping22.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping23"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping23.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping24"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping24.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_mercom_remedy_portrait_swapping25"
+		texturefile = "gfx/static_portraits/mercom_remedy_portrait_swapping25.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_1"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait1
+					portrait_has_trait = mercom_portrait2
+					portrait_has_trait = mercom_portrait3
+					portrait_has_trait = mercom_portrait4
+					portrait_has_trait = mercom_portrait5
+					portrait_has_trait = mercom_portrait6
+					portrait_has_trait = mercom_portrait7
+					portrait_has_trait = mercom_portrait8
+					portrait_has_trait = mercom_portrait9
+					portrait_has_trait = mercom_portrait10
+					portrait_has_trait = mercom_portrait11
+					portrait_has_trait = mercom_portrait12
+					portrait_has_trait = mercom_portrait13
+					portrait_has_trait = mercom_portrait14
+					portrait_has_trait = mercom_portrait15
+					portrait_has_trait = mercom_portrait16
+					portrait_has_trait = mercom_portrait17
+					portrait_has_trait = mercom_portrait18
+					portrait_has_trait = mercom_portrait19
+					portrait_has_trait = mercom_portrait20
+					portrait_has_trait = mercom_portrait21
+					portrait_has_trait = mercom_portrait22
+					portrait_has_trait = mercom_portrait23
+					portrait_has_trait = mercom_portrait24
+					portrait_has_trait = mercom_portrait25
+					portrait_has_trait = mercom_portrait26
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait1 }
+				2 = { portrait_has_trait = mercom_portrait2 }
+				3 = { portrait_has_trait = mercom_portrait3 }
+				4 = { portrait_has_trait = mercom_portrait4 }
+				5 = { portrait_has_trait = mercom_portrait5 }
+				6 = { portrait_has_trait = mercom_portrait6 }
+				7 = { portrait_has_trait = mercom_portrait7 }
+				8 = { portrait_has_trait = mercom_portrait8 }
+				9 = { portrait_has_trait = mercom_portrait9 }
+				10 = { portrait_has_trait = mercom_portrait10 }
+				11 = { portrait_has_trait = mercom_portrait11 }
+				12 = { portrait_has_trait = mercom_portrait12 }
+				13 = { portrait_has_trait = mercom_portrait13 }
+				14 = { portrait_has_trait = mercom_portrait14 }
+				15 = { portrait_has_trait = mercom_portrait15 }
+				16 = { portrait_has_trait = mercom_portrait16 }
+				17 = { portrait_has_trait = mercom_portrait17 }
+				18 = { portrait_has_trait = mercom_portrait18 }
+				19 = { portrait_has_trait = mercom_portrait19 }
+				20 = { portrait_has_trait = mercom_portrait20 }
+				21 = { portrait_has_trait = mercom_portrait21 }
+				22 = { portrait_has_trait = mercom_portrait22 }
+				23 = { portrait_has_trait = mercom_portrait23 }
+				24 = { portrait_has_trait = mercom_portrait24 }
+				25 = { portrait_has_trait = mercom_portrait25 }
+				26 = { portrait_has_trait = mercom_portrait26 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_2"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait27
+					portrait_has_trait = mercom_portrait28
+					portrait_has_trait = mercom_portrait29
+					portrait_has_trait = mercom_portrait30
+					portrait_has_trait = mercom_portrait31
+					portrait_has_trait = mercom_portrait32
+					portrait_has_trait = mercom_portrait33
+					portrait_has_trait = mercom_portrait34
+					portrait_has_trait = mercom_portrait35
+					portrait_has_trait = mercom_portrait36
+					portrait_has_trait = mercom_portrait37
+					portrait_has_trait = mercom_portrait38
+					portrait_has_trait = mercom_portrait39
+					portrait_has_trait = mercom_portrait40
+					portrait_has_trait = mercom_portrait41
+					portrait_has_trait = mercom_portrait42
+					portrait_has_trait = mercom_portrait43
+					portrait_has_trait = mercom_portrait44
+					portrait_has_trait = mercom_portrait45
+					portrait_has_trait = mercom_portrait46
+					portrait_has_trait = mercom_portrait47
+					portrait_has_trait = mercom_portrait48
+					portrait_has_trait = mercom_portrait49
+					portrait_has_trait = mercom_portrait50
+					portrait_has_trait = mercom_portrait51
+					portrait_has_trait = mercom_portrait52
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping02:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait27 }
+				2 = { portrait_has_trait = mercom_portrait28 }
+				3 = { portrait_has_trait = mercom_portrait29 }
+				4 = { portrait_has_trait = mercom_portrait30 }
+				5 = { portrait_has_trait = mercom_portrait31 }
+				6 = { portrait_has_trait = mercom_portrait32 }
+				7 = { portrait_has_trait = mercom_portrait33 }
+				8 = { portrait_has_trait = mercom_portrait34 }
+				9 = { portrait_has_trait = mercom_portrait35 }
+				10 = { portrait_has_trait = mercom_portrait36 }
+				11 = { portrait_has_trait = mercom_portrait37 }
+				12 = { portrait_has_trait = mercom_portrait38 }
+				13 = { portrait_has_trait = mercom_portrait39 }
+				14 = { portrait_has_trait = mercom_portrait40 }
+				15 = { portrait_has_trait = mercom_portrait41 }
+				16 = { portrait_has_trait = mercom_portrait42 }
+				17 = { portrait_has_trait = mercom_portrait43 }
+				18 = { portrait_has_trait = mercom_portrait44 }
+				19 = { portrait_has_trait = mercom_portrait45 }
+				20 = { portrait_has_trait = mercom_portrait46 }
+				21 = { portrait_has_trait = mercom_portrait47 }
+				22 = { portrait_has_trait = mercom_portrait48 }
+				23 = { portrait_has_trait = mercom_portrait49 }
+				24 = { portrait_has_trait = mercom_portrait50 }
+				25 = { portrait_has_trait = mercom_portrait51 }
+				26 = { portrait_has_trait = mercom_portrait52 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_3"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait53
+					portrait_has_trait = mercom_portrait54
+					portrait_has_trait = mercom_portrait55
+					portrait_has_trait = mercom_portrait56
+					portrait_has_trait = mercom_portrait57
+					portrait_has_trait = mercom_portrait58
+					portrait_has_trait = mercom_portrait59
+					portrait_has_trait = mercom_portrait60
+					portrait_has_trait = mercom_portrait61
+					portrait_has_trait = mercom_portrait62
+					portrait_has_trait = mercom_portrait63
+					portrait_has_trait = mercom_portrait64
+					portrait_has_trait = mercom_portrait65
+					portrait_has_trait = mercom_portrait66
+					portrait_has_trait = mercom_portrait67
+					portrait_has_trait = mercom_portrait68
+					portrait_has_trait = mercom_portrait69
+					portrait_has_trait = mercom_portrait70
+					portrait_has_trait = mercom_portrait71
+					portrait_has_trait = mercom_portrait72
+					portrait_has_trait = mercom_portrait73
+					portrait_has_trait = mercom_portrait74
+					portrait_has_trait = mercom_portrait75
+					portrait_has_trait = mercom_portrait76
+					portrait_has_trait = mercom_portrait77
+					portrait_has_trait = mercom_portrait78
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping03:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait53 }
+				2 = { portrait_has_trait = mercom_portrait54 }
+				3 = { portrait_has_trait = mercom_portrait55 }
+				4 = { portrait_has_trait = mercom_portrait56 }
+				5 = { portrait_has_trait = mercom_portrait57 }
+				6 = { portrait_has_trait = mercom_portrait58 }
+				7 = { portrait_has_trait = mercom_portrait59 }
+				8 = { portrait_has_trait = mercom_portrait60 }
+				9 = { portrait_has_trait = mercom_portrait61 }
+				10 = { portrait_has_trait = mercom_portrait62 }
+				11 = { portrait_has_trait = mercom_portrait63 }
+				12 = { portrait_has_trait = mercom_portrait64 }
+				13 = { portrait_has_trait = mercom_portrait65 }
+				14 = { portrait_has_trait = mercom_portrait66 }
+				15 = { portrait_has_trait = mercom_portrait67 }
+				16 = { portrait_has_trait = mercom_portrait68 }
+				17 = { portrait_has_trait = mercom_portrait69 }
+				18 = { portrait_has_trait = mercom_portrait70 }
+				19 = { portrait_has_trait = mercom_portrait71 }
+				20 = { portrait_has_trait = mercom_portrait72 }
+				21 = { portrait_has_trait = mercom_portrait73 }
+				22 = { portrait_has_trait = mercom_portrait74 }
+				23 = { portrait_has_trait = mercom_portrait75 }
+				24 = { portrait_has_trait = mercom_portrait76 }
+				25 = { portrait_has_trait = mercom_portrait77 }
+				26 = { portrait_has_trait = mercom_portrait78 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_4"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait79
+					portrait_has_trait = mercom_portrait80
+					portrait_has_trait = mercom_portrait81
+					portrait_has_trait = mercom_portrait82
+					portrait_has_trait = mercom_portrait83
+					portrait_has_trait = mercom_portrait84
+					portrait_has_trait = mercom_portrait85
+					portrait_has_trait = mercom_portrait86
+					portrait_has_trait = mercom_portrait87
+					portrait_has_trait = mercom_portrait88
+					portrait_has_trait = mercom_portrait89
+					portrait_has_trait = mercom_portrait90
+					portrait_has_trait = mercom_portrait91
+					portrait_has_trait = mercom_portrait92
+					portrait_has_trait = mercom_portrait93
+					portrait_has_trait = mercom_portrait94
+					portrait_has_trait = mercom_portrait95
+					portrait_has_trait = mercom_portrait96
+					portrait_has_trait = mercom_portrait97
+					portrait_has_trait = mercom_portrait98
+					portrait_has_trait = mercom_portrait99
+					portrait_has_trait = mercom_portrait100
+					portrait_has_trait = mercom_portrait101
+					portrait_has_trait = mercom_portrait102
+					portrait_has_trait = mercom_portrait103
+					portrait_has_trait = mercom_portrait104
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping04:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait79 }
+				2 = { portrait_has_trait = mercom_portrait80 }
+				3 = { portrait_has_trait = mercom_portrait81 }
+				4 = { portrait_has_trait = mercom_portrait82 }
+				5 = { portrait_has_trait = mercom_portrait83 }
+				6 = { portrait_has_trait = mercom_portrait84 }
+				7 = { portrait_has_trait = mercom_portrait85 }
+				8 = { portrait_has_trait = mercom_portrait86 }
+				9 = { portrait_has_trait = mercom_portrait87 }
+				10 = { portrait_has_trait = mercom_portrait88 }
+				11 = { portrait_has_trait = mercom_portrait89 }
+				12 = { portrait_has_trait = mercom_portrait90 }
+				13 = { portrait_has_trait = mercom_portrait91 }
+				14 = { portrait_has_trait = mercom_portrait92 }
+				15 = { portrait_has_trait = mercom_portrait93 }
+				16 = { portrait_has_trait = mercom_portrait94 }
+				17 = { portrait_has_trait = mercom_portrait95 }
+				18 = { portrait_has_trait = mercom_portrait96 }
+				19 = { portrait_has_trait = mercom_portrait97 }
+				20 = { portrait_has_trait = mercom_portrait98 }
+				21 = { portrait_has_trait = mercom_portrait99 }
+				22 = { portrait_has_trait = mercom_portrait100 }
+				23 = { portrait_has_trait = mercom_portrait101 }
+				24 = { portrait_has_trait = mercom_portrait102 }
+				25 = { portrait_has_trait = mercom_portrait103 }
+				26 = { portrait_has_trait = mercom_portrait104 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_5"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait105
+					portrait_has_trait = mercom_portrait106
+					portrait_has_trait = mercom_portrait107
+					portrait_has_trait = mercom_portrait108
+					portrait_has_trait = mercom_portrait109
+					portrait_has_trait = mercom_portrait110
+					portrait_has_trait = mercom_portrait111
+					portrait_has_trait = mercom_portrait112
+					portrait_has_trait = mercom_portrait113
+					portrait_has_trait = mercom_portrait114
+					portrait_has_trait = mercom_portrait115
+					portrait_has_trait = mercom_portrait116
+					portrait_has_trait = mercom_portrait117
+					portrait_has_trait = mercom_portrait118
+					portrait_has_trait = mercom_portrait119
+					portrait_has_trait = mercom_portrait120
+					portrait_has_trait = mercom_portrait121
+					portrait_has_trait = mercom_portrait122
+					portrait_has_trait = mercom_portrait123
+					portrait_has_trait = mercom_portrait124
+					portrait_has_trait = mercom_portrait125
+					portrait_has_trait = mercom_portrait126
+					portrait_has_trait = mercom_portrait127
+					portrait_has_trait = mercom_portrait128
+					portrait_has_trait = mercom_portrait129
+					portrait_has_trait = mercom_portrait130
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping05:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait105 }
+				2 = { portrait_has_trait = mercom_portrait106 }
+				3 = { portrait_has_trait = mercom_portrait107 }
+				4 = { portrait_has_trait = mercom_portrait108 }
+				5 = { portrait_has_trait = mercom_portrait109 }
+				6 = { portrait_has_trait = mercom_portrait110 }
+				7 = { portrait_has_trait = mercom_portrait111 }
+				8 = { portrait_has_trait = mercom_portrait112 }
+				9 = { portrait_has_trait = mercom_portrait113 }
+				10 = { portrait_has_trait = mercom_portrait114 }
+				11 = { portrait_has_trait = mercom_portrait115 }
+				12 = { portrait_has_trait = mercom_portrait116 }
+				13 = { portrait_has_trait = mercom_portrait117 }
+				14 = { portrait_has_trait = mercom_portrait118 }
+				15 = { portrait_has_trait = mercom_portrait119 }
+				16 = { portrait_has_trait = mercom_portrait120 }
+				17 = { portrait_has_trait = mercom_portrait121 }
+				18 = { portrait_has_trait = mercom_portrait122 }
+				19 = { portrait_has_trait = mercom_portrait123 }
+				20 = { portrait_has_trait = mercom_portrait124 }
+				21 = { portrait_has_trait = mercom_portrait125 }
+				22 = { portrait_has_trait = mercom_portrait126 }
+				23 = { portrait_has_trait = mercom_portrait127 }
+				24 = { portrait_has_trait = mercom_portrait128 }
+				25 = { portrait_has_trait = mercom_portrait129 }
+				26 = { portrait_has_trait = mercom_portrait130 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_6"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait131
+					portrait_has_trait = mercom_portrait132
+					portrait_has_trait = mercom_portrait133
+					portrait_has_trait = mercom_portrait134
+					portrait_has_trait = mercom_portrait135
+					portrait_has_trait = mercom_portrait136
+					portrait_has_trait = mercom_portrait137
+					portrait_has_trait = mercom_portrait138
+					portrait_has_trait = mercom_portrait139
+					portrait_has_trait = mercom_portrait140
+					portrait_has_trait = mercom_portrait141
+					portrait_has_trait = mercom_portrait142
+					portrait_has_trait = mercom_portrait143
+					portrait_has_trait = mercom_portrait144
+					portrait_has_trait = mercom_portrait145
+					portrait_has_trait = mercom_portrait146
+					portrait_has_trait = mercom_portrait147
+					portrait_has_trait = mercom_portrait148
+					portrait_has_trait = mercom_portrait149
+					portrait_has_trait = mercom_portrait150
+					portrait_has_trait = mercom_portrait151
+					portrait_has_trait = mercom_portrait152
+					portrait_has_trait = mercom_portrait153
+					portrait_has_trait = mercom_portrait154
+					portrait_has_trait = mercom_portrait155
+					portrait_has_trait = mercom_portrait156
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping06:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait131 }
+				2 = { portrait_has_trait = mercom_portrait132 }
+				3 = { portrait_has_trait = mercom_portrait133 }
+				4 = { portrait_has_trait = mercom_portrait134 }
+				5 = { portrait_has_trait = mercom_portrait135 }
+				6 = { portrait_has_trait = mercom_portrait136 }
+				7 = { portrait_has_trait = mercom_portrait137 }
+				8 = { portrait_has_trait = mercom_portrait138 }
+				9 = { portrait_has_trait = mercom_portrait139 }
+				10 = { portrait_has_trait = mercom_portrait140 }
+				11 = { portrait_has_trait = mercom_portrait141 }
+				12 = { portrait_has_trait = mercom_portrait142 }
+				13 = { portrait_has_trait = mercom_portrait143 }
+				14 = { portrait_has_trait = mercom_portrait144 }
+				15 = { portrait_has_trait = mercom_portrait145 }
+				16 = { portrait_has_trait = mercom_portrait146 }
+				17 = { portrait_has_trait = mercom_portrait147 }
+				18 = { portrait_has_trait = mercom_portrait148 }
+				19 = { portrait_has_trait = mercom_portrait149 }
+				20 = { portrait_has_trait = mercom_portrait150 }
+				21 = { portrait_has_trait = mercom_portrait151 }
+				22 = { portrait_has_trait = mercom_portrait152 }
+				23 = { portrait_has_trait = mercom_portrait153 }
+				24 = { portrait_has_trait = mercom_portrait154 }
+				25 = { portrait_has_trait = mercom_portrait155 }
+				26 = { portrait_has_trait = mercom_portrait156 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_7"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait157
+					portrait_has_trait = mercom_portrait158
+					portrait_has_trait = mercom_portrait159
+					portrait_has_trait = mercom_portrait160
+					portrait_has_trait = mercom_portrait161
+					portrait_has_trait = mercom_portrait162
+					portrait_has_trait = mercom_portrait163
+					portrait_has_trait = mercom_portrait164
+					portrait_has_trait = mercom_portrait165
+					portrait_has_trait = mercom_portrait166
+					portrait_has_trait = mercom_portrait167
+					portrait_has_trait = mercom_portrait168
+					portrait_has_trait = mercom_portrait169
+					portrait_has_trait = mercom_portrait170
+					portrait_has_trait = mercom_portrait171
+					portrait_has_trait = mercom_portrait172
+					portrait_has_trait = mercom_portrait173
+					portrait_has_trait = mercom_portrait174
+					portrait_has_trait = mercom_portrait175
+					portrait_has_trait = mercom_portrait176
+					portrait_has_trait = mercom_portrait177
+					portrait_has_trait = mercom_portrait178
+					portrait_has_trait = mercom_portrait179
+					portrait_has_trait = mercom_portrait180
+					portrait_has_trait = mercom_portrait181
+					portrait_has_trait = mercom_portrait182
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping07:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait157 }
+				2 = { portrait_has_trait = mercom_portrait158 }
+				3 = { portrait_has_trait = mercom_portrait159 }
+				4 = { portrait_has_trait = mercom_portrait160 }
+				5 = { portrait_has_trait = mercom_portrait161 }
+				6 = { portrait_has_trait = mercom_portrait162 }
+				7 = { portrait_has_trait = mercom_portrait163 }
+				8 = { portrait_has_trait = mercom_portrait164 }
+				9 = { portrait_has_trait = mercom_portrait165 }
+				10 = { portrait_has_trait = mercom_portrait166 }
+				11 = { portrait_has_trait = mercom_portrait167 }
+				12 = { portrait_has_trait = mercom_portrait168 }
+				13 = { portrait_has_trait = mercom_portrait169 }
+				14 = { portrait_has_trait = mercom_portrait170 }
+				15 = { portrait_has_trait = mercom_portrait171 }
+				16 = { portrait_has_trait = mercom_portrait172 }
+				17 = { portrait_has_trait = mercom_portrait173 }
+				18 = { portrait_has_trait = mercom_portrait174 }
+				19 = { portrait_has_trait = mercom_portrait175 }
+				20 = { portrait_has_trait = mercom_portrait176 }
+				21 = { portrait_has_trait = mercom_portrait177 }
+				22 = { portrait_has_trait = mercom_portrait178 }
+				23 = { portrait_has_trait = mercom_portrait179 }
+				24 = { portrait_has_trait = mercom_portrait180 }
+				25 = { portrait_has_trait = mercom_portrait181 }
+				26 = { portrait_has_trait = mercom_portrait182 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_8"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait183
+					portrait_has_trait = mercom_portrait184
+					portrait_has_trait = mercom_portrait185
+					portrait_has_trait = mercom_portrait186
+					portrait_has_trait = mercom_portrait187
+					portrait_has_trait = mercom_portrait188
+					portrait_has_trait = mercom_portrait189
+					portrait_has_trait = mercom_portrait190
+					portrait_has_trait = mercom_portrait191
+					portrait_has_trait = mercom_portrait192
+					portrait_has_trait = mercom_portrait193
+					portrait_has_trait = mercom_portrait194
+					portrait_has_trait = mercom_portrait195
+					portrait_has_trait = mercom_portrait196
+					portrait_has_trait = mercom_portrait197
+					portrait_has_trait = mercom_portrait198
+					portrait_has_trait = mercom_portrait199
+					portrait_has_trait = mercom_portrait200
+					portrait_has_trait = mercom_portrait201
+					portrait_has_trait = mercom_portrait202
+					portrait_has_trait = mercom_portrait203
+					portrait_has_trait = mercom_portrait204
+					portrait_has_trait = mercom_portrait205
+					portrait_has_trait = mercom_portrait206
+					portrait_has_trait = mercom_portrait207
+					portrait_has_trait = mercom_portrait208
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping08:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait183 }
+				2 = { portrait_has_trait = mercom_portrait184 }
+				3 = { portrait_has_trait = mercom_portrait185 }
+				4 = { portrait_has_trait = mercom_portrait186 }
+				5 = { portrait_has_trait = mercom_portrait187 }
+				6 = { portrait_has_trait = mercom_portrait188 }
+				7 = { portrait_has_trait = mercom_portrait189 }
+				8 = { portrait_has_trait = mercom_portrait190 }
+				9 = { portrait_has_trait = mercom_portrait191 }
+				10 = { portrait_has_trait = mercom_portrait192 }
+				11 = { portrait_has_trait = mercom_portrait193 }
+				12 = { portrait_has_trait = mercom_portrait194 }
+				13 = { portrait_has_trait = mercom_portrait195 }
+				14 = { portrait_has_trait = mercom_portrait196 }
+				15 = { portrait_has_trait = mercom_portrait197 }
+				16 = { portrait_has_trait = mercom_portrait198 }
+				17 = { portrait_has_trait = mercom_portrait199 }
+				18 = { portrait_has_trait = mercom_portrait200 }
+				19 = { portrait_has_trait = mercom_portrait201 }
+				20 = { portrait_has_trait = mercom_portrait202 }
+				21 = { portrait_has_trait = mercom_portrait203 }
+				22 = { portrait_has_trait = mercom_portrait204 }
+				23 = { portrait_has_trait = mercom_portrait205 }
+				24 = { portrait_has_trait = mercom_portrait206 }
+				25 = { portrait_has_trait = mercom_portrait207 }
+				26 = { portrait_has_trait = mercom_portrait208 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_9"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait209
+					portrait_has_trait = mercom_portrait210
+					portrait_has_trait = mercom_portrait211
+					portrait_has_trait = mercom_portrait212
+					portrait_has_trait = mercom_portrait213
+					portrait_has_trait = mercom_portrait214
+					portrait_has_trait = mercom_portrait215
+					portrait_has_trait = mercom_portrait216
+					portrait_has_trait = mercom_portrait217
+					portrait_has_trait = mercom_portrait218
+					portrait_has_trait = mercom_portrait219
+					portrait_has_trait = mercom_portrait220
+					portrait_has_trait = mercom_portrait221
+					portrait_has_trait = mercom_portrait222
+					portrait_has_trait = mercom_portrait223
+					portrait_has_trait = mercom_portrait224
+					portrait_has_trait = mercom_portrait225
+					portrait_has_trait = mercom_portrait226
+					portrait_has_trait = mercom_portrait227
+					portrait_has_trait = mercom_portrait228
+					portrait_has_trait = mercom_portrait229
+					portrait_has_trait = mercom_portrait230
+					portrait_has_trait = mercom_portrait231
+					portrait_has_trait = mercom_portrait232
+					portrait_has_trait = mercom_portrait233
+					portrait_has_trait = mercom_portrait234
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping09:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait209 }
+				2 = { portrait_has_trait = mercom_portrait210 }
+				3 = { portrait_has_trait = mercom_portrait211 }
+				4 = { portrait_has_trait = mercom_portrait212 }
+				5 = { portrait_has_trait = mercom_portrait213 }
+				6 = { portrait_has_trait = mercom_portrait214 }
+				7 = { portrait_has_trait = mercom_portrait215 }
+				8 = { portrait_has_trait = mercom_portrait216 }
+				9 = { portrait_has_trait = mercom_portrait217 }
+				10 = { portrait_has_trait = mercom_portrait218 }
+				11 = { portrait_has_trait = mercom_portrait219 }
+				12 = { portrait_has_trait = mercom_portrait220 }
+				13 = { portrait_has_trait = mercom_portrait221 }
+				14 = { portrait_has_trait = mercom_portrait222 }
+				15 = { portrait_has_trait = mercom_portrait223 }
+				16 = { portrait_has_trait = mercom_portrait224 }
+				17 = { portrait_has_trait = mercom_portrait225 }
+				18 = { portrait_has_trait = mercom_portrait226 }
+				19 = { portrait_has_trait = mercom_portrait227 }
+				20 = { portrait_has_trait = mercom_portrait228 }
+				21 = { portrait_has_trait = mercom_portrait229 }
+				22 = { portrait_has_trait = mercom_portrait230 }
+				23 = { portrait_has_trait = mercom_portrait231 }
+				24 = { portrait_has_trait = mercom_portrait232 }
+				25 = { portrait_has_trait = mercom_portrait233 }
+				26 = { portrait_has_trait = mercom_portrait234 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_10"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait235
+					portrait_has_trait = mercom_portrait236
+					portrait_has_trait = mercom_portrait237
+					portrait_has_trait = mercom_portrait238
+					portrait_has_trait = mercom_portrait239
+					portrait_has_trait = mercom_portrait240
+					portrait_has_trait = mercom_portrait241
+					portrait_has_trait = mercom_portrait242
+					portrait_has_trait = mercom_portrait243
+					portrait_has_trait = mercom_portrait244
+					portrait_has_trait = mercom_portrait245
+					portrait_has_trait = mercom_portrait246
+					portrait_has_trait = mercom_portrait247
+					portrait_has_trait = mercom_portrait248
+					portrait_has_trait = mercom_portrait249
+					portrait_has_trait = mercom_portrait250
+					portrait_has_trait = mercom_portrait251
+					portrait_has_trait = mercom_portrait252
+					portrait_has_trait = mercom_portrait253
+					portrait_has_trait = mercom_portrait254
+					portrait_has_trait = mercom_portrait255
+					portrait_has_trait = mercom_portrait256
+					portrait_has_trait = mercom_portrait257
+					portrait_has_trait = mercom_portrait258
+					portrait_has_trait = mercom_portrait259
+					portrait_has_trait = mercom_portrait260
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping10:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait235 }
+				2 = { portrait_has_trait = mercom_portrait236 }
+				3 = { portrait_has_trait = mercom_portrait237 }
+				4 = { portrait_has_trait = mercom_portrait238 }
+				5 = { portrait_has_trait = mercom_portrait239 }
+				6 = { portrait_has_trait = mercom_portrait240 }
+				7 = { portrait_has_trait = mercom_portrait241 }
+				8 = { portrait_has_trait = mercom_portrait242 }
+				9 = { portrait_has_trait = mercom_portrait243 }
+				10 = { portrait_has_trait = mercom_portrait244 }
+				11 = { portrait_has_trait = mercom_portrait245 }
+				12 = { portrait_has_trait = mercom_portrait246 }
+				13 = { portrait_has_trait = mercom_portrait247 }
+				14 = { portrait_has_trait = mercom_portrait248 }
+				15 = { portrait_has_trait = mercom_portrait249 }
+				16 = { portrait_has_trait = mercom_portrait250 }
+				17 = { portrait_has_trait = mercom_portrait251 }
+				18 = { portrait_has_trait = mercom_portrait252 }
+				19 = { portrait_has_trait = mercom_portrait253 }
+				20 = { portrait_has_trait = mercom_portrait254 }
+				21 = { portrait_has_trait = mercom_portrait255 }
+				22 = { portrait_has_trait = mercom_portrait256 }
+				23 = { portrait_has_trait = mercom_portrait257 }
+				24 = { portrait_has_trait = mercom_portrait258 }
+				25 = { portrait_has_trait = mercom_portrait259 }
+				26 = { portrait_has_trait = mercom_portrait260 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_11"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait261
+					portrait_has_trait = mercom_portrait262
+					portrait_has_trait = mercom_portrait263
+					portrait_has_trait = mercom_portrait264
+					portrait_has_trait = mercom_portrait265
+					portrait_has_trait = mercom_portrait266
+					portrait_has_trait = mercom_portrait267
+					portrait_has_trait = mercom_portrait268
+					portrait_has_trait = mercom_portrait269
+					portrait_has_trait = mercom_portrait270
+					portrait_has_trait = mercom_portrait271
+					portrait_has_trait = mercom_portrait272
+					portrait_has_trait = mercom_portrait273
+					portrait_has_trait = mercom_portrait274
+					portrait_has_trait = mercom_portrait275
+					portrait_has_trait = mercom_portrait276
+					portrait_has_trait = mercom_portrait277
+					portrait_has_trait = mercom_portrait278
+					portrait_has_trait = mercom_portrait279
+					portrait_has_trait = mercom_portrait280
+					portrait_has_trait = mercom_portrait281
+					portrait_has_trait = mercom_portrait282
+					portrait_has_trait = mercom_portrait283
+					portrait_has_trait = mercom_portrait284
+					portrait_has_trait = mercom_portrait285
+					portrait_has_trait = mercom_portrait286
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping11:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait261 }
+				2 = { portrait_has_trait = mercom_portrait262 }
+				3 = { portrait_has_trait = mercom_portrait263 }
+				4 = { portrait_has_trait = mercom_portrait264 }
+				5 = { portrait_has_trait = mercom_portrait265 }
+				6 = { portrait_has_trait = mercom_portrait266 }
+				7 = { portrait_has_trait = mercom_portrait267 }
+				8 = { portrait_has_trait = mercom_portrait268 }
+				9 = { portrait_has_trait = mercom_portrait269 }
+				10 = { portrait_has_trait = mercom_portrait270 }
+				11 = { portrait_has_trait = mercom_portrait271 }
+				12 = { portrait_has_trait = mercom_portrait272 }
+				13 = { portrait_has_trait = mercom_portrait273 }
+				14 = { portrait_has_trait = mercom_portrait274 }
+				15 = { portrait_has_trait = mercom_portrait275 }
+				16 = { portrait_has_trait = mercom_portrait276 }
+				17 = { portrait_has_trait = mercom_portrait277 }
+				18 = { portrait_has_trait = mercom_portrait278 }
+				19 = { portrait_has_trait = mercom_portrait279 }
+				20 = { portrait_has_trait = mercom_portrait280 }
+				21 = { portrait_has_trait = mercom_portrait281 }
+				22 = { portrait_has_trait = mercom_portrait282 }
+				23 = { portrait_has_trait = mercom_portrait283 }
+				24 = { portrait_has_trait = mercom_portrait284 }
+				25 = { portrait_has_trait = mercom_portrait285 }
+				26 = { portrait_has_trait = mercom_portrait286 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_12"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait287
+					portrait_has_trait = mercom_portrait288
+					portrait_has_trait = mercom_portrait289
+					portrait_has_trait = mercom_portrait290
+					portrait_has_trait = mercom_portrait291
+					portrait_has_trait = mercom_portrait292
+					portrait_has_trait = mercom_portrait293
+					portrait_has_trait = mercom_portrait294
+					portrait_has_trait = mercom_portrait295
+					portrait_has_trait = mercom_portrait296
+					portrait_has_trait = mercom_portrait297
+					portrait_has_trait = mercom_portrait298
+					portrait_has_trait = mercom_portrait299
+					portrait_has_trait = mercom_portrait300
+					portrait_has_trait = mercom_portrait301
+					portrait_has_trait = mercom_portrait302
+					portrait_has_trait = mercom_portrait303
+					portrait_has_trait = mercom_portrait304
+					portrait_has_trait = mercom_portrait305
+					portrait_has_trait = mercom_portrait306
+					portrait_has_trait = mercom_portrait307
+					portrait_has_trait = mercom_portrait308
+					portrait_has_trait = mercom_portrait309
+					portrait_has_trait = mercom_portrait310
+					portrait_has_trait = mercom_portrait311
+					portrait_has_trait = mercom_portrait312
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping12:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait287 }
+				2 = { portrait_has_trait = mercom_portrait288 }
+				3 = { portrait_has_trait = mercom_portrait289 }
+				4 = { portrait_has_trait = mercom_portrait290 }
+				5 = { portrait_has_trait = mercom_portrait291 }
+				6 = { portrait_has_trait = mercom_portrait292 }
+				7 = { portrait_has_trait = mercom_portrait293 }
+				8 = { portrait_has_trait = mercom_portrait294 }
+				9 = { portrait_has_trait = mercom_portrait295 }
+				10 = { portrait_has_trait = mercom_portrait296 }
+				11 = { portrait_has_trait = mercom_portrait297 }
+				12 = { portrait_has_trait = mercom_portrait298 }
+				13 = { portrait_has_trait = mercom_portrait299 }
+				14 = { portrait_has_trait = mercom_portrait300 }
+				15 = { portrait_has_trait = mercom_portrait301 }
+				16 = { portrait_has_trait = mercom_portrait302 }
+				17 = { portrait_has_trait = mercom_portrait303 }
+				18 = { portrait_has_trait = mercom_portrait304 }
+				19 = { portrait_has_trait = mercom_portrait305 }
+				20 = { portrait_has_trait = mercom_portrait306 }
+				21 = { portrait_has_trait = mercom_portrait307 }
+				22 = { portrait_has_trait = mercom_portrait308 }
+				23 = { portrait_has_trait = mercom_portrait309 }
+				24 = { portrait_has_trait = mercom_portrait310 }
+				25 = { portrait_has_trait = mercom_portrait311 }
+				26 = { portrait_has_trait = mercom_portrait312 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_13"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait313
+					portrait_has_trait = mercom_portrait314
+					portrait_has_trait = mercom_portrait315
+					portrait_has_trait = mercom_portrait316
+					portrait_has_trait = mercom_portrait317
+					portrait_has_trait = mercom_portrait318
+					portrait_has_trait = mercom_portrait319
+					portrait_has_trait = mercom_portrait320
+					portrait_has_trait = mercom_portrait321
+					portrait_has_trait = mercom_portrait322
+					portrait_has_trait = mercom_portrait323
+					portrait_has_trait = mercom_portrait324
+					portrait_has_trait = mercom_portrait325
+					portrait_has_trait = mercom_portrait326
+					portrait_has_trait = mercom_portrait327
+					portrait_has_trait = mercom_portrait328
+					portrait_has_trait = mercom_portrait329
+					portrait_has_trait = mercom_portrait330
+					portrait_has_trait = mercom_portrait331
+					portrait_has_trait = mercom_portrait332
+					portrait_has_trait = mercom_portrait333
+					portrait_has_trait = mercom_portrait334
+					portrait_has_trait = mercom_portrait335
+					portrait_has_trait = mercom_portrait336
+					portrait_has_trait = mercom_portrait337
+					portrait_has_trait = mercom_portrait338
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping13:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait313 }
+				2 = { portrait_has_trait = mercom_portrait314 }
+				3 = { portrait_has_trait = mercom_portrait315 }
+				4 = { portrait_has_trait = mercom_portrait316 }
+				5 = { portrait_has_trait = mercom_portrait317 }
+				6 = { portrait_has_trait = mercom_portrait318 }
+				7 = { portrait_has_trait = mercom_portrait319 }
+				8 = { portrait_has_trait = mercom_portrait320 }
+				9 = { portrait_has_trait = mercom_portrait321 }
+				10 = { portrait_has_trait = mercom_portrait322 }
+				11 = { portrait_has_trait = mercom_portrait323 }
+				12 = { portrait_has_trait = mercom_portrait324 }
+				13 = { portrait_has_trait = mercom_portrait325 }
+				14 = { portrait_has_trait = mercom_portrait326 }
+				15 = { portrait_has_trait = mercom_portrait327 }
+				16 = { portrait_has_trait = mercom_portrait328 }
+				17 = { portrait_has_trait = mercom_portrait329 }
+				18 = { portrait_has_trait = mercom_portrait330 }
+				19 = { portrait_has_trait = mercom_portrait331 }
+				20 = { portrait_has_trait = mercom_portrait332 }
+				21 = { portrait_has_trait = mercom_portrait333 }
+				22 = { portrait_has_trait = mercom_portrait334 }
+				23 = { portrait_has_trait = mercom_portrait335 }
+				24 = { portrait_has_trait = mercom_portrait336 }
+				25 = { portrait_has_trait = mercom_portrait337 }
+				26 = { portrait_has_trait = mercom_portrait338 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_14"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait339
+					portrait_has_trait = mercom_portrait340
+					portrait_has_trait = mercom_portrait341
+					portrait_has_trait = mercom_portrait342
+					portrait_has_trait = mercom_portrait343
+					portrait_has_trait = mercom_portrait344
+					portrait_has_trait = mercom_portrait345
+					portrait_has_trait = mercom_portrait346
+					portrait_has_trait = mercom_portrait347
+					portrait_has_trait = mercom_portrait348
+					portrait_has_trait = mercom_portrait349
+					portrait_has_trait = mercom_portrait350
+					portrait_has_trait = mercom_portrait351
+					portrait_has_trait = mercom_portrait352
+					portrait_has_trait = mercom_portrait353
+					portrait_has_trait = mercom_portrait354
+					portrait_has_trait = mercom_portrait355
+					portrait_has_trait = mercom_portrait356
+					portrait_has_trait = mercom_portrait357
+					portrait_has_trait = mercom_portrait358
+					portrait_has_trait = mercom_portrait359
+					portrait_has_trait = mercom_portrait360
+					portrait_has_trait = mercom_portrait361
+					portrait_has_trait = mercom_portrait362
+					portrait_has_trait = mercom_portrait363
+					portrait_has_trait = mercom_portrait364
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping14:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait339 }
+				2 = { portrait_has_trait = mercom_portrait340 }
+				3 = { portrait_has_trait = mercom_portrait341 }
+				4 = { portrait_has_trait = mercom_portrait342 }
+				5 = { portrait_has_trait = mercom_portrait343 }
+				6 = { portrait_has_trait = mercom_portrait344 }
+				7 = { portrait_has_trait = mercom_portrait345 }
+				8 = { portrait_has_trait = mercom_portrait346 }
+				9 = { portrait_has_trait = mercom_portrait347 }
+				10 = { portrait_has_trait = mercom_portrait348 }
+				11 = { portrait_has_trait = mercom_portrait349 }
+				12 = { portrait_has_trait = mercom_portrait350 }
+				13 = { portrait_has_trait = mercom_portrait351 }
+				14 = { portrait_has_trait = mercom_portrait352 }
+				15 = { portrait_has_trait = mercom_portrait353 }
+				16 = { portrait_has_trait = mercom_portrait354 }
+				17 = { portrait_has_trait = mercom_portrait355 }
+				18 = { portrait_has_trait = mercom_portrait356 }
+				19 = { portrait_has_trait = mercom_portrait357 }
+				20 = { portrait_has_trait = mercom_portrait358 }
+				21 = { portrait_has_trait = mercom_portrait359 }
+				22 = { portrait_has_trait = mercom_portrait360 }
+				23 = { portrait_has_trait = mercom_portrait361 }
+				24 = { portrait_has_trait = mercom_portrait362 }
+				25 = { portrait_has_trait = mercom_portrait363 }
+				26 = { portrait_has_trait = mercom_portrait364 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_15"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait365
+					portrait_has_trait = mercom_portrait366
+					portrait_has_trait = mercom_portrait367
+					portrait_has_trait = mercom_portrait368
+					portrait_has_trait = mercom_portrait369
+					portrait_has_trait = mercom_portrait370
+					portrait_has_trait = mercom_portrait371
+					portrait_has_trait = mercom_portrait372
+					portrait_has_trait = mercom_portrait373
+					portrait_has_trait = mercom_portrait374
+					portrait_has_trait = mercom_portrait375
+					portrait_has_trait = mercom_portrait376
+					portrait_has_trait = mercom_portrait377
+					portrait_has_trait = mercom_portrait378
+					portrait_has_trait = mercom_portrait379
+					portrait_has_trait = mercom_portrait380
+					portrait_has_trait = mercom_portrait381
+					portrait_has_trait = mercom_portrait382
+					portrait_has_trait = mercom_portrait383
+					portrait_has_trait = mercom_portrait384
+					portrait_has_trait = mercom_portrait385
+					portrait_has_trait = mercom_portrait386
+					portrait_has_trait = mercom_portrait387
+					portrait_has_trait = mercom_portrait388
+					portrait_has_trait = mercom_portrait389
+					portrait_has_trait = mercom_portrait390
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping15:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait365 }
+				2 = { portrait_has_trait = mercom_portrait366 }
+				3 = { portrait_has_trait = mercom_portrait367 }
+				4 = { portrait_has_trait = mercom_portrait368 }
+				5 = { portrait_has_trait = mercom_portrait369 }
+				6 = { portrait_has_trait = mercom_portrait370 }
+				7 = { portrait_has_trait = mercom_portrait371 }
+				8 = { portrait_has_trait = mercom_portrait372 }
+				9 = { portrait_has_trait = mercom_portrait373 }
+				10 = { portrait_has_trait = mercom_portrait374 }
+				11 = { portrait_has_trait = mercom_portrait375 }
+				12 = { portrait_has_trait = mercom_portrait376 }
+				13 = { portrait_has_trait = mercom_portrait377 }
+				14 = { portrait_has_trait = mercom_portrait378 }
+				15 = { portrait_has_trait = mercom_portrait379 }
+				16 = { portrait_has_trait = mercom_portrait380 }
+				17 = { portrait_has_trait = mercom_portrait381 }
+				18 = { portrait_has_trait = mercom_portrait382 }
+				19 = { portrait_has_trait = mercom_portrait383 }
+				20 = { portrait_has_trait = mercom_portrait384 }
+				21 = { portrait_has_trait = mercom_portrait385 }
+				22 = { portrait_has_trait = mercom_portrait386 }
+				23 = { portrait_has_trait = mercom_portrait387 }
+				24 = { portrait_has_trait = mercom_portrait388 }
+				25 = { portrait_has_trait = mercom_portrait389 }
+				26 = { portrait_has_trait = mercom_portrait390 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_16"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait391
+					portrait_has_trait = mercom_portrait392
+					portrait_has_trait = mercom_portrait393
+					portrait_has_trait = mercom_portrait394
+					portrait_has_trait = mercom_portrait395
+					portrait_has_trait = mercom_portrait396
+					portrait_has_trait = mercom_portrait397
+					portrait_has_trait = mercom_portrait398
+					portrait_has_trait = mercom_portrait399
+					portrait_has_trait = mercom_portrait400
+					portrait_has_trait = mercom_portrait401
+					portrait_has_trait = mercom_portrait402
+					portrait_has_trait = mercom_portrait403
+					portrait_has_trait = mercom_portrait404
+					portrait_has_trait = mercom_portrait405
+					portrait_has_trait = mercom_portrait406
+					portrait_has_trait = mercom_portrait407
+					portrait_has_trait = mercom_portrait408
+					portrait_has_trait = mercom_portrait409
+					portrait_has_trait = mercom_portrait410
+					portrait_has_trait = mercom_portrait411
+					portrait_has_trait = mercom_portrait412
+					portrait_has_trait = mercom_portrait413
+					portrait_has_trait = mercom_portrait414
+					portrait_has_trait = mercom_portrait415
+					portrait_has_trait = mercom_portrait416
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping16:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait391 }
+				2 = { portrait_has_trait = mercom_portrait392 }
+				3 = { portrait_has_trait = mercom_portrait393 }
+				4 = { portrait_has_trait = mercom_portrait394 }
+				5 = { portrait_has_trait = mercom_portrait395 }
+				6 = { portrait_has_trait = mercom_portrait396 }
+				7 = { portrait_has_trait = mercom_portrait397 }
+				8 = { portrait_has_trait = mercom_portrait398 }
+				9 = { portrait_has_trait = mercom_portrait399 }
+				10 = { portrait_has_trait = mercom_portrait400 }
+				11 = { portrait_has_trait = mercom_portrait401 }
+				12 = { portrait_has_trait = mercom_portrait402 }
+				13 = { portrait_has_trait = mercom_portrait403 }
+				14 = { portrait_has_trait = mercom_portrait404 }
+				15 = { portrait_has_trait = mercom_portrait405 }
+				16 = { portrait_has_trait = mercom_portrait406 }
+				17 = { portrait_has_trait = mercom_portrait407 }
+				18 = { portrait_has_trait = mercom_portrait408 }
+				19 = { portrait_has_trait = mercom_portrait409 }
+				20 = { portrait_has_trait = mercom_portrait410 }
+				21 = { portrait_has_trait = mercom_portrait411 }
+				22 = { portrait_has_trait = mercom_portrait412 }
+				23 = { portrait_has_trait = mercom_portrait413 }
+				24 = { portrait_has_trait = mercom_portrait414 }
+				25 = { portrait_has_trait = mercom_portrait415 }
+				26 = { portrait_has_trait = mercom_portrait416 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_17"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait417
+					portrait_has_trait = mercom_portrait418
+					portrait_has_trait = mercom_portrait419
+					portrait_has_trait = mercom_portrait420
+					portrait_has_trait = mercom_portrait421
+					portrait_has_trait = mercom_portrait422
+					portrait_has_trait = mercom_portrait423
+					portrait_has_trait = mercom_portrait424
+					portrait_has_trait = mercom_portrait425
+					portrait_has_trait = mercom_portrait426
+					portrait_has_trait = mercom_portrait427
+					portrait_has_trait = mercom_portrait428
+					portrait_has_trait = mercom_portrait429
+					portrait_has_trait = mercom_portrait430
+					portrait_has_trait = mercom_portrait431
+					portrait_has_trait = mercom_portrait432
+					portrait_has_trait = mercom_portrait433
+					portrait_has_trait = mercom_portrait434
+					portrait_has_trait = mercom_portrait435
+					portrait_has_trait = mercom_portrait436
+					portrait_has_trait = mercom_portrait437
+					portrait_has_trait = mercom_portrait438
+					portrait_has_trait = mercom_portrait439
+					portrait_has_trait = mercom_portrait440
+					portrait_has_trait = mercom_portrait441
+					portrait_has_trait = mercom_portrait442
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping17:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait417 }
+				2 = { portrait_has_trait = mercom_portrait418 }
+				3 = { portrait_has_trait = mercom_portrait419 }
+				4 = { portrait_has_trait = mercom_portrait420 }
+				5 = { portrait_has_trait = mercom_portrait421 }
+				6 = { portrait_has_trait = mercom_portrait422 }
+				7 = { portrait_has_trait = mercom_portrait423 }
+				8 = { portrait_has_trait = mercom_portrait424 }
+				9 = { portrait_has_trait = mercom_portrait425 }
+				10 = { portrait_has_trait = mercom_portrait426 }
+				11 = { portrait_has_trait = mercom_portrait427 }
+				12 = { portrait_has_trait = mercom_portrait428 }
+				13 = { portrait_has_trait = mercom_portrait429 }
+				14 = { portrait_has_trait = mercom_portrait430 }
+				15 = { portrait_has_trait = mercom_portrait431 }
+				16 = { portrait_has_trait = mercom_portrait432 }
+				17 = { portrait_has_trait = mercom_portrait433 }
+				18 = { portrait_has_trait = mercom_portrait434 }
+				19 = { portrait_has_trait = mercom_portrait435 }
+				20 = { portrait_has_trait = mercom_portrait436 }
+				21 = { portrait_has_trait = mercom_portrait437 }
+				22 = { portrait_has_trait = mercom_portrait438 }
+				23 = { portrait_has_trait = mercom_portrait439 }
+				24 = { portrait_has_trait = mercom_portrait440 }
+				25 = { portrait_has_trait = mercom_portrait441 }
+				26 = { portrait_has_trait = mercom_portrait442 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_18"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait443
+					portrait_has_trait = mercom_portrait444
+					portrait_has_trait = mercom_portrait445
+					portrait_has_trait = mercom_portrait446
+					portrait_has_trait = mercom_portrait447
+					portrait_has_trait = mercom_portrait448
+					portrait_has_trait = mercom_portrait449
+					portrait_has_trait = mercom_portrait450
+					portrait_has_trait = mercom_portrait451
+					portrait_has_trait = mercom_portrait452
+					portrait_has_trait = mercom_portrait453
+					portrait_has_trait = mercom_portrait454
+					portrait_has_trait = mercom_portrait455
+					portrait_has_trait = mercom_portrait456
+					portrait_has_trait = mercom_portrait457
+					portrait_has_trait = mercom_portrait458
+					portrait_has_trait = mercom_portrait459
+					portrait_has_trait = mercom_portrait460
+					portrait_has_trait = mercom_portrait461
+					portrait_has_trait = mercom_portrait462
+					portrait_has_trait = mercom_portrait463
+					portrait_has_trait = mercom_portrait464
+					portrait_has_trait = mercom_portrait465
+					portrait_has_trait = mercom_portrait466
+					portrait_has_trait = mercom_portrait467
+					portrait_has_trait = mercom_portrait468
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping18:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait443 }
+				2 = { portrait_has_trait = mercom_portrait444 }
+				3 = { portrait_has_trait = mercom_portrait445 }
+				4 = { portrait_has_trait = mercom_portrait446 }
+				5 = { portrait_has_trait = mercom_portrait447 }
+				6 = { portrait_has_trait = mercom_portrait448 }
+				7 = { portrait_has_trait = mercom_portrait449 }
+				8 = { portrait_has_trait = mercom_portrait450 }
+				9 = { portrait_has_trait = mercom_portrait451 }
+				10 = { portrait_has_trait = mercom_portrait452 }
+				11 = { portrait_has_trait = mercom_portrait453 }
+				12 = { portrait_has_trait = mercom_portrait454 }
+				13 = { portrait_has_trait = mercom_portrait455 }
+				14 = { portrait_has_trait = mercom_portrait456 }
+				15 = { portrait_has_trait = mercom_portrait457 }
+				16 = { portrait_has_trait = mercom_portrait458 }
+				17 = { portrait_has_trait = mercom_portrait459 }
+				18 = { portrait_has_trait = mercom_portrait460 }
+				19 = { portrait_has_trait = mercom_portrait461 }
+				20 = { portrait_has_trait = mercom_portrait462 }
+				21 = { portrait_has_trait = mercom_portrait463 }
+				22 = { portrait_has_trait = mercom_portrait464 }
+				23 = { portrait_has_trait = mercom_portrait465 }
+				24 = { portrait_has_trait = mercom_portrait466 }
+				25 = { portrait_has_trait = mercom_portrait467 }
+				26 = { portrait_has_trait = mercom_portrait468 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_19"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait469
+					portrait_has_trait = mercom_portrait470
+					portrait_has_trait = mercom_portrait471
+					portrait_has_trait = mercom_portrait472
+					portrait_has_trait = mercom_portrait473
+					portrait_has_trait = mercom_portrait474
+					portrait_has_trait = mercom_portrait475
+					portrait_has_trait = mercom_portrait476
+					portrait_has_trait = mercom_portrait477
+					portrait_has_trait = mercom_portrait478
+					portrait_has_trait = mercom_portrait479
+					portrait_has_trait = mercom_portrait480
+					portrait_has_trait = mercom_portrait481
+					portrait_has_trait = mercom_portrait482
+					portrait_has_trait = mercom_portrait483
+					portrait_has_trait = mercom_portrait484
+					portrait_has_trait = mercom_portrait485
+					portrait_has_trait = mercom_portrait486
+					portrait_has_trait = mercom_portrait487
+					portrait_has_trait = mercom_portrait488
+					portrait_has_trait = mercom_portrait489
+					portrait_has_trait = mercom_portrait490
+					portrait_has_trait = mercom_portrait491
+					portrait_has_trait = mercom_portrait492
+					portrait_has_trait = mercom_portrait493
+					portrait_has_trait = mercom_portrait494
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping19:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait469 }
+				2 = { portrait_has_trait = mercom_portrait470 }
+				3 = { portrait_has_trait = mercom_portrait471 }
+				4 = { portrait_has_trait = mercom_portrait472 }
+				5 = { portrait_has_trait = mercom_portrait473 }
+				6 = { portrait_has_trait = mercom_portrait474 }
+				7 = { portrait_has_trait = mercom_portrait475 }
+				8 = { portrait_has_trait = mercom_portrait476 }
+				9 = { portrait_has_trait = mercom_portrait477 }
+				10 = { portrait_has_trait = mercom_portrait478 }
+				11 = { portrait_has_trait = mercom_portrait479 }
+				12 = { portrait_has_trait = mercom_portrait480 }
+				13 = { portrait_has_trait = mercom_portrait481 }
+				14 = { portrait_has_trait = mercom_portrait482 }
+				15 = { portrait_has_trait = mercom_portrait483 }
+				16 = { portrait_has_trait = mercom_portrait484 }
+				17 = { portrait_has_trait = mercom_portrait485 }
+				18 = { portrait_has_trait = mercom_portrait486 }
+				19 = { portrait_has_trait = mercom_portrait487 }
+				20 = { portrait_has_trait = mercom_portrait488 }
+				21 = { portrait_has_trait = mercom_portrait489 }
+				22 = { portrait_has_trait = mercom_portrait490 }
+				23 = { portrait_has_trait = mercom_portrait491 }
+				24 = { portrait_has_trait = mercom_portrait492 }
+				25 = { portrait_has_trait = mercom_portrait493 }
+				26 = { portrait_has_trait = mercom_portrait494 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_20"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait495
+					portrait_has_trait = mercom_portrait496
+					portrait_has_trait = mercom_portrait497
+					portrait_has_trait = mercom_portrait498
+					portrait_has_trait = mercom_portrait499
+					portrait_has_trait = mercom_portrait500
+					portrait_has_trait = mercom_portrait501
+					portrait_has_trait = mercom_portrait502
+					portrait_has_trait = mercom_portrait503
+					portrait_has_trait = mercom_portrait504
+					portrait_has_trait = mercom_portrait505
+					portrait_has_trait = mercom_portrait506
+					portrait_has_trait = mercom_portrait507
+					portrait_has_trait = mercom_portrait508
+					portrait_has_trait = mercom_portrait509
+					portrait_has_trait = mercom_portrait510
+					portrait_has_trait = mercom_portrait511
+					portrait_has_trait = mercom_portrait512
+					portrait_has_trait = mercom_portrait513
+					portrait_has_trait = mercom_portrait514
+					portrait_has_trait = mercom_portrait515
+					portrait_has_trait = mercom_portrait516
+					portrait_has_trait = mercom_portrait517
+					portrait_has_trait = mercom_portrait518
+					portrait_has_trait = mercom_portrait519
+					portrait_has_trait = mercom_portrait520
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping20:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait495 }
+				2 = { portrait_has_trait = mercom_portrait496 }
+				3 = { portrait_has_trait = mercom_portrait497 }
+				4 = { portrait_has_trait = mercom_portrait498 }
+				5 = { portrait_has_trait = mercom_portrait499 }
+				6 = { portrait_has_trait = mercom_portrait500 }
+				7 = { portrait_has_trait = mercom_portrait501 }
+				8 = { portrait_has_trait = mercom_portrait502 }
+				9 = { portrait_has_trait = mercom_portrait503 }
+				10 = { portrait_has_trait = mercom_portrait504 }
+				11 = { portrait_has_trait = mercom_portrait505 }
+				12 = { portrait_has_trait = mercom_portrait506 }
+				13 = { portrait_has_trait = mercom_portrait507 }
+				14 = { portrait_has_trait = mercom_portrait508 }
+				15 = { portrait_has_trait = mercom_portrait509 }
+				16 = { portrait_has_trait = mercom_portrait510 }
+				17 = { portrait_has_trait = mercom_portrait511 }
+				18 = { portrait_has_trait = mercom_portrait512 }
+				19 = { portrait_has_trait = mercom_portrait513 }
+				20 = { portrait_has_trait = mercom_portrait514 }
+				21 = { portrait_has_trait = mercom_portrait515 }
+				22 = { portrait_has_trait = mercom_portrait516 }
+				23 = { portrait_has_trait = mercom_portrait517 }
+				24 = { portrait_has_trait = mercom_portrait518 }
+				25 = { portrait_has_trait = mercom_portrait519 }
+				26 = { portrait_has_trait = mercom_portrait520 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_21"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait521
+					portrait_has_trait = mercom_portrait522
+					portrait_has_trait = mercom_portrait523
+					portrait_has_trait = mercom_portrait524
+					portrait_has_trait = mercom_portrait525
+					portrait_has_trait = mercom_portrait526
+					portrait_has_trait = mercom_portrait527
+					portrait_has_trait = mercom_portrait528
+					portrait_has_trait = mercom_portrait529
+					portrait_has_trait = mercom_portrait530
+					portrait_has_trait = mercom_portrait531
+					portrait_has_trait = mercom_portrait532
+					portrait_has_trait = mercom_portrait533
+					portrait_has_trait = mercom_portrait534
+					portrait_has_trait = mercom_portrait535
+					portrait_has_trait = mercom_portrait536
+					portrait_has_trait = mercom_portrait537
+					portrait_has_trait = mercom_portrait538
+					portrait_has_trait = mercom_portrait539
+					portrait_has_trait = mercom_portrait540
+					portrait_has_trait = mercom_portrait541
+					portrait_has_trait = mercom_portrait542
+					portrait_has_trait = mercom_portrait543
+					portrait_has_trait = mercom_portrait544
+					portrait_has_trait = mercom_portrait545
+					portrait_has_trait = mercom_portrait546
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping21:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait521 }
+				2 = { portrait_has_trait = mercom_portrait522 }
+				3 = { portrait_has_trait = mercom_portrait523 }
+				4 = { portrait_has_trait = mercom_portrait524 }
+				5 = { portrait_has_trait = mercom_portrait525 }
+				6 = { portrait_has_trait = mercom_portrait526 }
+				7 = { portrait_has_trait = mercom_portrait527 }
+				8 = { portrait_has_trait = mercom_portrait528 }
+				9 = { portrait_has_trait = mercom_portrait529 }
+				10 = { portrait_has_trait = mercom_portrait530 }
+				11 = { portrait_has_trait = mercom_portrait531 }
+				12 = { portrait_has_trait = mercom_portrait532 }
+				13 = { portrait_has_trait = mercom_portrait533 }
+				14 = { portrait_has_trait = mercom_portrait534 }
+				15 = { portrait_has_trait = mercom_portrait535 }
+				16 = { portrait_has_trait = mercom_portrait536 }
+				17 = { portrait_has_trait = mercom_portrait537 }
+				18 = { portrait_has_trait = mercom_portrait538 }
+				19 = { portrait_has_trait = mercom_portrait539 }
+				20 = { portrait_has_trait = mercom_portrait540 }
+				21 = { portrait_has_trait = mercom_portrait541 }
+				22 = { portrait_has_trait = mercom_portrait542 }
+				23 = { portrait_has_trait = mercom_portrait543 }
+				24 = { portrait_has_trait = mercom_portrait544 }
+				25 = { portrait_has_trait = mercom_portrait545 }
+				26 = { portrait_has_trait = mercom_portrait546 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_22"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait547
+					portrait_has_trait = mercom_portrait548
+					portrait_has_trait = mercom_portrait549
+					portrait_has_trait = mercom_portrait550
+					portrait_has_trait = mercom_portrait551
+					portrait_has_trait = mercom_portrait552
+					portrait_has_trait = mercom_portrait553
+					portrait_has_trait = mercom_portrait554
+					portrait_has_trait = mercom_portrait555
+					portrait_has_trait = mercom_portrait556
+					portrait_has_trait = mercom_portrait557
+					portrait_has_trait = mercom_portrait558
+					portrait_has_trait = mercom_portrait559
+					portrait_has_trait = mercom_portrait560
+					portrait_has_trait = mercom_portrait561
+					portrait_has_trait = mercom_portrait562
+					portrait_has_trait = mercom_portrait563
+					portrait_has_trait = mercom_portrait564
+					portrait_has_trait = mercom_portrait565
+					portrait_has_trait = mercom_portrait566
+					portrait_has_trait = mercom_portrait567
+					portrait_has_trait = mercom_portrait568
+					portrait_has_trait = mercom_portrait569
+					portrait_has_trait = mercom_portrait570
+					portrait_has_trait = mercom_portrait571
+					portrait_has_trait = mercom_portrait572
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping22:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait547 }
+				2 = { portrait_has_trait = mercom_portrait548 }
+				3 = { portrait_has_trait = mercom_portrait549 }
+				4 = { portrait_has_trait = mercom_portrait550 }
+				5 = { portrait_has_trait = mercom_portrait551 }
+				6 = { portrait_has_trait = mercom_portrait552 }
+				7 = { portrait_has_trait = mercom_portrait553 }
+				8 = { portrait_has_trait = mercom_portrait554 }
+				9 = { portrait_has_trait = mercom_portrait555 }
+				10 = { portrait_has_trait = mercom_portrait556 }
+				11 = { portrait_has_trait = mercom_portrait557 }
+				12 = { portrait_has_trait = mercom_portrait558 }
+				13 = { portrait_has_trait = mercom_portrait559 }
+				14 = { portrait_has_trait = mercom_portrait560 }
+				15 = { portrait_has_trait = mercom_portrait561 }
+				16 = { portrait_has_trait = mercom_portrait562 }
+				17 = { portrait_has_trait = mercom_portrait563 }
+				18 = { portrait_has_trait = mercom_portrait564 }
+				19 = { portrait_has_trait = mercom_portrait565 }
+				20 = { portrait_has_trait = mercom_portrait566 }
+				21 = { portrait_has_trait = mercom_portrait567 }
+				22 = { portrait_has_trait = mercom_portrait568 }
+				23 = { portrait_has_trait = mercom_portrait569 }
+				24 = { portrait_has_trait = mercom_portrait570 }
+				25 = { portrait_has_trait = mercom_portrait571 }
+				26 = { portrait_has_trait = mercom_portrait572 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_23"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait573
+					portrait_has_trait = mercom_portrait574
+					portrait_has_trait = mercom_portrait575
+					portrait_has_trait = mercom_portrait576
+					portrait_has_trait = mercom_portrait577
+					portrait_has_trait = mercom_portrait578
+					portrait_has_trait = mercom_portrait579
+					portrait_has_trait = mercom_portrait580
+					portrait_has_trait = mercom_portrait581
+					portrait_has_trait = mercom_portrait582
+					portrait_has_trait = mercom_portrait583
+					portrait_has_trait = mercom_portrait584
+					portrait_has_trait = mercom_portrait585
+					portrait_has_trait = mercom_portrait586
+					portrait_has_trait = mercom_portrait587
+					portrait_has_trait = mercom_portrait588
+					portrait_has_trait = mercom_portrait589
+					portrait_has_trait = mercom_portrait590
+					portrait_has_trait = mercom_portrait591
+					portrait_has_trait = mercom_portrait592
+					portrait_has_trait = mercom_portrait593
+					portrait_has_trait = mercom_portrait594
+					portrait_has_trait = mercom_portrait595
+					portrait_has_trait = mercom_portrait596
+					portrait_has_trait = mercom_portrait597
+					portrait_has_trait = mercom_portrait598
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping23:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait573 }
+				2 = { portrait_has_trait = mercom_portrait574 }
+				3 = { portrait_has_trait = mercom_portrait575 }
+				4 = { portrait_has_trait = mercom_portrait576 }
+				5 = { portrait_has_trait = mercom_portrait577 }
+				6 = { portrait_has_trait = mercom_portrait578 }
+				7 = { portrait_has_trait = mercom_portrait579 }
+				8 = { portrait_has_trait = mercom_portrait580 }
+				9 = { portrait_has_trait = mercom_portrait581 }
+				10 = { portrait_has_trait = mercom_portrait582 }
+				11 = { portrait_has_trait = mercom_portrait583 }
+				12 = { portrait_has_trait = mercom_portrait584 }
+				13 = { portrait_has_trait = mercom_portrait585 }
+				14 = { portrait_has_trait = mercom_portrait586 }
+				15 = { portrait_has_trait = mercom_portrait587 }
+				16 = { portrait_has_trait = mercom_portrait588 }
+				17 = { portrait_has_trait = mercom_portrait589 }
+				18 = { portrait_has_trait = mercom_portrait590 }
+				19 = { portrait_has_trait = mercom_portrait591 }
+				20 = { portrait_has_trait = mercom_portrait592 }
+				21 = { portrait_has_trait = mercom_portrait593 }
+				22 = { portrait_has_trait = mercom_portrait594 }
+				23 = { portrait_has_trait = mercom_portrait595 }
+				24 = { portrait_has_trait = mercom_portrait596 }
+				25 = { portrait_has_trait = mercom_portrait597 }
+				26 = { portrait_has_trait = mercom_portrait598 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_PORTRAIT_static_24"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait599
+					portrait_has_trait = mercom_portrait600
+					portrait_has_trait = mercom_portrait601
+					portrait_has_trait = mercom_portrait602
+					portrait_has_trait = mercom_portrait603
+					portrait_has_trait = mercom_portrait604
+					portrait_has_trait = mercom_portrait605
+					portrait_has_trait = mercom_portrait606
+					portrait_has_trait = mercom_portrait607
+					portrait_has_trait = mercom_portrait608
+					portrait_has_trait = mercom_portrait609
+					portrait_has_trait = mercom_portrait610
+					portrait_has_trait = mercom_portrait611
+					portrait_has_trait = mercom_portrait612
+					portrait_has_trait = mercom_portrait613
+					portrait_has_trait = mercom_portrait614
+					portrait_has_trait = mercom_portrait615
+					portrait_has_trait = mercom_portrait616
+					portrait_has_trait = mercom_portrait617
+					portrait_has_trait = mercom_portrait618
+					portrait_has_trait = mercom_portrait619
+					portrait_has_trait = mercom_portrait620
+					portrait_has_trait = mercom_portrait621
+					portrait_has_trait = mercom_portrait622
+					portrait_has_trait = mercom_portrait623
+					portrait_has_trait = mercom_portrait624
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping24:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait599 }
+				2 = { portrait_has_trait = mercom_portrait600 }
+				3 = { portrait_has_trait = mercom_portrait601 }
+				4 = { portrait_has_trait = mercom_portrait602 }
+				5 = { portrait_has_trait = mercom_portrait603 }
+				6 = { portrait_has_trait = mercom_portrait604 }
+				7 = { portrait_has_trait = mercom_portrait605 }
+				8 = { portrait_has_trait = mercom_portrait606 }
+				9 = { portrait_has_trait = mercom_portrait607 }
+				10 = { portrait_has_trait = mercom_portrait608 }
+				11 = { portrait_has_trait = mercom_portrait609 }
+				12 = { portrait_has_trait = mercom_portrait610 }
+				13 = { portrait_has_trait = mercom_portrait611 }
+				14 = { portrait_has_trait = mercom_portrait612 }
+				15 = { portrait_has_trait = mercom_portrait613 }
+				16 = { portrait_has_trait = mercom_portrait614 }
+				17 = { portrait_has_trait = mercom_portrait615 }
+				18 = { portrait_has_trait = mercom_portrait616 }
+				19 = { portrait_has_trait = mercom_portrait617 }
+				20 = { portrait_has_trait = mercom_portrait618 }
+				21 = { portrait_has_trait = mercom_portrait619 }
+				22 = { portrait_has_trait = mercom_portrait620 }
+				23 = { portrait_has_trait = mercom_portrait621 }
+				24 = { portrait_has_trait = mercom_portrait622 }
+				25 = { portrait_has_trait = mercom_portrait623 }
+				26 = { portrait_has_trait = mercom_portrait624 }
+			}
+		}
+	}
+    portraitType = {
+        name = "mercom_mercom_PORTRAIT_static_25"
+
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = mercom_portrait625
+					portrait_has_trait = mercom_portrait626
+					portrait_has_trait = mercom_portrait627
+					portrait_has_trait = mercom_portrait628
+					portrait_has_trait = mercom_portrait629
+					portrait_has_trait = mercom_portrait630
+					portrait_has_trait = mercom_portrait631
+					portrait_has_trait = mercom_portrait632
+					portrait_has_trait = mercom_portrait633
+					portrait_has_trait = mercom_portrait634
+					portrait_has_trait = mercom_portrait635
+					portrait_has_trait = mercom_portrait636
+					portrait_has_trait = mercom_portrait637
+					portrait_has_trait = mercom_portrait638
+					portrait_has_trait = mercom_portrait639
+					portrait_has_trait = mercom_portrait640
+					portrait_has_trait = mercom_portrait641
+					portrait_has_trait = mercom_portrait642
+					portrait_has_trait = mercom_portrait643
+					portrait_has_trait = mercom_portrait644
+					portrait_has_trait = mercom_portrait645
+					portrait_has_trait = mercom_portrait646
+					portrait_has_trait = mercom_portrait647
+					portrait_has_trait = mercom_portrait648
+					portrait_has_trait = mercom_portrait649
+					portrait_has_trait = mercom_portrait650
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+            "GFX_portrait_mercom_remedy_portrait_swapping25:c5"
+        }
+
+        allow_property_values = {
+            1 = {
+                0 = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = mercom_portrait625 }
+				2 = { portrait_has_trait = mercom_portrait626 }
+				3 = { portrait_has_trait = mercom_portrait627 }
+				4 = { portrait_has_trait = mercom_portrait628 }
+				5 = { portrait_has_trait = mercom_portrait629 }
+				6 = { portrait_has_trait = mercom_portrait630 }
+				7 = { portrait_has_trait = mercom_portrait631 }
+				8 = { portrait_has_trait = mercom_portrait632 }
+				9 = { portrait_has_trait = mercom_portrait633 }
+				10 = { portrait_has_trait = mercom_portrait634 }
+				11 = { portrait_has_trait = mercom_portrait635 }
+				12 = { portrait_has_trait = mercom_portrait636 }
+				13 = { portrait_has_trait = mercom_portrait637 }
+				14 = { portrait_has_trait = mercom_portrait638 }
+				15 = { portrait_has_trait = mercom_portrait639 }
+				16 = { portrait_has_trait = mercom_portrait640 }
+				17 = { portrait_has_trait = mercom_portrait641 }
+				18 = { portrait_has_trait = mercom_portrait642 }
+				19 = { portrait_has_trait = mercom_portrait643 }
+				20 = { portrait_has_trait = mercom_portrait644 }
+				21 = { portrait_has_trait = mercom_portrait645 }
+				22 = { portrait_has_trait = mercom_portrait646 }
+				23 = { portrait_has_trait = mercom_portrait647 }
+				24 = { portrait_has_trait = mercom_portrait648 }
+				25 = { portrait_has_trait = mercom_portrait649 }
+				26 = { portrait_has_trait = mercom_portrait650 }
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+################################################################################
+### Contains events that are intended for use in the Dark World Content Pack ###
+################################################################################
+###  SEARCH ###FIXME FOR WORK TO DO
+
+namespace = TTcontent_war
+
+######################################
+####       WAR TIME EVENTS        ####
+######################################
+
+narrative_event = { # Routing event to determine if a RedHand Veteran Exists
+	id = TTcontent_war.1000
+	hide_window = yes
+	
+	is_triggered_only = yes # Triggered from OnAction
+	
+	Option = {
+		if = { 	# Grab RedHand Veteran if available:
+			limit = {
+				location = {
+					any_province_character = {
+						NOT = { character = ROOT }
+						trait = redhandvet
+					}
+				}
+			}
+			#If there is, we then grab her for the event
+			location = {
+				random_province_character = {
+					limit = {
+						NOT = { character = ROOT }
+						trait = redhandvet
+					}
+					save_event_target_as = redhand_hero
+					narrative_event = { id = TTcontent_war.1001 }
+				}
+			}
+		}
+		break = yes # Just in case we get past the "If" without a suitable hero.  Not even sure I need this here, but i don't think it hurts.
+	}
+}
+
+narrative_event = { ## Event fires on the RedHand Hero so we can ping back to the liege.
+	id = TTcontent_war.1001
+	hide_window = yes
+	
+	is_triggered_only = yes # Triggered from .1000
+
+	option = {
+		save_event_target_as = redhand_hero
+		liege = { narrative_event = { id = TTcontent_war.1002 } )
+	}
+}
+
+narrative_event = {
+	id = TTcontent_war.1002
+	desc = "TTcontent_war1002"
+	picture = redhand_hero
+	title = redhand_hero
+	
+	is_triggered_only = yes # Triggered from .1001
+
+	option = { 
+		name = "TTcontent_war1002a"
+		scaled_prestige = { value = 0.5 min = 10 }
+		event_target:redhand_hero = { scaled_prestige = { value = 0.5 min = 10 } }
+	
+	}
+}
+	
+
+######################################
+####      PLACEHOLDER             ####
+######################################
+
+
+
+######################################
+####      PLACEHOLDER             ####
+######################################
+
+
+
+######################################
+####      PLACEHOLDER             ####
+######################################
+
+
+
+
+

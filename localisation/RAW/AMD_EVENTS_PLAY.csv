@@ -1,0 +1,763 @@
+#		Crusader Kings 2 : Advanced Medieval Desires
+
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+
+
+#AMD_EV_DESC_LENGTH;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;	이벤트 창 1 line 제한 약 70byte
+
+#이벤트Events;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+
+
+AMD_EV_DESC_PLAY_1001_C;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_ATK.GetTitledFirstName]과 [AMD_ET_DEF.GetTitledFirstName]이 성관계를 가지는 내용으로서, 표시되는 이벤트는 없습니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1001_T;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_TB.GetTitledFirstName]과 [AMD_ET_TS.GetTitledFirstName]이 불순한 목적으로 성관계를 가지는 내용으로서, 표시되는 이벤트는 없습니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1001_R;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_RA.GetTitledFirstName]이 [AMD_ET_RV.GetTitledFirstName]을 겁탈하는 내용으로서, 표시되는 이벤트는 없습니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1002_C;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_ATK.GetTitledFirstName]과 [AMD_ET_DEF.GetTitledFirstName]이 성관계를 가지는 내용의 단일 이벤트입니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1002_R;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_RA.GetTitledFirstName]이 [AMD_ET_RV.GetTitledFirstName]을 겁탈하는 내용의 단일 이벤트입니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1003_C;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_ATK.GetTitledFirstName]과 [AMD_ET_DEF.GetTitledFirstName]이 성관계를 가지는 내용의 연속 이벤트입니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1003_R;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_RA.GetTitledFirstName]이 [AMD_ET_RV.GetTitledFirstName]을 겁탈하는 내용의 연속 이벤트입니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1124_C;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_OH.GetTitledFirstName]이 불특정 다수와 성관계를 가지는 내용의 단일 이벤트입니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1124_R;[From.GetTitledFirstName]은 당신을 성적 대상으로 하는 이벤트를 실행하였습니다. [AMD_ET_OH.GetTitledFirstName]이 불특정 다수에게 강간당하는 내용의 단일 이벤트입니다.;;;;;;;;;;;;x;
+
+AMD_EV_OPT_PLAY_1001_1;그런 파렴치한 행위는 용납할 수 없다!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1001_1;해당 이벤트를 중지하고 [From.GetFirstName]에게 알립니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1001_2;마음대로 해라.;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1001_2;[From.GetFirstName]은 이벤트를 계속 진행합니다. 당신에게는 관련 이벤트는 날아오지 않습니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1001_3;내가 직접 봐야겠다!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1001_3;[From.GetFirstName]은 이벤트를 보지 않기로 했지만, 당신이 원한다면 해당 내용에 관한 단일 이벤트를 보실 수 있습니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1002_3;좋은 건 같이 봐야지!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1002_3;[From.GetFirstName]은 이벤트를 계속 실행하고, 당신에게도 거의 같은 이벤트를 보여줍니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1003_3;마! 우리가 남이가! 쓰까묵자!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1003_3;[From.GetFirstName]은 이벤트를 계속 실행하고, 당신에게도 관련 이벤트가 실행됩니다. 또한 당신의 선택이 이벤트 내용에 영향을 주게 됩니다!;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_1000;이벤트 중단!\n[From.GetBestName]은 당신의 성적 대상이 되는 것을 강력하게 거부하였습니다. Crusader Kings 2는 정치적으로 올바른 12세 이용가 건전 게임입니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1000;씁, 어쩔 수 없지.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1005;[From.GetBestName]은 정치사회종교적으로 올바르고 건전한 밤문화의 발전을 위해 당신이 시급하게 수행해야만 하는 중차대한 업무가 발생했다고 합니다. 아무래도 오늘 밤 뜨거운 시간은 기대하기 어렵겠네요.;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_1190;에러 발생!\n박이, 박힘이, 구경꾼이 지정되지 않은 것 같습니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1191;에러 발생!\n이해할 수 없는 종족 조합입니다.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1192;에러 발생!\nPC/NPC 판정에 오류가 있습니다.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1190;아직도 갈 길이 멀다;;;;;;;;;;;;x;
+
+
+
+#성관계 이벤트 신판 작업중 Sex Events DESC (WIP);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_String_2P_Cons;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]과 [AMD_CLK_GetHadSexCons];;;;;;;;;;;;;x;
+AMD_String_CONS_SEX1;즐거운 시간을 보냈습니다. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX2;어른의 놀이를 즐겼습니다. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX3;엉망진창으로 섹스했습니다. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX4;육체의 신비를 탐구했습니다. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX5;발정난 짐승처럼 교미했습니다. ;;;;;;;;;;;;;x;
+
+AMD_String_2P_Trade00;[AMD_ET_TB.GetFirstName]은 [AMD_CLK_GetTradeItem]를 약속하고 [AMD_ET_TS.GetFirstName]의 하룻밤을 구매했습니다. ;;;;;;;;;;;;;x;
+AMD_String_2P_Trade;[AMD_ET_TS.GetFirstName]은 [AMD_CLK_GetTradeItem]를 위하여 [AMD_ET_TB.GetFirstName]에게 몸을 팔았습니다. ;;;;;;;;;;;;;x;
+
+AMD_String_TRADE_ITEM_0;어떤 대가;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_1;금화;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_2;호의;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_3;군대;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_4;작위;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_5;평화;;;;;;;;;;;;;x;
+
+
+AMD_String_2P_Rape;[AMD_ET_RA.AMD_CLK_GetName]은 [AMD_ET_RV.AMD_CLK_GetName]을 [AMD_CLK_GetHadSexRape];;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX1;강간했습니다. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX2;능욕했습니다. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX3;따먹었습니다. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX4;억지로 범했습니다. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX5;부정한 욕망으로 더럽혔습니다. ;;;;;;;;;;;;;x;
+
+
+#AMD_String_SCORE_0;[AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_String_SCORE_1;악몽과 같았습니다... ;;;;;;;;;;;;;x;
+AMD_String_SCORE_2;형편없었습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_3;영 좋지 않았습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_4;나쁘지 않았습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_5;꽤 즐거웠습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_6;굉장히 좋았습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_7;천상의 쾌락을 맛보았습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_BAD;그다지 좋은 기분은 아니었습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_COMMON;그런대로 즐길 수 있었습니다. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_GOOD;기분좋았습니다. ;;;;;;;;;;;;;x;
+
+
+AMD_String_DO_NOTHING;아무 일도 없음\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_D200;매우 나쁨\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_D100;나쁨\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_D50;조금 나쁨\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_U50;조금 좋음\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_U100;좋음\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_U200;매우 좋음\n;;;;;;;;;;;;;x;
+
+
+AMD_String_Skill_0;형편없는 솜씨;;;;;;;;;;;;x;
+AMD_String_Skill_1;서투른 솜씨;;;;;;;;;;;;x;
+AMD_String_Skill_2;평범한 솜씨;;;;;;;;;;;;x;
+AMD_String_Skill_3;능숙한 재주;;;;;;;;;;;;x;
+AMD_String_Skill_4;달인의 기교;;;;;;;;;;;;x;
+AMD_String_Skill_5;신들린 묘기;;;;;;;;;;;;x;
+
+
+AMD_String_Josa_UN;은;;;;;;;;;;;;x;
+AMD_String_Josa_NN;는;;;;;;;;;;;;x;
+
+AMD_String_Josa_EE;이;;;;;;;;;;;;x;
+AMD_String_Josa_GA;가;;;;;;;;;;;;x;
+
+AMD_String_Josa_UL;을;;;;;;;;;;;;x;
+AMD_String_Josa_LL;를;;;;;;;;;;;;x;
+
+AMD_String_Josa_WA;와;;;;;;;;;;;;x;
+AMD_String_Josa_GW;과;;;;;;;;;;;;x;
+
+AMD_String_Josa_RO;로;;;;;;;;;;;;x;
+AMD_String_Josa_UR;으로;;;;;;;;;;;;x;
+
+
+
+AMD_String_PenisAN;[AMD_CLK_GetPenisAdj] [AMD_CLK_GetPenisNoun];;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_1;왜소한;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_2;빈약한;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_3;부실한;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_4;가늘고 짧은;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_5;작고 부드러운;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_1;단단한;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_2;탄탄한;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_3;우뚝 선;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_4;흥분한;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_5;핏줄이 불거진;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_1;거대한;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_2;커다란;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_3;무지막지한;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_4;굵고 큼직한;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_5;크고 아름다운;;;;;;;;;;;;x;
+AMD_String_Penis_0;페니스;;;;;;;;;;;;x;
+AMD_String_PenisEE0;페니스가;;;;;;;;;;;;x;
+AMD_String_PenisNN0;페니스는;;;;;;;;;;;;x;
+AMD_String_PenisLL0;페니스를;;;;;;;;;;;;x;
+AMD_String_PenisRO0;페니스로;;;;;;;;;;;;x;
+AMD_String_PenisWA0;페니스와;;;;;;;;;;;;x;
+AMD_String_Penis_1;성기;;;;;;;;;;;;x;
+AMD_String_Penis_2;자지;;;;;;;;;;;;x;
+AMD_String_Penis_3;무기;;;;;;;;;;;;x;
+AMD_String_Penis_4;몽둥이;;;;;;;;;;;;x;
+AMD_String_Penis_5;방망이;;;;;;;;;;;;x;
+AMD_String_Penis_6;말자지;;;;;;;;;;;;x;
+AMD_String_Penis_7;고추;;;;;;;;;;;;x;
+#AMD_String_Penis_0;음경;;;;;;;;;;;;x;
+#AMD_String_Penis_2;남근;;;;;;;;;;;;x;
+#AMD_String_Penis_3;양물;;;;;;;;;;;;x;
+#AMD_String_Penis_4;육봉;;;;;;;;;;;;x;
+#AMD_String_Penis_6;좆;;;;;;;;;;;;x;
+
+AMD_String_PussyAN;[AMD_CLK_GetPussyAdj] [AMD_CLK_GetPussyNoun];;;;;;;;;;;;x;
+AMD_String_PussyAdjBad_1;건조한;;;;;;;;;;;;x;
+AMD_String_PussyAdjBad_2;메마른;;;;;;;;;;;;x;
+AMD_String_PussyAdjBad_3;준비되지 않은;;;;;;;;;;;;x;
+AMD_String_PussyAdjNorm_1;촉촉한;;;;;;;;;;;;x;
+AMD_String_PussyAdjNorm_2;부드러운;;;;;;;;;;;;x;
+AMD_String_PussyAdjNorm_3;준비된;;;;;;;;;;;;x;
+AMD_String_PussyAdjGood_1;군침을 흘리는;;;;;;;;;;;;x;
+AMD_String_PussyAdjGood_2;달아오른;;;;;;;;;;;;x;
+AMD_String_PussyAdjGood_3;박음직스러운;;;;;;;;;;;;x;
+AMD_String_PussyAdjVirgin_1;순결한;;;;;;;;;;;;x;
+AMD_String_PussyAdjVirgin_2;처녀의;;;;;;;;;;;;x;
+AMD_String_PussyAdjVirgin_3;남자를 모르는;;;;;;;;;;;;x;
+AMD_String_Pussy_0;바기나;;;;;;;;;;;;x;
+AMD_String_Pussy_1;보지;;;;;;;;;;;;x;
+
+#AMD_String_Pussy_1;음문;;;;;;;;;;;;x;
+#AMD_String_Pussy_3;질;;;;;;;;;;;;x;
+#AMD_String_Pussy_6;씹구멍;;;;;;;;;;;;x;
+
+
+AMD_String_BreastAN;[AMD_CLK_GetBreastAdj] [AMD_CLK_GetBreastNoun];;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_1;납작한;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_2;평평한;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_3;빈약한;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_4;부실한;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_5;귀여운;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_1;예쁜;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_2;아름다운;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_3;부드러운;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_4;실팍한;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_5;손에 꽉 차는;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_1;풍만한;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_2;육덕진;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_3;크고 아름다운;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_4;손에 다 잡히지 않는;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_5;젖소같은;;;;;;;;;;;;x;
+AMD_String_Breast_1;유방;;;;;;;;;;;;x;
+AMD_String_Breast_2;가슴;;;;;;;;;;;;x;
+AMD_String_Breast_3;젖가슴;;;;;;;;;;;;x;
+AMD_String_Breast_4;젖통;;;;;;;;;;;;x;
+AMD_String_Breast_5;빨통;;;;;;;;;;;;x;
+AMD_String_Breast_6;젖탱이;;;;;;;;;;;;x;
+
+
+AMD_String_Body_F_0;예쁜;;;;;;;;;;;;x;
+AMD_String_Body_F_1;가녀린;;;;;;;;;;;;x;
+AMD_String_Body_F_2;늘씬한;;;;;;;;;;;;x;
+AMD_String_Body_F_3;부드러운;;;;;;;;;;;;x;
+AMD_String_Body_F_4;풍만한;;;;;;;;;;;;x;
+AMD_String_Body_F_5;육덕진;;;;;;;;;;;;x;
+
+
+
+
+
+AMD_EV_DESC_2P_NORM;[AMD_CLK_EV_DESC_2P_NORM];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PN_CONS;[AMD_CLK_EV_DESC_2PN_CONS];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PN_MFRP;[AMD_CLK_EV_DESC_2PN_MFRP];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PN_FMRP;[AMD_CLK_EV_DESC_2PN_FMRP];;;;;;;;;;;;;x;
+
+
+
+
+#성관계 이벤트 신판 Sex Events DESC (v2);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_2P_LES;[AMD_CLK_EV_DESC_2P_LES] ;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES;[AMD_CLK_EV_OPT_2P_LES];;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_LES_CONS;[AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 민달팽이처럼 끈적하고 진하게 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES_CONS;(화간) 2P 백합 결과;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_LES_RAPE;[AMD_ET_RA.AMD_CLK_GetName]은 남자가 줄 수 없는 쾌락으로 [AMD_ET_RV.AMD_CLK_GetName]을 [AMD_CLK_GetHadSexRape] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES_RAPE;여우가 어떻게 우는지 볼까?;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_LES_TRADE;(매춘) [AMD_ET_TS.GetFirstName]과 [AMD_ET_TB.GetFirstName]은 민달팽이처럼 끈적하고 진하게 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES_TRADE;(매춘) 2P 백합 결과;;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_2P_GAY;[AMD_CLK_EV_DESC_2P_GAY] ;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_GAY_CONS;[AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 로마의 검투사들처럼 아름다운 석양을 바라보며 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_GAY_RAPE;[AMD_ET_RA.AMD_CLK_GetName]은 [AMD_ET_RV.AMD_CLK_GetName]의 등짝을 감상하며 그를 [AMD_CLK_GetHadSexRape];;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_GAY_TRADE;(매춘) [AMD_ET_TS.GetFirstName]과 [AMD_ET_TB.GetFirstName]은 로마의 검투사들처럼 아름다운 석양을 바라보며 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY;[AMD_CLK_EV_OPT_2P_GAY];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY_CONS;너는 내 심장 빛이야.;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY_RAPE;등짝! 등짝을 보자!;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY_TRADE;아아, 좋은 조임이다.;;;;;;;;;;;;;x;
+
+#	#	#	#	2P	동물의 세계
+
+#AMD_EV_DESC_2P_HF;[AMD_CLK_EV_DESC_2HHF_OLD];;;;;;;;;;;;;x;
+
+AMD_EV_DESC_2P_HORSE;[AMD_CLK_EV_DESC_2P_HORSE];;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHM_1;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 우람한 말자지가 엉덩이에 박히자 눈을 뒤집고 비명을 질러댔다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHM_2;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 우람한 말자지가 전립선을 자극하자 자지를 세우며 짐승처럼 소리질렀다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2H_ETC;[AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 인마일체의 켄타우로스처럼 [AMD_CLK_GetHadSexCons] 더 이상의 상세한 설명은 생략합니다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_ZOO;[AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 야생의 열기로 가득한 시간을 보냈습니다. 상세한 내용은 굳이 알 필요는 없을 것입니다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_CBR;[AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 종족의 벽을 넘어서 뜨거운 시간을 보냈습니다. 그 모습은 유감스럽게도 인간의 언어로는 표현할 수 없을 것 같습니다...;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_11700;우정은 마법이야!;;;;;;;;;;;;;x;
+AMD_EV_OPT_11800;앗.. 아아........;;;;;;;;;;;;;x;
+AMD_EV_OPT_11900;굳이 우리가 알 필요가 있을까...;;;;;;;;;;;;;x;
+
+
+
+#성관계 이벤트 구판 Sex Events DESC (OLD);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_2PNC_OLD;[AMD_CLK_EV_DESC_2PN_CONS_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_OLD;[AMD_CLK_EV_DESC_2PN_RAPE_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNF_OLD;[AMD_CLK_EV_DESC_2PN_FMRP_OLD];;;;;;;;;;;;;x;
+
+#	#	구버전 2P 이성, 화간
+AMD_EV_DESC_2PNC_O1;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]과 하나가 되어 허리를 흔들었다. 그러나 그녀의 오븐은 충분히 달아오르지 않았고, 반죽은 물기가 모자라 뻑뻑하다. [AMD_ET_ATK.AMD_CLK_GetName]의 자지는 [AMD_ET_DEF.AMD_CLK_GetName]의 내부에 돌입했지만 결국 백기를 들었다. [AMD_ET_DEF.AMD_CLK_GetName]은 고개를 숙이고 빠져나온 힘없는 살덩어리의 감촉에 한숨을 내쉬었다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O2;[AMD_ET_ATK.AMD_CLK_GetName]의 살가죽 검이 [AMD_ET_DEF.AMD_CLK_GetName]의 빈틈을 매끄럽게 파고들었다. 급소를 찔린 [AMD_ET_DEF.AMD_CLK_GetName]은 허덕이면서 [AMD_ET_ATK.AMD_CLK_GetName]에게 반격을 시도했지만, [AMD_ET_ATK.AMD_CLK_GetName]은 그녀가 정신을 차리지 못하도록 찌르고 또 찔렀다... [AMD_ET_ATK.AMD_CLK_GetName]은 매끄럽게 자지를 감싸안는 [AMD_ET_DEF.AMD_CLK_GetName]의 질에 정자를 토해냈다. 두 사람은 잠시 결합한 채로 여운을 즐겼다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O3;[AMD_ET_ATK.AMD_CLK_GetName]의 회심의 일격이 [AMD_ET_DEF.AMD_CLK_GetName]의 약점을 찔렀다. [AMD_ET_DEF.AMD_CLK_GetName]은 쾌락에 흐트러진 목소리로 허덕이다가 [AMD_ET_ATK.AMD_CLK_GetName]을 꼭 끌어안고 그의 움직임에 맞춰 자신도 허리를 흔들었다. [AMD_ET_ATK.AMD_CLK_GetName]은 오늘 그녀에게 천상의 왕국을 보여줄 것이다. [AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]이 흐릿한 눈빛으로 혀를 내밀고 신음하는 모습을 감상하며 허리를 흔들다가, 그녀의 절정에 맞춰 사정했다. 두 사람은 잠시 결합한 채로 여운을 즐겼다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O4;[AMD_ET_ATK.AMD_CLK_GetName]의 흥분한 자지가 [AMD_ET_DEF.AMD_CLK_GetName]의 준비되지 않은 처녀보지를 침략했다. 그녀의 성문은 열렸지만 우물은 메말랐고, 젖과 꿀이 흐르는 약속의 땅 대신 피튀기는 전장이 침대 위에 펼쳐졌다.. [AMD_ET_ATK.AMD_CLK_GetName]이 순결한 보지를 첫 번째 정액으로 물들이는 마지막 순간까지, [AMD_ET_DEF.AMD_CLK_GetName]은 거의 쾌감을 느낄 수 없었다. 생살을 쑤셔대는 아픈 경험이 끝났다는 안도감만이 그녀를 편하게 해주었다..;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O5;[AMD_ET_ATK.AMD_CLK_GetName]의 열쇠는 [AMD_ET_DEF.AMD_CLK_GetName]의 자물쇠를 따고 처녀의 문을 열었다. 약간의 고통은 있었지만 문은 부드럽게 열렸고, [AMD_ET_DEF.AMD_CLK_GetName]은 처음으로 받아들인 남성을 환영했다. [AMD_ET_ATK.AMD_CLK_GetName]은 조금 전까지 처녀였던 보지에 첫 번째 정액을 선물했다. [AMD_ET_DEF.AMD_CLK_GetName]은 역할을 다한 자지가 빠져나올 때까지 [AMD_ET_ATK.AMD_CLK_GetName]을 끌어안고 여운을 즐겼다;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O6;[AMD_ET_ATK.AMD_CLK_GetName]은 무기를 곧추세워 [AMD_ET_DEF.AMD_CLK_GetName]의 중앙 방어를 정면으로 돌파했다. 터져나오는 쾌락의 물결에 피가 씻겨나가고, [AMD_ET_DEF.AMD_CLK_GetName]은 태어나서 처음 느끼는 쾌감에 젖어 음란하게 허덕였다. [AMD_ET_DEF.AMD_CLK_GetName]의 남자를 모르는 자궁이 씨앗을 조르며 꿈틀거렸고, [AMD_ET_ATK.AMD_CLK_GetName]의 씨앗이 뿌려짐과 동시에 [AMD_ET_DEF.AMD_CLK_GetName]은 첫 번째 절정의 교성을 높였다.;;;;;;;;;;;;;x;
+
+#	#	구버전 2P 이성, 강간/역간
+AMD_EV_DESC_2PNR_O1;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]에게 자지를 박아넣고 장난감처럼 그녀의 허리를 흔들었다. 강간보다 자위에 가까운 일방적인 행위에, [AMD_ET_DEF.AMD_CLK_GetName]은 고통과 불쾌감밖에 느낄 수 없었다.[AMD_ET_ATK.AMD_CLK_GetName]은 계속 허리를 흔들다가 예고도 없이 [AMD_ET_DEF.AMD_CLK_GetName]의 안에 사정했다. [AMD_ET_DEF.AMD_CLK_GetName]은 눈을 크게 뜨고 절규했지만, 이미 늦었다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O2;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]에게 자지를 박아넣고 장난감처럼 그녀의 허리를 흔들었다. 강간보다 자위에 가까운 일방적인 행위에, [AMD_ET_DEF.AMD_CLK_GetName]은 고통과 불쾌감밖에 느낄 수 없었다.[AMD_ET_ATK.AMD_CLK_GetName]은 계속 허리를 흔들다가 예고도 없이 [AMD_ET_DEF.AMD_CLK_GetName]의 안에 사정했다. [AMD_ET_DEF.AMD_CLK_GetName]은 눈을 크게 뜨고 절규했지만, 이미 늦었다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O3;[AMD_ET_ATK.AMD_CLK_GetName]이 [AMD_ET_DEF.AMD_CLK_GetName]에게 비열한 강간범의 자지를 쑤셔박자, [AMD_ET_DEF.AMD_CLK_GetName]은 자신의 의지에 관계없이 몸이 달아오르는 것을 느꼈다. [AMD_ET_ATK.AMD_CLK_GetName]이 강간을 당하면서 쾌락을 느끼는 음란녀라고 매도하면서 깊은 곳을 공격할 때마다, [AMD_ET_DEF.AMD_CLK_GetName]은 허리를 흔들며 부정했다.[AMD_ET_DEF.AMD_CLK_GetName]은 추악한 강간범의 자지에 희롱당하다가 결국 절정에 이르고 말았다. 보지에서 흘러내리는 정액의 감촉에 [AMD_ET_DEF.AMD_CLK_GetName]이 정신을 차리고 절규하자, [AMD_ET_ATK.AMD_CLK_GetName]은 그녀가 애원했기에 그렇게 해 주었을 뿐이라며 그녀를 비웃었다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O4;[AMD_ET_ATK.AMD_CLK_GetName]이 무자비하게 [AMD_ET_DEF.AMD_CLK_GetName]의 덜 준비된 보지를 범하자, 강간범의 추악한 자지를 타고 순결의 핏방울이 흘러내렸다. [AMD_ET_ATK.AMD_CLK_GetName]은 음흉하게 웃으며 허리를 흔들었고, [AMD_ET_DEF.AMD_CLK_GetName]은 고통과 슬픔으로 눈물을 흘렸다...[AMD_ET_ATK.AMD_CLK_GetName]은 처녀의 살결을 유린하고 그 순결한 자궁에 더러운 강간범의 정액을 쏟았다. [AMD_ET_DEF.AMD_CLK_GetName]은 마지막까지 비명을 지르며 애원했지만, 이미 늦었다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O5;[AMD_ET_ATK.AMD_CLK_GetName]이 무자비하게 [AMD_ET_DEF.AMD_CLK_GetName]의 덜 준비된 보지를 범하자, 비열한 강간범의 자지를 타고 순결의 핏방울이 흘러내렸다. [AMD_ET_ATK.AMD_CLK_GetName]은 음흉하게 웃으며 허리를 흔들었고, [AMD_ET_DEF.AMD_CLK_GetName]은 고통과 슬픔에 눈물흘리며 [AMD_ET_DEF.Religion.GetRandomGodName]의 도움을 빌었다..[AMD_ET_ATK.AMD_CLK_GetName]은 처녀의 살결을 유린하고 그 순결한 자궁에 더러운 강간범의 정액을 쏟았다. [AMD_ET_DEF.AMD_CLK_GetName]은 마지막까지 비명을 지르며 애원했지만, 이미 늦었다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O6;[AMD_ET_ATK.AMD_CLK_GetName]이 추잡한 자지를 [AMD_ET_DEF.AMD_CLK_GetName]의 남자를 모르는 보지에 쑤셔박았다. [AMD_ET_DEF.AMD_CLK_GetName]은 위로는 눈물을, 아래로는 피를 흘리며  몸부림쳤지만, [AMD_ET_ATK.AMD_CLK_GetName]은 그녀의 달콤한 신음소리를 비웃으며 처녀보지의 감촉을 즐겼다. [AMD_ET_DEF.AMD_CLK_GetName]은 처음 느끼는 쾌락에 저항하지 못했다. [AMD_ET_DEF.AMD_CLK_GetName]이 정신을 차렸을 때는 이미 그녀의 남자를 모르던 보지에서 더러운 강간범의 정액이 흘러내리고 있었다. [AMD_ET_ATK.AMD_CLK_GetName]은 그녀가 안에 싸 달라고 애원했기에 그렇게 해 주었을 뿐이라며 그녀를 비웃었다. [AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_DEF.Religion.GetRandomGodName]의 이름을 부르려 했지만, 쾌락에 마비된 혀는 자신의 이름조차 제대로 발음할 수 없었다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O7;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 속박하고 억지로 발기시킨 자지 위에 앉았지만, 전혀 만족스럽지 않았다. [AMD_ET_ATK.AMD_CLK_GetName]은 한심하다는 듯한 얼굴로 [AMD_ET_DEF.AMD_CLK_GetName]을 바라보고 있다. [AMD_ET_DEF.AMD_CLK_GetName]은 불만스런 얼굴로 계속 허리를 흔들었고, [AMD_ET_ATK.AMD_CLK_GetName]이 신음하며 정액을 토해내자 매우 실망스러운 표정으로 그를 매도했다..;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O8;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 속박하고 억지로 발기시킨 자지 위에 앉아 허리를 흔들었다. 살이 맞닿는 습기찬 소리를 내며 신음하는 [AMD_ET_DEF.AMD_CLK_GetName]의 음란한 모습에, [AMD_ET_ATK.AMD_CLK_GetName]은 얼굴을 붉히며 [AMD_ET_DEF.AMD_CLK_GetName]과 눈을 마주치지 않으려 한다. [AMD_ET_DEF.AMD_CLK_GetName]은 쾌락에 절어 풀린 눈으로 계속 허리를 흔들었고, [AMD_ET_ATK.AMD_CLK_GetName]이 신음하며 정액을 토해내자 자신도 교성을 높이며 절정에 이르렀다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O9;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 속박하고 억지로 발기시킨 자지 위로 허리를 내렸지만, 처녀에게는 어려운 일이었다. [AMD_ET_DEF.AMD_CLK_GetName]은 파과의 고통에 울먹였고, [AMD_ET_ATK.AMD_CLK_GetName]은 굉장히 복잡한 표정으로 그 모습을 바라보았다. [AMD_ET_DEF.AMD_CLK_GetName]은 고통스러워하면서도 허리를 흔들었고, [AMD_ET_ATK.AMD_CLK_GetName]이 신음하며 정액을 토해내자 안도와 실망이 섞인 미묘한 표정으로 그에게서 떨어졌다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_OA;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 속박하고 억지로 발기시킨 자지 위로 허리를 내렸다. 처녀에게는 좀 어려운 시도였지만, [AMD_ET_DEF.AMD_CLK_GetName]은 눈물을 글썽이면서도 얼굴을 붉히고 쾌락에 신음하며 허리를 흔들었다. [AMD_ET_DEF.AMD_CLK_GetName]은 눈물을 글썽이면서도 처음 맛보는 쾌락을 요구하며 계속 허리를 흔들었고, [AMD_ET_ATK.AMD_CLK_GetName]이 신음하며 정액을 토해내자 가볍게 몸을 떨며 절정에 이르렀다.;;;;;;;;;;;;;x;
+
+
+
+AMD_EV_OPT_2P_OLD;[AMD_CLK_EV_OPT_2P_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O1;썩 만족스럽지는 않군...;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O2;나쁘지 않았다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O3;평생 이것만 하고 살았으면 좋겠어!;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O4;죽고 싶다...;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O5;기분 나빠...;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O6;벌써...끝인가...?;;;;;;;;;;;;;x;
+
+AMD_OPT_fin_wide_shot_fail;아... 안에는 안된다고 했는데...;;;;;;;;;;;;;x;
+
+#	#	구버전 2P 마간
+AMD_EV_DESC_2P_HF;[AMD_CLK_EV_DESC_2HHF_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O1;[AMD_ET_ATK.AMD_CLK_GetName]의 흉측한 말자지가 [AMD_ET_DEF.AMD_CLK_GetName]에게 쑤셔박혔다. [AMD_ET_DEF.AMD_CLK_GetName]은 몸이 찢어지는 고통에 울며 소리질렀지만 [AMD_ET_ATK.AMD_CLK_GetName]의 움직임은 멈추지 않았다.[AMD_ET_ATK.AMD_CLK_GetName]의 질주는 [AMD_ET_DEF.AMD_CLK_GetName]이 정신을 잃고 늘어질 때까지 계속되었다. 잠시 후 [AMD_ET_ATK.AMD_CLK_GetName]은 작은 암컷에게서 떨어졌고, [AMD_ET_DEF.AMD_CLK_GetName]의 다리 사이에서 말의 정액이 흘러넘쳤다;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O2;[AMD_ET_ATK.AMD_CLK_GetName]은 거대한 말자지를 [AMD_ET_DEF.AMD_CLK_GetName]에게 쑤셔박았다. [AMD_ET_DEF.AMD_CLK_GetName]의 입에서는 날카로운 비명이 터져나왔지만 그녀의 아랫입은 거대한 이물을 매끄럽게 받아들이고 있다. [AMD_ET_ATK.AMD_CLK_GetName]이 절정을 향해 달리는 동안, [AMD_ET_DEF.AMD_CLK_GetName]은 강렬한 쾌감에 몇 번이나 의식을 잃었다. 마침내 [AMD_ET_ATK.AMD_CLK_GetName]이 쏟아낸 짐승의 종자가 자궁을 가득 메웠고, [AMD_ET_DEF.AMD_CLK_GetName]은 온 몸을 움찔거리며 그것을 받아들였다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O3;[AMD_ET_ATK.AMD_CLK_GetName]이 우람한 말자지를 [AMD_ET_ATK.AMD_CLK_GetName]에게 쑤셔박자, [AMD_ET_DEF.AMD_CLK_GetName]은 짐승처럼 소리쳤다. 인간 남자가 줄 수 없는 쾌락에 그녀는 눈을 뒤집고 혀를 내밀며 음탕하게 허덕였다.[AMD_ET_ATK.AMD_CLK_GetName]이 절정을 향해 달리는 동안, [AMD_ET_DEF.AMD_CLK_GetName]은 강렬한 쾌감에 몇 번이나 의식을 잃었다. 마침내 [AMD_ET_ATK.AMD_CLK_GetName]이 쏟아낸 짐승의 종자가 자궁을 가득 메웠고, [AMD_ET_DEF.AMD_CLK_GetName]은 온 몸을 움찔거리며 그것을 받아들였다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O4;[AMD_ET_ATK.AMD_CLK_GetName]의 흉측한 말자지가 [AMD_ET_DEF.AMD_CLK_GetName]의 처녀보지를 꿰뚫었다. [AMD_ET_DEF.AMD_CLK_GetName]은 몸이 찢어지는 고통과 혐오감에 울며 소리질렀지만 [AMD_ET_ATK.AMD_CLK_GetName]은 아랑곳하지 않고 그녀의 처녀막을 찢어발겼다. 조금 전까지 처녀였던 [AMD_ET_DEF.AMD_CLK_GetName]은  [AMD_ET_ATK.AMD_CLK_GetName]의 질주를 버티지 못하고 정신을 잃어버렸다. 잠시 후 [AMD_ET_ATK.AMD_CLK_GetName]은 작은 암컷에게서 떨어졌고, [AMD_ET_DEF.AMD_CLK_GetName]의 남자를 모르는 보지에서 말의 정액이 흘러넘쳤다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O5;[AMD_ET_ATK.AMD_CLK_GetName]은 거대한 말자지로 [AMD_ET_DEF.AMD_CLK_GetName]의 처녀를 꿰뚫었다. [AMD_ET_DEF.AMD_CLK_GetName]은 눈물을 흘리며 고통을 호소했지만, 그녀의 아랫입은 피를 흘리면서도 처음 접하는 거대한 이물을 부드럽게 받아들이고 있다. [AMD_ET_ATK.AMD_CLK_GetName]이 처녀지를 짓밟는 동안, [AMD_ET_DEF.AMD_CLK_GetName]은 처음 느끼는 쾌감에 몇 번이나 의식을 잃었다. 마침내 [AMD_ET_ATK.AMD_CLK_GetName]이 쏟아낸 짐승의 종자가 순결한 자궁을 가득 채웠고, [AMD_ET_DEF.AMD_CLK_GetName]은 넘쳐흐르는 정액이 다리를 타고 흐르는 것을 느끼며 실신했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O6;[AMD_ET_ATK.AMD_CLK_GetName]이 우람한 말자지를 [AMD_ET_DEF.AMD_CLK_GetName]의 순결한 보지에 쑤셔박자, [AMD_ET_DEF.AMD_CLK_GetName]은 발정난 짐승처럼 소리쳤다. 태어나서 처음 느끼는 엄청난 쾌락이 그녀의 눈을 뒤집고 혀를 마비시켰고, 바보같이 벌린 입에서는 군침과 함께 음탕한 신음소리가 흘러나왔다. [AMD_ET_ATK.AMD_CLK_GetName]이 처녀지를 짓밟는 동안, [AMD_ET_DEF.AMD_CLK_GetName]은 처음 느끼는 쾌감에 몇 번이나 의식을 잃었다. 마침내 [AMD_ET_ATK.AMD_CLK_GetName]이 쏟아낸 짐승의 종자가 순결한 자궁을 가득 채웠고, [AMD_ET_DEF.AMD_CLK_GetName]은 넘쳐흐르는 정액이 다리를 타고 흐르는 것을 느끼며 실신했다.;;;;;;;;;;;;;x;
+
+AMD_OPT_2P_HORSE;푸히히히힝!;;;;;;;;;;;;;x;
+
+
+
+#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+
+AMD_VIE_2P_NORM_CONS_FIN_bad_wide;[AMD_ET_ATK.AMD_CLK_GetName]은 마지막 순간까지 긴장을 놓지 않고 정액을 밖에 뿌리는 데 성공했다. 그러나 그 때문인지, [AMD_ET_DEF.AMD_CLK_GetName]은 별로 즐기지 못한 것 같다...;;;;;;;;;;;;;x;
+AMD_VIE_2P_NORM_CONS_FIN_good_wide;[AMD_ET_DEF.AMD_CLK_GetName]이 절정의 소리를 높인 순간, [AMD_ET_ATK.AMD_CLK_GetName]은 허리를 뒤로 빼고 그녀의 몸 밖에 정액을 쏟아내었다.;;;;;;;;;;;;;x;
+
+AMD_VIE_2P_NORM_RAPE_FIN_bad_wide;[AMD_ET_ATK.AMD_CLK_GetName]은 한참 허리를 흔들다가 자지를 뽑아 [AMD_ET_DEF.AMD_CLK_GetName]의 얼굴에 사정했다. [AMD_ET_DEF.AMD_CLK_GetName]은 얼굴에 정액을 뒤집어쓴 채, 안도와 분노가 섞인 복잡한 눈빛으로 [AMD_ET_ATK.AMD_CLK_GetName]을 노려보았다.;;;;;;;;;;;;;x;
+AMD_VIE_2P_NORM_RAPE_FIN_good_wide;[AMD_ET_ATK.AMD_CLK_GetName]은 한참 허리를 흔들다가 자지를 뽑아 [AMD_ET_DEF.AMD_CLK_GetName]의 얼굴에 사정했다. [AMD_ET_DEF.AMD_CLK_GetName]은 얼굴에 정액을 뒤집어쓴 채, 안도와 분노가 섞인 복잡한 눈빛으로 [AMD_ET_ATK.AMD_CLK_GetName]을 노려보았다.;;;;;;;;;;;;;x;
+
+AMD_VIE_2P_NORM_REVERSE_FIN_wide;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 표정과 호흡을 주시하면서 허리를 흔들다가, 그의 절정이 가까워오는 것을 포착하고 자지를 뽑아냈다. [AMD_ET_ATK.AMD_CLK_GetName]이 매우 절박한 표정을 짓는 것을 보고, [AMD_ET_DEF.AMD_CLK_GetName]은 그가 사정할 수 있도록 발을 빌려주었다...;;;;;;;;;;;;;x;
+
+AMD_VIE_2P_HORSE_GIRL_FIN_wide;[AMD_ET_ATK.AMD_CLK_GetName]의 질주는 너무 거칠었고, 결국 마지막 순간에 목표를 벗어나고 말았다. 두 종족의 체액으로 번들거리는 흉측한 말자지가 허공에 대량의 정액을 뿜었고, [AMD_ET_DEF.AMD_CLK_GetName]은 크게 벌어진 보지를 움찔거리며 거친 숨을 내쉬었다.;;;;;;;;;;;;;x;
+
+
+
+#성관계 이벤트 구판 Sex Events DESC (OLD);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+
+#	남주*여성
+AMD_EV_DESC_MPMF_OLD;[AMD_CLK_EV_DESC_MPMF_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPMF_OLD;남녀 단체전 임시 선택지;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_RB_OLD;[AMD_ET_OH.GetFirstName]은 흥분한 여자들에게 강간당했습니다. 두 번째 보지에 정액을 싸지를 때까지만 해도 그는 행복했습니다. 그러나 열세번째 사정 이후로 발기가 잘 되지 않자, 여자들은 화를 내며 그의 엉덩이를 공격했습니다. [AMD_ET_OH.GetFirstName]은 그 이후의 일을 잘 기억하지 못합니다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_RG_OLD;[AMD_ET_OH.GetFirstName]은 흥분한 여자들에게 강간당했습니다. 여자들은 자신들을 만족시키지 못하면 잘라버리겠다고 그를 협박했습니다. 그러나 [AMD_ET_OH.GetFirstName]은 모든 강간자들이 정액을 흘리며 나가떨어질 때까지 불사신처럼 몇 번이고 일어서서 적을 찔렀습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_CB_OLD;[AMD_ET_OH.GetFirstName]은 사랑하는 여인들을 불러모아 넓은 침실에서 밤의 축제를 개최했다. 그러나 그녀들 모두에게 한 번씩 사랑을 주는 것만으로도 [AMD_ET_OH.GetFirstName]은 지쳐버렸다. 여인들은 입을 모아 [AMD_ET_OH.GetFirstName]을 비난했다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_CG_OLD;[AMD_ET_OH.GetFirstName]은 사랑하는 여인들과 넓은 침실에 모여 밤의 축제를 개최했다. [AMD_ET_OH.GetFirstName]은 하나의 입, 두 개의 손, 세 번째 다리를 끊임없이 움직였고, 모든 여인들이 [AMD_ET_OH.GetFirstName]의 씨를 품고 만족스럽게 잠들 때까지 축제는 계속되었다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_SB_OLD;[AMD_ET_OH.GetFirstName]을 둘러싼 여성 고객들이 욕망과 기대로 눈을 반짝였다. 그러나 그녀들 모두를 만족시키기엔 그의 노력이 부족했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_SG_OLD;[AMD_ET_OH.GetFirstName]을 둘러싼 여성 고객들이 욕망과 기대로 눈을 반짝였다. [AMD_ET_OH.GetFirstName]은 영웅적인 전투 끝에 그녀들을 천상의 왕국으로 보내버렸고, 모든 고객들은 행복한 얼굴로 쓰러져 잠들었다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_BG_OLD;은밀하고 호화로운 침실. 조각같은 몸매의 미녀들이 실크처럼 부드러운 피부를 촉촉하게 적시고 [AMD_ET_OH.GetTitledFirstName]에게 달라붙었다. 그녀들은 매력적인 육체와 환상적인 기술로 오늘 하루동안 [AMD_ET_OH.GetFirstName]에게 천국을 보여줄 것이다.;;;;;;;;;;;;;x;
+
+
+#	남주*남성
+AMD_EV_DESC_MPMM_OLD;[AMD_CLK_EV_DESC_MPMM_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPMM_OLD;남남 단체전 임시 선택지;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_RB_OLD;[AMD_ET_OH.GetFirstName]은 구멍만 있으면 성별과 종족을 가리지 않는 흉악한 남자들에게 강간당했습니다. [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_RG_OLD;[AMD_ET_OH.GetFirstName]은 구멍만 있으면 성별과 종족을 가리지 않는 흉악한 남자들에게 강간당했습니다. 그러나 그는 마지막까지 정신을 잃지 않고 모든 강간마들이 지쳐 나가떨어질 때까지 버텨냈습니다. [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_CB_OLD;[AMD_ET_OH.GetFirstName]은 사랑하는 남자들과 침실에 모여 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_CG_OLD;[AMD_ET_OH.GetFirstName]은 사랑하는 남자들과 침실에 모여 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_SB_OLD;[AMD_ET_OH.GetFirstName]을 둘러싼 남성 고객들이 욕망과 기대로 눈을 반짝였다. 그러나 그들 모두를 만족시키기엔 그의 노력이 부족했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_SG_OLD;[AMD_ET_OH.GetFirstName]을 둘러싼 남성 고객들이 욕망과 기대로 눈을 반짝였다. [AMD_ET_OH.GetFirstName]은 영웅적인 전투 끝에 그들을 천상의 왕국으로 보내버렸고, 모든 고객들은 만족했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_BG_OLD;[AMD_ET_OH.GetTitledFirstName]은 고급스러운 침실에서 강철같은 근육을 꿈틀거리며 말 같은 자지를 세운 멋진 남자들에게 둘러싸였다. 그들은 밤 기술의 전문가이며, 오늘 하루동안 [AMD_ET_OH.GetFirstName]의 즐거움만을 위해 봉사할 것이다.;;;;;;;;;;;;;x;
+
+#	여주*여성
+AMD_EV_DESC_MPFF_OLD;[AMD_CLK_EV_DESC_MPFF_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFF_OLD;여여 단체전 임시 선택지;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_RB_OLD;[AMD_ET_OH.GetFirstName]은 욕망으로 눈을 번뜩이는 흉악한 여자들에게 강간당했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_RG_OLD;[AMD_ET_OH.GetFirstName]은 욕망으로 눈을 번뜩이는 흉악한 여자들에게 강간당했습니다. 그녀는 한동안 남자가 줄 수 없는 쾌감에 농락당했지만, 습격자들이 모두 지쳐서 나가떨어질 때까지 어떻게든 버텨냈습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_CB_OLD;[AMD_ET_OH.GetFirstName]은 사랑하는 여인들과 침실에 모여 육체의 축제를 벌였습니다. 그녀들은 밤새 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_CG_OLD;[AMD_ET_OH.GetFirstName]은 사랑하는 여인들과 침실에 모여 육체의 축제를 벌였습니다. 그녀들은 밤새 [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_SB_OLD;[AMD_ET_OH.GetFirstName]을 둘러싼 여성 고객들이 욕망과 기대로 눈을 반짝였다. 그러나 그녀들 모두를 만족시키기엔 그녀의 노력이 부족했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_SG_OLD;[AMD_ET_OH.GetFirstName]을 둘러싼 여성 고객들이 욕망과 기대로 눈을 반짝였다. [AMD_ET_OH.GetFirstName]은 영웅적인 전투 끝에 그녀들을 천상의 왕국으로 보내버렸고, 모든 고객들은 만족했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_BG_OLD;[AMD_ET_OH.GetTitledFirstName]은 고급스러운 침실에서 비단같은 피부와 조각같은 몸매의 미녀들에게 둘러싸였다. 그녀들은 밤 기술의 전문가이며, 오늘 하루동안 [AMD_ET_OH.GetFirstName]의 즐거움만을 위해 봉사할 것이다.;;;;;;;;;;;;;x;
+
+
+#	난교/	여주/	남성/	강간/
+AMD_EV_DESC_MPFM_OLD;[AMD_CLK_EV_DESC_MPFM_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_OLD;[AMD_CLK_EV_OPT_MPFM_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RB_OLD;[AMD_ET_OH.GetFirstName]은 양손에 냄새나는 자지를 쥐고 있었다. 남자들이 싸지른 정액이 얼마나 많았는지 보지와 항문에 새로운 자지가 박히는데도 아무 느낌이 없다. 차라리 죽고 싶다고 생각하며, [AMD_ET_OH.GetFirstName]은 남자들의 정액받이로 굴렀다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RG_OLD;[AMD_ET_OH.GetFirstName]은 오늘 일곱번째의 자지를 엉덩이에 받아들였다. 아까 것보다 작지만 단단하다. [AMD_ET_OH.GetFirstName]은 거칠게 덤벼오는 남자의 움직임에 맞춰 허리를 흔들었다. 보지에 박고 있는 남자가 징그럽게 웃으며 뭐라고 말했지만 들리지 않았다. 빨리 끝내고 싶을 뿐이라고 안 돌아가는 혀로 중얼거리며, [AMD_ET_OH.GetFirstName]은 몇 번째인지 셀 수도 없는 절정을 맞이했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RBV_OLD;[AMD_ET_OH.GetFirstName]은 이제 눈물도 나오지 않았다. 순결했던 보지는 이제 셀 수도 없는 남자들의 정액을 흘리며 지저분한 자지를 물고 있었다. 손, 발, 머리, 가슴 어느 한 구석도 냄새나고 끈끈한 정액이 뿌려지지 않은 곳이 없다. 여덟번째 남자의 자지가 엉덩이에 박히자, [AMD_ET_OH.GetFirstName]은 다시는 깨어나지 않기를 빌며 기절했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RGV_OLD;[AMD_ET_OH.GetFirstName]은 정신을 차릴 수가 없었다. 피 맛이 나는 자지를 입에 물고 허리를 흔드는 자신을 비웃는 남자들에게 뭔가 말하려고 했지만, 아홉번째 자지가 보지를 파고들자 말이 나오지 않았다. [AMD_ET_OH.GetFirstName]은 처음으로 맛보는 자극적인 쾌락 앞에 생각하는 것을 그만두었다.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_MPFM_RB_OLD;이제 싫어... 집에 돌아갈래...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_RG_OLD;분해...! 하지만... 느껴버려!;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_RBV_OLD;싫어... 이건 악몽이야...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_RGV_OLD;이런 걸 알아버리면... 이전처럼은 살아갈 수 없어...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_MPFM_CB_OLD;[AMD_ET_OH.GetFirstName]은 자신을 사랑하는 남자들을 한 방에 모아서 음란한 연회를 열었다. 그러나 남자들은 그녀의 생각대로 움직여주지 않았다. [AMD_ET_OH.GetFirstName]이 실신할 때까지, 남자들은 자신의 즐거움만을 위해 그녀의 몸을 탐닉했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_CG_OLD;[AMD_ET_OH.GetFirstName]은 자신을 사랑하는 남자들을 한 방에 모아서 음란한 연회를 열었다. 그녀는 자신의 매력을 한껏 발산해 그들의 질투심을 미묘하게 흔들었고, 남자들은 그녀에게 더 큰 쾌락을 바치기 위해 서로 경쟁했다. 모든 남자들이 최소한 세번씩 사정하고 나가떨어지자, [AMD_ET_OH.GetFirstName]은 승리의 여신처럼 미소지으며 마지막 자지에서 정액을 짜내었다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_CBV_OLD;[AMD_ET_OH.GetFirstName]은 자신을 사랑하는 남자들을 한 방에 모아서 음란한 연회를 열었다. 그러나 처녀의 피가 시트에 스며들고 그녀의 순결한 보지에 첫 번째 정액이 뿌려지자 남자들의 흥분은 통제를 벗어났다. 어제까지 남자를 모르던 몸의 모든 구멍에서 정액냄새가 날 때까지, [AMD_ET_OH.GetFirstName]은 이성을 잃은 남자들에게 끊임없이 범해졌다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_CGV_OLD;[AMD_ET_OH.GetFirstName]은 자신을 사랑하는 남자들을 한 방에 모아서 음란한 연회를 열었다. 그녀는 자신의 매력을 한껏 발산해 그들의 질투심을 미묘하게 흔들었고, 남자들은 그녀의 처녀를 찢는 영광을 위해 서로 경쟁했다. [AMD_ET_OH.GetFirstName]은 수십 번 절정한 끝에 한 사람을 선택했고, 모든 사람들이 만족할 때까지 연회는 계속되었다.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_MPFM_CB_OLD;많다고 항상 좋은 것은 아니다...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_CG_OLD;멋진 자지보다 더 좋은 건 멋진 자지들이지. 많을수록 좋아!;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_CBV_OLD;이런 게 뭐가 좋다는 거야...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_CGV_OLD;자지가 이렇게나 기분좋다니! 인생의 절반 손해봤어!;;;;;;;;;;;;;x;
+
+
+#	난교/	여주/	남성/	매춘/
+AMD_EV_DESC_MPFM_SB_OLD;[AMD_ET_OH.GetFirstName]은 다섯명의 고객을 동시에 받고 있지만, 그녀의 마음에 드는 자지는 없었다. 오른손에 쥔 자지는 너무 가늘고, 엉덩이에 박힌 자지는 단단함이 부족하다. 입에 물고 있는 자지는 냄새나고 맛이 없다. 보지에 박고 있는 남자는 크기만 컸지 여자를 즐겁게 해주는 법을 모른다. 고객들은 모두 만족했지만, [AMD_ET_OH.GetFirstName]은 만족하지 못했다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_SG_OLD;[AMD_ET_OH.GetFirstName]의 정액으로 가득한 엉덩이에 새로운 손님이 파고들었다. 왼쪽에서 쏘아진 정액이 머리카락을 타고 흘러내렸다. [AMD_ET_OH.GetFirstName]은 눈가에 뿌려진 정액의 냄새에 더욱 흥분해, 방금 자신의 보지에 정액을 싸지른 자지에 키스했다. [AMD_ET_OH.GetFirstName]은 오늘 받은 모든 손님들을 만족시켰으며, 그녀 자신도 충분히 즐겼다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_SBV_OLD;[AMD_ET_OH.GetFirstName]은 눈물로 엉망이 된 얼굴로 방금 자신의 항문에 정액을 토해낸 자지를 바라보았다. 조금 전까지 처녀였던 보지에 네 번째 자지가 박혔고, 왼손에 쥔 자지가 뿜은 정액이 흘러내려 눈을 가린다. 모든 고객들이 만족할 때까지, [AMD_ET_OH.GetFirstName]은 지옥같은 시간을 보내며 후회했다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_SGV_OLD;[AMD_ET_OH.GetFirstName]은 지금까지 몰랐던 쾌락의 물결에 휩쓸려 정신을 차릴 수 없었다. 다섯번째 자지가 입안에 정액을 토해냈다. 삼키기도 전에 그보다 더 큰 자지가 엉덩이를 파고든다. 등을 타고 올라오는 쾌락에 몸을 떨자 양 손에 쥐어진 자지들이 호응하듯 부르르 떨며 정액을 내놓는다. [AMD_ET_OH.GetFirstName]은 자신의 처녀를 꿰뚫었던 자지에 키스하며 허리를 흔들었다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_BG_OLD;[AMD_ET_OH.GetTitledFirstName]은 고급스러운 침실에서 강철같은 근육을 꿈틀거리며 말 같은 자지를 세운 멋진 남자들에게 둘러싸였다. 그들은 밤 기술의 전문가이며, 오늘 하루동안 [AMD_ET_OH.GetFirstName]의 즐거움만을 위해 봉사할 것이다...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_BGV_OLD;[AMD_ET_OH.GetTitledFirstName]은 고급스러운 침실에서 강철같은 근육을 꿈틀거리며 말 같은 자지를 세운 멋진 남자들에게 둘러싸였다. [AMD_ET_OH.GetFirstName]은 그들 중 하나를 골라 그의 자지 위에 올라탔다. 전문가의 교묘한 허리놀림과 여러 사람의 손으로 펼쳐지는 능숙한 애무에 [AMD_ET_OH.GetFirstName]은 처녀 상실의 고통을 금새 잊어버렸고, 온 몸의 구멍에서 그들의 정액이 흘러내릴 때까지 수도 없이 절정했다.;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_MPFM_SB_OLD;흐윽... 어쨌든 거래는 끝냈어...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_SG_OLD;후훗... 거래를 했으면 이득을 봐야지.;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_SBV_OLD;난... 정말 바보...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_SGV_OLD;공정거래 너무 좋아... 난 무역의 여왕이 될 거야.;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_BG_OLD;멋진 자지보다 더 좋은 건 멋진 자지들이지. 많을수록 좋아!;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_BGV_OLD;자지가 이렇게나 기분좋다니! 인생의 절반 손해봤어!;;;;;;;;;;;;;x;
+
+
+
+#	난교/	여주/	남성/	구매/
+
+
+
+
+#	듀얼/	옵션/
+AMD_OPT_peep;오, 저런...;;;;;;;;;;;;;x;
+AMD_OPT_memory;그래서...;;;;;;;;;;;;;x;
+
+#	듀얼/	keep : 현상유지 / 상대에게 맡긴다
+AMD_OPT_cons_keep;이대로 계속한다.;;;;;;;;;;;;;x;
+AMD_OPT_raper_keep;이대로 계속 범한다.;;;;;;;;;;;;;x;
+AMD_OPT_raped_keep;이대로 계속 범해진다.;;;;;;;;;;;;;x;
+AMD_OPT_order_keep;아무것도 명령하지 않는다.;;;;;;;;;;;;;x;
+AMD_CT_keep_move;\n현상 유지. 참가자들의 상황에 따라 다른 선택지의 효과가 발생할 수 있습니다.\n;;;;;;;;;;;;;x;
+
+#	듀얼/	soft : soft_power에 기반한 상황 변동. 매력, 인성
+AMD_OPT_cons_soft;때론 부드러움이 강함을 이긴다.;;;;;;;;;;;;;x;
+AMD_OPT_raper_soft;움직임을 늦추고 구석구석까지 즐긴다.;;;;;;;;;;;;;x;
+AMD_OPT_raped_soft;?, 거, 거긴 안돼...;;;;;;;;;;;;;x;
+AMD_OPT_order_soft;부드럽게 하라고 명령한다.;;;;;;;;;;;;;x;
+AMD_CT_soft_move;\n부드러운 움직임. 매력, 인성 등 정신적 요소의 영향을 받습니다.\n;;;;;;;;;;;;;x;
+
+#	듀얼/	hard : hard_power에 기반한 상황 변동. 건강, 육체
+AMD_OPT_cons_hard;진짜 [Root.Culture.GetName]의 [Root.GetManWoman]가 사랑하는 법을 보여주겠다!;;;;;;;;;;;;;x;
+AMD_OPT_raper_hard;격렬하게 범한다!;;;;;;;;;;;;;x;
+AMD_OPT_raped_hard;아앗, 그렇게 격렬하게...! ;;;;;;;;;;;;;x;
+AMD_OPT_order_hard;거칠게 하라고 명령한다.;;;;;;;;;;;;;x;
+AMD_CT_hard_move;\n거친 움직임. 체력, 건강 등 육체적 요소의 영향을 받습니다.\n;;;;;;;;;;;;;x;
+
+#	듀얼/	wide : 밖에 발사. 임신 가능성을 낮춘다.
+AMD_OPT_cons_wide;잠깐, 지배자에겐 쾌락보다 중요한 것이 있다...;;;;;;;;;;;;;x;
+AMD_OPT_raper_wide;으... 역시 안은 안되겠지...;;;;;;;;;;;;;x;
+AMD_OPT_raped_wide;아, 안에는 안돼! 제발 그것만은...!;;;;;;;;;;;;;x;
+AMD_OPT_order_wide;안에 뿌리지 않도록 명령한다.;;;;;;;;;;;;;x;
+AMD_CT_wide_shot;\n상속 안정성을 위해 사격 위치를 조절합니다. 실패할 수 있습니다.\n;;;;;;;;;;;;;x;
+
+AMD_CT_wide_shot_succ;구멍 밖에 발사!;;;;;;;;;;;;;x;
+AMD_CT_wide_shot_fail;버틸 수가 없다!;;;;;;;;;;;;;x;
+
+#	난교/	옵션/	마무리 선택지
+AMD_OPT_ORGY_BUY_good;돈으로 살 수 있는 최고의 경험이다!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_SELL_bad;어쨌든 거래는 완료되었다...;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_SELL_good;공정거래는 모두에게 이익이지.;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_CONS_bad;안하겠소, 다시는 안하겠소!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_CONS_good;내 생애 한 점 후회도 없다!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_LES_CONS_good;남자가 왜 필요하지? 이렇게 좋은 게 있는데!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_LES_CONS_bad;오늘은 잘 안되는군...;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_GAY_CONS_good;나는 살고싶어! 너희들과 함께!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_RAPE_bad;아래쪽에 감각이 없다...;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_RAPE_good;존나좋군?;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_ORGY_ETC;앗... 아아......;;;;;;;;;;;;;x;
+
+
+
+
+#AMD ERA LN WIP;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10003;당신은 성적대상입니다 지금 어떤 기분?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_C;당신은 성적대상입니다. 화간이요. 지금 어떤 기분?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_B;당신은 성적대상입니다. 구매자에요. 지금 어떤 기분?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_S;당신은 성적대상입니다. 판매자에요. 지금 어떤 기분?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_R;당신은 성적대상입니다. 강간범이요. 지금 어떤 기분?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_V;당신은 성적대상입니다. 강간 피해자에요. 지금 어떤 기분?;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_SOFT;부드러운 게 좋지.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_HARD;격렬한 게 땡긴다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_RAND;내가 주도하고 싶다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_HATE;별로 하고싶지 않다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_LUST;뭐든지 좋아 헉헉 못참겠다!;;;;;;;;;;;;;x;
+
+#불특정애무
+AMD_EV_DESC_PLAY_10100;[AMD_CLK_EV_DESC_PLAY_10100_ACT] [AMD_CLK_EV_DESC_PLAY_10000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_1;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 몸 구석구석을 더듬으며 인체의 신비를 탐구했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_2;[AMD_ET_ATK.AMD_CLK_GetName]은 욕망으로 눈을 번뜩이며 [AMD_ET_DEF.AMD_CLK_GetName]의 몸 여기저기를 거칠게 애무했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_3;[AMD_ET_DEF.AMD_CLK_GetName]은 음란한 말과 눈빛으로 [AMD_ET_ATK.AMD_CLK_GetName]을 도발했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_4;[AMD_ET_DEF.AMD_CLK_GetName]은 수동적인 태도로 [AMD_ET_ATK.AMD_CLK_GetName]의 손길에 몸을 맡겼습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10100_C;(화간) [AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 서로의 몸 구석구석을 더듬으며 인체의 신비를 탐구했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_R;(강간) [AMD_ET_RA.AMD_CLK_GetName]은 [AMD_ET_RV.AMD_CLK_GetName]의 몸 구석구석을 더듬으며 인체의 신비를 탐구했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_V;(피강간) [AMD_ET_RA.AMD_CLK_GetName]과 [AMD_ET_RV.AMD_CLK_GetName]은 서로의 몸 구석구석을 더듬으며 인체의 신비를 탐구했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_S;(매춘) [AMD_ET_TS.GetFirstName]은 [AMD_ET_TB.GetFirstName]의 몸 구석구석을 애무하며 봉사했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_B;(매춘) [AMD_ET_TS.GetFirstName]과 [AMD_ET_TB.GetFirstName]은 서로의 몸 구석구석을 더듬으며 인체의 신비를 탐구했습니다.;;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_10000_T5;(매춘 비삽입 만족) [AMD_ET_TS.GetFirstName]의 봉사에 [AMD_ET_TB.GetFirstName]은 매우 만족하였습니다. 여기서 끝내는 것이 아쉬울 정도로...;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_T4;(매춘 비삽입 보통) [AMD_ET_TS.GetFirstName]의 봉사에 [AMD_ET_TB.GetFirstName]그리고 욕망의 불꽃이 기름을 부은 듯 격렬하게 솟아오릅니다. 더 큰 즐거움을 갈구하듯이...;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_T3;(매춘 비삽입 불만) 그러나 [AMD_ET_TS.GetFirstName]의 봉사에도 불구하고 [AMD_ET_TB.GetFirstName]은 만족하지 못했습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10000_A;그리고 욕망의 불꽃이 기름을 부은 듯 격렬하게 솟아오릅니다. 더 큰 즐거움을 갈구하듯이...;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_B;그러자 반죽은 빵빵하게 부풀고 오븐은 뜨겁게 달아오릅니다. 멋진 저녁이 될 겁니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_C;그렇게 좋은 분위기는 아니었지만, 어쨌든 다음으로 나아갈 때가 되었습니다...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10200;[AMD_CLK_EV_DESC_PLAY_10200_ACT] [AMD_CLK_EV_DESC_PLAY_10200_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10200_1;[AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 입술을 겹치고 서로의 혀를 맛보았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10200_2;[AMD_ET_RA.AMD_CLK_GetName]은 [AMD_ET_RV.AMD_CLK_GetName]의 입을 자신의 입으로 틀어막고 [AMD_ET_RV.GetHerHim]를 희롱했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10200_A;말없이 얽히는 혀와 혀, 흐르는 액체로 번들거리는 윗입과 아랫입... 다음은 혀보다 단단한 친구가 나설 차례입니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10300;[AMD_CLK_EV_DESC_PLAY_10300_ACT] [AMD_CLK_EV_DESC_PLAY_10000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10300_1;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetBreastAN]을 주무르고 물고 핥고 빨았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10300_2;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 손에 자신의 [AMD_ET_DEF.AMD_CLK_GetBreastNoun]을 들이대며 뜨거운 숨을 내쉬었습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10400;[AMD_CLK_EV_DESC_PLAY_10400_ACT] [AMD_CLK_EV_DESC_PLAY_10400_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_1;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 손에 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 맡기고 그녀의 손맛을 즐겼습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_2;[AMD_ET_ATK.AMD_CLK_GetName]은 싫어하는 [AMD_ET_DEF.AMD_CLK_GetName]의 손을 잡아끌어, 자신의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 애무하게 했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_3;[AMD_ET_DEF.AMD_CLK_GetName]은 저항하지 못하는 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 손으로 자극했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_A;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 손놀림에 농락당하다 바보같은 신음소리를 내뱉으며 사정했습니다. 그러나 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]는 금방 단단함을 되찾으며 일어섰고, 좀 더 깊고 어두운 곳으로 가고 싶어하는 것 같습니다...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10500;[AMD_CLK_EV_DESC_PLAY_10500_ACT] [AMD_CLK_EV_DESC_PLAY_10500_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10500_1;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 물고 핥고 빨고 맛보고 즐겼습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10500_2;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 입에 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 억지로 쑤셔넣고 그녀의 입안을 유린했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10500_A;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 머리를 붙잡고 그녀의 목 안에 끈적한 욕망을 쏟아냈습니다. 다시 일어선 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]는 이제 [AMD_ET_DEF.AMD_CLK_GetName]의 다른 입을 노립니다...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10600;[AMD_CLK_EV_DESC_PLAY_10600_ACT] [AMD_CLK_EV_DESC_PLAY_10600_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_1;[AMD_ET_DEF.AMD_CLK_GetName]은 자신의 [AMD_ET_DEF.AMD_CLK_GetBreastAN]에 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 문지르며 애무했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_2;[AMD_ET_DEF.AMD_CLK_GetName]은 자신의 [AMD_ET_DEF.AMD_CLK_GetBreastAN]으로 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 감싸듯이 애무했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_3;[AMD_ET_DEF.AMD_CLK_GetName]은 자신의 [AMD_ET_DEF.AMD_CLK_GetBreastAN]으로 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 파묻듯이 감싸 문질렀습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_4;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetBreastAN]에 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 문지르며 딱딱한 갈비뼈의 감촉을 즐겼습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_5;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetBreastAN]에 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 파묻듯이 감싸 부드러운 감촉을 즐겼습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_A;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetBreastAN]에 사정했습니다. 그러나 금방 단단함을 되찾은 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]는 좀 더 어둡고 촉촉한 곳으로 가고 싶어합니다...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10700;[AMD_CLK_EV_DESC_PLAY_10700_ACT] [AMD_CLK_EV_DESC_PLAY_10700_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10700_1;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 조롱하며 그의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 짓밟았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10700_2;[AMD_ET_DEF.AMD_CLK_GetName]은 기묘한 요구에 당황하면서도 발을 뻗어 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 밟고 훑어올리며 열심히 문질렀습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10700_A;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 발놀림을 버티지 못하고 굴욕에 찬 신음소리를 내뱉으며 사정했습니다. [AMD_ET_DEF.AMD_CLK_GetName]은 그 모습을 비웃었지만, 허벅지를 타고 흘러내리는 투명한 액체는 감출 수 없었습니다.;;;;;;;;;;;;;x;
+
+
+
+AMD_EV_DESC_PLAY_29400;[AMD_CLK_EV_DESC_PLAY_29400_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20100;[AMD_CLK_EV_DESC_PLAY_20100_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_1;[AMD_ET_ATK.AMD_CLK_GetName]은 정면에서 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetPussyAN]를 공격했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_2;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]을 마주보며 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 삽입했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_3;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 다리를 벌리고 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 밀어넣었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_4;[AMD_ET_ATK.AMD_CLK_GetName]은 바로 누운 [AMD_ET_DEF.AMD_CLK_GetName]의 다리를 벌리고, [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 자신의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 찔러넣었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_5;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]을 밀어 넘어뜨리고, [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 자신의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 쑤셔박았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_6;[AMD_ET_DEF.AMD_CLK_GetName]은 바로 누워 다리를 벌리고 자신의 [AMD_ET_DEF.AMD_CLK_GetPussyAN]로 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 끌어들였습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20200;[AMD_CLK_EV_DESC_PLAY_20200_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_1;[AMD_ET_ATK.AMD_CLK_GetName]은 후방을 노출한 [AMD_ET_DEF.AMD_CLK_GetName]에게 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 찔러넣었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_2;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 등짝을 보며 짐승같은 자세로 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 쑤셔박았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_3;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 엉덩이를 붙잡고 [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 삽입했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_4;[AMD_ET_ATK.AMD_CLK_GetName]은 네 발로 엎드려 엉덩이를 내민 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 자신의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 찔러넣었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_5;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]을 네 발로 엎드리게 하고, 그녀의 뒤로 돌아가 [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 자신의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 쑤셔박았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_6;[AMD_ET_DEF.AMD_CLK_GetName]은 짐승처럼 엎드려 엉덩이를 내밀고 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]에 받아들였습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20300;[AMD_CLK_EV_DESC_PLAY_20300_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_1;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 자신의 [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 삽입했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_2;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 위에 걸터앉아 [AMD_ET_ATK.AMD_CLK_GetPenisAN] 위로 허리를 내렸습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_3;[AMD_ET_DEF.AMD_CLK_GetName]은 바로누운 [AMD_ET_ATK.AMD_CLK_GetName]의 위에 올라앉아 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 잡고 스스로 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]에 찔러넣었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_4;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 바로눕히고 그 위에 올라타 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 잡아 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]에 대고 천천히 허리를 내렸습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_5;[AMD_ET_ATK.AMD_CLK_GetName]은 바로 누워서 [AMD_ET_DEF.AMD_CLK_GetName]을 몸 위에 앉히고, 그녀의 [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 문지르다가 허리를 잡아 끌어내렸습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_6;[AMD_ET_ATK.AMD_CLK_GetName]은 바로 누워서 [AMD_ET_DEF.AMD_CLK_GetName]을 자지 위로 끌어당기고, [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 문지르다가 단숨에 허리를 쳐올렸습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20000_VC1;피를 뿌리며 처녀의 문을 돌파한 침략자는 메마른 땅에서 즐거움을 찾을 수 없었습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VC2;적절한 각도로 [AMD_ET_DEF.AMD_CLK_GetName]의 안에 파고든 [AMD_ET_ATK.AMD_CLK_GetName]의 열쇠는 약간의 흔적을 남기고 처녀의 문을 열었습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VC3;처녀의 문을 꿰뚫은 침략자는 미개척지의 구석구석을 탐험하며 꿀을 퍼올렸습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VC4;처녀의 문이 매끄럽게 열리고, 첫 손님을 환영하듯 터져나오는 쾌락의 파도에 휩쓸려 [AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 정신없이 서로의 육체를 탐했습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR1;[AMD_ET_ATK.AMD_CLK_GetName]이 자비도 애정도 없이 무자비하게 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 쑤셔박자 [AMD_ET_DEF.AMD_CLK_GetName]은 생살을 가르는 고통과 절망에 눈물을 흘렸습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR2;욕망에 눈먼 [AMD_ET_ATK.AMD_CLK_GetName]이 처녀의 살결을 범하자, [AMD_ET_DEF.AMD_CLK_GetName]은 고통과 절망에 눈물지으며 몸부림쳤습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR3;추악한 강간범의 자지를 타고 순결의 핏방울이 바닥에 떨어졌고, [AMD_ET_DEF.AMD_CLK_GetName]은 눈물보다 많은 꿀을 흘리며 처음 경험하는 쾌락에 흐느꼈습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR4;[AMD_ET_ATK.AMD_CLK_GetName]은 처녀의 감촉을 즐기며 음험하게 웃었고, 처음 경험하는 [AMD_ET_ATK.AMD_CLK_GetPenisAN]의 맛에 취한 [AMD_ET_DEF.AMD_CLK_GetName]은 고통조차 느끼지 못하고 몸을 떨었습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF1;[AMD_ET_DEF.AMD_CLK_GetName]은 찢어지는 듯한 고통에 얼굴을 찡그리고, 식은땀과 눈물을 흘리며 허리를 움직이기 시작했습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF2;[AMD_ET_DEF.AMD_CLK_GetName]은 처음으로 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]를 파고든 낯선 감촉에 잠시 숨을 고르다가, [AMD_ET_ATK.AMD_CLK_GetName]을 내려다보며 천천히 허리를 움직이기 시작했습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF3;[AMD_ET_DEF.AMD_CLK_GetName]은 처음 느끼는 쾌락에 파과의 아픔조차 잊어버리고 군침을 흘리며 정신없이 허리를 흔들기 시작했습니다. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF4;처녀에게 범해진다... 남자에게 있어 최대의 굴욕입니다. 하지만 피를 흘리면서도 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 꽉 물고 놓지 않는 [AMD_ET_DEF.AMD_CLK_GetPussyAN]의 감촉에 [AMD_ET_DEF.AMD_CLK_GetName]의 움직임이 더해지자 [AMD_ET_ATK.AMD_CLK_GetName]은 바보처럼 입을 벌리고 침을 흘렸습니다. ;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20000_C1;[AMD_ET_DEF.AMD_CLK_GetName]의 안에 꿀이 흐르는 약속의 땅은 없었고, [AMD_ET_ATK.AMD_CLK_GetName]은 마른 우물에 삽질을 반복하는 고통의 시간을 보냈습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_C2;얼싸안은 [AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 결합부에서 피어오르는 열기에 몸을 맡기고 즐거운 시간을 보냈습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_C3;넘쳐흐르는 샘물에 몸을 적신 [AMD_ET_ATK.AMD_CLK_GetName]과 [AMD_ET_DEF.AMD_CLK_GetName]은 살을 맞대고 인체의 신비를 탐구하는 뜨거운 모험을 즐겼습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_C4;[AMD_ET_ATK.AMD_CLK_GetName]이 무기를 곧추세워 빈틈을 찌르고 [AMD_ET_DEF.AMD_CLK_GetName]은 간절하게 신의 이름을 외쳤습니다... 두 사람은 천상의 왕국을 찾아 성전을 벌였습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R1;[AMD_ET_DEF.AMD_CLK_GetName]은 강간범의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]가 몸을 쑤시는 순간마다 고통과 불쾌감에 몸부리쳤지만, [AMD_ET_ATK.AMD_CLK_GetName]은 조금도 개의치 않고 허리를 흔들었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R2;[AMD_ET_ATK.AMD_CLK_GetName]은 자신의 욕망만을 위해 [AMD_ET_DEF.AMD_CLK_GetName]을 장난감처럼 유린했습니다. [AMD_ET_DEF.AMD_CLK_GetName]은 그 불쾌한 움직임이 주는 쾌락을 부정하며 신음했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R3;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 몸 구석구석을 유린하며 자신의 욕망을 채웠고, [AMD_ET_DEF.AMD_CLK_GetName]은 현실을 부정하면서 인정할 수 없는 쾌락에 허덕였습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R4;[AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]가 주는 큰 쾌락에 [AMD_ET_DEF.AMD_CLK_GetName]은 능욕당하고 있다는 사실조차 잊어버리고 [AMD_ET_ATK.AMD_CLK_GetName]에게 달라붙어 더 큰 쾌락을 갈구했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F1;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]이 기대하던 즐거움을 주지 못했습니다. [AMD_ET_DEF.AMD_CLK_GetName]은 경멸의 눈으로 [AMD_ET_ATK.AMD_CLK_GetName]을 내려다보며 매도했지만 상황은 바뀌지 않았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F2;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 매도하면서 자신의 즐거움을 위해 허리를 흔들었습니다. [AMD_ET_ATK.AMD_CLK_GetName]은 굴욕과 쾌락이 뒤섞인 복잡한 얼굴로 [AMD_ET_DEF.AMD_CLK_GetName]에게 농락당했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F3;[AMD_ET_DEF.AMD_CLK_GetName]이 음란한 말과 뜨거운 숨을 내뱉으며 [AMD_ET_ATK.AMD_CLK_GetName]에게 딱 달라붙어 허리를 흔들자, [AMD_ET_ATK.AMD_CLK_GetName]은 굴욕감을 압도하는 쾌락에 아무 말도 할 수 없었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F4;[AMD_ET_ATK.AMD_CLK_GetName]은 깊고 어둡고 축축한 쾌락의 파도에 휩쓸려, 여자에게 깔려 범해지는 굴욕조차 잊어버리고 [AMD_ET_DEF.AMD_CLK_GetName]의 움직임에 따라 짐승처럼 헐떡였습니다.;;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_30000;[AMD_CLK_EV_DESC_PLAY_30000_ACT][AMD_CLK_EV_DESC_PLAY_30000_DS];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_C0;[AMD_ET_ATK.AMD_CLK_GetName]은 마지막 순간이 다가오자 급히 뒤로 물러나려 했지만, [AMD_ET_DEF.AMD_CLK_GetName]의 어둡고 습기찬 덫에 걸려 한발 늦어버렸습니다... ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_C1;[AMD_ET_ATK.AMD_CLK_GetName]은 허리를 밀어붙이고 몸을 떨며 [AMD_ET_DEF.AMD_CLK_GetName]의 안에 씨를 뿌렸습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_C2;[AMD_ET_DEF.AMD_CLK_GetName]은 절정의 소리를 높이며 남자에게 달라붙었고, [AMD_ET_ATK.AMD_CLK_GetName]은 허리를 더욱 세게 밀어붙이며 더욱 깊이 파고들어 씨를 뿌렸습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_R0;[AMD_ET_ATK.AMD_CLK_GetName]은 마음껏 허리를 흔들다가 마지막 순간 밖에 뿌리려 했지만, [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]는 강간범의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]가 도망치도록 내버려두지 않았습니다... ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_R1;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]을 마음대로 유린하고 그녀의 [AMD_ET_DEF.AMD_CLK_GetPussyNoun] 안에 추악한 욕망을 쏟아내었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_R2;정액을 짜내려는 듯 꿈틀거리는 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]의 감촉을 마지막까지 즐기며, [AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 힘껏 쑤셔박아 더러운 욕망을 쏟아내었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_F0;[AMD_ET_DEF.AMD_CLK_GetName]은 마지막 순간 [AMD_ET_ATK.AMD_CLK_GetName]을 조롱하며 허리를 빼려 했지만, [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]는 그녀의 생각보다 빨랐습니다... ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_F1;[AMD_ET_DEF.AMD_CLK_GetName]은 욕망에 따라 [AMD_ET_ATK.AMD_CLK_GetName]을 찍어누르다가, [AMD_ET_ATK.AMD_CLK_GetName]이 사정하는 것을 느끼고 그를 경멸에 찬 눈으로 내려다보며 모욕했습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_F2;[AMD_ET_DEF.AMD_CLK_GetName]이 교성을 높이고 온몸을 떨며 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]를 조이자, [AMD_ET_ATK.AMD_CLK_GetName]은 더이상 버티지 못하고 얼빠진 소리를 흘리며 정액을 토해냈습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_30000_DS_1; 잠시 후 힘을 다한 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]가 빠져나오자, [AMD_ET_DEF.AMD_CLK_GetPussyNoun]에 가득하게 쏟아졌던 [AMD_ET_ATK.AMD_CLK_GetName]의 정액이 흘러넘쳐 바닥에 떨어졌습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_DS_2;[AMD_ET_ATK.AMD_CLK_GetName]이 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 뽑아내자 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]에서 대량의 정액이 흘러넘쳤습니다.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_30500;[AMD_CLK_EV_DESC_PLAY_30500_ACT];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30500_C1;[AMD_ET_ATK.AMD_CLK_GetName]은 마지막 순간이 다가오자 급히 뒤로 물러나 구멍 밖에 발사했습니다. [AMD_ET_DEF.AMD_CLK_GetName]은 따뜻한 액체가 피부에 닿는 느낌에 몸을 떨었습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30500_R1;[AMD_ET_ATK.AMD_CLK_GetName]은 마음 내키는 대로 허리를 흔들다가 [AMD_ET_ATK.AMD_CLK_GetPenisNoun]를 뽑아 [AMD_ET_DEF.AMD_CLK_GetName]의 얼굴에 사정했습니다. [AMD_ET_DEF.AMD_CLK_GetName]은 얼굴과 몸에 능욕의 증거를 뒤집어쓴 채, 안도와 분노가 뒤섞인 복잡한 눈빛으로 [AMD_ET_ATK.AMD_CLK_GetName]을 노려보았습니다.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30500_F1;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 비웃으며 허리를 흔들다가, 적당한 시점에 몸을 빼고 손으로 스스로를 달래며 [AMD_ET_ATK.AMD_CLK_GetName]이 사정할 때까지 그의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 발로 유린했습니다.;;;;;;;;;;;;;x;
+
+AMD_String_2PNM_1;[AMD_ET_ATK.AMD_CLK_GetName]은 정면에서 [AMD_ET_DEF.AMD_CLK_GetName]의 [AMD_ET_DEF.AMD_CLK_GetPussyAN]를 공격했습니다.;;;;;;;;;;;;;x;
+AMD_String_2PNM_2;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]을 마주보며 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 삽입했습니다.;;;;;;;;;;;;;x;
+AMD_String_2PNM_3;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 다리를 벌리고 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 밀어넣었습니다.;;;;;;;;;;;;;x;
+
+AMD_String_2PNB_1;[AMD_ET_ATK.AMD_CLK_GetName]은 후방을 노출한 [AMD_ET_DEF.AMD_CLK_GetName]에게 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 찔러넣었습니다.;;;;;;;;;;;;;x;
+AMD_String_2PNB_2;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 등짝을 보며 짐승같은 자세로 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 쑤셔박았습니다.;;;;;;;;;;;;;x;
+AMD_String_2PNB_3;[AMD_ET_ATK.AMD_CLK_GetName]은 [AMD_ET_DEF.AMD_CLK_GetName]의 엉덩이를 붙잡고 [AMD_ET_DEF.AMD_CLK_GetPussyAN]에 삽입했습니다.;;;;;;;;;;;;;x;
+
+AMD_String_2PNC_1;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 자신의 [AMD_ET_DEF.AMD_CLK_GetPussyNoun]에 삽입했다.;;;;;;;;;;;;;x;
+AMD_String_2PNC_2;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]을 내려다보며 [AMD_ET_ATK.GetSheHe]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN]를 집어삼켰다.;;;;;;;;;;;;;x;
+AMD_String_2PNC_3;[AMD_ET_DEF.AMD_CLK_GetName]은 [AMD_ET_ATK.AMD_CLK_GetName]의 [AMD_ET_ATK.AMD_CLK_GetPenisAN] 위로 허리를 내렸다.;;;;;;;;;;;;;x;
+
+
+
+
+AMD_EV_OPT_LN_ECHO;[AMD_ET_POV.GetFirstName]의 반응이 궁금하군;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_STOP;[AMD_CLK_EV_OPT_LN_STOP];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_BUY;이 정도면 충분해.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_SELL;이용해 주셔서 감사합니다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_STUDY;지식이 늘었다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_TRAIN;오늘은 여기까지다.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_NEXT;[AMD_CLK_EV_OPT_LN_NEXT];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_BUY;더 하고 싶다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_SELL;추가 서비스를 이용하시겠습니까?;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_STUDY;훈련은 실전처럼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_TRAIN;아직 할 것이 남았다.;;;;;;;;;;;;;x;
+
+
+AMD_EV_TT_LN_STOP_BUY;이 서비스는 본격적인 삽입 행위를 포함하지 않습니다.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_STOP_SELL;이 서비스는 본격적인 삽입 행위를 포함하지 않습니다.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_STOP_STUDY;본격적인 삽입 행위 없이 전희에 집중하여 경험을 쌓습니다.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_STOP_TRAIN;본격적 성행위를 하지 않음으로서 욕망을 부추깁니다.;;;;;;;;;;;;;x;
+
+AMD_EV_TT_LN_NEXT_BUY;이 서비스는 본격적인 삽입 행위를 포함하지 않지만, 추가 과금 앞에 불가능한 건 없습니다.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_NEXT_SELL;오늘 본격적인 성행위는 제공할 생각이 없었지만, 약간의 돈이 당신의 생각을 바꿀 수도 있습니다.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_NEXT_STUDY;여기까지만 연습하려 했지만, 모든 일이 계획대로 되지는 않는 법입니다.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_NEXT_TRAIN;원래 계획은 여기까지지만, 당신이 원한다면 그런 것은 언제든지 뒤집힐 수 있습니다.;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_SOFT;[AMD_CLK_EV_OPT_LN_SOFT];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_1;부드러움이 강함을 이긴다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_2;저 부드러운 남잡니다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_3;천천히, 구석구석 즐긴다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_4;히익!? 거, 거긴 안돼...;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_SOFT;부드럽게 사랑합니다. 인성과 매력, 관계도 등에 따라 성공률이 변동합니다.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_HARD;[AMD_CLK_EV_OPT_LN_HARD];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_1;진짜 [Root.Culture.GetName]의 [Root.GetManWoman]가 사랑하는 법을 보여주겠다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_2;힘 좀 써볼까?;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_3;맛 좀 봐라!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_4;버틸 수가 없다!;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_HARD;격렬하게 교미합니다. 체력과 정력, 신체 조건에 따라 성공률이 변동합니다.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_RAND;사이좋게 지내려면 양보할 줄도 알아야 한다.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_RAND;상대에게 주도권을 넘겨줍니다. 결과는 예측할 수 없습니다.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_OVER;지금부터 전투섹스를 실시한다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_1;내 솜씨를 제대로 보여줄 시간이군!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_2;지금부터 전투섹스를 실시한다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_3;지금부터 전투섹스를 실시한다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_4;응기이이이잇!;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_OVER;무리하게 쾌락을 탐하면 건강을 망칠 수도 있습니다...\n;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_ANAL;[AMD_CLK_EV_OPT_LN_ANAL];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_ANAL_1;착한 아이에겐 뒷문이 어울리지!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_ANAL_4;잠깐, 지금 어딜...응기이이잇!;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_ANAL;착한 아이에게만 열리는 뒷문을 이용합니다.\n;;;;;;;;;;;;;x;
+
+
+
+
+AMD_EV_OPT_LN_IN;[AMD_CLK_EV_OPT_LN_IN];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_TOOLTIP;생명의 씨를 뿌리는 자연스러운 선택입니다.\n;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_0;Fire in the hole!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_10;안에 싼다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_11;(화간) 구멍 안에 쏴!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_12;(구매) 구멍 안에 쏴!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_13;(판매) 구멍 안에 쏴!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_14;(강간) 구멍 안에 쏴!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_15;(피강간) 구멍 안에 쏴!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_20;안에 싸게 한다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_21;(화간) 구멍 안에 쏴!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_22;(구매) 구멍 안에 쏴!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_23;(판매) 안에 싸게 해준다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_24;(강간) 안에 싸게 해준다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_25;(피강간) 질내사정당한다.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_OUT;[AMD_CLK_EV_OPT_LN_OUT];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_TOOLTIP;\n상속 안정성을 위해 사격 위치를 조절합니다. 성공시 임신 가능성이 크게 하락합니다.\n;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_0;잠깐, 지배자에겐 쾌락보다 중요한 것이 있다...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_10;밖에 싼다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_11;(화간) 질외사정;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_12;(구매) 밖에 싼다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_13;(판매) 밖에 싼다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_14;(강간) 밖에 싼다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_15;(피강간) 밖에 싼다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_20;밖에 싸게 한다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_21;(화간) 밖에 싸게 한다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_22;(구매) 밖에 싸게 한다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_23;(판매) 밖에 싸게 한다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_24;(강간) 밖에 싸게 한다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_25;아, 안에는 안돼! 제발 그만둬...;;;;;;;;;;;;;x;
+
+
+AMD_EV_CT_WS;구멍 밖에 발사!;;;;;;;;;;;;;x;
+AMD_EV_CT_WF;버틸 수가 없다!;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_DS;[AMD_CLK_EV_OPT_LN_DS];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DS_0;대량사정;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DS_TOOLTIP;대량으로 사정합니다. 임신 가능성이 크게 상승합니다.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_DRAIN;[AMD_CLK_EV_OPT_LN_DRAIN];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_0;죽기 딱 좋은 날이군!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_1;천국을 보여주마!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_2;당신은 죽을 수도 있습니다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_3;간단하군. 죽어라...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_4;뿅가죽네!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_TOOLTIP;초자연적인 섹스 기술로 상대의 생명력을 흡수합니다. 상대는 죽을 수도 있습니다!\n;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_END;[AMD_CLK_EV_OPT_LN_END];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_C1;별로 즐겁지 않았다...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_C2;좋은 시간을 보냈다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_C3;나는 이것만을 위해 존재합니다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_R1;형편없군.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_R2;그럭저럭 즐거웠다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_R3;이 맛에 산다!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_V1;끔찍한 경험이었다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_V2;이런 건 싫어...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_V3;앗... 아아......;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_B1;돈이 아깝군.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_B2;이 정도면 괜찮아.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_B3;가격 이상의 만족!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_S1;으윽... 이용해 주셔서 감사합니다...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_S2;정직한 일, 정직한 대가.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_S3;재미도 보고 돈도 벌고... 정말 보람찬 일이야!;;;;;;;;;;;;;x;
+
+
+#AMD_EV_OPT_LN_STOP;[AMD_CLK_EV_OPT_LN_STOP];;;;;;;;;;;;;x; 아니 이것들 안쓰는거같은데...
+AMD_EV_OPT_LN_STOP_ST1;시간낭비다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_ST2;즐겁고 유익한 시간이었다.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_ST3;이게 바로 배우는 즐거움이라는 거로군!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_B1;돈이 아깝군.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_B2;이 정도면 괜찮아.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_B3;가격 이상의 만족!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_S1;으윽... 이용해 주셔서 감사합니다...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_S2;정직한 일, 정직한 대가.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_S3;재미도 보고 돈도 벌고... 정말 보람찬 일이야!;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_E_BAD;안 좋다;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_GOOD;좋다;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_OVER;호에에에엥갱장해여어어어;;;;;;;;;;;;;x;
+
+
+

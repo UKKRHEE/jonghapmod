@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bwhy_orgy_coronation"
+		texturefile = "gfx/event_pictures/GFX_bwhy_orgy_coronation.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_DWBY_coronation_female"
+		texturefile = "gfx/event_pictures/GFX_DWBY_coronation_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_DWBY_coronation_male"
+		texturefile = "gfx/event_pictures/GFX_DWBY_coronation_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

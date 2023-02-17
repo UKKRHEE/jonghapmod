@@ -1,0 +1,13 @@
+#character
+on_startup = { #Season starting up
+	events = {
+		elfseasons.99
+	}
+}
+
+on_major_battle_won = { #battle events
+	events = {
+		elfbattle.1
+	}
+	
+}

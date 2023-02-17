@@ -1,0 +1,2635 @@
+#########################
+#                       #
+#   Character Creation  #
+#                       #
+#########################
+
+namespace = alanpc
+
+
+
+
+#### Main Menu
+character_event = {
+	id = alanpc.1
+	desc = EVTDESCAlanpc.1
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Male Dynasty Options
+	option = {
+		name = EVTOPTAAlanpc.1
+		character_event = { id = alanpc.8 }
+	}
+# Female Options
+	option = {
+		name = EVTOPTBAlanpc.1
+		character_event = { id = alanpc.58 }
+	}
+# Exit
+	option = {
+		name = EVTOPTCAlanpc.1
+	}
+}
+
+#########################################################################################
+#########################################################################################
+
+# Male Dynasty Options
+character_event = {
+	id = alanpc.8
+	desc = EVTDESCAlanpc.8
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# My Dynasty
+	option = {
+		name = EVTOPTAAlanpc.8
+		character_event = { id = alanpc.9 }
+	}
+# Random Dynasty?
+	option = {
+		name = EVTOPTBAlanpc.8
+		character_event = { id = alanpc.19 }
+	}
+# No Dynasty (commoner)
+	option = {
+		name = EVTOPTCAlanpc.8
+		character_event = { id = alanpc.29 }
+	}
+# Return to Main Menu
+	option = {
+		name = EVTOPTDAlanpc.8
+		character_event = { id = alanpc.1 }
+	}	
+}
+
+#########################################################################################
+
+# Male Options - My Dynasty
+character_event = {
+	id = alanpc.9
+	desc = EVTDESCAlanpc.9
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Overpowered Male options
+	option = {
+		name = EVTOPTAAlanpc.9
+		character_event = { id = alanpc.10 }
+	}
+# Average Male? (random traits with education choice)
+	option = {
+		name = EVTOPTBAlanpc.9
+		character_event = { id = alanpc.12 }
+	}
+# Entirely Random Male
+	option = {
+		name = EVTOPTCAlanpc.9
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = virgin
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Main Menu
+	option = {
+		name = EVTOPTDAlanpc.9
+		character_event = { id = alanpc.1 }
+	}	
+}
+
+##########################
+
+##	Male OP
+character_event = {
+	id = alanpc.10
+	desc = EVTDESCAlanpc.10
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.10
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 20
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = grey_eminence
+			trait = socializer
+			trait = gamer
+			trait = poet
+			trait = genius
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = gregarious
+			trait = honest
+			trait = trusting
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.10
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 20
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = cavalry_leader
+			trait = defensive_leader
+			trait = desert_terrain_leader
+			trait = experimenter
+			trait = flanker
+			trait = flat_terrain_leader
+			trait = heavy_infantry_leader
+			trait = inspiring_leader
+			trait = jungle_terrain_leader
+			trait = light_foot_leader
+			trait = mountain_terrain_leader
+			trait = organizer
+			trait = rough_terrain_leader
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = war_elephant_leader
+			trait = sapper
+			trait = levy_coordinator
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = brilliant_strategist
+			trait = strategist
+			trait = duelist
+			trait = hunter
+			trait = robust
+			trait = strong
+			trait = genius
+			trait = diligent
+			trait = brave
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.10
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 20
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = midas_touched
+			trait = administrator
+			trait = architect
+			trait = gardener
+			trait = strategist
+			trait = genius
+			trait = temperate
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Next
+	option = {
+		name = EVTOPTDAlanpc.10
+			hidden_tooltip = {
+				character_event = { id = alanpc.11 }
+			}
+	}
+}
+character_event = {
+	id = alanpc.11
+	desc = EVTDESCAlanpc.11
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.11
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				martial = 10
+				learning = 10
+				stewardship = 10
+				intrigue = 20
+				diplomacy = 10
+			}
+			random_traits = no
+			trait = elusive_shadow
+			trait = schemer
+			trait = shrewd
+			trait = genius
+			trait = diligent
+			trait = patient
+			trait = envious
+			trait = content
+			trait = cynical
+			trait = deceitful
+			trait = paranoid
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.11
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 20
+			}
+			random_traits = no
+			trait = mastermind_theologian
+			trait = physician
+			trait = theologian
+			trait = scholar
+			trait = gardener
+			trait = genius
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = just
+			trait = honest
+			trait = erudite
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.11
+		character_event = { id = alanpc.8 }
+	}
+}
+
+##	Male Average Options
+character_event = {
+	id = alanpc.12
+	desc = EVTDESCAlanpc.12
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.12
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = grey_eminence
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.12
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = brilliant_strategist
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.12
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = midas_touched
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+	option = {
+		name = EVTOPTDAlanpc.12
+			hidden_tooltip = {
+				character_event = { id = alanpc.13 }
+			}
+	}
+}
+character_event = {
+	id = alanpc.13
+	desc = EVTDESCAlanpc.13
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.13
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = elusive_shadow
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.13
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = mastermind_theologian
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.13
+		character_event = { id = alanpc.8 }
+	}
+}
+
+########################################################################################
+
+# Male Options - Random Dynasty
+character_event = {
+	id = alanpc.19
+	desc = EVTDESCAlanpc.19
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Overpowered Male options
+	option = {
+		name = EVTOPTAAlanpc.19
+		character_event = { id = alanpc.20 }
+	}
+# Average Male? (random traits with education choice)
+	option = {
+		name = EVTOPTBAlanpc.19
+		character_event = { id = alanpc.22 }
+	}
+# Entirely Random Male
+	option = {
+		name = EVTOPTCAlanpc.19
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = virgin
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTDAlanpc.19
+		character_event = { id = alanpc.8 }
+	}	
+}
+
+##########################
+
+##	Male OP
+character_event = {
+	id = alanpc.20
+	desc = EVTDESCAlanpc.20
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.20
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 20
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = grey_eminence
+			trait = socializer
+			trait = gamer
+			trait = poet
+			trait = genius
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = gregarious
+			trait = honest
+			trait = trusting
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.20
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 20
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = cavalry_leader
+			trait = defensive_leader
+			trait = desert_terrain_leader
+			trait = experimenter
+			trait = flanker
+			trait = flat_terrain_leader
+			trait = heavy_infantry_leader
+			trait = inspiring_leader
+			trait = jungle_terrain_leader
+			trait = light_foot_leader
+			trait = mountain_terrain_leader
+			trait = organizer
+			trait = rough_terrain_leader
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = war_elephant_leader
+			trait = sapper
+			trait = levy_coordinator
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = brilliant_strategist
+			trait = strategist
+			trait = duelist
+			trait = hunter
+			trait = robust
+			trait = strong
+			trait = genius
+			trait = diligent
+			trait = brave
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.20
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 20
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = midas_touched
+			trait = administrator
+			trait = architect
+			trait = gardener
+			trait = strategist
+			trait = genius
+			trait = temperate
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+	option = {
+		name = EVTOPTDAlanpc.20
+			hidden_tooltip = {
+				character_event = { id = alanpc.21 }
+			}
+	}
+}
+character_event = {
+	id = alanpc.21
+	desc = EVTDESCAlanpc.21
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.21
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				martial = 10
+				learning = 10
+				stewardship = 10
+				intrigue = 20
+				diplomacy = 10
+			}
+			random_traits = no
+			trait = elusive_shadow
+			trait = schemer
+			trait = shrewd
+			trait = genius
+			trait = diligent
+			trait = patient
+			trait = envious
+			trait = content
+			trait = cynical
+			trait = deceitful
+			trait = paranoid
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.21
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 20
+			}
+			random_traits = no
+			trait = mastermind_theologian
+			trait = physician
+			trait = theologian
+			trait = scholar
+			trait = gardener
+			trait = genius
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = just
+			trait = honest
+			trait = erudite
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.21
+		character_event = { id = alanpc.8 }
+	}
+}
+
+##	Male Average Options
+character_event = {
+	id = alanpc.22
+	desc = EVTDESCAlanpc.22
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.22
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = grey_eminence
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.22
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = brilliant_strategist
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.22
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = midas_touched
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Next
+	option = {
+		name = EVTOPTDAlanpc.22
+		character_event = { id = alanpc.23 }
+	}
+}
+character_event = {
+	id = alanpc.23
+	desc = EVTDESCAlanpc.23
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.23
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = elusive_shadow
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.23
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = mastermind_theologian
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.23
+		character_event = { id = alanpc.8 }
+	}
+}
+
+
+
+########################################################################################
+
+# Male Options - No Dynasty
+character_event = {
+	id = alanpc.29
+	desc = EVTDESCAlanpc.29
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Overpowered Male options
+	option = {
+		name = EVTOPTAAlanpc.29
+		character_event = { id = alanpc.30 }
+	}
+# Average Male? (random traits with education choice)
+	option = {
+		name = EVTOPTBAlanpc.29
+		character_event = { id = alanpc.32 }
+	}
+# Entirely Random Male
+	option = {
+		name = EVTOPTCAlanpc.29
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = virgin
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTDAlanpc.29
+		character_event = { id = alanpc.8 }
+	}	
+}
+
+##########################
+
+##	Male OP
+character_event = {
+	id = alanpc.30
+	desc = EVTDESCAlanpc.30
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.30
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 20
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = grey_eminence
+			trait = socializer
+			trait = gamer
+			trait = poet
+			trait = genius
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = gregarious
+			trait = honest
+			trait = trusting
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.30
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 20
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = cavalry_leader
+			trait = defensive_leader
+			trait = desert_terrain_leader
+			trait = experimenter
+			trait = flanker
+			trait = flat_terrain_leader
+			trait = heavy_infantry_leader
+			trait = inspiring_leader
+			trait = jungle_terrain_leader
+			trait = light_foot_leader
+			trait = mountain_terrain_leader
+			trait = organizer
+			trait = rough_terrain_leader
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = war_elephant_leader
+			trait = sapper
+			trait = levy_coordinator
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = brilliant_strategist
+			trait = strategist
+			trait = duelist
+			trait = hunter
+			trait = robust
+			trait = strong
+			trait = genius
+			trait = diligent
+			trait = brave
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.30
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 20
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = midas_touched
+			trait = administrator
+			trait = architect
+			trait = gardener
+			trait = strategist
+			trait = genius
+			trait = temperate
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Next
+	option = {
+		name = EVTOPTDAlanpc.30
+		character_event = { id = alanpc.31 }
+	}
+}
+character_event = {
+	id = alanpc.31
+	desc = EVTDESCAlanpc.31
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.31
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				martial = 10
+				learning = 10
+				stewardship = 10
+				intrigue = 20
+				diplomacy = 10
+			}
+			random_traits = no
+			trait = elusive_shadow
+			trait = schemer
+			trait = shrewd
+			trait = genius
+			trait = diligent
+			trait = patient
+			trait = envious
+			trait = content
+			trait = cynical
+			trait = deceitful
+			trait = paranoid
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.31
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 20
+			}
+			random_traits = no
+			trait = mastermind_theologian
+			trait = physician
+			trait = theologian
+			trait = scholar
+			trait = gardener
+			trait = genius
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = just
+			trait = honest
+			trait = erudite
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.31
+		character_event = { id = alanpc.8 }
+	}
+}
+
+##	Male Average Options
+character_event = {
+	id = alanpc.32
+	desc = EVTDESCAlanpc.32
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.32
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = grey_eminence
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.32
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = brilliant_strategist
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.32
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = midas_touched
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+	option = {
+		name = EVTOPTDAlanpc.32
+		character_event = { id = alanpc.33 }
+	}
+}
+character_event = {
+	id = alanpc.33
+	desc = EVTDESCAlanpc.33
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.33
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = elusive_shadow
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.33
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = no
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = mastermind_theologian
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Male Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.33
+		character_event = { id = alanpc.8 }
+	}
+}
+
+
+
+########################################################################################
+########################################################################################
+
+# Female Dynasty Options
+character_event = {
+	id = alanpc.58
+	desc = EVTDESCAlanpc.58
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# My Dynasty
+	option = {
+		name = EVTOPTAAlanpc.58
+		character_event = { id = alanpc.59 }
+	}
+# Random Dynasty?
+	option = {
+		name = EVTOPTBAlanpc.58
+		character_event = { id = alanpc.69 }
+	}
+# No Dynasty (commoner)
+	option = {
+		name = EVTOPTCAlanpc.58
+		character_event = { id = alanpc.79 }
+	}
+# Return to Main Menu
+	option = {
+		name = EVTOPTDAlanpc.58
+		character_event = { id = alanpc.1 }
+	}	
+}
+
+#########################################################################################
+
+# Female Options - My Dynasty
+character_event = {
+	id = alanpc.59
+	desc = EVTDESCAlanpc.59
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Overpowered Female options
+	option = {
+		name = EVTOPTAAlanpc.59
+		character_event = { id = alanpc.60 }
+	}
+# Average Female? (random traits with education choice)
+	option = {
+		name = EVTOPTBAlanpc.59
+		character_event = { id = alanpc.62 }
+	}
+# Entirely Random Female
+	option = {
+		name = EVTOPTCAlanpc.59
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = virgin
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTDAlanpc.59
+		character_event = { id = alanpc.58 }
+	}	
+}
+
+##########################
+
+##	Female OP
+character_event = {
+	id = alanpc.60
+	desc = EVTDESCAlanpc.60
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.60
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 20
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = grey_eminence
+			trait = socializer
+			trait = gamer
+			trait = poet
+			trait = genius
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = gregarious
+			trait = honest
+			trait = trusting
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 7 }
+			set_variable = { which = dick_size value = 6 }
+			set_character_flag = special_chancellor
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.60
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 20
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = cavalry_leader
+			trait = defensive_leader
+			trait = desert_terrain_leader
+			trait = experimenter
+			trait = flanker
+			trait = flat_terrain_leader
+			trait = heavy_infantry_leader
+			trait = inspiring_leader
+			trait = jungle_terrain_leader
+			trait = light_foot_leader
+			trait = mountain_terrain_leader
+			trait = organizer
+			trait = rough_terrain_leader
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = war_elephant_leader
+			trait = sapper
+			trait = levy_coordinator
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = brilliant_strategist
+			trait = strategist
+			trait = duelist
+			trait = hunter
+			trait = robust
+			trait = strong
+			trait = genius
+			trait = diligent
+			trait = brave
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 4 }
+			set_variable = { which = dick_size value = 7 }
+			set_character_flag = special_marshal
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.60
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 20
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = midas_touched
+			trait = administrator
+			trait = architect
+			trait = gardener
+			trait = strategist
+			trait = genius
+			trait = temperate
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 7 }
+			set_variable = { which = dick_size value = 6 }
+			set_character_flag = special_treasurer
+		}
+	}
+	option = {
+		name = EVTOPTDAlanpc.60
+		character_event = { id = alanpc.61 }
+	}
+}
+character_event = {
+	id = alanpc.61
+	desc = EVTDESCAlanpc.61
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.61
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				martial = 10
+				learning = 10
+				stewardship = 10
+				intrigue = 20
+				diplomacy = 10
+			}
+			random_traits = no
+			trait = elusive_shadow
+			trait = schemer
+			trait = shrewd
+			trait = genius
+			trait = diligent
+			trait = patient
+			trait = envious
+			trait = content
+			trait = cynical
+			trait = deceitful
+			trait = paranoid
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+			set_character_flag = special_spymaster
+		}
+	}
+
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.61
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 20
+			}
+			random_traits = no
+			trait = mastermind_theologian
+			trait = physician
+			trait = theologian
+			trait = scholar
+			trait = gardener
+			trait = genius
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = just
+			trait = honest
+			trait = erudite
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 7 }
+			set_variable = { which = dick_size value = 3 }
+			set_character_flag = special_spiritual
+		}
+	}
+
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.61
+		character_event = { id = alanpc.58 }
+	}
+
+}
+
+##	Female Average Options
+character_event = {
+	id = alanpc.62
+	desc = EVTDESCAlanpc.62
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.62
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = grey_eminence
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.62
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = brilliant_strategist
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.62
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = midas_touched
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Next
+	option = {
+		name = EVTOPTDAlanpc.62
+			hidden_tooltip = {
+				character_event = { id = alanpc.63 }
+			}
+	}
+}
+character_event = {
+	id = alanpc.63
+	desc = EVTDESCAlanpc.63
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.63
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = elusive_shadow
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.63
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = mastermind_theologian
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.63
+		character_event = { id = alanpc.58 }
+	}
+}
+
+########################################################################################
+
+# Female Options - Random Dynasty
+character_event = {
+	id = alanpc.69
+	desc = EVTDESCAlanpc.69
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Overpowered Female options
+	option = {
+		name = EVTOPTAAlanpc.69
+		character_event = { id = alanpc.70 }
+	}
+# Average Female? (random traits with education choice)
+	option = {
+		name = EVTOPTBAlanpc.69
+		character_event = { id = alanpc.72 }
+	}
+# Entirely Random Female
+	option = {
+		name = EVTOPTCAlanpc.69
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = virgin
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTDAlanpc.69
+		character_event = { id = alanpc.8 }
+	}	
+}
+
+##########################
+
+##	Female OP
+character_event = {
+	id = alanpc.70
+	desc = EVTDESCAlanpc.70
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.70
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 20
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = grey_eminence
+			trait = socializer
+			trait = gamer
+			trait = poet
+			trait = genius
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = gregarious
+			trait = honest
+			trait = trusting
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.70
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 20
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = cavalry_leader
+			trait = defensive_leader
+			trait = desert_terrain_leader
+			trait = experimenter
+			trait = flanker
+			trait = flat_terrain_leader
+			trait = heavy_infantry_leader
+			trait = inspiring_leader
+			trait = jungle_terrain_leader
+			trait = light_foot_leader
+			trait = mountain_terrain_leader
+			trait = organizer
+			trait = rough_terrain_leader
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = war_elephant_leader
+			trait = sapper
+			trait = levy_coordinator
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = brilliant_strategist
+			trait = strategist
+			trait = duelist
+			trait = hunter
+			trait = robust
+			trait = strong
+			trait = genius
+			trait = diligent
+			trait = brave
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.70
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 20
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = midas_touched
+			trait = administrator
+			trait = architect
+			trait = gardener
+			trait = strategist
+			trait = genius
+			trait = temperate
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+	option = {
+		name = EVTOPTDAlanpc.70
+		character_event = { id = alanpc.71 }
+	}
+}
+character_event = {
+	id = alanpc.71
+	desc = EVTDESCAlanpc.71
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.71
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				martial = 10
+				learning = 10
+				stewardship = 10
+				intrigue = 20
+				diplomacy = 10
+			}
+			random_traits = no
+			trait = elusive_shadow
+			trait = schemer
+			trait = shrewd
+			trait = genius
+			trait = diligent
+			trait = patient
+			trait = envious
+			trait = content
+			trait = cynical
+			trait = deceitful
+			trait = paranoid
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.71
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 20
+			}
+			random_traits = no
+			trait = mastermind_theologian
+			trait = physician
+			trait = theologian
+			trait = scholar
+			trait = gardener
+			trait = genius
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = just
+			trait = honest
+			trait = erudite
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.71
+		character_event = { id = alanpc.8 }
+	}
+}
+
+##	Female Average Options
+character_event = {
+	id = alanpc.72
+	desc = EVTDESCAlanpc.72
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.72
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = grey_eminence
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.72
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = brilliant_strategist
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.72
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = midas_touched
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Next
+	option = {
+		name = EVTOPTDAlanpc.72
+		character_event = { id = alanpc.73 }
+	}
+}
+character_event = {
+	id = alanpc.73
+	desc = EVTDESCAlanpc.73
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.73
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = elusive_shadow
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.73
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = mastermind_theologian
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.73
+		character_event = { id = alanpc.8 }
+	}
+}
+
+
+
+########################################################################################
+
+# Female Options - No Dynasty
+character_event = {
+	id = alanpc.79
+	desc = EVTDESCAlanpc.79
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Overpowered Female options
+	option = {
+		name = EVTOPTAAlanpc.79
+		character_event = { id = alanpc.80 }
+	}
+# Average Female? (random traits with education choice)
+	option = {
+		name = EVTOPTBAlanpc.79
+		character_event = { id = alanpc.82 }
+	}
+# Entirely Random Female
+	option = {
+		name = EVTOPTCAlanpc.79
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = father_bastard
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = virgin
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTDAlanpc.79
+		character_event = { id = alanpc.8 }
+	}	
+}
+
+##########################
+
+##	Female OP
+character_event = {
+	id = alanpc.80
+	desc = EVTDESCAlanpc.80
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.80
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 20
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = grey_eminence
+			trait = socializer
+			trait = gamer
+			trait = poet
+			trait = genius
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = gregarious
+			trait = honest
+			trait = trusting
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.80
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 20
+				stewardship = 10
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = aggressive_leader
+			trait = narrow_flank_leader
+			trait = cavalry_leader
+			trait = defensive_leader
+			trait = desert_terrain_leader
+			trait = experimenter
+			trait = flanker
+			trait = flat_terrain_leader
+			trait = heavy_infantry_leader
+			trait = inspiring_leader
+			trait = jungle_terrain_leader
+			trait = light_foot_leader
+			trait = mountain_terrain_leader
+			trait = organizer
+			trait = rough_terrain_leader
+			trait = siege_leader
+			trait = trickster
+			trait = unyielding_leader
+			trait = winter_soldier
+			trait = war_elephant_leader
+			trait = sapper
+			trait = levy_coordinator
+			trait = logistics_expert
+			trait = master_of_flame
+			trait = brilliant_strategist
+			trait = strategist
+			trait = duelist
+			trait = hunter
+			trait = robust
+			trait = strong
+			trait = genius
+			trait = diligent
+			trait = brave
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.80
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 20
+				intrigue = 10
+				learning = 10
+			}
+			random_traits = no
+			trait = midas_touched
+			trait = administrator
+			trait = architect
+			trait = gardener
+			trait = strategist
+			trait = genius
+			trait = temperate
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Next
+	option = {
+		name = EVTOPTDAlanpc.80
+		character_event = { id = alanpc.81 }
+	}
+}
+character_event = {
+	id = alanpc.81
+	desc = EVTDESCAlanpc.81
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.81
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				martial = 10
+				learning = 10
+				stewardship = 10
+				intrigue = 20
+				diplomacy = 10
+			}
+			random_traits = no
+			trait = elusive_shadow
+			trait = schemer
+			trait = shrewd
+			trait = genius
+			trait = diligent
+			trait = patient
+			trait = envious
+			trait = content
+			trait = cynical
+			trait = deceitful
+			trait = paranoid
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.81
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			attributes = {
+				diplomacy = 10
+				martial = 10
+				stewardship = 10
+				intrigue = 10
+				learning = 20
+			}
+			random_traits = no
+			trait = mastermind_theologian
+			trait = physician
+			trait = theologian
+			trait = scholar
+			trait = gardener
+			trait = genius
+			trait = chaste
+			trait = temperate
+			trait = charitable
+			trait = diligent
+			trait = patient
+			trait = kind
+			trait = humble
+			trait = just
+			trait = honest
+			trait = erudite
+			trait = content
+			trait = fair
+			trait = twin
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			set_variable = { which = breast_size value = 6 }
+			set_variable = { which = dick_size value = 6 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.81
+		character_event = { id = alanpc.8 }
+	}
+}
+
+##	Female Average Options
+character_event = {
+	id = alanpc.82
+	desc = EVTDESCAlanpc.82
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Diplomacy
+	option = {
+		name = EVTOPTAAlanpc.82
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = grey_eminence
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Martial
+	option = {
+		name = EVTOPTBAlanpc.82
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = brilliant_strategist
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Stewardship
+	option = {
+		name = EVTOPTCAlanpc.82
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = midas_touched
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+	option = {
+		name = EVTOPTDAlanpc.82
+		character_event = { id = alanpc.83 }
+	}
+}
+character_event = {
+	id = alanpc.83
+	desc = EVTDESCAlanpc.83
+	picture = GFX_ala_menu
+	is_triggered_only = yes
+
+# Intrigue
+	option = {
+		name = EVTOPTAAlanpc.83
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = elusive_shadow
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Learning
+	option = {
+		name = EVTOPTBAlanpc.83
+		create_character = {
+			age = 16
+			health = 5.1
+			fertility = 0.5
+			female = yes
+			dynasty = NONE
+			culture = ROOT
+			religion = ROOT
+			random_traits = yes
+			trait = mastermind_theologian
+			trait = virgin				#	DWR
+		}
+		new_character = {
+			character_event = { id = DWCore.19 }
+		}
+	}
+# Return to Female Dynasty Menu
+	option = {
+		name = EVTOPTCAlanpc.83
+		character_event = { id = alanpc.8 }
+	}
+}
+
+

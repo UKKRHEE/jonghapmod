@@ -1,0 +1,87 @@
+namespace = DWTweaksRedSonja
+
+# Player learns of Red Sonja
+narrative_event = {
+	id = DWTweaksRedSonja.1
+	desc = DWTweaksRedSonja1
+	picture = arena_bookie
+	title = dw_arena_stable
+	is_triggered_only = yes # triggered by .7100
+	option = { # Take me to see her
+		name = "DWTweaksRedSonja1T"
+		narrative_event = { id = DWTweaksRedSonja.2 }
+	}
+	option = { # I'm not interested
+		name = "DWCourt7104B"
+	}
+}
+# Player decides about taking Red Sonja
+narrative_event = {
+	id = DWTweaksRedSonja.2
+	desc = DWTweaksRedSonja2
+	picture = GFX_red_sonja
+	title = dw_arena_stable
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+			random_traits = no
+			dynasty = none
+			name = "Red Sonja"
+			female = yes
+			age = 26
+			health = 6.0
+			religion = pagan
+			culture = ROOT
+			race = norse
+			trait = brilliant_strategist
+			trait = strong
+			trait = robust
+			trait = duelist
+			trait = brave
+			trait = celibate # Her fighting ability comes at a cost
+			trait = patient
+			trait = virgin # Her fighting ability comes at a cost
+			trait = diligent
+			trait = shieldmaiden
+			trait = gladiator
+			trait = big_tits
+			attributes = {
+				diplomacy = 4
+				intrigue = 5
+				stewardship = 4
+				martial = 10
+				learning = 4
+			}
+		}
+		new_character = {
+			add_trait = dwtw_others3 # Red Sonja's portrait
+			set_character_flag = dw_boobs_checked
+			add_character_modifier = { # Will reject any seduction attempts
+				name = dismissed_proposal
+				duration = -1
+			}
+			set_variable = { which = breast_size value = 4 }
+			set_character_flag = dw_npc_redsonja
+			save_event_target_as = dw_gladiator_recruit
+			set_global_flag = dw_npc_redsonja_created # Only one Sonja per game
+		}
+	}
+	option = { # I shall pay her debt - at a discount
+		trigger = {
+			stewardship = 10
+		}
+		name = "DWTweaksRedSonja2T1"
+		tooltip_info = stewardship
+		wealth = -10
+	}
+	option = { # I shall pay her full debt
+		name = "DWTweaksRedSonja2T2"
+		wealth = -25
+	}
+	option = { # Get rid of her
+		name = "DWTweaksRedSonja2T3"
+		event_target:dw_gladiator_recruit = {
+			banish = yes
+		}
+	}
+}

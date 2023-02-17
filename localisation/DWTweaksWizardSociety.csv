@@ -1,0 +1,87 @@
+dwtw_wizards_summon_familiar;Summon Familiar;;;;;;;;;;;;;x
+dwtw_wizards_summon_familiar_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can summon a familiar of [From.GetHerHis] choice. This supernatural guardian will grant §Y[From.GetTitledFirstName]§! its powers by increasing [From.GetHerHis] attributes.;;;;;;;;;;;;;x
+dwtw_wizards_summon_familiar_power_desc;Enables §Gright-clicking§! on your character's portrait to Summon a Familiar, in exchange for §Y[Root.Society.GetCurrency]§!.;;;;;;;;;;;;;x
+
+dwtw_wizards_spell_of_body_enslavement;Bodily Enslavement;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_body_enslavement_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to enslave any courtier in [From.GetHerHis] own realm who has negative opinion of [From.GetHerHim]. This will make them a branded slave and a whore.;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_body_enslavement_power_desc;Enables §Gright-clicking§! on a courtier's portrait to attempt to enslave them, in exchange for §Y[Root.Society.GetCurrency]§!. Works only on courtiers in the same realm.;;;;;;;;;;;;;x
+
+dwtw_wizards_spell_of_heart_enslavement;Heart Enslavement;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_heart_enslavement_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to enslave the mind of any courtier or vassal in [From.GetHerHis] own realm who has positive opinion of [From.GetHerHim]. This will make them a lover... and potentially a parent.;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_heart_enslavement_power_desc;Enables §Gright-clicking§! on a courtier's portrait to attempt to enslave their mind, in exchange for §Y[Root.Society.GetCurrency]§!. Works only on courtiers and vassals in the same realm.;;;;;;;;;;;;;x
+
+dwtw_wizards_spell_of_fireball;Fireball;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_fireball_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to incinerate any courtier in [From.GetHerHis] own realm who has negative opinion of [From.GetHerHim] or is a rival. This will fry them to a crisp, but the aiming is a bit off.;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_fireball_power_desc;Enables §Gright-clicking§! on a courtier's portrait to attempt to incinerate them, in exchange for §Y[Root.Society.GetCurrency]§!. Works only on courtiers in the same realm.;;;;;;;;;;;;;x
+
+dwtw_wizards_spell_of_flamestrike;Flamestrike;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_flamestrike_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to incinerate any independent ruler's holder. This will destroy a random building in their demesne, but the aiming is a bit off.;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_flamestrike_power_desc;Enables §Gright-clicking§! on a ruler's portrait to attempt to incinerate their holding, in exchange for §Y[Root.Society.GetCurrency]§!. Works only on independent rulers.;;;;;;;;;;;;;x
+
+dwtw_wizards_buy_spellbook;Buy a Spellbook;;;;;;;;;;;;;x
+dwtw_wizards_buy_spellbook_desc;Every good mage needs a book of spells. Without a spellbook, you will be unable to cast any spells. Thankfully, your society has a wide variety of them to sell. The fancier the book, the better spells it can hold.;;;;;;;;;;;;;x
+dwtw_wizards_buy_spellbook_power_desc;Enables the buying of a spellbook, the required item needed to cast the various spells learned from the society.;;;;;;;;;;;;;x
+
+dwtw_wizards_acquire_ingredients_decision;Acquire Ingredients;Se procurer des ingr?dients;Zutaten erwerben;;Adquirir ingredientes;;;;;;;;;x
+dwtw_wizards_acquire_ingredients_decision_desc;Your apprentice will accompany you on a trip to gather rare ingredients for your alchemical inventory.;Votre apprenti vous accompagnera en voyage pour rassembler des ingr?dients rares destin?s ? votre stock alchimique.;Euer Lehrling wird Euch bei einer Reise begleiten, um seltene Zutaten f?r Euer alchemistisches Inventar zu sammeln.;;Tu aprendiz te acompa?ar? en un viaje para reunir ingredientes poco comunes para tu inventario alqu?mico.;;;;;;;;;x
+dwtw_wizards_acquire_ingredients_decision_power_desc;Enables a decision in the Intrigue menu to allow you and your apprentice to gather rare reagents for spells.;;;;;;;;;;;;;x
+
+DWTweaksWizard2T;Spell of Bodily Enslavement;;;;;;;;;;;;;x
+DWTweaksWizard2;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+DWTweaksWizard2TT;Let the chains bind!;;;;;;;;;;;;;x
+DWTweaksWizard2TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
+DWTweaksWizard2TTFail;The spell backfires!;;;;;;;;;;;;;x
+
+DWTweaksWizard3T;Spell of Heart Enslavement;;;;;;;;;;;;;x
+DWTweaksWizard3;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+DWTweaksWizard3TT;Let [spell_target.GetHerHis] heart be mine!;;;;;;;;;;;;;x
+DWTweaksWizard3TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
+DWTweaksWizard3TTFail;The spell works only for tonight.;;;;;;;;;;;;;x
+
+DWTweaksWizard4T;Spell of Fireball;;;;;;;;;;;;;x
+DWTweaksWizard4;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+DWTweaksWizard4TT;Let [spell_target.GetHerHis] body burn!;;;;;;;;;;;;;x
+DWTweaksWizard4TTMissed;The spell misses the target.;;;;;;;;;;;;;x
+DWTweaksWizard4TTFail;The spell misses the target, but hits someone else...;;;;;;;;;;;;;x
+DWTweaksWizard4TTKilled;The spell hits the target!;;;;;;;;;;;;;x
+
+DWTweaksWizard5T;Spell of Flamestrike;;;;;;;;;;;;;x
+DWTweaksWizard5;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+DWTweaksWizard5TT;Let [spell_target.GetHerHis] domain burn!;;;;;;;;;;;;;x
+DWTweaksWizard5TTFail;The spell misses the target.;;;;;;;;;;;;;x
+DWTweaksWizard5TTDestroyed;The spell burns down a building!;;;;;;;;;;;;;x
+
+DWTweaksWizard6T;Shopping;;;;;;;;;;;;;x
+DWTweaksWizard6;The society library has quite a few blank spellbooks for sale. Some are more expensive than others.\n\nBasic spellbook - 75 gold\nOrnate spellbook - 150 gold\nOpulent spellbook - 300 gold;;;;;;;;;;;;;x
+DWTweaksWizard6TTBasic;This plain book is sufficient.;;;;;;;;;;;;;x
+DWTweaksWizard6TTGood;This ornate book will suit me nicely.;;;;;;;;;;;;;x
+DWTweaksWizard6TTBest;This opulent book is worth the price!;;;;;;;;;;;;;x
+DWTweaksWizard6TTBasicTT;Buy a basic spellbook. This will hold only the most basic of spells.;;;;;;;;;;;;;x
+DWTweaksWizard6TTGoodTT;Buy an ornate spellbook. This will hold grander spells.;;;;;;;;;;;;;x
+DWTweaksWizard6TTBestTT;Buy an opulent spellbook. This will hold any spell you desire.;;;;;;;;;;;;;x
+DWTweaksWizard6TTNevermind;Nevermind;;;;;;;;;;;;;x
+
+dwtw_basic_spellbook;Basic Spellbook;;;;;;;;;;;;;x
+dwtw_basic_spellbook_desc;Owner of a small book of spells.;;;;;;;;;;;;;x
+dwtw_good_spellbook;Ornate Spellbook;;;;;;;;;;;;;x
+dwtw_good_spellbook_desc;Owner of a large book of spells.;;;;;;;;;;;;;x
+dwtw_best_spellbook;Opulent Spellbook;;;;;;;;;;;;;x
+dwtw_best_spellbook_desc;Owner of an enchanted book of spells.;;;;;;;;;;;;;x
+
+dw_the_wizards_write_arcane_theory;Write an Arcane Theory Discovery.\n;;;;;;;;;;;;;x
+dw_the_wizards_write_arcane_theory_desc;Transcend the understanding of the Arcane by crafting a discovery tome of Arcane Theory.\n;;;;;;;;;;;;;x
+dw_the_wizards_write_arcane_theory_power_desc;Enables a decision from the Intrigue menu to write your finest work.;;;;;;;;;;;;;x
+
+dw_the_wizards_mage_trait_choice;Choose Mage Focus;;;;;;;;;;;;;x
+dw_the_wizards_mage_trait_choice_desc;Further your arcane training by picking a school of specialization.;;;;;;;;;;;;;x
+dw_the_wizards_mage_trait_choice_power_desc;Enables §Gright-clicking§! on a your portrait to choose your arcane specialization, in exchange for §Y[Root.Society.GetCurrency]§!.;;;;;;;;;;;;;x
+
+DWTweaksWizard7T;Spousal Enslavement;;;;;;;;;;;;;x
+DWTweaksWizard7;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+DWTweaksWizard7TT;Let [spell_target.GetHerHim] falsely trust me!;;;;;;;;;;;;;x
+DWTweaksWizard7TTFail;The spell fails.;;;;;;;;;;;;;x
+DWTweaksWizard7TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
+
+dwtw_wizards_spell_of_trusting;Spousal Enslavement;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_trusting_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to make a spouse falsely trust them.;;;;;;;;;;;;;x
+dwtw_wizards_spell_of_trusting_power_desc;Enables §Gright-clicking§! on a spouses's portrait to attempt to make them more trusting, in exchange for §Y[Root.Society.GetCurrency]§!. Works only on spouses in the same realm.;;;;;;;;;;;;;x

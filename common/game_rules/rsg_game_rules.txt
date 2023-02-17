@@ -1,5 +1,0 @@
-﻿rsg_funny = {
-	default = rsg_funny_disabled
-	rsg_funny_disabled = {}
-	rsg_funny_enabled = {}
-}

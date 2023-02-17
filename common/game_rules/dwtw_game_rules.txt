@@ -1,0 +1,19 @@
+dw_racial_seeding = {
+	name = "dw_seeding" 
+	group = "RULE_GROUP_DW"
+	option = {
+		name = dw_seeding_off
+		text = "dw_seeding_off"
+		desc = "dw_seeding_off_desc"
+	}
+	option = {
+		name = dw_seeding_on
+		text = "dw_seeding_on"
+		desc = "dw_seeding_on_desc"
+	}
+	option = {
+		name = dw_seeding_full
+		text = "dw_seeding_full"
+		desc = "dw_seeding_full_desc"
+	}	
+}

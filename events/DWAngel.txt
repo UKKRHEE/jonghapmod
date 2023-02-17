@@ -1,0 +1,87 @@
+### This file contains events specific to the Angel portion of the Dark World mod
+
+namespace = DWAngel
+
+# .10 Divine Inspiration
+narrative_event = {
+	id = DWAngel.10
+	picture = a_placeholder
+	is_triggered_only = yes # Triggered by Decision
+	title = dw_angel_start_title	
+	trigger = {
+		has_heaven_hell_content = yes # Content check
+	}
+	desc = { # Female specific
+		trigger = { 
+			is_female = yes
+		}
+		text = DWAngel10
+		picture = angel_start1
+	}
+	desc = { # Male specific
+		trigger = {
+			is_female = no
+		}
+		text = DWAngel10
+		picture = angel_start2
+	}
+	option = { # My will is his will
+		name = DWAngel10A
+		add_trait = angel
+		hidden_tooltip = {
+			add_random_angel_portrait = yes
+		}
+	}
+	option = { # My will is his will
+		name = DWAngel10B
+		add_trait = angel
+		hidden_tooltip = {
+			add_random_angel_portrait = yes
+		}
+		custom_tooltip = {
+			text = DWAllRealmCharacters
+		}
+		hidden_tooltip = {
+			character_event = { id = DWAngel.11 }
+		}
+	}	
+}
+
+character_event = {
+	id = DWAngel.11
+	hide_window = yes
+	is_triggered_only = yes # Triggered by Decision
+	immediate = {
+		any_realm_character = {
+			limit = {
+				any_liege = { character = ROOT }
+			}
+			character_event = { id = DWSeeding.2 }
+		}
+	}
+}
+
+character_event = { # Adds an angelic portrait on adulthood
+	id = DWAngel.12
+	is_triggered_only = yes  
+	hide_window = yes 
+	trigger = {
+		trait = angel
+		NOR = {
+			trait = tentacle
+			trait = orc
+			trait = elf
+			trait = neko
+			trait = kitsune
+			trait = werewolf
+			trait = fairy
+			trait = dragon_adult
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+		}
+	}
+	immediate = {
+		add_random_angel_portrait = yes
+	}
+}

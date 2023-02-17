@@ -1,8 +1,0 @@
-﻿l_simp_chinese:
- carnd_doctrine_lust_name: "性开放度"
- carnd_doctrine_lust_shunned_name: "压制性爱"
- carnd_doctrine_lust_shunned_desc: "肉体的欲望是最原始和最基本的冲动。要想真正有道德，我们首先要清除这些不纯的思想。"
- carnd_doctrine_lust_accepted_name: "自然欲望"
- carnd_doctrine_lust_accepted_desc: "人类的彼此渴望是事物自然秩序的一部分。不管是好是坏，我们的性欲是我们的一部分。"
- carnd_doctrine_lust_exalted_name: "$tenet_carnal_exaltation_name$"
- carnd_doctrine_lust_exalted_desc: "$tenet_carnal_exaltation_desc$"

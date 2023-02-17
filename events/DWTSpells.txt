@@ -1,0 +1,234 @@
+### Event file for Dark World Toska Spells
+## Succubus Spells .1 - .1000
+# .60 Summon Tentacle Beast
+# .80 Succubus Summoning Ritual
+namespace = DWTSpells
+### Begin Succubus Spells
+
+# .60 Succubus Summon Tentacle Beast spell on target - caster bounce(caster - hidden)
+character_event = {
+	id = DWTSpells.60
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = { character_event = { id = DWTSpells.61 }} # Target bounce and event check
+	}
+}
+# .61 Target bounce and event determination (target - hidden)
+character_event = {
+	id = DWTSpells.61
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { #If target is a martially competent female, she may fight back too well and be killed instead
+				is_female = yes
+				martial = 10
+			}
+			random_list = {
+				10 = { # Was killed by the beast
+					FROM = { narrative_event = { id = DWTSpells.69 days = 1 }} #Caster learns of the death
+				}
+				12 = { # Was injured, yet managed to drive it off
+					FROM = { narrative_event = { id = DWTSpells.67 days = 1 }} # Caster dreams the results
+				}
+				50 = { # Fought, yet failed and still got raped
+					FROM = { narrative_event = { id = DWTSpells.65 days = 1 }} # Caster dreams the results
+				}
+			}
+			break = yes
+		}
+		if = { #If the target was a man, we let the player know the results
+			limit = {
+				is_female = no
+			}
+			FROM = { narrative_event = { id = DWTSpells.71 days = 1 }} # Caster dreams the results
+			break = yes
+		}
+		FROM = { narrative_event = { id = DWTSpells.63 days = 1 }} # If we reach here, it should be for females who didn't fight. Caster dreams the results.
+	}
+}
+# .63 Caster dreams of the event, target raped (caster)
+narrative_event = {
+	id = DWTSpells.63
+	desc = "DWTSpells63"
+	picture = DWLilith_SpellTentacleFemaleRape
+	title = dw_spell_tentaclebeast_femalerape
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTSpells63A"
+		piety = -150 #Casting Cost
+		FROM = {
+			add_trait = victim
+			add_character_modifier = { name = dw_rape_trauma duration = 360 }
+			if = {
+				limit = {
+					is_pregnant = no
+					fertility = 0.1
+				}
+				impregnate = yes
+				add_character_modifier = { name = dw_tentacle_pregnancy duration = -1 }
+				add_trait = tentacle
+			}
+			if = {
+				limit = {
+					trait = virgin
+				}
+				remove_trait = virgin
+			}
+		}
+	}
+}
+# .65 Caster dreams of the event, target fights back, fails and raped (caster)
+narrative_event = {
+	id = DWTSpells.65
+	desc = "DWTSpells65"
+	picture = DWLilith_SpellTentacleFemaleFight
+	title = dw_spell_tentaclebeast_femalefight
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTSpells65A"
+		piety = -150 #Casting Cost
+		FROM = {
+			add_trait = victim
+			add_character_modifier = { name = dw_rape_trauma duration = 360 }
+			random = {
+				chance = 50
+				add_trait = wounded
+			}
+			random = {
+				chance = 5
+				if = {
+					limit = {
+						is_pregnant = no
+						fertility = 0.1
+					}
+					impregnate = yes
+					add_character_modifier = { name = dw_tentacle_pregnancy duration = -1 }
+					add_trait = tentacle
+				}
+			}
+			if = {
+				limit = {
+					trait = virgin
+				}
+				remove_trait = virgin
+			}
+		}
+	}
+}
+# .67 Caster dreams of the event, target fights back and manages to fight it off (caster)
+narrative_event = {
+	id = DWTSpells.67
+	desc = "DWTSpells67"
+	picture = DWLilith_SpellTentacleFemaleFight
+	title = dw_spell_tentaclebeast_femalefight
+	
+	is_triggered_only = yes
+	
+	option = {
+		piety = -150 #Casting Cost
+		name = "DWTSpells67A"
+		FROM = {
+			random = {
+				chance = 5
+				add_trait = wounded
+			}
+			add_character_modifier = { name = tentacle_survivor duration = 730 } # For when someone fights off the beast without being violated.
+		}
+	}
+}
+# .69 Caster dreams of the event, target fights back and gets killed (caster)
+narrative_event = {
+	id = DWTSpells.69
+	desc = "DWTSpells69"
+	picture = DWLilith_SpellTentacleFemaleDeath
+	title = dw_spell_tentaclebeast_femaledeath
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTSpells69A"
+		piety = -150 #Casting Cost
+		FROM = {
+			death = {
+				death_reason = death_murder
+				killer = FROM
+			}
+		}
+	}
+}
+# .71 Caster dreams of the event, target raped (caster)
+narrative_event = {
+	id = DWTSpells.71
+	desc = "DWTSpells71"
+	picture = DWLilith_SpellTentacleMaleRape
+	title = dw_spell_tentaclebeast_malerape
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWTSpells71A"
+		piety = -150 #Casting Cost
+		FROM = {
+			add_trait = victim
+			add_character_modifier = { name = dw_rape_trauma duration = 360 }
+			if = {
+				limit = {
+					trait = virgin
+				}
+				remove_trait = virgin
+			}
+		}
+	}
+}
+
+# .120 Sexcrazed
+narrative_event = {
+	id = DWTSpells.120
+	picture = SpellSexcraze
+	is_triggered_only = yes # Triggered by a targetted_decision
+	title = dw_lilith_sexcraze_spell
+	desc = {
+		trigger = {
+			trait = lilith
+		}
+		text = DWTSpells120
+		picture = SpellSexcraze
+	}
+	desc = {
+		trigger = {
+			trait = incubus
+		}
+		text = DWTSpells120
+		picture = lilith_immortality_incubus
+	}
+	immediate = {
+		FROM = { # The person that was targeted by the spell targetted_decision
+			save_event_target_as = dw_spell_target
+		}
+	}
+	option = { # It is done
+		name = DWTSpells120A
+		piety = -250
+		event_target:dw_spell_target = {
+			add_trait = sexcrazed
+			narrative_event = { id = DWTRandom.700 days = 1 }
+			character_event = { id = DWTRandom.701 days = 730 random = 730 } #after 5-10 years, sexcrazed will wear off
+			
+			}
+	}
+	option = { # I changed my mind
+		name = DWTSpells120B
+	}
+}
+
+### End Succubus Spells

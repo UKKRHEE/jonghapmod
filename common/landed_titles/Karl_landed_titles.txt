@@ -1,0 +1,12 @@
+k_karling = {
+	color = { 48 92 164 }
+	color2 = { 0 0 154 }
+	
+	capital = 1981 # Frankfrut
+	
+	culture = old_frankish
+	
+	allow = {
+		always = yes
+	}
+}	

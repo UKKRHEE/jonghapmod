@@ -1,7 +1,0 @@
-﻿
-# For reference: Vanilla events have weight 100-200, and 2600 in total.
-hunt_random_pulse = {
-	random_events = {
-		100 = ie_hunt.0001 # Quite the Catch. Some restrictions, but not moreso than vanilla events.
-	}
-}

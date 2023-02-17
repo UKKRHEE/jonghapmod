@@ -1,0 +1,53 @@
+decisions = {
+	create_westkorea = {
+		only_playable = yes
+		
+		is_high_prio = yes
+	
+		potential = {
+			ai = no
+			is_playable = yes
+			culture = korean
+			NOT = { is_title_active = k_westkorea }
+			NOT = {
+				has_game_rule = {
+					name = dynamic_realms
+					value = off
+				}
+			}
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			prestige = 1000
+			wealth = 300
+			OR = {
+				realm_size = 35
+				any_demesne_title = {
+					count = 3
+					tier = duke
+					}
+				any_demesne_title = {
+					count = 1
+					tier = king
+					}
+				}
+			
+		}
+		
+		effect = {
+			activate_title = { title = k_westkorea status = yes }
+			k_westkorea = {
+					grant_title = ROOT
+					}
+			wealth = -300
+		}
+		
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

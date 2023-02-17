@@ -1,0 +1,316 @@
+####### AMDsound.sfx
+SFX_AMD_HORSE = {
+	file = "SFX_AMD_HORSE.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_FUWAK = {
+	file = "SFX_AMD_FUWAK.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_SHOT_01 = {
+	file = "SFX_AMD_SHOT_01.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_SHOT_02 = {
+	file = "SFX_AMD_SHOT_02.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_SHOT_03 = {
+	file = "SFX_AMD_SHOT_03.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_01 = {
+	file = "SFX_AMD_move_01.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_02 = {
+	file = "SFX_AMD_move_02.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_03 = {
+	file = "SFX_AMD_move_03.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_04 = {
+	file = "SFX_AMD_move_04.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_05 = {
+	file = "SFX_AMD_move_05.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_06 = {
+	file = "SFX_AMD_move_06.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_07 = {
+	file = "SFX_AMD_move_07.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_move_08 = {
+	file = "SFX_AMD_move_08.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_01 = {
+	file = "SFX_AMD_girl_01.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_02 = {
+	file = "SFX_AMD_girl_02.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_03 = {
+	file = "SFX_AMD_girl_03.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_04 = {
+	file = "SFX_AMD_girl_04.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_05 = {
+	file = "SFX_AMD_girl_05.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_06 = {
+	file = "SFX_AMD_girl_06.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_07 = {
+	file = "SFX_AMD_girl_07.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_08 = {
+	file = "SFX_AMD_girl_08.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_09 = {
+	file = "SFX_AMD_girl_09.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_10 = {
+	file = "SFX_AMD_girl_10.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_11 = {
+	file = "SFX_AMD_girl_11.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_12 = {
+	file = "SFX_AMD_girl_12.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_13 = {
+	file = "SFX_AMD_girl_13.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_14 = {
+	file = "SFX_AMD_girl_14.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_15 = {
+	file = "SFX_AMD_girl_15.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_16 = {
+	file = "SFX_AMD_girl_16.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_17 = {
+	file = "SFX_AMD_girl_17.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_18 = {
+	file = "SFX_AMD_girl_18.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_19 = {
+	file = "SFX_AMD_girl_19.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_20 = {
+	file = "SFX_AMD_girl_20.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_21 = {
+	file = "SFX_AMD_girl_21.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_22 = {
+	file = "SFX_AMD_girl_22.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_23 = {
+	file = "SFX_AMD_girl_23.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_24 = {
+	file = "SFX_AMD_girl_24.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_25 = {
+	file = "SFX_AMD_girl_25.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_26 = {
+	file = "SFX_AMD_girl_26.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_27 = {
+	file = "SFX_AMD_girl_27.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_28 = {
+	file = "SFX_AMD_girl_28.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_29 = {
+	file = "SFX_AMD_girl_29.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_girl_30 = {
+	file = "SFX_AMD_girl_30.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_01 = {
+	file = "SFX_AMD_male_01.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_02 = {
+	file = "SFX_AMD_male_02.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_03 = {
+	file = "SFX_AMD_male_03.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_04 = {
+	file = "SFX_AMD_male_04.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_05 = {
+	file = "SFX_AMD_male_05.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_06 = {
+	file = "SFX_AMD_male_06.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_07 = {
+	file = "SFX_AMD_male_07.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_08 = {
+	file = "SFX_AMD_male_08.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_09 = {
+	file = "SFX_AMD_male_09.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_10 = {
+	file = "SFX_AMD_male_10.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_11 = {
+	file = "SFX_AMD_male_11.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_12 = {
+	file = "SFX_AMD_male_12.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_13 = {
+	file = "SFX_AMD_male_13.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_14 = {
+	file = "SFX_AMD_male_14.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_15 = {
+	file = "SFX_AMD_male_15.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_16 = {
+	file = "SFX_AMD_male_16.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_17 = {
+	file = "SFX_AMD_male_17.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_18 = {
+	file = "SFX_AMD_male_18.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_19 = {
+	file = "SFX_AMD_male_19.wav"
+	volume = 74
+	on_demand = yes
+}
+SFX_AMD_male_20 = {
+	file = "SFX_AMD_male_20.wav"
+	volume = 74
+	on_demand = yes
+}

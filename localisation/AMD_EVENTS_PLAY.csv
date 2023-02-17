@@ -1,0 +1,763 @@
+#		Crusader Kings 2 : Advanced Medieval Desires
+
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+
+
+#AMD_EV_DESC_LENGTH;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;	«È©¸ÌïŒ ®³Ý 1 line ¬¸²³Ì «µÉ 70byte
+
+#«È©¸ÌïŒEvents;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+
+
+AMD_EV_DESC_PLAY_1001_C;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_ATK.GetTitledFirstName]ò¼ [AMD_ET_DEF.GetTitledFirstName]«È ª·Ýò¼Ì¡ºçÆÐ ¡³¬ÈåÆÌ ¢´ëÀÝëŒçˆª·, ð‰ªÈô¿åÆÌ «È©¸ÌïŒåÆÌ «·ÚêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1001_T;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_TB.GetTitledFirstName]ò¼ [AMD_ET_TS.GetTitledFirstName]«È éÁÐêÁÌ²³Ì è»É¬·ÉëŒçˆ ª·Ýò¼Ì¡ºçÆÐ ¡³¬ÈåÆÌ ¢´ëÀÝëŒçˆª·, ð‰ªÈô¿åÆÌ «È©¸ÌïŒåÆÌ «·ÚêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1001_R;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_RA.GetTitledFirstName]«È [AMD_ET_RV.GetTitledFirstName]ëÆÐ ¡·Ù°³Ð²³åÆÌ ¢´ëÀÝëŒçˆª·, ð‰ªÈô¿åÆÌ «È©¸ÌïŒåÆÌ «·ÚêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1002_C;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_ATK.GetTitledFirstName]ò¼ [AMD_ET_DEF.GetTitledFirstName]«È ª·Ýò¼Ì¡ºçÆÐ ¡³¬ÈåÆÌ ¢´ëÀÝùÇ ¥³Ì«ÈÐ «È©¸ÌïŒ«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1002_R;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_RA.GetTitledFirstName]«È [AMD_ET_RV.GetTitledFirstName]ëÆÐ ¡·Ù°³Ð²³åÆÌ ¢´ëÀÝùÇ ¥³Ì«ÈÐ «È©¸ÌïŒ«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1003_C;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_ATK.GetTitledFirstName]ò¼ [AMD_ET_DEF.GetTitledFirstName]«È ª·Ýò¼Ì¡ºçÆÐ ¡³¬ÈåÆÌ ¢´ëÀÝùÇ «¹Ìê»É «È©¸ÌïŒ«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1003_R;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_RA.GetTitledFirstName]«È [AMD_ET_RV.GetTitledFirstName]ëÆÐ ¡·Ù°³Ð²³åÆÌ ¢´ëÀÝùÇ «¹Ìê»É «È©¸ÌïŒ«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1124_C;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_OH.GetTitledFirstName]«È éÁÐïÆÉ¬·Ý ¥³êŠù¼ ª·Ýò¼Ì¡ºçÆÐ ¡³¬ÈåÆÌ ¢´ëÀÝùÇ ¥³Ì«ÈÐ «È©¸ÌïŒ«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1124_R;[From.GetTitledFirstName]ëÆÌ ¥³ÝªÈÌëÆÐ ª·Ý¬·É ¥´ª³ÝëŒçˆ ²³åÆÌ «È©¸ÌïŒçÆÐ ªÈÐ²´Ý²³«¹ÜêÆÙ¢È¥³. [AMD_ET_OH.GetTitledFirstName]«È éÁÐïÆÉ¬·Ý ¥³êŠ«¸¡¸ ¡³Ý¡³Ì¥³Ý²³åÆÌ ¢´ëÀÝùÇ ¥³Ì«ÈÐ «È©¸ÌïŒ«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+
+AMD_EV_OPT_PLAY_1001_1;äŒ¦·Ì ±³¦¹Ø®È²³Ì ²´ÝùÄåÆÌ ëÀÝ¢³Ù²³Ð êŠ «·Ú¥³!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1001_1;²´¥³Ý «È©¸ÌïŒçÆÐ ìÁÝ¬È²³äˆ [From.GetFirstName]«¸¡¸ «³Ð¦ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1001_2;¨³ëÆØ¥´çˆ ²´¦³.;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1001_2;[From.GetFirstName]ëÆÌ «È©¸ÌïŒçÆÐ ¡ºê»É ¬ÈÌ²´Ý²³Ù¢È¥³. ¥³ÝªÈÌ«¸¡¸åÆÌ ò¼Ì¦¹Ì «È©¸ÌïŒåÆÌ ¢³Ð«³ëˆ¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1001_3;¢´¡³ ¬ÈÉ¬·Ù ÷¼«µ¡¸Ü¥³!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1001_3;[From.GetFirstName]ëÆÌ «È©¸ÌïŒçÆÐ éˆ¬È «³Î¡Èçˆ ²´Ü¬È¨³Ì, ¥³ÝªÈÌ«È ùÂÌ²³Ì¥³¨¹Ì ²´¥³Ý ¢´ëÀÝ«¸ ò¼Ì²³Ì ¥³Ì«ÈÐ «È©¸ÌïŒçÆÐ éˆªÈÐ êŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1002_3;ì»ãëÆÌ ¡·Ì ¡³á«È ÷¼«µ¬È!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1002_3;[From.GetFirstName]ëÆÌ «È©¸ÌïŒçÆÐ ¡ºê»É ªÈÐ²´Ý²³äˆ, ¥³ÝªÈÌ«¸¡¸æˆ ¡·ùÇ ¡³áëÆÌ «È©¸ÌïŒçÆÐ éˆ«¹ìÁÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1003_3;¨³! ëŠ¦È¡³ ¢³Ø«È¡³! ˜ŒŽ³èÁÉ¬³!;;;;;;;;;;;;x;
+AMD_EV_String_PLAY_1003_3;[From.GetFirstName]ëÆÌ «È©¸ÌïŒçÆÐ ¡ºê»É ªÈÐ²´Ý²³äˆ, ¥³ÝªÈÌ«¸¡¸æˆ ò¼Ì¦¹Ì «È©¸ÌïŒ¡³ ªÈÐ²´Ýô¿Ù¢È¥³. –ˆ²³Ì ¥³ÝªÈÌùÇ ª·Ì°´É«È «È©¸ÌïŒ ¢´ëÀÝ«¸ «¹Ý²µÝëÆÐ ìŠ¡¸ ô¿Ù¢È¥³!;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_1000;«È©¸ÌïŒ ìÁÝ¥³Ì!\n[From.GetBestName]ëÆÌ ¥³ÝªÈÌùÇ ª·Ý¬·É ¥´ª³Ý«È ô¿åÆÌ ¡·ÛëÆÐ ¡³Ý¦¹É²³¡¸ ¡·éŠ²³«¹ÜêÆÙ¢È¥³. Crusader Kings 2åÆÌ ¬·Ý®È¬·ÉëŒçˆ ë»Ð©³çÆÌ 12ª¸ «ÈëÀÝ¡³ ¡·Ì¬·Ì ¡¸«ÈØ«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1000;˜ÆÙ, «·”·Ð êŠ «·Ú¬È.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1005;[From.GetBestName]ëÆÌ ¬·Ý®Èª³ÿ¿ì»Ýä‰¬·ÉëŒçˆ ë»Ð©³çŒäˆ ¡·Ì¬·Ì²³Ì ©³ØèÁÌÿ¼ùÇ ©³Ð¬·ÌëÆÐ ùÄ²´ ¥³ÝªÈÌ«È ªÈäÆÙ²³¡¸ êŠ²´Ý²´«µ¨³Ì ²³åÆÌ ìÁÝ®³¥´²³Ì «·ÙèŠ¡³ ©³Ðª´Ý²´Ü¥³äˆ ²³Ù¢È¥³. «³èŠ¦´æˆ ëˆåÆÐ ©³Ø –Œ¡·ëÁÌ ªÈ¡³ÌëÆÌ ¡È¥´²³¡È «·¦¹Ù¡¸Ü¢¸ë‰.;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_1190;«¸¦· ©³Ðª´Ý!\n©³É«È, ©³É²ÈØ«È, äŠ¡¹Ý•ÁÌ«È ¬È¬·Ýô¿¬È «³ÎëÆÌ ¡·Û ¡³áêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1191;«¸¦· ©³Ðª´Ý!\n«È²´²³Ð êŠ «·ÚåÆÌ ì»Ýì»É ìˆ²³Ù«ÈÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_1192;«¸¦· ©³Ðª´Ý!\nPC/NPC ±³Ì¬·Ý«¸ ëˆç‹¡³ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
+AMD_EV_OPT_PLAY_1190;«³¬ÈÉæˆ ¡³Ð ¡ÈÐ«È ¨·Ð¥³;;;;;;;;;;;;x;
+
+
+
+#ª·Ýò¼Ì¡º «È©¸ÌïŒ ªÈÌ±³Ì ¬³É«·ÙìÁÝ Sex Events DESC (WIP);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+AMD_String_2P_Cons;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ò¼ [AMD_CLK_GetHadSexCons];;;;;;;;;;;;;x;
+AMD_String_CONS_SEX1;ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX2;«·çÆÌùÇ å»Ð«ÈçÆÐ ìÆÐ¡¹ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX3;«·Ý¨³Ý¬ÈÌ®³ÝëŒçˆ ª¸ÉêŒ²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX4;ëÅÉ®¸ùÇ ªÈÌ©ÈçÆÐ °³ØäŠ²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_CONS_SEX5;©³Ð¬·Ý¢³Ì ¬ÈØêÆÝ®·¦·Ø ä‰¨È²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+
+AMD_String_2P_Trade00;[AMD_ET_TB.GetFirstName]ëÆÌ [AMD_CLK_GetTradeItem]çÆÐ «µÉê»É²³äˆ [AMD_ET_TS.GetFirstName]ùÇ ²³çÁÛ©³ØëÆÐ äŠ¨´²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_2P_Trade;[AMD_ET_TS.GetFirstName]ëÆÌ [AMD_CLK_GetTradeItem]çÆÐ ùÄ²³«¹ [AMD_ET_TB.GetFirstName]«¸¡¸ è»ØëÆÐ ±³Ð«³ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+
+AMD_String_TRADE_ITEM_0;«·‘·Ì ¥´¡³;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_1;äÆØÿ¼;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_2;‡ˆùÇ;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_3;äÁÌ¥´;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_4;¬³ÉùÄ;;;;;;;;;;;;;x;
+AMD_String_TRADE_ITEM_5;±¹Ýÿ¼;;;;;;;;;;;;;x;
+
+
+AMD_String_2P_Rape;[AMD_ET_RA.AMD_CLK_GetName]ëÆÌ [AMD_ET_RV.AMD_CLK_GetName]ëÆÐ [AMD_CLK_GetHadSexRape];;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX1;¡³Ý¡³Ì²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX2;åÆÝëÀÉ²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX3;‘³¨·É«·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX4;«·É¬Èçˆ ©·Ø²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_RAPE_SEX5;éŠ¬·Ý²³Ì ëÀÉ¨³ÝëŒçˆ ¥·¦·Ù²¹ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+
+
+#AMD_String_SCORE_0;[AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_String_SCORE_1;«³Éè»Ýò¼ ¡³á«³ÜêÆÙ¢È¥³... ;;;;;;;;;;;;;x;
+AMD_String_SCORE_2;²¹Ý±¹Ì«·Ú«·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_3;«¹Ý ì»ã¬È «³Î«³ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_4;¢³—Œ¬È «³Î«³ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_5;š¾ ìÆÐ¡·ùÂÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_6;ò¿Ý¬³Ý²È ì»ã«³ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_7;®·Ìª³ÝùÇ ü¾¦³ÉëÆÐ ¨³Ûéˆ«³ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_BAD;äŒ¥³¬È ì»ãëÆÌ ¡ÈéÁÌëÆÌ «³¢È«·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_COMMON;äŒ¦·Ì¥´çˆ ìÆÐ¡ÈÐ êŠ «ÈÜ«·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_String_SCORE_GOOD;¡ÈéÁÌì»ã«³ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+
+
+AMD_String_DO_NOTHING;«³èŠ «ÈÐæˆ «·ÚëÆØ\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_D200;¨´ëŠ ¢³—ÆØ\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_D100;¢³—ÆØ\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_D50;ìˆäÆØ ¢³—ÆØ\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_U50;ìˆäÆØ ì»ãëÆØ\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_U100;ì»ãëÆØ\n;;;;;;;;;;;;;x;
+AMD_String_SCORE_U200;¨´ëŠ ì»ãëÆØ\n;;;;;;;;;;;;;x;
+
+
+AMD_String_Skill_0;²¹Ý±¹Ì«·ÚåÆÌ ê»Ø“È;;;;;;;;;;;;x;
+AMD_String_Skill_1;ª·ïŠçÆÌ ê»Ø“È;;;;;;;;;;;;x;
+AMD_String_Skill_2;±¹Ý©·Ø²³Ì ê»Ø“È;;;;;;;;;;;;x;
+AMD_String_Skill_3;åÆÝêÁÉ²³Ì ¬´ìŠ;;;;;;;;;;;;x;
+AMD_String_Skill_4;¥³Ð«ÈÌùÇ ¡Èä‰;;;;;;;;;;;;x;
+AMD_String_Skill_5;ªÈÌæÆÐ¦ÈÌ è‰¡È;;;;;;;;;;;;x;
+
+
+AMD_String_Josa_UN;ëÆÌ;;;;;;;;;;;;x;
+AMD_String_Josa_NN;åÆÌ;;;;;;;;;;;;x;
+
+AMD_String_Josa_EE;«È;;;;;;;;;;;;x;
+AMD_String_Josa_GA;¡³;;;;;;;;;;;;x;
+
+AMD_String_Josa_UL;ëÆÐ;;;;;;;;;;;;x;
+AMD_String_Josa_LL;çÆÐ;;;;;;;;;;;;x;
+
+AMD_String_Josa_WA;ù¼;;;;;;;;;;;;x;
+AMD_String_Josa_GW;ò¼;;;;;;;;;;;;x;
+
+AMD_String_Josa_RO;çˆ;;;;;;;;;;;;x;
+AMD_String_Josa_UR;ëŒçˆ;;;;;;;;;;;;x;
+
+
+
+AMD_String_PenisAN;[AMD_CLK_GetPenisAdj] [AMD_CLK_GetPenisNoun];;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_1;ù¾êˆ²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_2;©ÈÌ«µÉ²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_3;éŠªÈÐ²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_4;¡³åÆÐäˆ ”³ÓëÆÌ;;;;;;;;;;;;x;
+AMD_String_PenisAdjSmall_5;¬³Éäˆ éŠæŒ¦·ëÁÌ;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_1;¥³Ì¥³Ì²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_2;°³Ì°³Ì²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_3;ëŠ–ÁÉ ª·Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_4;ñÆÝéÁÌ²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjAverage_5;±ÈÛìÁÐ«È éÁÐ¡·¬ÈÌ;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_1;¡·¥´²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_2;¯·¥³¦³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_3;èŠ¬È¨³É¬È²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_4;äÁÑäˆ îÆØ¬ÈÉ²³Ì;;;;;;;;;;;;x;
+AMD_String_PenisAdjLarge_5;îŒäˆ «³çÆØ¥³ëÁÌ;;;;;;;;;;;;x;
+AMD_String_Penis_0;±¸¢ÈêŒ;;;;;;;;;;;;x;
+AMD_String_PenisEE0;±¸¢ÈêŒ¡³;;;;;;;;;;;;x;
+AMD_String_PenisNN0;±¸¢ÈêŒåÆÌ;;;;;;;;;;;;x;
+AMD_String_PenisLL0;±¸¢ÈêŒçÆÐ;;;;;;;;;;;;x;
+AMD_String_PenisRO0;±¸¢ÈêŒçˆ;;;;;;;;;;;;x;
+AMD_String_PenisWA0;±¸¢ÈêŒù¼;;;;;;;;;;;;x;
+AMD_String_Penis_1;ª·Ý¡È;;;;;;;;;;;;x;
+AMD_String_Penis_2;¬³¬È;;;;;;;;;;;;x;
+AMD_String_Penis_3;èŠ¡È;;;;;;;;;;;;x;
+AMD_String_Penis_4;è»ÝæÁÝ«È;;;;;;;;;;;;x;
+AMD_String_Penis_5;©³Ý¨³Ý«È;;;;;;;;;;;;x;
+AMD_String_Penis_6;¨³Ð¬³¬È;;;;;;;;;;;;x;
+AMD_String_Penis_7;äˆ†Š;;;;;;;;;;;;x;
+#AMD_String_Penis_0;ëÆØ¡¹Ý;;;;;;;;;;;;x;
+#AMD_String_Penis_2;¢³ØäÆÌ;;;;;;;;;;;;x;
+#AMD_String_Penis_3;«µÝèÁÐ;;;;;;;;;;;;x;
+#AMD_String_Penis_4;ëÅÉé»Ý;;;;;;;;;;;;x;
+#AMD_String_Penis_6;ì»Þ;;;;;;;;;;;;x;
+
+AMD_String_PussyAN;[AMD_CLK_GetPussyAdj] [AMD_CLK_GetPussyNoun];;;;;;;;;;;;x;
+AMD_String_PussyAdjBad_1;¡·Ììˆ²³Ì;;;;;;;;;;;;x;
+AMD_String_PussyAdjBad_2;¨¸¨³çÆÌ;;;;;;;;;;;;x;
+AMD_String_PussyAdjBad_3;ìÁÌ©Èô¿¬È «³ÎëÆÌ;;;;;;;;;;;;x;
+AMD_String_PussyAdjNorm_1;í»Éí»É²³Ì;;;;;;;;;;;;x;
+AMD_String_PussyAdjNorm_2;éŠæŒ¦·ëÁÌ;;;;;;;;;;;;x;
+AMD_String_PussyAdjNorm_3;ìÁÌ©Èô¿Ì;;;;;;;;;;;;x;
+AMD_String_PussyAdjGood_1;äÁÌ®ÈØëÆÐ ñÆÐ¦ÈåÆÌ;;;;;;;;;;;;x;
+AMD_String_PussyAdjGood_2;¥³Ð«³ëˆçÆÌ;;;;;;;;;;;;x;
+AMD_String_PussyAdjGood_3;©³ÉëÆØ¬ÈÉêŒ¦·ëÁÌ;;;;;;;;;;;;x;
+AMD_String_PussyAdjVirgin_1;êÁÌ¡¹Ð²³Ì;;;;;;;;;;;;x;
+AMD_String_PussyAdjVirgin_2;®·¢¹ùÇ;;;;;;;;;;;;x;
+AMD_String_PussyAdjVirgin_3;¢³Ø¬³çÆÐ èˆçŒåÆÌ;;;;;;;;;;;;x;
+AMD_String_Pussy_0;©³¡È¢³;;;;;;;;;;;;x;
+AMD_String_Pussy_1;éˆ¬È;;;;;;;;;;;;x;
+
+#AMD_String_Pussy_1;ëÆØèÁÌ;;;;;;;;;;;;x;
+#AMD_String_Pussy_3;¬ÈÐ;;;;;;;;;;;;x;
+#AMD_String_Pussy_6;“ÈÙäŠ¨·Ý;;;;;;;;;;;;x;
+
+
+AMD_String_BreastAN;[AMD_CLK_GetBreastAdj] [AMD_CLK_GetBreastNoun];;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_1;¢³Ù¬³É²³Ì;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_2;±¹Ý±¹Ý²³Ì;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_3;©ÈÌ«µÉ²³Ì;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_4;éŠªÈÐ²³Ì;;;;;;;;;;;;x;
+AMD_String_BreastAdjSmall_5;òÄ«¹ëÁÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_1;«º—ÆÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_2;«³çÆØ¥³ëÁÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_3;éŠæŒ¦·ëÁÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_4;ªÈÐ±³É²³Ì;;;;;;;;;;;;x;
+AMD_String_BreastAdjAverage_5;ê»Ì«¸ š¼É ®³åÆÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_1;ðÁÝ¨³Ì²³Ì;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_2;ëÅÉ¥·É¬ÈÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_3;îŒäˆ «³çÆØ¥³ëÁÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_4;ê»Ì«¸ ¥³ ¬³Ù²È¬È «³ÎåÆÌ;;;;;;;;;;;;x;
+AMD_String_BreastAdjLarge_5;¬·Þêˆ¡³áëÆÌ;;;;;;;;;;;;x;
+AMD_String_Breast_1;ë‹©³Ý;;;;;;;;;;;;x;
+AMD_String_Breast_2;¡³êÆØ;;;;;;;;;;;;x;
+AMD_String_Breast_3;¬·Þ¡³êÆØ;;;;;;;;;;;;x;
+AMD_String_Breast_4;¬·Þï»Ý;;;;;;;;;;;;x;
+AMD_String_Breast_5;’³Ðï»Ý;;;;;;;;;;;;x;
+AMD_String_Breast_6;¬·Þ°´Ý«È;;;;;;;;;;;;x;
+
+
+AMD_String_Body_F_0;«º—ÆÌ;;;;;;;;;;;;x;
+AMD_String_Body_F_1;¡³¢¹¦ÈÌ;;;;;;;;;;;;x;
+AMD_String_Body_F_2;åÆÐ“ÈÌ²³Ì;;;;;;;;;;;;x;
+AMD_String_Body_F_3;éŠæŒ¦·ëÁÌ;;;;;;;;;;;;x;
+AMD_String_Body_F_4;ðÁÝ¨³Ì²³Ì;;;;;;;;;;;;x;
+AMD_String_Body_F_5;ëÅÉ¥·É¬ÈÌ;;;;;;;;;;;;x;
+
+
+
+
+
+AMD_EV_DESC_2P_NORM;[AMD_CLK_EV_DESC_2P_NORM];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PN_CONS;[AMD_CLK_EV_DESC_2PN_CONS];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PN_MFRP;[AMD_CLK_EV_DESC_2PN_MFRP];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PN_FMRP;[AMD_CLK_EV_DESC_2PN_FMRP];;;;;;;;;;;;;x;
+
+
+
+
+#ª·Ýò¼Ì¡º «È©¸ÌïŒ ªÈÌ±³Ì Sex Events DESC (v2);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_2P_LES;[AMD_CLK_EV_DESC_2P_LES] ;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES;[AMD_CLK_EV_OPT_2P_LES];;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_LES_CONS;[AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¨ÈÌ¥³Ð±´Ý«È®·¦·Ø •ÆÌ¬·É²³äˆ ¬ÈÌ²³¡¸ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES_CONS;(ÿ¼¡³Ì) 2P ©´É²³Ù ¡¹Ðò¼;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_LES_RAPE;[AMD_ET_RA.AMD_CLK_GetName]ëÆÌ ¢³Ø¬³¡³ ìÁÐ êŠ «·ÚåÆÌ ü¾¦³ÉëŒçˆ [AMD_ET_RV.AMD_CLK_GetName]ëÆÐ [AMD_CLK_GetHadSexRape] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES_RAPE;«¹ëŠ¡³ «·‘·ã¡¸ ëŠåÆÌ¬È é»ÐŽ³?;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_LES_TRADE;(¨´íÁÌ) [AMD_ET_TS.GetFirstName]ò¼ [AMD_ET_TB.GetFirstName]ëÆÌ ¨ÈÌ¥³Ð±´Ý«È®·¦·Ø •ÆÌ¬·É²³äˆ ¬ÈÌ²³¡¸ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_LES_TRADE;(¨´íÁÌ) 2P ©´É²³Ù ¡¹Ðò¼;;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_2P_GAY;[AMD_CLK_EV_DESC_2P_GAY] ;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_GAY_CONS;[AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ çˆ¨³ùÇ ¡·ØïŠª³æÆÐ®·¦·Ø «³çÆØ¥³ëÁÌ ª·É«µÝëÆÐ ©³¦³éˆ¨¹ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_GAY_RAPE;[AMD_ET_RA.AMD_CLK_GetName]ëÆÌ [AMD_ET_RV.AMD_CLK_GetName]ùÇ æÆÝ”³ÉëÆÐ ¡³Øª³Ý²³¨¹ äŒçÆÐ [AMD_CLK_GetHadSexRape];;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_GAY_TRADE;(¨´íÁÌ) [AMD_ET_TS.GetFirstName]ò¼ [AMD_ET_TB.GetFirstName]ëÆÌ çˆ¨³ùÇ ¡·ØïŠª³æÆÐ®·¦·Ø «³çÆØ¥³ëÁÌ ª·É«µÝëÆÐ ©³¦³éˆ¨¹ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY;[AMD_CLK_EV_OPT_2P_GAY];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY_CONS;¢·åÆÌ ¢´ ªÈØ¬³Ý ©Èß«È«µ.;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY_RAPE;æÆÝ”³É! æÆÝ”³ÉëÆÐ éˆ¬³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_GAY_TRADE;«³«³, ì»ãëÆÌ ìˆ«ÈØ«È¥³.;;;;;;;;;;;;;x;
+
+#	#	#	#	2P	æ»ÝèÁÐùÇ ª¸¡º
+
+#AMD_EV_DESC_2P_HF;[AMD_CLK_EV_DESC_2HHF_OLD];;;;;;;;;;;;;x;
+
+AMD_EV_DESC_2P_HORSE;[AMD_CLK_EV_DESC_2P_HORSE];;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHM_1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ëŠ¦³Ø²³Ì ¨³Ð¬³¬È¡³ «·Ý¥·Ý«È«¸ ©³É²È¬³ åÁÌëÆÐ ôÄ¬ÈÙäˆ ©È¨¹ÝëÆÐ ¬ÈÐ¦·¥´Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHM_2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ëŠ¦³Ø²³Ì ¨³Ð¬³¬È¡³ ¬·Ì¦ÈÙª·ÌëÆÐ ¬³äÆÉ²³¬³ ¬³¬ÈçÆÐ ª¸ëŠ¨¹ ¬ÈØêÆÝ®·¦·Ø êˆ¦È¬ÈÐ¦·Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2H_ETC;[AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ «ÈÌ¨³«ÈÐ®¸ùÇ ¯¸Ì°³ëŠçˆêŒ®·¦·Ø [AMD_CLK_GetHadSexCons] ¥· «Èª³ÝùÇ ª³Ýª¸²³Ì ª·Ð¨¹ÝëÆÌ ª´Ý¦µÉ²³Ù¢È¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_ZOO;[AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ «µª´ÝùÇ «¹Ð¡Èçˆ ¡³æÆÉ²³Ì ªÈ¡³ÌëÆÐ éˆ¢´ÜêÆÙ¢È¥³. ª³Ýª¸²³Ì ¢´ëÀÝëÆÌ äÁÏ«È «³Ð ±ÈÐë‰åÆÌ «·ÚëÆÐ ¡·Û«ÈÙ¢È¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2P_CBR;[AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ì»Ýì»ÉùÇ ©¹ÉëÆÐ ¢·Ø«·ª· –Œ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´ÜêÆÙ¢È¥³. äŒ èˆêÆÙëÆÌ ë‹¡³ØêŒ¦·Ù¡¸æˆ «ÈÌ¡³ÌùÇ «·Ì«·çˆåÆÌ ð‰²¹Ì²³Ð êŠ «·ÚëÆÐ ¡·Û ¡³áêÆÙ¢È¥³...;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_11700;ëŠ¬·ÝëÆÌ ¨³©·Ù«È«µ!;;;;;;;;;;;;;x;
+AMD_EV_OPT_11800;«³Û.. «³«³........;;;;;;;;;;;;;x;
+AMD_EV_OPT_11900;äÁÏ«È ëŠ¦È¡³ «³Ð ±ÈÐë‰¡³ «ÈÜëÆÐŽ³...;;;;;;;;;;;;;x;
+
+
+
+#ª·Ýò¼Ì¡º «È©¸ÌïŒ äŠ±³Ì Sex Events DESC (OLD);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_2PNC_OLD;[AMD_CLK_EV_DESC_2PN_CONS_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_OLD;[AMD_CLK_EV_DESC_2PN_RAPE_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNF_OLD;[AMD_CLK_EV_DESC_2PN_FMRP_OLD];;;;;;;;;;;;;x;
+
+#	#	äŠ©·¬·Ì 2P «Èª·Ý, ÿ¼¡³Ì
+AMD_EV_DESC_2PNC_O1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ò¼ ²³¢³¡³ ô¿«· ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. äŒ¦·¢³ äŒ¢¹ùÇ ëˆéÆÌëÆÌ íÁÝéÁÌ²È ¥³Ð«³ëˆçŒ¬È «³Î«³Üäˆ, ©³ÌìÁÉëÆÌ èÁÐ¡È¡³ èˆ¬³¦³ ’·É’·É²³¥³. [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ¬³¬ÈåÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¢´éŠ«¸ æ»Ð«ÈÙ²´Ü¬È¨³Ì ¡¹ÐäÁÉ ©´É¡ÈçÆÐ æÆÐ«·Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆ¡´çÆÐ êÁÉ«Èäˆ ’³¬¹¢³ë»Ì ²ÈØ«·ÚåÆÌ ª³Ð¥·Ý«·¦ÈùÇ ¡³Øí»É«¸ ²³ÌêÁØëÆÐ ¢´øÄ«·Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O2;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ ª³Ð¡³ìÁÉ ¡·Ø«È [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ©ÈÌïÆØëÆÐ ¨´•Œ¦·Ù¡¸ ±³äˆæÆÐ«·Ü¥³. äÆÙêˆçÆÐ ”ÈÐ¦ÈÌ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ²·¥·É«È¨¹Ìª· [AMD_ET_ATK.AMD_CLK_GetName]«¸¡¸ ©³Ì¡¹ÉëÆÐ ªÈæˆ²´Ü¬È¨³Ì, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ äŒ¢¹¡³ ¬·ÝªÈÌëÆÐ ®³¦È¬È è»Û²³æˆç»É ”ÈçŒäˆ –ˆ ”ÈÐ¦·Ü¥³... [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¨´•Œ¦·Ù¡¸ ¬³¬ÈçÆÐ ¡³Ø“³«³ÌåÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¬ÈÐ«¸ ¬·Ý¬³çÆÐ ïˆ²´¢´Ü¥³. æŠ ª³¦³ØëÆÌ ¬³ØªÈ ¡¹Ð²³Ù²³Ì ®´çˆ «¹ëÁÌëÆÐ ìÆÐ¡¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O3;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ ÿ¿ªÈØùÇ «ÈÐ¡¹É«È [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «µÉ¬·ØëÆÐ ”ÈÐ¦·Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ü¾¦³É«¸ ‡ŒïŒ¦·¬ÈÌ è»Éêˆ¦Èçˆ ²·¥·É«È¥³¡³ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ •»É •ÆÐ«·«³Ìäˆ äŒùÇ ëÁØ¬ÈÉ«ÈØ«¸ ¨³ÞûÂ ¬³ªÈÌæˆ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ëˆåÆÐ äŒ¢¹«¸¡¸ ®·Ìª³ÝùÇ ù¼ÝäÁÉëÆÐ éˆ«¹ìÁÐ ¡·Û«È¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]«È ‡Œ¦ÈÛ²³Ì åÁÌ©ÈßëŒçˆ ²¹çÆÐ ¢´¨ÈÐäˆ ªÈÌëÆØ²³åÆÌ èˆêÆÙëÆÐ ¡³Øª³Ý²³¨¹ ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³, äŒ¢¹ùÇ ¬·Ð¬·Ý«¸ ¨³ÞûÂ ª³¬·Ý²´Ü¥³. æŠ ª³¦³ØëÆÌ ¬³ØªÈ ¡¹Ð²³Ù²³Ì ®´çˆ «¹ëÁÌëÆÐ ìÆÐ¡¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O4;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ ñÆÝéÁÌ²³Ì ¬³¬È¡³ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ìÁÌ©Èô¿¬È «³ÎëÆÌ ®·¢¹éˆ¬ÈçÆÐ ®ÈØ¦µÉ²´Ü¥³. äŒ¢¹ùÇ ª·ÝèÁÌëÆÌ «¹Ð¦¹Ü¬È¨³Ì ëŠèÁÐëÆÌ ¨¸¨³Ð¦³Üäˆ, ¬·Þò¼ •ÁÐ«È ‡ŒçŒåÆÌ «µÉê»ÉùÇ ‘³Ý ¥´ªÈÌ ±ÈýÄ¡ÈåÆÌ ¬·Ì¬³Ý«È ®ÈØ¥´ ùÄ«¸ ±¹Ð®¹¬¹Ü¥³.. [AMD_ET_ATK.AMD_CLK_GetName]«È êÁÌ¡¹Ð²³Ì éˆ¬ÈçÆÐ ®·Û ©·Ì”´ ¬·Ý«´ÉëŒçˆ èÁÐæÆÐ«ÈåÆÌ ¨³¬È¨³É êÁÌ¡³ÌŽ³¬È, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡·ùÇ ü¾¡³ØëÆÐ åŒŽÈÐ êŠ «·Ú«·Ü¥³. ª´Ýª³ÐëÆÐ ˜Šª¹¥´åÆÌ «³ðÆÌ ¡¹Ý²·Ø«È •Æá¢³Ü¥³åÆÌ «³Ìæˆ¡³Ø¨³Ì«È äŒ¢¹çÆÐ ±¹Ì²³¡¸ ²´ìŠ«·Ü¥³..;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O5;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ «¹Ðø¿åÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¬³èÁÐø¿çÆÐ ‘³äˆ ®·¢¹ùÇ èÁÌëÆÐ «¹Ð«·Ü¥³. «µÉ¡³ÌùÇ äˆï»ÝëÆÌ «ÈÜ«·Ü¬È¨³Ì èÁÌëÆÌ éŠæŒ¦·Ù¡¸ «¹Ð¦¹Üäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ®·ëÆØëŒçˆ ©³Ï«³æÆÐ«ÈÌ ¢³Øª·ÝëÆÐ ÿ¼Ì«¹Ý²´Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ìˆäÆØ ¬·ÌŽ³¬È ®·¢¹«¹Ü¥·Ì éˆ¬È«¸ ®·Û ©·Ì”´ ¬·Ý«´ÉëÆÐ ª·ÌèÁÐ²´Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ «¹É²³ÐëÆÐ ¥³²³Ì ¬³¬È¡³ ’³¬¹¢³ë»Ð ‘´Ž³¬È [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ •ÆÐ«·«³Ìäˆ «¹ëÁÌëÆÐ ìÆÐ¡¹Ü¥³;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNC_O6;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ èŠ¡ÈçÆÐ ä»Ï†Šª¸ùÂ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ìÁÝ«³Ý ©³Ý«·çÆÐ ¬·Ý¨¹ÌëŒçˆ æ»Ð±³²´Ü¥³. °·¬¹¢³ëˆåÆÌ ü¾¦³ÉùÇ èÁÐ¡¹Ð«¸ ±È¡³ “ÈÛ¡¹¢³¡³äˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ °´«·¢³ª· ®·ëÆØ åŒŽÈåÆÌ ü¾¡³Ø«¸ ¬·Þ«· ëÆØ¦³Ì²³¡¸ ²·¥·É«¹Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¢³Ø¬³çÆÐ èˆçŒåÆÌ ¬³äÁÝ«È “È«³ÛëÆÐ ìˆçŒ¨¹ •ÁØïÆÐ¡·¦¹Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]ùÇ “È«³Û«È —Š¦¹¬ÈØò¼ æ»ÝªÈ«¸ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ®·Û ©·Ì”´ ¬·Ð¬·ÝùÇ ä‰ª·ÝëÆÐ å»â«¹Ü¥³.;;;;;;;;;;;;;x;
+
+#	#	äŠ©·¬·Ì 2P «Èª·Ý, ¡³Ý¡³Ì/«¹É¡³Ì
+AMD_EV_DESC_2PNR_O1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ ¬³¬ÈçÆÐ ©³É«³¢·ãäˆ ¬³Ý¢³Ì¡³Ø®·¦·Ø äŒ¢¹ùÇ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. ¡³Ý¡³Ìéˆ¥³ ¬³ùÄ«¸ ¡³Ž³ëÁÌ «ÈÐ©³Ý¬·É«ÈÌ ²´ÝùÄ«¸, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆï»Ýò¼ éÁÐü¾¡³Ø©³Ê«¸ åŒŽÈÐ êŠ «·Ú«·Ü¥³.[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¡ºê»É ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³ «ºäˆæˆ «·Ú«È [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «³Ì«¸ ª³¬·Ý²´Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ åÁÌëÆÐ îŒ¡¸ –Œäˆ ¬·Ðä‹²´Ü¬È¨³Ì, «È¨È åÆÞ«·Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ ¬³¬ÈçÆÐ ©³É«³¢·ãäˆ ¬³Ý¢³Ì¡³Ø®·¦·Ø äŒ¢¹ùÇ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. ¡³Ý¡³Ìéˆ¥³ ¬³ùÄ«¸ ¡³Ž³ëÁÌ «ÈÐ©³Ý¬·É«ÈÌ ²´ÝùÄ«¸, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆï»Ýò¼ éÁÐü¾¡³Ø©³Ê«¸ åŒŽÈÐ êŠ «·Ú«·Ü¥³.[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¡ºê»É ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³ «ºäˆæˆ «·Ú«È [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «³Ì«¸ ª³¬·Ý²´Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ åÁÌëÆÐ îŒ¡¸ –Œäˆ ¬·Ðä‹²´Ü¬È¨³Ì, «È¨È åÆÞ«·Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O3;[AMD_ET_ATK.AMD_CLK_GetName]«È [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ ©È«¹Ð²³Ì ¡³Ý¡³Ì©·ØùÇ ¬³¬ÈçÆÐ ˜Šª¹©³É¬³, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬³ªÈÌùÇ ùÇ¬È«¸ ò¼Ì¡º«·Ú«È è»Ø«È ¥³Ð«³ëˆçŒåÆÌ ¡·ÛëÆÐ åŒŽ¹Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]«È ¡³Ý¡³ÌëÆÐ ¥³Ý²³¨¹Ìª· ü¾¦³ÉëÆÐ åŒŽÈåÆÌ ëÆØ¦³Ì¢¹¦³äˆ ¨´æˆ²³¨¹Ìª· ¡ÈâëÆÌ ä»ÛëÆÐ ä»Ý¡¹É²³Ð ‘´¨³¥³, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ²·¦ÈçÆÐ ñÆÌæÆÐ¨¹ éŠ¬·Ý²´Ü¥³.[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ †Š«³É²³Ì ¡³Ý¡³Ì©·ØùÇ ¬³¬È«¸ ÿÇç»Ý¥³Ý²³¥³¡³ ¡¹ÐäÁÉ ¬·Ð¬·Ý«¸ «ÈçŒäˆ ¨³Ð«³Ü¥³. éˆ¬È«¸ª· ñÆÐ¦·¢´¦ÈåÆÌ ¬·Ý«´ÉùÇ ¡³Øí»É«¸ [AMD_ET_DEF.AMD_CLK_GetName]«È ¬·ÝªÈÌëÆÐ ®³¦Èäˆ ¬·Ðä‹²³¬³, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ äŒ¢¹¡³ «´ùÂÌ²´Ü¡È«¸ äŒ¦·ã¡¸ ²´ ìŠ«·ÜëÆÐ —ÁÌ«È¦³¨¹ äŒ¢¹çÆÐ ©ÈëÁÛ«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O4;[AMD_ET_ATK.AMD_CLK_GetName]«È èŠ¬³©È²³¡¸ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¥·Ð ìÁÌ©Èô¿Ì éˆ¬ÈçÆÐ ©·Ø²³¬³, ¡³Ý¡³Ì©·ØùÇ †Š«³É²³Ì ¬³¬ÈçÆÐ °³äˆ êÁÌ¡¹ÐùÇ ±ÈÛ©³ÝëÁÐ«È ñÆÐ¦·¢´¦¹Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ëÆØñÅÝ²³¡¸ ëÁÛëŒ¨¹ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Üäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆï»Ýò¼ êÆÐðÆØëŒçˆ åÁÌèÁÐëÆÐ ñÆÐ¦¹Ü¥³...[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ®·¢¹ùÇ ª³Ð¡¹ÐëÆÐ ë‹¦ÈÌ²³äˆ äŒ êÁÌ¡¹Ð²³Ì ¬³äÁÝ«¸ ¥·¦·ëÁÌ ¡³Ý¡³Ì©·ØùÇ ¬·Ý«´ÉëÆÐ ˜»Ï«³Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¨³¬È¨³ÉŽ³¬È ©È¨¹ÝëÆÐ ¬ÈçŒ¨¹ «´ùÂÌ²´Ü¬È¨³Ì, «È¨È åÆÞ«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O5;[AMD_ET_ATK.AMD_CLK_GetName]«È èŠ¬³©È²³¡¸ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¥·Ð ìÁÌ©Èô¿Ì éˆ¬ÈçÆÐ ©·Ø²³¬³, ©È«¹Ð²³Ì ¡³Ý¡³Ì©·ØùÇ ¬³¬ÈçÆÐ °³äˆ êÁÌ¡¹ÐùÇ ±ÈÛ©³ÝëÁÐ«È ñÆÐ¦·¢´¦¹Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ëÆØñÅÝ²³¡¸ ëÁÛëŒ¨¹ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Üäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆï»Ýò¼ êÆÐðÆØ«¸ åÁÌèÁÐñÆÐ¦È¨¹ [AMD_ET_DEF.Religion.GetRandomGodName]ùÇ æˆëÁØëÆÐ ©ÈÐ«·Ü¥³..[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ®·¢¹ùÇ ª³Ð¡¹ÐëÆÐ ë‹¦ÈÌ²³äˆ äŒ êÁÌ¡¹Ð²³Ì ¬³äÁÝ«¸ ¥·¦·ëÁÌ ¡³Ý¡³Ì©·ØùÇ ¬·Ý«´ÉëÆÐ ˜»Ï«³Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¨³¬È¨³ÉŽ³¬È ©È¨¹ÝëÆÐ ¬ÈçŒ¨¹ «´ùÂÌ²´Ü¬È¨³Ì, «È¨È åÆÞ«·Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O6;[AMD_ET_ATK.AMD_CLK_GetName]«È †Š¬³Ù²³Ì ¬³¬ÈçÆÐ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¢³Ø¬³çÆÐ èˆçŒåÆÌ éˆ¬È«¸ ˜Šª¹©³É«³Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ùÄçˆåÆÌ åÁÌèÁÐëÆÐ, «³¦´çˆåÆÌ ±ÈçÆÐ ñÆÐ¦È¨¹  è»ØéŠ¦ÈØ®¹Ü¬È¨³Ì, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ äŒ¢¹ùÇ ¥³Ðî»Ø²³Ì ªÈÌëÆØêˆ¦ÈçÆÐ ©ÈëÁÛëŒ¨¹ ®·¢¹éˆ¬ÈùÇ ¡³Øí»ÉëÆÐ ìÆÐ¡¹Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ®·ëÆØ åŒŽÈåÆÌ ü¾¦³É«¸ ¬·²³Ý²³¬È è»Û²´Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]«È ¬·ÝªÈÌëÆÐ ®³¦¹ÜëÆÐ ‘´åÆÌ «È¨È äŒ¢¹ùÇ ¢³Ø¬³çÆÐ èˆçŒ¥·Ì éˆ¬È«¸ª· ¥·¦·ëÁÌ ¡³Ý¡³Ì©·ØùÇ ¬·Ý«´É«È ñÆÐ¦·¢´¦Èäˆ «ÈÜ«·Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ äŒ¢¹¡³ «³Ì«¸ “³ ¥³Ð¦³äˆ «´ùÂÌ²´Ü¡È«¸ äŒ¦·ã¡¸ ²´ ìŠ«·ÜëÆÐ —ÁÌ«È¦³¨¹ äŒ¢¹çÆÐ ©ÈëÁÛ«·Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.Religion.GetRandomGodName]ùÇ «ÈçÆØëÆÐ éŠçŒ¦¹ ²´Ü¬È¨³Ì, ü¾¦³É«¸ ¨³©Èô¿Ì ²¹åÆÌ ¬³ªÈÌùÇ «ÈçÆØìˆ®³ ¬¸¥´çˆ ©³ÐëÆØ²³Ð êŠ «·Ú«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O7;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ê»É©³É²³äˆ «·É¬Èçˆ ©³Ð¡ÈªÈ¯ÈÌ ¬³¬È ùÄ«¸ «³Í«³Ü¬È¨³Ì, ¬·Ì²¹ ¨³Ìì»ÉêŒ¦·Ù¬È «³Î«³Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ²³ÌªÈØ²³¥³åÆÌ æÆÛ²³Ì «·ÐäÁÐçˆ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ©³¦³éˆäˆ «ÈÜ¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ éÁÐ¨³ÌêŒ¦·Ì «·ÐäÁÐçˆ ¡ºê»É ²·¦ÈçÆÐ ñÆÌæÆÐ«·Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]«È ªÈÌëÆØ²³¨¹ ¬·Ý«´ÉëÆÐ ïˆ²´¢´¬³ ¨´ëŠ ªÈÐ¨³ÝêŒ¦·ëÁÌ ð‰¬·ÝëŒçˆ äŒçÆÐ ¨´æˆ²´Ü¥³..;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O8;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ê»É©³É²³äˆ «·É¬Èçˆ ©³Ð¡ÈªÈ¯ÈÌ ¬³¬È ùÄ«¸ «³Í«³ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. ª³Ð«È ¨³Þ¥³ãåÆÌ êÆÙ¡È®³Ì êˆ¦ÈçÆÐ ¢´¨¹ ªÈÌëÆØ²³åÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ëÆØ¦³Ì²³Ì èˆêÆÙ«¸, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ «·ÐäÁÐëÆÐ éÁÑ²È¨¹ [AMD_ET_DEF.AMD_CLK_GetName]ò¼ åÁÌëÆÐ ¨³ìŠ®È¬È «³ÎëŒ¦¹ ²³Ì¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ü¾¦³É«¸ ¬·Ð«· ðÁÐ¦ÈÌ åÁÌëŒçˆ ¡ºê»É ²·¦ÈçÆÐ ñÆÌæÆÐ«·Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]«È ªÈÌëÆØ²³¨¹ ¬·Ý«´ÉëÆÐ ïˆ²´¢´¬³ ¬³ªÈÌæˆ ä‰ª·ÝëÆÐ å»â«È¨¹ ¬·Ð¬·Ý«¸ «ÈçŒ¦·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_O9;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ê»É©³É²³äˆ «·É¬Èçˆ ©³Ð¡ÈªÈ¯ÈÌ ¬³¬È ùÄçˆ ²·¦ÈçÆÐ ¢´¦¹Ü¬È¨³Ì, ®·¢¹«¸¡¸åÆÌ «·¦¹ëÁÌ «ÈÐ«È«·Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ±³ò¼ùÇ äˆï»Ý«¸ ëÁÐ¨·É«¹Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ò¿Ý¬³Ý²È é»É¬³Ù²³Ì ð‰¬·ÝëŒçˆ äŒ èˆêÆÙëÆÐ ©³¦³éˆ«³Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆï»ÝêŒ¦·ùÂ²³¨¹Ìª·æˆ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]«È ªÈÌëÆØ²³¨¹ ¬·Ý«´ÉëÆÐ ïˆ²´¢´¬³ «³Ìæˆù¼ ªÈÐ¨³Ý«È ª·Ê«ÈÌ ¨Èè‰²³Ì ð‰¬·ÝëŒçˆ äŒ«¸¡¸ª· ‘·Ð«·¬¹Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_2PNR_OA;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ê»É©³É²³äˆ «·É¬Èçˆ ©³Ð¡ÈªÈ¯ÈÌ ¬³¬È ùÄçˆ ²·¦ÈçÆÐ ¢´¦¹Ü¥³. ®·¢¹«¸¡¸åÆÌ ì»Ø «·¦¹ëÁÌ ªÈæˆ«¹Ü¬È¨³Ì, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ åÁÌèÁÐëÆÐ äÆÐ“·Ý«È¨¹Ìª·æˆ «·ÐäÁÐëÆÐ éÁÑ²Èäˆ ü¾¦³É«¸ ªÈÌëÆØ²³¨¹ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ åÁÌèÁÐëÆÐ äÆÐ“·Ý«È¨¹Ìª·æˆ ®·ëÆØ ¨³ÛéˆåÆÌ ü¾¦³ÉëÆÐ ë‰äŠ²³¨¹ ¡ºê»É ²·¦ÈçÆÐ ñÆÌæÆÐ«·Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]«È ªÈÌëÆØ²³¨¹ ¬·Ý«´ÉëÆÐ ïˆ²´¢´¬³ ¡³©¹Ù¡¸ è»ØëÆÐ ‘·Ð¨¹ ¬·Ð¬·Ý«¸ «ÈçŒ¦·Ü¥³.;;;;;;;;;;;;;x;
+
+
+
+AMD_EV_OPT_2P_OLD;[AMD_CLK_EV_OPT_2P_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O1;“·É ¨³Ìì»ÉêŒ¦·Ù¬ÈåÆÌ «³ÎäÁÌ...;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O2;¢³—Œ¬È «³Î«³Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O3;±¹Ýª´Ý «È¡·Û¨³Ì ²³äˆ ª³Ð«³ÜëŒ¨¹Ì ì»ã¡¸Ü«·!;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O4;ìÁÉäˆ ªÈâ¥³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O5;¡ÈéÁÌ ¢³’³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_2P_O6;©·Ð“·...•Æá«ÈÌ¡³...?;;;;;;;;;;;;;x;
+
+AMD_OPT_fin_wide_shot_fail;«³... «³Ì«¸åÆÌ «³Ìô¿Ì¥³äˆ ²´ÜåÆÌ¥¸...;;;;;;;;;;;;;x;
+
+#	#	äŠ©·¬·Ì 2P ¨³¡³Ì
+AMD_EV_DESC_2P_HF;[AMD_CLK_EV_DESC_2HHF_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O1;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ ñÅÝíÆÉ²³Ì ¨³Ð¬³¬È¡³ [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ ˜Šª¹©³É²¹Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ è»Ø«È ”ÈÞ«·¬ÈåÆÌ äˆï»Ý«¸ ëÁÐ¨¹ êˆ¦È¬ÈÐ¦·Ü¬È¨³Ì [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ëÁØ¬ÈÉ«ÈØëÆÌ ¨·Ø†Š¬È «³Î«³Ü¥³.[AMD_ET_ATK.AMD_CLK_GetName]ùÇ ¬ÈÐìŠåÆÌ [AMD_ET_DEF.AMD_CLK_GetName]«È ¬·ÝªÈÌëÆÐ «È×äˆ åÆÐ«·¬ÈÐ ‘´Ž³¬È ¡ºê»Éô¿«·Ü¥³. ¬³ØªÈ ‡Š [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¬³ÉëÆÌ «³Ø¯·Û«¸¡¸ª· ‘·Ð«·¬¹Üäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¥³¦È ª³«È«¸ª· ¨³ÐùÇ ¬·Ý«´É«È ñÆÐ¦·¢·Ø®¹Ü¥³;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¡·¥´²³Ì ¨³Ð¬³¬ÈçÆÐ [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ ˜Šª¹©³É«³Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «ÈÙ«¸ª·åÆÌ ¢³Ð¯³çˆëÁÌ ©È¨¹Ý«È °·¬¹¢³ù¼Ü¬È¨³Ì äŒ¢¹ùÇ «³¦´Û«ÈÙëÆÌ ¡·¥´²³Ì «ÈèÁÐëÆÐ ¨´•Œ¦·Ù¡¸ ©³Ï«³æÆÐ«Èäˆ «ÈÜ¥³. [AMD_ET_ATK.AMD_CLK_GetName]«È ¬·Ð¬·ÝëÆÐ ²µÝ²´ ¥³Ð¦ÈåÆÌ æ»Ý«³Ì, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡³Ý¦¹Ð²³Ì ü¾¡³Ø«¸ ¨¹ß ©·Ì«È¢³ ùÇªÈÉëÆÐ «È×«·Ü¥³. ¨³®ÈØ¢´ [AMD_ET_ATK.AMD_CLK_GetName]«È ˜»Ï«³¢´Ì ¬ÈØêÆÝùÇ ì»Ý¬³¡³ ¬³äÁÝëÆÐ ¡³æÆÉ ¨¸ùÂÜäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ë»Ì è»ØëÆÐ ëÁØ”ÈÐ¡·¦È¨¹ äŒ¡·ÛëÆÐ ©³Ï«³æÆÐ«¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O3;[AMD_ET_ATK.AMD_CLK_GetName]«È ëŠ¦³Ø²³Ì ¨³Ð¬³¬ÈçÆÐ [AMD_ET_ATK.AMD_CLK_GetName]«¸¡¸ ˜Šª¹©³É¬³, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬ÈØêÆÝ®·¦·Ø êˆ¦È®¹Ü¥³. «ÈÌ¡³Ì ¢³Ø¬³¡³ ìÁÐ êŠ «·ÚåÆÌ ü¾¦³É«¸ äŒ¢¹åÆÌ åÁÌëÆÐ ôÄ¬ÈÙäˆ ²¹çÆÐ ¢´¨ÈÐ¨¹ ëÆØ°³Ý²³¡¸ ²·¥·É«¹Ü¥³.[AMD_ET_ATK.AMD_CLK_GetName]«È ¬·Ð¬·ÝëÆÐ ²µÝ²´ ¥³Ð¦ÈåÆÌ æ»Ý«³Ì, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡³Ý¦¹Ð²³Ì ü¾¡³Ø«¸ ¨¹ß ©·Ì«È¢³ ùÇªÈÉëÆÐ «È×«·Ü¥³. ¨³®ÈØ¢´ [AMD_ET_ATK.AMD_CLK_GetName]«È ˜»Ï«³¢´Ì ¬ÈØêÆÝùÇ ì»Ý¬³¡³ ¬³äÁÝëÆÐ ¡³æÆÉ ¨¸ùÂÜäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ë»Ì è»ØëÆÐ ëÁØ”ÈÐ¡·¦È¨¹ äŒ¡·ÛëÆÐ ©³Ï«³æÆÐ«¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O4;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ ñÅÝíÆÉ²³Ì ¨³Ð¬³¬È¡³ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ®·¢¹éˆ¬ÈçÆÐ šÃ–Á×«·Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ è»Ø«È ”ÈÞ«·¬ÈåÆÌ äˆï»Ýò¼ ²¹Øëˆ¡³Ø«¸ ëÁÐ¨¹ êˆ¦È¬ÈÐ¦·Ü¬È¨³Ì [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ «³¦³Ýä»Û²³¬È «³Îäˆ äŒ¢¹ùÇ ®·¢¹¨³ÉëÆÐ ”ÈÞ«·©³Ð¡¹Ü¥³. ìˆäÆØ ¬·ÌŽ³¬È ®·¢¹«¹Ü¥·Ì [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ  [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ¬ÈÐìŠçÆÐ ©·°È¬È è»Û²³äˆ ¬·ÝªÈÌëÆÐ «È×«·©·¦¹Ü¥³. ¬³ØªÈ ‡Š [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¬³ÉëÆÌ «³Ø¯·Û«¸¡¸ª· ‘·Ð«·¬¹Üäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¢³Ø¬³çÆÐ èˆçŒåÆÌ éˆ¬È«¸ª· ¨³ÐùÇ ¬·Ý«´É«È ñÆÐ¦·¢·Ø®¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O5;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¡·¥´²³Ì ¨³Ð¬³¬Èçˆ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ®·¢¹çÆÐ šÃ–Á×«·Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ åÁÌèÁÐëÆÐ ñÆÐ¦È¨¹ äˆï»ÝëÆÐ ‡ˆêˆ²´Ü¬È¨³Ì, äŒ¢¹ùÇ «³¦´Û«ÈÙëÆÌ ±ÈçÆÐ ñÆÐ¦È¨¹Ìª·æˆ ®·ëÆØ ¬·Ù²³åÆÌ ¡·¥´²³Ì «ÈèÁÐëÆÐ éŠæŒ¦·Ù¡¸ ©³Ï«³æÆÐ«Èäˆ «ÈÜ¥³. [AMD_ET_ATK.AMD_CLK_GetName]«È ®·¢¹¬ÈçÆÐ ¬ÈÛ©³ÓåÆÌ æ»Ý«³Ì, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ®·ëÆØ åŒŽÈåÆÌ ü¾¡³Ø«¸ ¨¹ß ©·Ì«È¢³ ùÇªÈÉëÆÐ «È×«·Ü¥³. ¨³®ÈØ¢´ [AMD_ET_ATK.AMD_CLK_GetName]«È ˜»Ï«³¢´Ì ¬ÈØêÆÝùÇ ì»Ý¬³¡³ êÁÌ¡¹Ð²³Ì ¬³äÁÝëÆÐ ¡³æÆÉ ®´ùÂÜäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¢·Ø®¹‡ŒçŒåÆÌ ¬·Ý«´É«È ¥³¦ÈçÆÐ °³äˆ ‡ŒçŒåÆÌ ¡·ÛëÆÐ åŒŽÈ¨¹ ªÈÐªÈÌ²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_2HHF_O6;[AMD_ET_ATK.AMD_CLK_GetName]«È ëŠ¦³Ø²³Ì ¨³Ð¬³¬ÈçÆÐ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ êÁÌ¡¹Ð²³Ì éˆ¬È«¸ ˜Šª¹©³É¬³, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ©³Ð¬·Ý¢³Ì ¬ÈØêÆÝ®·¦·Ø êˆ¦È®¹Ü¥³. °´«·¢³ª· ®·ëÆØ åŒŽÈåÆÌ «·Ø®·Ý¢³Ì ü¾¦³É«È äŒ¢¹ùÇ åÁÌëÆÐ ôÄ¬ÈÙäˆ ²¹çÆÐ ¨³©ÈªÈ¯¹Üäˆ, ©³éˆ¡³á«È ©·Ð¦ÈÌ «ÈÙ«¸ª·åÆÌ äÁÌ®ÈØò¼ ²³ØŽ¸ ëÆØ°³Ý²³Ì ªÈÌëÆØêˆ¦È¡³ ñÆÐ¦·¢³ù¼Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]«È ®·¢¹¬ÈçÆÐ ¬ÈÛ©³ÓåÆÌ æ»Ý«³Ì, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ®·ëÆØ åŒŽÈåÆÌ ü¾¡³Ø«¸ ¨¹ß ©·Ì«È¢³ ùÇªÈÉëÆÐ «È×«·Ü¥³. ¨³®ÈØ¢´ [AMD_ET_ATK.AMD_CLK_GetName]«È ˜»Ï«³¢´Ì ¬ÈØêÆÝùÇ ì»Ý¬³¡³ êÁÌ¡¹Ð²³Ì ¬³äÁÝëÆÐ ¡³æÆÉ ®´ùÂÜäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¢·Ø®¹‡ŒçŒåÆÌ ¬·Ý«´É«È ¥³¦ÈçÆÐ °³äˆ ‡ŒçŒåÆÌ ¡·ÛëÆÐ åŒŽÈ¨¹ ªÈÐªÈÌ²´Ü¥³.;;;;;;;;;;;;;x;
+
+AMD_OPT_2P_HORSE;ðŠ²È²È²È²ÈÝ!;;;;;;;;;;;;;x;
+
+
+
+#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+
+AMD_VIE_2P_NORM_CONS_FIN_bad_wide;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¨³¬È¨³É êÁÌ¡³ÌŽ³¬È ¡ÈÌ¬³ÝëÆÐ å»ã¬È «³Îäˆ ¬·Ý«´ÉëÆÐ ©³Ê«¸ —Š¦ÈåÆÌ ¥¸ ª·Ýä»Ý²´Ü¥³. äŒ¦·¢³ äŒ ‘´èÁÌ«ÈÌ¬È, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ©¹Ðçˆ ìÆÐ¡È¬È è»Û²³Ì ¡·Û ¡³á¥³...;;;;;;;;;;;;;x;
+AMD_VIE_2P_NORM_CONS_FIN_good_wide;[AMD_ET_DEF.AMD_CLK_GetName]«È ¬·Ð¬·ÝùÇ êˆ¦ÈçÆÐ å»â«ÈÌ êÁÌ¡³Ì, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ²·¦ÈçÆÐ ôÄçˆ ’´äˆ äŒ¢¹ùÇ è»Ø ©³Ê«¸ ¬·Ý«´ÉëÆÐ ˜»Ï«³¢´«·Ü¥³.;;;;;;;;;;;;;x;
+
+AMD_VIE_2P_NORM_RAPE_FIN_bad_wide;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ²³Ì®³Ø ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³ ¬³¬ÈçÆÐ —»Ù«³ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «·ÐäÁÐ«¸ ª³¬·Ý²´Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ «·ÐäÁÐ«¸ ¬·Ý«´ÉëÆÐ ôÄ¬ÈÙ«·˜ÆÌ ®´, «³Ìæˆù¼ éÁÌåˆ¡³ ª·Ê«ÈÌ é»É¬³Ù²³Ì åÁÌ©ÈßëŒçˆ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ åˆ¦¹éˆ«³Ü¥³.;;;;;;;;;;;;;x;
+AMD_VIE_2P_NORM_RAPE_FIN_good_wide;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ²³Ì®³Ø ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³ ¬³¬ÈçÆÐ —»Ù«³ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «·ÐäÁÐ«¸ ª³¬·Ý²´Ü¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ «·ÐäÁÐ«¸ ¬·Ý«´ÉëÆÐ ôÄ¬ÈÙ«·˜ÆÌ ®´, «³Ìæˆù¼ éÁÌåˆ¡³ ª·Ê«ÈÌ é»É¬³Ù²³Ì åÁÌ©ÈßëŒçˆ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ åˆ¦¹éˆ«³Ü¥³.;;;;;;;;;;;;;x;
+
+AMD_VIE_2P_NORM_REVERSE_FIN_wide;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ð‰¬·Ýò¼ ‡ˆñÆÙëÆÐ ìŠªÈ²³¨¹Ìª· ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³, äŒùÇ ¬·Ð¬·Ý«È ¡³Ž³ùÂëˆåÆÌ ¡·ÛëÆÐ ðˆ®³É²³äˆ ¬³¬ÈçÆÐ —»Ù«³¢´Ü¥³. [AMD_ET_ATK.AMD_CLK_GetName]«È ¨´ëŠ ¬·Ð©³É²³Ì ð‰¬·ÝëÆÐ ¬ÈÛåÆÌ ¡·ÛëÆÐ éˆäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äŒ¡³ ª³¬·Ý²³Ð êŠ «ÈÜæˆç»É ©³ÐëÆÐ ©ÈÐ¦¹ìŠ«·Ü¥³...;;;;;;;;;;;;;x;
+
+AMD_VIE_2P_HORSE_GIRL_FIN_wide;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ ¬ÈÐìŠåÆÌ ¢·èŠ ¡·®ÈÐ«·Üäˆ, ¡¹ÐäÁÉ ¨³¬È¨³É êÁÌ¡³Ì«¸ è»Éð‰çÆÐ ©·Û«·¢³äˆ ¨³Ð«³Ü¥³. æŠ ì»Ýì»ÉùÇ ®¸«´ÉëŒçˆ ©·ÌæÆÐ¡·¦ÈåÆÌ ñÅÝíÆÉ²³Ì ¨³Ð¬³¬È¡³ ²·ä»Ý«¸ ¥´¦µÝùÇ ¬·Ý«´ÉëÆÐ —ÁØ«·Üäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ îŒ¡¸ ©·Ð«·¬ÈÌ éˆ¬ÈçÆÐ ëÁØ”ÈÐ¡·¦È¨¹ ¡·®ÈÌ êÁØëÆÐ ¢´øÄ«·Ü¥³.;;;;;;;;;;;;;x;
+
+
+
+#ª·Ýò¼Ì¡º «È©¸ÌïŒ äŠ±³Ì Sex Events DESC (OLD);0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+
+#	¢³ØìŠ*«¹ª·Ý
+AMD_EV_DESC_MPMF_OLD;[AMD_CLK_EV_DESC_MPMF_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPMF_OLD;¢³Ø¢¹ ¥³Ì®¸¬·Ì «ÈØªÈ ª·Ì°´É¬È;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_RB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ñÆÝéÁÌ²³Ì «¹¬³æÆÐ«¸¡¸ ¡³Ý¡³Ì¥³Ý²´ÜêÆÙ¢È¥³. æŠ ©·Ì”´ éˆ¬È«¸ ¬·Ý«´ÉëÆÐ “³¬ÈçÆÐ ‘´Ž³¬È¨³Ì ²´æˆ äŒåÆÌ ²´Ýé»É²´ÜêÆÙ¢È¥³. äŒ¦·¢³ «¹Ðª¸©·Ì”´ ª³¬·Ý «È‡Šçˆ ©³Ð¡È¡³ ¬³Ð ô¿¬È «³Î¬³, «¹¬³æÆÐëÆÌ ÿ¼çÆÐ ¢´¨¹ äŒùÇ «·Ý¥·Ý«ÈçÆÐ ä»Ý¡¹É²´ÜêÆÙ¢È¥³. [AMD_ET_OH.GetFirstName]ëÆÌ äŒ «È‡ŠùÇ «ÈÐëÆÐ ¬³Ð ¡È«·É²³¬È è»Û²³Ù¢È¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_RG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ñÆÝéÁÌ²³Ì «¹¬³æÆÐ«¸¡¸ ¡³Ý¡³Ì¥³Ý²´ÜêÆÙ¢È¥³. «¹¬³æÆÐëÆÌ ¬³ªÈÌæÆÐëÆÐ ¨³Ìì»ÉªÈ¯È¬È è»Û²³¨¹Ì ¬³Ð¦³©·¦È¡¸Ü¥³äˆ äŒçÆÐ ²¹Ù©³É²´ÜêÆÙ¢È¥³. äŒ¦·¢³ [AMD_ET_OH.GetFirstName]ëÆÌ èˆæÆÌ ¡³Ý¡³Ì¬³æÆÐ«È ¬·Ý«´ÉëÆÐ ñÆÐ¦È¨¹ ¢³¡³‘·Ð«·¬ÈÐ ‘´Ž³¬È éÁÐª³ªÈÌ®·¦·Ø ¨¹ß ©·Ì«Èäˆ «ÈÐ«·ª·ª· ¬·ÉëÆÐ ”ÈÐ¦·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_CB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ª³¦³Ý²³åÆÌ «¹«ÈÌæÆÐëÆÐ éÁÐ¦·èˆ«³ ¢·ÓëÆÌ ®ÈØªÈÐ«¸ª· ©³ØùÇ íÁÉ¬¸çÆÐ ¡´û¿²´Ü¥³. äŒ¦·¢³ äŒ¢¹æÆÐ èˆæŠ«¸¡¸ ²³Ì ©·Ì“ÈÉ ª³¦³ÝëÆÐ ìŠåÆÌ ¡·Û¨³ÌëŒçˆæˆ [AMD_ET_OH.GetFirstName]ëÆÌ ¬È®¹©·¦¹Ü¥³. «¹«ÈÌæÆÐëÆÌ «ÈÙëÆÐ èˆ«³ [AMD_ET_OH.GetFirstName]ëÆÐ ©È¢³Ì²´Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_CG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ª³¦³Ý²³åÆÌ «¹«ÈÌæÆÐò¼ ¢·ÓëÆÌ ®ÈØªÈÐ«¸ èˆ«¹ ©³ØùÇ íÁÉ¬¸çÆÐ ¡´û¿²´Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ ²³¢³ùÇ «ÈÙ, æŠ ¡´ùÇ ê»Ì, ª¸ ©·Ì”´ ¥³¦ÈçÆÐ •ÆÎ«ÈØ«·Ú«È ëÁØ¬ÈÉ«¹Üäˆ, èˆæÆÌ «¹«ÈÌæÆÐ«È [AMD_ET_OH.GetFirstName]ùÇ “ÈçÆÐ ðÁØäˆ ¨³Ìì»ÉêŒ¦·Ù¡¸ ¬³ØæÆÐ ‘´Ž³¬È íÁÉ¬¸åÆÌ ¡ºê»Éô¿«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_SB_OLD;[AMD_ET_OH.GetFirstName]ëÆÐ æÁÐ¦·“³Ì «¹ª·Ý äˆ¡´ÉæÆÐ«È ëÀÉ¨³Ýò¼ ¡È¥´çˆ åÁÌëÆÐ ©³Ì”³É«¹Ü¥³. äŒ¦·¢³ äŒ¢¹æÆÐ èˆæŠçÆÐ ¨³Ìì»ÉªÈ¯È¡È«¸Ì äŒùÇ åˆ¦¹É«È éŠì»É²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_SG_OLD;[AMD_ET_OH.GetFirstName]ëÆÐ æÁÐ¦·“³Ì «¹ª·Ý äˆ¡´ÉæÆÐ«È ëÀÉ¨³Ýò¼ ¡È¥´çˆ åÁÌëÆÐ ©³Ì”³É«¹Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ «¹ÝëÁÝ¬·É«ÈÌ ¬·ÌïŠ •Æá«¸ äŒ¢¹æÆÐëÆÐ ®·Ìª³ÝùÇ ù¼ÝäÁÉëŒçˆ éˆ¢´©·¦¹Üäˆ, èˆæÆÌ äˆ¡´ÉæÆÐëÆÌ ²´Ýé»É²³Ì «·ÐäÁÐçˆ ˜Œ¦·¬¹ ¬³ØæÆÐ«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMF_BG_OLD;ëÆÌ¨ÈÐ²³äˆ ‡ˆÿ¼çˆëÁÌ ®ÈØªÈÐ. ìˆ¡³É¡³áëÆÌ è»Ø¨´ùÇ ¨È¢¹æÆÐ«È ªÈÐîŒ®·¦·Ø éŠæŒ¦·ëÁÌ ±ÈéŠçÆÐ í»Éí»É²³¡¸ ¬·ÉªÈäˆ [AMD_ET_OH.GetTitledFirstName]«¸¡¸ ¥³Ð¦³éÁá«·Ü¥³. äŒ¢¹æÆÐëÆÌ ¨´¦¹É¬·É«ÈÌ ëÅÉ®¸ù¼ ÿ¼Ìª³Ý¬·É«ÈÌ ¡ÈêÁÐçˆ ëˆåÆÐ ²³çŠæ»Ý«³Ì [AMD_ET_OH.GetFirstName]«¸¡¸ ®·ÌäÁÉëÆÐ éˆ«¹ìÁÐ ¡·Û«È¥³.;;;;;;;;;;;;;x;
+
+
+#	¢³ØìŠ*¢³Øª·Ý
+AMD_EV_DESC_MPMM_OLD;[AMD_CLK_EV_DESC_MPMM_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPMM_OLD;¢³Ø¢³Ø ¥³Ì®¸¬·Ì «ÈØªÈ ª·Ì°´É¬È;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_RB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ äŠ¨·Ý¨³Ì «ÈÜëŒ¨¹Ì ª·Ý©¹Ðò¼ ì»Ýì»ÉëÆÐ ¡³¦È¬È «³ÎåÆÌ ñÅÝ«³É²³Ì ¢³Ø¬³æÆÐ«¸¡¸ ¡³Ý¡³Ì¥³Ý²´ÜêÆÙ¢È¥³. [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_RG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ äŠ¨·Ý¨³Ì «ÈÜëŒ¨¹Ì ª·Ý©¹Ðò¼ ì»Ýì»ÉëÆÐ ¡³¦È¬È «³ÎåÆÌ ñÅÝ«³É²³Ì ¢³Ø¬³æÆÐ«¸¡¸ ¡³Ý¡³Ì¥³Ý²´ÜêÆÙ¢È¥³. äŒ¦·¢³ äŒåÆÌ ¨³¬È¨³ÉŽ³¬È ¬·ÝªÈÌëÆÐ «È×¬È «³Îäˆ èˆæÆÌ ¡³Ý¡³Ì¨³æÆÐ«È ¬È®¹ ¢³¡³‘·Ð«·¬ÈÐ ‘´Ž³¬È ©·°¹¢´ÜêÆÙ¢È¥³. [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_CB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ª³¦³Ý²³åÆÌ ¢³Ø¬³æÆÐò¼ ®ÈØªÈÐ«¸ èˆ«¹ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_CG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ª³¦³Ý²³åÆÌ ¢³Ø¬³æÆÐò¼ ®ÈØªÈÐ«¸ èˆ«¹ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_SB_OLD;[AMD_ET_OH.GetFirstName]ëÆÐ æÁÐ¦·“³Ì ¢³Øª·Ý äˆ¡´ÉæÆÐ«È ëÀÉ¨³Ýò¼ ¡È¥´çˆ åÁÌëÆÐ ©³Ì”³É«¹Ü¥³. äŒ¦·¢³ äŒæÆÐ èˆæŠçÆÐ ¨³Ìì»ÉªÈ¯È¡È«¸Ì äŒùÇ åˆ¦¹É«È éŠì»É²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_SG_OLD;[AMD_ET_OH.GetFirstName]ëÆÐ æÁÐ¦·“³Ì ¢³Øª·Ý äˆ¡´ÉæÆÐ«È ëÀÉ¨³Ýò¼ ¡È¥´çˆ åÁÌëÆÐ ©³Ì”³É«¹Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ «¹ÝëÁÝ¬·É«ÈÌ ¬·ÌïŠ •Æá«¸ äŒæÆÐëÆÐ ®·Ìª³ÝùÇ ù¼ÝäÁÉëŒçˆ éˆ¢´©·¦¹Üäˆ, èˆæÆÌ äˆ¡´ÉæÆÐëÆÌ ¨³Ìì»É²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPMM_BG_OLD;[AMD_ET_OH.GetTitledFirstName]ëÆÌ äˆäÆÙêŒ¦·ëÁÌ ®ÈØªÈÐ«¸ª· ¡³Ý®·Ð¡³áëÆÌ äÆÌëÅÉëÆÐ •ÁØïÆÐ¡·¦È¨¹ ¨³Ð ¡³áëÆÌ ¬³¬ÈçÆÐ ª¸ëÁÌ ¨·Û¬ÈÌ ¢³Ø¬³æÆÐ«¸¡¸ æÁÐ¦·“³«¹Ü¥³. äŒæÆÐëÆÌ ©³Ø ¡ÈêÁÐùÇ ¬·ÌèÁÌ¡³«È¨¹, ëˆåÆÐ ²³çŠæ»Ý«³Ì [AMD_ET_OH.GetFirstName]ùÇ ìÆÐ¡·ëÁØ¨³ÌëÆÐ ùÄ²´ é»Ýª³²³Ð ¡·Û«È¥³.;;;;;;;;;;;;;x;
+
+#	«¹ìŠ*«¹ª·Ý
+AMD_EV_DESC_MPFF_OLD;[AMD_CLK_EV_DESC_MPFF_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFF_OLD;«¹«¹ ¥³Ì®¸¬·Ì «ÈØªÈ ª·Ì°´É¬È;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_RB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ëÀÉ¨³ÝëŒçˆ åÁÌëÆÐ ©·Ì–ÆÉ«ÈåÆÌ ñÅÝ«³É²³Ì «¹¬³æÆÐ«¸¡¸ ¡³Ý¡³Ì¥³Ý²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_RG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ëÀÉ¨³ÝëŒçˆ åÁÌëÆÐ ©·Ì–ÆÉ«ÈåÆÌ ñÅÝ«³É²³Ì «¹¬³æÆÐ«¸¡¸ ¡³Ý¡³Ì¥³Ý²´ÜêÆÙ¢È¥³. äŒ¢¹åÆÌ ²³Ìæ»Ý«³Ì ¢³Ø¬³¡³ ìÁÐ êŠ «·ÚåÆÌ ü¾¡³Ø«¸ å»Ý¦³É¥³Ý²´Ü¬È¨³Ì, êÆÙ¡¹É¬³æÆÐ«È èˆæŠ ¬È®¹ª· ¢³¡³‘·Ð«·¬ÈÐ ‘´Ž³¬È «·‘·ã¡¸æÆÌ ©·°¹¢´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_CB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ª³¦³Ý²³åÆÌ «¹«ÈÌæÆÐò¼ ®ÈØªÈÐ«¸ èˆ«¹ ëÅÉ®¸ùÇ íÁÉ¬¸çÆÐ ©·Ð«¹ÜêÆÙ¢È¥³. äŒ¢¹æÆÐëÆÌ ©³Øª´ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_CG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ª³¦³Ý²³åÆÌ «¹«ÈÌæÆÐò¼ ®ÈØªÈÐ«¸ èˆ«¹ ëÅÉ®¸ùÇ íÁÉ¬¸çÆÐ ©·Ð«¹ÜêÆÙ¢È¥³. äŒ¢¹æÆÐëÆÌ ©³Øª´ [AMD_CLK_GetHadSexCons] [AMD_CLK_GetPlayScore];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_SB_OLD;[AMD_ET_OH.GetFirstName]ëÆÐ æÁÐ¦·“³Ì «¹ª·Ý äˆ¡´ÉæÆÐ«È ëÀÉ¨³Ýò¼ ¡È¥´çˆ åÁÌëÆÐ ©³Ì”³É«¹Ü¥³. äŒ¦·¢³ äŒ¢¹æÆÐ èˆæŠçÆÐ ¨³Ìì»ÉªÈ¯È¡È«¸Ì äŒ¢¹ùÇ åˆ¦¹É«È éŠì»É²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_SG_OLD;[AMD_ET_OH.GetFirstName]ëÆÐ æÁÐ¦·“³Ì «¹ª·Ý äˆ¡´ÉæÆÐ«È ëÀÉ¨³Ýò¼ ¡È¥´çˆ åÁÌëÆÐ ©³Ì”³É«¹Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ «¹ÝëÁÝ¬·É«ÈÌ ¬·ÌïŠ •Æá«¸ äŒ¢¹æÆÐëÆÐ ®·Ìª³ÝùÇ ù¼ÝäÁÉëŒçˆ éˆ¢´©·¦¹Üäˆ, èˆæÆÌ äˆ¡´ÉæÆÐëÆÌ ¨³Ìì»É²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFF_BG_OLD;[AMD_ET_OH.GetTitledFirstName]ëÆÌ äˆäÆÙêŒ¦·ëÁÌ ®ÈØªÈÐ«¸ª· ©È¥³Ì¡³áëÆÌ ±ÈéŠù¼ ìˆ¡³É¡³áëÆÌ è»Ø¨´ùÇ ¨È¢¹æÆÐ«¸¡¸ æÁÐ¦·“³«¹Ü¥³. äŒ¢¹æÆÐëÆÌ ©³Ø ¡ÈêÁÐùÇ ¬·ÌèÁÌ¡³«È¨¹, ëˆåÆÐ ²³çŠæ»Ý«³Ì [AMD_ET_OH.GetFirstName]ùÇ ìÆÐ¡·ëÁØ¨³ÌëÆÐ ùÄ²´ é»Ýª³²³Ð ¡·Û«È¥³.;;;;;;;;;;;;;x;
+
+
+#	¢³Ìä‰/	«¹ìŠ/	¢³Øª·Ý/	¡³Ý¡³Ì/
+AMD_EV_DESC_MPFM_OLD;[AMD_CLK_EV_DESC_MPFM_OLD];;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_OLD;[AMD_CLK_EV_OPT_MPFM_OLD];;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ «µÝê»Ì«¸ ¢´Øª´¢³åÆÌ ¬³¬ÈçÆÐ úÄäˆ «ÈÜ«·Ü¥³. ¢³Ø¬³æÆÐ«È “³¬ÈçÆÌ ¬·Ý«´É«È «·Ð¨³¢³ ¨³Î«³ÜåÆÌ¬È éˆ¬Èù¼ ²³ÝèÁÌ«¸ ª´çˆëÁÌ ¬³¬È¡³ ©³É²ÈåÆÌ¥¸æˆ «³èŠ åŒŽÈØ«È «·Ú¥³. ®³¦³¦È ìÁÉäˆ ªÈâ¥³äˆ ª´Ý¡³É²³¨¹, [AMD_ET_OH.GetFirstName]ëÆÌ ¢³Ø¬³æÆÐùÇ ¬·Ý«´É©³Ï«Èçˆ äÁÐ¦·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ëˆåÆÐ «ÈÐä»Ù©·Ì”´ùÇ ¬³¬ÈçÆÐ «·Ý¥·Ý«È«¸ ©³Ï«³æÆÐ«¹Ü¥³. «³Ž³ ¡·Ûéˆ¥³ ¬³É¬È¨³Ì ¥³Ì¥³Ì²³¥³. [AMD_ET_OH.GetFirstName]ëÆÌ ¡·®ÈÐ¡¸ ¥·Ø©¹ëˆåÆÌ ¢³Ø¬³ùÇ ëÁØ¬ÈÉ«ÈØ«¸ ¨³ÞûÂ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. éˆ¬È«¸ ©³Éäˆ «ÈÜåÆÌ ¢³Ø¬³¡³ ¬ÈÝäŒ¦·Ù¡¸ ëÁÛëŒ¨¹ öÂ¦³äˆ ¨³Ð²´Ü¬È¨³Ì æÆÐ¦È¬È «³Î«³Ü¥³. ’³Ð¦È •Æá¢´äˆ ªÈâëÆÐ —ÁÌ«È¦³äˆ «³Ì æ»Ð«³¡³åÆÌ ²¹çˆ ìÁÝ«·Ð¡·¦È¨¹, [AMD_ET_OH.GetFirstName]ëÆÌ ¨¹ß ©·Ì”´«ÈÌ¬È ª¸Ð êŠæˆ «·ÚåÆÌ ¬·Ð¬·ÝëÆÐ ¨³Þ«È²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RBV_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ «È¬¸ åÁÌèÁÐæˆ ¢³ëˆ¬È «³Î«³Ü¥³. êÁÌ¡¹Ð²´Ü¥·Ì éˆ¬ÈåÆÌ «È¬¸ ª¸Ð êŠæˆ «·ÚåÆÌ ¢³Ø¬³æÆÐùÇ ¬·Ý«´ÉëÆÐ ñÆÐ¦È¨¹ ¬È¬·éÁÌ²³Ì ¬³¬ÈçÆÐ èÁÐäˆ «ÈÜ«·Ü¥³. ê»Ì, ©³Ð, ¨·¦È, ¡³êÆØ «·åŒ ²³Ì äŠª·Éæˆ ¢´Øª´¢³äˆ •ÆÌ•ÆÌ²³Ì ¬·Ý«´É«È —Š¦¹¬È¬È «³ÎëÆÌ ä»Û«È «·Ú¥³. «¹¥·Ó©·Ì”´ ¢³Ø¬³ùÇ ¬³¬È¡³ «·Ý¥·Ý«È«¸ ©³É²È¬³, [AMD_ET_OH.GetFirstName]ëÆÌ ¥³ªÈåÆÌ Ž´«·¢³¬È «³Î¡ÈçÆÐ ©ÈÐ¨¹ ¡È¬·Ð²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_RGV_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ¬·ÝªÈÌëÆÐ ®³¦ÈÐ êŠ¡³ «·Ú«·Ü¥³. ±È ¨³Û«È ¢³åÆÌ ¬³¬ÈçÆÐ «ÈÙ«¸ èÁÐäˆ ²·¦ÈçÆÐ ñÆÌæŒåÆÌ ¬³ªÈÌëÆÐ ©ÈëÁÛåÆÌ ¢³Ø¬³æÆÐ«¸¡¸ öÂÌ¡³ ¨³Ð²³¦¹äˆ ²´Ü¬È¨³Ì, «³ñ»Ù©·Ì”´ ¬³¬È¡³ éˆ¬ÈçÆÐ ±³äˆæÆÐ¬³ ¨³Ð«È ¢³ëˆ¬È «³Î«³Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ ®·ëÆØëŒçˆ ¨³ÛéˆåÆÌ ¬³äÆÉ¬·É«ÈÌ ü¾¦³É «³â«¸ ª´Ý¡³É²³åÆÌ ¡·ÛëÆÐ äŒ¨³ÌæŠ«·Ü¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_MPFM_RB_OLD;«È¬¸ ªÈ×«·... ¬ÈÙ«¸ æ»Ð«³¡³Ð¦´...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_RG_OLD;éÁÌ²´...! ²³¬È¨³Ì... åŒŽ¹©·¦¹!;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_RBV_OLD;ªÈ×«·... «È¡·Ì «³Éè»Ý«È«µ...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_RGV_OLD;«È¦·Ì ¡·Ð «³Ð«³©·¦È¨¹Ì... «È¬·Ì®·¦·ØëÆÌ ª³Ð«³¡³Ð êŠ «·Ú«·...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_MPFM_CB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ¬³ªÈÌëÆÐ ª³¦³Ý²³åÆÌ ¢³Ø¬³æÆÐëÆÐ ²³Ì ©³Ý«¸ èˆ«³ª· ëÆØ¦³Ì²³Ì «¹Ìÿ¿çÆÐ «¹Ð«·Ü¥³. äŒ¦·¢³ ¢³Ø¬³æÆÐëÆÌ äŒ¢¹ùÇ ª´Ý¡³É¥´çˆ ëÁØ¬ÈÉ«¹ìŠ¬È «³Î«³Ü¥³. [AMD_ET_OH.GetFirstName]«È ªÈÐªÈÌ²³Ð ‘´Ž³¬È, ¢³Ø¬³æÆÐëÆÌ ¬³ªÈÌùÇ ìÆÐ¡·ëÁØ¨³ÌëÆÐ ùÄ²´ äŒ¢¹ùÇ è»ØëÆÐ °³Ø¢ÈÉ²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_CG_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ¬³ªÈÌëÆÐ ª³¦³Ý²³åÆÌ ¢³Ø¬³æÆÐëÆÐ ²³Ì ©³Ý«¸ èˆ«³ª· ëÆØ¦³Ì²³Ì «¹Ìÿ¿çÆÐ «¹Ð«·Ü¥³. äŒ¢¹åÆÌ ¬³ªÈÌùÇ ¨´¦¹ÉëÆÐ ²³ÌŽ·Û ©³Ðª³Ì²´ äŒæÆÐùÇ ¬ÈÐïŠªÈØëÆÐ ¨Èè‰²³¡¸ ñÆÌæÆÐ«·Üäˆ, ¢³Ø¬³æÆÐëÆÌ äŒ¢¹«¸¡¸ ¥· îÆÌ ü¾¦³ÉëÆÐ ©³®È¡È ùÄ²´ ª·çˆ ¡¹Ý¬´Ý²´Ü¥³. èˆæÆÌ ¢³Ø¬³æÆÐ«È û¿êˆ²³Ì ª¸©·Ì“ÈÉ ª³¬·Ý²³äˆ ¢³¡³‘·Ð«·¬È¬³, [AMD_ET_OH.GetFirstName]ëÆÌ êÆÝ¦ÈùÇ «¹ªÈÌ®·¦·Ø ¨Èêˆ¬ÈëŒ¨¹ ¨³¬È¨³É ¬³¬È«¸ª· ¬·Ý«´ÉëÆÐ ”³¢´«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_CBV_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ¬³ªÈÌëÆÐ ª³¦³Ý²³åÆÌ ¢³Ø¬³æÆÐëÆÐ ²³Ì ©³Ý«¸ èˆ«³ª· ëÆØ¦³Ì²³Ì «¹Ìÿ¿çÆÐ «¹Ð«·Ü¥³. äŒ¦·¢³ ®·¢¹ùÇ ±È¡³ ªÈïŒ«¸ êŒ¨¹æÆÐäˆ äŒ¢¹ùÇ êÁÌ¡¹Ð²³Ì éˆ¬È«¸ ®·Û ©·Ì”´ ¬·Ý«´É«È —Š¦¹¬È¬³ ¢³Ø¬³æÆÐùÇ ñÆÝéÁÌëÆÌ ï»Ý¬¸çÆÐ ©·Û«·¢³Ü¥³. «·¬¸Ž³¬È ¢³Ø¬³çÆÐ èˆçŒ¥·Ì è»ØùÇ èˆæÆÌ äŠ¨·Ý«¸ª· ¬·Ý«´É¢´Øª´¡³ ¢³Ð ‘´Ž³¬È, [AMD_ET_OH.GetFirstName]ëÆÌ «Èª·ÝëÆÐ «È×ëÆÌ ¢³Ø¬³æÆÐ«¸¡¸ •ÆÎ«ÈØ«·Ú«È ©·Ø²´¬¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_CGV_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ¬³ªÈÌëÆÐ ª³¦³Ý²³åÆÌ ¢³Ø¬³æÆÐëÆÐ ²³Ì ©³Ý«¸ èˆ«³ª· ëÆØ¦³Ì²³Ì «¹Ìÿ¿çÆÐ «¹Ð«·Ü¥³. äŒ¢¹åÆÌ ¬³ªÈÌùÇ ¨´¦¹ÉëÆÐ ²³ÌŽ·Û ©³Ðª³Ì²´ äŒæÆÐùÇ ¬ÈÐïŠªÈØëÆÐ ¨Èè‰²³¡¸ ñÆÌæÆÐ«·Üäˆ, ¢³Ø¬³æÆÐëÆÌ äŒ¢¹ùÇ ®·¢¹çÆÐ ”ÈÞåÆÌ «¹Ýò¼ÝëÆÐ ùÄ²´ ª·çˆ ¡¹Ý¬´Ý²´Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ êŠªÈÙ ©·Ì ¬·Ð¬·Ý²³Ì •Æá«¸ ²³Ì ª³¦³ØëÆÐ ª·Ì°´É²´Üäˆ, èˆæÆÌ ª³¦³ØæÆÐ«È ¨³Ìì»É²³Ð ‘´Ž³¬È «¹Ìÿ¿åÆÌ ¡ºê»Éô¿«·Ü¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_MPFM_CB_OLD;¨³Î¥³äˆ ²³Ýª³Ý ì»ãëÆÌ ¡·ÛëÆÌ «³¢È¥³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_CG_OLD;¨·Û¬ÈÌ ¬³¬Èéˆ¥³ ¥· ì»ãëÆÌ ¡·Ì ¨·Û¬ÈÌ ¬³¬ÈæÆÐ«È¬È. ¨³ÎëÆÐêŠç»É ì»ã«³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_CBV_OLD;«È¦·Ì ¡¸ öÂ¡³ ì»ã¥³åÆÌ ¡·«µ...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_CGV_OLD;¬³¬È¡³ «È¦·ã¡¸¢³ ¡ÈéÁÌì»ã¥³¢È! «ÈÌª´ÝùÇ ¬·Ð©³Ì ê»Ì²´÷¼Ü«·!;;;;;;;;;;;;;x;
+
+
+#	¢³Ìä‰/	«¹ìŠ/	¢³Øª·Ý/	¨´íÁÌ/
+AMD_EV_DESC_MPFM_SB_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ¥³ª·Û¨¹ÝùÇ äˆ¡´ÉëÆÐ æ»ÝªÈ«¸ ©³Ïäˆ «ÈÜ¬È¨³Ì, äŒ¢¹ùÇ ¨³ëÆØ«¸ æŒåÆÌ ¬³¬ÈåÆÌ «·Ú«·Ü¥³. ëˆçÆÌê»Ì«¸ úÄÌ ¬³¬ÈåÆÌ ¢·èŠ ¡³åÆÐäˆ, «·Ý¥·Ý«È«¸ ©³É²ÈÌ ¬³¬ÈåÆÌ ¥³Ì¥³Ì²³Ø«È éŠì»É²³¥³. «ÈÙ«¸ èÁÐäˆ «ÈÜåÆÌ ¬³¬ÈåÆÌ ¢´Øª´¢³äˆ ¨³Û«È «·Ú¥³. éˆ¬È«¸ ©³Éäˆ «ÈÜåÆÌ ¢³Ø¬³åÆÌ îŒ¡È¨³Ì ¯·Ü¬È «¹¬³çÆÐ ìÆÐ¡·Ù¡¸ ²´ìŠåÆÌ ©·ÙëÆÐ èˆçÆÌ¥³. äˆ¡´ÉæÆÐëÆÌ èˆæŠ ¨³Ìì»É²´Ü¬È¨³Ì, [AMD_ET_OH.GetFirstName]ëÆÌ ¨³Ìì»É²³¬È è»Û²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_SG_OLD;[AMD_ET_OH.GetFirstName]ùÇ ¬·Ý«´ÉëŒçˆ ¡³æÆÉ²³Ì «·Ý¥·Ý«È«¸ ª´çˆëÁÌ ê»Ì¢ÈØ«È ±³äˆæÆÐ«·Ü¥³. ù¿Ì™»É«¸ª· ˜ˆ«³¬ÈÌ ¬·Ý«´É«È ¨·¦È¯³¦³ÉëÆÐ °³äˆ ñÆÐ¦·¢´¦¹Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ åÁÌ¡³«¸ —Š¦¹¬ÈÌ ¬·Ý«´ÉùÇ ¢´Øª´«¸ ¥·ëÁÉ ñÆÝéÁÌ²´, ©³ÝäÆØ ¬³ªÈÌùÇ éˆ¬È«¸ ¬·Ý«´ÉëÆÐ “³¬ÈçÆÌ ¬³¬È«¸ ¯ÈêŒ²´Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ ëˆåÆÐ ©³ÏëÆÌ èˆæÆÌ ê»Ì¢ÈØæÆÐëÆÐ ¨³Ìì»ÉªÈ¯¹ÜëŒ¨¹, äŒ¢¹ ¬³ªÈÌæˆ íÁÝéÁÌ²È ìÆÐ¡¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_SBV_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ åÁÌèÁÐçˆ «·Ý¨³Ý«È ô¿Ì «·ÐäÁÐçˆ ©³ÝäÆØ ¬³ªÈÌùÇ ²³ÝèÁÌ«¸ ¬·Ý«´ÉëÆÐ ïˆ²´¢´Ì ¬³¬ÈçÆÐ ©³¦³éˆ«³Ü¥³. ìˆäÆØ ¬·ÌŽ³¬È ®·¢¹«¹Ü¥·Ì éˆ¬È«¸ ¢¸ ©·Ì”´ ¬³¬È¡³ ©³É²¹Üäˆ, ù¿Ìê»Ì«¸ úÄÌ ¬³¬È¡³ —ÁØëÆÌ ¬·Ý«´É«È ñÆÐ¦·¢´¦¹ åÁÌëÆÐ ¡³¦ÈÌ¥³. èˆæÆÌ äˆ¡´ÉæÆÐ«È ¨³Ìì»É²³Ð ‘´Ž³¬È, [AMD_ET_OH.GetFirstName]ëÆÌ ¬Èë»É¡³áëÆÌ ªÈ¡³ÌëÆÐ éˆ¢´¨¹ ‡Šÿ¿²´Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_SGV_OLD;[AMD_ET_OH.GetFirstName]ëÆÌ ¬ÈäÆØŽ³¬È è»Ð¦³Ü¥·Ì ü¾¦³ÉùÇ èÁÐ¡¹Ð«¸ ÿÄÙ˜ÆÐ¦¹ ¬·ÝªÈÌëÆÐ ®³¦ÈÐ êŠ «·Ú«·Ü¥³. ¥³ª·Û©·Ì”´ ¬³¬È¡³ «ÈÙ«³Ì«¸ ¬·Ý«´ÉëÆÐ ïˆ²´¢´Ü¥³. ª³Ø¯È¡Èæˆ ¬·Ì«¸ äŒéˆ¥³ ¥· îÆÌ ¬³¬È¡³ «·Ý¥·Ý«ÈçÆÐ ±³äˆæÆÌ¥³. æÆÝëÆÐ °³äˆ ë»Ð¦³ëˆåÆÌ ü¾¦³É«¸ è»ØëÆÐ ‘·Ð¬³ «µÝ ê»Ì«¸ úÄ«·¬ÈÌ ¬³¬ÈæÆÐ«È ‡ˆëÆÝ²³æÆÛ éŠçŒçŒ ‘·Ð¨¹ ¬·Ý«´ÉëÆÐ ¢´å»ãåÆÌ¥³. [AMD_ET_OH.GetFirstName]ëÆÌ ¬³ªÈÌùÇ ®·¢¹çÆÐ šÃ–Á×«·Ü¥·Ì ¬³¬È«¸ ¯ÈêŒ²³¨¹ ²·¦ÈçÆÐ ñÆÌæÆÐ«·Ü¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_BG_OLD;[AMD_ET_OH.GetTitledFirstName]ëÆÌ äˆäÆÙêŒ¦·ëÁÌ ®ÈØªÈÐ«¸ª· ¡³Ý®·Ð¡³áëÆÌ äÆÌëÅÉëÆÐ •ÁØïÆÐ¡·¦È¨¹ ¨³Ð ¡³áëÆÌ ¬³¬ÈçÆÐ ª¸ëÁÌ ¨·Û¬ÈÌ ¢³Ø¬³æÆÐ«¸¡¸ æÁÐ¦·“³«¹Ü¥³. äŒæÆÐëÆÌ ©³Ø ¡ÈêÁÐùÇ ¬·ÌèÁÌ¡³«È¨¹, ëˆåÆÐ ²³çŠæ»Ý«³Ì [AMD_ET_OH.GetFirstName]ùÇ ìÆÐ¡·ëÁØ¨³ÌëÆÐ ùÄ²´ é»Ýª³²³Ð ¡·Û«È¥³...;;;;;;;;;;;;;x;
+AMD_EV_DESC_MPFM_BGV_OLD;[AMD_ET_OH.GetTitledFirstName]ëÆÌ äˆäÆÙêŒ¦·ëÁÌ ®ÈØªÈÐ«¸ª· ¡³Ý®·Ð¡³áëÆÌ äÆÌëÅÉëÆÐ •ÁØïÆÐ¡·¦È¨¹ ¨³Ð ¡³áëÆÌ ¬³¬ÈçÆÐ ª¸ëÁÌ ¨·Û¬ÈÌ ¢³Ø¬³æÆÐ«¸¡¸ æÁÐ¦·“³«¹Ü¥³. [AMD_ET_OH.GetFirstName]ëÆÌ äŒæÆÐ ìÁÝ ²³¢³çÆÐ ä»Ð¦³ äŒùÇ ¬³¬È ùÄ«¸ ë»Ð¦³°³Ü¥³. ¬·ÌèÁÌ¡³ùÇ ä‰è‰²³Ì ²·¦Èå»Ð¦ÈØò¼ «¹¦· ª³¦³ØùÇ ê»ÌëŒçˆ ±¹Ð®¹¬ÈåÆÌ åÆÝêÁÉ²³Ì «´èŠ«¸ [AMD_ET_OH.GetFirstName]ëÆÌ ®·¢¹ ª³ÝªÈÐùÇ äˆï»ÝëÆÐ äÆØª´ «ÈÞ«·©·¦¹Üäˆ, ë»Ì è»ØùÇ äŠ¨·Ý«¸ª· äŒæÆÐùÇ ¬·Ý«´É«È ñÆÐ¦·¢´¦ÈÐ ‘´Ž³¬È êŠæˆ «·Ú«È ¬·Ð¬·Ý²´Ü¥³.;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_MPFM_SB_OLD;‡ŒëÆÉ... «·”´ÜæÆÌ ¡·¦´åÆÌ •Æá¢´Ü«·...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_SG_OLD;‡ŠñÁÛ... ¡·¦´çÆÐ ²´ÜëŒ¨¹Ì «ÈæÆÉëÆÐ ÷¼«µ¬È.;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_SBV_OLD;¢³Ì... ¬·Ý¨³Ð ©³éˆ...;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_SGV_OLD;ä»Ý¬·Ý¡·¦´ ¢·èŠ ì»ã«³... ¢³Ì èŠ«¹ÉùÇ «¹ù¼Ý«È ô¿Ð ¡·«µ.;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_BG_OLD;¨·Û¬ÈÌ ¬³¬Èéˆ¥³ ¥· ì»ãëÆÌ ¡·Ì ¨·Û¬ÈÌ ¬³¬ÈæÆÐ«È¬È. ¨³ÎëÆÐêŠç»É ì»ã«³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_MPFM_BGV_OLD;¬³¬È¡³ «È¦·ã¡¸¢³ ¡ÈéÁÌì»ã¥³¢È! «ÈÌª´ÝùÇ ¬·Ð©³Ì ê»Ì²´÷¼Ü«·!;;;;;;;;;;;;;x;
+
+
+
+#	¢³Ìä‰/	«¹ìŠ/	¢³Øª·Ý/	äŠ¨´/
+
+
+
+
+#	æ‹«·Ð/	ë»Ùª¹Ì/
+AMD_OPT_peep;ëˆ, ¬·¦·Ì...;;;;;;;;;;;;;x;
+AMD_OPT_memory;äŒ¦´ª·...;;;;;;;;;;;;;x;
+
+#	æ‹«·Ð/	keep : ²¹Ìª³Ýë‹¬È / ª³Ý¥´«¸¡¸ ¨³á¡ÈÌ¥³
+AMD_OPT_cons_keep;«È¥´çˆ ¡ºê»É²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_OPT_raper_keep;«È¥´çˆ ¡ºê»É ©·Ø²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_OPT_raped_keep;«È¥´çˆ ¡ºê»É ©·Ø²´¬ÈÌ¥³.;;;;;;;;;;;;;x;
+AMD_OPT_order_keep;«³èŠ¡·Ûæˆ ¨¹Ý¦¹Ý²³¬È «³ÎåÆÌ¥³.;;;;;;;;;;;;;x;
+AMD_CT_keep_move;\n²¹Ìª³Ý ë‹¬È. ®³Ø¡³¬³æÆÐùÇ ª³Ýÿ¼Ý«¸ ‘³¦³ ¥³çÆÌ ª·Ì°´É¬ÈùÇ ‡‰ò¼¡³ ©³Ðª´Ý²³Ð êŠ «ÈÜêÆÙ¢È¥³.\n;;;;;;;;;;;;;x;
+
+#	æ‹«·Ð/	soft : soft_power«¸ ¡È©³Ì²³Ì ª³Ýÿ¼Ý ©¹Ìæ»Ý. ¨´¦¹É, «ÈÌª·Ý
+AMD_OPT_cons_soft;‘´ç»Ì éŠæŒ¦·ëÁØ«È ¡³Ý²³ØëÆÐ «È¡ÈÌ¥³.;;;;;;;;;;;;;x;
+AMD_OPT_raper_soft;ëÁØ¬ÈÉ«ÈØëÆÐ åÆÞ†Šäˆ äŠª·ÉäŠª·ÉŽ³¬È ìÆÐ¡ÈÌ¥³.;;;;;;;;;;;;;x;
+AMD_OPT_raped_soft;?, ¡·, ¡·¡ÈÌ «³Ìô¾...;;;;;;;;;;;;;x;
+AMD_OPT_order_soft;éŠæŒ¦·Ù¡¸ ²³¦³äˆ ¨¹Ý¦¹Ý²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_CT_soft_move;\néŠæŒ¦·ëÁÌ ëÁØ¬ÈÉ«ÈØ. ¨´¦¹É, «ÈÌª·Ý æÆÝ ¬·ÝªÈÌ¬·É ë‰êˆùÇ «¹Ý²µÝëÆÐ ©³ÏêÆÙ¢È¥³.\n;;;;;;;;;;;;;x;
+
+#	æ‹«·Ð/	hard : hard_power«¸ ¡È©³Ì²³Ì ª³Ýÿ¼Ý ©¹Ìæ»Ý. ¡·Ì¡³Ý, ëÅÉ®¸
+AMD_OPT_cons_hard;¬ÈÌ”³ [Root.Culture.GetName]ùÇ [Root.GetManWoman]¡³ ª³¦³Ý²³åÆÌ ©·ÙëÆÐ éˆ«¹ìŠ¡¸Ü¥³!;;;;;;;;;;;;;x;
+AMD_OPT_raper_hard;¡¹É¦¹Ð²³¡¸ ©·Ø²³Ì¥³!;;;;;;;;;;;;;x;
+AMD_OPT_raped_hard;«³«³Û, äŒ¦·ã¡¸ ¡¹É¦¹Ð²³¡¸...! ;;;;;;;;;;;;;x;
+AMD_OPT_order_hard;¡·®ÈÐ¡¸ ²³¦³äˆ ¨¹Ý¦¹Ý²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_CT_hard_move;\n¡·®ÈÌ ëÁØ¬ÈÉ«ÈØ. ®¸¦¹É, ¡·Ì¡³Ý æÆÝ ëÅÉ®¸¬·É ë‰êˆùÇ «¹Ý²µÝëÆÐ ©³ÏêÆÙ¢È¥³.\n;;;;;;;;;;;;;x;
+
+#	æ‹«·Ð/	wide : ©³Ê«¸ ©³Ðª³. «ÈØªÈÌ ¡³åÆÝª·ÝëÆÐ ¢³ÞíÁÌ¥³.
+AMD_OPT_cons_wide;¬³ØŽ³Ì, ¬È©´¬³«¸¡¸Ì ü¾¦³Ééˆ¥³ ìÁÝë‰²³Ì ¡·Û«È «ÈÜ¥³...;;;;;;;;;;;;;x;
+AMD_OPT_raper_wide;ëŒ... «¹ÉªÈ «³ÌëÆÌ «³Ìô¿¡¸Ü¬È...;;;;;;;;;;;;;x;
+AMD_OPT_raped_wide;«³, «³Ì«¸åÆÌ «³Ìô¾! ¬¸©³Ð äŒ¡·Û¨³ÌëÆÌ...!;;;;;;;;;;;;;x;
+AMD_OPT_order_wide;«³Ì«¸ —Š¦È¬È «³Îæˆç»É ¨¹Ý¦¹Ý²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_CT_wide_shot;\nª³Ýê»É «³Ì¬·Ýª·ÝëÆÐ ùÄ²´ ª³¡¹É ùÄ®ÈçÆÐ ìˆ¬·Ð²³Ù¢È¥³. ªÈÐ±´²³Ð êŠ «ÈÜêÆÙ¢È¥³.\n;;;;;;;;;;;;;x;
+
+AMD_CT_wide_shot_succ;äŠ¨·Ý ©³Ê«¸ ©³Ðª³!;;;;;;;;;;;;;x;
+AMD_CT_wide_shot_fail;©·°ÈÐ êŠ¡³ «·Ú¥³!;;;;;;;;;;;;;x;
+
+#	¢³Ìä‰/	ë»Ùª¹Ì/	¨³èŠ¦È ª·Ì°´É¬È
+AMD_OPT_ORGY_BUY_good;æ»ÌëŒçˆ ª³Ð êŠ «ÈÜåÆÌ û¿äˆùÇ ¡¹Ý²·Ø«È¥³!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_SELL_bad;«·”´ÜæÆÌ ¡·¦´åÆÌ ù¼Ìç‰ô¿«·Ü¥³...;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_SELL_good;ä»Ý¬·Ý¡·¦´åÆÌ èˆæŠ«¸¡¸ «È«ÈÉ«È¬È.;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_CONS_bad;«³Ì²³¡¸Üêˆ, ¥³ªÈåÆÌ «³Ì²³¡¸Üêˆ!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_CONS_good;¢´ ª´Ý«´ ²³Ì ¬·Ø ‡Šÿ¿æˆ «·Ú¥³!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_LES_CONS_good;¢³Ø¬³¡³ ù¾ ±ÈÐë‰²³¬È? «È¦·ã¡¸ ì»ãëÆÌ ¡¸ «ÈÜåÆÌ¥¸!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_LES_CONS_bad;ëˆåÆÐëÆÌ ¬³Ð «³Ìô¿åÆÌäÁÌ...;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_GAY_CONS_good;¢³åÆÌ ª³ÐäˆªÈâ«·! ¢·ÿÇæÆÐò¼ ²³ØŽ¸!;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_RAPE_bad;«³¦´™»É«¸ ¡³Ø¡³É«È «·Ú¥³...;;;;;;;;;;;;;x;
+AMD_OPT_ORGY_RAPE_good;ì»Ì¢³ì»ãäÁÌ?;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_ORGY_ETC;«³Û... «³«³......;;;;;;;;;;;;;x;
+
+
+
+
+#AMD ERA LN WIP;0000000001000000000200000000030000000004000000000500000000060000000007;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10003;¥³ÝªÈÌëÆÌ ª·Ý¬·É¥´ª³Ý«ÈÙ¢È¥³ ¬ÈäÆØ «·‘·Ì ¡ÈéÁÌ?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_C;¥³ÝªÈÌëÆÌ ª·Ý¬·É¥´ª³Ý«ÈÙ¢È¥³. ÿ¼¡³Ì«Èë‰. ¬ÈäÆØ «·‘·Ì ¡ÈéÁÌ?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_B;¥³ÝªÈÌëÆÌ ª·Ý¬·É¥´ª³Ý«ÈÙ¢È¥³. äŠ¨´¬³«¸ë‰. ¬ÈäÆØ «·‘·Ì ¡ÈéÁÌ?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_S;¥³ÝªÈÌëÆÌ ª·Ý¬·É¥´ª³Ý«ÈÙ¢È¥³. ±³Ì¨´¬³«¸ë‰. ¬ÈäÆØ «·‘·Ì ¡ÈéÁÌ?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_R;¥³ÝªÈÌëÆÌ ª·Ý¬·É¥´ª³Ý«ÈÙ¢È¥³. ¡³Ý¡³Ì©·Ø«Èë‰. ¬ÈäÆØ «·‘·Ì ¡ÈéÁÌ?;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10003_V;¥³ÝªÈÌëÆÌ ª·Ý¬·É¥´ª³Ý«ÈÙ¢È¥³. ¡³Ý¡³Ì ±È²´¬³«¸ë‰. ¬ÈäÆØ «·‘·Ì ¡ÈéÁÌ?;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_SOFT;éŠæŒ¦·ëÁÌ ¡¸ ì»ã¬È.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_HARD;¡¹É¦¹Ð²³Ì ¡¸ ‘´Ý¡ÈÌ¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_RAND;¢´¡³ ìŠæˆ²³äˆ ªÈâ¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_HATE;©¹Ðçˆ ²³äˆªÈâ¬È «³Î¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_LUST;öÂæÆÌ¬È ì»ã«³ ²·É²·É è»Û®³Ø¡¸Ü¥³!;;;;;;;;;;;;;x;
+
+#éÁÐïÆÉ¬·Ý«´èŠ
+AMD_EV_DESC_PLAY_10100;[AMD_CLK_EV_DESC_PLAY_10100_ACT] [AMD_CLK_EV_DESC_PLAY_10000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ è»Ø äŠª·ÉäŠª·ÉëÆÐ ¥·æÆØëŒ¨¹ «ÈÌ®¸ùÇ ªÈÌ©ÈçÆÐ °³ØäŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ëÀÉ¨³ÝëŒçˆ åÁÌëÆÐ ©·Ì–ÆÉ«È¨¹ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ è»Ø «¹¡È¬·¡ÈçÆÐ ¡·®ÈÐ¡¸ «´èŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_3;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ëÆØ¦³Ì²³Ì ¨³Ðò¼ åÁÌ©ÈßëŒçˆ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ æˆ©³Ð²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_4;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ êŠæ»Ý¬·É«ÈÌ °´æˆçˆ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ê»Ì¡ÈÐ«¸ è»ØëÆÐ ¨³á¡¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10100_C;(ÿ¼¡³Ì) [AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ª·çˆùÇ è»Ø äŠª·ÉäŠª·ÉëÆÐ ¥·æÆØëŒ¨¹ «ÈÌ®¸ùÇ ªÈÌ©ÈçÆÐ °³ØäŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_R;(¡³Ý¡³Ì) [AMD_ET_RA.AMD_CLK_GetName]ëÆÌ [AMD_ET_RV.AMD_CLK_GetName]ùÇ è»Ø äŠª·ÉäŠª·ÉëÆÐ ¥·æÆØëŒ¨¹ «ÈÌ®¸ùÇ ªÈÌ©ÈçÆÐ °³ØäŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_V;(±È¡³Ý¡³Ì) [AMD_ET_RA.AMD_CLK_GetName]ò¼ [AMD_ET_RV.AMD_CLK_GetName]ëÆÌ ª·çˆùÇ è»Ø äŠª·ÉäŠª·ÉëÆÐ ¥·æÆØëŒ¨¹ «ÈÌ®¸ùÇ ªÈÌ©ÈçÆÐ °³ØäŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_S;(¨´íÁÌ) [AMD_ET_TS.GetFirstName]ëÆÌ [AMD_ET_TB.GetFirstName]ùÇ è»Ø äŠª·ÉäŠª·ÉëÆÐ «´èŠ²³¨¹ é»Ýª³²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10100_B;(¨´íÁÌ) [AMD_ET_TS.GetFirstName]ò¼ [AMD_ET_TB.GetFirstName]ëÆÌ ª·çˆùÇ è»Ø äŠª·ÉäŠª·ÉëÆÐ ¥·æÆØëŒ¨¹ «ÈÌ®¸ùÇ ªÈÌ©ÈçÆÐ °³ØäŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_10000_T5;(¨´íÁÌ ©Èª³Ù«ÈÙ ¨³Ìì»É) [AMD_ET_TS.GetFirstName]ùÇ é»Ýª³«¸ [AMD_ET_TB.GetFirstName]ëÆÌ ¨´ëŠ ¨³Ìì»É²³«¹ÜêÆÙ¢È¥³. «¹¡Èª· •Æá¢´åÆÌ ¡·Û«È «³øÄëÁÐ ¬·Ýæˆçˆ...;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_T4;(¨´íÁÌ ©Èª³Ù«ÈÙ éˆï»Ý) [AMD_ET_TS.GetFirstName]ùÇ é»Ýª³«¸ [AMD_ET_TB.GetFirstName]äŒ¦Èäˆ ëÀÉ¨³ÝùÇ éÁÐ•»ß«È ¡ÈçÆØëÆÐ éŠëÆÌ æÆÛ ¡¹É¦¹Ð²³¡¸ ê»Û«³ëˆçÆÙ¢È¥³. ¥· îÆÌ ìÆÐ¡·ëÁØëÆÐ ¡³ÐäŠ²³æÆÛ«È...;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_T3;(¨´íÁÌ ©Èª³Ù«ÈÙ éÁÐ¨³Ì) äŒ¦·¢³ [AMD_ET_TS.GetFirstName]ùÇ é»Ýª³«¸æˆ éÁÐäŠ²³äˆ [AMD_ET_TB.GetFirstName]ëÆÌ ¨³Ìì»É²³¬È è»Û²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10000_A;äŒ¦Èäˆ ëÀÉ¨³ÝùÇ éÁÐ•»ß«È ¡ÈçÆØëÆÐ éŠëÆÌ æÆÛ ¡¹É¦¹Ð²³¡¸ ê»Û«³ëˆçÆÙ¢È¥³. ¥· îÆÌ ìÆÐ¡·ëÁØëÆÐ ¡³ÐäŠ²³æÆÛ«È...;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_B;äŒ¦·¬³ ©³ÌìÁÉëÆÌ ’³Ý’³Ý²³¡¸ éŠðÁÐäˆ ëˆéÆÌëÆÌ –Œ¡·Ù¡¸ ¥³Ð«³ëˆçÆÙ¢È¥³. ¨·Û¬ÈÌ ¬·¢¹É«È ô¿Ð ¡·Ù¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10000_C;äŒ¦·ã¡¸ ì»ãëÆÌ éÁÌùÄ¡ÈåÆÌ «³¢È«·Ü¬È¨³Ì, «·”´ÜæÆÌ ¥³ëÆØëŒçˆ ¢³«³¡³Ð ‘´¡³ ô¿«·ÜêÆÙ¢È¥³...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10200;[AMD_CLK_EV_DESC_PLAY_10200_ACT] [AMD_CLK_EV_DESC_PLAY_10200_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10200_1;[AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ «ÈÙêÁÐëÆÐ ¡¹Ù®Èäˆ ª·çˆùÇ ²¹çÆÐ ¨³Ûéˆ«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10200_2;[AMD_ET_RA.AMD_CLK_GetName]ëÆÌ [AMD_ET_RV.AMD_CLK_GetName]ùÇ «ÈÙëÆÐ ¬³ªÈÌùÇ «ÈÙëŒçˆ ïÆÐ«·¨³Éäˆ [AMD_ET_RV.GetHerHim]çÆÐ ÿÇç»Ý²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10200_A;¨³Ð«·Ú«È «·Ñ²ÈåÆÌ ²¹ù¼ ²¹, ‡ŒçŒåÆÌ «´É®¸çˆ ©·ÌæÆÐ¡·¦ÈåÆÌ ùÄÛ«ÈÙò¼ «³¦´Û«ÈÙ... ¥³ëÆØëÆÌ ²¹éˆ¥³ ¥³Ì¥³Ì²³Ì ®ÈÌäŠ¡³ ¢³ª·Ð ®³¦º«ÈÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10300;[AMD_CLK_EV_DESC_PLAY_10300_ACT] [AMD_CLK_EV_DESC_PLAY_10000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10300_1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetBreastAN]ëÆÐ ìŠèŠçŒäˆ èÁÐäˆ ²³Õäˆ ’³Ð«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10300_2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ê»Ì«¸ ¬³ªÈÌùÇ [AMD_ET_DEF.AMD_CLK_GetBreastNoun]ëÆÐ æÆÐ«È¥´¨¹ –Œ¡·ëÁÌ êÁØëÆÐ ¢´øÄ«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10400;[AMD_CLK_EV_DESC_PLAY_10400_ACT] [AMD_CLK_EV_DESC_PLAY_10400_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ê»Ì«¸ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ¨³á¡Èäˆ äŒ¢¹ùÇ ê»Ì¨³ÛëÆÐ ìÆÐ¡¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ªÈ×«·²³åÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ê»ÌëÆÐ ¬³Ù«³•ÆÐ«·, ¬³ªÈÌùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ «´èŠ²³¡¸ ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_3;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬·²³Ý²³¬È è»Û²³åÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ê»ÌëŒçˆ ¬³äÆÉ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10400_A;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ê»Ìå»Ð¦ÈØ«¸ å»Ý¦³É¥³Ý²³¥³ ©³éˆ¡³áëÆÌ ªÈÌëÆØêˆ¦ÈçÆÐ ¢´©´áëŒ¨¹ ª³¬·Ý²´ÜêÆÙ¢È¥³. äŒ¦·¢³ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]åÆÌ äÆØ©³Ý ¥³Ì¥³Ì²³ØëÆÐ ô¿®³ÞëŒ¨¹ «ÈÐ«·ª·Üäˆ, ì»Ø ¥· ¡Èâäˆ «·æŠëÁÌ ä»ÛëŒçˆ ¡³äˆ ªÈâ«·²³åÆÌ ¡·Û ¡³áêÆÙ¢È¥³...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10500;[AMD_CLK_EV_DESC_PLAY_10500_ACT] [AMD_CLK_EV_DESC_PLAY_10500_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10500_1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ èÁÐäˆ ²³Õäˆ ’³Ðäˆ ¨³Ûéˆäˆ ìÆÐ¡¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10500_2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «ÈÙ«¸ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ «·É¬Èçˆ ˜Šª¹¢·ãäˆ äŒ¢¹ùÇ «ÈÙ«³ÌëÆÐ ë‹¦ÈÌ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10500_A;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¨·¦ÈçÆÐ éÁá¬³Ùäˆ äŒ¢¹ùÇ è»É «³Ì«¸ •ÆÌ¬·É²³Ì ëÀÉ¨³ÝëÆÐ ˜»Ï«³¢´ÜêÆÙ¢È¥³. ¥³ªÈ «ÈÐ«·ª·Ì [AMD_ET_ATK.AMD_CLK_GetPenisNoun]åÆÌ «È¬¸ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¥³çÆÌ «ÈÙëÆÐ åˆ¦ÈÙ¢È¥³...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10600;[AMD_CLK_EV_DESC_PLAY_10600_ACT] [AMD_CLK_EV_DESC_PLAY_10600_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬³ªÈÌùÇ [AMD_ET_DEF.AMD_CLK_GetBreastAN]«¸ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ èÁÌ¬ÈçŒ¨¹ «´èŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬³ªÈÌùÇ [AMD_ET_DEF.AMD_CLK_GetBreastAN]ëŒçˆ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ¡³Ø“³æÆÛ«È «´èŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_3;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬³ªÈÌùÇ [AMD_ET_DEF.AMD_CLK_GetBreastAN]ëŒçˆ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ±³èÁÏæÆÛ«È ¡³Ø“³ èÁÌ¬ÈÐ¦·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_4;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetBreastAN]«¸ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ èÁÌ¬ÈçŒ¨¹ ‘³É‘³É²³Ì ¡³Ð©È’¹ùÇ ¡³Øí»ÉëÆÐ ìÆÐ¡¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_5;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetBreastAN]«¸ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ±³èÁÏæÆÛ«È ¡³Ø“³ éŠæŒ¦·ëÁÌ ¡³Øí»ÉëÆÐ ìÆÐ¡¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10600_A;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetBreastAN]«¸ ª³¬·Ý²´ÜêÆÙ¢È¥³. äŒ¦·¢³ äÆØ©³Ý ¥³Ì¥³Ì²³ØëÆÐ ô¿®³ÞëÆÌ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]åÆÌ ì»Ø ¥· «·æÁÙäˆ í»Éí»É²³Ì ä»ÛëŒçˆ ¡³äˆ ªÈâ«·²³Ù¢È¥³...;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_10700;[AMD_CLK_EV_DESC_PLAY_10700_ACT] [AMD_CLK_EV_DESC_PLAY_10700_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10700_1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ìˆç»Ý²³¨¹ äŒùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ¬ÈÛ©³Ó«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10700_2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡Èè‰²³Ì ë‰äŠ«¸ ¥³Ýÿ¼Ý²³¨¹Ìª·æˆ ©³ÐëÆÐ ’·Ï«· [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ©³Óäˆ ñÁÕ«·ë»Ð¦È¨¹ «¹ÐªÈØ²È èÁÌ¬ÈÐ¦·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_10700_A;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ©³Ðå»Ð¦ÈØëÆÐ ©·°È¬È è»Û²³äˆ äÁÐëÀÉ«¸ ®³Ì ªÈÌëÆØêˆ¦ÈçÆÐ ¢´©´áëŒ¨¹ ª³¬·Ý²´ÜêÆÙ¢È¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äŒ èˆêÆÙëÆÐ ©ÈëÁÛ«·Ü¬È¨³Ì, ²·©·É¬ÈçÆÐ °³äˆ ñÆÐ¦·¢´¦ÈåÆÌ ïŠ¨¹Ý²³Ì «´É®¸åÆÌ ¡³ØíÁÐ êŠ «·Ú«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+
+
+AMD_EV_DESC_PLAY_29400;[AMD_CLK_EV_DESC_PLAY_29400_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20100;[AMD_CLK_EV_DESC_PLAY_20100_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¬·Ý¨¹Ì«¸ª· [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetPussyAN]çÆÐ ä»Ý¡¹É²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ¨³ìŠéˆ¨¹ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ª³Ù«ÈÙ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_3;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¥³¦ÈçÆÐ ©·Ð¦Èäˆ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ¨ÈÐ«·¢·ã«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_4;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ©³çˆ åŠëÁÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¥³¦ÈçÆÐ ©·Ð¦Èäˆ, [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ ¬³ªÈÌùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ”ÈÐ¦·¢·ã«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_5;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ¨ÈÐ«· ¢·Ø«·–Œ¦Èäˆ, [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ ¬³ªÈÌùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ˜Šª¹©³É«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20100_6;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ©³çˆ åŠùÂ ¥³¦ÈçÆÐ ©·Ð¦Èäˆ ¬³ªÈÌùÇ [AMD_ET_DEF.AMD_CLK_GetPussyAN]çˆ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ •ÆÐ«·æÆÐ«¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20200;[AMD_CLK_EV_DESC_PLAY_20200_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ‡Š©³ÝëÆÐ åˆíÁÐ²³Ì [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ”ÈÐ¦·¢·ã«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ æÆÝ”³ÉëÆÐ éˆ¨¹ ¬ÈØêÆÝ¡³áëÆÌ ¬³ª¸çˆ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ˜Šª¹©³É«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_3;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «·Ý¥·Ý«ÈçÆÐ éÁá¬³Ùäˆ [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ ª³Ù«ÈÙ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_4;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¢¸ ©³Ðçˆ «·âæŒ¦¹ «·Ý¥·Ý«ÈçÆÐ ¢´¨ÈÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ ¬³ªÈÌùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ”ÈÐ¦·¢·ã«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_5;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ¢¸ ©³Ðçˆ «·âæŒ¦È¡¸ ²³äˆ, äŒ¢¹ùÇ ôÄçˆ æ»Ð«³¡³ [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ ¬³ªÈÌùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ˜Šª¹©³É«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20200_6;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬ÈØêÆÝ®·¦·Ø «·âæŒ¦¹ «·Ý¥·Ý«ÈçÆÐ ¢´¨ÈÐäˆ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]«¸ ©³Ï«³æÆÐ«¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20300;[AMD_CLK_EV_DESC_PLAY_20300_ACT] [AMD_CLK_EV_DESC_PLAY_20000_V][AMD_CLK_EV_DESC_PLAY_20000_SCORE];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ¬³ªÈÌùÇ [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ ª³Ù«ÈÙ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ùÄ«¸ ¡·Ð°·«³Í«³ [AMD_ET_ATK.AMD_CLK_GetPenisAN] ùÄçˆ ²·¦ÈçÆÐ ¢´¦¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_3;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ©³çˆåŠëÁÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ùÄ«¸ ë»Ð¦³«³Í«³ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ¬³Ùäˆ êŒêŒçˆ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]«¸ ”ÈÐ¦·¢·ã«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_4;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ©³çˆåÁÙ²Èäˆ äŒ ùÄ«¸ ë»Ð¦³°³ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ¬³Ù«³ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]«¸ ¥´äˆ ®·Ì®·Ì²È ²·¦ÈçÆÐ ¢´¦¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_5;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ©³çˆ åŠùÂª· [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ è»Ø ùÄ«¸ «³Í²Èäˆ, äŒ¢¹ùÇ [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ èÁÌ¬ÈçŒ¥³¡³ ²·¦ÈçÆÐ ¬³Ù«³ •ÆÐ«·¢´¦¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20300_6;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ©³çˆ åŠùÂª· [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ¬³¬È ùÄçˆ •ÆÐ«·¥³Ý¡Èäˆ, [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ èÁÌ¬ÈçŒ¥³¡³ ¥³ÌêÁØ«¸ ²·¦ÈçÆÐ ®¹ë»Ð¦¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20000_VC1;±ÈçÆÐ —Š¦È¨¹ ®·¢¹ùÇ èÁÌëÆÐ æ»Ð±³²³Ì ®ÈØ¦µÉ¬³åÆÌ ¨¸¨³çÆÌ ‘³Ý«¸ª· ìÆÐ¡·ëÁØëÆÐ ®³ÞëÆÐ êŠ «·Ú«·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VC2;¬·É¬·Ð²³Ì ¡³Éæˆçˆ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «³Ì«¸ ±³äˆæÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ «¹Ðø¿åÆÌ «µÉ¡³ÌùÇ ñÆÌ¬·ÉëÆÐ ¢³Ø¡Èäˆ ®·¢¹ùÇ èÁÌëÆÐ «¹Ð«·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VC3;®·¢¹ùÇ èÁÌëÆÐ šÃ–Á×ëÆÌ ®ÈØ¦µÉ¬³åÆÌ ¨È¡´®·É¬ÈùÇ äŠª·ÉäŠª·ÉëÆÐ °³Ø²·Ø²³¨¹ •ÁÐëÆÐ ±·ë»Ð¦¹ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VC4;®·¢¹ùÇ èÁÌ«È ¨´•Œ¦·Ù¡¸ «¹Ð¦Èäˆ, ®·Û ê»Ì¢ÈØëÆÐ ÿ¼Ì«¹Ý²³æÆÛ °·¬¹¢³ëˆåÆÌ ü¾¦³ÉùÇ ±³æˆ«¸ ÿÄÙ˜ÆÐ¦¹ [AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬·ÝªÈÌ«·Ú«È ª·çˆùÇ ëÅÉ®¸çÆÐ °³Ø²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR1;[AMD_ET_ATK.AMD_CLK_GetName]«È ¬³©Èæˆ «´¬·Ýæˆ «·Ú«È èŠ¬³©È²³¡¸ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ˜Šª¹©³É¬³ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ª´Ýª³ÐëÆÐ ¡³çŒåÆÌ äˆï»Ýò¼ ¬·Ð¨³Ý«¸ åÁÌèÁÐëÆÐ ñÆÐ¦¹ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR2;ëÀÉ¨³Ý«¸ åÁÌ¨·Ì [AMD_ET_ATK.AMD_CLK_GetName]«È ®·¢¹ùÇ ª³Ð¡¹ÐëÆÐ ©·Ø²³¬³, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆï»Ýò¼ ¬·Ð¨³Ý«¸ åÁÌèÁÐ¬ÈëŒ¨¹ è»ØéŠ¦ÈØ®¹ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR3;†Š«³É²³Ì ¡³Ý¡³Ì©·ØùÇ ¬³¬ÈçÆÐ °³äˆ êÁÌ¡¹ÐùÇ ±ÈÛ©³ÝëÁÐ«È ©³¥³É«¸ ‘·Ð«·¬¹Üäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ åÁÌèÁÐéˆ¥³ ¨³ÎëÆÌ •ÁÐëÆÐ ñÆÐ¦È¨¹ ®·ëÆØ ¡¹Ý²·Ø²³åÆÌ ü¾¦³É«¸ ‡ŒåŒŽ¹ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VR4;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ®·¢¹ùÇ ¡³Øí»ÉëÆÐ ìÆÐ¡È¨¹ ëÆØ²·Ø²³¡¸ ëÁÛ«·Üäˆ, ®·ëÆØ ¡¹Ý²·Ø²³åÆÌ [AMD_ET_ATK.AMD_CLK_GetPenisAN]ùÇ ¨³Û«¸ ûÄ²³Ì [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äˆï»Ýìˆ®³ åŒŽÈ¬È è»Û²³äˆ è»ØëÆÐ ‘·Ð«·ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ”ÈÞ«·¬ÈåÆÌ æÆÛ²³Ì äˆï»Ý«¸ «·ÐäÁÐëÆÐ ”ÈÝäŒ¦Èäˆ, ªÈÉëÆÌ‘³Øò¼ åÁÌèÁÐëÆÐ ñÆÐ¦È¨¹ ²·¦ÈçÆÐ ëÁØ¬ÈÉ«È¡È ªÈ¬³É²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ®·ëÆØëŒçˆ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]çÆÐ ±³äˆæÆÌ ¢³ßª·Ì ¡³Øí»É«¸ ¬³ØªÈ êÁØëÆÐ äˆçŒ¥³¡³, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ¢´¦¹¥³éˆ¨¹ ®·Ì®·Ì²È ²·¦ÈçÆÐ ëÁØ¬ÈÉ«È¡È ªÈ¬³É²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF3;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ®·ëÆØ åŒŽÈåÆÌ ü¾¦³É«¸ ±³ò¼ùÇ «³ðÆØìˆ®³ «ÈÞ«·©·¦Èäˆ äÁÌ®ÈØëÆÐ ñÆÐ¦È¨¹ ¬·ÝªÈÌ«·Ú«È ²·¦ÈçÆÐ ñÆÌæÆÐ¡È ªÈ¬³É²´ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_VF4;®·¢¹«¸¡¸ ©·Ø²´¬ÈÌ¥³... ¢³Ø¬³«¸¡¸ «ÈÜ«· û¿¥´ùÇ äÁÐëÀÉ«ÈÙ¢È¥³. ²³¬È¨³Ì ±ÈçÆÐ ñÆÐ¦È¨¹Ìª·æˆ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ š¼É èÁÐäˆ å»ã¬È «³ÎåÆÌ [AMD_ET_DEF.AMD_CLK_GetPussyAN]ùÇ ¡³Øí»É«¸ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ëÁØ¬ÈÉ«ÈØ«È ¥·²´¬È¬³ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ©³éˆ®·¦·Ø «ÈÙëÆÐ ©·Ð¦Èäˆ ®ÈØëÆÐ ñÆÐ¦¹ÜêÆÙ¢È¥³. ;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_20000_C1;[AMD_ET_DEF.AMD_CLK_GetName]ùÇ «³Ì«¸ •ÁÐ«È ‡ŒçŒåÆÌ «µÉê»ÉùÇ ‘³ÝëÆÌ «·Ú«·Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¨³çÆÌ ëŠèÁÐ«¸ ª³Ù¬ÈÐëÆÐ ©³Ìé»É²³åÆÌ äˆï»ÝùÇ ªÈ¡³ÌëÆÐ éˆ¢´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_C2;«·Ð“³«³ÌëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡¹Ð²³ÙéŠ«¸ª· ±È«·ëˆçŒåÆÌ «¹Ð¡È«¸ è»ØëÆÐ ¨³á¡Èäˆ ìÆÐ¡·ëÁÌ ªÈ¡³ÌëÆÐ éˆ¢´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_C3;¢·Ø®¹‡ŒçŒåÆÌ ª´ØèÁÐ«¸ è»ØëÆÐ ¬·ÉªÈÌ [AMD_ET_ATK.AMD_CLK_GetName]ò¼ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ª³ÐëÆÐ ¨³Þ¥´äˆ «ÈÌ®¸ùÇ ªÈÌ©ÈçÆÐ °³ØäŠ²³åÆÌ –Œ¡·ëÁÌ èˆ²·ØëÆÐ ìÆÐ¡¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_C4;[AMD_ET_ATK.AMD_CLK_GetName]«È èŠ¡ÈçÆÐ ä»Ï†Šª¸ùÂ ©ÈÌïÆØëÆÐ ”ÈçŒäˆ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡³Ì¬·Ð²³¡¸ ªÈÌùÇ «ÈçÆØëÆÐ ù¿®¹ÜêÆÙ¢È¥³... æŠ ª³¦³ØëÆÌ ®·Ìª³ÝùÇ ù¼ÝäÁÉëÆÐ ®³Þ«³ ª·Ý¬·ÌëÆÐ ©·Ð«¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡³Ý¡³Ì©·ØùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]¡³ è»ØëÆÐ ˜ŠªÈåÆÌ êÁÌ¡³Ì¨³¥³ äˆï»Ýò¼ éÁÐü¾¡³Ø«¸ è»ØéŠ¦È®¹Ü¬È¨³Ì, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ìˆäÆØæˆ ¡´ùÇ®È «³Îäˆ ²·¦ÈçÆÐ ñÆÌæÆÐ«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¬³ªÈÌùÇ ëÀÉ¨³Ý¨³ÌëÆÐ ùÄ²´ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ¬³Ý¢³Ì¡³Ø®·¦·Ø ë‹¦ÈÌ²´ÜêÆÙ¢È¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ äŒ éÁÐü¾²³Ì ëÁØ¬ÈÉ«ÈØ«È ìŠåÆÌ ü¾¦³ÉëÆÐ éŠ¬·Ý²³¨¹ ªÈÌëÆØ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R3;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ è»Ø äŠª·ÉäŠª·ÉëÆÐ ë‹¦ÈÌ²³¨¹ ¬³ªÈÌùÇ ëÀÉ¨³ÝëÆÐ ®´ùÂÜäˆ, [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ²¹ÌªÈÐëÆÐ éŠ¬·Ý²³¨¹Ìª· «ÈÌ¬·Ý²³Ð êŠ «·ÚåÆÌ ü¾¦³É«¸ ²·¥·É«¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_R4;[AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]¡³ ìŠåÆÌ îÆÌ ü¾¦³É«¸ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ åÆÝëÀÉ¥³Ý²³äˆ «ÈÜ¥³åÆÌ ª³ªÈÐìˆ®³ «ÈÞ«·©·¦Èäˆ [AMD_ET_ATK.AMD_CLK_GetName]«¸¡¸ ¥³Ð¦³éÁá«· ¥· îÆÌ ü¾¦³ÉëÆÐ ¡³ÐäŠ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]«È ¡È¥´²³¥·Ì ìÆÐ¡·ëÁØëÆÐ ìŠ¬È è»Û²´ÜêÆÙ¢È¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¡¹Ý¨¹ÐùÇ åÁÌëŒçˆ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ¢´¦¹¥³éˆ¨¹ ¨´æˆ²´Ü¬È¨³Ì ª³Ýÿ¼ÝëÆÌ ©³šÄ¬È «³Î«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ¨´æˆ²³¨¹Ìª· ¬³ªÈÌùÇ ìÆÐ¡·ëÁØëÆÐ ùÄ²´ ²·¦ÈçÆÐ ñÆÌæÆÐ«·ÜêÆÙ¢È¥³. [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ äÁÐëÀÉò¼ ü¾¦³É«È ôÄª·Ê«ÈÌ é»É¬³Ù²³Ì «·ÐäÁÐçˆ [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ å»Ý¦³É¥³Ý²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F3;[AMD_ET_DEF.AMD_CLK_GetName]«È ëÆØ¦³Ì²³Ì ¨³Ðò¼ –Œ¡·ëÁÌ êÁØëÆÐ ¢´©´áëŒ¨¹ [AMD_ET_ATK.AMD_CLK_GetName]«¸¡¸ ‘³É ¥³Ð¦³éÁá«· ²·¦ÈçÆÐ ñÆÌæÆÐ¬³, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ äÁÐëÀÉ¡³ØëÆÐ «³Ùæˆ²³åÆÌ ü¾¦³É«¸ «³èŠ ¨³Ðæˆ ²³Ð êŠ «·Ú«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_20000_F4;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¡Èâäˆ «·æÁÙäˆ íÁÉíÁÉ²³Ì ü¾¦³ÉùÇ ±³æˆ«¸ ÿÄÙ˜ÆÐ¦¹, «¹¬³«¸¡¸ Ž³Ð¦¹ ©·Ø²´¬ÈåÆÌ äÁÐëÀÉìˆ®³ «ÈÞ«·©·¦Èäˆ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ëÁØ¬ÈÉ«ÈØ«¸ ‘³¦³ ¬ÈØêÆÝ®·¦·Ø ²·Ð‘·É«¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+
+AMD_EV_DESC_PLAY_30000;[AMD_CLK_EV_DESC_PLAY_30000_ACT][AMD_CLK_EV_DESC_PLAY_30000_DS];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_C0;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¨³¬È¨³É êÁÌ¡³Ì«È ¥³¡³ëˆ¬³ äÆÙ²È ôÄçˆ èÁÐ¦·¢³¦¹ ²´Ü¬È¨³Ì, [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «·æÁÙäˆ êÆÙ¡È®³Ì ¥·ß«¸ ¡·Ð¦¹ ²³Ì©³Ð åÆÞ«·©·¦¹ÜêÆÙ¢È¥³... ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_C1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ²·¦ÈçÆÐ ¨ÈÐ«·éÁá«Èäˆ è»ØëÆÐ ‘·Ð¨¹ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «³Ì«¸ “ÈçÆÐ —Š¦¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_C2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¬·Ð¬·ÝùÇ êˆ¦ÈçÆÐ å»â«È¨¹ ¢³Ø¬³«¸¡¸ ¥³Ð¦³éÁá«·Üäˆ, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ²·¦ÈçÆÐ ¥·ëÁÉ ª¸¡¸ ¨ÈÐ«·éÁá«È¨¹ ¥·ëÁÉ ¡Èâ«È ±³äˆæÆÐ«· “ÈçÆÐ —Š¦¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_R0;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¨³ëÆØŽ·Û ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³ ¨³¬È¨³É êÁÌ¡³Ì ©³Ê«¸ —Š¦È¦¹ ²´Ü¬È¨³Ì, [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]åÆÌ ¡³Ý¡³Ì©·ØùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]¡³ æˆ¨³Ý®Èæˆç»É ¢´©·¦¹æŠ¬È «³Î«³ÜêÆÙ¢È¥³... ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_R1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ¨³ëÆØ¥´çˆ ë‹¦ÈÌ²³äˆ äŒ¢¹ùÇ [AMD_ET_DEF.AMD_CLK_GetPussyNoun] «³Ì«¸ †Š«³É²³Ì ëÀÉ¨³ÝëÆÐ ˜»Ï«³¢´«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_R2;¬·Ý«´ÉëÆÐ ”³¢´¦¹åÆÌ æÆÛ •ÁØïÆÐ¡·¦ÈåÆÌ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]ùÇ ¡³Øí»ÉëÆÐ ¨³¬È¨³ÉŽ³¬È ìÆÐ¡È¨¹, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ ²ÈØŽ·Û ˜Šª¹©³É«³ ¥·¦·ëÁÌ ëÀÉ¨³ÝëÆÐ ˜»Ï«³¢´«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_F0;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ¨³¬È¨³É êÁÌ¡³Ì [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ìˆç»Ý²³¨¹ ²·¦ÈçÆÐ ’´¦¹ ²´Ü¬È¨³Ì, [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]åÆÌ äŒ¢¹ùÇ ª´Ý¡³Ééˆ¥³ ’³Ð¦³ÜêÆÙ¢È¥³... ;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_F1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ëÀÉ¨³Ý«¸ ‘³¦³ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ”ÈÉ«·åŠçŒ¥³¡³, [AMD_ET_ATK.AMD_CLK_GetName]«È ª³¬·Ý²³åÆÌ ¡·ÛëÆÐ åŒŽÈäˆ äŒçÆÐ ¡¹Ý¨¹Ð«¸ ®³Ì åÁÌëŒçˆ ¢´¦¹¥³éˆ¨¹ èˆëÀÉ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_F2;[AMD_ET_DEF.AMD_CLK_GetName]«È ä‰ª·ÝëÆÐ å»â«Èäˆ ë»Ìè»ØëÆÐ ‘·Ð¨¹ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]çÆÐ ìˆ«È¬³, [AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¥·«Èª³Ý ©·°È¬È è»Û²³äˆ «·Ð’³¬ÈÌ êˆ¦ÈçÆÐ ñÆÐ¦È¨¹ ¬·Ý«´ÉëÆÐ ïˆ²´¢´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_30000_DS_1; ¬³ØªÈ ‡Š ²ÈØëÆÐ ¥³²³Ì [AMD_ET_ATK.AMD_CLK_GetPenisNoun]¡³ ’³¬¹¢³ëˆ¬³, [AMD_ET_DEF.AMD_CLK_GetPussyNoun]«¸ ¡³æÆÉ²³¡¸ ˜»Ï«³¬¹Ü¥·Ì [AMD_ET_ATK.AMD_CLK_GetName]ùÇ ¬·Ý«´É«È ñÆÐ¦·¢·Ø®¹ ©³¥³É«¸ ‘·Ð«·¬¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30000_DS_2;[AMD_ET_ATK.AMD_CLK_GetName]«È [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ —»Ù«³¢´¬³ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]«¸ª· ¥´¦µÝùÇ ¬·Ý«´É«È ñÆÐ¦·¢·Ø®¹ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_DESC_PLAY_30500;[AMD_CLK_EV_DESC_PLAY_30500_ACT];;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30500_C1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¨³¬È¨³É êÁÌ¡³Ì«È ¥³¡³ëˆ¬³ äÆÙ²È ôÄçˆ èÁÐ¦·¢³ äŠ¨·Ý ©³Ê«¸ ©³Ðª³²´ÜêÆÙ¢È¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ ‘³–ÆÛ²³Ì «´É®¸¡³ ±ÈéŠ«¸ ¥³ãåÆÌ åŒŽÈØ«¸ è»ØëÆÐ ‘·Ð«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30500_R1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¨³ëÆØ ¢´¯ÈåÆÌ ¥´çˆ ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³ [AMD_ET_ATK.AMD_CLK_GetPenisNoun]çÆÐ —»Ù«³ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «·ÐäÁÐ«¸ ª³¬·Ý²´ÜêÆÙ¢È¥³. [AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ «·ÐäÁÐò¼ è»Ø«¸ åÆÝëÀÉùÇ ìÆÝ¡·çÆÐ ôÄ¬ÈÙ«·˜ÆÌ ®´, «³Ìæˆù¼ éÁÌåˆ¡³ ôÄª·Ê«ÈÌ é»É¬³Ù²³Ì åÁÌ©ÈßëŒçˆ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ åˆ¦¹éˆ«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_DESC_PLAY_30500_F1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ©ÈëÁÛëŒ¨¹ ²·¦ÈçÆÐ ñÆÌæÆÐ¥³¡³, ¬·É¥³Ý²³Ì ªÈ¬·Ø«¸ è»ØëÆÐ ’´äˆ ê»ÌëŒçˆ êŒêŒçˆçÆÐ ¥³Ð¦´¨¹ [AMD_ET_ATK.AMD_CLK_GetName]«È ª³¬·Ý²³Ð ‘´Ž³¬È äŒùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ©³Ðçˆ ë‹¦ÈÌ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_String_2PNM_1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ¬·Ý¨¹Ì«¸ª· [AMD_ET_DEF.AMD_CLK_GetName]ùÇ [AMD_ET_DEF.AMD_CLK_GetPussyAN]çÆÐ ä»Ý¡¹É²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_String_2PNM_2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ëÆÐ ¨³ìŠéˆ¨¹ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ª³Ù«ÈÙ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_String_2PNM_3;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ ¥³¦ÈçÆÐ ©·Ð¦Èäˆ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ¨ÈÐ«·¢·ã«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_String_2PNB_1;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ ‡Š©³ÝëÆÐ åˆíÁÐ²³Ì [AMD_ET_DEF.AMD_CLK_GetName]«¸¡¸ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ”ÈÐ¦·¢·ã«·ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_String_2PNB_2;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ æÆÝ”³ÉëÆÐ éˆ¨¹ ¬ÈØêÆÝ¡³áëÆÌ ¬³ª¸çˆ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ˜Šª¹©³É«³ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_String_2PNB_3;[AMD_ET_ATK.AMD_CLK_GetName]ëÆÌ [AMD_ET_DEF.AMD_CLK_GetName]ùÇ «·Ý¥·Ý«ÈçÆÐ éÁá¬³Ùäˆ [AMD_ET_DEF.AMD_CLK_GetPussyAN]«¸ ª³Ù«ÈÙ²´ÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_String_2PNC_1;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ¬³ªÈÌùÇ [AMD_ET_DEF.AMD_CLK_GetPussyNoun]«¸ ª³Ù«ÈÙ²´Ü¥³.;;;;;;;;;;;;;x;
+AMD_String_2PNC_2;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ëÆÐ ¢´¦¹¥³éˆ¨¹ [AMD_ET_ATK.GetSheHe]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN]çÆÐ ¬ÈÙ«·ª³Ø¯¹Ü¥³.;;;;;;;;;;;;;x;
+AMD_String_2PNC_3;[AMD_ET_DEF.AMD_CLK_GetName]ëÆÌ [AMD_ET_ATK.AMD_CLK_GetName]ùÇ [AMD_ET_ATK.AMD_CLK_GetPenisAN] ùÄçˆ ²·¦ÈçÆÐ ¢´¦¹Ü¥³.;;;;;;;;;;;;;x;
+
+
+
+
+AMD_EV_OPT_LN_ECHO;[AMD_ET_POV.GetFirstName]ùÇ ©³ÌëÆÝ«È äÁÝäÆØ²³äÁÌ;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_STOP;[AMD_CLK_EV_OPT_LN_STOP];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_BUY;«È ¬·Ýæˆ¨¹Ì íÁÝéÁÌ²´.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_SELL;«ÈëÀÝ²´ ìŠª¹ª· ¡³Øª³²³Ù¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_STUDY;¬ÈªÈÉ«È åÆÐ«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_TRAIN;ëˆåÆÐëÆÌ «¹¡ÈŽ³¬È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_NEXT;[AMD_CLK_EV_OPT_LN_NEXT];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_BUY;¥· ²³äˆ ªÈâ¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_SELL;†Š¡³ ª·©ÈêŒçÆÐ «ÈëÀÝ²³ªÈ¡¸ÜêÆÙ¢ÈŽ³?;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_STUDY;ñÁÌ¦¹ÌëÆÌ ªÈÐ¬·Ì®·¦·Ø!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_NEXT_TRAIN;«³¬ÈÉ ²³Ð ¡·Û«È ¢³Ø«³Ü¥³.;;;;;;;;;;;;;x;
+
+
+AMD_EV_TT_LN_STOP_BUY;«È ª·©ÈêŒåÆÌ é»Ì¡¹É¬·É«ÈÌ ª³Ù«ÈÙ ²´ÝùÄçÆÐ ðˆ²³Ø²³¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_STOP_SELL;«È ª·©ÈêŒåÆÌ é»Ì¡¹É¬·É«ÈÌ ª³Ù«ÈÙ ²´ÝùÄçÆÐ ðˆ²³Ø²³¬È «³ÎêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_STOP_STUDY;é»Ì¡¹É¬·É«ÈÌ ª³Ù«ÈÙ ²´ÝùÄ «·Ú«È ¬·ÌÿÇ«¸ ¬ÈÙìÁÝ²³«¹ ¡¹Ý²·ØëÆÐ “³ãêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_STOP_TRAIN;é»Ì¡¹É¬·É ª·Ý²´ÝùÄçÆÐ ²³¬È «³ÎëÆØëŒçˆª· ëÀÉ¨³ÝëÆÐ éŠ†Š¡ÈÙ¢È¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_TT_LN_NEXT_BUY;«È ª·©ÈêŒåÆÌ é»Ì¡¹É¬·É«ÈÌ ª³Ù«ÈÙ ²´ÝùÄçÆÐ ðˆ²³Ø²³¬È «³Î¬È¨³Ì, †Š¡³ ò¼äÆØ «³â«¸ éÁÐ¡³åÆÝ²³Ì ¡·Ì «·ÚêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_NEXT_SELL;ëˆåÆÐ é»Ì¡¹É¬·É«ÈÌ ª·Ý²´ÝùÄåÆÌ ¬¸ä»Ý²³Ð ª´Ý¡³É«È «·Ú«·Ü¬È¨³Ì, «µÉ¡³ÌùÇ æ»Ì«È ¥³ÝªÈÌùÇ ª´Ý¡³ÉëÆÐ ©³•ÁÐ êŠæˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_NEXT_STUDY;«¹¡ÈŽ³¬È¨³Ì «¹ÌêÆÙ²³¦¹ ²´Ü¬È¨³Ì, èˆæÆÌ «ÈÐ«È ¡ºÿ¿É¥´çˆ ô¿¬ÈåÆÌ «³ÎåÆÌ ©·Ù«ÈÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_NEXT_TRAIN;ùÂÌ¦´ ¡ºÿ¿ÉëÆÌ «¹¡ÈŽ³¬È¬È¨³Ì, ¥³ÝªÈÌ«È ùÂÌ²³Ì¥³¨¹Ì äŒ¦·Ì ¡·ÛëÆÌ «·Ì¬¸æÆÌ¬È ôÄ¬ÈÙ²ÈÐ êŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_SOFT;[AMD_CLK_EV_OPT_LN_SOFT];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_1;éŠæŒ¦·ëÁØ«È ¡³Ý²³ØëÆÐ «È¡ÈÌ¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_2;¬· éŠæŒ¦·ëÁÌ ¢³Ø¬³Ù¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_3;®·Ì®·Ì²È, äŠª·ÉäŠª·É ìÆÐ¡ÈÌ¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_SOFT_4;²È«ÈÉ!? ¡·, ¡·¡ÈÌ «³Ìô¾...;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_SOFT;éŠæŒ¦·Ù¡¸ ª³¦³Ý²³Ù¢È¥³. «ÈÌª·Ýò¼ ¨´¦¹É, ò¼Ì¡ºæˆ æÆÝ«¸ ‘³¦³ ª·Ýä»ÝçÅÐ«È ©¹Ìæ»Ý²³Ù¢È¥³.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_HARD;[AMD_CLK_EV_OPT_LN_HARD];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_1;¬ÈÌ”³ [Root.Culture.GetName]ùÇ [Root.GetManWoman]¡³ ª³¦³Ý²³åÆÌ ©·ÙëÆÐ éˆ«¹ìŠ¡¸Ü¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_2;²ÈØ ì»Ø “·é»ÐŽ³?;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_3;¨³Û ì»Ø ÷¼¦³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_HARD_4;©·°ÈÐ êŠ¡³ «·Ú¥³!;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_HARD;¡¹É¦¹Ð²³¡¸ ä‰¨È²³Ù¢È¥³. ®¸¦¹Éò¼ ¬·Ý¦¹É, ªÈÌ®¸ ìˆ¡·Ì«¸ ‘³¦³ ª·Ýä»ÝçÅÐ«È ©¹Ìæ»Ý²³Ù¢È¥³.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_RAND;ª³«Èì»ã¡¸ ¬È¢´¦¹¨¹Ì «µÝéˆ²³Ð ìÁÐæˆ «³Ð«³«µ ²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_RAND;ª³Ý¥´«¸¡¸ ìŠæˆòÂÌëÆÐ ¢·Ø¡¹ìÁÙ¢È¥³. ¡¹Ðò¼åÆÌ «ºíÆÉ²³Ð êŠ «·ÚêÆÙ¢È¥³.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_OVER;¬ÈäÆØéŠ°· ¬·ÌïŠª¸ÉêŒçÆÐ ªÈÐªÈ²³Ì¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_1;¢´ ê»Ø“ÈçÆÐ ¬¸¥´çˆ éˆ«¹ìÁÐ ªÈ¡³Ì«ÈäÁÌ!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_2;¬ÈäÆØéŠ°· ¬·ÌïŠª¸ÉêŒçÆÐ ªÈÐªÈ²³Ì¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_3;¬ÈäÆØéŠ°· ¬·ÌïŠª¸ÉêŒçÆÐ ªÈÐªÈ²³Ì¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OVER_4;ëÆÝ¡È«È«È«È«ÈÛ!;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_OVER;èŠ¦È²³¡¸ ü¾¦³ÉëÆÐ °³Ø²³¨¹Ì ¡·Ì¡³ÝëÆÐ ¨³Ý®ÈÐ êŠæˆ «ÈÜêÆÙ¢È¥³...\n;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_ANAL;[AMD_CLK_EV_OPT_LN_ANAL];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_ANAL_1;®³É²³Ì «³«È«¸¡¸Ì ôÄÛèÁÌ«È «·ëÁÐ¦È¬È!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_ANAL_4;¬³ØŽ³Ì, ¬ÈäÆØ «·¥ÈÐ...ëÆÝ¡È«È«È«ÈÛ!;;;;;;;;;;;;;x;
+AMD_EV_TT_LN_ANAL;®³É²³Ì «³«È«¸¡¸¨³Ì «¹Ð¦ÈåÆÌ ôÄÛèÁÌëÆÐ «ÈëÀÝ²³Ù¢È¥³.\n;;;;;;;;;;;;;x;
+
+
+
+
+AMD_EV_OPT_LN_IN;[AMD_CLK_EV_OPT_LN_IN];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_TOOLTIP;ª´Ý¨¹ÝùÇ “ÈçÆÐ —Š¦ÈåÆÌ ¬³«¹ÌêŒ¦·ëÁÌ ª·Ì°´É«ÈÙ¢È¥³.\n;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_0;Fire in the hole!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_10;«³Ì«¸ “³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_11;(ÿ¼¡³Ì) äŠ¨·Ý «³Ì«¸ ž¼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_12;(äŠ¨´) äŠ¨·Ý «³Ì«¸ ž¼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_13;(±³Ì¨´) äŠ¨·Ý «³Ì«¸ ž¼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_14;(¡³Ý¡³Ì) äŠ¨·Ý «³Ì«¸ ž¼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_15;(±È¡³Ý¡³Ì) äŠ¨·Ý «³Ì«¸ ž¼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_20;«³Ì«¸ “³¡¸ ²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_21;(ÿ¼¡³Ì) äŠ¨·Ý «³Ì«¸ ž¼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_22;(äŠ¨´) äŠ¨·Ý «³Ì«¸ ž¼!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_23;(±³Ì¨´) «³Ì«¸ “³¡¸ ²´ìÁÌ¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_24;(¡³Ý¡³Ì) «³Ì«¸ “³¡¸ ²´ìÁÌ¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_IN_25;(±È¡³Ý¡³Ì) ¬ÈÐ¢´ª³¬·Ý¥³Ý²³Ì¥³.;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_OUT;[AMD_CLK_EV_OPT_LN_OUT];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_TOOLTIP;\nª³Ýê»É «³Ì¬·Ýª·ÝëÆÐ ùÄ²´ ª³¡¹É ùÄ®ÈçÆÐ ìˆ¬·Ð²³Ù¢È¥³. ª·Ýä»ÝªÈ «ÈØªÈÌ ¡³åÆÝª·Ý«È îŒ¡¸ ²³¦³É²³Ù¢È¥³.\n;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_0;¬³ØŽ³Ì, ¬È©´¬³«¸¡¸Ì ü¾¦³Ééˆ¥³ ìÁÝë‰²³Ì ¡·Û«È «ÈÜ¥³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_10;©³Ê«¸ “³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_11;(ÿ¼¡³Ì) ¬ÈÐù¿ª³¬·Ý;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_12;(äŠ¨´) ©³Ê«¸ “³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_13;(±³Ì¨´) ©³Ê«¸ “³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_14;(¡³Ý¡³Ì) ©³Ê«¸ “³Ì¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_15;(±È¡³Ý¡³Ì) ©³Ê«¸ “³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_20;©³Ê«¸ “³¡¸ ²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_21;(ÿ¼¡³Ì) ©³Ê«¸ “³¡¸ ²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_22;(äŠ¨´) ©³Ê«¸ “³¡¸ ²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_23;(±³Ì¨´) ©³Ê«¸ “³¡¸ ²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_24;(¡³Ý¡³Ì) ©³Ê«¸ “³¡¸ ²³Ì¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_OUT_25;«³, «³Ì«¸åÆÌ «³Ìô¾! ¬¸©³Ð äŒ¨³ÌôÂ...;;;;;;;;;;;;;x;
+
+
+AMD_EV_CT_WS;äŠ¨·Ý ©³Ê«¸ ©³Ðª³!;;;;;;;;;;;;;x;
+AMD_EV_CT_WF;©·°ÈÐ êŠ¡³ «·Ú¥³!;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_DS;[AMD_CLK_EV_OPT_LN_DS];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DS_0;¥´¦µÝª³¬·Ý;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DS_TOOLTIP;¥´¦µÝëŒçˆ ª³¬·Ý²³Ù¢È¥³. «ÈØªÈÌ ¡³åÆÝª·Ý«È îŒ¡¸ ª³ÝêÆÝ²³Ù¢È¥³.\n;;;;;;;;;;;;;x;
+
+AMD_EV_OPT_LN_DRAIN;[AMD_CLK_EV_OPT_LN_DRAIN];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_0;ìÁÉ¡È ‘³É ì»ãëÆÌ ¢³Ð«ÈäÁÌ!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_1;®·ÌäÁÉëÆÐ éˆ«¹ìŠ¨³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_2;¥³ÝªÈÌëÆÌ ìÁÉëÆÐ êŠæˆ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_3;¡³Ì¥³Ì²³äÁÌ. ìÁÉ«·¦³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_4;—ÀÝ¡³ìÁÉ¢¸!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_DRAIN_TOOLTIP;†ˆ¬³«¹Ì¬·É«ÈÌ ª¸ÉêŒ ¡ÈêÁÐçˆ ª³Ý¥´ùÇ ª´Ý¨¹Ý¦¹ÉëÆÐ ñÆÙêŠ²³Ù¢È¥³. ª³Ý¥´åÆÌ ìÁÉëÆÐ êŠæˆ «ÈÜêÆÙ¢È¥³!\n;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_END;[AMD_CLK_EV_OPT_LN_END];;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_C1;©¹Ðçˆ ìÆÐ¡·Ù¬È «³Î«³Ü¥³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_C2;ì»ãëÆÌ ªÈ¡³ÌëÆÐ éˆ¢´Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_C3;¢³åÆÌ «È¡·Û¨³ÌëÆÐ ùÄ²´ ì»Ì¬´²³Ù¢È¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_R1;²¹Ý±¹Ì«·ÚäÁÌ.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_R2;äŒ¦·É¬·¦·É ìÆÐ¡·ùÂÜ¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_R3;«È ¨³Û«¸ ª³Ì¥³!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_V1;•ÆØ”ÈÉ²³Ì ¡¹Ý²·Ø«È«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_V2;«È¦·Ì ¡·Ì ªÈ×«·...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_V3;«³Û... «³«³......;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_B1;æ»Ì«È «³Ž³ÙäÁÌ.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_B2;«È ¬·Ýæˆ¨¹Ì ò¾Ì®³Î«³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_B3;¡³¡¹É «Èª³ÝùÇ ¨³Ìì»É!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_S1;ëŒëÆÉ... «ÈëÀÝ²´ ìŠª¹ª· ¡³Øª³²³Ù¢È¥³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_S2;¬·Ý¬ÈÉ²³Ì «ÈÐ, ¬·Ý¬ÈÉ²³Ì ¥´¡³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_END_S3;¬´¨Èæˆ éˆäˆ æ»Ìæˆ ©·Ðäˆ... ¬·Ý¨³Ð éˆ¦³Ø®³Ì «ÈÐ«È«µ!;;;;;;;;;;;;;x;
+
+
+#AMD_EV_OPT_LN_STOP;[AMD_CLK_EV_OPT_LN_STOP];;;;;;;;;;;;;x; «³¢È «È¡·ÛæÆÐ «³Ì˜ŒåÆÌ¡·¡³áëÆÌ¥¸...
+AMD_EV_OPT_LN_STOP_ST1;ªÈ¡³Ì¢³Ý©È¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_ST2;ìÆÐ¡·Ùäˆ ë‹«ÈÉ²³Ì ªÈ¡³Ì«È«·Ü¥³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_ST3;«È¡¸ ©³çˆ ©´ëŠåÆÌ ìÆÐ¡·ëÁØ«È¦³åÆÌ ¡·çˆäÁÌ!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_B1;æ»Ì«È «³Ž³ÙäÁÌ.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_B2;«È ¬·Ýæˆ¨¹Ì ò¾Ì®³Î«³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_B3;¡³¡¹É «Èª³ÝùÇ ¨³Ìì»É!;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_S1;ëŒëÆÉ... «ÈëÀÝ²´ ìŠª¹ª· ¡³Øª³²³Ù¢È¥³...;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_S2;¬·Ý¬ÈÉ²³Ì «ÈÐ, ¬·Ý¬ÈÉ²³Ì ¥´¡³.;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_STOP_S3;¬´¨Èæˆ éˆäˆ æ»Ìæˆ ©·Ðäˆ... ¬·Ý¨³Ð éˆ¦³Ø®³Ì «ÈÐ«È«µ!;;;;;;;;;;;;;x;
+
+
+AMD_EV_OPT_LN_E_BAD;«³Ì ì»ã¥³;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_GOOD;ì»ã¥³;;;;;;;;;;;;;x;
+AMD_EV_OPT_LN_E_OVER;‡ˆ«¸«¸«¸«¸Ý¡´Ý¬³Ý²´«¹«·«·«·;;;;;;;;;;;;;x;
+
+
+

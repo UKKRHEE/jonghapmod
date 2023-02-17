@@ -1,0 +1,100 @@
+targetted_decisions = {
+	
+	ala_traits_1 = {
+		filter = all_including_me
+		ai_target_filter = none
+		
+		from_potential = {
+			ai = no
+			has_character_flag = art_on
+		}
+		effect = {
+			FROM = { character_event = { id = Alatraits.1 } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ala_traits_2 = {
+		filter = all_including_me
+		ai_target_filter = none
+		
+		from_potential = {
+			ai = no
+			has_character_flag = art_on
+		}
+		effect = {
+			FROM = { character_event = { id = Alatraits.2 } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ala_traits_3 = {
+		filter = all_including_me
+		ai_target_filter = none
+		
+		from_potential = {
+			ai = no
+			has_character_flag = art_on
+		}
+		effect = {
+			FROM = { character_event = { id = Alatraits.3 } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ala_traits_4 = {
+		filter = all_including_me
+		ai_target_filter = none
+		
+		from_potential = {
+			ai = no
+			has_character_flag = art_on
+		}
+		effect = {
+			FROM = { character_event = { id = Alatraits.4 } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ala_traits_5 = {
+		filter = all_including_me
+		ai_target_filter = none
+		
+		from_potential = {
+			ai = no
+			has_character_flag = art_on
+		}
+		effect = {
+			FROM = { character_event = { id = Alatraits.5 } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ala_traits_6 = {
+		filter = all_including_me
+		ai_target_filter = none
+		
+		from_potential = {
+			ai = no
+			has_character_flag = art_on
+			has_game_rule = { name = dw_gender_bender_content value = dw_yes_futa }
+		}
+		effect = {
+			FROM = { character_event = { id = Alatraits.6 } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

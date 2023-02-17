@@ -1,0 +1,143 @@
+spriteTypes = {  
+   spriteType = {
+      name = "GFX_trait_cheat_trait_babyface"
+      texturefile = "gfx/interface/_traiticon_obj_become_paragon_of_enlightenment.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }
+   spriteType = {
+      name = "GFX_trait_cheat_trait_babymaker"
+      texturefile = "gfx/interface/_traiticon_babymaker.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }
+   spriteType = {
+      name = "GFX_trait_cheat_trait_builder"
+      texturefile = "gfx/interface/_traiticon_plebeian_aedile.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }      
+   spriteType = {
+      name = "GFX_trait_cheat_trait_chosen_one"
+      texturefile = "gfx/interface/_traiticon_tribune_of_the_treasury.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }         
+   spriteType = {
+      name = "GFX_trait_cheat_trait_cursed"
+      texturefile = "gfx/interface/_traiticon_laws_cancel_voting.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }         
+   spriteType = {
+      name = "GFX_trait_cheat_trait_disinherited_blood"
+      texturefile = "gfx/interface/_traiticon_laws_cancel_voting.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }      
+   spriteType = {
+      name = "GFX_trait_cheat_trait_forbidden_marriage"
+      texturefile = "gfx/interface/_traiticon_laws_cancel_voting.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }   
+    spriteType = {
+      name = "GFX_trait_cheat_trait_forsaken_blood"
+       texturefile = "gfx/interface/_traiticon_laws_cancel_voting.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }
+
+   spriteType = {
+      name = "GFX_trait_minhyee"
+      texturefile = "gfx/interface/trait_minhyee.dds"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }  
+   spriteType = {
+      name = "GFX_trait_cheat_trait_immortal"
+      texturefile = "gfx/interface/_traiticon_obj_improve_learning.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }     
+   spriteType = {
+      name = "GFX_trait_cheat_trait_infertile"
+      texturefile = "gfx/interface/_traiticon_laws_cancel_voting.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }   
+   spriteType = {
+      name = "GFX_trait_cheat_trait_loyalist"
+      texturefile = "gfx/interface/_traiticon_crown.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }     
+   spriteType = {
+      name = "GFX_trait_cheat_trait_money_hands"
+      texturefile = "gfx/interface/_traiticon_tribune_of_the_treasury.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }         
+   spriteType = {
+      name = "GFX_trait_cheat_trait_ninja"
+      texturefile = "gfx/interface/_traiticon_plot_kill_spouse.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }       
+   spriteType = {
+      name = "GFX_trait_cheat_trait_prophet_blooded"
+      texturefile = "gfx/interface/_traiticon_pontifex.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }      
+   spriteType = {
+      name = "GFX_trait_cheat_trait_puppykicker"
+      texturefile = "gfx/interface/_traiticon_laws_cancel_voting.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }      
+   spriteType = {
+      name = "GFX_trait_cheat_trait_terrain_master"
+      texturefile = "gfx/interface/_traiticon_tribune_of_the_soldiers.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }  
+   spriteType = {
+      name = "GFX_trait_cheat_trait_terror"
+      texturefile = "gfx/interface/_traiticon_warscore.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }
+   spriteType = {
+      name = "GFX_trait_cheat_trait_treacherous"
+      texturefile = "gfx/interface/_traiticon_laws_cancel_voting.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }  
+   spriteType = {
+      name = "GFX_trait_cheat_trait_warpriest"
+      texturefile = "gfx/interface/_traiticon_new_leader.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+   }  
+}

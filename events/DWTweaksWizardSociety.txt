@@ -1,0 +1,424 @@
+namespace = DWTweaksWizard
+
+# Wizards Gather Ingredients
+character_event = {
+	id = DWTweaksWizard.1
+	desc = {
+		text = EVTDESC_MNM_1800_A
+		trigger = {
+			NOT = { has_character_flag = quest_gathering_companion }
+		}
+	}
+	desc = {
+		text = EVTDESC_MNM_1800_B
+		trigger = {
+			has_character_flag = quest_gathering_companion
+		}
+	}
+	picture = GFX_evt_experiment
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				event_target:hermetic_collaborator = {
+					always = yes
+				}
+			}
+			event_target:hermetic_collaborator = {
+				save_event_target_as = gathering_companion
+			}
+			set_character_flag = quest_gathering_companion
+			break = yes
+		}
+		# Find apprentice
+		random_courtier_or_vassal = {
+			limit = {
+				has_minor_title = title_dw_the_wizards_apprentice
+			}
+			save_event_target_as = gathering_companion
+			ROOT = { set_character_flag = apprentice_hermetic_gathering }
+		}
+	}
+	
+	option = { # Look for herbs
+		name = EVTOPTA_MNM_1800
+		character_event = { id = MNM.1810 days = 20 tooltip = EVTTOOLTIPA_MNM_1800 }
+	}
+	
+	option = { # Hunt for animal parts
+		name = EVTOPTB_MNM_1800
+		character_event = { id = MNM.1815 days = 20 tooltip = EVTTOOLTIPB_MNM_1800 }
+	}
+	
+	option = { # Shop for ingredients
+		name = EVTOPTC_MNM_1800
+		character_event = { id = MNM.1820 days = 20 tooltip = EVTTOOLTIPC_MNM_1800 }
+	}
+	
+	option = {	# I don't have time for this now
+		name = EVTOPTD_MNM_1800
+		hidden_effect = {
+			remove_character_modifier = acquire_ingredients_decision_cooldown_timer
+		}
+	}
+	
+	after = {
+		set_character_flag = do_not_disturb
+		clr_character_flag = quest_gathering_companion
+		hidden_effect = { character_event = { id = MNM.1825 days = 140 } } # safety flag clearing
+	}
+}
+
+character_event = { # Spell of Bodily Enslavement
+	id = DWTweaksWizard.2
+	title = DWTweaksWizard2T
+	picture = a_placeholder
+	desc = {
+		trigger = {
+			event_target:spell_target = {
+				is_female = no
+			}
+		}
+		text = DWTweaksWizard2
+		picture = slavery_male_cell1
+	}
+	desc = {
+		trigger = {
+			event_target:spell_target = {
+				is_female = yes
+			}
+		}
+		text = DWTweaksWizard2
+		picture = slavery_female_cell1
+	}
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	immediate = {
+		destroy_artifact = ingredient_metal_exotic8 # Iron
+		destroy_artifact = ingredient_metal_exotic9 # Tin
+	}
+	
+	option = {
+		name = DWTweaksWizard2TT
+		random_list = {
+			75 = {
+				custom_tooltip = {
+					text = DWTweaksWizard2TTSuccess
+				}			
+				event_target:spell_target = {
+					add_trait = branded_slave
+					add_character_modifier = {
+						name = dw_slave_pleasure_complete
+						duration = -1
+					}
+					add_trait = cheap_whore
+					move_character = ROOT
+				}
+			}
+			25 = { # Spell only makes them a whore
+				custom_tooltip = {
+					text = DWTweaksWizard2TTFail
+				}
+				event_target:spell_target = {
+					add_trait = cheap_whore
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Spell of Heart Enslavement
+	id = DWTweaksWizard.3
+	title = DWTweaksWizard3T
+	picture = a_placeholder
+	desc = {
+		trigger = {
+			OR = {
+				AND = {
+					event_target:spell_target = {
+						is_female = no
+					}
+					is_female = yes
+				}
+				AND = {
+					event_target:spell_target = {
+						is_female = yes
+					}
+					is_female = no
+				}
+			}
+		}
+		text = DWTweaksWizard3
+		picture = visit_male_female_1
+	}
+	desc = {
+		trigger = {
+			event_target:spell_target = {
+				is_female = no
+			}
+			is_female = no
+		}
+		text = DWTweaksWizard3
+		picture = visit_male_male_1
+	}
+	desc = {
+		trigger = {
+			event_target:spell_target = {
+				is_female = yes
+			}
+			is_female = yes
+		}
+		text = DWTweaksWizard3
+		picture = visit_female_female_1
+	}
+	
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	immediate = {
+		destroy_artifact = ingredient_animal7 # Heart
+		destroy_artifact = ingredient_metal_exotic7 # Copper
+	}
+	
+	option = {
+		name = DWTweaksWizard3TT
+		random_list = {
+			75 = { # Spell succeeds
+				custom_tooltip = {
+					text = DWTweaksWizard3TTSuccess
+				}
+				event_target:spell_target = {
+					add_lover = ROOT
+					move_character = ROOT
+				}
+				if = {
+					limit = {
+						event_target:spell_target = {
+							is_female = yes
+						}
+						is_female = no
+					}
+					event_target:spell_target = {
+						impregnate = ROOT
+					}
+					break = yes
+				}
+				if = {
+					limit = {
+						event_target:spell_target = {
+							is_female = no
+						}
+						is_female = yes
+					}
+					impregnate = event_target:spell_target
+					break = yes
+				}
+			}
+			25 = { 
+				custom_tooltip = { # Spell succeeds but doesn't last past the night
+					text = DWTweaksWizard3TTFail
+				}
+				if = {
+					limit = {
+						event_target:spell_target = {
+							is_female = yes
+						}
+						is_female = no
+					}
+					event_target:spell_target = {
+						impregnate = ROOT
+					}
+					break = yes
+				}
+				if = {
+					limit = {
+						event_target:spell_target = {
+							is_female = no
+						}
+						is_female = yes
+					}
+					impregnate = event_target:spell_target
+					break = yes
+				}				
+			}
+		}
+	}
+}
+
+character_event = { # Spell of Fireball
+	id = DWTweaksWizard.4
+	title = DWTweaksWizard4T
+	picture = wizard_fireball
+	desc = DWTweaksWizard4
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	immediate = {
+		destroy_artifact = ingredient_metal_exotic5 # Brimstone
+		destroy_artifact = ingredient_metal_exotic2 # Mercury
+	}
+	
+	option = {
+		name = DWTweaksWizard4TT
+		random_list = {
+			25 = { # Spell missed
+				custom_tooltip = {
+					text = DWTweaksWizard4TTFail
+				}
+			}
+			25 = { # Spell missed and hits someone else
+				custom_tooltip = {
+					text = DWTweaksWizard4TTMissed
+					any_courtier = {
+						if = {
+							limit = {
+								same_realm = FROM
+							}
+						death = { death_reason = death_murder_unknown_combustion }
+						}
+					}
+				}
+			}
+			50 = { # Spell kills the target
+				custom_tooltip = {
+					text = DWTweaksWizard4TTKilled
+					event_target:spell_target = {
+						death = { death_reason = death_murder_unknown_combustion }
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Spell of Flamestrike
+	id = DWTweaksWizard.5
+	title = DWTweaksWizard5T
+	picture = a_placeholder
+	desc = DWTweaksWizard5
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	immediate = {
+		destroy_artifact = ingredient_metal_exotic5 # Brimstone
+		destroy_artifact = ingredient_metal_exotic2 # Mercury
+		destroy_artifact = ingredient_metal_exotic6 # Gold
+	}
+	
+	option = {
+		name = DWTweaksWizard5TT
+		random_list = {
+			50 = { # Nothing happens
+				custom_tooltip = {
+					text = DWTweaksWizard5TTFail
+				}
+			}
+			50 = { # Spell destroys a building
+				custom_tooltip = {
+					text = DWTweaksWizard5TTDestroyed
+					event_target:spell_target = {
+						random_demesne_title = { 
+							destroy_random_building = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Buy a spellbook
+	id = DWTweaksWizard.6
+	title = DWTweaksWizard6T
+	picture = GFX_evt_experiment
+	desc = DWTweaksWizard6
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = DWTweaksWizard6TTBasic
+		trigger = {
+			wealth = 75
+		}
+		custom_tooltip = {
+			text = DWTweaksWizard6TTBasicTT
+			add_character_modifier = {
+				name = dwtw_basic_spellbook
+				duration = -1
+			}
+		}
+		wealth = -75
+	}
+	option = {
+		name = DWTweaksWizard6TTGood
+		trigger = {
+			wealth = 150
+		}
+		custom_tooltip = {
+			text = DWTweaksWizard6TTGoodTT
+			add_character_modifier = {
+				name = dwtw_good_spellbook
+				duration = -1
+			}
+		}
+		wealth = -150
+	}
+	option = {
+		name = DWTweaksWizard6TTBest
+		trigger = {
+			wealth = 300
+		}
+		custom_tooltip = {
+			text = DWTweaksWizard6TTBestTT
+			add_character_modifier = {
+				name = dwtw_best_spellbook
+				duration = -1
+			}
+		}
+		wealth = -300
+	}
+	option = {
+		name = DWTweaksWizard6TTNevermind
+	}	
+}
+
+character_event = { # Spell of Trusting
+	id = DWTweaksWizard.7
+	title = DWTweaksWizard7T
+	picture = GFX_evt_shady_meeting
+	desc = DWTweaksWizard7
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	immediate = {
+		destroy_artifact = ingredient_animal3 # Eyeball
+	}
+	
+	option = {
+		name = DWTweaksWizard7TT
+		random_list = {
+			25 = { # Spell Failed
+				custom_tooltip = {
+					text = 	DWTweaksWizard7TTFail
+				}
+			}
+			75 = { # Spell missed and hits someone else
+				custom_tooltip = {
+					text = DWTweaksWizard7TTSuccess
+					event_target:spell_target = {
+						add_trait = trusting
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,358 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_lilith_worshipers_invite_disciple_of_lilith"
+		texturefile = "gfx\\traits\\lilith.tga"
+	}
+
+	spriteType = {
+		name = "GFX_liliths_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_lilith.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_liliths_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_lilith_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_liliths_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_lilith_locked.dds"
+		noOfFrames = 4
+	}
+	
+	##### Lilith W(h)or(e)shippers #####
+
+	spriteType = {
+		name = "GFX_society_main_background_the_liliths"
+		texturefile = "gfx\\interface\\societies\\society_bg_lilith_worshiper.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_the_liliths"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_lilith_worshiper.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_the_liliths"
+		texturefile = "gfx\\interface\\societies\\symbol_small_lilith_worshiper.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_influence_the_liliths"
+		texturefile = "gfx\\interface\\societies\\society_influence_lilith_worshipers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_the_liliths"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_lilith_worshipers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_the_liliths"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_lilith_worshipers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_the_liliths"
+		texturefile = "gfx\\interface\\societies\\society_currency_lilith_worshipers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_the_liliths_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_lilith.dds"
+		noOfFrames = 4
+	}
+	
+	## Toska Custom:
+	spriteType = {
+		name = "DWTDinnerLady"
+		texturefile = "gfx/event_pictures/DWTDinnerLady.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "DWTHarleyCatacombs"
+		texturefile = "gfx/event_pictures/DWTHarleyCatacombs.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	# Event pictures for society acts:
+	spriteType = {
+		name = "NakedFemOnAltar"
+		texturefile = "gfx/event_pictures/llo/NakedFemOnAltar.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "NakedFemOnAltar2"
+		texturefile = "gfx/event_pictures/llo/NakedFemOnAltar2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "ClothedFemOnAltar"
+		texturefile = "gfx/event_pictures/llo/ClothedFemOnAltar.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "HornedMatingMissionary"
+		texturefile = "gfx/event_pictures/llo/HornedMatingMissionary.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "FuckInChurch"
+		texturefile = "gfx/event_pictures/llo/FuckInChurch.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "FemPainFuckBW"
+		texturefile = "gfx/event_pictures/llo/FemPainFuckBW.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "NudeFemGasping"
+		texturefile = "gfx/event_pictures/llo/NudeFemGasping.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "DeadNudeGirlOnAltar"
+		texturefile = "gfx/event_pictures/llo/DeadNudeGirlOnAltar.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "deathfacecobrasnake"
+		texturefile = "gfx/event_pictures/llo/deathfacecobrasnake.dds"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "MaleHand"
+		texturefile = "gfx/event_pictures/llo/MaleHand.dds"
+		allwaystransparent = yes
+	}	
+	spriteType = {
+		name = "HoodedFigureInCircle"
+		texturefile = "gfx/event_pictures/llo/HoodedFigureInCircle.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "CircleVictimOnlookers"
+		texturefile = "gfx/event_pictures/llo/CircleVictimOnlookers.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "HoodedFemFace"
+		texturefile = "gfx/event_pictures/llo/HoodedFemFace.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "DemonicCowgirl"
+		texturefile = "gfx/event_pictures/llo/DemonicCowgirl.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "SatanicOrgy1"
+		texturefile = "gfx/event_pictures/llo/SatanicOrgy1.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "SatanicOrgy2"
+		texturefile = "gfx/event_pictures/llo/SatanicOrgy2.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "SatanicKillPrep"
+		texturefile = "gfx/event_pictures/llo/SatanicKillPrep.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodKiss1"
+		texturefile = "gfx/event_pictures/llo/BloodKiss1.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodKiss2"
+		texturefile = "gfx/event_pictures/llo/BloodKiss2.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodKiss3"
+		texturefile = "gfx/event_pictures/llo/BloodKiss3.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodKiss4"
+		texturefile = "gfx/event_pictures/llo/BloodKiss4.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodKiss5"
+		texturefile = "gfx/event_pictures/llo/BloodKiss5.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodNudeMaleCorps"
+		texturefile = "gfx/event_pictures/llo/BloodNudeMaleCorps.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "SatanicKillPrep"
+		texturefile = "gfx/event_pictures/llo/SatanicKillPrep.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodCowGirlBed"
+		texturefile = "gfx/event_pictures/llo/BloodCowGirlBed.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodBedHappyEnding"
+		texturefile = "gfx/event_pictures/llo/BloodBedHappyEnding.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodCowGirlBedRiding"
+		texturefile = "gfx/event_pictures/llo/BloodCowGirlBedRiding.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodCowGirlBedRiding2"
+		texturefile = "gfx/event_pictures/llo/BloodCowGirlBedRiding2.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodCowGirlBedRiding3"
+		texturefile = "gfx/event_pictures/llo/BloodCowGirlBedRiding3.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodCowGirlBedRiding3"
+		texturefile = "gfx/event_pictures/llo/BloodCowGirlBedRiding3.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodPanicFem"
+		texturefile = "gfx/event_pictures/llo/BloodPanicFem.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodTrio1"
+		texturefile = "gfx/event_pictures/llo/BloodTrio1.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodTrio2"
+		texturefile = "gfx/event_pictures/llo/BloodTrio2.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodTrio3"
+		texturefile = "gfx/event_pictures/llo/BloodTrio3.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "BloodWineFem"
+		texturefile = "gfx/event_pictures/llo/BloodWineFem.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "ContemptousFem"
+		texturefile = "gfx/event_pictures/llo/ContemptousFem.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "FemWithVial"
+		texturefile = "gfx/event_pictures/llo/FemWithVial.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "LewdFemWithCup"
+		texturefile = "gfx/event_pictures/llo/LewdFemWithCup.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "FemOrgy2"
+		texturefile = "gfx/event_pictures/llo/FemOrgy2.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "FemBloodArch"
+		texturefile = "gfx/event_pictures/llo/FemBloodArch.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "FemBabyInArms"
+		texturefile = "gfx/event_pictures/llo/FemBabyInArms.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GayMurderSacrifice"
+		texturefile = "gfx/event_pictures/llo/GayMurderSacrifice.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "ContemptousMale"
+		texturefile = "gfx/event_pictures/llo/ContemptousMale.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "Study"
+		texturefile = "gfx/event_pictures/llo/Study.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "MFembrace"
+		texturefile = "gfx/event_pictures/llo/MFembrace.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "CastleMaid"
+		texturefile = "gfx/event_pictures/llo/CastleMaid.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "LilithHerself"
+		texturefile = "gfx/event_pictures/llo/LilithHerself.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "LilithHerself2"
+		texturefile = "gfx/event_pictures/llo/LilithHerself2.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "LilithHerself3"
+		texturefile = "gfx/event_pictures/llo/LilithHerself3.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "LilithHerself4"
+		texturefile = "gfx/event_pictures/llo/LilithHerself4.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "FemOnThrone"
+		texturefile = "gfx/event_pictures/llo/FemOnThrone.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_the_liliths"
+		textureFile = "gfx/interface/society_quest/mission_bg_lilith_worshiper.dds"
+	}
+
+}

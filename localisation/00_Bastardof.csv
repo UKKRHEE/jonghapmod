@@ -1,0 +1,2 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;;
+CHAR_AGE;Real Father: §Y[This.GetRealFather]§!\nAge;Bâtard de §Y[This.GetRealFather]§!\nAge;Bastard von §Y[This.GetRealFather]§!\nAlter;;Bastardo de §Y[This.GetRealFather]§!\nEdad;;;;;;;;;x

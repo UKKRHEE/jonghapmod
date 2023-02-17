@@ -1,0 +1,115 @@
+############################################################################################
+### Contains OPINION MODIFIERS that are intended for use in the Dark World Content Pack ####
+#############################################################################################
+###  SEARCH ###FIXME FOR WORK TO DO
+
+# inherit = yes  # Heirs inherit this opinion
+
+# Opinion modifiers can give a reason to do the following actions without penalties
+# prison_reason
+# banish_reason
+# execute_reason
+# revoke_reason
+# divorce_reason
+
+# enemy = yes # This will make the characters enemies of eachother ( effectively at war )
+# crime = yes # Counts as my foe (rivals do too) for the is_foe trigger
+
+##Example:
+##opinion = {
+##	modifier = opinion_got_scolded
+##	who = ROOT
+##	months = 6
+##}
+
+##### TOrture Related #####
+opinion_TT_ttwhipped_me = {
+	opinion = -80
+	months = 1200	# For life
+	prison_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+}
+
+opinion_ttwhipped_family = {
+	opinion = -10
+	months = 36
+	prison_reason = yes
+}
+
+opinion_ttwhipped_close_kin = {
+	opinion = -50
+	months = 120
+	prison_reason = yes
+}
+
+opinion_TT_ttstocks_me = {
+	opinion = -80
+	months = 1200	# For life
+	prison_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+}
+
+opinion_ttstocks_family = {
+	opinion = -10
+	months = 36
+	prison_reason = yes
+}
+
+opinion_ttstocks_close_kin = {
+	opinion = -50
+	months = 120
+	prison_reason = yes
+}
+
+opinion_TT_ttrack_me = {
+	opinion = -80
+	months = 1200	# For life
+	prison_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+}
+
+opinion_ttrack_family = {
+	opinion = -10
+	months = 36
+	prison_reason = yes
+}
+
+opinion_ttrack_close_kin = {
+	opinion = -50
+	months = 120
+	prison_reason = yes
+}
+
+opinion_tt_ima_painslut = {
+	opinion = 100
+	months = 1200	# For life
+}
+
+opinion_tt_painslutwhipped = {
+	opinion = 20
+	months = 5
+}
+
+opinion_tt_painslutracks = {
+	opinion = 20
+	months = 5
+}
+
+opinion_tt_painslutstocks = {
+	opinion = 20
+	months = 5
+}
+
+### --Futa Domination-- ###
+mercom_opinion_my_bitch = {
+	opinion = 20 # Commander thinks more highly of a ruler who succumbs to her charms
+	months = 12 # 1year
+}
+
+mercom_opinion_ima_bitch = {
+	opinion = 50 # A ruler taken by the commander has some lasting affects
+	months = 12 # 1year
+}

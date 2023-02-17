@@ -1,5 +1,0 @@
-﻿carnd_dynasty_song = {
-	name = "dynn_Song"
-	culture = "han"
-	motto = carnd_dynn_Song_motto
-}

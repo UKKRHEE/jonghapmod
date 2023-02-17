@@ -1,4 +1,0 @@
-﻿ie_character_is_already_naked = {
-	first_not = I_AM_ALREADY_NAKED
-	third_not = THEY_ARE_ALREADY_NAKED
-}

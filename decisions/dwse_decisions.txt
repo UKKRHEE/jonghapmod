@@ -1,0 +1,240 @@
+decisions = {
+#Remove # at begining of slaveguild to re-enable event
+	#slaveguild = {
+		#potential = {
+			#ai = no
+			#is_adult = yes
+			#is_ruler = yes
+			#any_realm_province = {
+				#OR = {
+					#has_building = dwse_slave_port_c
+					#has_building = dwse_slave_port_b
+				#}
+			
+				#OR = {
+					
+					#has_building = dw_slave_dungeon_1 # Castle
+					#has_building = dw_slave_market_1 # Republic
+					#has_building = dw_slave_wagon_1 # Nomad
+					#has_building = dw_slave_pen_1 # Tribal
+				#}
+			#}
+		#}
+		#allow = {
+			#NOT = {
+				#has_character_modifier = dwse_slavehunt_cooldown
+			#}
+			#wealth = 50
+		#}
+		#effect = {												
+			#character_event = { id = dwse.1000 days = 5 }
+		#}
+		
+  		#ai_will_do = {
+			#factor = 0
+		#}
+	#}
+}
+targetted_decisions = {
+	dwse_visit_slave = {
+		filter = sub_realm
+		ai_target_filter = self # Doesn't really apply as the ai should not be using this
+		from_potential = { # From is the person targeting the person to evoke the decision
+			NOT = { trait = dwf_ghost }
+			ai = no # Player only
+			prisoner = no # Hard to visit while in a jail cell
+			NOT = { trait = in_hiding } # If you're laying low, you don't go visiting your lover
+		}
+		potential = { # This is where we check the target to ensure they're valid
+			NOT = { # Should be a lover, spouse, or concubine
+				is_lover = FROM
+				any_spouse = {
+					character = FROM
+				}
+				any_consort = {
+					character = FROM
+				}
+				trait = cheap_whore
+				trait = experienced_whore
+				trait = exclusive_whore
+				trait = retired_whore
+			}
+			has_character_modifier = dw_slave_pleasure_complete
+
+		}
+		allow = {
+			FROM = { is_liege_of = ROOT }
+			prisoner = no # The target shouldn't be in prison
+			NOT = { trait = in_hiding } # The target shouldn't be in hiding
+			in_command = no # The target shouldn't be off leading troops somewhere
+			custom_tooltip = { # The target shouldn't have been visited within the past month
+				text = dw_visit_recovery
+				NOT = { has_character_flag = dw_visit_recovery1 }
+			}
+		}
+		effect = {
+			# Our initial check event for further routing
+			FROM = { character_event = { id = DWVisits.1 }}
+			# Only one visit per month, just to keep things reasonable, sets on the target
+			set_character_flag = dw_visit_recovery1
+			character_event = { id = dwse.001 days = 30}
+		}
+		
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+		}
+	}
+
+	dwse_favored_visit_m = {
+		ai_target_filter = realm
+		filter = realm
+		from_potential = {
+			NOT = { trait = dwf_ghost }
+			ai = yes
+			is_adult = yes
+			has_minor_title = dwse_title_favored 
+			OR = {
+				is_female = no
+				trait = futa
+			}
+		}
+		potential = {
+			is_adult = yes
+			is_pregnant = no
+			is_female = yes			
+			ai = yes
+			NOT = {
+				is_rival = FROM		
+				is_lover = FROM	
+				trait = cheap_whore
+				trait = experienced_whore
+				trait = exclusive_whore
+				trait = retired_whore
+				}
+			has_character_modifier = dw_slave_pleasure_complete
+		}
+		allow = {
+			is_pregnant = no
+			prisoner = no # The target shouldn't be in prison
+			NOT = { trait = in_hiding } # The target shouldn't be in hiding
+			in_command = no # The target shouldn't be off leading troops somewhere
+			custom_tooltip = { # The target shouldn't have been visited within the past month
+				text = dw_visit_recovery
+				NOT = { has_character_flag = dw_visit_recovery }
+			}
+		}
+		effect = {
+			random = {
+				chance = 30
+				ROOT = {
+					impregnate = FROM
+				}
+			}
+			set_character_flag = dw_visit_recovery
+			character_event = { id = DWVisits.9999 days = 30}
+		}
+		
+		ai_will_do = {
+			factor = .2
+		}
+	}
+	dwse_favored_visit_f = {
+		ai_target_filter = realm
+		filter = realm
+		from_potential = {
+			NOT = { trait = dwf_ghost }
+			ai = yes
+			is_adult = yes
+			has_minor_title = dwse_title_favored 
+			is_female = yes
+			is_pregnant = no
+		}
+		potential = {
+			is_female = no			
+			ai = yes
+			has_character_modifier = dw_slave_pleasure_complete
+			NOT = {
+				trait = cheap_whore
+				trait = experienced_whore
+				trait = exclusive_whore
+				trait = retired_whore
+				is_rival = FROM		
+				is_lover = FROM	
+				}
+			is_adult = yes
+		}
+		allow = {
+			prisoner = no # The target shouldn't be in prison
+			NOT = { trait = in_hiding } # The target shouldn't be in hiding
+			in_command = no # The target shouldn't be off leading troops somewhere
+			custom_tooltip = { # The target shouldn't have been visited within the past month
+				text = dw_visit_recovery
+				NOT = { has_character_flag = dw_visit_recovery }
+			}
+		}
+		effect = {
+			random = {
+				chance = 30
+				ROOT = {
+					impregnate = FROM
+				}
+			}
+			set_character_flag = dw_visit_recovery
+			character_event = { id = DWVisits.9999 days = 30}
+		}
+		
+		ai_will_do = {
+			factor = .2
+		}
+	}
+	awaken_beast = {
+		filter = realm
+		ai_target_filter = self
+		from_potential = {
+			is_col5 = yes # Children of Lilith Stage 5
+			ai = no # For right now, we only want the player to be able to cast this spell
+		}
+		potential = {
+			is_adult = yes 
+		}
+		allow = {
+			is_within_diplo_range = FROM # The target should be within reasonable travel range
+			FROM = { piety = 250 } # The cost for casting the spell
+		}
+		effect = {
+			FROM = { piety = -250 }
+			random_list = {
+				33 = { 
+					set_graphical_culture = horse
+					culture = horse 
+					opinion = {
+						modifier = dw_opinion_mind_wipe_master
+					who = ROOT
+					}
+
+				}
+				33 = { 
+					set_graphical_culture = cat
+					culture = cat 
+					opinion = {
+						modifier = dw_opinion_mind_wipe_master
+					who = ROOT
+					}
+
+				}
+				33 = { 
+					set_graphical_culture = bear
+					culture = bear 
+					opinion = {
+						modifier = dw_opinion_mind_wipe_master
+					who = ROOT
+					}
+
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0 # Nope
+		}		
+	}
+}

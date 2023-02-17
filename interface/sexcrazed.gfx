@@ -1,0 +1,16 @@
+spriteTypes = {
+        spriteType = {
+		  name = "GFX_trait_sexcrazed"
+		  texturefile = "gfx/traits/sex_crazed.png"
+		   noOfFrames = 1
+           norefcount = yes
+           effectFile = "gfx/FX/buttonstate.lua"
+		}
+        spriteType = {
+		  name = "GFX_trait_sexcrazedfoe"
+		  texturefile = "gfx/traits/sex_crazed.png"
+		   noOfFrames = 1
+           norefcount = yes
+           effectFile = "gfx/FX/buttonstate.lua"
+		}
+}		

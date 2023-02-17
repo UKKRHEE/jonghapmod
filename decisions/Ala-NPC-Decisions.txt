@@ -1,0 +1,23 @@
+#####################################
+#									#
+#	NPC Creation Decisions	#
+#									#
+#####################################
+
+decisions = {
+
+	ala_vnpc = {
+		potential = {
+			ai = no
+		}
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = alanpc.1 days = 0 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

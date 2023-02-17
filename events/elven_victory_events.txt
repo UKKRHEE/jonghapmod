@@ -1,0 +1,84 @@
+namespace = elfbattle
+
+character_event = { 
+	id = elfbattle.1 
+	hide_window = yes
+	is_triggered_only = yes # triggered from on_startup
+	trigger = { 
+	    war = yes
+		in_command = yes
+		prisoner = no
+		ROOT = { culture = elf }
+	}
+	random_list = {
+		25 = { narrative_event = { id = elfbattle.2 } }
+		10 = { narrative_event = { id = elfbattle.5 } }
+		65 = { } # Nothing happens
+		}
+	}
+
+narrative_event = { 
+	id = elfbattle.2 
+	desc = elf_human_slave_event_desc
+	picture = elf_human_capture
+	title = elf_human_slave_event
+	is_triggered_only = yes
+
+	option = { # Elf usage for pleasure
+		name = elf_human_slave_event_a
+			narrative_event = { id = elfbattle.3 }
+		}
+		
+	option = { # Elf enslave for battle
+		name = elf_human_slave_event_b
+			narrative_event = { id = elfbattle.4 }
+		}
+		
+	option = { # release them
+		name = elf_human_slave_event_c
+			piety = 50
+		}
+	}
+	
+narrative_event = { 
+	id = elfbattle.3 
+	desc = elf_human_slave_event_breed_desc
+	picture = elf_human_usage
+	title = elf_human_slave_event
+	is_triggered_only = yes
+
+	option = { # generic wording
+		name = elf_human_slave_event_comment
+			add_character_modifier = { name = breedingSlaves duration = 90 }
+		}
+		
+
+	}
+	
+narrative_event = { 
+	id = elfbattle.4 
+	desc = elf_human_slave_Fighter_event_desc
+	picture = elf_human_warriors
+	title = elf_human_slave_event
+	is_triggered_only = yes
+
+	option = { # generic wording
+		name = elf_human_slave_event_comment
+			add_character_modifier = { name = fightingSlaves duration = 90 }
+		}
+		
+	}
+	
+narrative_event = { 
+	id = elfbattle.5 
+	desc = elf_victory_desc
+	picture = elf_victory
+	title = elf_victory
+	is_triggered_only = yes
+
+	option = { # generic wording
+		name = elf_victory_comment
+			martial = 1;
+		}
+		
+	}

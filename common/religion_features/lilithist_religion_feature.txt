@@ -1,0 +1,65 @@
+religion_nature = {
+
+	religion_lilithian = {
+		picture = GFX_religion_feature_lilith
+		trigger = {
+			OR  = {
+				has_selected_religion_feature = religion_matriarchal
+				has_selected_religion_feature = religion_equal
+				has_selected_religion_feature = religion_feature_bon
+			      }
+			NOR = {
+				has_selected_religion_feature = religion_patriarchal
+				has_selected_religion_feature = religion_harems
+			}
+			has_lilith_start = yes
+
+		}
+		effect = {
+			hidden_tooltip = {
+				set_pacifist = no
+				set_raised_vassal_opinion_loss = no
+				set_piety_loss_for_attacking_same_religion = yes
+				set_peace_prestige_loss = no
+				set_allow_looting = yes
+				set_hard_to_convert = no
+				set_convert_other_groups = 1
+				set_convert_same_group = 1				
+				set_max_consorts = 3
+				set_women_can_take_consorts = yes
+				set_men_can_take_consorts = no		
+				set_priests_can_marry = yes
+				set_priests_can_inherit = no
+				set_allow_looting = yes
+				set_feminist = yes
+				set_female_temple_holders = yes
+				set_male_temple_holders = no
+				set_ai_aggression = 1.5
+				set_allows_matrilineal_marriage = yes
+			}
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = { 	
+				factor = 0.1
+				FROM = { 
+					character = yes 
+					is_female = no
+				}
+			}
+			modifier = { 	
+				factor = 100
+				FROM = { 
+					character = yes 
+					OR ={
+						trait = lilith
+						trait = incubus
+						trait = alu_fiend
+						trait = cambion
+					}
+				}
+			}
+		}
+	}
+
+}	

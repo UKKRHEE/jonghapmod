@@ -1,0 +1,316 @@
+###################################################################################
+### Contains DECISIONS that are intended for use in the Dark World Content Pack ###
+###################################################################################
+###  SEARCH ###FIXME FOR WORK TO DO  ##############################################
+########### BEGIN TARGETED DECISIONS ##############################################
+targetted_decisions = {
+######################## Mercom Targeted DECISIONS ###############################
+######### SPAR with Freja ######### This kind of thing leads to prenancy!  ;)
+mc_freja_duel = {
+		filter = all
+		ai_target_filter = realm
+		from_potential = { 
+			ai = no 
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+		}
+		potential = { 
+			has_character_flag = redhand_npc_freja
+		}
+		allow = {
+			prisoner = no 
+			has_global_flag = mercomran_frejaduel
+			NOT = { trait = in_hiding } 
+			in_command = no 
+			custom_tooltip = {
+				text = mercom_duel_recovery
+				NOT = { has_character_flag = mercom_duel_recovery }
+			}
+		}
+		effect = {
+			# Our initial check event for further routing
+			narrative_event = { id = mercomste.3999 }
+			# Only one duel per month, just to keep things reasonable, sets on the target
+			set_character_flag = mercom_duel_recovery
+			character_event = { id = mercomste.9001 days = 30}
+		}
+		revoke_allowed = {
+			always = no # Standard setting
+		}
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+		}
+	}
+	
+	######### Futa Cum Sluts #########
+mc_futa_addict = {
+		filter = all
+		ai_target_filter = realm
+		from_potential = { 
+			trait = futacumslut
+			ai = no
+			age = 16
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+		}
+		potential = {
+			age = 16
+			OR = { 
+				trait = futa
+				trait = redhandvet
+			}
+		}
+		allow = {
+			prisoner = no 
+			age = 16
+			NOT = { trait = in_hiding } 
+			in_command = no 
+			custom_tooltip = {
+				text = mercom_visit_recovery
+				NOT = { has_character_flag = mercom_visit_recovery }
+			}
+		}
+		effect = {
+			# Our initial check event for further routing
+			FROM = { character_event = { id = mercomste.2000 }} 
+			# Only one visit per month, just to keep things reasonable, sets on the target
+			set_character_flag = mercom_visit_recovery
+			character_event = { id = mercomste.9000 days = 30}
+		}
+		revoke_allowed = {
+			always = no # Standard setting
+		}
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+		}
+	}
+
+	######### Lover visit with Athena #########
+mc_visit_athena = {
+		filter = all
+		ai_target_filter = realm
+		from_potential = { 
+			ai = no 
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+		}
+		potential = { 
+			has_character_flag = mercom_alpha
+			OR = { 
+				is_lover = FROM
+				is_consort = FROM
+				any_spouse = {
+					character = FROM
+				}
+			}
+		}
+		allow = {
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+			in_command = no 
+			custom_tooltip = {
+				text = mercom_visit_recovery
+				NOT = { has_character_flag = mercom_visit_recovery }
+			}
+		}
+		effect = {
+			# Our initial check event for further routing
+			FROM = { character_event = { id = mercomste.1000 }} 
+			# Only one visit per month, just to keep things reasonable, sets on the target
+			set_character_flag = mercom_visit_recovery
+			character_event = { id = mercomste.9000 days = 30}
+		}
+		revoke_allowed = {
+			always = no # Standard setting
+		}
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+		}
+	}
+		######## Lover visit with Kanika ########
+mc_visit_kanika = {
+		filter = all
+		ai_target_filter = realm
+		from_potential = { 
+			ai = no 
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+		}
+		potential = { 
+			has_character_flag = redhand_npc_kanika
+			OR = { 
+				is_lover = FROM
+				is_consort = FROM
+				any_spouse = {
+					character = FROM
+				}
+			}
+		}
+		allow = {
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+			in_command = no 
+			custom_tooltip = {
+				text = mercom_visit_recovery
+				NOT = { has_character_flag = mercom_visit_recovery }
+			}
+		}
+		effect = {
+			# Our initial check event for further routing
+			FROM = { character_event = { id = mercomste.1001 }} 
+			# Only one visit per month, just to keep things reasonable, sets on the target
+			set_character_flag = mercom_visit_recovery
+			character_event = { id = mercomste.9000 days = 30}
+		}
+		revoke_allowed = {
+			always = no # Standard setting
+		}
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+		}
+	}
+			######## Lover visit with Freja ########
+mc_visit_freja = {
+		filter = all 
+		ai_target_filter = realm
+		from_potential = { 
+			ai = no 
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+		}
+		potential = { 
+			has_character_flag = redhand_npc_freja
+			OR = { 
+				is_lover = FROM
+				is_consort = FROM
+				any_spouse = {
+					character = FROM
+				}
+			}
+		}
+		allow = {
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+			in_command = no 
+			custom_tooltip = {
+				text = mercom_visit_recovery
+				NOT = { has_character_flag = mercom_visit_recovery }
+			}
+		}
+		effect = {
+			# Our initial check event for further routing
+			FROM = { character_event = { id = mercomste.1002 }} 
+			# Only one visit per month, just to keep things reasonable, sets on the target
+			set_character_flag = mercom_visit_recovery
+			character_event = { id = mercomste.9000 days = 30}
+		}
+		revoke_allowed = {
+			always = no # Standard setting
+		}
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+			}
+		}
+
+		######### Recruit a Veteran from the RedHand Commander #########
+recruit_redhandvet = { 
+		filter = all
+		ai_target_filter = realm
+		from_potential = { 
+			ai = no
+			prisoner = no
+			NOT = { trait = in_hiding } 
+			}
+		potential = { 
+			has_landed_title = c_red_hand
+			}
+		allow = {
+			prisoner = no 
+			NOT = { trait = in_hiding } 
+			}
+		effect = {
+			# Our initial check event for further routing
+			FROM = { narrative_event = { id = mercom.801 }} 
+			}
+		revoke_allowed = {
+			always = no # Standard setting
+			}
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+			}
+		}
+send_to_redhand = { ### SEND FUTA DAUGHTERS TO THE REDHAND                         ###FIXME
+		only_playable = yes
+		filter = dynasty
+		ai_target_filter = dynasty
+
+		from_potential = {
+			is_playable = yes
+			has_global_flag = mercom_recruited
+		}
+		
+		potential = {
+			is_female = yes
+			is_child_of = FROM
+			is_liege_or_above = FROM
+			trait = futa
+			NOR = {
+				trait = redhandvet
+				has_character_modifier = wants_redhand
+				has_character_modifier = serving_redhand
+				is_landed = yes
+			}
+		}
+
+		allow = {
+			is_adult = yes
+			martial = 10
+			NOT = {
+				trait = incapable
+			}
+			custom_tooltip = {
+				text = send_to_redhand_custom_tooltip
+				hidden_tooltip = {
+					NOR = {
+						trait = redhandvet
+						has_character_modifier = wants_redhand
+						has_character_modifier = serving_redhand
+					}
+				}
+			}
+			FROM = {
+				wealth = 10
+			}
+		}
+
+		effect = {
+			c_red_hand = {
+				holder_scope = {
+					ROOT = {
+						move_character = PREV
+					}
+				}
+			}
+			FROM = {
+				wealth = -100
+			}
+			ROOT = {
+				set_character_flag = wants_redhand
+			}
+			hidden_tooltip = {
+				ROOT = { 
+					character_event = { id = redhand.1005 days = 700 }
+				}
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0.01
+		}
+	}
+	}
+######################## END TARGETED DECISIONS ###############################

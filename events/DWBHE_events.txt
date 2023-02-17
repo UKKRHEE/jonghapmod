@@ -1,0 +1,1499 @@
+###########################################
+#        DW Beyond Heresy Extra Events    #
+#                                         #
+#                                         #
+#    					  #
+#    DWBHE.200-DWBHE.399 = Alleyne Events #
+#    DWBHE.300-DWBHE.399 = Slave Purchase #
+#                                         #
+###########################################
+# Moved these over from Beyond heresy as this is more topical here.
+
+
+
+namespace = DWBHE
+
+
+# 
+
+
+narrative_event = {
+	id = DWBHE.200
+	picture = dwbhe_alleynemeet
+	desc = EVTDESC_DWBHE_200
+	title = EVTNAME_DWBHE_200
+	only_playable = yes
+	ai = no
+	min_age =  16
+	capable_only = yes
+	prisoner = no
+	trigger = {
+		has_dlc = "Way of Life"
+		has_focus = focus_hunting
+		in_command = no
+		OR = {
+			NOT = { has_character_flag = hunt_event_happened }
+			had_character_flag = {
+				flag = hunt_event_happened
+				days = 3
+			}
+		}		
+		had_character_flag = {
+			flag = hunt_begin
+			days = 3
+		}	
+	}
+
+	immediate = {
+		set_character_flag = hunt_event_happened
+	}
+
+	mean_time_to_happen = {
+		days = 200
+		
+		modifier = {
+			factor = 0.33
+			NOT = { has_character_flag = hunt_event_happened }
+		}	
+		
+		modifier = {
+			factor = 1.5
+			has_character_flag = hunt_event_happened
+		}
+		
+		modifier = {
+			factor = 1.5
+			trait = content
+		}
+		modifier = {
+			factor = 0.8
+			trait = hunter
+		}
+		modifier = {
+			factor = 5.0
+			martial = 15
+		}
+		modifier = {
+			factor = 2.0
+			trait = slothful
+		}
+		modifier = {
+			factor = 0.5
+			has_character_flag = hunt_good_hounds
+		}
+		modifier = {
+			factor = 1.25
+			trait = craven
+		}
+	}
+	option = {
+		name = EVTOPTA_DWBHE200  # Leave her be
+		trigger = {
+			ai = no # we don't want the AI grabbing her, this is a failsafe		
+		}
+		prestige = 5
+	}
+	option = {
+		name = EVTOPTB_DWBHE200  # Invite her to your court
+		random_list = {
+				75 = {
+					modifier = {
+						factor = 1.2 #Increases the chance if you're shy
+						trait = shy
+						}
+					modifier = {
+						factor = 1.2 #Increases the chance if you're a poor diplomat
+						diplomacy = 5
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 1.5 #Decreases the chance if you're a poor diplomat
+						NOT = { diplomacy = 5 }
+						}
+
+					}
+				25 = {
+					modifier = {
+						factor = 2.0 #Increases the chance if you're a good diplomat
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.5 #Increases the chance if you're a good diplomat
+						trait = gregarious
+					}
+
+			create_character = {
+			random_traits = no
+			name = Alleyne
+			dynasty = NONE
+			religion = pagan
+			culture = ROOT # Since you persuaded her, she makes the effort to adapt to your ways.
+			female = yes
+			age = 20 #actually much older, but the game doesn't handle really old characters at start well
+			trait = hunter
+			trait = elf
+			trait = brave
+			trait = skilled_tactician
+			trait = rough_terrain_leader
+			trait = immortal #because elves, y'know
+			trait = fair
+			trait = quick
+			trait = proud
+			trait = regular_tits
+			trait = virgin #surprisingly still a virgin, canonically
+		        trait = portrait391 # Custom portrait
+			attributes = {
+				martial = 11
+				diplomacy = 8
+				stewardship = 3
+				intrigue = 3
+				learning = 5
+				}
+			health = 5
+			fertility = 0.60
+			}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			set_character_flag = dwbh_npc_elf
+			set_global_flag = dwbh_alleyne_in_court
+			set_immune_to_pruning  = yes
+			if = {  # For Christianity mod compatibility, to prevent a second set of tits getting assigned later
+				limit = {
+					has_global_flag = christ_enabled
+					}
+				set_character_flag = nada_checked
+				}
+				} #close new_character
+			}#close chance
+		}#close random list
+	}#close option
+		
+
+	
+	option = {
+		name = EVTOPTC_DWBHE200  # Capture her by force
+		trigger = {
+			NOT = {
+				trait = kind
+			}
+		}
+		random_list = {
+				75 = {}
+				25 =	{
+						if = {
+						limit = { NOT = { trait = cruel } }
+						add_trait = cruel
+						}
+					}
+		}
+		narrative_event = { id = DWBHE.201 }
+
+
+	}
+	option = {
+		name = EVTOPTD_DWBHE200  # Capture her by trickery
+		trigger = {
+
+			NOT = {
+				trait = honest
+			}
+		}
+		random_list = {
+			75 = {}
+			25 =	{
+			if = {
+				limit = { NOT = { trait = deceitful } }
+				add_trait = deceitful
+				}
+			}
+		}
+		narrative_event = { id = DWBHE.207 }
+	}
+
+}
+
+
+# Fighting Alleyne
+narrative_event = {
+	id = DWBHE.201
+	picture = dwbhe_alleynefight
+	desc = EVTDESC_DWBHE_201
+	title = EVTNAME_DWBHE_201	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE201 # Fight, fight!
+		random_list = {
+			25 = { # Successful Capture
+				modifier = {
+					factor = 2.0 # doubles the chance if the character has enough martial prowess
+					combat_rating = 100
+					}		
+				modifier = {
+					factor = 1.5 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 1.1 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				narrative_event = { id = DWBHE.202 }
+			}
+			25 = { # Successful Capture, wounded
+				modifier = {
+					factor = 2.0 # doubles the chance if the character has enough martial prowess
+					combat_rating = 100
+					}		
+				modifier = {
+					factor = 1.5 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 1.1 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				narrative_event = { id = DWBHE.203 }
+			}
+			25 = { # Alleyne escapes, character wounded
+				modifier = {
+					factor = 0.5 # Halves the chance if the character has enough martial prowess
+					combat_rating = 100
+				}
+				modifier = {
+					factor = .75 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 0.9 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				narrative_event = { id = DWBHE.204 }
+			}
+			15 = { # Alleyne escapes, character maimed
+				modifier = {
+					factor = 0.5 # Halves the chance if the character has enough martial prowess
+					combat_rating = 100
+				}
+				modifier = {
+					factor = .75 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 0.9 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				narrative_event = { id = DWBHE.205 }
+			}
+			10 = { # Alleyne escapes, character death
+				modifier = {
+					factor = 0.5 # Halves the chance if the character has enough martial prowess
+					combat_rating = 100
+				}
+				modifier = {
+					factor = .75 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 0.9 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				narrative_event = { id = DWBHE.206 }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_DWBHE201 # Run away!
+			if = {
+				limit = { NOT = { trait = craven } }
+				add_trait = craven
+			}		
+		}
+
+}
+
+# Alleyne captured by force
+narrative_event = {
+	id = DWBHE.202
+	picture = dwbhe_alleynecapture
+	desc = EVTDESC_DWBHE_202
+	title = EVTNAME_DWBHE_202	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE202 
+			prestige = 20
+				create_character = {
+			random_traits = no
+			name = Alleyne
+			dynasty = NONE
+			religion = pagan
+			culture = irish
+			female = yes
+			age = 20
+			trait = hunter
+			trait = elf
+			trait = brave
+			trait = skilled_tactician
+			trait = rough_terrain_leader
+			trait = immortal #because elves, y'know
+			trait = fair
+			trait = quick
+			trait = proud
+			trait = regular_tits
+			trait = virgin
+		        trait = portrait391 # Custom portrait
+			attributes = {
+				martial = 11
+				diplomacy = 8
+				stewardship = 3
+				intrigue = 3
+				learning = 5
+			}
+			health = 5
+			fertility = 0.60
+			}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			set_character_flag = dwbh_npc_elf
+			set_global_flag = dwbh_alleyne_in_court
+			imprison = ROOT
+			if = {  # For Christianity mod compatibility, to prevent a second set of tits getting assigned later
+				limit = {
+					has_global_flag = christ_enabled
+					}
+				set_character_flag = nada_checked
+				}
+			}
+		}
+}
+
+# Alleyne captured by force, player wounded
+narrative_event = {
+	id = DWBHE.203
+	picture = dwbhe_alleynecapture
+	desc = EVTDESC_DWBHE_203
+	title = EVTNAME_DWBHE_203	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE203 
+			prestige = 10
+			add_trait = wounded
+
+			create_character = {
+			random_traits = no
+			name = Alleyne
+			dynasty = NONE
+			religion = pagan
+			culture = irish
+			female = yes
+			age = 20
+			trait = hunter
+			trait = elf
+			trait = brave
+			trait = skilled_tactician
+			trait = rough_terrain_leader
+			trait = immortal #because elves, y'know
+			trait = fair
+			trait = quick
+			trait = proud
+			trait = regular_tits
+		        trait = portrait391 # Custom portrait
+			trait = virgin
+			attributes = {
+				martial = 11
+				diplomacy = 8
+				stewardship = 3
+				intrigue = 3
+				learning = 5
+			}
+			health = 5
+			fertility = 0.60
+			}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			set_character_flag = dwbh_npc_elf
+			set_global_flag = dwbh_alleyne_in_court
+			imprison = ROOT
+			if = {  # For Christianity mod compatibility, to prevent a second set of tits getting assigned later
+				limit = {
+					has_global_flag = christ_enabled
+					}
+				set_character_flag = nada_checked
+				}
+			}
+		}
+}
+		
+
+# Alleyne escapes, player wounded
+narrative_event = {
+	id = DWBHE.204
+	picture = dwbhe_alleynewins
+	desc = EVTDESC_DWBHE_204
+	title = EVTNAME_DWBHE_204	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE204 
+			prestige = -10
+			add_trait = wounded
+
+		}
+}
+# Alleyne escapes, player severely wounded
+narrative_event = {
+	id = DWBHE.205
+	picture = dwbhe_alleynewins
+	desc = EVTDESC_DWBHE_205
+	title = EVTNAME_DWBHE_205	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE205 
+			prestige = -25
+			if = { 
+				limit = {
+					has_dlc = "Reapers"
+				}
+				
+			add_trait = severely_injured
+			random_list = {
+			25 = {
+				add_trait = one_eyed
+				}			
+			25 = {
+				add_trait = one_handed
+				}
+			25 = {
+				add_trait = one_legged
+				}
+			24 = {
+				add_trait = disfigured
+				}
+			1 = {
+				add_trait = mangled
+				}
+
+			}
+			}
+			else = {
+				add_trait = maimed
+				}
+			
+
+
+		}
+}
+
+# Alleyne escapes, player dies
+narrative_event = {
+	id = DWBHE.206
+	picture = dwbhe_alleynewins
+	desc = EVTDESC_DWBHE_206
+	title = EVTNAME_DWBHE_206	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE206 
+				death = {
+					death_reason = death_duel
+				}
+		}
+}
+
+
+# Tricking Alleyne
+narrative_event = {
+	id = DWBHE.207
+	picture = dwbhe_alleynetrick
+	desc = EVTDESC_DWBHE_207
+	title = EVTNAME_DWBHE_207	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE207 
+		random_list = {
+			40 = { # Successful Capture
+				narrative_event = { id = DWBHE.209 }
+				modifier = {
+					factor = 1.5
+					intrigue = 25
+				}
+			}
+			30 = { # A fight ensues
+				narrative_event = { id = DWBHE.208 }
+			}
+			30 = { # Alleyne escapes
+				modifier = {
+					factor = 0.5 # Halves the chance if the character has enough intrigue
+					intrigue = 20
+				}
+				narrative_event = { id = DWBHE.210 }
+			}
+
+		}
+	}
+	
+	
+
+}
+
+# Fighting Alleyne after failed trickery
+narrative_event = {
+	id = DWBHE.208
+	picture = dwbhe_alleynefight
+	desc = EVTDESC_DWBHE_208
+	title = EVTNAME_DWBHE_208	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE208 # Fight, fight!
+		random_list = {
+			20 = { # Successful Capture
+				narrative_event = { id = DWBHE.202 }
+				modifier = {
+					factor = 2.0 # doubles the chance if the character has enough martial prowess
+					combat_rating = 100
+					}		
+				modifier = {
+					factor = 1.5 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 1.1 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				}
+			12 = { # Successful Capture, wounded
+				modifier = {
+					factor = 2.0 # doubles the chance if the character has enough martial prowess
+					combat_rating = 100
+				}
+				modifier = {
+					factor = 1.5 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 1.1 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				narrative_event = { id = DWBHE.203 }
+				}
+			
+			
+			20 = { # Alleyne escapes, character wounded
+				modifier = {
+					factor = 0.5 # Halves the chance if the character has enough martial prowess
+					combat_rating = 100
+				}
+				modifier = {
+					factor = .75 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 0.9 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				
+
+				narrative_event = { id = DWBHE.204 }
+				}
+			
+			10 = { # Alleyne escapes, character maimed
+				modifier = {
+					factor = 0.5 # Halves the chance if the character has enough martial prowess
+					combat_rating = 100
+				}
+				modifier = {
+					factor = .75 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 0.9 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				
+				narrative_event = { id = DWBHE.205 }
+				}
+			
+			5 = { # Alleyne escapes, character death
+				modifier = {
+					factor = 0.5 # Halves the chance if the character has enough martial prowess
+					combat_rating = 100
+				}
+				modifier = {
+					factor = .75 # higher chance if the character has enough martial prowess
+					combat_rating = 50
+					NOT = {combat_rating = 100}
+					}		
+				modifier = {
+					factor = 0.9 # higher chance if the character has enough martial prowess
+					combat_rating = 20
+					NOT = {combat_rating = 50}
+					}		
+				
+				narrative_event = { id = DWBHE.206 }
+				}
+			
+		}
+	}
+	option = {
+		name = EVTOPTB_DWBHE208 # Run away!
+			if = {
+				limit = { NOT = { trait = craven } }
+				add_trait = craven
+			}		
+		}
+
+}
+
+# Alleyne captured by trickery
+narrative_event = {
+	id = DWBHE.209
+	picture = dwbhe_alleynecapture
+	desc = EVTDESC_DWBHE_209
+	title = EVTNAME_DWBHE_209	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE209 
+			prestige = 20
+				create_character = {
+			random_traits = no
+			name = Alleyne
+			dynasty = NONE
+			religion = pagan
+			culture = irish
+			female = yes
+			age = 20
+			trait = hunter
+			trait = elf
+			trait = brave
+			trait = skilled_tactician
+			trait = rough_terrain_leader
+			trait = immortal #because elves, y'know
+			trait = fair
+			trait = quick
+			trait = proud
+			trait = regular_tits
+		        trait = portrait391 # Custom portrait
+			trait = virgin
+			attributes = {
+				martial = 11
+				diplomacy = 8
+				stewardship = 3
+				intrigue = 3
+				learning = 5
+			}
+			health = 5
+			fertility = 0.60
+			}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			set_character_flag = dwbh_npc_elf
+			set_global_flag = dwbh_alleyne_in_court
+			imprison = ROOT
+			if = {  # For Christianity mod compatibility, to prevent a second set of tits getting assigned later
+				limit = {
+					has_global_flag = christ_enabled
+					}
+				set_character_flag = nada_checked
+				}
+			}
+		}
+}
+
+# Alleyne escapes trickery attempt
+narrative_event = {
+	id = DWBHE.210
+	picture = dwbhe_alleynewins
+	desc = EVTDESC_DWBHE_210
+	title = EVTNAME_DWBHE_210	
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = EVTOPTA_DWBHE210 
+			prestige = -20
+		}
+}
+# Elves aren't really immortal, but are much longer lived than normal humans, so we kludge it for Alleyne this way by giving the trait and taking it back later
+# In practice this probably won't mean much, but oh well
+character_event = {
+	id = DWBHE.211
+	hide_window = yes
+	min_age =  400
+	max_age =  600
+	trigger = {
+		has_character_flag = dwbh_npc_elf
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}	
+
+	
+	immediate = {
+			if = { 
+				limit = { 
+					trait = immortal 
+					} 
+				remove_trait = immortal 
+			}
+	
+		}
+
+
+}
+
+
+
+# DWBHE.301 Strong Slave as Bodyguard
+narrative_event = {
+	id = DWBHE.301
+	desc = DWBHE301
+	picture = dwsu_slavebodyguard
+	title = dwsu_slavebodyguard
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWBHE301A"
+		trigger = {
+			wealth = 50 # Ensure they've enough cash
+		}
+		wealth = -50		
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 16
+			health = 5.0
+			trait = branded_slave
+			trait = strong
+			trait = brave
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			set_immune_to_pruning  = yes
+			add_character_modifier = { name = dw_slave_bodyguard duration = -1 }
+			add_character_modifier = { name = dw_slave_warrior_complete duration = -1 }		
+			imprison = ROOT
+		}		
+	}
+	option = {
+		name = "DWBHE301B" # Look at others
+		narrative_event = { id = DWBHE.313 }
+		}
+
+}	
+
+# DWBHE.302 Pretty Slave as Handmaiden
+narrative_event = {
+	id = DWBHE.302
+	desc = DWBHE302
+	picture = dwsu_sexslave
+	title = dwsu_sexslave
+	is_triggered_only = yes
+	
+	option = {
+		name = "DWBHE302A"
+		trigger = {
+			wealth = 50 # Ensure they've enough cash
+		}
+		wealth = -50		
+
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = fair
+			trait = branded_slave
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_character_modifier = { name = dw_slave_pleasure_complete duration = -1 }		
+			imprison = ROOT
+			if = {
+			limit = {
+				ROOT = { ai = no }
+				}
+			set_immune_to_pruning  = yes
+			}
+		}		
+	}
+	option = {
+		name = "DWBHE302B" # Look at others
+		narrative_event = { id = DWBHE.313 }
+		}
+}
+
+
+
+#DWBHE.303 Special Slave purchase #bounce to a random slave to start
+
+character_event = {
+	id = DWBHE.303
+	hide_window = yes
+	is_triggered_only = yes # triggered by decision
+
+
+	immediate = { # Let's see what we get
+
+		random_list = {
+				10 = {
+					narrative_event = { id = DWBHE.311 } 
+					} #Succubus
+				10 = {
+					narrative_event = { id = DWBHE.309 } 
+					} #Elf				
+				10 = {
+					narrative_event = { id = DWBHE.306 } 
+					} #Kitsune
+				10 = {
+					narrative_event = { id = DWBHE.307 } 
+					} #Orc
+				10 = {
+					narrative_event = { id = DWBHE.308 } 
+					} #Neko
+				10 = {
+					narrative_event = { id = DWBHE.310 } 
+					} #Angel				
+
+			}	
+
+	}
+
+}
+
+
+
+narrative_event = {
+	id = DWBHE.305
+	desc = DWBHE305
+	picture = dwbh_slave_buying
+	title = dwbh_slave_buying
+	trigger = {
+		ai = no
+		is_adult = yes
+		is_ruler = yes
+		has_dlc = "Way of Life"
+		has_focus = focus_business
+		in_command = no
+			prisoner = no
+			capital_scope = {
+				OR = {
+					has_building = dw_slave_dungeon_1 # Castle
+					has_building = dw_slave_dungeon_2
+					has_building = dw_slave_dungeon_3
+  					has_building = dw_slave_market_1 # Republic
+     					has_building = dw_slave_market_2
+     					has_building = dw_slave_market_3						
+					has_building = dw_slave_wagon_1 # Nomad
+					has_building = dw_slave_wagon_2
+					has_building = dw_slave_wagon_3
+					has_building = dw_slave_wagon_4
+					has_building = dw_slave_wagon_5
+					has_building = dw_slave_pen_1 # Tribal
+					has_building = dw_slave_pen_2
+					has_building = dw_slave_pen_3
+				}
+			}		
+
+		}		
+		
+	
+
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 1.5
+			trait = content
+		}
+		modifier = {
+			factor = 0.5
+			trait = hedonist
+		}
+		modifier = {
+			factor = 0.9
+			stewardship = 10
+		}
+		modifier = {
+			factor = 0.8
+			stewardship = 15
+		}
+		modifier = {
+			factor = 0.7
+			stewardship = 20
+		}
+		modifier = {
+			factor = 2.0
+			trait = slothful
+		}
+		modifier = {
+			factor = 0.5
+			trait = greedy
+		}
+		modifier = {
+			factor = 3.00
+			trait = chaste
+		}
+	}
+
+
+	option = { # Purchase
+		name = DWBHE305A
+		trigger = {
+			wealth = 50 # Ensure they've enough cash
+		}
+		narrative_event = { id = DWBHE.313 }
+	}
+	option = { # Not now, take profits instead
+		name = "DWBHE305B"
+		wealth = 25
+	}
+
+
+}
+
+
+#DWBHE.306 Special Slave purchase
+
+narrative_event = {
+	id = DWBHE.306
+	desc = DWBHE306
+	picture = kitsune_start1
+	title = dwbh_kitsuneslave
+	is_triggered_only = yes # triggered by decision
+
+	option = { # Kitsune
+		trigger = {
+			wealth = 100
+			has_far_east_content = yes # Content check
+		}
+		name = "DWBHE306A"
+		wealth = -100
+			create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = virgin
+			trait = fair
+			trait = kitsune
+			trait = branded_slave
+			culture = han
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_character_modifier = { name = dw_slave_pleasure_complete duration = -1 }		
+			add_random_kitsune_portrait = yes
+			imprison = ROOT
+			if = {
+			limit = {
+				ROOT = { ai = no }
+				}
+			set_immune_to_pruning  = yes
+			}
+		}		
+
+	}
+	option = {
+		name = "DWBHE306B" # Next
+		random_list = {
+				10 = {
+					narrative_event = { id = DWBHE.307 } 
+					} #Orc
+				10 = {
+					narrative_event = { id = DWBHE.308 } 
+					} #Neko
+				10 = {
+					narrative_event = { id = DWBHE.309 } 
+					} #Elf				
+				10 = {
+					narrative_event = { id = DWBHE.310 } 
+					} #Angel				
+				10 = {
+					narrative_event = { id = DWBHE.311 } 
+					} #Succubus
+				20 = {
+					narrative_event = { id = DWBHE.312 } 
+				} #No more slaves
+			}	
+	}
+	option = {
+		name = "DWBHE306C" #Don't purchase anything
+		wealth = 25
+
+	}
+}	
+
+narrative_event = {
+	id = DWBHE.307
+	desc = DWBHE307
+	picture = orc_start1
+	title = dwbh_orcslave
+	is_triggered_only = yes # triggered by decision
+
+	option = { # Orc
+		trigger = {
+			wealth = 100
+			has_fae_content = yes # Content check
+		}
+		name = "DWBHE307A"
+		wealth = -100
+			create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = strong
+			trait = orc
+			trait = branded_slave
+			culture = orc
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_random_orc_portrait = yes
+			add_character_modifier = { name = dw_slave_pleasure_complete duration = -1 }		
+			imprison = ROOT
+			if = {
+			limit = {
+				ROOT = { ai = no }
+				}
+			set_immune_to_pruning  = yes
+			}
+		}		
+	}
+	option = {
+		name = "DWBHE307B" # Next
+		random_list = {
+				10 = {
+					narrative_event = { id = DWBHE.306 } 
+					} #Kitsune
+				10 = {
+					narrative_event = { id = DWBHE.308 } 
+					} #Neko
+				10 = {
+					narrative_event = { id = DWBHE.309 } 
+					} #Elf				
+				10 = {
+					narrative_event = { id = DWBHE.310 } 
+					} #Angel				
+				10 = {
+					narrative_event = { id = DWBHE.311 } 
+					} #Succubus
+				20 = {
+					narrative_event = { id = DWBHE.312 } 
+				} #No more slaves
+			}	
+	}
+	option = {
+		name = "DWBHE306C" #Don't purchase anything
+		wealth = 25
+
+	}
+}	
+
+narrative_event = {
+	id = DWBHE.308
+	desc = DWBHE308
+	picture = neko_start1
+	title = dwbh_nekoslave
+	is_triggered_only = yes # triggered by decision
+
+	option = { # Neko
+		trigger = {
+			wealth = 100
+			has_far_east_content = yes # Content check
+
+		}
+		name = "DWBHE308A"
+		wealth = -100
+			create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = fair
+			trait = virgin
+			trait = neko
+			trait = branded_slave
+			culture = han
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_random_neko_portrait = yes
+			add_character_modifier = { name = dw_slave_pleasure_complete duration = -1 }		
+			imprison = ROOT
+			if = {
+			limit = {
+				ROOT = { ai = no }
+				}
+			set_immune_to_pruning  = yes
+			}
+		}		
+
+	}	
+
+	option = {
+		name = "DWBHE308B" # Next
+		random_list = {
+				10 = {
+					narrative_event = { id = DWBHE.306 } 
+					} #Kitsune
+				10 = {
+					narrative_event = { id = DWBHE.307 } 
+					} #Orc
+				10 = {
+					narrative_event = { id = DWBHE.309 } 
+					} #Elf				
+				10 = {
+					narrative_event = { id = DWBHE.310 } 
+					} #Angel				
+				10 = {
+					narrative_event = { id = DWBHE.311 } 
+					} #Succubus
+				20 = {
+					narrative_event = { id = DWBHE.312 } 
+				} #No more slaves
+			}	
+	}
+	option = {
+		name = "DWBHE306C" #Don't purchase anything
+		wealth = 25
+
+	}
+}	
+
+narrative_event = {
+	id = DWBHE.309
+	desc = DWBHE309
+	picture = dwsu_sexslave
+	title = dwbh_elfslave
+	is_triggered_only = yes # triggered by decision
+
+	option = { # Elf
+		name = DWBHE309A
+		trigger = {
+			wealth = 100 # Ensure they've enough cash
+			has_fae_content = yes # Content check
+		}
+		wealth = -100
+
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = virgin
+			trait = small_tits
+			trait = fair
+			trait = elf
+			trait = branded_slave
+			culture = irish
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_character_modifier = { name = dw_slave_pleasure_complete duration = -1 }		
+			add_random_elf_portrait = yes
+			imprison = ROOT
+			if = {
+			limit = {
+				ROOT = { ai = no }
+				}
+			set_immune_to_pruning  = yes
+			}
+		}		
+
+	}
+
+	option = {
+		name = "DWBHE309B" # Next
+		random_list = {
+				10 = {
+					narrative_event = { id = DWBHE.306 } 
+					} #Kitsune
+				10 = {
+					narrative_event = { id = DWBHE.307 } 
+					} #Orc
+				10 = {
+					narrative_event = { id = DWBHE.308 } 
+					} #Neko			
+				10 = {
+					narrative_event = { id = DWBHE.310 } 
+					} #Angel				
+				10 = {
+					narrative_event = { id = DWBHE.311 } 
+					} #Succubus
+				20 = {
+					narrative_event = { id = DWBHE.312 } 
+				} #No more slaves
+			}	
+	}
+	option = {
+		name = "DWBHE306C" #Don't purchase anything
+		wealth = 25
+
+	}
+}	
+narrative_event = {
+	id = DWBHE.310
+	desc = DWBHE310
+	picture = dwbh_slaveangel
+	title = dwbh_angelslave
+	is_triggered_only = yes # triggered by decision
+
+	option = { # Angel
+		trigger = {
+			wealth = 200
+		has_heaven_hell_content = yes # Content check
+		}
+		name = "DWBHE310A"
+			wealth = -200
+			create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = regular_tits
+			trait = fair
+			trait = angel
+			trait = virgin
+			trait = branded_slave
+			culture = frankish
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_character_modifier = { name = dw_slave_pleasure_complete duration = -1 }		
+			add_random_angel_portrait = yes
+			imprison = ROOT
+			remove_trait = lustful
+			remove_trait = gluttonous
+			remove_trait = greedy
+			remove_trait = slothful
+			remove_trait = wroth
+			remove_trait = envious
+			if = {
+			limit = {
+				ROOT = { ai = no }
+				}
+			set_immune_to_pruning  = yes
+			}
+		}		
+	}
+	option = {
+		name = "DWBHE310B" # Next
+		random_list = {
+				10 = {
+					narrative_event = { id = DWBHE.306 } 
+					} #Kitsune
+				10 = {
+					narrative_event = { id = DWBHE.307 } 
+					} #Orc
+				10 = {
+					narrative_event = { id = DWBHE.308 } 
+					} #Neko
+				10 = {
+					narrative_event = { id = DWBHE.309 } 
+					} #Elf								
+				10 = {
+					narrative_event = { id = DWBHE.311 } 
+					} #Succubus
+				20 = {
+					narrative_event = { id = DWBHE.312 } 
+				} #No more slaves
+			}	
+	}
+
+	option = {
+		name = "DWBHE306C" #Don't purchase anything
+		wealth = 25
+
+	}
+}	
+narrative_event = {
+	id = DWBHE.311
+	desc = DWBHE311
+	picture = dwbh_slavesuccubus
+	title = dwbh_succubusslave
+	is_triggered_only = yes # triggered by decision
+
+	option = { # Succubus
+		name = "DWBHE311A"
+		trigger = { 
+			wealth = 150 # Ensure they've enough cash
+		has_heaven_hell_content = yes # Content check
+		}
+		wealth = -150
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			age = 16
+			health = 5.0
+			trait = big_tits
+			trait = fair
+			trait = bombshell
+			trait = lilith
+			trait = branded_slave
+			culture = french
+			religion = ROOT
+		}
+		new_character = {
+			set_character_flag = dw_boobs_checked
+			add_character_modifier = { name = dw_slave_pleasure_complete duration = -1 }		
+			add_random_demon_portrait = yes
+			imprison = ROOT
+			if = {
+			limit = {
+				ROOT = { ai = no }
+				}
+			set_immune_to_pruning  = yes
+			}
+			}			
+		
+	}
+	option = {
+		name = "DWBHE311B" # Next
+		random_list = {
+				10 = {
+					narrative_event = { id = DWBHE.306 } 
+					} #Kitsune
+				10 = {
+					narrative_event = { id = DWBHE.307 } 
+					} #Orc
+				10 = {
+					narrative_event = { id = DWBHE.308 } 
+					} #Neko
+				10 = {
+					narrative_event = { id = DWBHE.309 } 
+					} #Elf				
+				10 = {
+					narrative_event = { id = DWBHE.310 } 
+					} #Angel				
+				20 = {
+					narrative_event = { id = DWBHE.312 } 
+				} #No more slaves
+			}	
+	}
+	option = {
+		name = "DWBHE306C" #Don't purchase anything
+		wealth = 25
+
+	}
+}	
+
+
+
+narrative_event = {
+	id = DWBHE.312
+	desc = DWBHE312
+	picture = dwsu_special_slaves
+	title = dwsu_slave_buying
+	is_triggered_only = yes # triggered by decision
+
+	option = { #Oh well
+		name = "DWBHE312A" # Prior Selection
+                wealth = 25
+	}
+}
+
+
+#DWBHE.313 Slave purchase
+
+narrative_event = {
+	id = DWBHE.313
+	desc = DWBHE300
+	picture = dwsu_buying_slaves
+	title = dwsu_slave_buying
+	is_triggered_only = yes # triggered by event
+
+	option = { # Warrior Slave
+		name = DWBHE300A
+		trigger = {
+			wealth = 50 # Ensure they've enough cash
+		}
+		#wealth = -50
+		narrative_event = { id = DWBHE.301 }
+	}
+	option = { # Attractive Slave
+		name = "DWBHE300B"
+		trigger = { 
+			wealth = 200 # Ensure they've enough cash
+		}
+		#wealth = -50
+		narrative_event = { id = DWBHE.302 }
+	}
+	option = { # Special Slaves
+		trigger = {
+			wealth = 100
+		}
+		name = "DWBHE300C"
+		#wealth = -500
+		character_event = { id = DWBHE.303 }
+	}
+	option = {
+		name = "DWBHE300D" # End Selection
+	}
+}
+
+
+
