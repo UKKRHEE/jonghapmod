@@ -1366,6 +1366,7 @@ horse = {
 	
 	cannot_marry = no
 	cannot_inherit = no
+	agnatic = yes
 	can_hold_titles = yes # Hopefully this will block Glitterhoof from becoming pope again
 
 	potential = {
