@@ -1,5 +1,47 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_trait_ISE_INE"
+		texturefile = "gfx/traits/lf_breeder.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_ISE_JINGBURGER"
+		texturefile = "gfx/traits/lf_breeder.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_ISE_LILPA"
+		texturefile = "gfx/traits/lf_breeder.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_ISE_JURURU"
+		texturefile = "gfx/traits/lf_breeder.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_ISE_VCHAN"
+		texturefile = "gfx/traits/lf_breeder.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_ISE_GOSEGU"
+		texturefile = "gfx/traits/lf_breeder.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
 		name = "GFX_trait_lf_breeder"
 		texturefile = "gfx/traits/lf_breeder.tga"
 		noOfFrames = 1

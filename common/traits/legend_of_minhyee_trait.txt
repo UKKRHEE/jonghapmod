@@ -264,6 +264,9 @@ branden = {
 }
 ISE_INE = {
 	random = no
+	immortal = yes
+	health=100
+	fertility=100
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -274,6 +277,9 @@ ISE_INE = {
 }
 ISE_JINGBURGER = {
 	random = no
+	immortal = yes
+	health=100
+	fertility=100
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -284,6 +290,9 @@ ISE_JINGBURGER = {
 }
 ISE_LILPA = {
 	random = no
+	immortal = yes
+	health=100
+	fertility=100
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -294,6 +303,9 @@ ISE_LILPA = {
 }
 ISE_JURURU = {
 	random = no
+	immortal = yes
+	health=100
+	fertility=100
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -304,6 +316,9 @@ ISE_JURURU = {
 }
 ISE_GOSEGU = {
 	random = no
+	immortal = yes
+	health=100
+	fertility=100
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -314,6 +329,9 @@ ISE_GOSEGU = {
 }
 ISE_VCHAN = {
 	random = no
+	immortal = yes
+	health=100
+	fertility=100
 	command_modifier = {
 		speed = 1000
 		retreat = 100
