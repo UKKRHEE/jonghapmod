@@ -334,6 +334,8 @@ decisions = {
 						character_event = { id = RoI.30121 }
 					}
 				}
+				add_friend = ROOT
+				add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -365,7 +367,7 @@ decisions = {
 				trait = content
 				trait = AMD_sex_skill_5
 				trait = AMD_bodysize_gene_5
-				trait = AMD_breast_5
+				trait = AMD_breast_4
 				trait = ISE_JINGBURGER
 				dynasty = random
 				female = yes
@@ -390,6 +392,8 @@ decisions = {
 						character_event = { id = RoI.30121 }
 					}
 				}
+				add_friend = ROOT
+				add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -421,7 +425,7 @@ decisions = {
 				trait = content
 				trait = AMD_sex_skill_5
 				trait = AMD_bodysize_gene_5
-				trait = AMD_breast_5
+				trait = AMD_breast_4
 				trait = ISE_LILPA
 				dynasty = random
 				female = yes
@@ -446,6 +450,8 @@ decisions = {
 						character_event = { id = RoI.30121 }
 					}
 				}
+				add_friend = ROOT
+				add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -502,6 +508,8 @@ decisions = {
 						character_event = { id = RoI.30121 }
 					}
 				}
+				add_friend = ROOT
+				add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -533,7 +541,7 @@ decisions = {
 				trait = content
 				trait = AMD_sex_skill_5
 				trait = AMD_bodysize_gene_5
-				trait = AMD_breast_5
+				trait = AMD_breast_2
 				trait = ISE_GOSEGU
 				dynasty = random
 				female = yes
@@ -558,6 +566,8 @@ decisions = {
 						character_event = { id = RoI.30121 }
 					}
 				}
+				add_friend = ROOT
+				add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -589,7 +599,7 @@ decisions = {
 				trait = content
 				trait = AMD_sex_skill_5
 				trait = AMD_bodysize_gene_5
-				trait = AMD_breast_5
+				trait = AMD_breast_4
 				trait = ISE_VCHAN
 				dynasty = random
 				female = yes
@@ -614,6 +624,8 @@ decisions = {
 						character_event = { id = RoI.30121 }
 					}
 				}
+				add_friend = ROOT
+				add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
