@@ -1015,15 +1015,16 @@ targetted_decisions = {						# right-click on target character (i.e. the victim)
 		allow = {
 			is_within_diplo_range = FROM
 			FROM = {
-			    OR = {
 				ai = no
-				NOR = { #nice or just people wouldn't do this unless crazy or possessed
-					trait = kind
-					trait = just
-					}			
-				trait = lunatic   #crazies dgaf
-				trait = possessed #possessed dgaf
-				}
+#			    OR = {
+#				ai = no
+#				NOR = { #nice or just people wouldn't do this unless crazy or possessed
+#					trait = kind
+#					trait = just
+#					}			
+#				trait = lunatic   #crazies dgaf
+#				trait = possessed #possessed dgaf
+#				}
 			}
 		}
 		effect = {
