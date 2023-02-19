@@ -262,3 +262,63 @@ branden = {
 		siege = 100
 	}
 }
+ISE_INE = {
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+ISE_JINGBURGER = {
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+ISE_LILPA = {
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+ISE_JURURU = {
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+ISE_GOSEGU = {
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}
+ISE_VCHAN = {
+	random = no
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}

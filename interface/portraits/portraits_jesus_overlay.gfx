@@ -488,4 +488,144 @@ spriteTypes = {
 			"GFX_holyorder_grandson_of_minhyee:p0"
 		}
 	}
+	##########
+	spriteType = {
+		name = "GFX_INE"
+		texturefile = "gfx/static_portraits/ISE_INE.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_INE"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = ISE_INE
+			}
+		}
+		
+		layer = { 
+			"GFX_INE:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_JINGBURGER"
+		texturefile = "gfx/static_portraits/ISE_JINGBURGER.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_JINGBURGER"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = ISE_JINGBURGER
+			}
+		}
+		
+		layer = { 
+			"GFX_JINGBURGER:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_LILPA"
+		texturefile = "gfx/static_portraits/ISE_LILPA.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_LILPA"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = ISE_LILPA
+			}
+		}
+		
+		layer = { 
+			"GFX_LILPA:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_JURURU"
+		texturefile = "gfx/static_portraits/ISE_JURURU.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_JURURU"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = ISE_JURURU
+			}
+		}
+		
+		layer = { 
+			"GFX_JURURU:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_GOSEGU"
+		texturefile = "gfx/static_portraits/ISE_GOSEGU.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_GOSEGU"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = ISE_GOSEGU
+			}
+		}
+		
+		layer = { 
+			"GFX_GOSEGU:p0"
+		}
+	}
+	spriteType = {
+		name = "GFX_VCHAN"
+		texturefile = "gfx/static_portraits/ISE_VCHAN.png" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_VCHAN"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = ISE_VCHAN
+			}
+		}
+		
+		layer = { 
+			"GFX_VCHAN:p0"
+		}
+	}
+	##########
 }

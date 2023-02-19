@@ -170,7 +170,7 @@
     add_trait=mastermind_theologian add_trait=humble add_trait=scarred add_trait=shrewd
 	add_trait=mystic add_trait=scholar add_trait=theologian add_trait=kind add_trait=charitable
 	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
-	add_trait=reincarnation	add_trait=immortal add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
+	add_trait=reincarnation	add_trait=immortal add_trait=AMD_breast_5 add_trait=AMD_sex_skill_5 
 	add_trait=AMD_bodysize_gene_5 add_trait=chaste
 	add_trait = dougther_of_minhyee
 				add_trait=AMD_virgin
