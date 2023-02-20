@@ -2290,11 +2290,21 @@ character_event = {	id = AMD_PLAY.59100		#	MP	≥≤≥‡	≈Î«’
 	option = {	name = AMD_EV_OPT_MPMF_OLD	trigger = {	AMD_T_STF_IS_PURE = no	}
 		AMD_E_FIRST_BLOOD = yes
 		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99005	}	}
-		any_lover = {
+		if = {
 			limit = {
-				is_female = yes
+				ROOT = {
+					is_female = no
+				}
+				event_target:AMD_ET_POV = {
+					is_female = yes
+				}
 			}
-			impregnate_cuckoo = ROOT
+			event_target:AMD_ET_POV = {
+				limit = {
+					is_female = yes
+				}
+				impregnate_cuckoo = ROOT
+			}
 		}
 	}
 	option = {	name = AMD_EV_OPT_MPMF_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	}
