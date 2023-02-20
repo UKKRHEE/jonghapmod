@@ -922,4 +922,12 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	
+	spriteType = {
+		name = "GFX_icon_playable_theocracy_government"
+		texturefile = "gfx\\interface\\government_icon_theocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_playable_republic_government"
+		texturefile = "gfx\\interface\\government_icon_republic.dds"
+	}
 }

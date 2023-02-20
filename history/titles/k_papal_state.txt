@@ -4,6 +4,7 @@
 }
 42.1.1={
  holder = 145292
+	government = playable_theocracy_government
 } # Peter's first visit to Rome
 43.1.1 = {
 	holder = 1

@@ -5,6 +5,7 @@ k_karling = {
 	capital = 1981 # Frankfrut
 	
 	culture = old_frankish
+	landless = yes
 	
 	allow = {
 		always = yes

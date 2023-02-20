@@ -109,6 +109,14 @@ republic_governments = {
 				NOT = { religion = norse_pagan_reformed }
 			}
 			NOT = { is_government_potential = merchant_republic_government }
+			NOT = {
+				title = e_westkorea
+				title = k_westkorea
+				title = k_karling
+				title = e_koreanempire
+				title = k_papal_state
+				title = e_shiite
+			}
 		}
 		
 		color = { 209 125 130 }

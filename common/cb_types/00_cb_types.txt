@@ -2711,14 +2711,15 @@ invasion = {
 			ROOT = {
 				trait = yiminhyee
 			}
+			title = e_westkorea
 		}
 	}
 
 	can_use_gui = {
 		OR = {
 			check_if_crusader_trigger = yes
-			ROOT = {
-				trait = yiminhyee
+			NOT = {
+				title = e_westkorea
 			}
 		}
 	}
@@ -2731,16 +2732,7 @@ invasion = {
 			holder_scope = {
 				is_liege_or_above = FROM
 			}
-			if = {
-				limit = {
-					ROOT = {
-						trait = yiminhyee
-					}
-				}
-				FROM = {
-					independent = yes
-				}
-			}
+			title = e_westkorea
 		}
 	}
 	
@@ -2751,6 +2743,9 @@ invasion = {
 			}
 			holder_scope = {
 				is_liege_or_above = FROM
+			}
+			NOT = {
+				title = e_westkorea
 			}
 		}
 	}

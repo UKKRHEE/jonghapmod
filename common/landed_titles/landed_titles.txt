@@ -358,7 +358,7 @@ e_shiite = {
 	title_female = "CALIPHA"
 	foa = "CALIPH_FOA"
 	short_name = yes
-	landless = no
+	landless = yes
 	
 	religion=shiite
 	

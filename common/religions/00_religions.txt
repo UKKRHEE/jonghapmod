@@ -148,6 +148,7 @@ christian = {
 		can_call_crusade = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		max_wives = 10
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1

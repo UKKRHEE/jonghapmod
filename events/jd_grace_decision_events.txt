@@ -2173,7 +2173,7 @@ character_event = {
 										is_female = yes
 									}
 								}
-								event_target:imperial_marriage_spouse_2 = { set_mother = event_target:imperial_marriage_parent }
+								event_target:imperial_marriage_spouse_2 = { set_real_father = character:1 set_mother = event_target:imperial_marriage_parent }
 							}
                         }
 

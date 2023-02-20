@@ -18,7 +18,7 @@ e_westkorea = {
 	capital = 333 # Rome, just because
 	
 	culture = korean
-	landless = no
+	landless = yes
 	primary = no
 	title = "title_china_emperor"
 	
@@ -34,7 +34,7 @@ e_koreanempire = {
 	
 	capital = 333 # Rome, just because
 	
-	landless = no
+	landless = yes
 	culture = korean
 	
 	allow = {
