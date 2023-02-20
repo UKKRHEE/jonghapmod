@@ -2290,6 +2290,12 @@ character_event = {	id = AMD_PLAY.59100		#	MP	남녀	통합
 	option = {	name = AMD_EV_OPT_MPMF_OLD	trigger = {	AMD_T_STF_IS_PURE = no	}
 		AMD_E_FIRST_BLOOD = yes
 		hidden_tooltip = {	character_event = {	id = AMD_PLAY.99005	}	}
+		any_lover = {
+			limit = {
+				is_female = yes
+			}
+			impregnate_cuckoo = ROOT
+		}
 	}
 	option = {	name = AMD_EV_OPT_MPMF_OLD	trigger = {	AMD_T_STF_IS_PURE = yes	}
 		AMD_E_FIRST_BLOOD = yes
@@ -2959,7 +2965,7 @@ character_event = {	id = AMD_PLAY.71000		#	2P	기본마간(말x여)
 		
 		random = {
 			chance = 100
-			event_target:AMD_ET_DEF = { change_learning = 50 impregnate = event_target:AMD_ET_ATK }
+			event_target:AMD_ET_DEF = { change_learning = 50 impregnate_cuckoo = event_target:AMD_ET_ATK }
 		}
 	}
 }
@@ -3169,7 +3175,7 @@ character_event = {	id = AMD_PLAY.74000		#	2P	이종	ETC
 			}
 			random = {
 				chance = 100
-				event_target:AMD_ET_DEF = { change_learning = 50 impregnate = event_target:AMD_ET_ATK }
+				event_target:AMD_ET_DEF = { change_learning = 50 impregnate_cuckoo = event_target:AMD_ET_ATK }
 			}
 		}
 		if = {
@@ -3183,7 +3189,7 @@ character_event = {	id = AMD_PLAY.74000		#	2P	이종	ETC
 			}
 			random = {
 				chance = 100
-				event_target:AMD_ET_ATK = { change_learning = 50 impregnate = event_target:AMD_ET_DEF }
+				event_target:AMD_ET_ATK = { change_learning = 50 impregnate_cuckoo = event_target:AMD_ET_DEF }
 			}
 		}
 	}

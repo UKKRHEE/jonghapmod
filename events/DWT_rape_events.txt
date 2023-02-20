@@ -8670,7 +8670,7 @@ narrative_event = {
 			}
 			random = {
 				chance = 100
-				event_target:is_rape_victim = { change_learning = 50 impregnate = event_target:is_rapist }
+				event_target:is_rape_victim = { change_learning = 50 impregnate_cuckoo = event_target:is_rapist }
 			}
 		}
 		narrative_event = { id = DWT.3113 }
