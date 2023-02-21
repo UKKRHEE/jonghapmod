@@ -13,12 +13,17 @@ yiminhyee = {
 	global_tax_modifier = 50000.0
 	build_time_modifier = -1.0
 	build_cost_modifier = -1.0
-	monthly_character_piety = 100.0
-	monthly_character_prestige = 100.0
+	monthly_character_piety = 500.0
+	monthly_character_prestige = 500.0
 	monthly_character_wealth = 100.0
 	plot_power_modifier = 1.5
 	arrest_chance_modifier = 1.5
 	assassinate_chance_modifier = 1.5
+	siege_speed = 100
+	siege_defence = 100
+	max_tradeposts = 1000
+	population_growth = 1
+	manpower_growth = 0.5
 	cannot_inherit = yes
 	revoke_reason = no
 	banish_reason = no
@@ -29,7 +34,7 @@ yiminhyee = {
 		defence = 10
 		damage = 10
 	}
-	tech_growth_modifier = 100
+	tech_growth_modifier = 1000
 	commander_limit = 1000
 	max_tradeposts = 1000
 	
@@ -69,6 +74,8 @@ jesus_of_god = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 	male_compliment = COMPL_SAYYID
 	female_compliment = COMPL_SAYYIDA
 }
@@ -83,6 +90,8 @@ chinese_empress = { #장남
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 yiminhyee_2 = { #장남
 	random = no
@@ -95,6 +104,8 @@ yiminhyee_2 = { #장남
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 jesus_of_god_1 = { #장남
 	random = no
@@ -107,6 +118,8 @@ jesus_of_god_1 = { #장남
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 first_son_of_minhyee = { #장남
 	random = no
@@ -119,6 +132,8 @@ first_son_of_minhyee = { #장남
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 son_of_minhyee = {
 	random = no
@@ -131,6 +146,8 @@ son_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 holyorder_of_minhyee = {
 	random = no
@@ -143,6 +160,8 @@ holyorder_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 grandson_of_minhyee = {
 	random = no
@@ -155,6 +174,8 @@ grandson_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 holyorder_grandson_of_minhyee = {
 	random = no
@@ -167,6 +188,8 @@ holyorder_grandson_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 dougther_of_minhyee = {
 	random = no
@@ -179,6 +202,8 @@ dougther_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 dougther_of_minhyee_2 = {
 	random = no
@@ -191,6 +216,8 @@ dougther_of_minhyee_2 = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 dougther_of_minhyee_3 = {
 	random = no
@@ -203,6 +230,8 @@ dougther_of_minhyee_3 = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 dougther_of_minhyee_4 = {
 	random = no
@@ -215,6 +244,8 @@ dougther_of_minhyee_4 = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 dougther_of_minhyee_5 = {
 	random = no
@@ -227,6 +258,8 @@ dougther_of_minhyee_5 = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 dougther_of_minhyee_6 = {
 	random = no
@@ -239,6 +272,8 @@ dougther_of_minhyee_6 = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 sister_of_minhyee = {
 	random = no
@@ -251,6 +286,8 @@ sister_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 branden = {
 	random = no
@@ -261,6 +298,8 @@ branden = {
 		damage = 100
 		siege = 100
 	}
+	siege_speed = 100
+	siege_defence = 100
 }
 ISE_INE = {
 	random = no
