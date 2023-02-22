@@ -2152,3 +2152,183 @@
 		death=yes
 	}
 }
+198101 = {
+	name = "Otto" #
+	dna = fabmmzztpmr
+	dynasty=669
+	martial=18
+	diplomacy=14
+	intrigue=18
+	stewardship=15
+	religion="catholic"
+	culture="german"
+	trait="legit_bastard"
+	father=7965
+	981.6.21 = {
+		birth=yes
+	}
+	1033.1.1 = {
+		death=yes
+	}
+}
+198102 = {
+	name = "Karl" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198101
+	1002.1.1 = {
+		birth=yes
+	}
+	1057.8.21 = {
+		death=yes
+	}
+}
+198103 = {
+	name = "Liudolf" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198102
+	1036.1.1 = {
+		birth=yes
+	}
+	1078.1.1 = {
+		death=yes
+	}
+}
+198104 = {
+	name = "Malfred" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198102
+	1039.1.1 = {
+		birth=yes
+	}
+	1097.1.1 = {
+		death=yes
+	}
+}
+198105 = {
+	name = "Malfred" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198102
+	female = yes
+	1044.1.1 = {
+		birth=yes
+	}
+	1126.1.1 = {
+		death=yes
+	}
+}
+198106 = {
+	name = "Alfred" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198102
+	1047.1.1 = {
+		birth=yes
+	}
+	1094.1.1 = {
+		death=yes
+	}
+}
+198107 = {
+	name = "Wilhelm" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	trait = "legit_bastard"
+	father=198103
+	1062.1.1 = {
+		birth=yes
+	}
+	1128.1.1 = {
+		death=yes
+	}
+}
+198108 = {
+	name = "Otto" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	trait = "legit_bastard"
+	father=198103
+	1064.1.1 = {
+		birth=yes
+	}
+	1132.1.1 = {
+		death=yes
+	}
+}
+198109 = {
+	name = "Eugen" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198104
+	1057.1.1 = {
+		birth=yes
+	}
+	1099.1.1 = {
+		death=yes
+	}
+}
+198110 = {
+	name = "Ariel" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198101
+	female=yes
+	1006.1.1 = {
+		birth=yes
+	}
+	1049.1.1 = {
+		death=yes
+	}
+}
+198111 = {
+	name = "Sofie" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198101
+	female=yes
+	1008.1.1 = {
+		birth=yes
+	}
+	1067.1.1 = {
+		death=yes
+	}
+}
+198112 = {
+	name = "Heinrich" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198101
+	1009.1.1 = {
+		birth=yes
+	}
+	1031.1.1 = {
+		death=yes
+	}
+}
+198113 = {
+	name = "Bruno" #
+	dynasty=669
+	religion="catholic"
+	culture="german"
+	father=198112
+	1030.1.1 = {
+		birth=yes
+	}
+	1084.1.1 = {
+		death=yes
+	}
+}
