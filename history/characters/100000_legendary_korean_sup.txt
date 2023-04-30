@@ -2332,3 +2332,175 @@
 		death=yes
 	}
 }
+
+198201 = {
+	name = "Horse" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=1
+	trait=immortal
+	trait=horse
+	1021.1.1 = {
+		birth=yes
+	}
+	2112.1.1 = {
+		death=yes
+	}
+}	
+198202 = {
+	name = "Hildegard" #
+	#dynasty=2000000
+	female=yes
+	religion="lilitu"
+	culture="german"
+	1041.1.1 = {
+		birth=yes
+	}
+	1065.4.2 = {
+		add_trait=immortal
+	}
+	1066.2.1 = {
+		employer = 198201
+		add_spouse = 198201
+	}
+	2112.1.1 = {
+		death=yes
+	}
+}	
+198203 = {
+	name = "Adam" #
+	#dynasty=2000000
+	female=yes
+	religion="lilitu"
+	culture="german"
+	1040.1.1 = {
+		birth=yes
+	}
+	1065.4.2 = {
+		add_trait=immortal
+	}
+	1066.2.1 = {
+		employer = 198201
+		add_spouse = 198201
+	}
+	2112.1.1 = {
+		death=yes
+	}
+}	
+198204 = {
+	name = "Eve" #
+	#dynasty=2000000
+	female=yes
+	religion="lilitu"
+	culture="german"
+	1051.1.1 = {
+		birth=yes
+	}
+	1065.4.2 = {
+		add_trait=immortal
+	}
+	1066.2.1 = {
+		employer = 198201
+		add_spouse = 198201
+	}
+	2112.1.1 = {
+		death=yes
+	}
+}	
+198205 = {
+	name = "Ponny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198202
+	trait=horse
+	1058.1.1 = {
+		birth=yes
+	}
+}	
+198206 = {
+	name = "Sinny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198202
+	trait=horse
+	1059.1.1 = {
+		birth=yes
+	}
+}	
+198207 = {
+	name = "Denny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198202
+	trait=horse
+	1061.1.1 = {
+		birth=yes
+	}
+}	
+198208 = {
+	name = "Grenny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198202
+	trait=horse
+	1063.1.1 = {
+		birth=yes
+	}
+}	
+198209 = {
+	name = "Anny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198202
+	trait=horse
+	1065.1.1 = {
+		birth=yes
+	}
+}	
+198210 = {
+	name = "Anny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198203
+	trait=horse
+	1059.6.12 = {
+		birth=yes
+	}
+}	
+198211 = {
+	name = "Senny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198203
+	trait=horse
+	1062.12.21 = {
+		birth=yes
+	}
+}	
+198211 = {
+	name = "Enny" #
+	dynasty=2000000
+	religion="lilitu"
+	culture="horse"
+	father=198201
+	mother=198204
+	trait=horse
+	1065.4.21 = {
+		birth=yes
+	}
+}	

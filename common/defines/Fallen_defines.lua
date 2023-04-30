@@ -5,9 +5,9 @@ NDefines.NCharacter.PORTRAIT_OLD_AGE_THRESHOLD = 50				-- Old age switch for cha
 
 NDefines.NCharacter.AGE_OF_ADULTHOOD_MALE = 16						-- Male can rule at this age.
 NDefines.NCharacter.AGE_OF_ADULTHOOD_FEMALE = 16					-- Female can rule at this age.
-NDefines.NCharacter.AGE_OF_MARRIAGE_MALE = 13						-- Male allowed to marry at this age.
-NDefines.NCharacter.AGE_OF_MARRIAGE_FEMALE = 15		     			-- Female allowed to marry at this age.
-NDefines.NCharacter.AGE_ADOLESCENT = 12							-- Children are considered to be adolescent from this age
+NDefines.NCharacter.AGE_OF_MARRIAGE_MALE = 16						-- Male allowed to marry at this age.
+NDefines.NCharacter.AGE_OF_MARRIAGE_FEMALE = 16		     			-- Female allowed to marry at this age.
+NDefines.NCharacter.AGE_ADOLESCENT = 11							-- Children are considered to be adolescent from this age
 NDefines.NCharacter.AGE_YOUNG = 20									-- Non-child characters below this age have the 'teen' static modifier applied
 NDefines.NCharacter.AGE_ADULT = 30									-- Non-child characters below this age have the 'young' static modifier applied
 NDefines.NCharacter.AGE_OLD = 50									-- Non-child characters below this age have the 'adult' static modifier applied

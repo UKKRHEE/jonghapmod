@@ -13,7 +13,9 @@
 	add_trait=brave add_trait=stubborn add_trait=sympathy_judaism add_trait=zodiac_capricorn
 	add_trait=reincarnation	add_trait=AMD_penis_5 add_trait=AMD_sex_skill_5 
 	add_trait=AMD_bodysize_gene_5 add_trait=gigantic_dick add_trait=angel add_trait=lf_neko
-	add_trait=minhyee add_trait=yiminhyee add_trait=crowned_by_pope add_trait=lustful add_trait=sexcrazed add_trait=seducer
+	add_trait=minhyee add_trait=yiminhyee add_trait=crowned_by_pope add_trait=lustful 
+	#add_trait=sexcrazed 
+	add_trait=seducer
 	wealth = 100000
 	prestige = 100000
 	piety = 100000
@@ -99,6 +101,10 @@
 			add_spouse_matrilineal=220822
 			add_spouse_matrilineal=100004
 			add_spouse_matrilineal=7757
+			add_spouse_matrilineal=198105
+			c_198105 = {
+				add_trait = immortal
+			}
 		}
 	}
 }
