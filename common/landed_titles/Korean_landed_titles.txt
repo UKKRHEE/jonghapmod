@@ -20,11 +20,21 @@ e_westkorea = {
 	culture = korean
 	landless = yes
 	primary = no
-	title = "title_china_emperor"
+	title = "title_china_emperor"	
+	independent = yes
+	
+	can_be_claimed = no
+	can_be_usurped = no
+	dynasty_title_names = no 
+	purple_born_heirs = yes
 	
 	allow = {
-		ai = no
+		OR = {
+			ai = no
+			religion = lilitu
+		}
 	}
+	extra_ai_eval_troops = 7500
 	religion = lilitu
 }
 

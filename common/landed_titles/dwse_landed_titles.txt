@@ -22,7 +22,7 @@ e_offmap_dwse_voice = {
 	name_tier = duke
 	culture = dwse_dragon
 	
-	mercenary = yes
+	#mercenary = yes
 	mercenary_type = dwse_merc_composition
 	strength_growth_per_century = 0.10
 	allow = {
@@ -34,4 +34,5 @@ e_offmap_dwse_voice = {
 			religion = yazidi
 		}
 	}
+	extra_ai_eval_troops = 7500
 }

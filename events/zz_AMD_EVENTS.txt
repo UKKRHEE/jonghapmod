@@ -4178,8 +4178,23 @@ character_event = {	id = AMD.26200		#창관방문		판매
 		AMD_E_SETA_POV = yes
 		AMD_E_SETA_TS = yes
 		random_list = {	#고객 타입 리스트
-			60 = {	set_variable = {	which = local_AMD_BROTHEL_WORK	value = 1	}	#인남
-				modifier = {	factor = 0.5	is_female = no	NOT = {	trait = homosexual	}	}
+			if = {
+				limit = {
+					NOT = {
+						trait = yiminhyee
+					}
+				}
+				60 = {	set_variable = {	which = local_AMD_BROTHEL_WORK	value = 1	}	#인남
+					modifier = {	factor = 0.5	is_female = no	NOT = {	trait = homosexual	}	}
+				}
+			}
+			if = {
+				limit = {
+					trait = yiminhyee
+				}
+				60 = {	set_variable = {	which = local_AMD_BROTHEL_WORK	value = 2	}	#인녀
+					modifier = {	factor = 0.0	AMD_T_HGF_BROTHEL_HOMO = no	}
+				}
 			}
 			20 = {	set_variable = {	which = local_AMD_BROTHEL_WORK	value = 2	}	#인녀
 				modifier = {	factor = 0.0	AMD_T_HGF_BROTHEL_HOMO = no	}
