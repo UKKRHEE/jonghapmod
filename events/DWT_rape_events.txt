@@ -957,6 +957,45 @@ narrative_event = {
 	
 	option = {
 		name = DWToption1
+		if = {
+			limit = {
+				ROOT = {
+					trait = yiminhyee
+				}
+			}
+			FROMFROMFROMFROM = { 
+				impregnate_cuckoo = ROOT
+				change_learning = 100
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					NOT = {
+						trait = yiminhyee
+					}
+				}
+			}
+		random = {
+				chance = 30
+				if = {
+					limit = {
+						FROMFROMFROMFROM = {
+								is_female = yes
+								is_pregnant = no
+								fertility = 0.1
+								NOT = {
+									age = 40
+								}
+							}
+						is_female = no
+					}
+					FROMFROMFROMFROM = { 
+						impregnate_cuckoo = ROOT
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -7175,7 +7214,7 @@ narrative_event = {
 # Vaginal rape of female through male liege - act #3
 narrative_event = { 
 	id =  DWT.3012
-	desc = DWT.3012.desc
+	desc = DWT.3112.desc
 	picture = GFX_evt_DWT.rapevag3
 
 	is_triggered_only = yes
@@ -7197,6 +7236,20 @@ narrative_event = {
 			}
 		}
 		event_target:is_rape_victim = { change_learning = 1 impregnate = event_target:is_rapist }
+		if = {
+			limit = {
+				event_target:is_rapist = {
+					trait = yiminhyee
+				}
+				event_target:is_rape_victim = {
+					is_female = yes
+				}
+			}
+			event_target:is_rape_victim = { 
+				impregnate_cuckoo = event_target:is_rapist
+				change_learning = 1
+			}
+		}
 		narrative_event = { id = DWT.3013 }
 	}
 	# Pull out:
@@ -7225,7 +7278,7 @@ narrative_event = {
 # Vaginal rape of female through male liege - creampie:
 narrative_event = { 
 	id =  DWT.3013
-	desc = DWT.3013.desc
+	desc = DWT.3113.desc
 	picture = DWTCreampieFromBehind
 
 	is_triggered_only = yes
@@ -8668,9 +8721,9 @@ narrative_event = {
 					is_female = yes
 				}
 			}
-			random = {
-				chance = 100
-				event_target:is_rape_victim = { change_learning = 50 impregnate_cuckoo = event_target:is_rapist }
+			event_target:is_rape_victim = { 
+				impregnate_cuckoo = event_target:is_rapist
+				change_learning = 1
 			}
 		}
 		narrative_event = { id = DWT.3113 }

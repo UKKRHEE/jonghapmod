@@ -717,7 +717,7 @@ narrative_event = {
 			remove_trait = virgin
 		}
 		random = {
-				chance = 100
+				chance = 30
 				if = {
 					limit = {
 						FROM = {
@@ -737,7 +737,6 @@ narrative_event = {
 							months  = 60
 						}
 						add_trait = lustful
-						impregnate = PREV 
 					}
 				}
 			}
