@@ -1,0 +1,1026 @@
+namespace = cheatersbless
+
+character_event = { #bless a character
+	id = "cheatersbless.1"
+	desc = "EVTDESCcheatersbless.1"
+	picture = "GFX_evt_throne_room"
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #strong
+		name ="EVTOPTAcheatersbless.1"
+		trigger = {
+			from = { NOT = { trait = strong } }
+		}
+		from = { add_trait = strong }
+	}
+	option = { #smart
+		name ="EVTOPTBcheatersbless.1"
+		trigger = {
+			from = { NOT = { trait = genius } }
+		}
+		from = { add_trait = genius }
+	}
+	option = { #attractive
+		name ="EVTOPTCcheatersbless.1"
+		trigger = {
+			from = { NOT = { trait = fair } }
+		}
+		from = { add_trait = fair }
+	}
+	option = { #long life
+		name ="EVTOPTDcheatersbless.1"
+		trigger = {
+			from = { NOT = { health = 80 } }
+		}
+		from = { health = 150 fertility = 1 }
+	}
+	option = { #never mind
+		name ="EVTOPTGcheatersbless.1"
+		trigger = {
+			from = { 
+				OR = {
+					trait = strong
+					trait = genius
+					trait = fair
+					health = 80
+				} 
+			}
+		}
+	}
+}
+character_event = { #curse a character
+	id = "cheatersbless.2"
+	desc = "EVTDESCcheatersbless.2"
+	picture = "GFX_evt_pale_rider"
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #weak
+		name ="EVTOPTAcheatersbless.2"
+		trigger = {
+			from = { NOT = { trait = weak } }
+		}
+		from = { add_trait = weak }
+	}
+	option = { #slow
+		name ="EVTOPTBcheatersbless.2"
+		trigger = {
+			from = { NOT = { trait = imbecile } }
+		}
+		from = { add_trait = imbecile }
+	}
+	option = { #ugly
+		name ="EVTOPTCcheatersbless.2"
+		trigger = {
+			from = { NOT = { trait = ugly } }
+		}
+		from = { add_trait = ugly }
+	}
+	option = { #balls
+		name ="EVTOPTDcheatersbless.2"
+		trigger = {
+			from = {
+				NOT = { trait = eunuch }
+				is_female = no
+			}
+		}
+		from = { add_trait = eunuch }
+	}
+	option = { #fertility
+		name ="EVTOPTFcheatersbless.2"
+		trigger = {
+			from = {
+				is_female = yes
+				fertility = 0.1
+			}
+		}
+		from = { fertility = -2 }
+	}
+	option = {
+		name = "EVTOPTEcheatersbless.2"
+		trigger = {
+			from = {
+				trait = weak
+				trait = imbecile
+				trait = ugly
+				OR = {
+					is_female = yes
+					trait = eunuch
+				}
+				NAND = {
+					trait = has_aztec_disease
+					trait = dancing_plague
+					trait = scurvy
+					trait = cancer
+					trait = rabies
+					trait = food_poisoning
+					trait = gout
+					trait = dysentery
+					trait = flu
+					trait = pneumonic
+					trait = syphilitic
+					trait = leper
+					trait = has_tuberculosis
+					trait = has_typhoid_fever
+					trait = has_typhus
+					trait = has_bubonic_plague
+					trait = has_measles
+					trait = has_small_pox
+				}
+			}
+		}
+		from = {
+			random_list = {
+				1 = {
+					modifier = { factor = 0 trait = has_aztec_disease }
+					add_trait = has_aztec_disease
+				}
+				1 = {
+					modifier = { factor = 0 trait = dancing_plague }
+					add_trait = dancing_plague
+				}
+				1 = {
+					modifier = { factor = 0 trait = scurvy }
+					add_trait = scurvy
+				}
+				1 = {
+					modifier = { factor = 0 trait = cancer }
+					add_trait = cancer
+				}
+				1 = {
+					modifier = { factor = 0 trait = rabies }
+					add_trait = rabies
+				}
+				1 = {
+					modifier = { factor = 0 trait = food_poisoning }
+					add_trait = food_poisoning
+				}
+				1 = {
+					modifier = { factor = 0 trait = gout }
+					add_trait = gout
+				}
+				1 = {
+					modifier = { factor = 0 trait = dysentery }
+					add_trait = dysentery
+				}
+				1 = {
+					modifier = { factor = 0 trait = flu }
+					add_trait = flu
+				}
+				1 = {
+					modifier = { factor = 0 trait = pneumonic }
+					add_trait = pneumonic
+				}
+				1 = {
+					modifier = { factor = 0 trait = syphilitic }
+					add_trait = syphilitic
+				}
+				1 = {
+					modifier = { factor = 0 trait = leper }
+					add_trait = leper
+				}
+				1 = {
+					modifier = { factor = 0 trait = has_tuberculosis }
+					add_trait = has_tuberculosis
+				}
+				1 = {
+					modifier = { factor = 0 trait = has_typhoid_fever }
+					add_trait = has_typhoid_fever
+				}
+				1 = {
+					modifier = { factor = 0 trait = has_typhus }
+					add_trait = has_typhus
+				}
+				1 = {
+					modifier = { factor = 0 trait = has_bubonic_plague }
+					add_trait = has_bubonic_plague
+				}
+				1 = {
+					modifier = { factor = 0 trait = has_measles }
+					add_trait = has_measles
+				}
+				1 = {
+					modifier = { factor = 0 trait = has_small_pox }
+					add_trait = has_small_pox
+				}
+			}	
+		}
+	}
+	option = {
+		name = "EVTOPTGcheatersbless.2"
+		trigger = {
+			from = {
+				trait = weak
+				trait = imbecile
+				trait = ugly
+				OR = {
+					is_female = yes
+					trait = eunuch
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = "cheatersbless.3"
+	hide_window = yes
+	ai = no
+
+	trigger = {
+		trait = x_cheater
+	}
+
+	mean_time_to_happen = {
+		months = 3
+
+		modifier = {
+			factor = 0.5
+			age = 60
+		}
+
+		modifier = {
+			factor = 0.5
+			age = 100
+		}
+	}
+
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 2
+					martial < 20
+				}
+				modifier = {
+					factor = 2
+					martial < 30
+				}
+				modifier = {
+					factor = 2
+					martial < 40
+				}
+				add_character_modifier = {
+					name = cheater_martial
+					duration = -1
+					stacking = yes
+					hidden = yes
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 2
+					diplomacy < 20
+				}
+				modifier = {
+					factor = 2
+					diplomacy < 30
+				}
+				modifier = {
+					factor = 2
+					diplomacy < 40
+				}
+				add_character_modifier = {
+					name = cheater_diplomacy
+					duration = -1
+					stacking = yes
+					hidden = yes
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 2
+					intrigue < 20
+				}
+				modifier = {
+					factor = 2
+					intrigue < 30
+				}
+				modifier = {
+					factor = 2
+					intrigue < 40
+				}
+				add_character_modifier = {
+					name = cheater_intrigue
+					duration = -1
+					stacking = yes
+					hidden = yes
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 2
+					stewardship < 20
+				}
+				modifier = {
+					factor = 2
+					stewardship < 30
+				}
+				modifier = {
+					factor = 2
+					stewardship < 40
+				}
+				add_character_modifier = {
+					name = cheater_stewardship
+					duration = -1
+					stacking = yes
+					hidden = yes
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 2
+					learning < 20
+				}
+				modifier = {
+					factor = 2
+					learning < 30
+				}
+				modifier = {
+					factor = 2
+					learning < 40
+				}
+				add_character_modifier = {
+					name = cheater_learning
+					duration = -1
+					stacking = yes
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+province_event = {
+	id = "cheatersbless.4"
+	desc = "EVTDESCcheatersbless.4"
+	picture = GFX_evt_culture_change
+	
+	trigger = {
+		
+		owner = {
+			OR = {
+				AND = {
+					trait = x_cheater
+					OR = {
+						NOT = { culture = ROOT }
+						NOT = { religion = ROOT }
+					}
+				}
+				AND = {
+					OR = {
+						NOT = { culture = ROOT }
+						NOT = { religion = ROOT }
+					}
+					any_liege = {
+						trait = x_cheater
+						culture = PREV
+						religion = PREV
+					}
+				}
+				AND = {
+					top_liege = {
+						trait = x_cheater
+						OR = {
+							NOT = { culture = ROOT }
+							NOT = { religion = ROOT }
+						}
+					}
+				}
+			}
+		}
+		
+		NOT = { # No flipping back to Norse culture before 1150
+			AND = {
+				owner = { culture = norse }
+				ROOT = {
+					OR = {
+						culture = swedish
+						culture = norwegian
+						culture = danish
+						culture = norman
+					}
+				}
+				NOT = {	has_global_flag = norse_culture_flipping }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "EVTOPTAcheatersbless.4"
+		trigger = {
+			owner = {
+				OR = {
+					AND = {
+						trait = x_cheater
+						OR = {
+							NOT = { culture = ROOT }
+							NOT = { religion = ROOT }
+						}
+					}
+					AND = {
+						OR = {
+							NOT = { culture = ROOT }
+							NOT = { religion = ROOT }
+						}
+						any_liege = {
+							trait = x_cheater
+							culture = PREV
+							religion = PREV
+						}
+					}
+				}
+			}
+		}
+		owner = {
+			ROOT = {
+				if = {
+					limit = {
+						NOT = { culture = PREV }
+					}
+					culture = PREV
+					}
+				if = {
+					limit = {
+						NOT = { religion = PREV }
+					}
+					religion = PREV
+				}
+				if = {
+					limit = {
+						has_province_modifier = nomad_agitation
+					}
+					remove_province_modifier = nomad_agitation
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTAcheatersbless.4"
+		trigger = {
+			owner = {
+				NOT = { trait = x_cheater }
+				top_liege = {
+					trait = x_cheater
+					OR = {
+						NOT = { culture = ROOT }
+						NOT = { religion = ROOT }
+					}
+				}
+			}
+		}
+		owner = {
+			top_liege = {
+				ROOT = {
+					if = {
+						limit = {
+							NOT = { culture = PREV }
+						}
+						culture = PREV
+					}
+					if = {
+						limit = {
+							NOT = { religion = PREV }
+						}
+						religion = PREV
+					}
+					if = {
+						limit = {
+							has_province_modifier = nomad_agitation
+						}
+						remove_province_modifier = nomad_agitation
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = "cheatersbless.5"
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = { factor = 0 trait = has_aztec_disease }
+				add_trait = has_aztec_disease
+			}
+			1 = {
+				modifier = { factor = 0 trait = dancing_plague }
+				add_trait = dancing_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = scurvy }
+				add_trait = scurvy
+			}
+			1 = {
+				modifier = { factor = 0 trait = cancer }
+				add_trait = cancer
+			}
+			1 = {
+				modifier = { factor = 0 trait = rabies }
+				add_trait = rabies
+			}
+			1 = {
+				modifier = { factor = 0 trait = food_poisoning }
+				add_trait = food_poisoning
+			}
+			1 = {
+				modifier = { factor = 0 trait = gout }
+				add_trait = gout
+			}
+			1 = {
+				modifier = { factor = 0 trait = dysentery }
+				add_trait = dysentery
+			}
+			1 = {
+				modifier = { factor = 0 trait = flu }
+				add_trait = flu
+			}
+			1 = {
+				modifier = { factor = 0 trait = pneumonic }
+				add_trait = pneumonic
+			}
+			1 = {
+				modifier = { factor = 0 trait = syphilitic }
+				add_trait = syphilitic
+			}
+			1 = {
+				modifier = { factor = 0 trait = leper }
+				add_trait = leper
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_tuberculosis }
+				add_trait = has_tuberculosis
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhoid_fever }
+				add_trait = has_typhoid_fever
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhus }
+				add_trait = has_typhus
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_bubonic_plague }
+				add_trait = has_bubonic_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_measles }
+				add_trait = has_measles
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_small_pox }
+				add_trait = has_small_pox
+			}
+		}
+		random_list = {
+			1 = {
+				modifier = { factor = 0 trait = has_aztec_disease }
+				add_trait = has_aztec_disease
+			}
+			1 = {
+				modifier = { factor = 0 trait = dancing_plague }
+				add_trait = dancing_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = scurvy }
+				add_trait = scurvy
+			}
+			1 = {
+				modifier = { factor = 0 trait = cancer }
+				add_trait = cancer
+			}
+			1 = {
+				modifier = { factor = 0 trait = rabies }
+				add_trait = rabies
+			}
+			1 = {
+				modifier = { factor = 0 trait = food_poisoning }
+				add_trait = food_poisoning
+			}
+			1 = {
+				modifier = { factor = 0 trait = gout }
+				add_trait = gout
+			}
+			1 = {
+				modifier = { factor = 0 trait = dysentery }
+				add_trait = dysentery
+			}
+			1 = {
+				modifier = { factor = 0 trait = flu }
+				add_trait = flu
+			}
+			1 = {
+				modifier = { factor = 0 trait = pneumonic }
+				add_trait = pneumonic
+			}
+			1 = {
+				modifier = { factor = 0 trait = syphilitic }
+				add_trait = syphilitic
+			}
+			1 = {
+				modifier = { factor = 0 trait = leper }
+				add_trait = leper
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_tuberculosis }
+				add_trait = has_tuberculosis
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhoid_fever }
+				add_trait = has_typhoid_fever
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhus }
+				add_trait = has_typhus
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_bubonic_plague }
+				add_trait = has_bubonic_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_measles }
+				add_trait = has_measles
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_small_pox }
+				add_trait = has_small_pox
+			}
+		}
+		random_list = {
+			1 = {
+				modifier = { factor = 0 trait = has_aztec_disease }
+				add_trait = has_aztec_disease
+			}
+			1 = {
+				modifier = { factor = 0 trait = dancing_plague }
+				add_trait = dancing_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = scurvy }
+				add_trait = scurvy
+			}
+			1 = {
+				modifier = { factor = 0 trait = cancer }
+				add_trait = cancer
+			}
+			1 = {
+				modifier = { factor = 0 trait = rabies }
+				add_trait = rabies
+			}
+			1 = {
+				modifier = { factor = 0 trait = food_poisoning }
+				add_trait = food_poisoning
+			}
+			1 = {
+				modifier = { factor = 0 trait = gout }
+				add_trait = gout
+			}
+			1 = {
+				modifier = { factor = 0 trait = dysentery }
+				add_trait = dysentery
+			}
+			1 = {
+				modifier = { factor = 0 trait = flu }
+				add_trait = flu
+			}
+			1 = {
+				modifier = { factor = 0 trait = pneumonic }
+				add_trait = pneumonic
+			}
+			1 = {
+				modifier = { factor = 0 trait = syphilitic }
+				add_trait = syphilitic
+			}
+			1 = {
+				modifier = { factor = 0 trait = leper }
+				add_trait = leper
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_tuberculosis }
+				add_trait = has_tuberculosis
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhoid_fever }
+				add_trait = has_typhoid_fever
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhus }
+				add_trait = has_typhus
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_bubonic_plague }
+				add_trait = has_bubonic_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_measles }
+				add_trait = has_measles
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_small_pox }
+				add_trait = has_small_pox
+			}
+		}
+		random_list = {
+			1 = {
+				modifier = { factor = 0 trait = has_aztec_disease }
+				add_trait = has_aztec_disease
+			}
+			1 = {
+				modifier = { factor = 0 trait = dancing_plague }
+				add_trait = dancing_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = scurvy }
+				add_trait = scurvy
+			}
+			1 = {
+				modifier = { factor = 0 trait = cancer }
+				add_trait = cancer
+			}
+			1 = {
+				modifier = { factor = 0 trait = rabies }
+				add_trait = rabies
+			}
+			1 = {
+				modifier = { factor = 0 trait = food_poisoning }
+				add_trait = food_poisoning
+			}
+			1 = {
+				modifier = { factor = 0 trait = gout }
+				add_trait = gout
+			}
+			1 = {
+				modifier = { factor = 0 trait = dysentery }
+				add_trait = dysentery
+			}
+			1 = {
+				modifier = { factor = 0 trait = flu }
+				add_trait = flu
+			}
+			1 = {
+				modifier = { factor = 0 trait = pneumonic }
+				add_trait = pneumonic
+			}
+			1 = {
+				modifier = { factor = 0 trait = syphilitic }
+				add_trait = syphilitic
+			}
+			1 = {
+				modifier = { factor = 0 trait = leper }
+				add_trait = leper
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_tuberculosis }
+				add_trait = has_tuberculosis
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhoid_fever }
+				add_trait = has_typhoid_fever
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhus }
+				add_trait = has_typhus
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_bubonic_plague }
+				add_trait = has_bubonic_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_measles }
+				add_trait = has_measles
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_small_pox }
+				add_trait = has_small_pox
+			}
+		}
+		random_list = {
+			1 = {
+				modifier = { factor = 0 trait = has_aztec_disease }
+				add_trait = has_aztec_disease
+			}
+			1 = {
+				modifier = { factor = 0 trait = dancing_plague }
+				add_trait = dancing_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = scurvy }
+				add_trait = scurvy
+			}
+			1 = {
+				modifier = { factor = 0 trait = cancer }
+				add_trait = cancer
+			}
+			1 = {
+				modifier = { factor = 0 trait = rabies }
+				add_trait = rabies
+			}
+			1 = {
+				modifier = { factor = 0 trait = food_poisoning }
+				add_trait = food_poisoning
+			}
+			1 = {
+				modifier = { factor = 0 trait = gout }
+				add_trait = gout
+			}
+			1 = {
+				modifier = { factor = 0 trait = dysentery }
+				add_trait = dysentery
+			}
+			1 = {
+				modifier = { factor = 0 trait = flu }
+				add_trait = flu
+			}
+			1 = {
+				modifier = { factor = 0 trait = pneumonic }
+				add_trait = pneumonic
+			}
+			1 = {
+				modifier = { factor = 0 trait = syphilitic }
+				add_trait = syphilitic
+			}
+			1 = {
+				modifier = { factor = 0 trait = leper }
+				add_trait = leper
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_tuberculosis }
+				add_trait = has_tuberculosis
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhoid_fever }
+				add_trait = has_typhoid_fever
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_typhus }
+				add_trait = has_typhus
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_bubonic_plague }
+				add_trait = has_bubonic_plague
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_measles }
+				add_trait = has_measles
+			}
+			1 = {
+				modifier = { factor = 0 trait = has_small_pox }
+				add_trait = has_small_pox
+			}
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+character_event = {
+	id = "cheatersbless.6"
+	ai = no
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+
+	desc = "EVTDESCcheatersbless.6"
+
+	option = {
+		name = "EVTOPTAcheatersbless.6"
+		add_age = 1
+		character_event = {
+			id = cheatersbless.6
+		}
+	}
+
+	option = {
+		name = "EVTOPTBcheatersbless.6"
+		add_age = 5
+		character_event = {
+			id = cheatersbless.6
+		}
+	}
+
+	option = {
+		name = "EVTOPTCcheatersbless.6"
+		add_age = 20
+		character_event = {
+			id = cheatersbless.6
+		}
+	}
+
+	option = {
+		name = "I don't want it anymore"
+	}
+}
+
+character_event = {
+	id = "cheatersbless.7"
+	ai = no
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+
+	desc = "EVTDESCcheatersbless.7"
+
+	option = {
+		name = "EVTOPTAcheatersbless.7"
+		trigger = {
+			age > 1
+		}
+		add_age = -1
+		character_event = {
+			id = cheatersbless.7
+		}
+	}
+
+	option = {
+		name = "EVTOPTBcheatersbless.7"
+		trigger = {
+			age > 5
+		}
+		add_age = -5
+		character_event = {
+			id = cheatersbless.7
+		}
+	}
+
+	option = {
+		name = "EVTOPTCcheatersbless.7"
+		trigger = {
+			age > 20
+		}
+		add_age = -20
+		character_event = {
+			id = cheatersbless.7
+		}
+	}
+
+	option = {
+		name = "I don't want it anymore"
+	}
+}
+
+character_event = {
+	id = "cheatersbless.8"
+	ai = no
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+
+	desc = "EVTDESCcheatersbless.8"
+
+	option = {
+		name = "EVTOPTAcheatersbless.8"
+		scaled_piety = {
+		    value = 100
+		    min = 1000
+		}
+		character_event = {
+			id = cheatersbless.8
+		}
+	}
+
+	option = {
+		name = "EVTOPTBcheatersbless.8"
+		scaled_prestige = {
+		    value = 100
+		    min = 1000
+		}
+		character_event = {
+			id = cheatersbless.8
+		}
+	}
+
+	option = {
+		name = "EVTOPTCcheatersbless.8"
+		scaled_wealth = {
+		    value = 100
+		    min = 1000
+		}
+		character_event = {
+			id = cheatersbless.8
+		}
+	}
+
+	option = {
+		name = "I don't want it anymore"
+	}
+}

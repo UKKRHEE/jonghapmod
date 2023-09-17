@@ -1,6 +1,5 @@
 # hair, mouth, chin, nose, eyes, cheek, ear, neck
 spriteTypes = {
-
 		spriteType = {
 		name = "GFX_jesus_base"
 		texturefile = "gfx\\characters\\shared\\jesus_portrait.dds"
@@ -36,7 +35,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_wife_of_minhyee"
-		texturefile = "gfx/static_portraits/3.png"
+		texturefile = "gfx\\characters\\3.tga"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -54,14 +53,15 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_wife_of_minhyee:p0"
+			"GFX_wife_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	
 ########################################	
 	spriteType = {
 		name = "GFX_dougther_of_minhyee"
-		texturefile = "gfx/static_portraits/2.png"
+		texturefile = "gfx\\characters\\2.tga"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -79,13 +79,14 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_dougther_of_minhyee:p0"
+			"GFX_dougther_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 ########################################	
 	spriteType = {
 		name = "GFX_dougther_of_minhyee_2"
-		texturefile = "gfx/static_portraits/1.png"
+		texturefile = "gfx\\characters\\1.tga"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -103,13 +104,14 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_dougther_of_minhyee_2:p0"
+			"GFX_dougther_of_minhyee_2:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 ########################################	
 	spriteType = {
 		name = "GFX_dougther_of_minhyee_3"
-		texturefile = "gfx/static_portraits/6.png"
+		texturefile = "gfx\\characters\\6.tga"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -127,13 +129,14 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_dougther_of_minhyee_3:p0"
+			"GFX_dougther_of_minhyee_3:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 ########################################	
 	spriteType = {
 		name = "GFX_sister_of_minhyee_4"
-		texturefile = "gfx/static_portraits/sister_of_minhyee.png" 
+		texturefile = "gfx\\characters\\sister_of_minhyee.tga" 
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -151,13 +154,14 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_sister_of_minhyee_4:p0"
+			"GFX_sister_of_minhyee_4:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 ########################################	
 	spriteType = {
 		name = "GFX_mother_of_minhyee"
-		texturefile = "gfx/static_portraits/mother_of_minhyee.png"
+		texturefile = "gfx\\characters\\mother_of_minhyee.tga"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -175,14 +179,15 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_mother_of_minhyee:p0"
+			"GFX_mother_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 ########################################	
 	
 	spriteType = {
 		name = "GFX_minhyee_the_god"
-		texturefile = "gfx/static_portraits/minhyee.png"
+		texturefile = "gfx\\characters\\minhyee.tga"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -200,15 +205,16 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_minhyee_the_god:p0"
+			"GFX_minhyee_the_god:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 ########################################	
 	
 	spriteType = {
 		name = "GFX_son_of_minhyee"
-		texturefile = "gfx/static_portraits/son.png"
-		noOfFrames = 1static_portraits
+		texturefile = "gfx\\characters\\son.tga"
+		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
 	}
@@ -225,14 +231,15 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_son_of_minhyee:p0"
+			"GFX_son_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	
 	spriteType = {
 		name = "GFX_first_son_of_minhyee"
-		texturefile = "gfx/static_portraits/first_son.png"
-		noOfFrames = 1static_portraits
+		texturefile = "gfx\\characters\\first_son.tga"
+		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
 	}
@@ -249,7 +256,8 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_first_son_of_minhyee:p0"
+			"GFX_first_son_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 
@@ -257,7 +265,7 @@ spriteTypes = {
 ###########################	
 	spriteType = {
 		name = "GFX_pussy_of_all"
-		texturefile = "gfx/static_portraits/pussy_of_all.png" #보지년
+		texturefile = "gfx\\characters\\pussy_of_all.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -275,12 +283,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_pussy_of_all:p0"
+			"GFX_pussy_of_all:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_frankish_sister_of_minhyee"
-		texturefile = "gfx/static_portraits/frankish_sister_of_minhyee.png" #보지년
+		texturefile = "gfx\\characters\\frankish_sister_of_minhyee.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -298,13 +307,14 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_frankish_sister_of_minhyee:p0"
+			"GFX_frankish_sister_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	
 	spriteType = {
 		name = "GFX_grandma_of_minhyee"
-		texturefile = "gfx/static_portraits/grandma_of_minhyee.png" #보지년
+		texturefile = "gfx\\characters\\grandma_of_minhyee.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -322,13 +332,14 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_grandma_of_minhyee:p0"
+			"GFX_grandma_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	
 	spriteType = {
 		name = "GFX_grandma_of_minhyee_2"
-		texturefile = "gfx/static_portraits/grandma_of_minhyee_2.png" #보지년
+		texturefile = "gfx\\characters\\grandma_of_minhyee_2.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -346,12 +357,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_grandma_of_minhyee_2:p0"
+			"GFX_grandma_of_minhyee_2:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_sexy_dougther_of_minhyee"
-		texturefile = "gfx/static_portraits/sexy_dougther_of_minhyee.png" #보지년
+		texturefile = "gfx\\characters\\sexy_dougther_of_minhyee.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -369,12 +381,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_sexy_dougther_of_minhyee:p0"
+			"GFX_sexy_dougther_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_chinese_empress"
-		texturefile = "gfx/static_portraits/chinese_empress.png" #보지년
+		texturefile = "gfx\\characters\\chinese_empress.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -392,12 +405,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_chinese_empress:p0"
+			"GFX_chinese_empress:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_meoneulyee_of_minhyee"
-		texturefile = "gfx/static_portraits/meoneulyee_of_minhyee.png" #보지년
+		texturefile = "gfx\\characters\\meoneulyee_of_minhyee.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -415,13 +429,14 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_meoneulyee_of_minhyee:p0"
+			"GFX_meoneulyee_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	
 	spriteType = {
 		name = "GFX_grandson_of_minhyee_2"
-		texturefile = "gfx/static_portraits/grandson_of_minhyee.png" #보지년
+		texturefile = "gfx\\characters\\grandson_of_minhyee.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -439,12 +454,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_grandson_of_minhyee_2:p0"
+			"GFX_grandson_of_minhyee_2:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_holyorder_of_minhyee"
-		texturefile = "gfx/static_portraits/neko_child_male.dds" #보지년
+		texturefile = "gfx/static_portraits/neko_child_male.dds"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -462,12 +478,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_holyorder_of_minhyee:p0"
+			"GFX_holyorder_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_holyorder_grandson_of_minhyee"
-		texturefile = "gfx/static_portraits/holyorder_grandson_of_minhyee.png" #보지년
+		texturefile = "gfx\\characters\\holyorder_grandson_of_minhyee.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -485,13 +502,64 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_holyorder_grandson_of_minhyee:p0"
+			"GFX_holyorder_grandson_of_minhyee:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+		}
+	}
+	##########
+	spriteType = {
+		name = "GFX_liu_bang"
+		texturefile = "gfx\\characters\\liu_bang.tga" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_liu_bang"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = liu_bang_trait
+			}
+		}
+		
+		layer = { 
+			"GFX_liu_bang:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+		}
+	}
+	##########
+	spriteType = {
+		name = "GFX_liu_xiu"
+		texturefile = "gfx\\characters\\liu_xiu.tga" #보지년
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_liu_xiu"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = liu_xiu_trait
+			}
+		}
+		
+		layer = { 
+			"GFX_liu_xiu:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	##########
 	spriteType = {
 		name = "GFX_INE"
-		texturefile = "gfx/static_portraits/ISE_INE.png" #보지년
+		texturefile = "gfx\\characters\\ISE_INE.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -509,12 +577,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_INE:p0"
+			"GFX_INE:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_JINGBURGER"
-		texturefile = "gfx/static_portraits/ISE_JINGBURGER.png" #보지년
+		texturefile = "gfx\\characters\\ISE_JINGBURGER.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -532,12 +601,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_JINGBURGER:p0"
+			"GFX_JINGBURGER:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_LILPA"
-		texturefile = "gfx/static_portraits/ISE_LILPA.png" #보지년
+		texturefile = "gfx\\characters\\ISE_LILPA.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -555,12 +625,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_LILPA:p0"
+			"GFX_LILPA:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_JURURU"
-		texturefile = "gfx/static_portraits/ISE_JURURU.png" #보지년
+		texturefile = "gfx\\characters\\ISE_JURURU.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -578,12 +649,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_JURURU:p0"
+			"GFX_JURURU:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_GOSEGU"
-		texturefile = "gfx/static_portraits/ISE_GOSEGU.png" #보지년
+		texturefile = "gfx\\characters\\ISE_GOSEGU.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -601,12 +673,13 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_GOSEGU:p0"
+			"GFX_GOSEGU:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	spriteType = {
 		name = "GFX_VCHAN"
-		texturefile = "gfx/static_portraits/ISE_VCHAN.png" #보지년
+		texturefile = "gfx\\characters\\ISE_VCHAN.tga" #보지년
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -624,7 +697,8 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_VCHAN:p0"
+			"GFX_VCHAN:c10"
+			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
 		}
 	}
 	##########

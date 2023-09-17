@@ -1,0 +1,691 @@
+targetted_decisions = {
+
+	cheating = {
+		filter = self
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			ai = no
+			NOT = { trait = x_cheater }
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			add_trait = x_cheater
+			create_bloodline = { type = cheater_bloodline }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_age_up = {
+		filter = self
+		ai_target_filter = self
+		from_potential = {
+			trait = x_cheater
+		}
+		potential = {
+			always = yes
+		}
+		allow = {
+			trait = x_cheater
+		}
+		effect = {
+			from = {
+				character_event = {
+					id = cheatersbless.6
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_age_down = {
+		filter = self
+		ai_target_filter = self
+		from_potential = {
+			trait = x_cheater
+		}
+		potential = {
+			age > 1
+		}
+		allow = {
+			trait = x_cheater
+			age > 1
+		}
+		effect = {
+			from = {
+				character_event = {
+					id = cheatersbless.7
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheat_add_things = {
+		filter = self
+		ai_target_filter = self
+		from_potential = {
+			trait = x_cheater
+		}
+		potential = {
+			trait = x_cheater
+		}
+		allow = {
+			trait = x_cheater
+		}
+		effect = {
+			from = {
+				character_event = {
+					id = cheatersbless.8
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheater_healing = {
+		filter = all_including_me
+		
+		from_potential = {
+			trait = x_cheater
+			ai = no
+		}
+		potential = {
+			OR = {
+				is_ill = yes
+				trait = wounded
+				trait = maimed
+				trait = infirm
+				trait = incapable
+				trait = clubfooted
+				trait = harelip
+				trait = hunchback
+				trait = inbred
+				trait = eunuch
+				trait = blinded
+				trait = one_eyed
+				trait = one_handed
+				trait = one_legged
+				trait = disfigured
+				trait = mangled
+				trait = severely_injured
+				trait = lovers_pox
+			}
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+			hidden_tooltip = {
+				ROOT = {
+					cure_illness = yes
+					remove_trait = wounded
+					remove_trait = maimed
+					remove_trait = infirm
+					remove_trait = incapable
+					remove_trait = clubfooted
+					remove_trait = harelip
+					remove_trait = hunchback
+					remove_trait = inbred
+					remove_trait = eunuch
+					remove_trait = blinded
+					remove_trait = one_eyed
+					remove_trait = one_handed
+					remove_trait = one_legged
+					remove_trait = disfigured
+					remove_trait = mangled
+					remove_trait = severely_injured
+					remove_trait = lovers_pox
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	rape_the_girl = {
+		filter = all
+		
+		from_potential = {
+			is_female = no
+			trait = yiminhyee
+			ai = no
+			#age = 16
+		}
+		potential = {
+			NOT = {
+				trait = yiminhyee
+			}
+			is_female = yes
+			#age = 16
+			age = 6
+		}
+		allow = {
+			from = { trait = yiminhyee }
+		}
+		effect = {
+			FROM = {	AMD_E_SETA_POV = yes	AMD_E_SETA_STT = yes	}
+			AMD_E_SETA_TGT = yes
+			event_target:AMD_ET_POV = {
+				AMD_E_SETA_RA = yes
+			}
+			event_target:AMD_ET_TGT = {
+				AMD_E_SETA_RV = yes
+				event_target:AMD_ET_POV = {	AMD_E_SET_AD_WITH_PREV = yes	}
+			}
+			event_target:AMD_ET_POV = {
+				AMD_E_2P_SCORING_1 = yes
+			}
+			hidden_tooltip = {	event_target:AMD_ET_TGT = {	letter_event = {	id = AMD_PLAY_PING.1123		}	}	}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	cheater_conception = {
+		filter = all
+		
+		from_potential = {
+			is_female = no
+			trait = x_cheater
+			ai = no
+			is_pregnant = no
+			#age = 16
+		}
+		potential = {
+			NOT = {
+				trait = x_cheater
+			}
+			is_pregnant = no
+			is_female = yes
+			#age = 16
+			age = 6
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						trait = yiminhyee
+					}
+					ROOT = {
+						NOT = {
+							spouse = {
+								character = FROM
+							}
+						}
+					}
+				}
+				FROM = {	AMD_E_SETA_POV = yes	AMD_E_SETA_STT = yes	}
+				AMD_E_SETA_TGT = yes
+				event_target:AMD_ET_POV = {
+					AMD_E_SETA_RA = yes
+				}
+				event_target:AMD_ET_TGT = {
+					AMD_E_SETA_RV = yes
+					event_target:AMD_ET_POV = {	AMD_E_SET_AD_WITH_PREV = yes	}
+				}
+				event_target:AMD_ET_POV = {
+					AMD_E_2P_SCORING_1 = yes
+				}
+				hidden_tooltip = {	event_target:AMD_ET_TGT = {	letter_event = {	id = AMD_PLAY_PING.1123		}	}	}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						trait = yiminhyee
+					}
+					ROOT = {
+						spouse = {
+							character = FROM
+						}
+					}
+				}	
+				impregnate = FROM
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						NOT = {
+							trait = yiminhyee
+						}
+					}
+				}	
+				impregnate = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheater_seduction = {
+		filter = all
+		
+		from_potential = {
+			is_female = yes
+			age = 16
+			trait = x_cheater
+			ai = no
+			is_pregnant = no
+		}
+		potential = {
+			NOT = {
+				trait = x_cheater
+			}
+			is_pregnant = no
+			is_female = no
+			age = 16
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+			FROM = { impregnate = ROOT }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheater_bless = {
+		filter = all_including_me
+		
+		from_potential = {
+			trait = x_cheater
+			ai = no
+		}
+		potential = {
+			OR = {
+				character = FROM
+				NOT = { trait = x_cheater }
+			}
+			NAND = {
+				trait = strong
+				trait = genius
+				trait = fair
+				health = 80
+			}
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+				from = { character_event = { id = cheatersbless.1 } }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheater_quick_bless = {
+		filter = all_including_me
+		
+		from_potential = {
+			trait = x_cheater
+			ai = no
+		}
+		potential = {
+			OR = {
+				character = FROM
+				NOT = { trait = x_cheater }
+			}
+			NAND = {
+				trait = strong
+				trait = genius
+				trait = fair
+				health = 80
+			}
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { trait = strong }
+				}
+				add_trait = strong
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+				}
+				add_trait = genius
+			}
+			if = {
+				limit = {
+					NOT = { trait = fair }
+				}
+				add_trait = fair
+			}
+			health = 150
+			fertility = 1
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheater_curse = {
+		filter = all
+		
+		from_potential = {
+			trait = x_cheater
+			ai = no
+		}
+		potential = {
+			OR = {
+				character = FROM
+				NOT = { trait = x_cheater }
+			}
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+				from = { character_event = { id = cheatersbless.2 } }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheater_quick_curse = {
+		filter = all
+		
+		from_potential = {
+			trait = x_cheater
+			ai = no
+		}
+		potential = {
+			OR = {
+				character = FROM
+				NOT = { trait = x_cheater }
+			}
+			NAND = {
+				trait = weak
+				trait = imbecile
+				trait = ugly
+				OR = {
+					trait = eunuch
+					is_female = yes
+				}
+			}
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { trait = weak }
+				}
+				add_trait = weak
+			}
+			if = {
+				limit = {
+					NOT = { trait = imbecile }
+				}
+				add_trait = imbecile
+			}
+			if = {
+				limit = {
+					NOT = { trait = ugly }
+				}
+				add_trait = ugly
+			}
+			if = {
+				limit = {
+					NOT = { trait = eunuch }
+					is_female = no
+				}
+				add_trait = eunuch
+			}
+			if = {
+				limit = {
+					is_female = yes
+				}
+				fertility = -2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	cheater_death_curse = {
+		filter = all
+		
+		from_potential = {
+			trait = x_cheater
+			ai = no
+		}
+		potential = {
+			OR = {
+				character = FROM
+				NOT = { trait = x_cheater }
+			}
+			AND = {
+				trait = weak
+				trait = imbecile
+				trait = ugly
+				OR = {
+					trait = eunuch
+					is_female = yes
+				}
+			}
+			NOR = {
+				trait = has_aztec_disease
+				trait = dancing_plague
+				trait = scurvy
+				trait = cancer
+				trait = rabies
+				trait = food_poisoning
+				trait = gout
+				trait = dysentery
+				trait = flu
+				trait = pneumonic
+				trait = syphilitic
+				trait = leper
+				trait = has_tuberculosis
+				trait = has_typhoid_fever
+				trait = has_typhus
+				trait = has_bubonic_plague
+				trait = has_measles
+				trait = has_small_pox
+			}
+		}
+		allow = {
+			from = { trait = x_cheater }
+		}
+		effect = {
+			character_event = { id = cheatersbless.5 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	conversion_cheat = {
+		filter = all
+
+		from_potential = {
+			trait = x_cheater
+		}
+
+		potential = {
+			NOT = { religion = FROM }
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			religion = FROM
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	kill_cheat = {
+		filter = all
+
+		from_potential = {
+			trait = x_cheater
+			ai = no
+		}
+
+		potential = {
+			OR = {
+				NOT = { character = FROM }
+				NOT = { trait = x_cheater }
+			}
+		}
+
+		allow = {
+			FROM = {
+				trait = x_cheater
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							name = supernatural_events
+							value = off
+						}
+					}
+				}
+				FROM = {
+					if = {
+						limit = {
+							ROOT = {
+								controls_religion = yes
+								religion_group = christian
+							}	
+							NOT = { religion_group = ROOT }
+						}
+						set_character_flag = pope_eater	
+					}
+					if = {
+						limit = {
+							ROOT = {
+								controls_religion = yes
+								religion_group = muslim
+							}
+							NOT = { religion_group = ROOT }
+						}
+							set_character_flag = caliph_eater	
+					}
+					if = {
+						limit = {
+							ROOT = {
+								controls_religion = yes
+								religion_group = pagan_group
+							}
+							NOT = { religion_group = ROOT }
+						}
+							set_character_flag = fylkir_feast	
+					}
+					if = {
+						limit = {
+							ROOT = {
+								controls_religion = yes
+								religion_group = zoroastrian_group
+							}
+							NOT = { religion_group = ROOT }
+						}
+							set_character_flag = fire_eater	
+					}
+					if = {
+						limit = {
+							ROOT = {
+								controls_religion = yes
+								religion_group = jewish_group
+							}
+							NOT = { religion_group = ROOT }
+						}
+							set_character_flag = non_kosher	
+					}
+					if = {
+						limit = {
+							ROOT = {
+								controls_religion = yes
+								religion_group = indian_group
+							}
+							NOT = { religion_group = ROOT }
+						}
+							set_character_flag = dont_even_exist	
+					}
+					
+					character_event = { id = RIP.11510 }
+				}
+			}
+			
+			ROOT = {
+				death = {
+					death_reason = death_execution_eaten
+					killer = FROM
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

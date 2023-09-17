@@ -1,0 +1,22 @@
+x_cheater = {
+	combat_rating = 500
+	martial = 50
+	intrigue = 50
+	stewardship = 50
+	learning = 50
+	diplomacy = 50
+	health = 50
+	fertility = 1
+	demesne_size = 500
+	general_opinion = 200
+	global_tax_modifier = 0.5
+	army_reinforce_rate = 1
+	levy_reinforce_rate = 1
+	max_attrition = -1
+	arrest_chance_modifier = 1
+	plot_power_modifier = 1
+	hidden_from_others = yes
+	same_trait_visibility = yes
+	customizer = no
+	random = no
+}

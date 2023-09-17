@@ -142,24 +142,3 @@ scarred = {
 	opposite_opinion = 10
 	monthly_character_prestige = 0.1
 }
-#민희의 후손
-minhyee = {
-	agnatic = yes # Always inherited from fathers
-	
-	health = 1000
-	taoist_opinion = 2500
-	customizer = no
-	random = no
-	immortal = yes
-	christian_church_opinion = 500
-	unreformed_tribal_opinion = 500
-	sex_appeal_opinion = 500
-	same_opinion = 500
-	opposite_opinion = 500
-	fertility = 500
-	general_opinion = 100000.0
-	monthly_character_prestige = 50
-	
-	male_compliment = COMPL_SAYYID
-	female_compliment = COMPL_SAYYIDA
-}

@@ -1594,6 +1594,10 @@ character_event = {	id = AMD.22010		#죄수이벤트 시작
 			OR = {
 				trait = yiminhyee
 				trait = lustful	
+				trait = minhyee
+	    		any_owned_bloodline = {
+					has_bloodline_flag = bloodline_liu_bang
+				}	
 			}
 		}
 		hidden_tooltip = {	event_target:AMD_ET_TGT = {	character_event = {	id = AMD_PING.22040	}	}	}
@@ -2536,80 +2540,6 @@ character_event = {	id = AMD.22040		#	능욕
 			AMD_E_2P_SCORING_1 = yes
 			AMD_E_SLAVE_SCORING = yes
 			letter_event = {	id = AMD_PLAY_PING.1123		}
-		}
-	}
-	option = {	name = AMD_EV_OPT_22040_2	#롱나잇2
-		custom_tooltip = {	text = AMD_EV_TT_22040_2	}
-		tooltip_info = yiminhyee
-		trigger = {
-			OR = {
-				event_target:AMD_ET_TGT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 2	}	}
-				event_target:AMD_ET_TGT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 2	}	}
-				event_target:AMD_ET_TGT = {	has_opinion_modifier = {	who = event_target:AMD_ET_POV	modifier = opinion_the_chosen_one	}	}
-				event_target:AMD_ET_TGT = {	has_opinion_modifier = {	who = event_target:AMD_ET_POV	modifier = opinion_loyal_servant	}	}
-				event_target:AMD_ET_TGT = {	has_opinion_modifier = {	who = event_target:AMD_ET_POV	modifier = AMD_opinion_obedient	}	}
-				#event_target:AMD_ET_TGT = {	has_character_modifier = AMD_CM_lustful_wasted	}
-				trait = AMD_sex_skill_3
-				trait = AMD_sex_skill_4
-				trait = AMD_sex_skill_5
-			}
-			trait = yiminhyee
-		}
-		if = {	limit = {	is_female = yes	event_target:AMD_ET_TGT = {	is_female = no	}	}	#당신 여성, 대상 남성
-			AMD_E_PCR_FAIL_CALC = yes
-			hidden_tooltip = {	#공수설정
-				event_target:AMD_ET_TGT = {	AMD_E_SETA_ATK = yes	}
-				AMD_E_SETA_DEF = yes
-				if = {	limit = {	has_character_flag = AMD_CF_PCR	}
-					event_target:AMD_ET_TGT = {	AMD_E_SETA_RA = yes	}
-					AMD_E_SETA_RV = yes
-				}
-				else = {
-					event_target:AMD_ET_TGT = {	AMD_E_SETA_RV = yes	}
-					AMD_E_SETA_RA = yes
-				}
-				clr_character_flag = AMD_CF_PCR
-				event_target:AMD_ET_TGT = {	AMD_E_SETA_ATK = yes	}
-			}
-			
-		}
-		else = {	AMD_E_SETA_RA = yes	event_target:AMD_ET_TGT = {	AMD_E_SETA_RV = yes	}	}
-		if = {	#함락된 경우 화간으로 변경
-			limit = {	#이하의 조건이 만족되지 않으면 강간.	(만족된 경우 화간이 된다)
-				OR = {
-					event_target:AMD_ET_TGT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_lust	amount = 5	}	}
-					event_target:AMD_ET_TGT = {	has_instances_of_character_modifier = {	modifier = AMD_CM_slave_obey	amount = 5	}	}
-					event_target:AMD_ET_TGT = {	has_opinion_modifier = {	who = event_target:AMD_ET_POV	modifier = opinion_the_chosen_one	}	}
-					event_target:AMD_ET_TGT = {	has_opinion_modifier = {	who = event_target:AMD_ET_POV	modifier = opinion_loyal_servant	}	}
-					event_target:AMD_ET_TGT = {	has_opinion_modifier = {	who = event_target:AMD_ET_POV	modifier = AMD_opinion_obedient	}	}
-				}
-			}
-			clear_event_target = AMD_ET_RA
-			clear_event_target = AMD_ET_RV
-		}
-		AMD_E_SET_RAPED_KIN_OPINION = yes
-		event_target:AMD_ET_TGT = {
-			AMD_E_SETA_F_VISIT_PRISONER = yes
-			AMD_E_SET_AD_WITH_PREV = yes
-			AMD_E_2P_SCORING_1 = yes
-			AMD_E_SLAVE_SCORING = yes
-			letter_event = {	id = AMD_PLAY_PING.1123		}
-		}
-		if = {
-			limit = {
-				event_target:AMD_ET_TGT = {
-					is_female = yes
-				}
-				event_target:AMD_ET_POV = {
-					is_female = no
-					NOT = {
-						trait = eunuch
-					}
-				}
-			}
-			event_target:AMD_ET_TGT = {
-				impregnate_cuckoo = event_target:AMD_ET_POV
-			}
 		}
 	}
 	option = {	name = AMD_EV_OPT_22040_3	#성고문

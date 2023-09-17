@@ -1,0 +1,224 @@
+castle = {
+	cheater_abode = {
+		desc = cheater_abode_desc
+		
+		potential = {
+			OR = {
+				FROM = {
+					trait = x_cheater
+				}
+				FROMFROM = { has_building = cheater_abode }
+			}
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+
+		trigger = { 
+			FROM = {
+				trait = x_cheater
+			}
+		}
+
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					trait = x_cheater
+				}
+			}
+		}
+		add_number_to_name = no
+		
+		build_cost = 1
+		build_time = 1
+		
+		retinuesize = 50000
+		tax_income = 3
+		levy_reinforce_rate = 10
+		
+		ai_creation_factor = 100
+		ai_feudal_modifier = 100
+	}
+}
+
+city = {
+	cheater_abode2 = {
+		desc = cheater_abode_desc
+		
+		potential = {
+			OR = {
+				FROM = {
+					trait = x_cheater
+				}
+				FROMFROM = { has_building = cheater_abode2 }
+			}
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+
+		trigger = { 
+			FROM = {
+				trait = x_cheater
+			}
+		}
+
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					trait = x_cheater
+				}
+			}
+		}
+		add_number_to_name = no
+		
+		build_cost = 1
+		build_time = 1
+		
+		retinuesize = 50000
+		tax_income = 3
+		levy_reinforce_rate = 10
+		
+		ai_creation_factor = 100
+		ai_feudal_modifier = 100
+	}
+}
+
+nomad = {
+	cheater_abode3 = {
+		desc = cheater_abode_desc
+		
+		potential = {
+			OR = {
+				FROM = {
+					trait = x_cheater
+				}
+				FROMFROM = { has_building = cheater_abode3 }
+			}
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+
+		trigger = { 
+			FROM = {
+				trait = x_cheater
+			}
+		}
+
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					trait = x_cheater
+				}
+			}
+		}
+		add_number_to_name = no
+		
+		build_cost = 1
+		build_time = 1
+		
+		max_population = 100000
+		tax_income = 3
+		levy_reinforce_rate = 10
+		
+		ai_creation_factor = 100
+		ai_feudal_modifier = 100
+	}
+}
+
+tribal = {
+	cheater_abode4 = {
+		desc = cheater_abode_desc
+		
+		potential = {
+			OR = {
+				FROM = {
+					trait = x_cheater
+				}
+				FROMFROM = { has_building = cheater_abode4 }
+			}
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+
+		trigger = { 
+			FROM = {
+				trait = x_cheater
+			}
+		}
+
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					trait = x_cheater
+				}
+			}
+		}
+		add_number_to_name = no
+		
+		build_cost = 1
+		build_time = 1
+		
+		retinuesize = 50000
+		tax_income = 3
+		levy_reinforce_rate = 10
+		
+		ai_creation_factor = 100
+		ai_feudal_modifier = 100
+	}
+}
+
+temple = {
+	cheater_abode5 = {
+		desc = cheater_abode_desc
+		
+		potential = {
+			OR = {
+				FROM = {
+					trait = x_cheater
+				}
+				FROMFROM = { has_building = cheater_abode5 }
+			}
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+
+		trigger = { 
+			FROM = {
+				trait = x_cheater
+			}
+		}
+
+		is_active_trigger = {
+			FROMFROM = {
+				owner = {
+					trait = x_cheater
+				}
+			}
+		}
+		add_number_to_name = no
+		
+		build_cost = 1
+		build_time = 1
+		
+		retinuesize = 50000
+		tax_income = 3
+		levy_reinforce_rate = 10
+		
+		ai_creation_factor = 100
+		ai_feudal_modifier = 100
+	}
+}

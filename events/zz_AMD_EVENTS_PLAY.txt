@@ -992,6 +992,28 @@ character_event = {	id = AMD_PLAY.20100		#	miss
 		tooltip_info = AMD_sex_skill_5
 		AMD_E_SETA_FLAG_DS = yes
 	}
+	option = {	name = AMD_EV_OPT_LN_DS
+		custom_tooltip = {	text = AMD_EV_OPT_LN_DS_TOOLTIP	}
+		trigger = {	trait = yiminhyee	}
+		tooltip_info = yiminhyee
+		AMD_E_SETA_FLAG_DS = yes
+		if = {
+			limit = {
+				event_target:AMD_ET_TGT = {
+					is_female = yes
+				}
+				event_target:AMD_ET_POV = {
+					is_female = no
+					NOT = {
+						trait = eunuch
+					}
+				}
+			}
+			event_target:AMD_ET_TGT = {
+				impregnate_cuckoo = event_target:AMD_ET_POV
+			}
+		}
+	}
 	after = {
 		if = {	limit = {	AMD_T_LN_FLAG_WS = yes	}	event_target:AMD_ET_TGT = {	character_event = {	id = AMD_PLAY_PING.30500	}	}	}
 		else = {	event_target:AMD_ET_TGT = {	character_event = {	id = AMD_PLAY_PING.30100	}	}	}
@@ -1111,6 +1133,28 @@ character_event = {	id = AMD_PLAY.20200		#	back
 		trigger = {	AMD_T_F_SKILL_5 = yes	}
 		tooltip_info = AMD_sex_skill_5
 		AMD_E_SETA_FLAG_DS = yes
+	}
+	option = {	name = AMD_EV_OPT_LN_DS
+		custom_tooltip = {	text = AMD_EV_OPT_LN_DS_TOOLTIP	}
+		trigger = {	trait = yiminhyee	}
+		tooltip_info = yiminhyee
+		AMD_E_SETA_FLAG_DS = yes
+		if = {
+			limit = {
+				event_target:AMD_ET_TGT = {
+					is_female = yes
+				}
+				event_target:AMD_ET_POV = {
+					is_female = no
+					NOT = {
+						trait = eunuch
+					}
+				}
+			}
+			event_target:AMD_ET_TGT = {
+				impregnate_cuckoo = event_target:AMD_ET_POV
+			}
+		}
 	}
 	after = {
 		if = {	limit = {	AMD_T_LN_FLAG_WS = yes	}	event_target:AMD_ET_TGT = {	character_event = {	id = AMD_PLAY_PING.30500	}	}	}
@@ -1253,6 +1297,28 @@ character_event = {	id = AMD_PLAY.20300		#	ride
 		trigger = {	AMD_T_F_SKILL_5 = yes	}
 		tooltip_info = AMD_sex_skill_5
 		AMD_E_SETA_FLAG_DS = yes
+	}
+	option = {	name = AMD_EV_OPT_LN_DS
+		custom_tooltip = {	text = AMD_EV_OPT_LN_DS_TOOLTIP	}
+		trigger = {	trait = yiminhyee	}
+		tooltip_info = yiminhyee
+		AMD_E_SETA_FLAG_DS = yes
+		if = {
+			limit = {
+				event_target:AMD_ET_TGT = {
+					is_female = yes
+				}
+				event_target:AMD_ET_POV = {
+					is_female = no
+					NOT = {
+						trait = eunuch
+					}
+				}
+			}
+			event_target:AMD_ET_TGT = {
+				impregnate_cuckoo = event_target:AMD_ET_POV
+			}
+		}
 	}
 	after = {
 		if = {	limit = {	AMD_T_LN_FLAG_WS = yes	}	event_target:AMD_ET_TGT = {	character_event = {	id = AMD_PLAY_PING.30500	}	}	}

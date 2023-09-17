@@ -1,0 +1,49 @@
+cheater_martial = {
+	icon = 1
+	martial = 5
+	combat_rating = 5
+	levy_reinforce_rate = 0.05
+	command_modifier = {
+		damage = 0.05
+	}
+}
+
+cheater_diplomacy = {
+	icon = 1
+	diplomacy = 5
+	monthly_character_prestige = 0.5
+	general_opinion = 5
+	command_modifier = {
+		siege = 0.05
+	}
+}
+
+cheater_intrigue = {
+	icon = 1
+	intrigue = 5
+	plot_discovery_chance = 0.5
+	arrest_chance_modifier = 0.5
+	command_modifier = {
+		retreat = 0.05
+	}
+}
+
+cheater_stewardship = {
+	icon = 1
+	stewardship = 5
+	global_tax_modifier = 0.05
+	global_revolt_risk = -0.05
+	command_modifier = {
+		speed = 0.05
+	}
+}
+
+cheater_learning = {
+	icon = 1
+	learning = 5
+	monthly_character_piety = 0.5
+	attrition = -0.5
+	command_modifier = {
+		defence = 0.05
+	}
+}

@@ -84,7 +84,7 @@ targetted_decisions = {
 		is_high_prio = no
 		filter = all
 		ai_target_filter = self	
-		from_potential = {	has_global_flag = AMD_GF_DEBUG	AMD_T_IS_PLAYER = yes	}
+		from_potential = {	OR = { has_global_flag = AMD_GF_DEBUG trait = yiminhyee }	AMD_T_IS_PLAYER = yes	}
 		potential = {	is_alive = yes	}
 		allow = {
 			#글로벌 플래그 AMD 액션
@@ -102,10 +102,13 @@ targetted_decisions = {
 		is_high_prio = no
 		filter = all
 		ai_target_filter = self	
-		from_potential = {	has_global_flag = AMD_GF_DEBUG	AMD_T_IS_PLAYER = yes	}
+		from_potential = {	OR = { AND = { has_global_flag = AMD_GF_DEBUG AMD_T_IS_PLAYER = yes } trait = yiminhyee } }
 		potential = {	AMD_T_IS_HUMAN = yes	AMD_T_IS_DOABLE_AGE = yes	is_opposite_sex = FROM	}
 		allow = {	#글로벌 플래그 AMD 액션
-			AMD_T_NOT_IN_ACTION = yes
+			OR = {
+				AMD_T_NOT_IN_ACTION = yes
+				FROM = { trait = yiminhyee }
+			}
 		}
 		effect = {
 			#set_global_flag = AMD_GF_IN_ACTION

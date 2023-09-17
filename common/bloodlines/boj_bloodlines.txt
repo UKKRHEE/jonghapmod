@@ -15,7 +15,7 @@ minhyeesblood = {
 	allow_bastards = yes
 	inheritance = all_descendants matrilineal patrilineal
 	picture = GFX_bloodlines_symbol_murder_rose
-	flags = { historical_bloodline bloodline_heroes }
+	flags = { historical_bloodline bloodline_heroes bloodline_minhyeesblood }
 }
 son_minhyeesblood = {
 	catholic_opinion = 1000

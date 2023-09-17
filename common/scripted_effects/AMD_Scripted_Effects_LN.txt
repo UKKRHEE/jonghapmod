@@ -389,6 +389,7 @@ AMD_E_LN_WITHDRAW = {	custom_tooltip = {	text = "AMD_EV_OPT_LN_OUT_TOOLTIP"	}
 			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 8	}	}
 			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 9	}	}
 			modifier = {	factor = 1.05	event_target:AMD_ET_ATK = {	num_of_children = 10	}	}
+			#modifier = {	factor = -10.00	event_target:AMD_ET_POV = {	trait = yiminhyee	}	}
 			custom_tooltip = {	text = "AMD_EV_CT_WS"	}
 			hidden_tooltip = {	AMD_E_SETA_FLAG_WS = yes	}	#Withdraw Success
 		}
@@ -397,6 +398,7 @@ AMD_E_LN_WITHDRAW = {	custom_tooltip = {	text = "AMD_EV_OPT_LN_OUT_TOOLTIP"	}
 			modifier = {	factor = 0.90	event_target:AMD_ET_ATK = {	trait = AMD_penis_2	}	}
 			modifier = {	factor = 1.50	event_target:AMD_ET_ATK = {	trait = AMD_penis_4	}	}
 			modifier = {	factor = 2.50	event_target:AMD_ET_ATK = {	trait = AMD_penis_5	}	}
+			modifier = {	factor = 160.50	event_target:AMD_ET_POV = {	trait = yiminhyee	}	}
 			modifier = {	factor = 2.00	event_target:AMD_ET_ATK = {	AMD_T_IS_VIRGIN = yes	}	}
 			modifier = {	factor = 2.00	event_target:AMD_ET_DEF = {	AMD_T_IS_VIRGIN = yes	}	}
 			modifier = {	factor = 0.50	AMD_T_F_SKILL_3 = yes	}

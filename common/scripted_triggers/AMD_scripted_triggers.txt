@@ -148,6 +148,7 @@ AMD_T_IS_DOABLE_AGE = {	#	아청법 옵션에 따라 차등판정.
 	OR = {	#하한선	옵션에 따라 12 OR 16
 		AND = {	has_global_flag = AMD_GF_ACB	is_marriage_adult = yes	}
 		AND = {	NOT = {	has_global_flag = AMD_GF_ACB	}	age = 12	}
+		trait=yiminhyee
 	}
 	OR = {	#상한	남성70, 여성50, 동물 30. 조건에 따라 한계돌파가능
 		#인남	70
@@ -573,21 +574,16 @@ AMD_T_HCM_ALCHEMY_MAGIC = {
 
 #	창관 이벤트 관련
 AMD_T_HAS_BROTHEL = {
-	OR = {
-		AND = {
-			any_demesne_province = {	#any_demesne_province	capital_holding
-				OR = {
-					has_building = AMD_building_brothel_castle_1
-					has_building = AMD_building_brothel_city_1
-					has_building = AMD_building_brothel_nomad_1
-					has_building = AMD_building_brothel_temple
-					has_building = AMD_building_brothel_tribal
-					trade_post_has_building = AMD_building_brothel_tradepost
-					#fort_has_building = AMD_building_brothel_fort
-				}
-			}
+	any_demesne_province = {	#any_demesne_province	capital_holding
+		OR = {
+			has_building = AMD_building_brothel_castle_1
+			has_building = AMD_building_brothel_city_1
+			has_building = AMD_building_brothel_nomad_1
+			has_building = AMD_building_brothel_temple
+			has_building = AMD_building_brothel_tribal
+			trade_post_has_building = AMD_building_brothel_tradepost
+			#fort_has_building = AMD_building_brothel_fort
 		}
-		trait = yiminhyee
 	}
 }
 AMD_T_HGF_BROTHEL_HOMO = {	custom_tooltip = {	text = AMD_String_T_HGF_BROTHEL_HOMO	has_global_flag = AMD_GF_BROTHEL_HOMO	}	}

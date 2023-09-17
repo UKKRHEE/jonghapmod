@@ -1,0 +1,353 @@
+#CODE;ENGLISH;x
+x_cheater;§Y®ÈïŒ§!;x
+x_cheater_desc;¨³Ğ²´ öÂ²³¡¸ÜêÆÙ¢È³. «È «ÈÌèÁĞëÆÌ §Y®ÈïŒ§!¬·É«ÈÙ¢È¥³.;x
+cheating;§Y®ÈïŒ§!¡³ ô¿¡È;x
+cheating_desc;¨³¬È¨³É ¥³İ®·Ø ¡Èÿ¿«ÈĞ êŠ «ÈÜêÆÙ¢È¥³.;x
+cheat_add_things;«³èŠ¥¸æˆ «·ÚåÆÌ ¬³ùÂÌ ¡³¬¹ëˆ¡È;x
+cheat_add_things_desc;¨¹İ«º, ¡¹İ¡·Ì –ˆåÆÌ éŠçÆĞ «·Ï¡È ùÄ²´ §Y®ÈïŒ§!ùÇ ²ÈØëÆĞ ª³ëÀİ²³ªÈÙªÈëˆ.;x
+cheat_age_up;¢³«È æÆĞ¡¸ ²³¡È;x
+cheat_age_up_desc;§Y®ÈïŒ§!ùÇ ²ÈØëÆĞ ª³ëÀİ²³«¹ ¢³«ÈçÆĞ åÆĞ¦ÈªÈÙªÈëˆ.;x
+cheat_age_down;¬·Ò¡¸ ¨³ÌæÆĞ¡È;x
+cheat_age_down_desc;§Y®ÈïŒ§!ùÇ ²ÈØëÆĞ ª³ëÀİ²³«¹ ¢³«ÈçÆĞ ìÁĞ«ÈªÈÙªÈëˆ.;x
+cheater_conception;§Y®ÈïŒ§!ùÇ «³«È;x
+cheater_conception_desc;¥³İªÈÌùÇ ùÇ¬È¡³ ä»Ï ©·Ù«È¢È «È «¹¬³çÆĞ §K«ÈØªÈÌ§!ªÈ¯¹ «³«ÈçÆĞ ¢³ãëŒª¸ë‰!;x
+cheater_seduction;§Y®ÈïŒ§!ùÇ ë‹ñ»É;;x
+cheater_seduction_desc;¥³İªÈÌùÇ «³çÆØ¥³ëÁØëÆÌ ¡·éŠ²³Ğ êŠ «·ÚêÆÙ¢È¥³. äŒ¦·¢È «È ¢³Ø¬³çÆĞ ë‹ñ»É²³«¹ ¥³İªÈÌùÇ «³«ÈçÆĞ ¨³ÌæŒª¸ë‰!;x
+cheater_healing;§Y®ÈïŒ§!ùÇ ²ÈĞ¦Èİ;x
+cheater_healing_desc;[Root.GetFullName]ëÆĞ(çÆĞ) é»ÉùÂÌ²³äˆ [Root.GetHerHim]ùÇ ¬ÈĞ©¹İò¼ ªÈÌ®¸¬·É éŠª³İëÆĞ ®Èç‰²³¡È ùÄ²´ ê‹±· ±³ùÂçÆĞ ®´¢·Ğ¦Èİ²³Ù¢È¥³. äŒ¦·¢³ ª³¡È•ÁÌùÇ ²ÈØæˆ ê»Ìª³İô¿Ì ¨³ëÆØëÆĞ äˆ®ÈĞ êŠåÆÌ «·ÚêÆÙ¢È¥³...;x
+cheater_bless;§Y®ÈïŒ§!çˆ [Root.GetHerHim]çÆĞ íÁÉé»É;x
+cheater_bless_desc;¥³İªÈÌùÇ ²ÈØëŒçˆ [Root.GetFullName]ëÆĞ(çÆĞ) íÁÉé»É²³ªÈÙªÈëˆ.;x
+cheater_quick_bless;§Y®ÈïŒ§!ùÇ íÁÉé»É;x
+cheater_quick_bless_desc;¥³İªÈÌùÇ ²ÈØëŒçˆ [Root.GetFullName]ëÆĞ(çÆĞ) íÁÉé»É²³ªÈÙªÈëˆ.;x
+cheater_curse;§Y®ÈïŒ§!çˆ [Root.GetHerHim]çÆĞ ¬·ìŠ;x
+cheater_curse_desc;¥³İªÈÌùÇ éÁĞ¨³ÌùÇ ²ÈØëŒçˆ [Root.GetFullName]«¸ ¬·ìŠçÆĞ ¢´¦ÈÙ¢È¥³.;x
+cheater_quick_curse;§Y®ÈïŒ§!ùÇ ¬·ìŠ;x
+cheater_quick_curse_desc;¥³İªÈÌùÇ éÁĞ¨³ÌëŒçˆ [Root.GetFullName]«¸ ¬·ìŠçÆĞ ¢´¦ÈÙ¢È¥³.;x
+cheater_death_curse;§Y®ÈïŒ§!ùÇ ¬·ìŠ;x
+cheater_death_curse_desc;[Root.GetFullName]ëÆĞ(çÆĞ) DEATHçˆ ¬·ìŠ²³Ù¢È¥³.;x
+kill_cheat;§R[Root.GetHerHim]çÆĞ ’³çŒ¡¸ ìÁÉ«È¡È§!;x
+kill_cheat_desc;§K[Root.GetFullName]ëÆÌ ìÁÉëÆĞ ¡·Û«ÈÙ¢È¥³!§!;x
+EVTDESCcheatersbless.1;†ˆåÆİ¦¹ÉëÆĞ ©³ĞÿÄ²³«¹ [From.GetFullName]«¸ ²ÈØëÆĞ éÁĞ«·¢·ãêÆÙ¢È¥³.;x
+EVTOPTAheatersbless.1;[From.GetHerHim]ëÆĞ(çÆĞ) ùÄ¥´²³Ì ¬·Ìª³çˆ ¨³ÌæÆĞ¡¸ÜêÆÙ¢È¥³.;x
+EVTOPTBcheatersbless.1;[From.GetSheHeCap]ëÆÌ ¥³çÆÌ ª³¦³ØæÆĞéˆ¥³ ²¹Ì¨¹İ²³Ğ ¡·Û«ÈÙ¢È¥³.;x
+EVTOPTCheatersbless.1;«³èŠæˆ [From.GetHerHis] «³çÆØ¥³ëÁØ«¸ ¬·²³İ²³Ğ êŠ «·ÚêÆÙ¢È¥³.;x
+EVTOPTDcheatersbless.1;[From.GetSheHe]ùÇ ¬³İêŠçÆĞ ¡ÈùÂÌ²³Ù¢È¥³.;x
+EVTOPTCheatersbless.1;[From.GetSheHeCap]ëÆÌ(åÆÌ) «¹İùÂÌ²È ª³Ğ ¡·Û«ÈÙ¢È¥³.;x
+EVTOPTFcheatersbless.1;[From.GetFirstName]¢ÈØ, ±ÈĞ¨¹ĞùÇ ª³ÒëÆĞ ôÄçˆ²³äˆ!;x
+EVTOPTGcheatersbless.1;ªÈÌ¡¹İ˜Œ¬È ¨³ª¸ë‰. ²³Ğ ¨³ÌîÆØ ²´ÜêÆÙ¢È¥³.;x
+EVTDESCcheatersbless.2;¥³İªÈÌëÆÌ †ˆ«ÈÌ¬·É«ÈÌ ²ÈØëÆĞ ©³ĞÿÄ²³«¹ [From.GetFullName]«¸¡¸ •ÆØ”ÈÉ²³Ì ¬·ìŠçÆĞ ±·éÁÛêÆÙ¢È¥³.;x
+EVTOPTAcheatersbless.2;¢³åÆÌ [From.GetHerHi] äÆÌëÅÉëÆĞ ùÄíÁÉªÈ¯Èäˆ [From.GetHerHim]ëÆĞ ¢³«µÉ²³¡¸ ¨³ÌæÆĞ¡·Û«È¥³!;x
+EVTOPTBcheatersbless.2;[From.GetSheHeCap]ëÆÌ êŒ¯·İîŒ®·¦·Ø ¨·İ®·İ²³Ğ ¡·Û«ÈÙ¢È¥³!;x
+EVTOPTCheatersbless.2;«·Ø¨³æˆ ª³¦³İ²³Ğ êŠ «·ÚåÆÌ «·ĞäÁĞëÆÌ?;x
+EVTOPTDcheatersbless.2;äŒùÇ §RéÁĞ«³Ğ§!ëÆĞ ‘·Ğ«·–Œ¦È¡¸ ¨³ÌæÆĞ¡¸ÜêÆÙ¢È¥³.;x
+EVTOPTCheatersbless.2;[From.GetFullName]ëÆÌ(åÆÌ) äˆï»İëŒçˆ ìÁÉ«·«µ ²³Ù¢È¥³.;x
+EVTOPTFcheatersbless.2;[From.GetHerHis]çÆĞ «³«È «·Ú«È ¨³ÌæŒåÆÌ ¡·ÛëÆÌ «·‘·ãêÆÙ¢È³?;x
+EVTOPTGcheatersbless.2;ªÈÌ¡¹İ ˜Œ¬È ¨³ª¸ë‰. ¢·èŠ ¨³ÎêÆÙ¢È¥³.;x
+EVTDESCcheatersbless.4;ëŠ¦È ‘³İ ìŠ©¹Ì«¸ª· ¥· ¨³ÎëÆÌ ª³¦³ØæÆĞ«È ¢´ «·Ì«·çÆĞ ª³ëÀİ²³äˆ «ÈÜëŒ¨¹ «È¡·Û«È ¥´äÁÌìŠ¡³ ¬³ªÈÌùÇ å»İåˆçÆĞ ¬¸¥´çˆ «ÈĞ²³¡¸ ²³Ğ êŠ «ÈÜåÆÌ ù¼Ì©¹É²³Ì êŠ¥³Ì«È¦³åÆÌ ¡·ÛëÆĞ «³Ğ«³ÜêÆÙ¢È¥³. ëŠ¦ÈåÆÌ éˆ¥³ ‡‰ëÅĞ¬·É«ÈÌ «¹İ«¹ÉëÆĞ ùÄ²´ «È ¯·è‹¢È¯¸«Èª¹Ì êŠ¥³ÌëÆĞ ñ»İéˆ²³¡È ùÄ²´ ëŠ¦È ¬³ªÈÌùÇ «¹İ²µİ¦¹ÉëÆĞ ¡ºê»É ª³ëÀİ²³Ù¢È¥³.;x
+EVTOPTAcheatersbless.4;ì»ã«³!;x
+EVTDESCcheatersbless.6;¥³İªÈÌùÇ §Y®ÈïŒ§!ùÇ ²ÈØëÆÌ ¥³İªÈÌëÆĞ ï»İ²´ ‡ŒçŒ¡È ‘´èÁÌ«¸ «È¬¸ ¥³İªÈÌùÇ ¢³«ÈçÆĞ ¥³ëÆØò¼ ¡³á«È åÆĞ¦ÈĞ êŠ «ÈÜêÆÙ¢È¥³...;x
+EVTOPTAcheatersbless.6;1¢¹Ì;x
+EVTOPTBcheatersbless.6;5¢¹Ì;x
+EVTOPTCcheatersbless.6;20¢¹Ì;x
+EVTDESCcheatersbless.7;¥³İªÈÌùÇ §Y®ÈïŒ§!ùÇ ²ÈØëÆÌ ¥³İªÈÌëÆĞ ï»İ²´ ‡ŒçŒ¡È ‘´èÁÌ«¸ «È¬¸ ¥³İªÈÌùÇ ¢³«ÈçÆĞ ¥³ëÆØò¼ ¡³á«È ìÁĞ«ÈĞ êŠ «ÈÜêÆÙ¢È¥³...;x
+EVTOPTAcheatersbless.7;1¢¹Ì;x
+EVTOPTBcheatersbless.7;5¢¹Ì;x
+EVTOPTCcheatersbless.7;20¢¹Ì;x
+EVTDESCcheatersbless.8;¥³İªÈÌùÇ §Y®ÈïŒ§!ùÇ ²ÈØëÆÌ ¥³İªÈÌëÆĞ ï»İ²´ ‡ŒçŒèŒçˆ «È¬¸ ÿÂĞ“ÈÌ ¥· ¨³ÎëÆÌ ¡·ÛëÆĞ «·ÏëÆĞ êŠ «ÈÜêÆÙ¢È¥³...;x
+EVTOPTAcheatersbless.8;ªÈÌ«³İ!;x
+EVTOPTBcheatersbless.8;¨¹İª·İ!;x
+EVTOPTCcheatersbless.8;¤æ»Ì¤;x
+cheater_bloodline;[This.GetDynName]ùÇ ²¹Ğï»İ;x
+cheater_bloodline_desc;§Y®ÈïŒ§!¬·É«ÈÌ ²³åÆĞùÇ «¹İëÁİùÇ ‡Š«º«ÈÙ¢È¥³.;x
+cheater_martial;§Y®ÈïŒ§!ùÇ ¢³«È;x
+cheater_intrigue;§Y®ÈïŒ§!ùÇ ¢³«È;x
+cheater_diplomacy;§Y®ÈïŒ§!ùÇ ¢³«È;x
+cheater_stewardship;§Y®ÈïŒ§!ùÇ ¢³«È;x
+cheater_learning;§Y®ÈïŒ§!ùÇ ¢³«È;x
+RETTYPE_CHEATER_SKIRMISHERS;êŒ¯·¨ÈªÈ §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_SHOCK;íÁİ¡¹É §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_CHARGE;íÁİ¬·Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ENG;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_SCOT;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_BALT;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ALTAIC;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_FRANK_NOR_GER;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_IBER;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ITA;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ROMAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_RUS;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_NORTHGER;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_HUNG;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ARAB;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ANDALUSIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_BERBER;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_BYZ;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_IRISH;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ETHIO;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_SOMALI;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_W_AFR;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_SOUTH_SLA;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_DUTCH;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_NAHUA;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_JEWISH;ïÆÉ©¹Ğ²³Ì ?ª³¡È•ÁÌ? ëÅÉäÁÌ;x
+RETTYPE_CHEATER_INDIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_NUBIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_FRA;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_LOM;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_SUEBI;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_PICTISH;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_CAV1;êŒ¯·¨ÈªÈ §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_CAV2;®È°·çÆĞ æ»Ğ¡¹É²³ªÈ¡¸ÜêÆÙ¢È³? ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_PAGAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_MUSLIM;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_CHRISTIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_ZOROASTRIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_JEWISH;ïÆÉ©¹Ğ²³Ì ?ª³¡È•ÁÌ? ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_EASTERN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_INDIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_DESERT;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+HORDE_RETTYPE_CHEATER_EUROPE;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_HAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_TIBET;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_JURCHEN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ASSYRIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_COPTIC;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_HORSE;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_CAT;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_BEAR;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_HEDGEHOG;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_DUCK;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_DOG;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ELEPHANT;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_DRAGON;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_OUTREMER;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_ARBERIAN;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+RETTYPE_CHEATER_SAR;ïÆÉ©¹Ğ²³Ì §Y®ÈïŒ§!ùÇ ëÅÉäÁÌ;x
+cheater_abode;§Y®ÈïŒ§!ùÇ ¬ÈÙ;x
+cheater_abode2;§Y®ÈïŒ§!ùÇ ¬ÈÙ;x
+cheater_abode3;§Y®ÈïŒ§!ùÇ ¬ÈÙ;x
+cheater_abode4;§Y®ÈïŒ§!ùÇ ¬ÈÙ;x
+cheater_abode5;§Y®ÈïŒ§!ùÇ ¬ÈÙ;x
+cheater_abode_desc;«È ¡·ÌèÁĞëÆÌ ìŠ«ÈÌ«¸¡¸ §RëŠìŠ¬·É§! §GéÁĞ©¹Ì«ÈÌ§! §B¥³ĞùÇ ²ÈØ§!ëÆĞ ìÁÙ¢È¥³.;x
+conversion_cheat;§Y®ÈïŒ§!ùÇ ¡³İ¬¸ ¡´ì»İ;x
+conversion_cheat_desc;¥³İªÈÌùÇ ªÈÌ«³İ«È ä»Ï ¬ÈÌ¦È«ÈÌ ©·Ù!;x
+
+cheat_title_chosen_one;ª·Ì°´É©³ÏëÆÌ ¬³;x
+cheat_title_chosen_one_desc;¥³İªÈÌëÆÌ ª·Ì°´É©³ÏëÆÌ ¬³«ÈÙ¢È¥³.;x
+
+cheat_title_cursed;¬·ìŠ©³ÏëÆÌ;x
+cheat_title_cursed_desc;¥³İªÈÌëÆÌ ¬·ìŠ©³Ï«³ÜêÆÙ¢È¥³.;x
+
+cheat_title_disinherited_blood;©Èª³İê»Éô¿Ì ²¹Ğï»İ;x
+cheat_title_disinherited_blood_desc;¥³İªÈÌùÇ ²¹Ğï»İëÆÌ ª³İê»Éô¿¬È «³ÎêÆÙ¢È¥³.;x
+
+cheat_title_enemy;¬·É;x
+cheat_title_enemy_desc;¢·Ì ¢³ùÇ ¬·É«È¥³;x
+
+cheat_title_forbidden_marriage;¡¹Ğñ»Ì äÆØ¬È;x
+cheat_title_forbidden_marriage_desc;¥³İªÈÌëÆÌ ¬·Ğ¥´ ¡¹Ğñ»Ì²³¬È «³ÎëÆĞ ¡·Û«ÈÙ¢È¥³.;x
+
+cheat_title_forsaken_blood;©·¦ÈØ©³ÏëÆÌ ±È;x
+cheat_title_forsaken_blood_desc;¥³İªÈÌùÇ ¦³«ÈÌëÆÌ ğˆª¸«ÈîÆÌ«ÈÙ¢È¥³.;x
+
+cheat_title_friend;ì»ãëÆÌ ®ÈÌäŠx
+cheat_title_friend_desc;¢·Ì ¢´ ®ÈÌäŠ«µ;x
+
+cheat_title_loyalist;íÁİª·İ±³;x
+cheat_title_loyalist_desc;¥³İªÈÌëÆÌ äÁÌìŠ«¸¡¸ íÁİª·İ²³Ù¢È¥³.;x
+
+cheat_title_ninja;¢ÈÌ¬³;x
+cheat_title_ninja_desc;¢·Ì ¢´ ¢ÈÌ¬³¡³ ô¿Ğ¡·«µ;x
+
+cheat_title_prophet_blooded;ª·Ì¬È¬³ùÇ ²¹Ğï»İ;x
+cheat_title_prophet_blooded_desc;¥³İªÈÌùÇ ±ÈåÆÌ «º«·Ì¬³æÆĞùÇ íÁÉé»ÉëÆĞ ©³Ï«³ÜêÆÙ¢È¥³.;x
+
+cheat_title_puppykicker;¡³İ«³¬È ²³É¥´¬³;x
+cheat_title_puppykicker_desc;¥³İªÈÌëÆÌ ¡³İ«³¬ÈçÆĞ ¡·Ï«·®³ÜêÆÙ¢È¥³! ª´È äˆ«µİ«È ©³äŠ¢È«¸ éÁĞëÆĞ ¬ÈĞ¦·ÜêÆÙ¢È¥³! ¥³İªÈÌëÆÌ ¬Èë»É«¸ª· éÁĞ°³¡¸ ô¿Ğ ¡·Û«ÈÙ¢È¥³!!;x
+
+cheat_title_treacherous;©´ªÈÌ;x
+cheat_title_treacherous_desc;¥³İªÈÌëÆÌ ¡³Ìª³²³Ì ©´ªÈÌ¬³«ÈÙ¢È¥³;x
+
+cheat_title_warpriest;¬·ÌïŠª³¬¸;x
+cheat_title_warpriest_desc;¢·åÆÌ ¢´ ¬·ÉëÆĞ ¬·İé»É²³Ğ ¡·Û«È¥³!;x
+
+show_cheats;®ÈïŒ éˆ«È¡È;x
+show_cheats_desc;®ÈïŒ ¡¹Ğ¬·İ ğ‰ªÈ;x
+hide_cheats;®ÈïŒ êÁØ¡È¡È;x
+hide_cheats_desc;®ÈïŒ ¡¹Ğ¬·İ êÁØ¡È
+
+cheat_employ_great_commander;†ˆ«ÈÌ èŠò¼Ì¬³İ äˆëÀİ;x
+cheat_employ_great_commander_desc;û¿äˆùÇ èŠò¼Ì¬³İëÆĞ äˆëÀİ²³ª¸ë‰;x
+cheat_employ_elusive_shadow;†ˆ«ÈÌ ®·Ùéˆò¼Ì äˆëÀİ;x
+cheat_employ_elusive_shadow_desc;û¿äˆùÇ ®·Ùéˆò¼ÌëÆĞ äˆëÀİ²³ª¸ë‰;x
+cheat_employ_grey_eminence;†ˆ«ÈÌ ¬´ª³İ äˆëÀİ;x
+cheat_employ_grey_eminence_desc;û¿äˆùÇ ¬´ª³İëÆĞ äˆëÀİ²³ªÈÙªÈëˆ;x
+cheat_employ_midas_touched;†ˆ«ÈÌ ®·İ¬È¡È äˆëÀİ;x
+cheat_employ_midas_touched_desc;û¿äˆùÇ ®·İ¬È¡È äˆëÀİ;x
+cheat_employ_mastermind_theologian;†ˆ«ÈÌ ª³¬¸ äˆëÀİ;x
+cheat_employ_mastermind_theologian_desc;û¿äˆùÇ ª³¬¸çÆĞ äˆëÀİ²³ªÈÙªÈëˆ;x
+cheat_employ_female;†ˆ«ÈÌ «¹ª·İ äˆëÀİ;x
+cheat_employ_female_desc;û¿äˆùÇ «¹ª·İ äˆëÀİ;x
+cheat_employ_female_child;‘³Ğ ¨³ÌæÆĞ¡È;x
+cheat_employ_female_child_desc;«³«È¡³ ¢³°³¢³Ù¢È¥³. äŒ¢¹åÆÌ ¥³İªÈÌùÇ ‘³Ğ«ÈÙ¢È¥³.;x
+cheat_employ_male_child;«³æÆĞ ¨³ÌæÆĞ¡È;x
+cheat_employ_male_child_desc;«³«È¡³ ¢³°³¢³Ù¢È¥³. äŒåÆÌ ¥³İªÈÌùÇ «³æÆĞ«ÈÙ¢È¥³.;x
+
+cheat_add_babyface;®ÈïŒ ïÆÉª·İ: ©¸«È©È±¸«ÈêŒ;x
+cheat_add_babyface_desc;©¸«È©È±¸«ÈêŒ ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_babyface;®ÈïŒ ¬¸¡·: ©¸«È©È±¸«ÈêŒ;x
+cheat_remove_babyface_desc;©¸«È©È±¸«ÈêŒ ïÆÉª·İ ’´¡È;x
+cheat_add_babymaker;®ÈïŒ ïÆÉª·İ: ©¸«È©È¨¸«È¯·;x
+cheat_add_babymaker_desc;©¸«È©È¨¸«È¯· ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_babymaker;®ÈïŒ ¬¸¡·: ©¸«È©È¨¸«È¯·;x
+cheat_remove_babymaker_desc;©¸«È©È¨¸«È¯· ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_builder;®ÈïŒ ïÆÉª·İ: ©ÈĞ¥·;x
+cheat_add_builder_desc;ïŒ¦¸«ÈÛ ©ÈĞ¥· ®ÈïŒ;x
+cheat_remove_builder;®ÈïŒ ¬¸¡·: ©ÈĞ¥·;x
+cheat_remove_builder_desc;©ÈĞ¥· ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_chosen_one;®ÈïŒ ïÆÉª·İ: ª·Ì°´Éô¿Ì ¬³;x
+cheat_add_chosen_one_desc;ª·Ì°´É©³ÏëÆÌ ¬³ ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_chosen_one;¬¸¡· ¦ÈïŒ ëˆçÆÌ™»É: ª·Ì°´Éô¿Ì ¬³;x
+cheat_remove_chosen_one_desc;ª·Ì°´É©³ÏëÆÌ ¬³ ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_immortal;®ÈïŒ ïÆÉª·İ: éÁĞ¨¹Ğ;x
+cheat_add_immortal_desc;éÁĞ¨¹Ğ ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_immortal;®ÈïŒ ¬¸¡·: éÁĞ¨¹Ğ;x
+cheat_remove_immortal_desc;éÁĞ¨¹Ğ ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_infertile;®ÈïŒ ïÆÉª·İ: éÁĞ«ÈØ;x
+cheat_add_infertile_desc;éÁĞ«ÈØ ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_infertile;®ÈïŒ ¬¸¡·: éÁĞ«ÈØ;x
+cheat_remove_infertile_desc;éÁĞ«ÈØ ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_loyalist;®ÈïŒ ïÆÉª·İ: íÁİª·İìŠùÇ¬³;x
+cheat_add_loyalist_desc;íÁİª·İ¬³ ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_loyalist;®ÈïŒ ¬¸¡·: íÁİª·İìŠùÇ¬³;x
+cheat_remove_loyalist_desc;íÁİªÈÌ¬³ ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_money_hands;®ÈïŒú¼ùÄ: ¨·¢È²´ÌæŒ;x
+cheat_add_money_hands_desc;¨·¢È ²´ÌìŒ ê»Éª·İ ®ÈïŒ;x
+cheat_remove_money_hands;®ÈïŒ ¬¸¡·: ¨·¢È²´ÌæŒ;x
+cheat_remove_money_hands_desc;æ»Ì ê»Ì ïÆÉª·İëÆĞ «È×êÆÙ¢È¥³;x
+cheat_add_ninja;®ÈïŒ ïÆÉª·İ: ¢ÈÌ¬³;x
+cheat_add_ninja_desc;¢ÈÌ¬³ ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_ninja;ª³É¬¸²³¡È ëˆçÆÌ™»É: ¢ÈÌ¬³;x
+cheat_remove_ninja_desc;¢ÈÌ¬³ ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_prophet_blooded;®ÈïŒ ïÆÉª·İ: ğŒçˆ±ÈÛéÆĞ¦·¥ÈæŒ;x
+cheat_add_prophet_blooded_desc;ª·Ì¬È¬³ éÆĞ¦·æŒ ïÆÉª·İëÆĞ ê»É«Èª¸ë‰;x
+cheat_remove_prophet_blooded;®ÈïŒ ¬¸¡·: «º«·Ì¬³ éÆĞ¦·æŒ;x
+cheat_remove_prophet_blooded_desc;Prophet Blooded ïÆÉª·İëÆĞ «È×êÆÙ¢È¥³;x
+cheat_add_terrain_master;®ÈïŒ ïÆÉª·İ: °·¦¸«ÈÌ ¨³êŒ°·;x
+cheat_add_terrain_master_desc;Trarain Master ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_terrain_master;®ÈïŒ ¬¸¡·: °·¦¸«ÈÌ ¨³êŒ°·;x
+cheat_remove_terrain_master_desc;Terrain Master ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_terror;®ÈïŒ ïÆÉª·İ: °¸¦·;x
+cheat_add_terror_desc;ê»É«ÈØêŠ ïÆÉª·İ ä»İğˆ;x
+cheat_remove_terror;®ÈïŒ ¬¸¡·: ä»İğˆ;x
+cheat_remove_terror_desc;ä»İğˆ ïÆÉª·İ ª³İªÈĞ;x
+cheat_add_warpriest;®ÈïŒ ïÆÉª·İ: ùÂğŒ¦ÈêŒïŒ;x
+cheat_add_warpriest_desc;ùÂğŒ¦ÈêŒïŒ ïÆÉª·İ ®ÈïŒ;x
+cheat_remove_warpriest;®ÈïŒ ¬¸¡·: ùÂğŒ¦ÈêŒïŒ;x
+cheat_remove_warpriest_desc;ùÂğŒ¦ÈêŒïŒ ïÆÉª·İ ª³İªÈĞ;x
+
+cheat_add_doomstack;æÁØêŒ°´É êˆÿ¼Ì;x
+cheat_add_doomstack_desc;¥³İªÈÌùÇ êŠæˆ«¸ äÁÌ¥´¡³ ¢³°³¢³Ù¢È¥³;x
+cheat_add_doomstack_navy;²´äÁÌ êˆÿ¼Ì;x
+cheat_add_doomstack_navy_desc;êŠæˆ«¸ª· ¡³¬³İ ¡³³ëÁÌ ùÄ®È«¸ ª·Ì©³É«È ¢³°³¢³Ù¢È¥³;x
+cheat_remove_crappy_traits;¢³—ÆÌ ïÆÉª·İ ¬¸¡·;x
+cheat_remove_crappy_traits_desc;¢³—ÆÌ ïÆÉª·İ «·Ú«´¡È;x
+cheat_remove_crap_from_dynasty_kids;¡³èÁÌ ¬³¢¹ ÿ¿é»É;x
+cheat_remove_crap_from_dynasty_kids_desc;ù¼İìˆùÇ «³«ÈæÆĞ«¸¡¸ª· ¢³—ÆÌ ïÆÉª·İ ¬¸¡·;x
+add_awesome_to_dynasty_kids;ù¼İ¡³ùÇ «³«ÈæÆĞëÆĞ íÁÉé»É²´ìŠª¸ë‰;x
+add_awesome_to_dynasty_kids_desc;ì»ãëÆÌ ïÆÉª·İëŒçˆ ù¼İìˆùÇ ¬³ê»ÌëÆĞ íÁÉé»É²³ªÈÙªÈëˆ.;x
+
+happy_vassals;²´İé»É²³Ì é»İªÈÌæÆĞ;x
+happy_vassals_desc;é»İªÈÌæÆĞëÆÌ ¨³Ìì»É²³äˆ ¬·İ¬ÈÉ²³¡¸ ô¿Ø;x
+
+cheat_gold;®·ÌäÆØùÇ ¡Èÿ¿;x
+cheat_gold_desc;1000 ä»ĞæŒ¡³ ìŠ«·¬ÈÙ¢È¥³.;x
+
+cheat_prestige;®·Ìÿ¼ÉùÇ ¨¹İª·İ;x
+cheat_prestige_desc;1000 ¨¹İª·İ«È ìŠ«·¬ÈÙ¢È¥³.;x
+
+cheat_piety;®·ÌªÈØùÇ ¨ÈÏëÆØ;x
+cheat_piety_desc;1000 ªÈÌ«³İªÈØ«È ìŠ«·¬ÈÙ¢È¥³.;x
+
+cheat_techpoints;«ÈÌ¡³ÌªÈ¥´ùÇ •Æá«È æˆ¦´²´Ü¥³;x
+cheat_techpoints_desc;«È¬¸éŠ°· «¹¡ÈåÆÌ ¡ÈêÁĞä»İ²³É¬³æÆĞ«È ¬·Ø¡·²³Ì¥³ «³“¸«È!;x
+
+cheat_trait_babyface;©¸«È©È±¸«ÈêŒx
+cheat_trait_babyface_desc;ª³¦³İ²³Ù¢È¥³.;x
+cheat_trait_babymaker;©¸«È©È¨¸«È¯·;x
+cheat_trait_babymaker_desc;ª¸¡º«¸ª· ¡³¬³İ ©Èë»É²³Ì ª³¦³Ø ìÁİ ²³¢³;x
+cheat_trait_builder;©ÈĞ¥·;x
+cheat_trait_builder_desc;©ÈĞ¥· ô¿¡È;x
+cheat_trait_chosen_one;ª·Ì°´É©³ÏëÆÌ ¬³;x
+cheat_trait_chosen_one_desc;ª·Ì°´É©³ÏëÆÌ ¬³åÆÌ ùÄ¥´²´¬ÈĞ ëÁÌ¨¹İ«ÈÙ¢È¥³.;x
+cheat_trait_cursed;¬·ìŠ©³ÏëÆÌ;x
+cheat_trait_cursed_desc;¥³İªÈÌëÆÌ ¬·ìŠ©³Ï«³ÜêÆÙ¢È¥³!;x
+cheat_trait_disinherited_blood;©Èª³İê»Éô¿Ø;x
+cheat_trait_disinherited_blood_desc;èÁĞ¦¹©³Ï¬È «³ÎëÆØ;x
+cheat_trait_forbidden_marriage;¡¹Ğñ»Ì éÁĞ¡³;x
+cheat_trait_forbidden_marriage_desc;¡¹Ğñ»Ì äÆØ¬È;x
+cheat_trait_forsaken_blood;ğˆª¸«ÈîÆÌ;x
+cheat_trait_forsaken_blood_desc;ğˆª¸«ÈîÆÌ;x
+cheat_trait_immortal;éÁĞ¨¹Ğ;x
+cheat_trait_immortal_desc;ìÁÉåÆÌ ¡·Û«È æŠ¦¹ÙêÆÙ¢È³, «³¢È¨¹Ì «¹İùÂÌ²È ª³Ğäˆ ªÈâêÆÙ¢È³?;x
+cheat_trait_infertile;éÁĞ«ÈØ;x
+cheat_trait_infertile_desc;«È ª³¦³ØëÆÌ éÁĞ«ÈØ«È¥³;x
+cheat_trait_loyalist;íÁİª·İ±³;x
+cheat_trait_loyalist_desc;ù¼İäÁÉ«¸ª· ¡³¬³İ íÁİª·İêŒ¦·ëÁÌ ª³¦³ØæÆĞ ìÁİ ²³¢³«ÈÙ¢È¥³.;x
+cheat_trait_money_hands;¨·¢È²´ÌæŒ;x
+cheat_trait_money_hands_desc;ª¸äÆØ«¸ åÆİ²³äˆ, äÁÌìŠ«¸¡¸ ª³¦³İ©³Ïäˆ, ¡³ªÈÌ«¸¡¸ ¨¹ĞªÈ©³ÏëÆØ;x
+cheat_trait_ninja;¢ÈÌ¬³;x
+cheat_trait_ninja_desc;¢ÈÌ¢ÈÌ!;x
+cheat_trait_prophet_blooded;ª·Ì¬È¬³ùÇ ±È;x
+cheat_trait_prophet_blooded_desc;«È ²¹Ğï»İëÆÌ «³Ğ¦³ùÇ íÁÉé»ÉëÆĞ ©³Ï«³ÜëŒ¨¹ °³¦³ÉëÆĞ íÁÉ¬·É²³¬È «³ÎêÆÙ¢È¥³.;x
+cheat_trait_puppykicker;¡³İ«³¬È ¯È¯·;x
+cheat_trait_puppykicker_desc;¬³Ğ ¨¹ĞªÈ;;;;;;;;;;x
+cheat_trait_terrain_master;¬È²¹İ ¨³êŒ°·;x
+cheat_trait_terrain_master_desc;èˆæÆÌ ¬È²¹İùÇ ¬·ÌèÁÌ¡³;x
+cheat_trait_terror;ó¿¬¸;x
+cheat_trait_terror_desc;«È ª³¦³ØëÆÌ ä»İğˆùÇ äÁÌìŠ, ó¿¬¸«ÈÙ¢È¥³.;x
+cheat_trait_treacherous;©´ªÈÌ;x
+cheat_trait_treacherous_desc;éÁĞíÁİ²³Ì ©´ªÈÌ¬³!;x
+cheat_trait_warpriest;¬·ÌïŠª³¬¸;x
+cheat_trait_warpriest_desc;¬·ÌïŠª³¬¸«ÈÙ¢È¥³. ªÈÌùÇ «ÈçÆØëŒçˆ ¢¸å»ØùÇ –ÁÉ©¸¡ÈçÆĞ ´ìŠ¨³!;x
+minhyee;²³ÌªÈĞ ¬·Éï»İ;x
+minhyee_desc;«È «ÈÌèÁĞëÆÌ ²³Ì ÿ¼İªÈĞ ¡³İæ»İù¼İùÇ ¬·Éï»İ«ÈÙ¢È¥³.;x
+yiminhyee;ªÈÌçÀİ;x
+yiminhyee_desc;®·Ì¨¹İùÇ ¡ºêÆİ¬³, ²³Ì ¡³İæ»İùÇ ¬¸3¥´ ù¼İ«ÈÙ¢È¥³.;x
+first_son_of_minhyee;ëÀİ¬³;x
+first_son_of_minhyee_desc;®·Ì¨¹İùÇ ¡ºêÆİ¬³ùÇ ¬·É¬³«ÈÙ¢È¥³.;x
+son_of_minhyee;ëÀİê»Ì;x
+son_of_minhyee_desc;®·Ì¨¹İùÇ ¡ºêÆİ¬³ùÇ ¬·Éê»Ì«ÈÙ¢È¥³.;x
+holyorder_of_minhyee;ëÀİìÆİê»Ì;x
+holyorder_of_minhyee_desc;®·Ì¨¹İùÇ ¡ºêÆİ¬³ùÇ ¬·ÉìÆİê»Ì«ÈÙ¢È¥³.;x
+liu_bang_trait;°´ìˆ äˆÿ¼İ¬¸;x
+liu_bang_trait_desc;²³Ì¢³¦³ùÇ †ˆ¥´ ÿ¼İ¬¸«ÈÌ °´ìˆ äˆÿ¼İ¬¸åÆÌ ìÁİäÁÉ «¹Éª³ùÇ ùÄ¥´²³Ì ¬Èæˆ¬³«È¬³ ¬·Ì¦µÉ¡³«ÈÙ¢È¥³. †ˆ²³Ì¬´İ±´¡È, äŒåÆÌ «¹É©³Ğª³Ì¡È¡´ª¸¦³ éÁĞ¦ÈëŠåÆÌ ²³İ¬·ÉëÆĞ èŠ”ÈçŒäˆ ®·Ì²³çÆĞ «ÈĞï»İ²³«¹ ìÁİùÂÌ«ÈÌëÆĞ ²³¢³çˆ ¥³Ì¡¹ĞªÈ¯¹ÜêÆÙ¢È¥³.;x
+liu_xiu_trait;ª¸ìˆ ò¼İèŠÿ¼İ¬¸;x
+liu_xiu_trait_desc;æ»İ²³Ì ù¼İìˆùÇ †ˆ¥´ ÿ¼İ¬¸«ÈÌ ª¸ìˆ ò¼İèŠÿ¼İ¬¸åÆÌ ìÁİäÁÉ «¹Éª³ùÇ ùÄ¥´²³Ì ¬Èæˆ¬³«È¬³ ¬³İäÁÌ«ÈÙ¢È¥³.;x
+
+go_chumo;æ»İ¨¹İª·İù¼İ [This.GetDynName]ùÇ ²¹Ğï»İ;x
+go_chumo_desc;äˆäŠ¦¹çÆĞ ¡·ÌäÁÉ²´ ù¿ª¸çÆĞ èÁĞ¦È®Èäˆ ©´Éª·İæÆĞ«¸¡¸ ªÈÌ¡¹Éÿ¼ô¿Ì ªÈÌÿ¼¬·É ªÈìˆ æ»İ¨¹İª·İù¼İ äˆìŠè»İëÆÌ äˆäŠ¦¹«ÈÌæÆĞ«¸¡¸ «¹İùÂÌ²È ¡È«·Éô¿Ğ ¡·Û«ÈÙ¢È¥³.;x
+kong_fuzi;ä»İ¬³ [This.GetDynName]ùÇ ²¹Ğï»İ;x
+kong_fuzi_desc;ë‹ä‰çÆĞ ®³İªÈ²³äˆ ¬·İ®È «Èç»Ìò¼ ®·Ğ²³ÉëŒçˆ ù¼İò¼ ÿ¼İ¬¸çÆĞ «ÈÌæˆ²³Ì ¬·Ìª·Ğ¬·É«ÈÌ ®·Ğ²³É¬³«È¬³ ¬·İ®È¡³«ÈÌ ä»İ¬³åÆÌ êŠ®·Ì¢¹Ì«È ¢·Øæˆç»É äŒ ¬·İªÈÌ«È «È«·¬ÈĞ ¡·Û«ÈÙ¢È¥³.;x
+kushan_kujula;[This.GetDynName]ùÇ ²¹Ğï»İ;x
+kushan_kujula_desc;5¥´ ùÂĞ¬È ¡³èÁÌëÆĞ ï»İ«ÈĞ²³äˆ ù¼İäÁÉëÆĞ ¬·İé»É²³äˆ îŠªµÌ ¬¸äÁÉëÆĞ ª¸ëÁÌ ¡³İ¦¹É²³Ì îŠìÁĞ¦³ ¯³æŒ±Èª¸êŒùÇ ±È.;x
+li_laozi;[This.GetDynName]ùÇ ²¹Ğï»İ;x
+li_laozi_desc;æˆä‰çÆĞ ®³İªÈ²³äˆ æˆ¥·É¡¹İëÆĞ ¬·êÁĞ²³Ì ¡·ÛëŒçˆ «³Ğ¦¹¬ÈÌ ¬·Ìª·Ğ¬·É«ÈÌ ®·Ğ²³É¬³ åˆ¬³ùÇ ‡Š«º«È¨¹ äŒùÇ ¡³çŒ®ÈØëÆÌ ªÈÌ¡¹Éÿ¼ô¿«·ÜêÆÙ¢È¥³.;x
+liu_bang;¬·ÉçÀİ¬Èê»Ì;x
+liu_bang_desc;äˆÿ¼İ¬¸ ë‹©³İëÆÌ ±´²¹ÌùÇ ¬·İ¬³İ«È«·ÜëŒ¢³, †ˆ²³Ì¬´İ±´ ªÈ¬·Ğ ²³İ¬·ÉëÆĞ ·Êäˆ ¨³®ÈØ¢´ ìÁİùÂÌëÆĞ ²³¢³çˆ ï»İ²³Ù²³«¹ êŠ©´É¢¹Ì ù¼İìˆùÇ ¡ÈïÆĞëÆĞ ¥³Ê«³ÜêÆÙ¢È¥³. äŒùÇ ‡Šê»ÌæÆĞëÆÌ ²³ÌùÇ ÿ¼İ¬¸çˆ“· ¡ºê»É ¢³Ø«³«ÈÜêÆÙ¢È¥³.;x
+liu_xiu;ò¼İèŠÿ¼İ¬¸ùÇ ‡Š«º;x
+liu_xiu_desc;ìÁİäÁÉëÆĞ ¬·İé»É²³äˆ ï»İ«ÈĞ²³«¹ ¨³®ÈØ¢´ æ»İ²³Ì ù¼İìˆçÆĞ ª¸ëÁÌ ùÄ¥´²³Ì ®³İªÈ¬³ ª¸ìˆ ò¼İèŠÿ¼İ¬¸ ë‹êŠåÆÌ ªÈÌ¢³¦³ ù¼İ¨³İëÆĞ ©Èç»Û²³Ì ¨³ÎëÆÌ äÁÌ©·ĞæÆĞëÆĞ èŠ”ÈĞ¦·ÜêÆÙ¢È¥³.;x
+liu_che;èŠÿ¼İ¬¸ùÇ ‡Š«º;x
+liu_che_desc;¨³ÎëÆÌ ìÁİäÁÉ«ÈÌæÆĞëÆÌ ò¼İÿ¼Ğ²³Ì «¹İïˆçÆĞ ¬·İé»É²³Ì ùÄ¥´²³Ì ªÈìˆ ²³ÌèŠ¬¸ ë‹®·ĞëÆĞ ¡È«·É²³äˆ «ÈÜêÆÙ¢È¥³.;x
+ma_yuan;¨³ùÂÌùÇ ²¹Ğï»İ;x
+ma_yuan_desc;²³Ì ù¼İìˆùÇ ©¹Ì©³İëÆĞ êŠ‡ˆ²³äˆ íÁİª·İëÆĞ ë‹¬È²³¨¹ ¢³ØùÂĞ, ¡³İ, ©³ÌæÁÌ¨³ÌëÆĞ ¬¸«³Ù²³Ì ¨¹İ¬³İ ¨³ùÂÌùÇ ‡Š«º.;x
+sun_zi;ê»ÌèŠùÇ ‡Š«º;x
+sun_zi_desc;êŠª¸¡È æ»İ«³Ì äÁÌª³ ¬·Ì¦µÉëÆĞ ¬·İùÇ²³Ì ê»Ì¬³©¹İ©·ÙëÆĞ ¬·êÁĞ²³Ì ¬·Ìª·Ğ¬·É«ÈÌ ¬³İäÁÌ ê»ÌèŠùÇ ‡Š«º.;x
+yuan_an;ª³ª¸ª³Øä»İùÇ ²¹Ğï»İ;x
+yuan_an_desc;¬·Ì¬´İéˆ¥³åÆÌ ñÅİåˆù¼ùÇ ù¿ä‰çÆĞ ë»İ‡ˆ²´ÜëŒ¢³ ªÈĞ±´çˆ •Æá¢³Ì ²³Ì¢³¦³ùÇ òÂÌùÄçÆĞ êŠ‡ˆ²³Ì ë‹¨¹İ²³Ì ¬·İ®È¡³ ùÂÌ«³ÌùÇ ‡Š«º.;x
+minhyeesblood;ªÈÌçÀİùÇ ‡Š«º;x
+minhyeesblood_desc;®·Ì¬¸ùÇ ¬·É¬³«ÈÌ ªÈÌçÀİëÆÌ ëŠùÂĞ²³Ì êŠ¯·Û«È«·ÜëŒ¨¹, äŒ “È«³ÛëÆÌ èˆ¡ºçÆĞ ¡³¦È¬È «³Îäˆ, ©·Ìª·İ²³«¹ÜêÆÙ¢È¥³.;x
+son_minhyeesblood;ªÈÌçÀİùÇ ¬·É¬³;x
+son_minhyeesblood_desc;ªÈÌçÀİ«È¦³ éÁĞ¦ÈëŠåÆÌ «ÈåÆÌ ¨³®ÈØ¢´ ¬·ÉçÀİ °´ìˆ äˆÿ¼İ¬¸ùÇ ‡Š«ºùÇ è»ØëÆĞ °³äˆ¢³ ìÁİùÂÌ«¸ «ÈØ²³«¹ÜêÆÙ¢È¥³.;x
+rape_the_girl;§Y[Root.GetFullName]§! §R¡³İ¡³Ì§!;x
+rape_the_girl_desc;¥³İªÈÌùÇ §Y¬³¬È§!åÆÌ §Y[Root.GetFullName]§!ëÆĞ éˆ¡È¨³Ì ²´æˆ ’·Û’·Û²³¡¸ ª·«ÈÜêÆÙ¢È¥³. ¥³İªÈÌëÆÌ ëŠêŠ²³Ì §YêŠ¯·Û§!«¸ §Y®·Ì¬³§!«ÈèŒçˆ, [Root.GetFullName]ùÇ §Yéˆ¬È§!çÆĞ °³Ø²³åÆÌ ¡·ÛëÆÌ ¡¹Ğîˆ ¢³—ÆÌ «ÈĞ«È «³¢ÈÙ¢È¥³.;x

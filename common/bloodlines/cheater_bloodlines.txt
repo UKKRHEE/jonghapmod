@@ -1,0 +1,16 @@
+cheater_bloodline = {
+	general_opinion = 50
+	combat_rating = 20
+	martial = 5
+	intrigue = 5
+	stewardship = 5
+	learning = 5
+	diplomacy = 5
+	health = 1
+	fertility = 0.2
+	attrition = -0.05
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+	flags = { cheater_bloodline }
+}

@@ -58,7 +58,7 @@ decisions = {
 				trait = brave
 				trait = diligent
 				dynasty = random
-				female = no
+				female = yes
 				age = 18
 				add_friend = ROOT
 				attributes = {
@@ -107,7 +107,7 @@ decisions = {
 				trait = diligent
 				trait = content				
 				dynasty = random
-				female = no
+				female = yes
 				age = 18
 				add_friend = ROOT
 				attributes = {
@@ -156,7 +156,7 @@ decisions = {
 				trait = patient			
 				trait = content
 				dynasty = random
-				female = no
+				female = yes
 				age = 18
 				add_friend = ROOT
 				attributes = {
@@ -206,7 +206,7 @@ decisions = {
 				trait = honest
 				trait = content
 				dynasty = random
-				female = no
+				female = yes
 				age = 18
 				add_friend = ROOT
 				attributes = {
@@ -256,7 +256,7 @@ decisions = {
 				trait = honest
 				trait = content
 				dynasty = random
-				female = no
+				female = yes
 				age = 16
 				add_friend = ROOT
 				attributes = {
@@ -316,7 +316,7 @@ decisions = {
 				female = yes
 				age = 29
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 				attributes = {
 					martial = 100
 					stewardship = 100
@@ -336,7 +336,7 @@ decisions = {
 					}
 				}
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -375,7 +375,7 @@ decisions = {
 				female = yes
 				age = 27
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 				attributes = {
 					martial = 100
 					stewardship = 100
@@ -395,7 +395,7 @@ decisions = {
 					}
 				}
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -434,7 +434,7 @@ decisions = {
 				female = yes
 				age = 26
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 				attributes = {
 					martial = 100
 					stewardship = 100
@@ -454,7 +454,7 @@ decisions = {
 					}
 				}
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -493,7 +493,7 @@ decisions = {
 				female = yes
 				age = 25
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 				attributes = {
 					martial = 100
 					stewardship = 100
@@ -513,7 +513,7 @@ decisions = {
 					}
 				}
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -552,7 +552,7 @@ decisions = {
 				female = yes
 				age = 25
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 				attributes = {
 					martial = 100
 					stewardship = 100
@@ -572,7 +572,7 @@ decisions = {
 					}
 				}
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -611,7 +611,7 @@ decisions = {
 				female = yes
 				age = 22
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 				attributes = {
 					martial = 100
 					stewardship = 100
@@ -631,7 +631,7 @@ decisions = {
 					}
 				}
 				add_friend = ROOT
-				add_lover = ROOT
+				#add_lover = ROOT
 			}
 		}
 		revoke_allowed = {
@@ -730,6 +730,7 @@ decisions = {
 						ROOT = { is_female = yes }
 					}
 					set_mother = ROOT
+					set_real_father = c_10000
 				}
 				if = {
 					limit = {
@@ -792,6 +793,7 @@ decisions = {
 						ROOT = { is_female = yes }
 					}
 					set_mother = ROOT
+					set_real_father = c_10000
 				}
 				if = {
 					limit = {
@@ -1300,7 +1302,7 @@ decisions = {
 				owner = ROOT
 				province = closest
 				troops = {
-					galleys= { 50 50 }
+					galleys= { 500 500 }
 
 				}
 			}
