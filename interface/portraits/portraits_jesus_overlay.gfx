@@ -53,8 +53,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_wife_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_wife_of_minhyee:p0"
 		}
 	}
 	
@@ -79,8 +78,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_dougther_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_dougther_of_minhyee:p0"
 		}
 	}
 ########################################	
@@ -104,8 +102,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_dougther_of_minhyee_2:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_dougther_of_minhyee_2:p0"
 		}
 	}
 ########################################	
@@ -129,8 +126,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_dougther_of_minhyee_3:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_dougther_of_minhyee_3:p0"
 		}
 	}
 ########################################	
@@ -154,8 +150,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_sister_of_minhyee_4:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_dougther_of_minhyee_4:p0"
 		}
 	}
 ########################################	
@@ -179,8 +174,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_mother_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_mother_of_minhyee:p0"
 		}
 	}
 ########################################	
@@ -205,8 +199,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_minhyee_the_god:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_minhyee_the_god:p0"
 		}
 	}
 ########################################	
@@ -231,8 +224,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_son_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_son_of_minhyee:p0"
 		}
 	}
 	
@@ -256,8 +248,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_first_son_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_first_son_of_minhyee:p0"
 		}
 	}
 
@@ -283,8 +274,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_pussy_of_all:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_pussy_of_all:p0"
 		}
 	}
 	spriteType = {
@@ -307,8 +297,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_frankish_sister_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_frankish_sister_of_minhyee:p0"
 		}
 	}
 	
@@ -332,8 +321,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_grandma_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_grandma_of_minhyee:p0"
 		}
 	}
 	
@@ -357,8 +345,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_grandma_of_minhyee_2:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_grandma_of_minhyee_2:p0"
 		}
 	}
 	spriteType = {
@@ -381,8 +368,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_sexy_dougther_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_sexy_dougther_of_minhyee:p0"
 		}
 	}
 	spriteType = {
@@ -405,8 +391,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_chinese_empress:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_chinese_empress:p0"
 		}
 	}
 	spriteType = {
@@ -429,8 +414,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_meoneulyee_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_meoneulyee_of_minhyee:p0"
 		}
 	}
 	
@@ -454,8 +438,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_grandson_of_minhyee_2:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_grandson_of_minhyee_2:p0"
 		}
 	}
 	spriteType = {
@@ -478,8 +461,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_holyorder_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_holyorder_of_minhyee:p0"
 		}
 	}
 	spriteType = {
@@ -502,8 +484,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_holyorder_grandson_of_minhyee:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_holyorder_grandson_of_minhyee:p0"
 		}
 	}
 	##########
@@ -527,8 +508,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_liu_bang:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_liu_bang:p0"
 		}
 	}
 	##########
@@ -552,8 +532,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_liu_xiu:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_liu_xiu:p0"
 		}
 	}
 	##########
@@ -577,8 +556,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_INE:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_INE:p0"
 		}
 	}
 	spriteType = {
@@ -601,8 +579,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_JINGBURGER:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_JINGBURGER:p0"
 		}
 	}
 	spriteType = {
@@ -625,8 +602,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_LILPA:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_LILPA:p0"
 		}
 	}
 	spriteType = {
@@ -649,8 +625,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_JURURU:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_JURURU:p0"
 		}
 	}
 	spriteType = {
@@ -673,8 +648,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_GOSEGU:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_GOSEGU:p0"
 		}
 	}
 	spriteType = {
@@ -697,8 +671,7 @@ spriteTypes = {
 		}
 		
 		layer = { 
-			"GFX_VCHAN:c10"
-			"GFX_empty:c0" "GFX_empty:c2" "GFX_empty:c3" "GFX_empty:c1" "GFX_empty:c4" "GFX_empty:c6" "GFX_empty:c7" "GFX_empty:p1:h:y" "GFX_empty:c6" "GFX_lover_overlay:c37" "GFX_player_overlay:c11"
+			"GFX_VCHAN:p0"
 		}
 	}
 	##########
