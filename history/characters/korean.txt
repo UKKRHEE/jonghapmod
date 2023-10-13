@@ -110,7 +110,7 @@
 }
 2 = {	
 	name="Min-Jung" 
-	dynasty=20000017
+	dynasty=20000000
 	religion="lilitu"
 	culture="german"
 	father=1
@@ -129,7 +129,7 @@
 }
 3 = {	
 	name="Min-Joo" 
-	dynasty=20000017
+	dynasty=20000000
 	religion="lilitu"
 	culture="german"
 	father=2
