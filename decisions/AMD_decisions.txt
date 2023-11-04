@@ -225,12 +225,20 @@ targetted_decisions = {
 		ai_target_filter = self		#AI가 이걸 쓰게 해준다면 CPU가 나를 암살할지도 모릅니다.
 		from_potential = {	#12세 이상 인간플레이어	
 			ai = no
-			or = {
-				age = 7
-				trait=yiminhyee
+			age = 12
+			OR = {
+				AMD_T_NOT_BUSY = yes		#죄수x 전투x 은신x 성지순례x 행불x
+				trait = yiminhyee
 			}
 		}
 		potential = {	#배우자, 첩, 연인, 성노예, 비밀친구. 감옥x, 외교가능거리.
+			OR = {
+				any_lover = {	character = FROM	}
+				any_spouse = {	character = FROM	}
+				any_consort = {	character = FROM	}
+				has_minor_title = title_AMD_courtesan
+				has_opinion_modifier = {	who = FROM	modifier = AMD_opinion_to_slave	}
+			}
 			NOT = {	race = horse	}
 			prisoner = no
 		}
