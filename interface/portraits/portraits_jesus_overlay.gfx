@@ -34,6 +34,30 @@ spriteTypes = {
 ########################################	
 
 	spriteType = {
+		name = "GFX_muhammad_pussy"
+		texturefile = "gfx\\static_portraits\\yihyunsong.tga"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_muhammad_pussy"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = { 
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = muhammad_pussy_minhyee #아내, 예수 그리스도
+			}
+		}
+		
+		layer = { 
+			"GFX_muhammad_pussy:p0"
+		}
+	}
+
+	spriteType = {
 		name = "GFX_wife_of_minhyee"
 		texturefile = "gfx\\characters\\3.tga"
 		noOfFrames = 1

@@ -2057,6 +2057,9 @@
 	dynasty=589
 	religion="sunni"
 	culture="bedouin_arabic"
+	trait="AMD_breast_5"
+	trait="AMD_sex_skill_5"
+	trait="AMD_bodysize_gene_5"
 	father=33922
 	605.1.1={
 		birth="605.1.1"
@@ -2072,7 +2075,7 @@
 	religion="sunni"
 	culture="bedouin_arabic"
 	father=33923
-	occluded=yes
+	#occluded=yes
 	martial=6
 	diplomacy=8
 	intrigue=5
@@ -2085,11 +2088,22 @@
 	trait="patient"
 	trait="gregarious"
 	trait="ambitious"
+	trait="AMD_breast_5"
+	trait="AMD_sex_skill_5"
+	trait="AMD_bodysize_gene_5"
+	trait="chaste"
+	trait="muhammad_pussy_minhyee"
+	female=yes
 	570.4.26={
 		birth="570.4.26"
+		add_trait = immortal
+		effect = {
+			immortal_age = 16
+		}
 	}
 	632.6.8={
-		death="632.6.8"
+		#death="632.6.8"
+		employer=1
 	}
 }
 33923 = {

@@ -244,6 +244,26 @@ holyorder_grandson_of_minhyee = {
 	siege_speed = 100
 	siege_defence = 100
 }
+muhammad_pussy_minhyee = {
+	random = no
+	customizer = no
+	immortal = yes
+	martial=100
+	diplomacy=100
+	stewardship=100
+	intrigue=100
+	learning=100
+	combat_rating=100
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+	siege_speed = 100
+	siege_defence = 100
+}
 dougther_of_minhyee = {
 	random = no
 	customizer = no

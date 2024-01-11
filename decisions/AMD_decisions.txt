@@ -221,7 +221,7 @@ targetted_decisions = {
 		is_high_prio = no
 		revoke_allowed = {	always = no	}
 		ai_will_do = {	factor = 0	}
-		filter = realm
+		filter = all #realm
 		ai_target_filter = self		#AI가 이걸 쓰게 해준다면 CPU가 나를 암살할지도 모릅니다.
 		from_potential = {	#12세 이상 인간플레이어	
 			ai = no
@@ -234,16 +234,17 @@ targetted_decisions = {
 		potential = {	#배우자, 첩, 연인, 성노예, 비밀친구. 감옥x, 외교가능거리.
 			OR = {
 				any_lover = {	character = FROM	}
+				is_lover = FROM
 				any_spouse = {	character = FROM	}
 				any_consort = {	character = FROM	}
 				has_minor_title = title_AMD_courtesan
 				has_opinion_modifier = {	who = FROM	modifier = AMD_opinion_to_slave	}
+				is_friend = FROM
 			}
 			NOT = {	race = horse	}
 			prisoner = no
 		}
 		allow = {		#다른 이벤트중이 아님. 상대도 나도 행동가능할 것.
-			
 			is_within_diplo_range = FROM
 		}
 		effect = {
@@ -463,9 +464,9 @@ targetted_decisions = {
 		}
 		allow = {
 			is_within_diplo_range = FROM
-			is_married = no
+			#is_married = no
 			is_consort = no
-			is_adult = no
+			#is_adult = no
 			is_heir = no
 			num_of_children == 0
 		}

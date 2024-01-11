@@ -65,6 +65,11 @@
 			add_spouse_matrilineal=95140
 		}
 	}
+	605.1.1 = {
+		effect = {
+			add_spouse_matrilineal=95140
+		}
+	}
 	812.1.1 = {
 		effect = {
 			add_spouse_matrilineal=217704
@@ -124,7 +129,7 @@
 	add_trait = son_of_minhyee
 	2.1.1={
 		birth=yes
-		immortal_age = 15
+		immortal_age = 16
 	}
 }
 3 = {	
@@ -142,7 +147,7 @@
 	add_trait = grandson_of_minhyee
 	12.1.1={
 		birth=yes
-		immortal_age = 9
+		immortal_age = 16
 		employer = 1
 	}
 }
@@ -161,7 +166,7 @@
 	add_trait = holyorder_grandson_of_minhyee
 	25.1.1={
 		birth=yes
-		immortal_age = 9
+		immortal_age = 16
 		employer = 1
 	}
 }
