@@ -372,7 +372,7 @@
 	}	
 }
 199002={
-	name="Suk"
+	name="Hang"
 	dynasty=20000012
 	culture=german 
 	religion=lilitu
@@ -422,7 +422,7 @@
 	}	
 }
 199006={
-	name="Phil"
+	name="Tol"
 	dynasty=20000014
 	culture=german 
 	religion=lilitu
@@ -610,7 +610,7 @@
 	}	
 }
 199021={
-	name="Liang"
+	name="En"
 	dynasty=1051150
 	religion = buddhist
 	culture = han

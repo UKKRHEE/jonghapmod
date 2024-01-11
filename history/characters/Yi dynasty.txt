@@ -4106,7 +4106,7 @@
 	}
 }
 95181= {
-	name="Ai" #
+	name="Hyunsong" #
 	dynasty=1051150
 	religion=buddhist
 	culture=han
@@ -4117,6 +4117,7 @@
 		birth=yes
 		employer = 1
 		add_trait = immortal
+		add_trait = chaste
 		effect = {
 			c_95181 = {
 				immortal_age = 16

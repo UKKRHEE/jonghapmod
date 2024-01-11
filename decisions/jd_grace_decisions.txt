@@ -4426,6 +4426,16 @@ offmap_decisions = {
 				OR = {
 					dynasty = ROOT_FROM
 					is_close_relative = ROOT_FROM
+					AND = {
+						FROM = {
+							trait = yiminhyee
+						}
+						FROMFROM = {
+							any_owned_bloodline = {	
+								has_bloodline_flag = yi_joseon_bloodline
+							}	
+						}
+					}
 				}
 				OR = {
 					character = ROOT_FROM
