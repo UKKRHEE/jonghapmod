@@ -4112,13 +4112,14 @@
 	culture=han
 	female = yes
 	father=95178
+	trait = li_hyunsong_pussy_minhyee
 	1017.1.1={
 		birth=yes
 		employer = 1
 		add_trait = immortal
 		effect = {
 			c_95181 = {
-				set_immortal_age = 16
+				immortal_age = 16
 			}
 		}
 	}

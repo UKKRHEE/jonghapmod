@@ -310,6 +310,7 @@
 	dynasty=20000009
 	religion="catholic"
 	culture="old_frankish"
+	father=345012
 	547.1.1={
 		birth=yes
 	}

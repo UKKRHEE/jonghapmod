@@ -67,7 +67,7 @@
 	}
 	605.1.1 = {
 		effect = {
-			add_spouse_matrilineal=95140
+			add_spouse_matrilineal=33922
 		}
 	}
 	812.1.1 = {
@@ -344,4 +344,331 @@
 		name = "Taejo"
 		death=yes
 	}
+}
+
+######	
+199000={
+	name="Kon"
+	dynasty=20000012
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=5
+	add_trait=minhyee
+	1053.1.1={ 
+	    birth=yes 
+	}	
+}
+199001={
+	name="Suk"
+	dynasty=20000012
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=5
+	add_trait=minhyee
+	1058.1.1={ 
+	    birth=yes 
+	}	
+}
+199002={
+	name="Suk"
+	dynasty=20000012
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=5
+	add_trait=minhyee
+	1061.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199003={
+	name="Dang"
+	dynasty=20000013
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=6
+	add_trait=minhyee
+	1061.1.1={ 
+	    birth=yes 
+	}	
+}
+199004={
+	name="Yeo"
+	dynasty=20000013
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=6
+	add_trait=minhyee
+	1063.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199005={
+	name="Phil"
+	dynasty=20000014
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=7
+	add_trait=minhyee
+	1060.1.1={ 
+	    birth=yes 
+	}	
+}
+199006={
+	name="Phil"
+	dynasty=20000014
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=7
+	add_trait=minhyee
+	1064.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199007={
+	name="Kang"
+	dynasty=20000015
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=8
+	add_trait=minhyee
+	1055.1.1={ 
+	    birth=yes 
+	}	
+}
+199008={
+	name="Mina"
+	dynasty=20000015
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=8
+	add_trait=minhyee
+	1058.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199009={
+	name="Ik"
+	dynasty=20000016
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=9
+	add_trait=minhyee
+	1058.1.1={ 
+	    birth=yes 
+	}	
+}
+199010={
+	name="Wal"
+	dynasty=20000016
+	culture=german 
+	religion=lilitu
+	father=1
+	mother=9
+	add_trait=minhyee
+	1063.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199011={
+	name="Muhammad"
+	dynasty=7296
+	religion="sunni"
+	culture="bedouin_arabic"
+	father=1
+	mother=33922
+	add_trait=minhyee
+	add_trait=sayyid
+	1046.1.1={ 
+	    birth=yes 
+	}	
+}
+199012={
+	name="Ali"
+	dynasty=7296
+	religion="sunni"
+	culture="bedouin_arabic"
+	father=1
+	mother=33922
+	add_trait=minhyee
+	add_trait=sayyid
+	1049.1.1={ 
+	    birth=yes 
+	}	
+}
+199013={
+	name="Abdullah"
+	dynasty=7296
+	religion="sunni"
+	culture="bedouin_arabic"
+	father=1
+	mother=33922
+	add_trait=minhyee
+	add_trait=sayyid
+	1054.1.1={ 
+	    birth=yes 
+	}	
+}
+199014={
+	name="Sahba"
+	dynasty=7296
+	female=yes
+	religion="sunni"
+	culture="bedouin_arabic"
+	father=1
+	mother=33922
+	add_trait=minhyee
+	add_trait=sayyid
+	1054.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199015={
+	name="Lian"
+	dynasty=1051152
+	religion = taoist
+	culture = han
+	father=1
+	mother=217704
+	add_trait=minhyee
+	1051.1.1={ 
+	    birth=yes 
+	}	
+}
+199016={
+	name="Kai"
+	dynasty=1051152
+	religion = taoist
+	culture = han
+	father=1
+	mother=217704
+	add_trait=minhyee
+	1054.1.1={ 
+	    birth=yes 
+	}	
+}
+199017={
+	name="Zhang"
+	dynasty=1051152
+	religion = taoist
+	culture = han
+	father=1
+	mother=217704
+	add_trait=minhyee
+	1054.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199018={
+	name="Huo"
+	dynasty=1051150
+	religion = buddhist
+	culture = han
+	father=1
+	mother=95181
+	add_trait=minhyee
+	1032.1.1={ 
+	    birth=yes 
+	}	
+}
+199019={
+	name="Sheng"
+	dynasty=1051150
+	religion = buddhist
+	culture = han
+	father=199018
+	add_trait=minhyee
+	1055.1.1={ 
+	    birth=yes 
+	}	
+}
+199020={
+	name="Liang"
+	dynasty=1051150
+	religion = buddhist
+	culture = han
+	father=199018
+	add_trait=minhyee
+	1061.1.1={ 
+	    birth=yes 
+	}	
+}
+199021={
+	name="Liang"
+	dynasty=1051150
+	religion = buddhist
+	culture = han
+	father=199018
+	add_trait=minhyee
+	1062.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199022={
+	name="Wilhelm"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=1
+	mother=345021
+	add_trait=minhyee
+	1053.1.1={ 
+	    birth=yes 
+	}	
+}
+199023={
+	name="Ludwig"
+	dynasty=20000007
+	religion="catholic"
+	culture="german"
+	father=1
+	mother=345021
+	add_trait=minhyee
+	1061.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199024={
+	name="Octavianus"
+	dynasty=20000018
+	religion=catholic
+	culture=roman
+	father=1
+	mother=95140
+	add_trait=minhyee
+	add_trait=lustful
+	1054.1.1={ 
+	    birth=yes 
+	}	
+}
+199025={
+	name="Bisantianus"
+	dynasty=20000018
+	religion=catholic
+	culture=roman
+	father=1
+	mother=95140
+	add_trait=minhyee
+	add_trait=lustful
+	1062.1.1={ 
+	    birth=yes 
+	}	
 }
