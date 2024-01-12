@@ -2435,7 +2435,7 @@
 	dynasty=542
 	religion="norse_pagan"
 	culture="old_frankish"
-	father=95097
+	father=95096
 	390.1.1 = {
 		birth=yes
 	}

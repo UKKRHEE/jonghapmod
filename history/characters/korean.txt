@@ -672,3 +672,504 @@
 	    birth=yes 
 	}	
 }
+#
+199026={
+	name="Seokwoo"
+	dynasty = 20000017
+	religion=lilitu
+	culture=german
+	add_trait=AMD_penis_5
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_virgin
+	add_trait=minhyee
+	father = 4
+	1038.1.1={
+		birth=yes
+	}
+}
+199027={
+	name="Seokwan"
+	dynasty = 20000017
+	religion=lilitu
+	culture=german
+	add_trait=AMD_penis_5
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_virgin
+	add_trait=minhyee
+	father = 4
+	1040.1.1={
+		birth=yes
+	}
+}
+199028={
+	name="Seokgon"
+	dynasty = 20000017
+	religion=lilitu
+	culture=german
+	add_trait=AMD_penis_5
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_virgin
+	add_trait=minhyee
+	father = 4
+	1044.1.1={
+		birth=yes
+	}
+}
+#
+199029={
+	name="Hansang"
+	dynasty = 20000000
+	religion=lilitu
+	culture=german
+	add_trait=AMD_penis_5
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_virgin
+	add_trait=minhyee
+	father = 3
+	550.1.1={
+		birth=yes
+		immortal_age = 19
+	}
+	891.1.1 = {
+		death=yes
+	}
+}
+
+199030={
+	name="Dongcheon"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	add_trait=AMD_penis_5
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_virgin
+	add_trait=minhyee
+	father=199029
+	653.1.1={
+		birth=yes
+	}
+	708.1.1 = {
+		death=yes
+	}
+}
+199031={
+	name="Hu"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	add_trait=AMD_penis_5
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_virgin
+	add_trait=minhyee
+	father=199030
+	681.1.1={
+		birth=yes
+	}
+	739.1.1 = {
+		death=yes
+	}
+}
+199032={
+	name="Shik"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	add_trait=AMD_penis_5
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_virgin
+	add_trait=minhyee
+	father=199031
+	714.1.1={
+		birth=yes
+	}
+	780.1.1 = {
+		death=yes
+	}
+}
+#
+199033={
+	name="Dongbo"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	add_trait=minhyee
+	father=199029
+	658.1.1={
+		birth=yes
+	}
+	692.1.1 = {
+		death=yes
+	}
+}
+199034={
+	name="Wonsong"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	add_trait=minhyee
+	father=199033
+	690.1.1={
+		birth=yes
+	}
+	704.1.1 = {
+		death=yes
+	}
+}
+199035={
+	name="Wongyeong"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	add_trait=minhyee
+	father=199033
+	691.1.1={
+		birth=yes
+	}
+	749.1.1 = {
+		death=yes
+	}
+}
+199036={
+	name="Tangyu"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	add_trait=minhyee
+	father=199035
+	728.1.1={
+		birth=yes
+	}
+	749.1.1 = {
+		death=yes
+	}
+}
+###############
+199037={
+	name="Tui"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199032
+	add_trait=minhyee
+	732.1.1={
+		birth=yes
+	}
+	794.1.1 = {
+		death=yes
+	}
+}
+199038={
+	name="Ki"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199037
+	add_trait=minhyee
+	751.1.1={
+		birth=yes
+	}
+	818.1.1 = {
+		death=yes
+	}
+}
+199039={
+	name="Sun"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199038
+	add_trait=minhyee
+	775.1.1={
+		birth=yes
+	}
+	822.2.22 = {
+		death=yes
+	}
+}
+199040={
+	name="Yun"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199038
+	add_trait=minhyee
+	778.1.1={
+		birth=yes
+	}
+	831.1.1 = {
+		death=yes
+	}
+}
+199041={
+	name="Seung"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199040
+	add_trait=minhyee
+	808.1.1={
+		birth=yes
+	}
+	893.1.1 = {
+		death=yes
+	}
+}
+199042={
+	name="Yo"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199041
+	add_trait=minhyee
+	842.1.1={
+		birth=yes
+	}
+	920.1.1 = {
+		death=yes
+	}
+}
+199043={
+	name="Wan"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199042
+	add_trait=minhyee
+	891.1.1={
+		birth=yes
+	}
+	941.1.1 = {
+		death=yes
+	}
+}
+199044={
+	name="Han"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199043
+	add_trait=minhyee
+	930.1.1={
+		birth=yes
+	}
+	994.1.1 = {
+		death=yes
+	}
+}
+199045={
+	name="Sul"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199044
+	add_trait=minhyee
+	956.1.1={
+		birth=yes
+	}
+	1016.1.1 = {
+		death=yes
+	}
+}
+199046={
+	name="Geung"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199045
+	add_trait=minhyee
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_bodysize_gene_5
+	add_trait=AMD_penis_5
+	1000.1.1={
+		birth=yes
+	}
+	1014.1.1={
+		add_spouse = 199054
+	}
+	1058.1.1 = {
+		death=yes
+	}
+}
+199047={
+	name="U"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199046
+	mother=199054
+	add_trait=minhyee
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_bodysize_gene_5
+	add_trait=AMD_penis_5
+	1021.1.1={
+		birth=yes
+	}
+	1103.1.1 = {
+		death=yes
+	}
+}
+199048={
+	name="Cheong"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199047
+	add_trait=minhyee
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_bodysize_gene_5
+	add_trait=AMD_penis_5
+	1040.1.1={
+		birth=yes
+	}
+	1125.1.1 = {
+		death=yes
+	}
+}
+199049={
+	name="Ju"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199045
+	add_trait=minhyee
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_bodysize_gene_5
+	add_trait=AMD_penis_5
+	1002.1.1={
+		birth=yes
+	}
+	1016.1.1={
+		add_spouse=199055
+	}
+	1087.1.1 = {
+		death=yes
+	}
+}
+199050={
+	name="Dan"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199049
+	mother=199055
+	add_trait=minhyee
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_bodysize_gene_5
+	add_trait=AMD_penis_5
+	1018.1.1={
+		birth=yes
+	}
+	1091.1.1 = {
+		death=yes
+	}
+}
+199051={
+	name="Hwi"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199049
+	mother=199055
+	add_trait=minhyee
+	add_trait=AMD_sex_skill_5
+	add_trait=AMD_bodysize_gene_5
+	add_trait=AMD_penis_5
+	1020.1.1={
+		birth=yes
+	}
+	1320.1.1 = {
+		death=yes
+	}
+}
+199052={
+	name="Yerang"
+	female = yes
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199049
+	mother=199055
+	add_trait=minhyee
+	1026.1.1={
+		birth=yes
+	}
+	1112.1.1 = {
+		death=yes
+	}
+}
+199053={
+	name="Rim"
+	female = yes
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199049
+	mother=199055
+	add_trait=minhyee
+	1031.1.1={
+		birth=yes
+	}
+	1120.1.1 = {
+		death=yes
+	}
+}
+199054={
+	name="Ai-rin"
+	female = yes
+	#historical = yes
+	culture=german 
+	religion=lilitu
+	1002.1.1={ 
+	    birth=yes 
+	}	
+}
+199055={
+	name="Mirang"
+	female = yes
+	#historical = yes
+	culture=german 
+	religion=lilitu
+	1001.1.1={ 
+	    birth=yes 
+	}	
+}
+#
+199056 = {
+	name = "Aguda" # fictional
+	dynasty = 1051112 # Wanyan
+	religion = buddhist
+	culture = khitan
+	father = 194330
+	976.1.1 = {
+		birth = yes
+	}
+	1025.10.7 = {
+		death = yes
+	}
+}
+199057 = {
+	name = "Helibo" # fictional
+	dynasty = 1051112 # Wanyan
+	religion = buddhist
+	culture = khitan
+	father = 199056
+	981.2.12 = {
+		birth = yes
+	}
+	1036.1.20 = {
+		death = yes
+	}
+}
+199058 = {
+	name = "Karnal" # fictional
+	dynasty = 1051112 # Wanyan
+	religion = buddhist
+	culture = khitan
+	father = 199056
+	990.1.1 = {
+		birth = yes
+	}
+	1048.1.1 = {
+		death = yes
+	}
+}

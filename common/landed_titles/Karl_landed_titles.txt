@@ -1,4 +1,4 @@
-k_karling = {
+d_karling = {
 	color = { 48 92 164 }
 	color2 = { 0 0 154 }
 	

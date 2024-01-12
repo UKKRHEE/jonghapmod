@@ -8,14 +8,18 @@ korean_adj;Korean;;;;;;;;;;;;;;x
 korean-min;Korean;;;;;;;;;;;;;;x
 korean-min_adj;Korean;;;;;;;;;;;;;;x
 k_westkorea;West Korea;;;;;;;;;;;;;;x
-k_kingdom_of_luoyang;Kingdom of Luoyang;;;;;;;;;;;;;;x
-k_kingdom_of_luoyang_adj;Luoyanges;;;;;;;;;;;;;;x
-k_karling;Kingdom of Karling;;;;;;;;;;;;;;x
-k_karling_adj;Frankish;;;;;;;;;;;;;;x
+d_kingdom_of_luoyang;Tang;;;;;;;;;;;;;;x
+d_kingdom_of_luoyang_adj;Tang;;;;;;;;;;;;;;x
+d_seja_of_human;Mankind;;;;;;;;;;;;;;x
+d_seja_of_human_adj;Mankind;;;;;;;;;;;;;;x
+d_heir_of_human;Hum;;;;;;;;;;;;;;x
+d_heir_of_human_adj;Human;;;;;;;;;;;;;;x
+d_karling;Karling;;;;;;;;;;;;;;x
+d_karling_adj;Karling;;;;;;;;;;;;;;x
 GOD_YI;Yi Min-hyee;;;;;;;;;;;;;;x
 
-e_westkorea;Empire of Great Hwan;;;;;;;;;;;;;;x
-e_westkorea_adj;Hwanean;;;;;;;;;;;;;;x
+e_westkorea;Galactic Imperium;;;;;;;;;;;;;;x
+e_westkorea_adj;Galactic;;;;;;;;;;;;;;x
 e_china;Chinese Empire;;;;;;;;;;;;;;x
 e_koreanempire_adj;Korean;;;;;;;;;;;;;;x
 e_dyn_e_korea_west_governor;Turkestanious De Latium;;;;;;;;;;;;;;x

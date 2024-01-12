@@ -2896,7 +2896,7 @@
 	name = "Hua"
 	religion = taoist
 	culture = han
-	father=95100
+	father=95099
 	trait = legit_bastard
 	#father = Wu Jian
 	#mother = Lady Song

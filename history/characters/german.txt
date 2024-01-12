@@ -24286,6 +24286,7 @@
 	trait="deceitful"
 	trait="tough_soldier"
 	#father=500008
+	father=462621
 	1337.2.25 = {
 		birth="1337.2.25"
 	}
@@ -45158,7 +45159,7 @@
 	dynasty=664
 	culture="german"
 	religion="catholic"
-	father=95104
+	father=95102
 	620.1.1 = {
 		birth="620.1.1"
 	}

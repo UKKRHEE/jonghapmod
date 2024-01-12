@@ -51,3 +51,50 @@ e_koreanempire = {
 		ai = no
 	}
 }
+d_seja_of_human={
+	color={ 18 7 116 }
+	color2={ 18 7 116 }
+	
+	capital = 160 #
+	
+	dignity=100
+
+	landless=yes
+	
+	primary=yes
+	
+	purple_born_heirs = yes
+	dynasty_title_names = no
+	creation_requires_capital=no
+}
+d_heir_of_human={
+	color={ 18 7 116 }
+	color2={ 18 7 116 }
+	
+	capital = 160 #
+	
+	dignity=100
+
+	landless=yes
+	
+	primary=yes
+	
+	purple_born_heirs = yes
+	dynasty_title_names = no
+	creation_requires_capital=no
+}
+d_kingdom_of_luoyang={
+	color={ 245 253 100 }
+	
+	capital = 160 #
+	
+	dignity=100
+
+	landless=yes
+	
+	primary=yes
+	
+	purple_born_heirs = yes
+	dynasty_title_names = no
+	creation_requires_capital=no
+}

@@ -1,0 +1,60 @@
+10.1.1 = {
+	liege = e_westkorea
+	holder = 2
+	law = vice_royalty_2
+	law = status_of_women_4
+	law = revoke_title_law_2
+	law = ze_administration_laws_2
+	law = centralization_4
+	law = vassal_wars_law_2
+	law = out_of_realm_inheritance_law_1
+	law = succ_primogeniture
+}
+85.1.1 = {
+	holder = 3
+}
+590.1.1 = {
+	holder = 199029
+}
+653.1.1 = {
+	holder = 199030
+}
+708.1.1 = {
+	holder = 199031
+}
+739.1.1 = {
+	holder = 199032
+}
+780.1.1 = {
+	holder = 199037
+}
+794.1.1 = {
+	holder = 199038
+}
+818.1.1 = {
+	holder = 199039
+}
+822.2.22 = {
+	holder = 199040
+}
+831.1.1 = {
+	holder = 199041
+}
+893.1.1 = {
+	holder = 199042
+}
+920.1.1 = {
+	holder = 199043
+}
+941.1.1 = {
+	holder = 199044
+}
+994.1.1 = {
+	holder = 199045
+}
+1016.1.1 = {
+	holder = 199046
+}
+1058.1.1 = {
+	holder = 199047
+}

@@ -622,6 +622,7 @@
 	trait=quick
 	trait=brilliant_strategist
 	trait=brave
+	father=4
 	830.1.1={
 		birth=yes
 		create_bloodline = {
@@ -6453,6 +6454,7 @@
 	dynasty = 502
 	religion = norse_pagan
 	culture = norse
+	father = 3
 	570.1.1 = {
 		birth = yes
 	}

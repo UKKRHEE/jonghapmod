@@ -5226,7 +5226,8 @@
 	dynasty = 101929 # Batyabar
 	religion = tengri_pagan 
 	culture = mongol
-	#father = 
+	trait = legit_bastard
+	father = 217176
 	mother = 217345
 	1035.12.13 = { birth = yes }
 	1051.4.10 = { add_spouse = 217353 }

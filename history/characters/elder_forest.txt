@@ -102,5 +102,6 @@
     add_trait=bastard add_trait=immortal
 	821.1.1={
 		birth=yes
+		immortal_age = 16
 	}
 }

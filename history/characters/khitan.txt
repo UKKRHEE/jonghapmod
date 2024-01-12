@@ -307,6 +307,7 @@
 	dynasty = 1051111 # Yuzhi
 	religion = buddhist
 	culture = khitan
+	father = 199057
 	1014.5.9 = {
 		birth = yes
 	}
@@ -377,6 +378,7 @@
 	dynasty = 1051112 # Wanyan
 	religion = buddhist
 	culture = khitan
+	father = 199057
 	1006.5.24 = {
 		birth = yes
 	}
