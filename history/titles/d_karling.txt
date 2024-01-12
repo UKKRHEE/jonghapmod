@@ -1,7 +1,14 @@
 
 768.9.24={
 	holder = 144999 #Carloman I
-	law = agnatic_succession
+	law = vice_royalty_2
+	law = status_of_women_4
+	law = revoke_title_law_2
+	law = ze_administration_laws_2
+	law = centralization_4
+	law = vassal_wars_law_2
+	law = out_of_realm_inheritance_law_1
+	law = succ_primogeniture
 }
 769.1.1 = {
 	de_jure_liege = e_france
@@ -11,7 +18,14 @@
 }
 817.1.1={
 	holder = 30227 #Lothair I
-	law = agnatic_succession
+	law = vice_royalty_2
+	law = status_of_women_4
+	law = revoke_title_law_2
+	law = ze_administration_laws_2
+	law = centralization_4
+	law = vassal_wars_law_2
+	law = out_of_realm_inheritance_law_1
+	law = succ_primogeniture
 }
 855.8.22={
 	holder = 144998 #Lothair II

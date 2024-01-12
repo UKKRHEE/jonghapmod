@@ -891,7 +891,7 @@
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199038
+	father=199061
 	add_trait=minhyee
 	778.1.1={
 		birth=yes
@@ -1068,13 +1068,12 @@
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199049
-	mother=199055
+	father=199050
 	add_trait=minhyee
 	add_trait=AMD_sex_skill_5
 	add_trait=AMD_bodysize_gene_5
 	add_trait=AMD_penis_5
-	1020.1.1={
+	1040.1.1={
 		birth=yes
 	}
 	1320.1.1 = {
@@ -1082,15 +1081,13 @@
 	}
 }
 199052={
-	name="Yerang"
-	female = yes
+	name="Ye"
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199049
-	mother=199055
+	father=199050
 	add_trait=minhyee
-	1026.1.1={
+	1046.1.1={
 		birth=yes
 	}
 	1112.1.1 = {
@@ -1099,14 +1096,12 @@
 }
 199053={
 	name="Rim"
-	female = yes
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199049
-	mother=199055
+	father=199052
 	add_trait=minhyee
-	1031.1.1={
+	1061.1.1={
 		birth=yes
 	}
 	1120.1.1 = {
@@ -1171,5 +1166,119 @@
 	}
 	1048.1.1 = {
 		death = yes
+	}
+}
+#
+199059={
+	name="Sok"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199036
+	add_trait=minhyee
+	749.1.1={
+		birth=yes
+	}
+	816.1.1 = {
+		death=yes
+	}
+}
+199060={
+	name="Jang"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199032
+	add_trait=minhyee
+	735.1.1={
+		birth=yes
+	}
+	779.1.1 = {
+		death=yes
+	}
+}
+199061={
+	name="Lang"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199060
+	add_trait=minhyee
+	756.1.1={
+		birth=yes
+	}
+	815.1.1 = {
+		death=yes
+	}
+}
+#
+199062={
+	name="Hans"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199060
+	add_trait=minhyee
+	1056.1.1={
+		birth=yes
+	}
+	1320.1.1 = {
+		death=yes
+	}
+}
+199063={
+	name="Wilhelm"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199060
+	add_trait=minhyee
+	1057.1.1={
+		birth=yes
+	}
+	1320.1.1 = {
+		death=yes
+	}
+}
+199064={
+	name="Karl"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199060
+	add_trait=minhyee
+	1059.1.1={
+		birth=yes
+	}
+	1320.1.1 = {
+		death=yes
+	}
+}
+199065={
+	name="Alfred"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199060
+	add_trait=minhyee
+	1061.1.1={
+		birth=yes
+	}
+	1320.1.1 = {
+		death=yes
+	}
+}
+199066={
+	name="Sevastien"
+	culture=german 
+	religion=lilitu
+	dynasty=20000000
+	father=199060
+	add_trait=minhyee
+	1063.1.1={
+		birth=yes
+	}
+	1320.1.1 = {
+		death=yes
 	}
 }

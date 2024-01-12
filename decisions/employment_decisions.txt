@@ -56,7 +56,7 @@ decisions = {
 		only_playable = yes
 
 		potential = {
-			NOT = { has_religion_feature = religion_matriarchal }
+			NOT = { has_religion_feature = religion_matriarchal religion = lilitu }
 		}
 		allow = {
 			piety = 25
@@ -69,7 +69,6 @@ decisions = {
 			create_random_priest = {
 				random_traits = yes
 				dynasty = random
-				female = yes
 				attributes = {
 					diplomacy = 2
 					learning = 8
@@ -78,16 +77,7 @@ decisions = {
 					martial = 2
 				}
 			}
-			new_character = { 
-				add_trait=AMD_sex_skill_5 
-				add_trait=AMD_bodysize_gene_5
-				add_trait=AMD_breast_5 
-				add_trait=AMD_virgin
-				add_trait=AMD_virgin_girl
-				add_trait=virgin
-				add_trait=chaste
-				add_trait=fair
-			
+			new_character = {			
 				remove_trait = slow
 				remove_trait = imbecile
 				remove_trait = dull
@@ -187,7 +177,10 @@ decisions = {
 		only_playable = yes
 
 		potential = {
-			has_religion_feature = religion_matriarchal
+			OR = {
+				has_religion_feature = religion_matriarchal
+				religion = lilitu
+			}
 		}
 		allow = {
 			piety = 25
@@ -203,13 +196,21 @@ decisions = {
 				female = yes
 				attributes = {
 					diplomacy = 2
-					learning = 8
+					learning = 10
 					stewardship = 2
 					intrigue = 2
 					martial = 2
 				}
 			}
-			new_character = {
+			new_character = { 
+				add_trait=AMD_sex_skill_5 
+				add_trait=AMD_bodysize_gene_5
+				add_trait=AMD_breast_5 
+				add_trait=AMD_virgin
+				add_trait=virgin
+				add_trait=chaste
+				add_trait=fair
+				
 				remove_trait = slow
 				remove_trait = imbecile
 				remove_trait = dull
