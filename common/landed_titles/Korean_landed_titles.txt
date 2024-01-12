@@ -93,6 +93,7 @@ d_kingdom_of_luoyang={
 	landless=yes
 	
 	primary=yes
+	title = "title_china_emperor"
 	
 	purple_born_heirs = yes
 	dynasty_title_names = no
