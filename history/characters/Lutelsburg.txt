@@ -114,8 +114,8 @@
 	dynasty=20000007
 	religion="catholic"
 	culture="german"
-	father=345005
-	322.1.5={
+	father=345007
+	342.1.5={
 		birth=yes
 	}
 	379.1.1={
@@ -396,11 +396,6 @@
 	mother=345021 #오카와니 폰 루텔스부르크
 	753.1.1={
 		birth=yes
-		effect = {
-			c_345028 = {
-				set_real_father=345020 #니니와 폰 루텔스부르크
-			}	
-		}
 	}	
 	821.1.1={
 		death=yes
@@ -553,7 +548,7 @@
 	name="Tentacle" #비운의 촉수괴물
 	dynasty=20000011
 	religion="catholic"
-	culture="tentacle_culture"
+	culture=german #"tentacle_culture"
 	father=345000
 	add_trait=immortal add_trait=tentacle_monster
 	110.1.1={
@@ -647,7 +642,7 @@
 	name="Atenb"
 	dynasty=20000008
 	religion="catholic"
-	culture="tentacle_culture"
+	culture=german #"tentacle_culture"
 	father=345040
 	mother=345046
 	add_trait=tentacle_monster add_trait=bastard 
@@ -662,7 +657,7 @@
 	name="Olden"
 	dynasty=20000008
 	religion="catholic"
-	culture="tentacle_culture"
+	culture=german #"tentacle_culture"
 	father=345040
 	mother=345046
 	add_trait=tentacle_monster add_trait=bastard 
@@ -677,7 +672,7 @@
 	name="Guner"
 	dynasty=20000011
 	religion="catholic"
-	culture="tentacle_culture"
+	culture=german #"tentacle_culture"
 	father=345040
 	mother=345046
 	add_trait=tentacle_monster add_trait=bastard 

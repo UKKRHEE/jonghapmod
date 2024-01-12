@@ -160,7 +160,7 @@
 }
 
 111009 = {
-	name="Caesar II"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -176,7 +176,7 @@
 }
 
 111010 = {
-	name="Caesar III"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -192,7 +192,7 @@
 }
 
 111011 = {
-	name="Caesar IV"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -208,7 +208,7 @@
 }
 
 111012 = {
-	name="Caesar V"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -224,7 +224,7 @@
 }
 
 111013 = {
-	name="Caesar VI"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -240,7 +240,7 @@
 }
 
 111014 = {
-	name="Caesar VII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -256,7 +256,7 @@
 }
 
 111015 = {
-	name="Caesar VIII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -271,7 +271,7 @@
 	}
 }
 111016 = {
-	name="Caesar IX"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -287,7 +287,7 @@
 }
 
 111017 = {
-	name="Caesar X"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -303,7 +303,7 @@
 }
 
 111018 = {
-	name="Caesar XI"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -319,7 +319,7 @@
 }
 
 111019 = {
-	name="Caesar XII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -335,7 +335,7 @@
 }
 
 111020 = {
-	name="Caesar XIII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -351,7 +351,7 @@
 }
 
 111021 = {
-	name="Augustus II"
+	name="Augustus"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -367,7 +367,7 @@
 }
 
 111022 = {
-	name="Caesar XIV"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -383,7 +383,7 @@
 }
 
 111023 = {
-	name="Caesar XV"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -399,7 +399,7 @@
 }
 
 111024 = {
-	name="Caesar XVI"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -415,7 +415,7 @@
 }
 
 111025 = {
-	name="Caesar XVII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -431,7 +431,7 @@
 }
 
 111026 = {
-	name="Caesar XVIII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -447,7 +447,7 @@
 }
 
 111027 = {
-	name="Caesar XIX"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -463,7 +463,7 @@
 }
 
 111028 = {
-	name="Caesar XX"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -479,7 +479,7 @@
 }
 
 111029 = {
-	name="Caesar XXI"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman
@@ -495,7 +495,7 @@
 }
 
 111030 = {
-	name="Caesar XXII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -512,7 +512,7 @@
 }
 
 111031= {
-	name="Caesar XXIII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -529,7 +529,7 @@
 }
 
 111032= {
-	name="Caesar XXIV"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -546,7 +546,7 @@
 }
 
 111033= {
-	name="Caesar XXV"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -563,7 +563,7 @@
 }
 
 111034= {
-	name="Caesar XXVI"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -580,7 +580,7 @@
 }
 
 111034= {
-	name="Caesar XXVII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -597,7 +597,7 @@
 }
 
 111035= {
-	name="Caesar XXVIII"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -614,7 +614,7 @@
 }
 
 111036= {
-	name="Caesar XXIX"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	dna="dgbdfhhcaap"
@@ -631,7 +631,7 @@
 }
 
 111037= {
-	name="Caesar XXX"
+	name="Caesar"
 	dynasty=8648
 	religion=catholic
 	culture=roman

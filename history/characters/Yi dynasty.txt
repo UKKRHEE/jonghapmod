@@ -115,7 +115,6 @@
 				set_real_father=14 
 			}	
 		}
-	
 	}
 	225.1.1={
 		death=yes
@@ -3771,7 +3770,7 @@
 	dynasty=1051150
 	religion=taoist
 	culture=han
-	father=247919
+	father=247879
 	723.1.1={
 		birth=yes
 		employer = 1

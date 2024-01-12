@@ -1,0 +1,7 @@
+1041.1.1 = {
+	liege = e_westkorea
+	holder = 345041
+}
+1090.1.1 = {
+	holder = 345042
+}

@@ -483,7 +483,7 @@
 	religion=shiite
 	culture=bedouin_arabic
 	add_trait=sayyid
-	father=120014
+	father=120012
 	989.1.1={
 		birth=yes
 	}

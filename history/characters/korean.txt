@@ -65,9 +65,79 @@
 			add_spouse_matrilineal=95140
 		}
 	}
+	221.1.1={
+		effect = {
+			c_159428 = {
+				set_father = 111004
+			}
+		}
+	}
 	605.1.1 = {
 		effect = {
 			add_spouse_matrilineal=33922
+		}
+	}
+	652.1.1 = {
+		effect = {
+			c_247912 = {
+				set_real_father=1
+			}	
+		}
+	}
+	654.1.1 = {
+		effect = {
+			c_247913 = {
+				set_real_father=1
+			}	
+		}
+	}
+	655.1.1 = {
+		effect = {
+			c_247914 = {
+				set_real_father=1
+			}	
+		}
+	}
+	665.1.1 = {
+		effect = {
+			c_247920 = {
+				set_real_father=1
+			}	
+		}
+	}
+	691.1.1 = {
+		effect = {
+			c_247820 = {
+				set_real_father=1
+			}	
+		}
+	}
+	693.1.1 = {
+		effect = {
+			c_247821 = {
+				set_real_father=1
+			}	
+		}
+	}
+	695.1.1 = {
+		effect = {
+			c_247822 = {
+				set_real_father=1
+			}	
+		}
+	}
+	697.1.1 = {
+		effect = {
+			c_247823 = {
+				set_real_father=1
+			}	
+		}
+	}
+	791.1.1 = {
+		effect = {
+			c_70120 = {
+				set_father=199039
+			}	
 		}
 	}
 	812.1.1 = {
@@ -102,6 +172,9 @@
 	}
 	1066.1.1 = {
 		effect = {
+			add_lover = 1733
+			add_lover = 1183
+			add_lover = 91012
 			add_spouse_matrilineal=220820
 			add_spouse_matrilineal=220822
 			add_spouse_matrilineal=100004
@@ -1217,7 +1290,7 @@
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199060
+	father=199048
 	add_trait=minhyee
 	1056.1.1={
 		birth=yes
@@ -1231,7 +1304,7 @@
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199060
+	father=199048
 	add_trait=minhyee
 	1057.1.1={
 		birth=yes
@@ -1245,7 +1318,7 @@
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199060
+	father=199048
 	add_trait=minhyee
 	1059.1.1={
 		birth=yes
@@ -1259,7 +1332,7 @@
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199060
+	father=199048
 	add_trait=minhyee
 	1061.1.1={
 		birth=yes
@@ -1273,7 +1346,7 @@
 	culture=german 
 	religion=lilitu
 	dynasty=20000000
-	father=199060
+	father=199048
 	add_trait=minhyee
 	1063.1.1={
 		birth=yes

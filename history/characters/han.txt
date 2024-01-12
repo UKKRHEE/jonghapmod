@@ -2975,11 +2975,6 @@
 	mother = 247920 #Princess Taiping
 	691.1.1 = {
 		birth = yes
-		effect = {
-			c_247820 = {
-				set_real_father=1
-			}	
-		}
 	}
 	713.8.2 = {
 		death = { death_reason = death_in_china_historic }
@@ -2994,11 +2989,6 @@
 	mother = 247920 # Princess Taiping
 	693.1.1 = {
 		birth = yes
-		effect = {
-			c_247821 = {
-				set_real_father=1
-			}	
-		}
 	}
 	713.8.2 = {
 		death = { death_reason = death_in_china_historic }
@@ -3014,11 +3004,6 @@
 	mother = 247920 # Princess Taiping
 	695.1.1 = {
 		birth = yes
-		effect = {
-			c_247822 = {
-				set_real_father=1
-			}	
-		}
 	}
 	734.1.1 = {
 		death = { death_reason = death_in_china_historic }
@@ -3034,11 +3019,6 @@
 	mother = 247920 # Princess Taiping
 	697.1.1 = {
 		birth = yes
-		effect = {
-			c_247823 = {
-				set_real_father=1
-			}	
-		}
 	}
 	738.1.1 = {
 		death = { death_reason = death_in_china_historic }
@@ -4375,11 +4355,6 @@
 	# spouse = Crown Princess Pei
 	652.1.1 = {
 		birth = yes
-		effect = {
-			c_247912 = {
-				set_real_father=1
-			}	
-		}
 	}
 	655.12.1 = {
 			remove_trait = child_of_consort
@@ -4399,11 +4374,6 @@
 	trait = child_of_consort
 	654.1.1 = {
 		birth = yes
-		effect = {
-			c_247913 = {
-				set_real_father=1
-			}	
-		}
 	}
 	654.6.1 = {
 		death = { death_reason = death_in_china_historic } # Has to die this way to count as a previous emperor
@@ -4419,11 +4389,6 @@
 	# spouse = # Lady Fang
 	655.1.1 = {
 		birth = yes
-		effect = {
-			c_247914 = {
-				set_real_father=1
-			}	
-		}
 	}
 	684.1.1 = {
 		death = { death_reason = death_in_china_historic } # Has to die this way to count as a previous emperor
@@ -4518,11 +4483,6 @@
 	# spouses = Xue Shao and Wu Youji
 	665.1.1 = {
 		birth = yes
-		effect = {
-			c_247920 = {
-				set_real_father=1
-			}	
-		}
 	}
 	713.8.2 = {
 		death = { death_reason = death_in_china_historic } # Has to die this way to count as a previous emperor

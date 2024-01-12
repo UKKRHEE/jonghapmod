@@ -1,0 +1,35 @@
+908.3.26 = {
+	active = yes
+	liege = e_westkorea
+	holder = 95164
+	law = vice_royalty_2
+	law = status_of_women_4
+	law = revoke_title_law_2
+	law = ze_administration_laws_2
+	law = centralization_4
+	law = vassal_wars_law_2
+	law = out_of_realm_inheritance_law_1
+	law = succ_primogeniture
+	law = dw_first_night_law_1
+}
+937.1.1 = {
+	holder = 95165
+}
+967.1.1 = {
+	holder = 95166
+}
+984.1.1 = {
+	holder = 95169
+}
+1028.1.1 = {
+	holder = 95170
+}
+1065.1.1 = {
+	holder = 95171
+}
+1095.1.1 = {
+	holder = 95182
+}
+1095.1.1 = {
+	holder = 95184
+}

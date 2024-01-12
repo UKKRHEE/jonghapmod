@@ -6262,6 +6262,7 @@
 171010 = {
 	name="Choscisko"
 	religion="slavic_pagan"
+	dynasty=20000000
 	culture="polish"
 	father=199059
 	795.1.2={
