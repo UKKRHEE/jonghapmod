@@ -3038,6 +3038,13 @@ character_event = {	id = AMD_PLAY.71000		#	2P	기본마간(말x여)
 		event_target:AMD_ET_ATK = {	AMD_E_FIRST_BLOOD = yes	}
 		event_target:AMD_ET_DEF = {	AMD_E_FIRST_BLOOD = yes	}
 		AMD_E_2P_ECHO = yes
+	}
+	option = {	name = AMD_OPT_2P_HORSE
+		trigger = {	trait = yiminhyee	}
+		tooltip_info = yiminhyee
+		event_target:AMD_ET_ATK = {	AMD_E_FIRST_BLOOD = yes	}
+		event_target:AMD_ET_DEF = {	AMD_E_FIRST_BLOOD = yes	}
+		AMD_E_2P_ECHO = yes
 		
 		random = {
 			chance = 100
