@@ -748,6 +748,7 @@ custom_tooltip_choose_patron_diety;êŠ‡ˆªÈÌ ª·Ì°´É;;;;;;;;;;;;x;
 CB_NAME_FORCE_VASSALIZATION;¡³Ý¬¸ é»ÝªÈÌÿ¼;;;;;;;;;;;;x;
 WAR_NAME_FORCE_VASSALIZATION;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ ¡³ÌùÇ é»ÝªÈÌÿ¼ ¬·Ì¬´Ý;;;;;;;;;;;;x;
 force_vassalization_desc;§Y$TARGET$§! ª¸¦¹ÉëÆÌ «µÉ²³«¹ éˆ‡ˆ¡³ ±ÈÐë‰²³Ù¢È¥³. äŒ¦·ã¥³¨¹Ì «ÈæÆÐëÆÐ ¥³ÝªÈÌùÇ «¹Ý«¹É«¸ æÆÐ«ÈåÆÌ ¡·Û«È ¢³ÛêÆÙ¢È¥³! ª³Ý¥³Ý¦µÝùÇ §Y¨¹Ýª·Ý§!ëÆÐ êˆèˆ²³«¹ ¬·Ì¬´ÝëÆÐ «ÈÐëŒ¯È¨¹Ì ¡³Ý¬¸çˆ ¥³ÝªÈÌùÇ é»ÝªÈÌëŒçˆ ª³ØëÆÐ êŠ «ÈÜêÆÙ¢È¥³. ¡³Ý¬¸ é»ÝªÈÌÿ¼ùÇ ¬Èê»É ìˆ¡·ÌëÆÌ ¥³ëÆØò¼ ¡³áêÆÙ¢È¥³. ª³Ý¥´¡³ ¥³ÝªÈÌéˆ¥³ §Y¬³ÉäÆÙ§!«È ¢³Þäˆ, ª³Ý¥´ùÇ «¹Ý«¹É ä‹èˆ¡³ §Y30§! «È²³«Èäˆ ª³Ý¥´ ï»Ý®È¬³¡³ ¥³ÝªÈÌò¼ ¡³áëÆÌ §Yì»Ýä‰§! –ˆåÆÌ ¡³áëÆÌ §YèÁÌÿ¼òÂÌ§!«¸ ê»É²´«µ ²³Ù¢È¥³.;;;;;;;;;;;;x;
+force_vassalization_korea_desc;§Y$TARGET$§! ª¸¦¹ÉëÆÌ «µÉ²³«¹ éˆ‡ˆ¡³ ±ÈÐë‰²³Ù¢È¥³. äŒ¦·ã¥³¨¹Ì «ÈæÆÐëÆÐ ¥³ÝªÈÌùÇ «¹Ý«¹É«¸ æÆÐ«ÈåÆÌ ¡·Û«È ¢³ÛêÆÙ¢È¥³! ª³Ý¥³Ý¦µÝùÇ §Y¨¹Ýª·Ý§!ëÆÐ êˆèˆ²³«¹ ¬·Ì¬´ÝëÆÐ «ÈÐëŒ¯È¨¹Ì ¡³Ý¬¸çˆ ¥³ÝªÈÌùÇ é»ÝªÈÌëŒçˆ ª³ØëÆÐ êŠ «ÈÜêÆÙ¢È¥³. ¡³Ý¬¸ é»ÝªÈÌÿ¼ùÇ ¬Èê»É ìˆ¡·ÌëÆÌ ¥³ëÆØò¼ ¡³áêÆÙ¢È¥³. ª³Ý¥´¡³ ¥³ÝªÈÌéˆ¥³ §Y¬³ÉäÆÙ§!«È ¢³Þäˆ, ª³Ý¥´ùÇ «¹Ý«¹É ä‹èˆ¡³ §Y30§! «È²³«Èäˆ ª³Ý¥´ ï»Ý®È¬³¡³ ¥³ÝªÈÌò¼ ¡³áëÆÌ §Yì»Ýä‰§! –ˆåÆÌ ¡³áëÆÌ §YèÁÌÿ¼òÂÌ§!«¸ ê»É²´«µ ²³Ù¢È¥³.;;;;;;;;;;;;x;
 dejure_duchy_claim_desc;§Y$TITLE$§!ëÆÌ(åÆÌ) ò¼ÌêÆÙ¬·ÉëŒçˆ §Y$CLAIMANT$§!ùÇ é»ÝªÈÌ«ÈÙ¢È¥³. ª³Ý¥³Ý¦µÝùÇ §Y¨¹Ýª·Ý§!ëÆÐ êˆèˆ²³«¹ ¬·Ì¬´ÝëÆÐ «ÈÐëŒ¯È¨¹Ì ë»Ì¬·Ì²³Ì ä»Ý¬³É¦¹ÝëÆÐ ®³¬È²³Ð êŠ «ÈÜêÆÙ¢È¥³.;;;;;;;;;;;;x;
 CB_NAME_GREATREALMCONFLICT;[Title.GetBaseName] ¥´¬·Ýé»É;;;;;;;;;;;;x;
 WAR_NAME_GREATREALMCONFLICT;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ ¡³ÌùÇ $OTHER_TITLE$ ¥´¬·Ýé»É;;;;;;;;;;;;x;
