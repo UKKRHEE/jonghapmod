@@ -2704,24 +2704,13 @@ invasion = {
 	sort_priority = 2000
 
 	can_use = {
-		OR = {
-			ROOT = {
-				mercenary = no
-			}
-			ROOT = {
-				trait = yiminhyee
-			}
-			title = e_westkorea
+		ROOT = {
+			mercenary = no
 		}
 	}
 
 	can_use_gui = {
-		OR = {
-			check_if_crusader_trigger = yes
-			NOT = {
-				title = e_westkorea
-			}
-		}
+		check_if_crusader_trigger = yes
 	}
 	
 	can_use_title = {
@@ -2732,7 +2721,6 @@ invasion = {
 			holder_scope = {
 				is_liege_or_above = FROM
 			}
-			title = e_westkorea
 		}
 	}
 	
@@ -2743,9 +2731,6 @@ invasion = {
 			}
 			holder_scope = {
 				is_liege_or_above = FROM
-			}
-			NOT = {
-				title = e_westkorea
 			}
 		}
 	}
@@ -3752,7 +3737,6 @@ crusade = {
 					}
 					mercenary = no
 				}
-				trait = yiminhyee
 			}
 		}
 	}
