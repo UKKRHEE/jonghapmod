@@ -7235,7 +7235,6 @@ narrative_event = {
 
 			}
 		}
-		event_target:is_rape_victim = { change_learning = 1 impregnate = event_target:is_rapist }
 		if = {
 			limit = {
 				event_target:is_rapist = {
