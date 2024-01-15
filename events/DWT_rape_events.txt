@@ -18179,6 +18179,88 @@ narrative_event = {
 		}
 		narrative_event = { id = DWT.8013 }
 	}
+	# Creampie: Impregnate!
+	option = { 
+		tooltip_info = yiminhyee
+		trigger = {
+			event_target:is_rapist = { trait = yiminhyee } # 
+		}
+		custom_tooltip = {	text = AMD_EV_OPT_LN_PS_TOOLTIP	}
+		name = DWTRapeDoCreampieminhyee
+		event_target:is_rape_victim = {
+			if = {
+				limit = { NOT = { trait = strong } }
+				random = {
+					chance = 20
+					add_trait = abdominal_pain
+				}
+				random = {
+					chance = 20
+					add_trait = cramps
+				}
+				random = {
+					chance = 20
+					add_trait = rash
+				}
+				random = {
+					chance = 20
+					add_trait = infection
+				}
+			}
+
+			if = {
+				limit = { trait = strong  }
+				random = {
+					chance = 10
+					add_trait = abdominal_pain
+				}
+				random = {
+					chance = 10
+					add_trait = cramps
+				}
+				random = {
+					chance = 10
+					add_trait = rash
+				}
+				random = {
+					chance = 10
+					add_trait = infection
+				}
+			}
+			opinion = {								# She will hate you more in the next few days with the rape fresh on her mind
+				modifier = raper_ruler
+				who = event_target:is_rapist
+			}
+			if = { 
+				limit = {							# if victim under 40 and not pregnant, 25% chance to get pregnant
+					NOT = { practical_age = 50 }
+					is_pregnant = no
+				}
+				random = { 
+					chance = 100
+					impregnate_cuckoo = event_target:is_rapist
+				}
+			}
+		}
+		event_target:is_rapist = { 					# calling the character event, you're the scope
+			if = {
+				limit = { trait = chaste } 
+				random = {
+					chance = 75
+					remove_trait = weak
+				}
+			}
+			if = {
+				limit = { NOT = { trait = lustful } }
+				random = {
+					chance = 25
+					add_trait = lustful
+					remove_trait = chaste
+				}
+			}
+		}
+		narrative_event = { id = DWT.8013 }
+	}
 	# Pull out:
 	option = { 
 		trigger = {

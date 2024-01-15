@@ -992,8 +992,8 @@ character_event = {	id = AMD_PLAY.20100		#	miss
 		tooltip_info = AMD_sex_skill_5
 		AMD_E_SETA_FLAG_DS = yes
 	}
-	option = {	name = AMD_EV_OPT_LN_DS
-		custom_tooltip = {	text = AMD_EV_OPT_LN_DS_TOOLTIP	}
+	option = {	name = AMD_EV_OPT_LN_PS
+		custom_tooltip = {	text = AMD_EV_OPT_LN_PS_TOOLTIP	}
 		trigger = {	trait = yiminhyee	}
 		tooltip_info = yiminhyee
 		AMD_E_SETA_FLAG_DS = yes
@@ -1134,8 +1134,8 @@ character_event = {	id = AMD_PLAY.20200		#	back
 		tooltip_info = AMD_sex_skill_5
 		AMD_E_SETA_FLAG_DS = yes
 	}
-	option = {	name = AMD_EV_OPT_LN_DS
-		custom_tooltip = {	text = AMD_EV_OPT_LN_DS_TOOLTIP	}
+	option = {	name = AMD_EV_OPT_LN_PS
+		custom_tooltip = {	text = AMD_EV_OPT_LN_PS_TOOLTIP	}
 		trigger = {	trait = yiminhyee	}
 		tooltip_info = yiminhyee
 		AMD_E_SETA_FLAG_DS = yes
@@ -1298,8 +1298,8 @@ character_event = {	id = AMD_PLAY.20300		#	ride
 		tooltip_info = AMD_sex_skill_5
 		AMD_E_SETA_FLAG_DS = yes
 	}
-	option = {	name = AMD_EV_OPT_LN_DS
-		custom_tooltip = {	text = AMD_EV_OPT_LN_DS_TOOLTIP	}
+	option = {	name = AMD_EV_OPT_LN_PS
+		custom_tooltip = {	text = AMD_EV_OPT_LN_PS_TOOLTIP	}
 		trigger = {	trait = yiminhyee	}
 		tooltip_info = yiminhyee
 		AMD_E_SETA_FLAG_DS = yes
@@ -3039,7 +3039,8 @@ character_event = {	id = AMD_PLAY.71000		#	2P	기본마간(말x여)
 		event_target:AMD_ET_DEF = {	AMD_E_FIRST_BLOOD = yes	}
 		AMD_E_2P_ECHO = yes
 	}
-	option = {	name = AMD_OPT_2P_HORSE
+	option = {	name = AMD_EV_OPT_LN_PS
+		custom_tooltip = {	text = AMD_EV_OPT_LN_PS_TOOLTIP	}
 		trigger = {	trait = yiminhyee	}
 		tooltip_info = yiminhyee
 		event_target:AMD_ET_ATK = {	AMD_E_FIRST_BLOOD = yes	}
