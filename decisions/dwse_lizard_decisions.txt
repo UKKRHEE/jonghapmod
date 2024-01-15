@@ -103,6 +103,17 @@ offmap_decisions = {
 				OR = {
 					dynasty = ROOT_FROM
 					is_close_relative = ROOT_FROM
+					AND = {
+						ROOT_FROM = {
+							trait = yiminhyee
+						}
+						OR = {
+							trait = minhyee
+							any_owned_bloodline = {	
+								has_bloodline_flag = bloodline_minhyeesblood
+							}	
+						}
+					}
 				}
 				OR = {
 					character = ROOT_FROM
@@ -112,7 +123,12 @@ offmap_decisions = {
 					}
 				}
 				NOT = { any_spouse = { character = ROOT_FROM } } 
-				is_adult = yes
+				OR = {
+					is_adult = yes	
+					ROOT_FROM = {
+						trait = yiminhyee
+					}
+				}
 				is_betrothed = no
 			}
 		}
@@ -123,7 +139,15 @@ offmap_decisions = {
 				FROMFROM = {
 					custom_tooltip = {
 						text = can_marry_chinese_royal_tt
-						can_marry = yes
+						OR = {
+							AND = {
+								religion = lilitu
+								ROOT_FROM = {
+									trait = yiminhyee
+								}
+							}
+							can_marry = yes
+						}
 						is_married = no
 					}
 				}
