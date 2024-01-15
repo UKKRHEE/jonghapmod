@@ -125,8 +125,11 @@ offmap_decisions = {
 				NOT = { any_spouse = { character = ROOT_FROM } } 
 				OR = {
 					is_adult = yes	
-					ROOT_FROM = {
-						trait = yiminhyee
+					AND = {
+						ROOT_FROM = {
+							trait = yiminhyee
+						}
+						age = 11
 					}
 				}
 				is_betrothed = no

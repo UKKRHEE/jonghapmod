@@ -506,6 +506,12 @@ character_event = {
 		is_adult = yes
 		NOT = { trait = dwf_ghost }
 		NOT = { has_character_flag = dw_run_once }
+		NOT = {
+			title = e_china_west_governor
+		}
+		NOT = {
+			title = e_offmap_dwse_voice
+		}
 	}
 	immediate = {
 		# We identify the bride and groom
@@ -612,6 +618,12 @@ narrative_event = {
 		trigger = {
 			NOT = {
 				has_character_flag = dw_target_wife
+			}
+			NOT = {
+				title = e_china_west_governor
+			}
+			NOT = {
+				title = e_offmap_dwse_voice
 			}
 		}
 		name = DWCourt910A
