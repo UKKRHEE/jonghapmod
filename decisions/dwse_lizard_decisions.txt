@@ -157,6 +157,12 @@ offmap_decisions = {
 				FROMFROM = {
 					trait = yiminhyee
 				}
+				FROMFROM = {
+					AND = {
+						religion = lilitu
+						is_female = no
+					}	
+				}
 			}
 		}
 
