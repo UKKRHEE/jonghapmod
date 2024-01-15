@@ -1451,23 +1451,6 @@
 	}
 }
 
-95003 = {
-	name=Zouxuan
-	dynasty=20000001
-	religion=catholic
-	culture=han
-	diplomacy = 1
-	stewardship = 1
-	father=82
-	mother=247739
-	582.8.21={
-		birth=yes
-	}
-	635.1.1={
-		death=yes
-	}
-}
-
 95004 = {
 	name=Min-Eun
 	dynasty=20000001
