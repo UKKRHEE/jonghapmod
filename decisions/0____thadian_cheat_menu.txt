@@ -40,7 +40,7 @@ decisions = {
 				add_trait = AMD_virgin
 				add_trait = AMD_breast_5
 				add_trait = AMD_sex_skill_5
-				set_real_father = 10000
+				set_real_father = 1
 				
 				hidden_tooltip = {
 					if = {
