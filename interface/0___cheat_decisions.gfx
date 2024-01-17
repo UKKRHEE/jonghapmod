@@ -7,6 +7,14 @@ spriteTypes = {
 		name = "GFX_hide_cheats"
 		texturefile = "gfx\\interface\\red_plot_independence.dds"
 	}
+	spriteType = {
+		name = "GFX_show_girls"
+		texturefile = "gfx\\interface\\plot_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_hide_girls"
+		texturefile = "gfx\\interface\\red_plot_independence.dds"
+	}
 
 ### Employment
 	spriteType = {
