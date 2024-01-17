@@ -536,3 +536,23 @@ liu_xiu_trait = {
 		siege = 1
 	}
 }
+FRIEREN_WIZARD = {
+	random = no
+	immortal = yes
+	martial=150
+	diplomacy=150
+	stewardship=150
+	intrigue=150
+	learning=150
+	combat_rating=150
+	general_opinion=40
+	health=100000
+	fertility=100000
+	command_modifier = {
+		speed = 1000
+		retreat = 100
+		defence = 10
+		damage = 100
+		siege = 100
+	}
+}

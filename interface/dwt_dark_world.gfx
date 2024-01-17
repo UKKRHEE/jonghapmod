@@ -1337,6 +1337,13 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
+		name = "GFX_trait_FRIEREN_WIZARD"
+		texturefile = "gfx/traits/FRIEREN_WIZARD.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
 		name = "GFX_trait_orc"
 		texturefile = "gfx/traits/orc.tga"
 		noOfFrames = 1
