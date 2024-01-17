@@ -97,6 +97,8 @@ jesus_of_god = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 	male_compliment = COMPL_SAYYID
@@ -113,6 +115,8 @@ chinese_empress = { #장남
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -141,6 +145,8 @@ jesus_of_god_1 = { #장남
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -261,6 +267,8 @@ muhammad_pussy_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -281,6 +289,8 @@ li_hyunsong_pussy_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -301,6 +311,8 @@ dougther_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -321,6 +333,8 @@ dougther_of_minhyee_2 = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -341,6 +355,8 @@ dougther_of_minhyee_3 = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -361,6 +377,8 @@ dougther_of_minhyee_4 = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -381,6 +399,8 @@ dougther_of_minhyee_5 = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -401,6 +421,8 @@ dougther_of_minhyee_6 = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -421,6 +443,8 @@ sister_of_minhyee = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -433,6 +457,8 @@ branden = {
 		damage = 100
 		siege = 100
 	}
+	ai_greed = -1000
+	ai_zeal = 20
 	siege_speed = 100
 	siege_defence = 100
 }
@@ -441,6 +467,8 @@ ISE_INE = {
 	immortal = yes
 	health=100
 	fertility=100
+	ai_greed = -1000
+	ai_zeal = 20
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -454,6 +482,8 @@ ISE_JINGBURGER = {
 	immortal = yes
 	health=100
 	fertility=100
+	ai_greed = -1000
+	ai_zeal = 20
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -467,6 +497,8 @@ ISE_LILPA = {
 	immortal = yes
 	health=100
 	fertility=100
+	ai_greed = -1000
+	ai_zeal = 20
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -480,6 +512,8 @@ ISE_JURURU = {
 	immortal = yes
 	health=100
 	fertility=100
+	ai_greed = -1000
+	ai_zeal = 20
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -493,6 +527,8 @@ ISE_GOSEGU = {
 	immortal = yes
 	health=100
 	fertility=100
+	ai_greed = -1000
+	ai_zeal = 20
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -506,6 +542,8 @@ ISE_VCHAN = {
 	immortal = yes
 	health=100
 	fertility=100
+	ai_greed = -1000
+	ai_zeal = 20
 	command_modifier = {
 		speed = 1000
 		retreat = 100
@@ -547,7 +585,9 @@ FRIEREN_WIZARD = {
 	combat_rating=150
 	general_opinion=40
 	health=100000
-	fertility=100000
+	fertility=-10000	
+	ai_greed = -1000
+	ai_zeal = 20
 	command_modifier = {
 		speed = 1000
 		retreat = 100

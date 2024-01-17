@@ -1695,6 +1695,7 @@ decisions = {
 				female = yes
 				age = 1030
 				add_friend = ROOT
+				immortal_age = 11
 				#add_lover = ROOT
 				attributes = {
 					martial = 100
