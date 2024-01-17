@@ -47,13 +47,14 @@ spriteTypes = {
 		
 		weight = { 
 			additive_modifier = {
-				value = 10000
+				value = 100000
 				portrait_has_trait = FRIEREN_WIZARD #아내, 예수 그리스도
 			}
 		}
 		
 		layer = { 
 			"GFX_FRIEREN_WIZARD:p0"
+			"GFX_player_overlay:p11"
 		}
 	}
 

@@ -82,6 +82,9 @@ spriteTypes = {
 			additive_modifier = {
 				value = 10000
 				portrait_has_trait = lf_elf
+				NOT = {
+					portrait_has_trait = FRIEREN_WIZARD
+				}
 				portrait_age <= child
 				portrait_is_female = yes
 			}
